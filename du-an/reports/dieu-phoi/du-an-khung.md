@@ -13,3 +13,6 @@
 | 9 | /ba-init | áp trả lời BA | business-analyst | A4 áp RQ-48, 49, 52, 53, 54 | 1-ba-init/0-dau-vao/uc-phap-ly.md | 164.031 | 53 giây | 0 |
 | 10 | /ba-init | áp trả lời BA | ux-spec-designer | Áp RQ-52 (Q-017), gắn thêm UC 10.01.01 cho MP-003, MP-004 | 1-ba-init/0-dau-vao/man-presales.md | 131.101 + 134.082 | 29 giây + 1 phút | 0 |
 | 11 | /ba-init | áp trả lời BA | business-analyst | A5 áp RQ-47 … RQ-54 | 1-ba-init/0-dau-vao/ban-do-quy-trinh/ | 387.168 | 2 phút 38 giây | 0 |
+| 12 | /ba-init | áp trả lời BA | business-analyst | A2 áp RQ-55, 56, 59, 60 | 1-ba-init/0-dau-vao/phap-ly.md | 217.337 | 31 giây | 0 |
+| 13 | /ba-init | áp trả lời BA | business-analyst | A4 áp RQ-55, 56, 59 | 1-ba-init/0-dau-vao/uc-phap-ly.md | 176.207 | 44 giây | 0 |
+| 14 | /ba-init | áp trả lời BA | business-analyst | A5 áp RQ-57, 59, 61 | 1-ba-init/0-dau-vao/ban-do-quy-trinh/ | 407.968 | 2 phút 9 giây | 0 |
