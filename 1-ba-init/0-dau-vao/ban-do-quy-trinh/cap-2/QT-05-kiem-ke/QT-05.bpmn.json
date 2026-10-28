@@ -1,0 +1,178 @@
+{
+ "ten": "QT-05 Kiểm kê tồn kho — luồng UC",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã gốc UC presales và tên nguyên văn. Chú thích PH: khoảng trống đầu luồng (QT-05.md mục 3).",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-05 Kiểm kê tồn kho",
+   "lanes": [
+    {
+     "id": "TKK",
+     "ten": "Tổ kiểm kê"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    }
+   ]
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 3.8,
+   "so_cot": 1.4
+  }
+ ],
+ "nodes": [
+  {
+   "id": "U1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.03.01",
+   "ten": "Lập biên bản kiểm kê số lượng tồn kho thực tế tại quầy căng tin và ghi nhận chênh lệch",
+   "lane": "TKK",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "N1",
+   "loai": "note",
+   "ten": "PH-026: giao kiểm kê cho tổ kiểm kê (QP-06.02), chốt số sách, khóa giao dịch kho (QP-06.05): không UC presales",
+   "lane": "TKK",
+   "cot": 2.6,
+   "hang": 1
+  },
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Đến kỳ kiểm kê hoặc cần kiểm kê đột xuất",
+   "lane": "TCS",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trưởng cơ sở quyết định?",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "U2",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.03.02",
+   "ten": "Phê duyệt kết quả kiểm kê và thực hiện điều chỉnh số dư kho tự động",
+   "lane": "TCS",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã duyệt, tồn đã điều chỉnh",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "U3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.03.03",
+   "ten": "Từ chối kết quả kiểm kê khi phát hiện sai sót",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Cần hủy biên bản kiểm kê đã duyệt",
+   "lane": "TCS",
+   "cot": 1,
+   "hang": 2
+  },
+  {
+   "id": "U4",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.03.04",
+   "ten": "Hủy phê duyệt biên bản kiểm kê tồn kho",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 2
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã hủy duyệt hoặc hủy duyệt bị chặn",
+   "lane": "TCS",
+   "cot": 3,
+   "hang": 2
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S1",
+   "den": "U1",
+   "ra": "tren",
+   "vao": "trai"
+  },
+  {
+   "tu": "U1",
+   "den": "G1",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "G1",
+   "den": "U2",
+   "nhan": "Phê duyệt"
+  },
+  {
+   "tu": "G1",
+   "den": "U3",
+   "nhan": "Từ chối",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "U3",
+   "den": "U1",
+   "ra": "trai",
+   "vao": "duoi",
+   "nhan": "Kiểm đếm lại"
+  },
+  {
+   "tu": "U2",
+   "den": "E1"
+  },
+  {
+   "tu": "S2",
+   "den": "U4"
+  },
+  {
+   "tu": "U4",
+   "den": "E3"
+  },
+  {
+   "tu": "E1",
+   "den": "POS",
+   "loai": "message",
+   "nhan": "Mở khóa bán tại kho (hệ thống bán hàng tự đọc, RQ-54)",
+   "ra": "duoi"
+  },
+  {
+   "tu": "N1",
+   "den": "U1",
+   "loai": "assoc"
+  }
+ ]
+}

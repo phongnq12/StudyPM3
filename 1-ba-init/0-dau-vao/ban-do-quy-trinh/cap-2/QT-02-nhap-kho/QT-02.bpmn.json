@@ -1,0 +1,249 @@
+{
+ "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp — luồng UC",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã gốc UC presales và tên nguyên văn. Chú thích PH: chỗ nối khoảng trống (QT-02.md mục 3).",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Cán bộ căng tin"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    }
+   ]
+  },
+  {
+   "id": "NCC",
+   "ten": "Nhà cung cấp",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 0,
+   "so_cot": 1.2
+  },
+  {
+   "id": "KT",
+   "ten": "Bộ phận kế toán",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 3.9,
+   "so_cot": 1.3
+  },
+  {
+   "id": "Q03",
+   "ten": "QT-03 Đề xuất và duyệt giá bán",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 2.8,
+   "so_cot": 1.5
+  },
+  {
+   "id": "Q05",
+   "ten": "QT-05 Kiểm kê tồn kho",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 4.8,
+   "so_cot": 1.4
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Hàng hóa từ nhà cung cấp cần nhập kho",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "U1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.01.01",
+   "ten": "Tạo / Cập nhật phiếu nhập kho hàng hóa căng tin mới nhập từ nhà cung cấp",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trưởng cơ sở quyết định?",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "U2",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.01.02",
+   "ten": "Phê duyệt phiếu nhập kho hàng hóa căng tin và tăng tồn kho",
+   "lane": "TCS",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "U3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.01.03",
+   "ten": "Từ chối phiếu nhập kho hàng hóa căng tin",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "U4",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.01.05",
+   "ten": "In phiếu nhập kho hàng hóa căng tin phục vụ lưu trữ kế toán",
+   "lane": "CB",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã duyệt, đã in",
+   "lane": "CB",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Phát hiện sai sót ở phiếu nhập kho đã duyệt",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "U5",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.01.04",
+   "ten": "Hủy phê duyệt phiếu nhập kho hàng hóa căng tin",
+   "lane": "TCS",
+   "cot": 5,
+   "hang": 1
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã hủy duyệt hoặc hủy duyệt bị chặn",
+   "lane": "TCS",
+   "cot": 6,
+   "hang": 1
+  },
+  {
+   "id": "N1",
+   "loai": "note",
+   "ten": "PH-020: không nguồn nào nêu ai in phiếu nhập kho, in khi phiếu ở trạng thái nào; tạm theo ASM-009 (Q-021)",
+   "lane": "CB",
+   "cot": 5.1,
+   "hang": 1
+  },
+  {
+   "id": "N2",
+   "loai": "note",
+   "ten": "PH-021: bản in phục vụ lưu trữ kế toán đi tới kế toán; không UC presales nào có kế toán (Q-021)",
+   "lane": "CB",
+   "cot": 6.1,
+   "hang": 1
+  }
+ ],
+ "flows": [
+  {
+   "tu": "NCC",
+   "den": "S1",
+   "loai": "message",
+   "nhan": "Hàng hóa giao"
+  },
+  {
+   "tu": "S1",
+   "den": "U1"
+  },
+  {
+   "tu": "U1",
+   "den": "G1",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "G1",
+   "den": "U2",
+   "nhan": "Phê duyệt"
+  },
+  {
+   "tu": "G1",
+   "den": "U3",
+   "nhan": "Từ chối",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "U3",
+   "den": "U1",
+   "ra": "trai",
+   "vao": "duoi",
+   "nhan": "Sửa, trình lại"
+  },
+  {
+   "tu": "U2",
+   "den": "U4",
+   "ra": "tren",
+   "vao": "duoi"
+  },
+  {
+   "tu": "U4",
+   "den": "E1"
+  },
+  {
+   "tu": "S2",
+   "den": "U5"
+  },
+  {
+   "tu": "U5",
+   "den": "E2"
+  },
+  {
+   "tu": "U4",
+   "den": "KT",
+   "loai": "message",
+   "nhan": "Bản in phiếu nhập kho",
+   "ra": "tren"
+  },
+  {
+   "tu": "U2",
+   "den": "Q03",
+   "loai": "message",
+   "nhan": "Lô chờ giá, lô cần giá bán mới",
+   "ra": "duoi"
+  },
+  {
+   "tu": "U5",
+   "den": "Q05",
+   "loai": "message",
+   "nhan": "Hủy duyệt bị chặn (ASM-007)",
+   "ra": "duoi"
+  },
+  {
+   "tu": "N1",
+   "den": "U4",
+   "loai": "assoc"
+  },
+  {
+   "tu": "N2",
+   "den": "U4",
+   "loai": "assoc"
+  }
+ ]
+}

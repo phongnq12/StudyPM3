@@ -1,0 +1,98 @@
+{
+ "ten": "QT-01 Cập nhật nhà cung cấp và giá nhập — luồng UC",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã gốc UC presales và tên nguyên văn. Không còn chỗ nối khoảng trống (QT-01.md mục 3).",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-01 Cập nhật nhà cung cấp và giá nhập",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Cán bộ căng tin"
+    }
+   ]
+  },
+  {
+   "id": "Q03",
+   "ten": "QT-03 Đề xuất và duyệt giá bán",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 2.8,
+   "so_cot": 1.5
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Cần cập nhật nhà cung cấp, hàng hóa theo nhà cung cấp hoặc giá nhập",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "U1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.15.01.01",
+   "ten": "Quản lý hồ sơ nhà cung cấp hàng hóa căng tin",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "U2",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.15.02.01",
+   "ten": "Quản lý danh mục hàng hóa cung ứng theo từng nhà cung cấp",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "U3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.15.03.01",
+   "ten": "Quản lý giá nhập hàng hóa theo từng nhà cung cấp và từng đợt nhập",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Nhà cung cấp, hàng hóa theo nhà cung cấp, giá nhập Đã cập nhật",
+   "lane": "CB",
+   "cot": 4,
+   "hang": 0
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S1",
+   "den": "U1"
+  },
+  {
+   "tu": "U1",
+   "den": "U2"
+  },
+  {
+   "tu": "U2",
+   "den": "U3"
+  },
+  {
+   "tu": "U3",
+   "den": "E1"
+  },
+  {
+   "tu": "U3",
+   "den": "Q03",
+   "loai": "message",
+   "nhan": "Giá nhập mới (hộp Quyết định giá bán, UC 10.01.01, RQ-52)",
+   "ra": "duoi"
+  }
+ ]
+}

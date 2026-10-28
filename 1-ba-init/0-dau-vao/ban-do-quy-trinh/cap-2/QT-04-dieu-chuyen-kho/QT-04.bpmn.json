@@ -1,0 +1,182 @@
+{
+ "ten": "QT-04 Điều chuyển hàng hóa giữa các kho — luồng UC",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã gốc UC presales và tên nguyên văn. Chú thích PH: chỗ nối khoảng trống (QT-04.md mục 3).",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-04 Điều chuyển hàng hóa giữa các kho",
+   "lanes": [
+    {
+     "id": "CBX",
+     "ten": "Cán bộ căng tin (kho xuất)"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "CBN",
+     "ten": "Cán bộ căng tin (kho nhận)"
+    }
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Kho cần điều chuyển hàng hóa",
+   "lane": "CBX",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "U1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.02.01",
+   "ten": "Tạo phiếu xuất kho, điều chuyển nhu yếu phẩm sang quầy bán căng tin",
+   "lane": "CBX",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trưởng cơ sở quyết định?",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "U2",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.02.02",
+   "ten": "Phê duyệt phiếu xuất kho / điều chuyển hàng hóa căng tin",
+   "lane": "TCS",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển Đã duyệt, hàng đang chuyển",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "U3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.02.03",
+   "ten": "Từ chối phiếu xuất kho / điều chuyển hàng hóa căng tin",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển bị từ chối",
+   "lane": "TCS",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Cần hủy phiếu điều chuyển đã duyệt",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 2
+  },
+  {
+   "id": "U4",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.02.04",
+   "ten": "Hủy phê duyệt phiếu xuất kho / điều chuyển",
+   "lane": "TCS",
+   "cot": 3,
+   "hang": 2
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển Đã hủy duyệt hoặc hủy duyệt bị chặn",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 2
+  },
+  {
+   "id": "N1",
+   "loai": "note",
+   "ten": "PH-024: kho nhận kiểm tra hàng, ghi số thực nhận (QP-05.07); kho xuất ghi nhận chênh lệch (QP-05.11): không UC presales",
+   "lane": "CBN",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "N2",
+   "loai": "note",
+   "ten": "PH-025: phiếu bị từ chối trả về người lập sửa, trình lại hoặc hủy (RQ-34); UC 09.02.01 chỉ nói tạo",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 1
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S1",
+   "den": "U1"
+  },
+  {
+   "tu": "U1",
+   "den": "G1",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "G1",
+   "den": "U2",
+   "nhan": "Phê duyệt"
+  },
+  {
+   "tu": "G1",
+   "den": "U3",
+   "nhan": "Từ chối",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "U2",
+   "den": "E1"
+  },
+  {
+   "tu": "U3",
+   "den": "E2"
+  },
+  {
+   "tu": "S2",
+   "den": "U4"
+  },
+  {
+   "tu": "U4",
+   "den": "E3"
+  },
+  {
+   "tu": "N1",
+   "den": "E1",
+   "loai": "assoc"
+  },
+  {
+   "tu": "N2",
+   "den": "E2",
+   "loai": "assoc"
+  }
+ ]
+}

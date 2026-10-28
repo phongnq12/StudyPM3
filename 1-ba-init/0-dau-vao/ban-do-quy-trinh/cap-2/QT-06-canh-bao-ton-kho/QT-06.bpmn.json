@@ -1,0 +1,73 @@
+{
+ "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng — luồng UC",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã gốc UC presales và tên nguyên văn. Chú thích PH: chỗ nối khoảng trống (QT-06.md mục 3).",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Cán bộ căng tin"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống quản lý kho căng tin"
+    }
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Cần thiết lập hoặc đổi hạn mức cảnh báo",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "U1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.09.04.03",
+   "ten": "Cấu hình hạn mức cảnh báo",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Hạn mức cảnh báo Đã thiết lập",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "N1",
+   "loai": "note",
+   "ten": "PH-027: quét tồn dưới mức tối thiểu, lô sắp hết hạn, quá hạn, chờ giá (QP-07.02), gửi cảnh báo (QP-07.04), cán bộ căng tin xem cảnh báo (QP-07.05): không UC presales",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 0,
+   "cao": 80
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S1",
+   "den": "U1"
+  },
+  {
+   "tu": "U1",
+   "den": "E1"
+  },
+  {
+   "tu": "N1",
+   "den": "U1",
+   "loai": "assoc"
+  }
+ ]
+}

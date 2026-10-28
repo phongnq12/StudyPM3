@@ -1,0 +1,145 @@
+{
+  "tao_luc": "2026-10-28T16:49:55",
+  "nguon": "0-inputs/presales/prototype",
+  "kieu": "dist",
+  "duyet": "0-inputs/presales/prototype/dist",
+  "link": null,
+  "so_vi_tri": 4,
+  "doc_bang": "playwright (chromium)",
+  "menu": [
+    "MP-001",
+    "MP-004"
+  ],
+  "route_ma_nguon": [],
+  "route_chua_mo": [],
+  "man": [
+    {
+      "ma": "MP-001",
+      "vi_tri": "/hang-hoa/gia-nhap",
+      "cach_mo": "tải trang",
+      "tieu_de": "Giá nhập theo nhà cung cấp",
+      "truong": [
+        {
+          "nhan": "Tìm theo mã hàng, tên hàng, nhà cung cấp, mã đợt hoặc số phiếu nhập",
+          "loai": "text",
+          "bat_buoc": false,
+          "ten": "oTimKiem"
+        },
+        {
+          "nhan": "Nhà cung cấp",
+          "loai": "text",
+          "bat_buoc": false,
+          "ten": "oncc"
+        },
+        {
+          "nhan": "Hiệu lực",
+          "loai": "text",
+          "bat_buoc": false,
+          "ten": "ohl"
+        },
+        {
+          "nhan": "Quyết định giá bán",
+          "loai": "text",
+          "bat_buoc": false,
+          "ten": "oqd"
+        },
+        {
+          "nhan": "Chọn trang",
+          "loai": "select",
+          "bat_buoc": false,
+          "ten": "pgChonTrang"
+        },
+        {
+          "nhan": "Chọn trang",
+          "loai": "text",
+          "bat_buoc": false,
+          "ten": ""
+        },
+        {
+          "nhan": "Số bản ghi trên 1 trang",
+          "loai": "search",
+          "bat_buoc": false,
+          "ten": "pgCo"
+        }
+      ],
+      "nut": [
+        "Xuất Excel",
+        "Thêm đợt giá nhập",
+        "Tìm kiếm",
+        "Xóa bộ lọc",
+        "Xem chi tiết",
+        "Chỉnh sửa",
+        "Xóa dòng giá nhập",
+        "Trang trước",
+        "Trang sau"
+      ],
+      "di_toi": [
+        "MP-004",
+        "MP-002",
+        "MP-003"
+      ],
+      "anh": "1-ba-init/0-dau-vao/man-presales/MP-001.png",
+      "doc_bang": "playwright",
+      "loi": null
+    },
+    {
+      "ma": "MP-002",
+      "vi_tri": "/hang-hoa/gia-nhap/GN-0003",
+      "cach_mo": "tải trang",
+      "tieu_de": "",
+      "truong": [],
+      "nut": [],
+      "di_toi": [],
+      "anh": null,
+      "doc_bang": "playwright",
+      "loi": "Playwright: page.goto: net::ERR_ABORTED at http://127.0.0.1:55720/hang-hoa/gia-nhap/GN-0003"
+    },
+    {
+      "ma": "MP-003",
+      "vi_tri": "/hang-hoa/gia-nhap/GN-0003/chinh-sua",
+      "cach_mo": "tải trang",
+      "tieu_de": "",
+      "truong": [],
+      "nut": [],
+      "di_toi": [],
+      "anh": null,
+      "doc_bang": "playwright",
+      "loi": "Playwright: page.goto: net::ERR_ABORTED at http://127.0.0.1:55720/hang-hoa/gia-nhap/GN-0003/chinh-sua"
+    },
+    {
+      "ma": "MP-004",
+      "vi_tri": "/hang-hoa/gia-nhap/tao-moi",
+      "cach_mo": "tải trang",
+      "tieu_de": "Thêm đợt giá nhập",
+      "truong": [
+        {
+          "nhan": "Nhà cung cấp",
+          "loai": "search",
+          "bat_buoc": true,
+          "ten": "oNhaCungCap"
+        },
+        {
+          "nhan": "Số hiệu căn cứ",
+          "loai": "text",
+          "bat_buoc": false,
+          "ten": "oSoHieu"
+        }
+      ],
+      "nut": [
+        "Quay lại",
+        "Chọn ngày",
+        "Chọn tệp",
+        "Thêm mặt hàng",
+        "Thêm tất cả mặt hàng",
+        "Hủy",
+        "Lưu"
+      ],
+      "di_toi": [
+        "MP-001"
+      ],
+      "anh": "1-ba-init/0-dau-vao/man-presales/MP-004.png",
+      "doc_bang": "playwright",
+      "loi": "bấm thử dừng giữa chừng: page.goto: net::ERR_ABORTED at http://127.0.0.1:55720/hang-hoa/gia-nhap/tao-moi"
+    }
+  ]
+}

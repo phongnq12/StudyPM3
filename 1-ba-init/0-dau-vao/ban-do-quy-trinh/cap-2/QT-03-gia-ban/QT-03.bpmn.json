@@ -1,0 +1,273 @@
+{
+ "ten": "QT-03 Đề xuất và duyệt giá bán — luồng UC",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã gốc UC presales và tên nguyên văn. Chú thích PH: chỗ nối khoảng trống (QT-03.md mục 3).",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-03 Đề xuất và duyệt giá bán",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Cán bộ căng tin"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    }
+   ]
+  },
+  {
+   "id": "Q01",
+   "ten": "QT-01 Cập nhật nhà cung cấp và giá nhập",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 1.9,
+   "so_cot": 1.5
+  },
+  {
+   "id": "Q02",
+   "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 3.55,
+   "so_cot": 1.5
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 5.8,
+   "so_cot": 1.4
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S3",
+   "loai": "start",
+   "ten": "Lô cần giá bán mới hoặc giá nhập mới",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Cần bán mặt hàng mới",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 1
+  },
+  {
+   "id": "U1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.10.01.01",
+   "ten": "Quản lý danh mục hàng hóa căng tin",
+   "lane": "CB",
+   "cot": 1.5,
+   "hang": 1
+  },
+  {
+   "id": "GM",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "S4",
+   "loai": "start",
+   "ten": "Giá bán lẻ tại địa phương thay đổi",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 2
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trưởng cơ sở quyết định?",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "U2",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.10.01.02",
+   "ten": "Phê duyệt đơn giá bán hàng hóa căng tin trước khi công bố",
+   "lane": "TCS",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Giá bán Đã duyệt theo lô",
+   "lane": "TCS",
+   "cot": 6,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "U3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.10.01.03",
+   "ten": "Từ chối đơn giá bán hàng hóa căng tin",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Đề xuất giá bán bị từ chối",
+   "lane": "TCS",
+   "cot": 5,
+   "hang": 1
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Cần hủy giá bán đã duyệt",
+   "lane": "TCS",
+   "cot": 3,
+   "hang": 2
+  },
+  {
+   "id": "U4",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "PM3CSCN.WEB.10.01.04",
+   "ten": "Hủy phê duyệt đơn giá bán hàng hóa căng tin",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 2
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Giá bán Đã hủy duyệt hoặc hủy duyệt bị chặn",
+   "lane": "TCS",
+   "cot": 5,
+   "hang": 2
+  },
+  {
+   "id": "N1",
+   "loai": "note",
+   "ten": "PH-023: không UC presales lập, sửa, trình đề xuất giá bán (QP-04.03); UC mới ngoài presales, PM đánh giá (Q-022, RQ-51)",
+   "lane": "CB",
+   "cot": 1.3,
+   "hang": 0
+  },
+  {
+   "id": "N3",
+   "loai": "note",
+   "ten": "PH-023: đề xuất bị từ chối, hủy duyệt bị chặn cần lập đề xuất mới; không UC presales nhận",
+   "lane": "TCS",
+   "cot": 3.6,
+   "hang": 3
+  }
+ ],
+ "flows": [
+  {
+   "tu": "Q01",
+   "den": "S3",
+   "loai": "message",
+   "nhan": "Giá nhập mới",
+   "ra": "duoi",
+   "vao": "trai"
+  },
+  {
+   "tu": "Q02",
+   "den": "S3",
+   "loai": "message",
+   "nhan": "Lô chờ giá, lô cần giá bán mới",
+   "ra": "duoi",
+   "vao": "phai"
+  },
+  {
+   "tu": "S1",
+   "den": "U1"
+  },
+  {
+   "tu": "U1",
+   "den": "GM"
+  },
+  {
+   "tu": "S3",
+   "den": "GM",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "S4",
+   "den": "GM",
+   "ra": "tren",
+   "vao": "duoi"
+  },
+  {
+   "tu": "GM",
+   "den": "G1",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "G1",
+   "den": "U2",
+   "nhan": "Phê duyệt"
+  },
+  {
+   "tu": "G1",
+   "den": "U3",
+   "nhan": "Từ chối",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "U2",
+   "den": "E1"
+  },
+  {
+   "tu": "U3",
+   "den": "E2"
+  },
+  {
+   "tu": "S2",
+   "den": "U4"
+  },
+  {
+   "tu": "U4",
+   "den": "E3"
+  },
+  {
+   "tu": "E1",
+   "den": "POS",
+   "loai": "message",
+   "nhan": "Giá bán theo lô (hệ thống bán hàng tự đọc, RQ-54)",
+   "ra": "duoi"
+  },
+  {
+   "tu": "N1",
+   "den": "GM",
+   "loai": "assoc"
+  },
+  {
+   "tu": "N3",
+   "den": "E2",
+   "loai": "assoc"
+  },
+  {
+   "tu": "N3",
+   "den": "E3",
+   "loai": "assoc"
+  }
+ ]
+}

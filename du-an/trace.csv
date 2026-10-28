@@ -1,0 +1,76 @@
+id,loai,ten,file,nguon,lien_ket,chuc_nang,trang_thai,cap_nhat
+QP-01,QP,Bản đồ quy trình quản lý kho căng tin,1-ba-init/0-dau-vao/quy-trinh-presales.md,0-inputs/presales/quy-trinh/QTPR-process-overview.drawio,,,draft,2026-10-29
+QP-02,QP,"PROC-02 Quản lý nhà cung cấp, giá nhập và kho",1-ba-init/0-dau-vao/quy-trinh-presales.md,0-inputs/presales/quy-trinh/QTPR-02-ncc-kho.drawio,QP-01.02,,draft,2026-10-29
+QP-03,QP,PROC-03 Nhập kho hàng hóa từ nhà cung cấp,1-ba-init/0-dau-vao/quy-trinh-presales.md,0-inputs/presales/quy-trinh/QTPR-03-nhap-kho.drawio,QP-01.05,,draft,2026-10-29
+QP-04,QP,PROC-01 Quản lý danh mục hàng hóa và giá bán,1-ba-init/0-dau-vao/quy-trinh-presales.md,0-inputs/presales/quy-trinh/QTPR-01-hang-hoa-gia-ban.drawio,QP-01.08,,draft,2026-10-29
+QP-05,QP,PROC-04 Điều chuyển hàng hóa giữa các kho,1-ba-init/0-dau-vao/quy-trinh-presales.md,0-inputs/presales/quy-trinh/QTPR-04-dieu-chuyen-kho.drawio,QP-01.12,,draft,2026-10-29
+QP-06,QP,PROC-05 Kiểm kê tồn kho,1-ba-init/0-dau-vao/quy-trinh-presales.md,0-inputs/presales/quy-trinh/QTPR-05-kiem-ke.drawio,QP-01.15,,draft,2026-10-29
+QP-07,QP,PROC-06 Cảnh báo tồn kho và hạn sử dụng,1-ba-init/0-dau-vao/quy-trinh-presales.md,0-inputs/presales/quy-trinh/QTPR-06-canh-bao-ton-kho.drawio,QP-01.18,,draft,2026-10-29
+MP-001,MP,Giá nhập theo nhà cung cấp,1-ba-init/0-dau-vao/man-presales.md,/hang-hoa/gia-nhap;PS:PM3CSCN.WEB.15.03.01;PS:PM3CSCN.WEB.15.03.02,MP-002;MP-003;MP-004,,draft,2026-10-29
+MP-002,MP,Chi tiết dòng giá nhập,1-ba-init/0-dau-vao/man-presales.md,/hang-hoa/gia-nhap/:id;PS:PM3CSCN.WEB.15.03.01;PS:PM3CSCN.WEB.15.03.02,MP-003,,draft,2026-10-29
+MP-003,MP,Cập nhật dòng giá nhập,1-ba-init/0-dau-vao/man-presales.md,/hang-hoa/gia-nhap/:id/chinh-sua;PS:PM3CSCN.WEB.15.03.01;PS:PM3CSCN.WEB.10.01.01,,,draft,2026-10-29
+MP-004,MP,Thêm đợt giá nhập,1-ba-init/0-dau-vao/man-presales.md,/hang-hoa/gia-nhap/tao-moi;PS:PM3CSCN.WEB.15.03.01;PS:PM3CSCN.WEB.10.01.01,MP-001,,draft,2026-10-29
+Q-001,Q,"Cột ""Actor"" trống ở cả 31 dòng UC presales, tệp không có danh sách tác nhân. Ai thực hiện",1-ba-init/open-questions.md,,PH-001,,draft,2026-10-29
+Q-002,Q,"Dòng nhóm PM3CSCN.WEB.09.04 ""Quản lý kho"" ghi ""Bổ sung thêm"" ở cột ""Tính năng"". Nhóm này c",1-ba-init/open-questions.md,,PH-002,,draft,2026-10-29
+Q-003,Q,"Tên nhóm cấp 1 ghi ""M09"" cho mã PM3CSCN.WEB.10, ""M17"" cho mã PM3CSCN.WEB.15; PM3CSCN.WEB.0",1-ba-init/open-questions.md,,PH-003,,draft,2026-10-29
+Q-004,Q,"Tệp chính NĐ 163 để trống số hiệu và ngày ban hành; tên hai tệp phụ lục có ghi giờ (""18.5",1-ba-init/open-questions.md,,PH-004;ASM-002,,draft,2026-10-29
+Q-005,Q,"TT79 Điều 41 khoản 4 viết Trưởng cơ sở duyệt giá bán ""sau khi trừ chi phí hợp lý, nhưng kh",1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-006,Q,"""Chi phí hợp lý"" của căng tin gồm những khoản nào? TT79 không định nghĩa; NĐ 163 Điều 118",1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-007,Q,Phạm vi hàng hóa căng tin được bán: hai văn bản ghi khác nhau,1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-008,Q,"Đồ vật cấm có tính bao bì hàng ăn uống không (TT79 Đ16.K5 cấm ""đồ dùng bằng kim loại, sành",1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-009,Q,"0-inputs/ không có mẫu phiếu nhập kho, phiếu xuất kho / điều chuyển, biên bản kiểm kê; UC",1-ba-init/open-questions.md,,PH-006,,draft,2026-10-29
+Q-010,Q,"Cơ sở có quy chế, nội quy riêng về căng tin, kho (người duyệt, hạn mức, kiểm kê định kỳ) k",1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-011,Q,"TT79 Đ41.K4 đoạn 2: cơ sở không có điều kiện tổ chức căng tin thì ""hằng tuần phải tập hợp",1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-012,Q,"Đồ dùng sinh hoạt cấp phát theo chế độ ở NĐ 163 Điều 113 (xà phòng, kem đánh răng…) có quả",1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-013,Q,"Thuật ngữ cho người làm căng tin: luật dùng ""người phụ trách căng tin"" (TT79 Đ41.K2, K3),",1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-014,Q,"Sơ đồ quy trình presales (7 tệp .drawio, .bpmn.json) không gắn mã UC presales cho bước nào",1-ba-init/open-questions.md,,PH-007;PH-008;PH-009;PH-010;PH-011;PH-012;PH-013;PH-014,,draft,2026-10-29
+Q-015,Q,"Chuyển giao sang ""Hệ thống bán hàng căng tin"" gồm giá bán theo lô (QP-04.09, QP-01.08) và",1-ba-init/open-questions.md,,PH-015;QP-04;QP-06,,draft,2026-10-29
+Q-016,Q,"Giờ quét cảnh báo hằng ngày (QP-07.01 ""Đến giờ quét hằng ngày"") là mấy giờ? Tham số cấu hì",1-ba-init/open-questions.md,,QP-07,,draft,2026-10-29
+Q-017,Q,"Khi lưu đợt giá nhập (MP-004) hoặc dòng giá nhập đã sửa (MP-003), prototype tự sinh phiếu",1-ba-init/open-questions.md,,PH-017;MP-003;MP-004,,draft,2026-10-29
+Q-018,Q,"Màn Đăng nhập (/dang-nhap, có nút Đăng nhập SSO) có trong prototype nhưng không có UC pres",1-ba-init/open-questions.md,,PH-019,,draft,2026-10-29
+ASM-001,ASM,Dòng có mã WBS 5 đoạn (PM3CSCN.WEB.xx.yy.zz) là UC; mã 3 hoặc 4 đoạn là dòng nhóm phân hệ,1-ba-init/open-questions.md,,,,draft,2026-10-29
+ASM-002,ASM,"NĐ 163 lấy số hiệu 163/2026/NĐ-CP, ngày ban hành 2026-05-15, mã NĐ163-2026, theo 5 tệp phụ",1-ba-init/open-questions.md,,Q-004,,draft,2026-10-29
+ASM-003,ASM,"MP-001 (lọc theo ""Hiệu lực"", Tìm kiếm, Xuất Excel) và MP-002 (bảng ""Lịch sử thay đổi"") là",1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-001,PH,thiếu actor,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-002,PH,ngoài phạm vi,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-003,PH,thiếu dữ liệu,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-004,PH,thiếu dữ liệu,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-005,PH,thiếu dữ liệu,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-006,PH,thiếu dữ liệu,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-007,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-008,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-009,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-010,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-011,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-012,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-013,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-014,PH,UC không thuộc quy trình,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-015,PH,thiếu luồng,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-016,PH,thiếu luồng,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-017,PH,thiếu luồng,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-018,PH,thiếu màn,1-ba-init/open-questions.md,,,,draft,2026-10-29
+PH-019,PH,màn không thuộc UC,1-ba-init/open-questions.md,,,,draft,2026-10-29
+Q-019,Q,13 UC chứng từ kho không có điều khoản nào: có văn bản điều chỉnh hay nghiệp vụ nội bộ,1-ba-init/open-questions.md,,Q-009;Q-010;PH-006,,draft,2026-10-29
+Q-020,Q,Hồ sơ nhà cung cấp và hàng hóa theo nhà cung cấp không có điều khoản nào,1-ba-init/open-questions.md,,Q-010,,draft,2026-10-29
+ASM-004,ASM,Hủy phê duyệt giá bán thuộc thẩm quyền duyệt giá bán của Trưởng cơ sở,1-ba-init/open-questions.md,PL:TT79-2026/Đ41.K4;PS:PM3CSCN.WEB.10.01.04,,,draft,2026-10-29
+ASM-005,ASM,Giá nhập là số liệu đối chiếu khi duyệt giá bán,1-ba-init/open-questions.md,PL:TT79-2026/Đ41.K4;PS:PM3CSCN.WEB.15.03.01,Q-005,,draft,2026-10-29
+ASM-006,ASM,Danh mục hàng hóa căng tin không được có đồ vật cấm,1-ba-init/open-questions.md,PL:TT79-2026/Đ16.K1;PS:PM3CSCN.WEB.10.01.01,Q-008,,draft,2026-10-29
+QT-01,QT,Cập nhật nhà cung cấp và giá nhập,1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md,PS:PM3CSCN.WEB.15.01.01;PS:PM3CSCN.WEB.15.02.01;PS:PM3CSCN.WEB.15.03.01;PL:TT79-2026/Đ41.K4,QT-03,,draft,2026-10-29
+QT-02,QT,Nhập kho hàng hóa từ nhà cung cấp,1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md,PS:PM3CSCN.WEB.09.01.01;PS:PM3CSCN.WEB.09.01.02;PS:PM3CSCN.WEB.09.01.03;PS:PM3CSCN.WEB.09.01.05;PS:PM3CSCN.WEB.09.01.04,QT-03;QT-05,,draft,2026-10-29
+QT-03,QT,Đề xuất và duyệt giá bán,1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md,PS:PM3CSCN.WEB.10.01.01;PS:PM3CSCN.WEB.10.01.02;PS:PM3CSCN.WEB.10.01.03;PS:PM3CSCN.WEB.10.01.04;PL:TT79-2026/Đ41.K4;PL:TT79-2026/Đ16.K1;PL:TT79-2026/Đ16.K2;PL:TT79-2026/Đ16.K3;PL:TT79-2026/Đ16.K4;PL:TT79-2026/Đ16.K5;PL:TT79-2026/Đ16.K6;PL:TT79-2026/Đ16.K7;PL:TT79-2026/Đ16.K8,,,draft,2026-10-29
+QT-04,QT,Điều chuyển hàng hóa giữa các kho,1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md,PS:PM3CSCN.WEB.09.02.01;PS:PM3CSCN.WEB.09.02.02;PS:PM3CSCN.WEB.09.02.03;PS:PM3CSCN.WEB.09.02.04,,,draft,2026-10-29
+QT-05,QT,Kiểm kê tồn kho,1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md,PS:PM3CSCN.WEB.09.03.01;PS:PM3CSCN.WEB.09.03.02;PS:PM3CSCN.WEB.09.03.03;PS:PM3CSCN.WEB.09.03.04,,,draft,2026-10-29
+QT-06,QT,Cảnh báo tồn kho và hạn sử dụng,1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md,PS:PM3CSCN.WEB.09.04.03,QT-02;QT-04;QT-05,,draft,2026-10-29
+Q-021,Q,In phiếu nhập kho: ai in và in ở trạng thái nào,1-ba-init/open-questions.md,,PH-020;PH-021;QT-02,,draft,2026-10-29
+Q-022,Q,Việc trong quy trình presales không UC presales nào làm,1-ba-init/open-questions.md,,PH-022;PH-023;PH-024;PH-025;PH-026;PH-027;Q-014;Q-017,,draft,2026-10-29
+ASM-007,ASM,Phiếu nhập kho hủy phê duyệt bị chặn chuyển sang kiểm kê thủ công,1-ba-init/open-questions.md,,QT-02;QT-05,,draft,2026-10-29
+ASM-008,ASM,Sau cảnh báo cán bộ căng tin tự bắt đầu nhập kho hoặc điều chuyển,1-ba-init/open-questions.md,,QT-06,,draft,2026-10-29
+ASM-009,ASM,In phiếu nhập kho do cán bộ căng tin làm khi phiếu Đã duyệt,1-ba-init/open-questions.md,PS:PM3CSCN.WEB.09.01.05,Q-021,,draft,2026-10-29
+PH-020,PH,QT-02; PM3CSCN.WEB.09.01.02 → PM3CSCN.WEB.09.01.05,1-ba-init/open-questions.md,,Q-021,,draft,2026-10-29
+PH-021,PH,QT-02; PM3CSCN.WEB.09.01.05 → kế toán,1-ba-init/open-questions.md,,Q-021,,draft,2026-10-29
+PH-022,PH,QT-02 → QT-03,1-ba-init/open-questions.md,,Q-022,,draft,2026-10-29
+PH-023,PH,QT-03 (3 chỗ nối),1-ba-init/open-questions.md,,Q-022;Q-017,,draft,2026-10-29
+PH-024,PH,QT-04; PM3CSCN.WEB.09.02.02 →,1-ba-init/open-questions.md,,Q-022,,draft,2026-10-29
+PH-025,PH,QT-04; PM3CSCN.WEB.09.02.03 → PM3CSCN.WEB.09.02.01,1-ba-init/open-questions.md,,Q-022,,draft,2026-10-29
+PH-026,PH,QT-05; trigger → PM3CSCN.WEB.09.03.01,1-ba-init/open-questions.md,,Q-022,,draft,2026-10-29
+PH-027,PH,QT-06; PM3CSCN.WEB.09.04.03 →,1-ba-init/open-questions.md,,Q-022;Q-002,,draft,2026-10-29
