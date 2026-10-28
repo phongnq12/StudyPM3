@@ -1,0 +1,4 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Tailwind v3 như PM1 — chỉ lớp tiện ích, KHÔNG base/preflight (xem tailwind.config.js) */
+@tailwind components;
+@tailwind utilities;

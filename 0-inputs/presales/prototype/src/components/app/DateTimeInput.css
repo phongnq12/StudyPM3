@@ -1,0 +1,25 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Ô chọn ngày giờ — khung ô lấy từ .text-input.date-input (form.css), lịch từ .date-picker-* (base.css), cột giờ phút từ .time-panel-* (TimeRangeInput.css); ở đây chỉ ghép */
+.datetime-wrap{position:relative;display:inline-block;width:100%;max-width:240px}
+.datetime-input{width:100%;box-sizing:border-box;cursor:text}
+/* ô gõ nằm trong khung .text-input ⇒ bỏ viền, nền, bóng riêng của nó (form.css · antd) để chỉ còn 1 viền */
+.datetime-input input{flex:1;min-width:0;height:100%;border:0 !important;outline:0 !important;box-shadow:none !important;background:transparent !important;font:inherit;color:inherit;padding:0 !important;margin:0}
+.datetime-input .date-icon{cursor:pointer}
+.datetime-input.is-disabled{background:var(--color-page);cursor:not-allowed}
+.datetime-input.is-disabled input{color:var(--color-ink-4);cursor:not-allowed}
+/* vòng focus của app gắn vào ô gõ bên trong ⇒ chuyển ra khung ngoài, vẫn giữ viền focus khi Tab tới */
+/* cùng cách ô khoảng ngày (pm1-look.css dòng .date-range input…:focus): thắng luật focus chung input:not([type=checkbox]):not([type=radio]):focus */
+.datetime-input input:not([type=checkbox]):not([type=radio]):focus,.datetime-input input:focus-visible{border-color:transparent !important;box-shadow:none !important;outline:0 !important}
+.datetime-input:focus-within{border-color:var(--color-brand);box-shadow:0 0 0 2px rgba(7,109,182,.12)}
+.datetime-input.input-border-error:focus-within{border-color:var(--color-err,#DC2626) !important}
+/* bảng chọn: cùng nền, bo, đổ bóng với lịch .date-picker và bảng giờ .time-panel */
+.datetime-panel{position:absolute;top:calc(100% + 4px);left:0;z-index:1400;background:var(--color-surface, #FFFFFF);border:1px solid var(--color-line,#E5E7EB);border-radius:8px;box-shadow:0 6px 16px rgba(15,23,42,.12)}
+.datetime-body{display:flex}
+/* lịch .date-picker gốc là position:fixed và ẩn ⇒ trong bảng này cho nằm tại chỗ và luôn hiện */
+.datetime-panel .datetime-calendar{position:static;display:block;box-shadow:none;border:0;border-radius:0}
+.datetime-times{display:flex;gap:4px;padding:8px;border-left:1px solid var(--color-line,#E5E7EB)}
+.datetime-times .time-panel-col{max-height:264px}
+.datetime-foot{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-top:1px solid var(--color-line,#E5E7EB)}
+.datetime-now{border:0;background:none;padding:4px 0;font-size:var(--fs-sm);color:var(--color-link,#2563EB);cursor:pointer}
+.datetime-now:hover{text-decoration:underline}
+.datetime-now:focus-visible{outline:2px solid var(--color-brand);outline-offset:2px}

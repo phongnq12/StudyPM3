@@ -1,0 +1,87 @@
+/* PM3 · Giá nhập — CSS dùng chung của 4 màn. Màu tag, nút, bảng lấy ở styles/base.css; ở đây chỉ bố cục riêng. */
+
+/* nút bị vô hiệu bọc trong .pp-tip: sự kiện chuột rơi vào lớp bọc để tooltip lý do vẫn hiện */
+.pp-tip{display:inline-flex}
+.pp-tip > button[disabled]{pointer-events:none}
+
+/* Danh sách */
+#vungBang table{min-width:1500px}
+#vungBang td,#vungBang th{padding-left:12px;padding-right:12px}
+#vungBang th{white-space:nowrap}
+#vungBang td.col-item{white-space:normal;word-break:break-word}
+#vungBang td.col-supplier{white-space:normal;word-break:break-word}
+.pp-item-name{color:var(--color-ink-1);font-weight:500}
+.pp-filter-actions{display:flex;align-items:center;gap:var(--btn-gap,8px);flex:none}
+.filter-panel.is-fixed .filter-row-main .pp-filter-cell{flex:2 1 0;min-width:150px}
+tr.row-new>td{background:var(--palette-emerald-50, #ECFDF5)!important;transition:background 1.2s ease}
+tr.row-new.is-fading>td{background:transparent!important}
+tr.row-new.is-fading>td.col-act{background:var(--color-surface)!important}
+
+/* Khối nhãn · giá trị (cùng khuôn khối thông tin màn Chi tiết quầy) */
+.pp-info{display:grid;grid-template-columns:220px 1fr;gap:0}
+@media (max-width:900px){.pp-info{grid-template-columns:1fr}.pp-info-label{padding:11px 0 0;border-bottom:none}.pp-info-value{padding-left:0}}
+.pp-info-label,.pp-info-value{padding:11px 0;border-bottom:1px solid var(--color-line);font-size:var(--fs-body);line-height:22px}
+.pp-info-label{color:var(--color-ink-3);padding-right:20px}
+.pp-info-value{color:var(--color-ink-1);font-weight:600;padding-left:20px;min-width:0;word-break:break-word;white-space:pre-wrap}
+.pp-info>:nth-last-child(-n+2){border-bottom:none}
+.is-blank{color:var(--color-ink-4);font-weight:400}
+.pp-sub{display:block;color:var(--color-ink-3);font-size:var(--fs-sm);font-weight:400}
+.pp-file-link{display:inline-flex;align-items:center;gap:6px;color:var(--color-brand);text-decoration:none;font-weight:600}
+.pp-file-link:hover{text-decoration:underline}
+.pp-file-link svg{width:16px;height:16px}
+.pp-count{display:flex;flex-direction:column;gap:6px;font-size:var(--fs-body);color:var(--color-ink-2)}
+.pp-count b{color:var(--color-ink-1)}
+.pp-table{width:100%;min-width:0 !important;border-collapse:collapse;table-layout:fixed;font-size:var(--fs-body)}   /* bảng con trong khối — cùng khuôn bảng buồng của màn Quầy */
+.pp-table th{text-align:left;padding:8px 12px;border-bottom:1px solid var(--color-line);white-space:nowrap;line-height:1.35}
+.pp-table td{padding:8px 12px;border-bottom:1px solid var(--color-line);height:auto}
+.pp-table td,.pp-table th{white-space:nowrap;vertical-align:middle}
+.pp-table td.c-num,.pp-table th.c-num{text-align:right;font-variant-numeric:tabular-nums}
+.pp-table td.col-wrap{white-space:normal;word-break:break-word;min-width:260px}
+.pp-detail-head{align-items:center}
+
+/* Form Thêm / Cập nhật */
+.pp-readonly{min-height:36px;display:flex;align-items:center;font-weight:600;color:var(--color-ink-1)}
+.pp-price-now{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-bottom:12px;font-size:var(--fs-body)}
+.pp-price-now .pp-price-label{color:var(--color-ink-3)}
+.pp-price-now b{color:var(--color-ink-1)}
+.pp-price-empty{color:var(--color-ink-3)}
+.pp-form .ant-picker,.pp-form .ant-input-number,.pp-form .ant-input-number-affix-wrapper{width:100%;height:36px}
+.pp-form .ant-input-number-input{height:34px}
+.pp-select-option{white-space:normal}
+
+/* Hộp Quyết định giá bán · Xóa */
+.pp-dlg{max-width:560px;width:94vw}
+.pp-choice{display:flex;flex-direction:column;gap:10px}
+.pp-choice .app-choice{align-items:flex-start}
+.pp-choice-title{font-weight:600;color:var(--color-ink-1)}
+.pp-choice-desc{display:block;margin-top:2px;color:var(--color-ink-3);font-size:var(--fs-sm);line-height:1.45}
+.pp-dlg .field{gap:6px}
+.pp-dlg .field-error{margin-top:2px}
+
+.pp-choice-warn{color:var(--color-warn,#B45309)}
+.pp-banner{margin-top:16px}
+#ctPhatSinh{margin-top:12px}
+.pp-form .pp-readonly{min-height:36px}
+
+/* Thêm đợt — bảng mặt hàng */
+.pp-batch-wrap{overflow-x:auto}
+.pp-batch-table{min-width:980px !important}
+.pp-batch-table td{vertical-align:top;white-space:normal}
+.pp-batch-table .ant-select,.pp-batch-table .ant-input-number,.pp-batch-table .ant-input-number-affix-wrapper{width:100%}
+.pp-batch-table td.c-num .ant-input-number-input{text-align:right}
+.pp-batch-table .field-error{display:none}
+.pp-batch-table .field-error.on{display:block;margin-top:4px}
+.pp-row-error>td{background:var(--palette-red-50,#FEF2F2)}
+.pp-row-error-msg>td{padding-top:0 !important;border-bottom:1px solid var(--color-line)}
+.pp-row-error{}
+.pp-batch-table tr.pp-row-error>td{border-bottom:none}
+.pp-batch-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+#loiBangMatHang.on{display:block;margin-top:8px}
+
+/* Hộp Quyết định giá bán nhiều dòng */
+.pp-dlg-wide{max-width:960px;width:96vw}
+.pp-decision-table{margin-top:12px}
+.pp-decision-table td{vertical-align:top;white-space:normal}
+.pp-decision-table .field-error{display:none}
+.pp-decision-table .field-error.on{display:block;margin-top:4px}
+.pp-hints{display:flex;flex-direction:column;gap:4px;margin-top:12px}

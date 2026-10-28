@@ -1,0 +1,47 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* 3 TẦNG CSS — antd lo HÀNH VI, giao diện giữ đúng chuẩn đã chốt ở pm2-tokens.css + pm2-base.css + CSS riêng từng màn
+ * ① @layer antd : style gốc antd (StyleProvider layer) — thấp nhất
+ * ② @layer reset : trả phần tử antd mang lớp thiết kế đã duyệt về mặc định trình duyệt (như bản HTML đang dựa vào)
+ * ③ CSS không nằm trong layer (thiết kế đã duyệt) — luôn thắng ① và ②
+ * Chỉ reset phần tử antd có lớp giao diện riêng (.nut · .ib · .tag…); antd dùng nguyên bản thì giữ style antd. */
+@layer antd, reset;
+
+@layer reset {
+  /* Nút: <button class="ant-btn …"><span class="ant-btn-icon"><svg/></span><span>chữ</span></button> */
+  .app-reset.ant-btn, .app-reset.ant-btn > span { all: revert; }
+  .app-reset.ant-btn::after, .app-reset.ant-btn::before { content: none; }
+  .app-reset.ant-btn > span { display: contents; }
+  /* Tag: <span class="ant-tag …">chữ</span> */
+  .app-reset.ant-tag { all: revert; }
+  /* Tabs: thanh tab tự vẽ (renderTabBar); 4 lớp div bọc nội dung của antd trả về khối thường, tab ẩn vẫn ẩn */
+  .app-reset.ant-tabs, .app-reset.ant-tabs > .ant-tabs-content-holder, .app-reset.ant-tabs > .ant-tabs-content-holder > .ant-tabs-content,
+  .app-reset.ant-tabs > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane { all: revert; }
+  .app-reset.ant-tabs > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane-hidden { display: none; }
+  /* Modal: gốc portal và khung .ant-modal biến mất khỏi bố cục (display: contents) ⇒ .dlg là con trực tiếp của lớp phủ .mask như bản HTML */
+  .app-reset.ant-modal-root, .app-reset-wrap.ant-modal-wrap { all: revert; }
+  .app-reset.ant-modal, .app-reset.ant-modal .ant-modal-render { all: revert; display: contents; }
+  /* lớp div giữ focus (tabindex=0, không tên lớp) bọc nội dung: giãn hết lớp phủ + căn giữa ⇒ .dlg rộng đúng như là con trực tiếp của .mask */
+  .app-reset.ant-modal > div:has(> .ant-modal-render) { width: 100%; display: flex; justify-content: center; align-items: center; outline: none; pointer-events: none; }
+  .app-reset.ant-modal .ant-modal-render > * { pointer-events: auto; }
+  /* Table: 5 lớp div bọc của antd + thẻ bảng trả về mặc định trình duyệt; lớp thiết kế đã duyệt trên <table>/<th>/<td> quyết định giao diện */
+  .app-reset-table.ant-table-wrapper, .app-reset-table .ant-spin-nested-loading, .app-reset-table .ant-spin-container,
+  .app-reset-table .ant-table, .app-reset-table .ant-table-container, .app-reset-table .ant-table-content,
+  .app-reset-table table, .app-reset-table thead, .app-reset-table tbody, .app-reset-table tr, .app-reset-table th, .app-reset-table td { all: revert; }
+  .app-reset-table .ant-table-placeholder { display: none; }
+  /* Giả phần tử antd (lớp phủ mờ của Spin, bóng cột cố định của Table…): vô hình nhưng tạo lớp vẽ GPU riêng ⇒ khử răng cưa
+ * vùng lân cận lệch 11–48 điểm (đo bằng gỡ từng thẻ style antd). all: revert không chạm giả phần tử ⇒ tắt ở đây;
+ * giả phần tử của CSS thiết kế đã duyệt khai ngoài layer nên vẫn thắng. */
+  /* CHỈ các lớp bọc antd đã reset — ⛔ đụng bên trong antd Checkbox / Select (dấu tích là ::after) */
+  .app-reset-table::before, .app-reset-table::after,
+  .app-reset-table :is(.ant-spin-nested-loading, .ant-spin-container, .ant-table, .ant-table-container, .ant-table-content, table, thead, tbody, tr, th, td)::before,
+  .app-reset-table :is(.ant-spin-nested-loading, .ant-spin-container, .ant-table, .ant-table-container, .ant-table-content, table, thead, tbody, tr, th, td)::after,
+  .app-reset::before, .app-reset::after, .app-reset.ant-btn > span::before, .app-reset.ant-btn > span::after,
+  .app-reset.ant-tabs > .ant-tabs-content-holder::before, .app-reset.ant-tabs > .ant-tabs-content-holder::after,
+  .app-reset.ant-tabs > .ant-tabs-content-holder > .ant-tabs-content::before, .app-reset.ant-tabs > .ant-tabs-content-holder > .ant-tabs-content::after,
+  .app-reset-wrap::before, .app-reset-wrap::after { content: none; }
+}
+
+/* NGOÀI layer (phải thắng luật [tabindex]:focus-visible !important của pm2-tokens.css):
+ * antd Modal tự đưa focus vào khung bọc popup khi mở (bản HTML để focus ở body) ⇒ ẩn viền focus của KHUNG BỌC,
+ * nút và ô nhập trong popup vẫn giữ viền focus. Điểm khác hành vi đã ghi ở */
+.app-reset-wrap div[tabindex]:focus-visible { outline: none !important; }

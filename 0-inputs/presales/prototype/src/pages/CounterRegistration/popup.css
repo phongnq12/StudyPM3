@@ -1,0 +1,7 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Khung popup Quẹt thẻ 520px như hộp xác nhận */
+#dlgQuetThe .dlg{max-width:520px}
+/* Lớp giữ focus của antd giãn full ngang lớp phủ ⇒ bấm nền mờ 2 bên popup rơi vào lớp đó, popup không đóng.
+ Cho cú bấm xuyên qua lớp đó xuống lớp phủ .mask như bản HTML; khung .dlg vẫn nhận bấm bình thường */
+:is(#dlgQuetThe,#dlgChiTietTN) .ant-modal > div:has(> .ant-modal-render){pointer-events:none}
+:is(#dlgQuetThe,#dlgChiTietTN) .dlg{pointer-events:auto}

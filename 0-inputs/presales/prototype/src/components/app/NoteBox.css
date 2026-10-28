@@ -1,0 +1,13 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* ghi chú trong khối form. Khung theo approval-notice (nền info, viền trái đậm), nội dung theo grid-guide-note (gạch đầu dòng, từ khoá đậm) */
+.note-box{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:12px 16px;border-radius:var(--radius-sm);
+  background:var(--color-info-bg);border:1px solid var(--color-info-line);border-left:4px solid var(--color-info)}
+.note-box > svg{flex:none;width:16px;height:16px;margin-top:2px;color:var(--color-info)}   /* 16px = cỡ chữ tiêu đề, tâm icon trùng tâm dòng tiêu đề cao 20px */
+.note-box-title{font-weight:700;color:var(--color-info);line-height:20px;margin-bottom:4px}
+.note-box ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;color:var(--color-ink-2)}
+.note-box li + li{margin-top:2px}
+.note-box b{font-weight:600;color:var(--color-ink-1)}
+/* Biến thể XÁM 1 dòng (NoteBox line=…): khung như Lưu ý nhưng nền, viền, icon, chữ đều tông xám — thông tin nguồn số liệu */
+.note-box.is-muted{align-items:center;padding:10px 16px;background:var(--color-surface-2, #F8FAFC);border-color:var(--color-line);border-left-color:var(--color-ink-4, #94A3B8)}
+.note-box.is-muted > svg{margin-top:0;color:var(--color-ink-3)}
+.note-box-line{font-size:13px;line-height:20px;color:var(--color-ink-3)}

@@ -1,0 +1,79 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Cài đặt thông báo — chỉ lớp riêng của màn, phần chung lấy từ styles/form.css. Thanh tab cùng khuôn màn Cấu hình thời gian */
+.ns-page .tabs{display:flex;gap:2px;border-bottom:2px solid var(--color-line);margin-bottom:var(--section-gap);background:var(--color-surface, #FFFFFF);
+  border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:0 var(--shell-gutter)}
+.ns-page .tab-n{appearance:none;border:none;background:transparent;cursor:pointer;
+  padding:12px 14px;font-family:inherit;font-size:var(--fs-body);font-weight:600;
+  color:var(--color-ink-3);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap}
+.ns-page .tab-n.is-current{color:var(--color-brand);border-bottom-color:var(--color-brand)}
+.ns-page .tab-panel{display:none}
+.ns-page .tab-panel.is-current{display:block}
+
+/* bảng rộng theo khung, chữ dài xuống dòng ⇒ không cuộn ngang; bo góc như các danh sách PM2 */
+.ns-table-wrap{width:100%}
+.ns-table{width:100%;min-width:0;table-layout:fixed;border-collapse:separate;border-spacing:0;overflow:hidden;
+  border:1px solid var(--color-line,#E5E7EB);border-radius:var(--radius-lg,12px)}
+.ns-table th{text-align:left;padding:10px 14px;white-space:nowrap}
+.ns-table td{height:auto;max-height:none;overflow:visible;white-space:normal;padding:12px 14px;border-top:1px solid var(--color-row-line, #E5E7EB);
+  font-size:var(--fs-body);color:var(--color-ink-2);vertical-align:top;line-height:1.5;word-break:break-word}
+.ns-table td.col-index{padding-left:8px;padding-right:8px;text-align:center}
+.ns-table th.col-index{text-align:center}
+/* mã và biến dùng font chung của hệ thống, ⛔ font đơn cách */
+.ns-code{font-size:12px;font-weight:600;color:var(--color-ink-1);overflow-wrap:anywhere}
+.ns-title{font-weight:600;color:var(--color-ink-1)}
+.ns-body{color:var(--color-ink-3);margin-top:2px}
+.ns-content+.ns-content{margin-top:10px;padding-top:10px;border-top:1px dashed var(--color-line,#E5E7EB)}
+.ns-to{color:var(--color-ink-3);font-size:var(--fs-sm);font-weight:500;margin-bottom:2px}
+.ns-recipient{display:flex;flex-direction:column;gap:12px;padding:14px 16px;border:1px solid var(--color-line,#E5E7EB);border-radius:var(--radius-md,8px)}
+.ns-recipient-label{font-size:var(--fs-sm);font-weight:600;color:var(--color-ink-3)}
+.ns-send{color:var(--color-ink-1);font-weight:500}
+.ns-trigger{color:var(--color-ink-3);font-size:var(--fs-sm);margin-top:2px}
+.ns-table .is-blank{color:var(--color-ink-4)}
+.ns-switch{display:inline-flex;align-items:center;gap:8px;min-height:24px}
+.ns-switch.is-locked .ant-switch{pointer-events:none}   /* công tắc khóa: rê chuột vào khung để hiện tooltip */
+.ns-switch-text{font-size:var(--fs-body);color:var(--color-ink-2)}
+.ns-table .acts{display:flex;gap:4px}
+/* mã là chữ thường (không link) · tên 1 dòng */
+.ns-name{color:var(--color-ink-1);font-weight:500}
+.ns-table td{vertical-align:middle}
+.ns-view-section{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--color-ink-3, #64748B);margin-top:4px}
+.ns-dlg .ns-recipient .ns-title{margin-top:2px}
+/* màu nút Xem/Sửa lấy từ styles/base.css, không ghi đè ở đây */
+
+/* popup Sửa thông báo */
+.ns-dlg{gap:18px}
+.ns-view{display:grid;grid-template-columns:170px 1fr;gap:10px 16px;padding:14px 16px;background:var(--color-page,#F8FAFC);
+  border:1px solid var(--color-line-soft,#F1F5F9);border-radius:var(--radius-md,8px);font-size:var(--fs-body)}
+.ns-view-label{color:var(--color-ink-3)}
+.ns-view-value{color:var(--color-ink-1);font-weight:500;word-break:break-word}
+.ns-offset{display:flex;align-items:center;gap:10px}
+.ns-offset .text-input{width:120px;flex:none}
+.ns-anchor{color:var(--color-ink-2);white-space:nowrap}
+.ns-count{align-self:flex-end;font-variant-numeric:tabular-nums}
+.ns-dlg .field .field-error{order:0}
+
+/* biến thay thế (BRD-WEB-03b 6.4): chip nhạt trong bảng · khối bên phải ô soạn nội dung, màn hẹp thì xuống dưới */
+.ns-var{display:inline-block;padding:0 4px;margin:0 1px;border-radius:4px;background:var(--palette-xeef4fb, #EEF4FB);color:var(--palette-x1e5a8c, #1E5A8C);font-size:.92em;line-height:1.45}
+.ns-compose{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:20px;align-items:start}
+.ns-compose-fields{display:flex;flex-direction:column;gap:16px;min-width:0}
+.ns-vars{position:sticky;top:0;padding:14px;border:1px solid var(--color-line,#E5E7EB);border-radius:var(--radius-md,8px);background:var(--color-page,#F8FAFC)}
+.ns-vars-title{font-size:var(--fs-sm);font-weight:700;color:var(--color-ink-2)}
+.ns-vars-hint{font-size:var(--fs-caption,12px);color:var(--color-ink-3);margin:2px 0 10px}
+.ns-vars-list{display:flex;flex-direction:column;gap:6px}
+.ns-var-chip{display:flex;flex-direction:column;align-items:flex-start;gap:1px;width:100%;padding:6px 10px;border:1px solid var(--color-line,#E5E7EB);
+  border-radius:6px;background:var(--color-surface, #FFFFFF);cursor:pointer;text-align:left;font:inherit}
+.ns-var-chip:hover{border-color:var(--color-brand);background:var(--color-brand-weak)}
+.ns-var-chip .ns-var{padding:0;margin:0;background:transparent}
+.ns-var-name{font-size:var(--fs-caption,12px);color:var(--color-ink-3)}
+@media (max-width:1100px){
+  .ns-compose{grid-template-columns:minmax(0,1fr)}
+  .ns-vars{position:static}
+  .ns-vars-list{flex-direction:row;flex-wrap:wrap}
+  .ns-var-chip{width:auto}
+}
+
+/* Mục Ví dụ dưới mỗi nội dung thông báo — khung xám nhạt, chữ như thông báo thật */
+.ns-example{margin-top:4px;padding:10px 12px;border-radius:var(--radius-md,8px);background:var(--color-hovered, #F8FAFC);border:1px dashed var(--color-line,#E5E7EB)}
+.ns-example-label{font-size:var(--fs-sm);font-weight:600;color:var(--color-ink-3);margin-bottom:4px}
+.ns-example-title{font-weight:600;color:var(--color-ink-1)}
+.ns-example-body{color:var(--color-ink-3);margin-top:2px}

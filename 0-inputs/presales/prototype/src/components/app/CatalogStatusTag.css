@@ -1,0 +1,4 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* màu tag trạng thái danh mục (.tag.catalog-status.*) khai ở styles/base.css, không khai lại ở đây */
+/* đặt cạnh tiêu đề màn (Chi tiết · Sửa): h1.page-head-row đã có gap 10px */
+.page-head-row .tag.catalog-status{margin:0;vertical-align:middle}

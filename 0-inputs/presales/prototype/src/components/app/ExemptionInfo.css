@@ -1,0 +1,26 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Đơn ngoại lệ dạng XEM — cùng khuôn .adjust của màn Chi tiết (AppointmentDetail.css), viết lại trong phạm vi .exempt-info
+ * để popup ở màn Danh sách (không nạp form.css, AppointmentDetail.css) vẫn đúng khuôn */
+.adjust.exempt-info{display:grid;grid-template-columns:220px 1fr;gap:0}
+.exempt-info>.adjust-label,.exempt-info>.adjust-value{padding:11px 0;border-bottom:1px solid var(--color-row-line, #E5E7EB);font-size:var(--fs-body)}
+.exempt-info>.adjust-label{color:var(--color-ink-3);font-weight:400;padding-right:20px}
+.exempt-info>.adjust-value{color:var(--color-ink-1);font-weight:600;padding-left:20px;min-width:0}
+.exempt-info>:nth-last-child(-n+2){border-bottom:none}
+.dlg .adjust.exempt-info{grid-template-columns:170px 1fr}
+.dlg .exempt-info>.adjust-value{padding-left:12px}
+/* bảng Thân nhân đi cùng · Đối chiếu giấy tờ: khuôn people-table, cột đầu là họ tên (không phải STT) */
+.exempt-companion-view,.exempt-check-view{width:100%;min-width:0;border-collapse:separate;border-spacing:0;border:1px solid var(--color-line,#E5E7EB);border-radius:var(--radius-md,8px);overflow:hidden}
+.exempt-companion-view th,.exempt-check-view th{text-align:left;padding:8px 12px;font-size:var(--fs-caption);font-weight:600;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.exempt-companion-view td,.exempt-check-view td{padding:8px 12px;border-bottom:1px solid var(--color-row-line, #E5E7EB);font-size:var(--fs-body);font-weight:400}
+.exempt-companion-view tr:last-child td,.exempt-check-view tr:last-child td{border-bottom:none}
+.people-table.exempt-companion-view th:first-child,.people-table.exempt-companion-view td:first-child,
+.people-table.exempt-check-view th:first-child,.people-table.exempt-check-view td:first-child{text-align:left;width:auto}
+.exempt-info .attach-list li{font-weight:400}
+/* khung hẹp (popup): bảng co theo bề rộng, chữ xuống dòng, không tràn ngang */
+.exempt-info .exempt-companion-view{table-layout:fixed;margin-top:0;min-width:0}   /* màn Danh sách có luật chung table{min-width} cho bảng chính */
+.exempt-info .exempt-companion-view td{word-break:break-word;vertical-align:top;white-space:normal;overflow:visible;text-overflow:clip;max-width:none;height:auto}
+.dlg .exempt-info .exempt-companion-view th{white-space:nowrap;padding:6px 8px}
+.dlg .exempt-info .exempt-companion-view td{padding:6px 8px;font-size:13px}
+/* Lộ trình duyệt: các lần gửi duyệt xếp dọc, cách nhau 1 đường kẻ */
+.approval-rounds{display:flex;flex-direction:column;gap:16px}
+.approval-round + .approval-round{border-top:1px dashed var(--color-line);padding-top:12px}

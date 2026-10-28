@@ -1,0 +1,355 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* ============================================================================
+ PM2 Design System — TOKEN LAYER
+ Sinh cho màn WEB-06 Lịch hẹn thăm gặp trực tiếp.
+
+ NGUỒN GỐC
+ ---------
+ Kế thừa trọn bộ token của PM1 tại:
+ gpdv-rehab-common/project-docs/requirements/PM1/design-system/tokens/pm1-tokens.css
+ PM2 TUÂN THỦ BẮT BUỘC quy chuẩn PM1, khác DUY NHẤT hệ màu thương hiệu.
+ Căn cứ: PM2-doc-file-design-system-the-nao.md — "PM2 tuân thủ bắt buộc quy chuẩn
+ PM1, khác duy nhất hệ màu thương hiệu, nên tài liệu đó vẫn dùng được gần như
+ trọn vẹn — chỉ cần đọc lệch đúng một chỗ."
+
+ BỐN BIẾN THƯƠNG HIỆU ĐÃ ĐỔI: màu chủ đạo đỏ của PM2.
+ Xanh lá #166534 của PM1 đọc thành đỏ #D0202B của PM2.
+
+ Quy tắc bắt buộc: KHÔNG viết mã màu thô trong component — luôn dùng var(--*).
+ ============================================================================ */
+:root {
+  --btn-gap: 8px;
+  --btn-h: 36px;   /* chiều cao MỌI nút có chữ = ô nhập 36px, 1 cỡ cho đỡ loạn (sửa theo) */   /* khoảng cách giữa 2 nút liền kề, mọi thanh nút (đo PM1 Site DEV: 15/15 cặp = 8px) */
+  /* --- Thương hiệu & tương tác — BỐN BIẾN DUY NHẤT KHÁC PM1 ----------------
+ Đỏ là màu hành động chính DUY NHẤT của PM2. Xanh dương chỉ dành cho liên
+ kết văn bản và thông báo mang tính thông tin. */
+  --color-brand: #D0202B;
+  --color-brand-hover: #B01B24;
+  --color-brand-active: #8F161D;
+  --color-brand-weak: #FDE8E9;
+  /* Nền hàng đang rê chuột: cùng họ đỏ thương hiệu nhưng NHẠT HƠN
+ brand-weak 1 bậc, để hàng đang rê ⛔ không trông như tiêu đề thứ 2. */
+  --color-row-hover: #FDF7F7;
+  --color-link: #2563EB;
+  --color-link-hover: #1D4ED8;
+
+  /* --- Trạng thái ngữ nghĩa — GIỮ NGUYÊN 100% theo PM1 ---------------------
+ PM2 không đổi một ký tự nào trong nhóm này. Đỏ ngữ nghĩa (--color-err) là
+ màu LỖI, khác hẳn đỏ thương hiệu (--color-brand) là màu HÀNH ĐỘNG. */
+  --color-ok: #047857;
+  --color-ok-bg: #D1FAE5;
+  --color-ok-line: #A7F3D0;
+  --color-warn: #B45309;
+  --color-warn-bg: #FEF3C7;
+  --color-warn-line: #FDE68A;
+  --color-err: #DC2626;
+  --color-err-bg: #FEF2F2;
+  --color-err-line: #FECACA;
+  --color-info: #1D4ED8;
+  --color-info-bg: #EFF6FF;
+  --color-info-line: #BFDBFE;
+
+  /* --- Bề mặt & viền — giữ nguyên theo PM1 --------------------------------- */
+  --color-page: #F1F5F9;
+  --color-surface: #FFFFFF;
+  --color-muted: #F9FAFB;
+  --color-hovered: #F8FAFC;
+  --color-line: #E5E7EB;
+  --color-line-soft: #F3F4F6;
+  --color-line-strong: #D1D5DB;
+
+  /* --- Chữ, bốn bậc — giữ nguyên theo PM1 ---------------------------------
+ ink-4 CHỈ dùng cho icon trang trí và placeholder. */
+  --color-ink-1: #0C1A2E;
+  --color-ink-2: #334155;
+  --color-ink-3: #64748B;
+  --color-ink-4: #94A3B8;
+
+  /* --- Màu riêng của màn WEB-06 -------------------------------------------
+ BR1-5 tô nền vàng nhạt cho dòng quá giờ chưa check-in.
+ BR1-6 tô nền xanh nhạt cho dòng đang diễn ra.
+ BR1-7 nhãn Chưa xếp màu cam. */
+  --color-row-late: #FEF9C3;
+  --color-row-live: #DCFCE7;
+  --color-unassigned: #EA580C;
+
+  /* --- Thang chữ: 6 bậc, Design System mục Kiểu chữ ------------------------
+ Bốn mức đậm: 400 nội dung · 500 nhấn nhẹ và nút · 600 tiêu đề và nhãn ·
+ 700 tiêu đề trang. ⛔ KHÔNG dùng 300 hay 800. */
+  --fs-page: 24px;      /* 700 · tiêu đề trang, ĐÚNG 1 cái mỗi màn */
+  --fs-section: 20px;   /* 600 · tiêu đề mục lớn, số liệu thống kê nhỏ */
+  --fs-card: 16px;      /* 600 · tiêu đề thẻ, tiêu đề modal */
+  --fs-body: 14px;      /* 400/500 · MẶC ĐỊNH: nội dung, ô nhập, nút, ô bảng */
+  --fs-sm: 13px;        /* 400 · nhãn trường, mô tả phụ, breadcrumb */
+  --fs-caption: 12px;   /* 500/600 · nhãn cột bảng (IN HOA), tag, lỗi trường */
+
+  /* --- NGOAI LE CO CHU: chu nut Huy lich hen 18px ------------------------------
+ 18px KHONG nam trong thang 6 bac o tren nhung da chot giu ==> khai thanh bien
+ rieng co ten ro nghia, khong go 18px tran rai rac trong CSS. */
+  --fs-dlg-title: 18px; /* 700 - tieu de hop thoai, ngoai thang 6 bac */
+
+  /* --- Bo góc: ba bậc, chốt 6 / 8 / 12px theo Design System ---------------- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.5rem;   /* khung, popup, bảng bo 8px như PM1 */
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.5rem;
+
+  /* --- Đổ bóng: trung tính, không nhuốm màu nhấn --------------------------- */
+  --shadow-sm: 0 1px 4px rgba(15, 23, 42, .05);
+  --shadow-md: 0 2px 8px rgba(15, 23, 42, .05);
+  --shadow-lg: 0 4px 14px rgba(15, 23, 42, .10);
+  --shadow-hover: 0 12px 32px rgba(15, 23, 42, .10);
+
+  /* --- Chuyển động --------------------------------------------------------- */
+  --ease-std: cubic-bezier(.4, 0, .2, 1);
+}
+
+/* ── Thẻ trạng thái: ghi đè bắt buộc lên Ant Design ─────────────────────────
+ Bộ mặc định của Ant Design KHÔNG đạt WCAG AA khi đặt chữ lên nền nhạt.
+ Kế thừa nguyên cách xử của PM1. */
+.ant-tag-success { background: #DCFCE7 !important; border-color: #86EFAC !important; color: #166534 !important; }
+.ant-tag-warning { background: #FEF3C7 !important; border-color: #FDE68A !important; color: #92400E !important; }
+.ant-tag-error   { background: #FEF2F2 !important; border-color: #FECACA !important; color: #B91C1C !important; }
+.ant-tag-processing { background: #EFF6FF !important; border-color: #BFDBFE !important; color: #1D4ED8 !important; }
+
+
+/* ============================================================================
+ 🔴 FONT CHỮ DÙNG CHUNG 100% HỆ THỐNG — theo Design System.
+ 🟢 Verified (design_system.html dòng 45): --font:system-ui,-apple-system,
+ BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif.
+ · ⛔ webfont (Inter…) — Design System: phần mềm chạy mạng nội bộ
+ · ⛔ chữ đều bề ngang ở bất kỳ đâu — mã phân biệt bằng đậm + màu
+ · Nút, ô nhập, ô chọn KẾ THỪA font trang (trình duyệt mặc định cho chúng Arial)
+ Dùng !important vì nhiều màn còn khai font riêng trong <style> của màn —
+ KHAI 1 CHỖ Ở ĐÂY là đủ, ⛔ sửa lẻ từng màn.
+ ============================================================================ */
+:root { --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+html, body { font-family: var(--font) !important; }
+body *:not(svg):not(svg *) { font-family: inherit !important; }
+
+
+/* ============================================================================
+ 🔴 QUY CHUẨN CHỮ · NÚT · Ô NHẬP · TAG · ICON
+ GỐC = Design System (_WorkingDocs/) + 4 ngoại lệ ĐÃ CHỐT:
+ · tiêu đề popup 18px/700 (--fs-dlg-title) · tiêu đề đầu mục 14px/700 IN HOA
+ · hàng bảng Danh sách 82px (ô 3 dòng) · đầu = chân popup
+ KHAI 1 CHỖ Ở ĐÂY — mọi màn nạp file này, ⛔ sửa lẻ từng màn.
+ !important vì mỗi màn còn khai cỡ riêng trong <style> của màn.
+ ============================================================================ */
+/* V5 — Tiêu đề màn 18px/700, đúng 1 cái mỗi màn.
+ 🔴 HẠ 24px ⇒ 18px — SỐ ĐO THẬT từ PM1 STG màn khen-thuong-hoc-vien:
+ tiêu đề h2 18px/700, line-height 28px. 24px làm lệch icon, câu giới thiệu
+ tụt xuống và tag trạng thái lọt thỏm.
+ ⛔ ĐỪNG nâng lại 24px — đây là số ĐO TỪ PM1, ⛔ phải số ước. */
+.page-head-text h1, .dt-title { font-size: 18px !important; line-height: 28px !important; font-weight: 700 !important; }
+/* 🔴 KHỐI ICON — số đo thật PM1: 40x40px, bo 8px, svg bên trong 20x20px.
+ PM2 đang 38x38 bo 6px ⇒ chỉnh cho khớp. */
+.page-head-icon { width: 28px !important; height: 28px !important; border-radius: 6px !important; }
+.page-head-icon svg { width: 16px !important; height: 16px !important; }
+/* 🔴 CĂN GIỮA CẢ HÀNG ĐẦU MÀN — nút mũi tên lệch.
+ Đo thật: khối cha `.page-head` để `align-items:flex-start` nên
+ nút `.page-head-back` dính MÉP TRÊN, lệch 7.8px (màn Thăm gặp) và 10.8px
+ (màn Quầy) so với tâm khối chữ.
+ ⇒ Cho CHÍNH khối cha căn giữa, thay vì căn từng con một — cách này
+ chặn luôn mọi phần tử thêm vào sau này.
+ ⛔ ĐỪNG đổi lại `flex-start`. */
+.page-head { align-items: center !important; }
+/* 🔴 TIÊU ĐỀ MÀN DANH SÁCH — theo PM1 khen-thuong-hoc-vien.
+ SỐ ĐO THẬT từ PM1 STG:
+ tiêu đề h2 18px/700 line-height 28px · khối icon 40x40 bo 8px · svg 20x20
+ PM2 đang dùng `--fs-page` (24px) và svg trần 24px ⛔ có khối bọc.
+ ⛔ ĐỪNG nâng lại 24px — đây là số ĐO, ⛔ phải ước. */
+.shell-title h1 { font-size: 18px !important; line-height: 28px !important; font-weight: 700 !important; }
+/* Icon màn danh sách: bọc trong khối 40x40 nền nhạt, giống PM1 */
+.shell-title { gap: 8px !important; align-items: center !important; }   /* icon và tiêu đề sát nhau hơn */
+/* 🔴 CÂU DIỄN GIẢI DƯỚI TIÊU ĐỀ MÀN DANH SÁCH — theo PM1.
+ Ảnh PM1 có câu ngay dưới tiêu đề.
+ Khối `.shell-title` là flex NGANG, nên bọc h1 + câu vào `.shell-text`
+ để chúng xếp DỌC, icon vẫn nằm giữa theo chiều dọc. */
+.shell-text { display: flex; flex-direction: column; min-width: 0; }
+.shell-sub { margin: 2px 0 0; font-size: 13px; line-height: 1.5;
+  color: var(--color-ink-3, #5A6578); }
+/* ô icon cao bằng dòng tiêu đề 28px (icon 16 + đệm 6), màn không có dòng phụ */
+.shell-title > svg { width: 16px !important; height: 16px !important;
+  box-sizing: content-box !important; padding: 6px !important;
+  background: var(--color-brand-weak, #FDE8E9) !important;
+  border-radius: 8px !important; flex: none !important; }
+/* V7 — ⛔ bậc 15px (Design System bỏ 11/15/18/22) ⇒ tên trong thẻ người cai nghiện về 14px */
+.student-name { font-size: 14px !important; }
+/* V8 — Nhãn trường 13px/400 (--fs-sm) */
+.adjust .adjust-label { font-size: 13px !important; font-weight: 400 !important; }
+/* V9 — Ghi chú, mô tả phụ 13px/400 (--fs-sm); 12px chỉ dành cho tag, nhãn cột, lỗi dưới ô */
+.hint, .status-note { font-size: 13px !important; }
+/* V10 — Mọi nút có chữ cao var(--btn-h) 36px bằng ô nhập, 14px/500, bo 6px, không bóng */
+.lookup .form-btn, .filter-panel .btn { height: 36px !important; }
+.form-btn, .person-actions .form-btn, .form-btn-add, .person-remove { height: var(--btn-h) !important; font-size: 14px !important; font-weight: 500 !important; box-shadow: none !important; }
+/* V11 — Ô nhập, ô chọn cao 36px (điều khiển 36px của Design System) */
+input.text-input, select.text-input, button.text-input, .select-field .lookup-input { height: 36px !important; }
+/* V12 — Tag và thẻ trạng thái: 1 chuẩn cho cả loại — 13px/500, cao 26px, bo tròn.
+ 🔴 NGOẠI LỆ CÓ CHỦ Ý so với Design System (tag 12px): C32 A — 12px trông lệch so với chữ thường.
+ 13px vẫn trong thang 6 bậc (--fs-sm); hạ đậm 600 ⇒ 500
+ để tag ⛔ tranh nhấn với 2 cột được nhấn (mã, tên). Khung dòng 18px ⇒ cao vẫn 26px, hàng bảng giữ 82px. */
+/* Khung GỌN cao 24px — chọn 13px/500 khung 24 sau khi so 4 kiểu. Đệm 2px/8px + dòng 18px + viền 2px = 24px. */
+/* CẢ HỌ tag — rà đo ra 6 lớp tag riêng từng lọt ngoài quy chuẩn (dc-tag cao 32px làm hàng Chi tiết lệch) */
+/* 🔴 CHỐT 13px/500 cao 24 — sau khi thử 12/600 · 13/500 cao 26 · 13/500 cao 24 · 12/600 cao 24.
+ Ngoại lệ có chủ ý so với Design System (tag 12px); 13px vẫn trong thang 6 bậc. */
+/* tag theo đúng PM1 (design_system.html .tag) — 12px/500, dòng 18px, đệm 2px/10px, viền 1px ⇒ cao 24px */
+.tag, .status-sm, .status-lg, .person-tag, .adjust-tag, .tag-applied, .tag-applied-sub, .relative-tag, .tag-discipline, .tag-expired, .tag-status { font-size: 12px !important; font-weight: 500 !important; line-height: 18px !important; padding: 2px 10px !important; box-sizing: border-box; }
+/* Tiêu đề cột bảng: 12px/600 IN HOA, giãn chữ 0.6px ở mọi bảng */
+table thead th { letter-spacing: 0.6px !important; }
+/* V13 — Icon: nét LUÔN 2 (Design System mục 6.1); icon trong nút có chữ 16px */
+svg[stroke-width="2.5"], svg[stroke-width="2.2"], svg[stroke-width="1.5"] { stroke-width: 2 !important; }
+.form-btn svg, .btn svg { width: 16px !important; height: 16px !important; }
+
+
+/* ============================================================================
+ 🔴 SOÁT 20 ĐIỀU CẤM DESIGN SYSTEM + CĂN GIỮA DÒNG
+ ============================================================================ */
+/* Điều 3 — ⛔ đậm 800: tên hệ thống trên header về 700 */
+.hd-n1 { font-weight: 700 !important; }
+/* Điều 7 — ⛔ nút đổ bóng: nút tròn thu gọn thanh bên chỉ giữ viền */
+.sb-tog { box-shadow: none !important; }
+/* Điều 9 — ⛔ tắt viền focus buồng phím: viền 2px màu thương hiệu, cách nút 2px (Design System mục 5.4) */
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--color-brand) !important; outline-offset: 2px !important; }
+/* 🔴 CĂN GIỮA DÒNG — UI luôn căn giữa theo chiều dọc.
+ Cặp nhãn – giá trị: khoảng dòng 24px = đúng chiều cao tag,
+ tag canh giữa dòng ⇒ nhãn chữ và giá trị có tag nằm CÙNG 1 đường giữa. */
+.adjust .adjust-label, .adjust .adjust-value { line-height: 24px !important; }
+/* canh MÉP TRÊN của dòng 24px: tag cao đúng 24px ⇒ tâm tag trùng tâm dòng chữ nhãn (đo: `middle` lệch 4,5px) */
+.adjust .adjust-value .tag, .adjust .adjust-value .status-sm, .adjust .adjust-value .status-lg, .adjust .adjust-value .adjust-tag, .adjust .adjust-value .tag-applied, .adjust .adjust-value .relative-tag { vertical-align: top !important; }
+/* "Điều kiện tìm kiếm" và tên buổi trong lưới giờ — nhỏ so với tương quan ⇒ 14px/600 */
+.filter-title { font-size: 14px !important; }
+
+/* 🔴 KHE TIÊU ĐỀ KHỐI ⇒ NỘI DUNG 12px (--sp-3 "khe giữa phần tử trong 1 nhóm — dùng nhiều nhất").
+ Đo trước khi sửa: Chi tiết 33px · Tạo mới 28px
+ (tiêu đề cách 18px + dòng đầu còn đệm trên 11px cộng dồn). */
+.card-title { margin-bottom: 12px !important; }
+.card-title + .adjust > :nth-child(-n+2) { padding-top: 0 !important; }
+
+/* 🔴 KHOẢNG CÁCH THEO MỐC DESIGN SYSTEM
+ Giữ khe 12px giữa 2 khối, đồng bộ mọi màn. */
+/* Đệm trong thẻ 24px đều 4 phía (đo trước: 20/24/24) */
+.card { padding: 24px 16px 16px; }   /* khối có viền, đệm trong (bỏ !important để khối không tiêu đề tự hạ đệm trên) */
+/* Hàng nhãn – giá trị đệm 12px trên dưới (đo trước: 11px) — hàng đầu dưới tiêu đề vẫn bỏ đệm trên */
+.adjust .adjust-label, .adjust .adjust-value { padding-top: 12px !important; padding-bottom: 12px !important; }
+/* Khe giữa các trường trong popup 16px (đo trước: 14px) */
+.dlg-b { gap: 16px !important; }
+/* Khe icon ↔ chữ trong nút 6px (Design System mục 6.1; đo trước: 7px) */
+.form-btn, .btn { gap: 6px !important; }
+/* Khe nhãn ↔ ô nhập 6px (đo trước: 5px) */
+.fld { gap: 6px !important; }
+/* 2 khung popup Điều chỉnh đệm 12/16px (khung phải viền 2px ⇒ 11/15px) */
+.compare-box { padding: 12px 16px !important; }
+.compare-new { padding: 11px 15px !important; }
+
+/* 🔴 LIÊN KẾT NHANH MÀU XANH — link «Chọn ngày hôm nay» màu xanh dương dạng link */
+.quick-link { color: var(--color-link, #2563EB) !important; text-decoration: underline; }
+.quick-link:hover { color: var(--color-link-hover, #1D4ED8) !important; }
+
+/* 🔴 CHỮ ĐỎ DƯỚI Ô — hiện dưới MỌI ô bắt buộc còn trống.
+ Ô Ngày: chữ đỏ NGAY DƯỚI ô, TRÊN link "Chọn ngày hôm nay". Trong lưới cột ⇒ trải hết hàng, ⛔ gãy dòng. */
+.date-row .field-error { order: 0 !important; }
+.field-error { grid-column: 1 / -1; }
+
+/* 🔴 TAB ĐẾM 0 ⛔ LÀM MỜ.
+ Ghi đè luật cũ `.tab-btn.is-empty{opacity:.45}` đang chép ở 9 màn. Tab vẫn bấm được như mọi tab khác. */
+.tab-btn.is-empty, .tab-btn.is-empty:hover { opacity: 1 !important; }
+
+/* Bảng màu gốc bổ sung: mã màu trước đây viết thẳng trong CSS màn, nay gọi qua biến. Tên theo bảng màu Tailwind. */
+:root{
+  --palette-amber-50: #FFFBEB;
+  --palette-amber-600: #D97706;
+  --palette-amber-800: #92400E;
+  --palette-black: #000000;
+  --palette-blue-500: #3B82F6;
+  --palette-cyan-200: #A5F3FC;
+  --palette-cyan-50: #ECFEFF;
+  --palette-cyan-700: #0E7490;
+  --palette-emerald-50: #ECFDF5;
+  --palette-emerald-600: #059669;
+  --palette-emerald-800: #065F46;
+  --palette-fuchsia-200: #F5D0FE;
+  --palette-fuchsia-50: #FDF4FF;
+  --palette-fuchsia-700: #A21CAF;
+  --palette-gray-400: #9CA3AF;
+  --palette-gray-500: #6B7280;
+  --palette-gray-600: #4B5563;
+  --palette-gray-700: #374151;
+  --palette-green-200: #BBF7D0;
+  --palette-green-300: #86EFAC;
+  --palette-green-400: #4ADE80;
+  --palette-green-50: #F0FDF4;
+  --palette-green-600: #16A34A;
+  --palette-green-700: #15803D;
+  --palette-green-800: #166534;
+  --palette-indigo-200: #C7D2FE;
+  --palette-indigo-50: #EEF2FF;
+  --palette-indigo-700: #4338CA;
+  --palette-neutral-100: #F5F5F5;
+  --palette-orange-100: #FFEDD5;
+  --palette-orange-200: #FED7AA;
+  --palette-orange-300: #FDBA74;
+  --palette-orange-50: #FFF7ED;
+  --palette-orange-700: #C2410C;
+  --palette-orange-800: #9A3412;
+  --palette-red-100: #FEE2E2;
+  --palette-red-300: #FCA5A5;
+  --palette-red-500: #EF4444;
+  --palette-red-700: #B91C1C;
+  --palette-red-800: #991B1B;
+  --palette-rose-200: #FECDD3;
+  --palette-rose-50: #FFF1F2;
+  --palette-rose-700: #BE123C;
+  --palette-sky-200: #BAE6FD;
+  --palette-sky-50: #F0F9FF;
+  --palette-sky-700: #0369A1;
+  --palette-slate-200: #E2E8F0;
+  --palette-slate-300: #CBD5E1;
+  --palette-slate-600: #475569;
+  --palette-slate-800: #1E293B;
+  --palette-slate-900: #0F172A;
+  --palette-teal-200: #99F6E4;
+  --palette-teal-50: #F0FDFA;
+  --palette-teal-700: #0F766E;
+  --palette-violet-200: #DDD6FE;
+  --palette-violet-50: #F5F3FF;
+  --palette-violet-700: #6D28D9;
+  --palette-x0e7a69: #0E7A69;
+  --palette-x1d5fa6: #1D5FA6;
+  --palette-x1e5a8c: #1E5A8C;
+  --palette-x389e0d: #389E0D;   /* icon toast thành công — Ant Design green-7, tương phản 3,47:1 trên nền trắng */
+  --palette-x52c41a: #52C41A;
+  --palette-x5a6478: #5A6478;
+  --palette-x876b1e: #876B1E;
+  --palette-xa63232: #A63232;
+  --palette-xd3e5f4: #D3E5F4;
+  --palette-xd48806: #D48806;   /* icon toast cảnh báo — Ant Design gold-7, đạt ngưỡng 3:1 */
+  --palette-xd9d9d9: #D9D9D9;
+  --palette-xdcebf7: #DCEBF7;
+  --palette-xe2f4f0: #E2F4F0;
+  --palette-xe6eff9: #E6EFF9;
+  --palette-xe6f4ff: #E6F4FF;
+  --palette-xe8ecf2: #E8ECF2;
+  --palette-xeef0f4: #EEF0F4;
+  --palette-xeef1f6: #EEF1F6;
+  --palette-xeef4fb: #EEF4FB;
+  --palette-xf1f4f8: #F1F4F8;
+  --palette-xf2b233: #F2B233;
+  --palette-xf3f5f9: #F3F5F9;
+  --palette-xf5f9fd: #F5F9FD;
+  --palette-xfaad14: #FAAD14;
+  --palette-xfaeaea: #FAEAEA;
+  --palette-xfbf4e0: #FBF4E0;
+  --palette-xfdecec: #FDECEC;
+  --palette-xff4d4f: #FF4D4F;
+}
+
+/* 5 mức màu tag trạng thái theo Design System PM1: Mặc định · Đang xử lý · Cần làm · Lỗi · Xong */
+:root{
+  --tag-default-bg: #F1F5F9; --tag-default-fg: #334155; --tag-default-bd: #CBD5E1;
+  --tag-info-bg: #DBEAFE; --tag-info-fg: #1D4ED8; --tag-info-bd: #93C5FD;
+  --tag-warning-bg: #FEF3C7; --tag-warning-fg: #92400E; --tag-warning-bd: #FCD34D;
+  --tag-error-bg: #FEE2E2; --tag-error-fg: #B91C1C; --tag-error-bd: #FCA5A5;
+  --tag-success-bg: #DCFCE7; --tag-success-fg: #166534; --tag-success-bd: #86EFAC;
+}

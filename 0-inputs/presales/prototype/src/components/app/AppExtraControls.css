@@ -1,0 +1,149 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* CSS dùng chung của 14 control bổ sung (đối chiếu HeroUI) — nạp cùng control nên màn nào dùng cũng đủ.
+ * Màu, bo, cỡ chữ lấy từ token PM2 (tokens.css), không tự chế mã màu. Chưa màn nào dùng: dựng sẵn để màn mới gọi thẳng. */
+
+/* Nhóm radio · nhóm ô tích — ô chọn 16x16 như Ô tích, màu chủ đạo */
+.app-choice-group{display:flex;flex-wrap:wrap;gap:8px 24px;border:0;margin:0;padding:0;min-width:0}
+.app-choice-group.is-vertical{flex-direction:column;gap:8px}
+.app-choice{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-sm);color:var(--color-ink-1);cursor:pointer}
+.app-choice input{width:16px;height:16px;margin:0;flex:none;accent-color:var(--color-brand);cursor:pointer}
+.app-choice.is-disabled{color:var(--color-ink-4);cursor:not-allowed}
+.app-choice.is-disabled input{cursor:not-allowed}
+
+/* Ô số — cao 36, bo 8, viền như ô nhập chữ, 2 nút tăng giảm 2 bên */
+.app-number{display:inline-flex;align-items:stretch;height:36px;border:1px solid var(--color-line);border-radius:var(--radius-md);background:var(--color-surface, #FFFFFF);overflow:hidden}
+.app-number:focus-within{border-color:var(--color-brand)}
+.app-number-input{width:72px;border:0;outline:0;text-align:center;font:inherit;font-size:var(--fs-body);font-variant-numeric:tabular-nums;color:var(--color-ink-1);background:transparent}
+.app-number-step{width:34px;flex:none;border:0;background:var(--color-muted);color:var(--color-ink-2);font-size:16px;line-height:1;cursor:pointer}
+.app-number-step:hover:not(:disabled){background:var(--color-brand-weak);color:var(--color-brand)}
+.app-number-step:disabled{color:var(--color-ink-4);cursor:not-allowed}
+.app-number.is-disabled{background:var(--color-muted)}
+
+/* Avatar — chữ cái đầu tên, hình tròn nền màu chủ đạo (cùng hình .relative-avatar) */
+.app-avatar{display:inline-grid;place-items:center;flex:none;border-radius:50%;background:var(--color-brand);color:var(--color-surface, #FFFFFF);font-weight:700;line-height:1}
+.app-avatar.is-sm{width:28px;height:28px;font-size:12px}
+.app-avatar.is-md{width:36px;height:36px;font-size:14px}
+.app-avatar.is-lg{width:44px;height:44px;font-size:16px}
+.app-avatar-group{display:inline-flex}
+.app-avatar-group .app-avatar{box-shadow:0 0 0 2px var(--color-surface, #FFFFFF)}
+.app-avatar-group .app-avatar + .app-avatar{margin-left:-8px}
+
+/* Số đếm gắn vào phần tử: chữ số đều bề ngang, rộng tối thiểu bằng cao, quá max hiện «max+» */
+.app-badge-anchor{position:relative;display:inline-flex}
+.app-badge{position:absolute;top:-6px;right:-8px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:var(--color-brand);color:var(--color-surface, #FFFFFF);font-size:var(--fs-caption);font-weight:600;line-height:18px;text-align:center;font-variant-numeric:tabular-nums;box-shadow:0 0 0 2px var(--color-surface, #FFFFFF)}
+.app-badge.is-dot{min-width:10px;width:10px;height:10px;padding:0;top:-2px;right:-2px}
+
+/* Thanh tiến độ */
+.app-progress{display:flex;flex-direction:column;gap:6px;min-width:0}
+.app-progress-head{display:flex;justify-content:space-between;gap:12px;font-size:var(--fs-sm);color:var(--color-ink-2)}
+.app-progress-head b{font-weight:600;color:var(--color-ink-1);font-variant-numeric:tabular-nums}
+.app-progress-track{height:8px;border-radius:999px;background:var(--color-muted);overflow:hidden}
+.app-progress-fill{height:100%;border-radius:999px;background:var(--color-brand);transition:width 200ms var(--ease-std)}
+.app-progress.is-ok .app-progress-fill{background:var(--color-ok)}
+.app-progress.is-warn .app-progress-fill{background:var(--color-warn)}
+
+/* Vòng xoay đang tải */
+.app-spinner{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-sm);color:var(--color-ink-3)}
+.app-spinner-ring{width:18px;height:18px;border:2px solid var(--color-line);border-top-color:var(--color-brand);border-radius:50%;animation:app-spin 800ms linear infinite}
+.app-spinner.is-lg .app-spinner-ring{width:32px;height:32px;border-width:3px}
+@keyframes app-spin{to{transform:rotate(360deg)}}
+
+/* Khung chờ tải */
+.app-skeleton{display:flex;flex-direction:column;gap:10px;min-width:0}
+.app-skeleton-line{height:12px;border-radius:6px;background:linear-gradient(90deg,var(--color-muted) 25%,var(--color-line-soft) 50%,var(--color-muted) 75%);background-size:200% 100%;animation:app-shimmer 1.4s ease-in-out infinite}
+@keyframes app-shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+/* Nút đang xử lý (AppButtonWithIcon loading): vòng 14px thế chỗ icon, màu theo chữ nút (trắng trên nút chính, xanh trên nút phụ) */
+.btn-loading-ring{width:14px;height:14px;flex:none;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:app-spin 800ms linear infinite}
+.app-reset.is-loading{cursor:progress}
+@media (prefers-reduced-motion:reduce){.app-spinner-ring,.app-skeleton-line,.btn-loading-ring{animation:none}}
+
+/* Đường phân cách */
+.app-divider{display:flex;align-items:center;gap:12px;margin:0;border:0;color:var(--color-ink-3);font-size:var(--fs-caption)}
+.app-divider::before,.app-divider::after{content:"";flex:1;height:1px;background:var(--color-line)}
+.app-divider:not(.has-label)::after{display:none}
+
+/* Khối thu gọn */
+.app-accordion{border:1px solid var(--color-line);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface, #FFFFFF)}
+.app-accordion-item + .app-accordion-item{border-top:1px solid var(--color-line)}
+.app-accordion-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;cursor:pointer;list-style:none;font-weight:600;font-size:var(--fs-body);color:var(--color-ink-1)}
+.app-accordion-head::-webkit-details-marker{display:none}
+.app-accordion-head svg{width:16px;height:16px;flex:none;transition:transform 150ms var(--ease-std)}
+.app-accordion-item[open] > .app-accordion-head svg{transform:rotate(180deg)}
+.app-accordion-head:hover{background:var(--color-row-hover)}
+.app-accordion-body{padding:4px 16px 16px;font-size:var(--fs-sm);color:var(--color-ink-2)}
+
+/* Ngăn kéo bên phải */
+.app-drawer-mask{position:fixed;inset:0;background:rgba(15,23,42,.45);z-index:1000;display:flex;justify-content:flex-end}
+.app-drawer{width:min(clamp(360px,40vw,560px),100%);   /* rộng 360–560px theo PM1 */
+  height:100%;background:var(--color-surface, #FFFFFF);display:flex;flex-direction:column;box-shadow:var(--shadow-lg)}
+/* trượt ngang từ mép phải 400ms ease-out, lớp phủ mờ dần cùng nhịp — theo PM1 (dur-slow) · tắt khi người dùng bật giảm chuyển động */
+.app-drawer-mask{animation:app-fade-in 400ms cubic-bezier(0,0,.2,1)}
+.app-drawer{animation:app-drawer-in 400ms cubic-bezier(0,0,.2,1)}
+@keyframes app-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes app-drawer-in{from{transform:translateX(100%)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.app-drawer-mask,.app-drawer{animation:none}}
+.app-drawer-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid var(--color-line)}
+.app-drawer-head h2{margin:0;font-size:var(--fs-dlg-title);font-weight:700;color:var(--color-ink-1)}
+.app-drawer-body{flex:1;overflow:auto;padding:20px}
+.app-drawer-foot{display:flex;justify-content:flex-end;gap:var(--btn-gap);padding:12px 20px;border-top:1px solid var(--color-line)}
+
+/* Hộp nổi */
+.app-popover{position:relative;display:inline-flex}
+.app-popover-panel{position:absolute;top:calc(100% + 8px);left:0;z-index:900;min-width:240px;max-width:360px;padding:12px 16px;background:var(--color-surface, #FFFFFF);border:1px solid var(--color-line);border-radius:var(--radius-md);box-shadow:var(--shadow-md);font-size:var(--fs-sm);color:var(--color-ink-2)}
+.app-popover-panel h3{margin:0 0 6px;font-size:var(--fs-sm);font-weight:600;color:var(--color-ink-1)}
+
+/* Liên kết */
+.app-link{display:inline-flex;align-items:center;gap:4px;color:var(--color-link);text-decoration:none;font-weight:500}
+.app-link:hover{color:var(--color-link-hover);text-decoration:underline}
+.app-link:focus-visible{outline:2px solid var(--color-brand);outline-offset:2px;border-radius:2px}
+.app-link svg{width:14px;height:14px;flex:none}
+.app-link.is-disabled{color:var(--color-ink-4);pointer-events:none}
+
+/* 4 control bổ sung */
+/* Bóng cuộn */
+.app-scroll-shadow{position:relative;min-width:0}
+.app-scroll-shadow::before,.app-scroll-shadow::after{content:"";position:absolute;top:0;bottom:0;width:24px;pointer-events:none;opacity:0;transition:opacity 150ms var(--ease-std);z-index:1}
+.app-scroll-shadow::before{left:0;background:linear-gradient(90deg,rgba(15,23,42,.12),transparent)}
+.app-scroll-shadow::after{right:0;background:linear-gradient(270deg,rgba(15,23,42,.12),transparent)}
+.app-scroll-shadow.is-start::before,.app-scroll-shadow.is-end::after{opacity:1}
+.app-scroll-shadow-body{overflow-x:auto}
+.app-scroll-shadow-body:focus-visible{outline:2px solid var(--color-brand);outline-offset:2px}
+/* Phím tắt */
+.app-kbd-group{display:inline-flex;align-items:center;gap:4px;vertical-align:middle}
+.app-kbd{display:inline-block;min-width:22px;padding:1px 6px;border:1px solid var(--color-line-strong);border-bottom-width:2px;border-radius:4px;background:var(--color-muted);color:var(--color-ink-1);font:600 12px/18px var(--font);text-align:center}
+.app-kbd-plus{color:var(--color-ink-3);font-size:12px}
+/* Thanh công cụ */
+.app-toolbar{display:inline-flex;align-items:center;gap:var(--btn-gap);flex-wrap:wrap}
+.app-toolbar-group{display:inline-flex;align-items:center;gap:var(--btn-gap)}
+.app-toolbar-sep{width:1px;height:24px;background:var(--color-line);margin:0 4px}
+/* Ô mẫu màu */
+.app-swatch-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.app-swatch{display:flex;align-items:center;gap:10px;min-width:0}
+.app-swatch-chip{width:36px;height:36px;flex:none;border-radius:var(--radius-md);border:1px solid var(--color-line)}
+.app-swatch-text{display:flex;flex-direction:column;min-width:0;font-size:12px;color:var(--color-ink-3)}
+.app-swatch-text b{font-size:13px;color:var(--color-ink-1)}
+.app-swatch-hex{font-variant-numeric:tabular-nums}
+
+/* Ảnh và video (AppMediaGallery) — thẻ 200px, ảnh tỉ lệ 16:9, video có nút phát và thời lượng góc phải dưới */
+.app-media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.app-media-thumb{display:flex;flex-direction:column;gap:8px;padding:0;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.app-media-pic{position:relative;display:grid;place-items:center;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:var(--color-page);border:1px solid var(--color-line);color:var(--color-ink-4)}
+.app-media-pic img{width:100%;height:100%;object-fit:cover}
+.app-media-pic>svg{width:32px;height:32px}
+.app-media-thumb:hover .app-media-pic{border-color:var(--color-brand)}
+.app-media-thumb:focus-visible{outline:2px solid var(--color-brand);outline-offset:2px;border-radius:var(--radius-md)}
+.app-media-play{position:absolute;inset:0;display:grid;place-items:center}
+.app-media-play svg{width:40px;height:40px;padding:10px;border-radius:50%;background:rgba(15,23,42,.6);fill:var(--color-surface, #FFFFFF)}
+.app-media-dur{position:absolute;right:8px;bottom:8px;padding:2px 6px;border-radius:var(--radius-sm);background:rgba(15,23,42,.75);color:var(--color-surface, #FFFFFF);font-size:var(--fs-caption);font-variant-numeric:tabular-nums}
+.app-media-cap{display:flex;flex-direction:column;gap:2px;min-width:0}
+.app-media-title{font-weight:600;color:var(--color-ink-1);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.app-media-meta{font-size:var(--fs-sm);color:var(--color-ink-3)}
+.app-media-dlg{width:min(880px,calc(100vw - 32px))}
+.app-media-stage{display:grid;place-items:center;aspect-ratio:16/9;background:var(--palette-slate-900, #0F172A);border-radius:var(--radius-md);overflow:hidden;margin-bottom:8px}
+.app-media-stage img,.app-media-stage video{width:100%;height:100%;object-fit:contain}
+.app-media-empty{display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--palette-slate-300, #CBD5E1)}
+.app-media-empty svg{width:40px;height:40px}
+
+/* Cây thư mục, cây tổ chức (AppTree) — chữ thân 14px, nút chọn nền xanh nhạt */
+.app-tree.ant-tree{font-size:var(--fs-body);color:var(--color-ink-1)}
+.app-tree .ant-tree-node-content-wrapper.ant-tree-node-selected{background:var(--color-brand-weak);color:var(--color-brand)}

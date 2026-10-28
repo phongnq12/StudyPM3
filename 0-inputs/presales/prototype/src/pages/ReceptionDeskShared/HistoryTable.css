@@ -1,0 +1,51 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Lịch sử thao tác dạng dòng hoạt động: trục dọc bên trái, mỗi thao tác 1 mốc */
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.tl-item{position:relative;display:flex;gap:14px;padding:0 0 24px}
+.tl-item:last-child{padding-bottom:4px}
+.tl-rail{position:absolute;left:5px;top:18px;bottom:2px;width:2px;background:var(--palette-slate-300,#CBD5E1)}
+.tl-item:last-child .tl-rail{display:none}
+.tl-dot{position:relative;z-index:1;flex:none;width:12px;height:12px;margin-top:6px;border-radius:50%;
+        background:var(--color-surface,#FFFFFF);border:2px solid var(--color-brand)}
+.tl-item.is-create .tl-dot{border-color:var(--color-ok,#047857)}
+.tl-item.is-danger .tl-dot{border-color:var(--color-err,#DC2626)}
+.tl-body{flex:1;min-width:0;display:grid;gap:4px}
+.tl-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px;line-height:24px}
+.tl-action{font-weight:600;color:var(--color-ink-1)}
+.tl-status{display:inline-flex;align-items:center}
+.tl-time{margin-left:auto;color:var(--color-ink-3);font-size:var(--fs-caption);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tl-meta{display:flex;align-items:center;gap:8px;font-size:var(--fs-caption);line-height:1.5}
+.tl-meta .person-title{font-weight:600;color:var(--color-ink-2)}
+.tl-meta .person-role{color:var(--color-ink-3);padding-left:8px;border-left:1px solid var(--color-line)}
+/* khối chi tiết của mốc: các mục có tiêu đề nhỏ, ngăn nhau bằng đường kẻ */
+.tl-card{margin-top:6px;border:1px solid var(--color-line);border-radius:var(--radius-md);background:var(--color-surface,#FFFFFF)}
+.tl-section{padding:10px 14px}
+.tl-section + .tl-section{border-top:1px solid var(--color-line)}
+/* thang chữ dòng hoạt động: tên thao tác 14/600 · người và thời điểm 12 · tiêu đề mục 12/600 in hoa (20/10/2026: bỏ bậc 11 ngoài thang) · nội dung mục 13/400 — nội dung nhỏ hơn đầu mục */
+.tl-section-title{margin-bottom:4px;font-size:var(--fs-caption);line-height:16px;font-weight:600;color:var(--color-ink-3);text-transform:uppercase;letter-spacing:.04em}
+.tl-reason{margin:0;font-size:13px;line-height:20px;color:var(--color-ink-2);white-space:pre-wrap}
+.tl-changes{margin:0;display:grid;gap:6px}
+.tl-change{display:grid;grid-template-columns:200px 1fr;gap:12px;align-items:baseline;font-size:13px;line-height:20px}
+.tl-field{margin:0;color:var(--color-ink-3)}
+.tl-value{margin:0;min-width:0;word-break:break-word}
+.tl-more{margin-top:6px;padding:0;height:auto;border:0;background:none;color:var(--color-link,#2563EB);font:inherit;font-size:var(--fs-caption);font-weight:500;cursor:pointer}
+.tl-more:hover{text-decoration:underline}
+.tl-loadmore{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:8px;padding-top:16px;border-top:1px solid var(--color-line)}
+.tl-count{color:var(--color-ink-3);font-size:var(--fs-caption)}
+.tl-empty{padding:28px 0;text-align:center;color:var(--color-ink-4)}
+.timeline .change-old{color:var(--color-ink-3);text-decoration:line-through}
+.timeline .change-arrow{display:inline-flex;align-items:center;color:var(--color-ink-3);margin:0 6px;vertical-align:-3px}
+.timeline .change-arrow svg{width:16px;height:16px;stroke-width:2}
+.timeline .change-new{font-weight:500;color:var(--color-ink-1)}
+.timeline .change-empty{color:var(--color-ink-4);font-style:italic}
+.timeline .tl-note .tl-reason{color:var(--color-ink-3)}   /* ghi chú hệ thống chữ xám, phân biệt lời người dùng */
+.timeline .history-action.is-danger{color:var(--color-err,#DC2626)}
+/* Mốc rút gọn của Hệ thống · Tự động (kiểu condensed của GitHub Primer): chấm nhỏ xám, 1 dòng tên thao tác,
+ * nhãn «Hệ thống · Tự động» và thời điểm; khối chi tiết gập sau nút Xem chi tiết. Mốc của người giữ nguyên */
+.tl-item.is-auto{padding-bottom:16px}
+.tl-item.is-auto .tl-dot{width:8px;height:8px;margin:8px 2px 0;border-color:var(--palette-slate-400,#94A3B8)}
+.tl-item.is-auto .tl-rail{top:16px}
+.tl-item.is-auto .tl-action{font-weight:500;color:var(--color-ink-2)}
+.tl-auto{font-size:var(--fs-caption);color:var(--color-ink-3)}
+.tl-item.is-auto .tl-more{margin-top:0;justify-self:start}
+@media (max-width:900px){.tl-change{grid-template-columns:1fr;gap:2px}}

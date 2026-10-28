@@ -1,0 +1,37 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Chi tiết quầy tiếp đón — tab bar, label · value block and usage table (same look as the AppointmentDetail tabs and info block) */
+.rd-detail-head{align-items:center}
+.rd-detail .tabs{display:flex;gap:2px;border-bottom:2px solid var(--color-line);margin-bottom:var(--section-gap);padding:0 var(--shell-gutter)}
+.rd-detail .tab-n{appearance:none;border:none;background:transparent;cursor:pointer;padding:12px 14px;font-family:inherit;font-size:var(--fs-body);font-weight:600;
+  color:var(--color-ink-3);border-bottom:3px solid transparent;margin-bottom:-2px;transition:color .15s,border-color .15s;white-space:nowrap}
+.rd-detail .tab-panel{display:none}
+.rd-detail .tab-panel.is-current{display:block}
+
+/* Status tags with a dot and dormitory tag — same classes as the AppointmentDetail sample */
+.status-sm,.status-lg{display:inline-flex;align-items:center;gap:6px;border-radius:999px;font-size:12px;border:1px solid;white-space:nowrap}
+.status-sm{padding:2px 10px;font-weight:600}
+.status-lg{padding:4px 12px;font-weight:500}
+.status-sm::before,.status-lg::before{content:"";width:7px;height:7px;flex:none;border-radius:999px;background:currentColor}
+.adjust-tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;border:1px solid;white-space:nowrap}
+
+/* cột nhãn bằng khối thông tin màn Chi tiết lịch hẹn (.adjust: 220px) */
+.rd-info{display:grid;grid-template-columns:220px 1fr;gap:0}
+@media (max-width:900px){.rd-info{grid-template-columns:1fr}.rd-info-label{padding:11px 0 0;border-bottom:none}.rd-info-value{padding-left:0}}   /* nhãn nằm trên giá trị khi hẹp (WCAG 1.4.10) */
+.rd-info-label,.rd-info-value{padding:11px 0;border-bottom:1px solid var(--color-line);font-size:var(--fs-body);line-height:22px}
+.rd-info-label{color:var(--color-ink-3);padding-right:20px}
+.rd-info-value{color:var(--color-ink-1);font-weight:600;padding-left:20px;min-width:0;word-break:break-word;white-space:pre-wrap}
+.rd-info>:nth-last-child(-n+2){border-bottom:none}
+.rd-tags{display:inline-flex;flex-wrap:wrap;gap:6px}
+.rd-tags .tag{margin:0}
+.rd-open{display:inline-flex;align-items:center;gap:5px;font-size:var(--fs-sm);font-weight:500}
+.rd-open i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.rd-open.is-open{color:var(--palette-green-700, #15803D)}.rd-open.is-closed{color:var(--color-warn, #B45309)}
+.is-blank{color:var(--color-ink-4);font-weight:400}
+
+.rd-search-date{margin:0 0 12px;align-items:flex-start}
+.rd-range{margin:0 0 12px;font-size:var(--fs-sm);color:var(--color-ink-3)}
+.rd-usage td.rd-num,.rd-usage th.rd-num{text-align:right;font-variant-numeric:tabular-nums}
+.rd-usage td{vertical-align:middle}
+/* màn Chi tiết chỉ xem ⇒ chữ, tag, nút thao tác cùng 1 đường giữa dòng (màn Sửa giữ căn trên vì có chữ đỏ dưới ô) */
+.rd-detail .capacity-table td{vertical-align:middle}
+.rd-usage .rd-empty{text-align:center;color:var(--color-ink-3);padding:24px}

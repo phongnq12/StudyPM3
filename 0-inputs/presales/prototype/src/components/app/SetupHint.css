@@ -1,0 +1,10 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* vùng trống + câu hướng dẫn cài đặt, cùng nền và chiều cao với dòng rỗng .empty-state */
+.setup-hint{display:flex;align-items:center;justify-content:center;gap:8px;min-height:150px;padding:0 16px;
+  background:var(--color-surface, #FFFFFF);border:1px solid var(--color-line,#E5E7EB);border-radius:var(--radius-lg,12px);
+  font-size:var(--fs-sm);color:var(--color-ink-3);text-align:center}
+.setup-hint svg{flex:none;width:16px;height:16px;color:var(--color-info)}
+.setup-hint-link{color:var(--color-info);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.setup-hint-link:hover{color:var(--color-brand)}
+.setup-hint.is-inline{min-height:0;padding:0;background:none;border:0;border-radius:0;justify-content:flex-start;text-align:left;align-items:flex-start}
+.setup-hint.is-inline svg{margin-top:2px}
