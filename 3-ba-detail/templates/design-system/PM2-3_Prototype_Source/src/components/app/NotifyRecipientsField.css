@@ -1,0 +1,14 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Trường «Gửi thông báo cho» — mỗi nhóm 1 dòng: ô tick + tên nhóm bên trái, 1 ô chọn nhiều bên phải */
+.notify-field .notify-groups{display:flex;flex-direction:column;gap:10px;border:1px solid var(--border, #E5E7EB);border-radius:8px;padding:12px 14px;background:var(--color-row-hover, #FAFAFA)}
+.notify-field .notify-group{display:grid;grid-template-columns:220px 1fr;gap:12px;align-items:start}
+.notify-field .notify-group-label{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--palette-gray-700, #374151);min-height:32px;margin:0}
+.notify-field .notify-group.is-off .notify-group-label span{color:var(--palette-gray-400, #9CA3AF)}
+.notify-field .notify-group-body{display:flex;flex-direction:column;gap:4px;min-width:0}
+/* popup có trường Gửi thông báo cho rộng hơn popup thường */
+.dlg.dlg-notify{width:880px;max-width:94vw}
+@media (max-width:640px){.notify-field .notify-group{grid-template-columns:1fr;gap:4px}}
+/* khối Gửi theo mặc định · Gửi thêm */
+.notify-field .notify-block{display:flex;flex-direction:column;gap:10px}
+.notify-field .notify-block + .notify-block{border-top:1px dashed var(--border, #E5E7EB);padding-top:10px}
+.notify-field .notify-block-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:var(--color-ink-3, #64748B)}

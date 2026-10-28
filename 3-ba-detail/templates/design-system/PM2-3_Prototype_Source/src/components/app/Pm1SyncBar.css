@@ -1,0 +1,8 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Giờ đồng bộ PM1 + nút Đồng bộ lại — nằm cùng nhóm bên phải tiêu đề khối, cạnh link Tra cứu điều kiện thăm gặp */
+.card-title-tools { display: inline-flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.pm1-sync-bar { display: inline-flex; align-items: center; gap: 8px; }
+.pm1-sync-time { font-size: 13px; color: var(--color-muted, #5A6578); white-space: nowrap; }
+.pm1-sync-time b { color: var(--color-text, #172233); font-weight: 600; }
+.pm1-sync-btn { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; font-size: 13px; }
+.pm1-sync-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

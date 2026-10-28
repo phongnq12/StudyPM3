@@ -1,0 +1,6 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Activate · Deactivate · Delete popups of a reception counter (List and Detail) */
+.dlg-text{font-size:var(--fs-sm);color:var(--color-ink-2);line-height:1.55}
+.dlg-text b{color:var(--color-ink)}
+.eff.is-warning{background:var(--palette-orange-50, #FFF7ED);border:1px solid var(--palette-orange-200, #FED7AA);color:var(--palette-orange-800, #9A3412)}
+.eff.form-footer{background:var(--color-err-bg, #FEF2F2);border:1px solid var(--color-err-line, #FECACA);color:var(--palette-red-800, #991B1B)}

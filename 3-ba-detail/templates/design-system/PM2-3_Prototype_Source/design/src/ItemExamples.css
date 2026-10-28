@@ -1,0 +1,13 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Khung «Ví dụ»: lưới ô ví dụ, mỗi ô = tiêu đề + mô tả + mẫu chạy thật + code */
+.sd-ex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.sd-ex { display: flex; flex-direction: column; gap: 8px; min-width: 0; border: 1px solid var(--color-line, #E5E7EB); border-radius: 8px; padding: 12px; background: var(--color-surface, #FFFFFF); }
+.sd-ex-head { display: flex; flex-direction: column; gap: 2px; }
+.sd-ex-title { font-size: var(--fs-body, 14px); font-weight: 600; color: var(--color-ink, #1F2937); }
+.sd-ex-desc { font-size: var(--fs-sm, 13px); color: var(--color-ink-3, #64748B); }
+.sd-ex-stage { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 48px; padding: 12px; border: 1px dashed var(--color-line, #E5E7EB); border-radius: 6px; overflow-x: auto; }
+.sd-ex-stage > * { max-width: 100%; }
+/* overflow-x:auto ép luôn chiều dọc thành auto ⇒ bảng chọn position:absolute (DateTimeInput, TimeRangeInput) bị khung cắt, trái «bảng chọn hiện TRỌN».
+ * Đang bấm vào ô trong khung thì bỏ cắt để bảng chọn hiện đủ; thôi bấm thì khung cuộn ngang như cũ */
+.sd-ex-stage:focus-within { overflow: visible; }
+.sd-ex-code { margin: 0; font-size: 12px; }

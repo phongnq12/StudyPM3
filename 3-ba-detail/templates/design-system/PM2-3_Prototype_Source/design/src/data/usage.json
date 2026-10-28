@@ -1,0 +1,1015 @@
+{
+ "generatedAt": "2026-10-20T03:17:42.197Z",
+ "components": [
+  {
+   "name": "AppButton",
+   "file": "src/components/app/AppButton.jsx",
+   "bytes": 2392,
+   "exports": [
+    "AppButton",
+    "AppButtonWithIcon"
+   ],
+   "props": "className = '', children, ...rest",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "AppointmentList",
+    "CounterRegistration",
+    "NotificationList",
+    "NotificationSettings",
+    "ReceptionDeskDetail",
+    "ReceptionDeskList",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": [
+    "layout/AppLayout.jsx",
+    "lib/legacyUi.js"
+   ]
+  },
+  {
+   "name": "AppModal",
+   "file": "src/components/app/AppModal.jsx",
+   "bytes": 2717,
+   "exports": [
+    "AppModal"
+   ],
+   "props": "id, open, onClose, labelledBy, dlgClassName = 'dlg', dlgStyle, children",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "AppointmentList",
+    "CounterRegistration",
+    "NotificationList",
+    "NotificationSettings",
+    "ReceptionDeskDetail",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppTable",
+   "file": "src/components/app/AppTable.jsx",
+   "bytes": 4474,
+   "exports": [
+    "AppTable"
+   ],
+   "props": "columns, dataSource, rowKey, tableClassName = '', tableId, tbodyId, emptyRow, rowClassName, indexOffset = 0, rowSelection, selectionClassName = 'col-select'",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "AppointmentList",
+    "CounterRegistration",
+    "NotificationSettings",
+    "ReceptionDeskDetail",
+    "ReceptionDeskList",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "DialogCloseButton",
+   "file": "src/components/app/DialogCloseButton.jsx",
+   "bytes": 880,
+   "exports": [
+    "DialogCloseButton"
+   ],
+   "props": "onClick, title = 'Đóng'",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "AppointmentList",
+    "CounterRegistration",
+    "NotificationList",
+    "NotificationSettings",
+    "ReceptionDeskDetail",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppTag",
+   "file": "src/components/app/AppTag.jsx",
+   "bytes": 628,
+   "exports": [
+    "AppTag"
+   ],
+   "props": "className = '', children, ...rest",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "AppointmentList",
+    "CounterRegistration",
+    "ReceptionDeskDetail",
+    "ReceptionDeskList",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "DialogIcon",
+   "file": "src/components/app/DialogIcon.jsx",
+   "bytes": 1022,
+   "exports": [
+    "DialogIcon"
+   ],
+   "props": "level = 'warn'",
+   "usedBy": [
+    "AppointmentList",
+    "CounterRegistration",
+    "NotificationList",
+    "NotificationSettings",
+    "ReceptionDeskDetail",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppSelect",
+   "file": "src/components/app/AppSelect.jsx",
+   "bytes": 1880,
+   "exports": [
+    "AppSelect",
+    "PAGE_SIZE_OPTIONS"
+   ],
+   "props": "className = '', width, style, ...rest",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentList",
+    "NotificationList",
+    "NotificationSettings",
+    "ReceptionDeskList",
+    "ReceptionDeskShared"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppCounterInput",
+   "file": "src/components/app/AppCounterInput.jsx",
+   "bytes": 2235,
+   "exports": [
+    "AppCounterInput"
+   ],
+   "props": "multiline = false, maxLength, value = '', counterId, className = '', style, error = null, ...rest",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "AppointmentList",
+    "NotificationSettings",
+    "ReceptionDeskShared"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppTabs",
+   "file": "src/components/app/AppTabs.jsx",
+   "bytes": 2599,
+   "exports": [
+    "AppTabs"
+   ],
+   "props": "items, activeKey, onChange, barClassName = 'tabs', tabClassName = 'tab-n', paneClassName = 'tab-panel', activeClass = 'is-current'",
+   "usedBy": [
+    "AppointmentDetail",
+    "NotificationSettings",
+    "ReceptionDeskDetail",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "EmptyRow",
+   "file": "src/components/app/EmptyRow.jsx",
+   "bytes": 1014,
+   "exports": [
+    "EmptyRow"
+   ],
+   "props": "colSpan, entity, hasRecords",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentList",
+    "ReceptionDeskDetail",
+    "ReceptionDeskList",
+    "ReceptionDeskShared"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "PageActions",
+   "file": "src/components/app/PageActions.jsx",
+   "bytes": 2742,
+   "exports": [
+    "PageHeadActions",
+    "StepNav",
+    "PageFooter",
+    "PageFooterLegacy"
+   ],
+   "props": "actions",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "ReceptionDeskDetail",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "NotifyRecipientsField",
+   "file": "src/components/app/NotifyRecipientsField.jsx",
+   "bytes": 5898,
+   "exports": [
+    "NotifyRecipientsField"
+   ],
+   "props": "id, code, groups, records, value, onChange, label = 'Gửi thông báo cho', hint",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "AppointmentList",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "PageSelect",
+   "file": "src/components/app/PageSelect.jsx",
+   "bytes": 1742,
+   "exports": [
+    "PageSelect"
+   ],
+   "props": "id, current, total, onChange",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentList",
+    "NotificationList",
+    "ReceptionDeskList"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "SetupHint",
+   "file": "src/components/app/SetupHint.jsx",
+   "bytes": 1969,
+   "exports": [
+    "SetupHint"
+   ],
+   "props": "what, screen, to, id, inline = false, parts, onLinkClick",
+   "usedBy": [
+    "AppointmentForm",
+    "AppointmentList",
+    "ReceptionDeskDetail",
+    "ReceptionDeskShared"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppSearchInput",
+   "file": "src/components/app/AppSearchInput.jsx",
+   "bytes": 2052,
+   "exports": [
+    "AppSearchInput"
+   ],
+   "props": "className = '', value, onChange, id, placeholder, title",
+   "usedBy": [
+    "AppointmentList",
+    "NotificationList",
+    "ReceptionDeskList"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "CatalogStatusTag",
+   "file": "src/components/app/CatalogStatusTag.jsx",
+   "bytes": 1313,
+   "exports": [
+    "CATALOG_STATUS_CLASS",
+    "CatalogStatusTag"
+   ],
+   "props": "status, label, className = ''",
+   "usedBy": [
+    "ReceptionDeskDetail",
+    "ReceptionDeskList",
+    "ReceptionDeskShared"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "LeaveGuard",
+   "file": "src/components/app/LeaveGuard.jsx",
+   "bytes": 3862,
+   "exports": [
+    "LEAVE_TITLE",
+    "LEAVE_TEXT",
+    "useLeaveGuard"
+   ],
+   "props": "",
+   "usedBy": [
+    "AppointmentForm",
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "NoteBox",
+   "file": "src/components/app/NoteBox.jsx",
+   "bytes": 1552,
+   "exports": [
+    "NoteBox"
+   ],
+   "props": "id, title = 'Lưu ý', items, line",
+   "usedBy": [
+    "AppointmentList",
+    "ReceptionDeskDetail",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "RelativeDetailBody",
+   "file": "src/components/app/RelativeDetailBody.jsx",
+   "bytes": 1236,
+   "exports": [
+    "RelativeDetailBody"
+   ],
+   "props": "relative",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "TablePicker",
+   "file": "src/components/app/TablePicker.jsx",
+   "bytes": 8246,
+   "exports": [
+    "mountTablePicker"
+   ],
+   "props": "",
+   "usedBy": [
+    "AppointmentForm",
+    "AppointmentList",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppFilterDropdown",
+   "file": "src/components/app/AppFilterDropdown.jsx",
+   "bytes": 3525,
+   "exports": [
+    "AppFilterDropdown"
+   ],
+   "props": "id, ariaLabel, placeholder, items, value, open, onOpen, onPick, onClear",
+   "usedBy": [
+    "AppointmentList",
+    "ReceptionDeskList"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppointmentStatusTag",
+   "file": "src/components/app/AppointmentStatusTag.jsx",
+   "bytes": 1038,
+   "exports": [
+    "AppointmentStatusTag"
+   ],
+   "props": "status, id, hidden",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppSearchSelect",
+   "file": "src/components/app/AppSearchSelect.jsx",
+   "bytes": 2716,
+   "exports": [
+    "AppSearchSelect"
+   ],
+   "props": "id, options, value, disabled, onChange, hasErrorBorder, className = 'text-input', wrapperId, uncontrolled, noClear",
+   "usedBy": [
+    "AppointmentForm",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "CancelAppointmentDialog",
+   "file": "src/components/app/CancelAppointmentDialog.jsx",
+   "bytes": 7679,
+   "exports": [
+    "CANCEL_REASON_ROWS",
+    "CANCEL_REASONS",
+    "cancelReasonLabel",
+    "CancelAppointmentDialog"
+   ],
+   "props": "open, onClose, onConfirm, records = []",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentList"
+   ],
+   "viaShared": [
+    "lib/resourceImpact.js"
+   ]
+  },
+  {
+   "name": "DeleteAppointmentDialog",
+   "file": "src/components/app/DeleteAppointmentDialog.jsx",
+   "bytes": 2369,
+   "exports": [
+    "DeleteAppointmentDialog"
+   ],
+   "props": "open, code, onClose, onConfirm",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentList"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "ExemptionFields",
+   "file": "src/components/app/ExemptionFields.jsx",
+   "bytes": 11104,
+   "exports": [
+    "MAX_EXEMPT_COMPANIONS",
+    "StudentCard",
+    "ExemptionFields"
+   ],
+   "props": "e, set, err = none, excludeCode",
+   "usedBy": [
+    "AppointmentForm",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "ExemptionInfo",
+   "file": "src/components/app/ExemptionInfo.jsx",
+   "bytes": 5626,
+   "exports": [
+    "CompanionView",
+    "AttachmentView",
+    "exemptionRows",
+    "scheduleRows",
+    "ExemptionInfoGrid",
+    "DocumentCheckTable",
+    "ApprovalRounds"
+   ],
+   "props": "list",
+   "usedBy": [
+    "AppointmentDetail",
+    "AppointmentForm"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "Pm1SyncBar",
+   "file": "src/components/app/Pm1SyncBar.jsx",
+   "bytes": 1601,
+   "exports": [
+    "Pm1SyncBar"
+   ],
+   "props": "onSync",
+   "usedBy": [
+    "AppointmentForm",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "SimulatedCardPicker",
+   "file": "src/components/app/SimulatedCardPicker.jsx",
+   "bytes": 1825,
+   "exports": [
+    "PICKER_DIALOG_STYLE",
+    "SimulatedCardPicker"
+   ],
+   "props": "onPick",
+   "usedBy": [
+    "AppointmentForm",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "TimeRangeInput",
+   "file": "src/components/app/TimeRangeInput.jsx",
+   "bytes": 5459,
+   "exports": [
+    "TimeRangeInput"
+   ],
+   "props": "from, to, onChange, disabled, invalid, idPrefix, labelFrom, labelTo",
+   "usedBy": [
+    "ReceptionDeskShared",
+    "VisitConfig"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "VisitConditions",
+   "file": "src/components/app/VisitConditions.jsx",
+   "bytes": 2913,
+   "exports": [
+    "VisitConditionsLink"
+   ],
+   "props": "",
+   "usedBy": [
+    "AppointmentForm",
+    "CounterRegistration"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AttachmentField",
+   "file": "src/components/app/AttachmentField.jsx",
+   "bytes": 2656,
+   "exports": [
+    "sizeText",
+    "AttachmentField"
+   ],
+   "props": "id, value = [], onChange",
+   "usedBy": [
+    "AppointmentForm"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "TableCalendar",
+   "file": "src/components/app/TableCalendar.jsx",
+   "bytes": 22917,
+   "exports": [
+    "TableCalendar"
+   ],
+   "props": "rows, items, now = null, pastUntil = null, minDuration = 10, maxDuration = 45, cornerLabel = 'Buồng thăm gặp', validate, onMove, onInvalidDrop, onEmptyClick, ghostAt, legend = null, notice = '', initialScrollMinute = null, scrollKey = '', maxHeight,",
+   "usedBy": [
+    "AppointmentList"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "useListResult",
+   "file": "src/components/app/useListResult.js",
+   "bytes": 3543,
+   "exports": [
+    "useListResult"
+   ],
+   "props": "tableSelector, created, updated, deleted",
+   "usedBy": [
+    "ReceptionDeskList"
+   ],
+   "viaShared": []
+  },
+  {
+   "name": "AppAccordion",
+   "file": "src/components/app/AppAccordion.jsx",
+   "bytes": 928,
+   "exports": [
+    "AppAccordion"
+   ],
+   "props": "items = []",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppAvatar",
+   "file": "src/components/app/AppAvatar.jsx",
+   "bytes": 1684,
+   "exports": [
+    "initialsOf",
+    "AppAvatar",
+    "AppAvatarGroup"
+   ],
+   "props": "name, size = 'md', title",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppBadge",
+   "file": "src/components/app/AppBadge.jsx",
+   "bytes": 1247,
+   "exports": [
+    "AppBadge"
+   ],
+   "props": "count = 0, max = 99, dot = false, label, children",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppCheckboxGroup",
+   "file": "src/components/app/AppCheckboxGroup.jsx",
+   "bytes": 1905,
+   "exports": [
+    "AppCheckboxGroup"
+   ],
+   "props": "label, options = [], value = [], onChange, disabled = false, vertical = false, className = ''",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppColorSwatch",
+   "file": "src/components/app/AppColorSwatch.jsx",
+   "bytes": 1225,
+   "exports": [
+    "AppColorSwatch"
+   ],
+   "props": "colors = []",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppDivider",
+   "file": "src/components/app/AppDivider.jsx",
+   "bytes": 590,
+   "exports": [
+    "AppDivider"
+   ],
+   "props": "label",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppDrawer",
+   "file": "src/components/app/AppDrawer.jsx",
+   "bytes": 1959,
+   "exports": [
+    "AppDrawer"
+   ],
+   "props": "open, title, onClose, children, footer, id",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppEmptyState",
+   "file": "src/components/app/AppEmptyState.jsx",
+   "bytes": 1570,
+   "exports": [
+    "AppEmptyState"
+   ],
+   "props": "kind = 'empty', text, action",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppImportExcel",
+   "file": "src/components/app/AppImportExcel.jsx",
+   "bytes": 3476,
+   "exports": [
+    "AppImportExcel"
+   ],
+   "props": "labels, fileName, percent, columns = [], rows = [], onTemplate, onPick",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppKbd",
+   "file": "src/components/app/AppKbd.jsx",
+   "bytes": 730,
+   "exports": [
+    "AppKbd"
+   ],
+   "props": "keys = []",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppLink",
+   "file": "src/components/app/AppLink.jsx",
+   "bytes": 1437,
+   "exports": [
+    "AppLink"
+   ],
+   "props": "href, children, external = false, disabled = false, ...rest",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppMediaGallery",
+   "file": "src/components/app/AppMediaGallery.jsx",
+   "bytes": 2803,
+   "exports": [
+    "AppMediaGallery"
+   ],
+   "props": "id = 'mediaXem', items = []",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppNumberInput",
+   "file": "src/components/app/AppNumberInput.jsx",
+   "bytes": 2598,
+   "exports": [
+    "AppNumberInput"
+   ],
+   "props": "id, label, value = 0, onChange, min = 0, max = 999, step = 1, disabled = false",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppPopover",
+   "file": "src/components/app/AppPopover.jsx",
+   "bytes": 1986,
+   "exports": [
+    "AppPopover"
+   ],
+   "props": "triggerLabel, triggerIcon, title, children, id = 'appPopover'",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppProgress",
+   "file": "src/components/app/AppProgress.jsx",
+   "bytes": 1493,
+   "exports": [
+    "AppProgress"
+   ],
+   "props": "label, value = 0, max = 100, tone = 'brand', showValue = true",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppRadioGroup",
+   "file": "src/components/app/AppRadioGroup.jsx",
+   "bytes": 1817,
+   "exports": [
+    "AppRadioGroup"
+   ],
+   "props": "name, label, options = [], value, onChange, disabled = false, vertical = false, className = ''",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppScrollShadow",
+   "file": "src/components/app/AppScrollShadow.jsx",
+   "bytes": 1567,
+   "exports": [
+    "AppScrollShadow"
+   ],
+   "props": "children, label, className = ''",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppSegmented",
+   "file": "src/components/app/AppSegmented.jsx",
+   "bytes": 1358,
+   "exports": [
+    "AppSegmented"
+   ],
+   "props": "items = [], value, onChange, label = 'Chế độ xem'",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppSkeleton",
+   "file": "src/components/app/AppSkeleton.jsx",
+   "bytes": 797,
+   "exports": [
+    "AppSkeleton"
+   ],
+   "props": "lines = 3, label = 'Đang tải nội dung'",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppSpinner",
+   "file": "src/components/app/AppSpinner.jsx",
+   "bytes": 940,
+   "exports": [
+    "AppSpinner"
+   ],
+   "props": "text, size = 'md', label = 'Đang tải'",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppStatCards",
+   "file": "src/components/app/AppStatCards.jsx",
+   "bytes": 1068,
+   "exports": [
+    "AppStatCards"
+   ],
+   "props": "items = []",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppToolbar",
+   "file": "src/components/app/AppToolbar.jsx",
+   "bytes": 1503,
+   "exports": [
+    "AppToolbar"
+   ],
+   "props": "label, groups = []",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppTree",
+   "file": "src/components/app/AppTree.jsx",
+   "bytes": 1141,
+   "exports": [
+    "AppTree"
+   ],
+   "props": "treeData = [], defaultExpandedKeys, defaultExpandAll = false, onSelect, ...rest",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "AppTreeSelect",
+   "file": "src/components/app/AppTreeSelect.jsx",
+   "bytes": 1791,
+   "exports": [
+    "AppTreeSelect"
+   ],
+   "props": "treeData = [], value, onChange, placeholder, multiple = false, ...rest",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "DateTimeInput",
+   "file": "src/components/app/DateTimeInput.jsx",
+   "bytes": 8341,
+   "exports": [
+    "DateTimeInput"
+   ],
+   "props": "value, onChange, disabled, invalid, id, label, minuteStep = 5, placeholder = 'dd/MM/yyyy HH:mm'",
+   "usedBy": [],
+   "viaShared": []
+  },
+  {
+   "name": "VersionNotice",
+   "file": "src/components/app/VersionNotice.jsx",
+   "bytes": 7625,
+   "exports": [
+    "VersionNotice"
+   ],
+   "props": "label = LABEL, actionLabel = ACTION_LABEL",
+   "usedBy": [],
+   "viaShared": [
+    "App.jsx"
+   ]
+  }
+ ],
+ "screens": {
+  "AppointmentDetail": [
+   "AppButton",
+   "AppCounterInput",
+   "AppModal",
+   "AppointmentStatusTag",
+   "AppSelect",
+   "AppTable",
+   "AppTabs",
+   "AppTag",
+   "CancelAppointmentDialog",
+   "DeleteAppointmentDialog",
+   "DialogCloseButton",
+   "EmptyRow",
+   "ExemptionInfo",
+   "NotifyRecipientsField",
+   "PageActions",
+   "PageSelect",
+   "RelativeDetailBody"
+  ],
+  "AppointmentForm": [
+   "AppButton",
+   "AppCounterInput",
+   "AppModal",
+   "AppointmentStatusTag",
+   "AppSearchSelect",
+   "AppTable",
+   "AppTag",
+   "AttachmentField",
+   "DialogCloseButton",
+   "ExemptionFields",
+   "ExemptionInfo",
+   "LeaveGuard",
+   "NotifyRecipientsField",
+   "PageActions",
+   "Pm1SyncBar",
+   "RelativeDetailBody",
+   "SetupHint",
+   "SimulatedCardPicker",
+   "TablePicker",
+   "VisitConditions"
+  ],
+  "AppointmentList": [
+   "AppButton",
+   "AppCounterInput",
+   "AppFilterDropdown",
+   "AppModal",
+   "AppSearchInput",
+   "AppSelect",
+   "AppTable",
+   "AppTag",
+   "CancelAppointmentDialog",
+   "DeleteAppointmentDialog",
+   "DialogCloseButton",
+   "DialogIcon",
+   "EmptyRow",
+   "NoteBox",
+   "NotifyRecipientsField",
+   "PageSelect",
+   "SetupHint",
+   "TableCalendar",
+   "TablePicker"
+  ],
+  "CounterRegistration": [
+   "AppButton",
+   "AppModal",
+   "AppSearchSelect",
+   "AppTable",
+   "AppTag",
+   "DialogCloseButton",
+   "DialogIcon",
+   "ExemptionFields",
+   "NotifyRecipientsField",
+   "Pm1SyncBar",
+   "RelativeDetailBody",
+   "SimulatedCardPicker",
+   "TablePicker",
+   "VisitConditions"
+  ],
+  "NotificationList": [
+   "AppButton",
+   "AppModal",
+   "AppSearchInput",
+   "AppSelect",
+   "DialogCloseButton",
+   "DialogIcon",
+   "PageSelect"
+  ],
+  "NotificationSettings": [
+   "AppButton",
+   "AppCounterInput",
+   "AppModal",
+   "AppSelect",
+   "AppTable",
+   "AppTabs",
+   "DialogCloseButton",
+   "DialogIcon"
+  ],
+  "ReceptionDeskDetail": [
+   "AppButton",
+   "AppModal",
+   "AppTable",
+   "AppTabs",
+   "AppTag",
+   "CatalogStatusTag",
+   "DialogCloseButton",
+   "DialogIcon",
+   "EmptyRow",
+   "NoteBox",
+   "PageActions",
+   "SetupHint"
+  ],
+  "ReceptionDeskList": [
+   "AppButton",
+   "AppFilterDropdown",
+   "AppSearchInput",
+   "AppSelect",
+   "AppTable",
+   "AppTag",
+   "CatalogStatusTag",
+   "EmptyRow",
+   "PageSelect",
+   "useListResult"
+  ],
+  "ReceptionDeskShared": [
+   "AppButton",
+   "AppCounterInput",
+   "AppModal",
+   "AppSelect",
+   "AppTable",
+   "AppTabs",
+   "CatalogStatusTag",
+   "DialogCloseButton",
+   "DialogIcon",
+   "EmptyRow",
+   "LeaveGuard",
+   "PageActions",
+   "SetupHint",
+   "TimeRangeInput"
+  ],
+  "VisitConfig": [
+   "AppButton",
+   "AppModal",
+   "AppTable",
+   "AppTabs",
+   "AppTag",
+   "DialogCloseButton",
+   "DialogIcon",
+   "LeaveGuard",
+   "NoteBox",
+   "PageActions",
+   "TimeRangeInput"
+  ]
+ }
+}

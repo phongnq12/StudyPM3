@@ -1,0 +1,31 @@
+{
+ "note": "Ý chính 1 dòng của luật UI/UX hiện ở mục Quy tắc trang Control; nguyên văn gập lại, nhà gốc là TrangNT5_UIUX_Rules.md. rules.json sinh lại mỗi lần deploy nên ý chính để riêng ở đây. Luật đổi nội dung thì sửa dòng tương ứng.",
+ "entries": {
+  "UX-B1": "Lưới 12 cột; dòng lọc mở rộng dùng bội số 3, dòng lọc cố định dàn 4 · 3 · 3; form theo UX-B6.",
+  "UX-B6": "Form lưới 12 cột, mỗi hàng đủ 12; điểm tách ô của 2 hàng liền nhau phải lồng nhau (vd 9 3 rồi 3 3 3 3).",
+  "UX-B8": "Dữ liệu khác loại tách thành khối .card riêng, có tiêu đề.",
+  "UX-B9": "Trường có liên kết đặt cạnh nhau, trường chọn trước đứng trước.",
+  "UX-C3": "Tooltip chỉ hiện khi chữ bị cắt «…», nền đen như PM1; 4 ngoại lệ: nút icon, khối lịch, sidebar thu gọn, nút bị khoá do đạt tối đa.",
+  "UX-F4": "Icon hộp xác nhận theo mức rủi ro: đỏ cho thao tác không hoàn tác, cam cho thao tác có ảnh hưởng, thao tác thường không icon.",
+  "UX-F7": "Popup 2 nút theo khuôn MSG-CF: nút hủy là «Hủy», nút OK là tên hành động; hộp Xóa và Vô hiệu hóa là câu hỏi «Bạn có chắc chắn muốn …?»; nút Xóa màu đỏ.",
+  "UX-G2": "Mọi bảng có khung viền bo góc, góc liền màu dòng tiêu đề.",
+  "UX-G7": "Mọi màn Danh sách có bảng bắt buộc có nút «Xuất Excel» (trừ Thông báo, Cài đặt thông báo).",
+  "UX-G8": "Dòng rỗng mọi bảng dùng chung EmptyRow: chưa có bản ghi ⇒ I001-27, lọc không ra ⇒ I001-28.",
+  "UX-G9": "Mặc định 10 bản ghi mỗi trang (10/20/50/100); nút Trang trước, Trang sau theo PM1.",
+  "UX-L10": "Hiển thị đối tượng khác luôn kèm «Mã — Tên»; ô chọn thông thường hiện «Mã — Tên» (gạch dài).",
+  "UX-L11": "Dấu * bắt buộc luôn màu đỏ báo lỗi, dùng lớp chung .required-mark.",
+  "UX-L13": "Ghi chú trong form dùng NoteBox đặt cuối khối: XANH cho nhắc nhở cần nổi bật, XÁM cho ghi chú vô hại.",
+  "UX-L14": "Màn chưa có dữ liệu cần cài đặt trước ⇒ hiện SetupHint (I001-94) kèm link sang màn cài đặt.",
+  "UX-L16": "Thanh tab dùng AppTabs, kiểu đi kèm component; màn không tự viết CSS tab.",
+  "UX-L18": "Đối tượng con chỉ sống trong 1 cha ⇒ quản lý ở tab của màn cha, không dựng màn riêng.",
+  "UX-L19": "Bảng nhập nhiều dòng: dòng thêm mới chèn lên đầu; ô tích mặc định theo giá trị phổ biến.",
+  "UX-L20": "Mã trong bảng danh sách là chữ thường, không làm link.",
+  "UX-L22": "Ô nhập trong bảng nhập liệu đệm trái 8px; ô nhập trong form giữ 12px; nút chính đệm 16px.",
+  "UX-L27": "Màu nút chữ theo vai trò, khai 1 nơi ở styles/base.css; nút trang và form có icon + chữ, nút popup chữ trần.",
+  "UX-L3": "Kích thước control lấy từ 1 nguồn pm2-antd-theme.js; không vá bằng !important.",
+  "UX-L6": "Ô tìm gõ chữ xong phải hiện nút X xóa; dùng AppSearchInput.",
+  "UX-L7": "Ô nhập có giới hạn ký tự trong form phải có bộ đếm n / max; dùng AppCounterInput.",
+  "UX-L8": "Ô ngày, ô giờ bấm vào phải mở bảng chọn.",
+  "UX-L9": "Thanh nút đầu trang và chân trang là 1 cặp dựng từ 1 cấu hình (PageActions); màn Danh sách không áp."
+ }
+}

@@ -1,0 +1,370 @@
+{
+ "ten": "Bản đồ quy trình quản lý kho căng tin",
+ "cap": 1,
+ "pools": [
+  {
+   "id": "P",
+   "ten": "Quản lý kho căng tin cơ sở cai nghiện ma túy",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Cán bộ căng tin"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống quản lý kho căng tin"
+    }
+   ]
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin (ngoài phạm vi)",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 4,
+   "so_cot": 8
+  }
+ ],
+ "nodes": [
+  {
+   "id": "SA",
+   "loai": "start",
+   "ten": "Cần cập nhật NCC, giá nhập hoặc kho",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "PROC-02",
+   "loai": "subprocess",
+   "ten": "Quản lý nhà cung cấp, giá nhập và kho",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "EA",
+   "loai": "end",
+   "ten": "Danh mục Đã cập nhật",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "SB",
+   "loai": "start",
+   "ten": "Hàng hóa từ NCC cần nhập kho",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "PROC-03",
+   "loai": "subprocess",
+   "ten": "Nhập kho hàng hóa từ nhà cung cấp",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "GB",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Lô cần giá bán mới?",
+   "lane": "CB",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "EB",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã duyệt hoặc Đã hủy",
+   "lane": "CB",
+   "cot": 5,
+   "hang": 1
+  },
+  {
+   "id": "SC",
+   "loai": "start",
+   "ten": "Cần bán mặt hàng mới hoặc giá bán lẻ ĐP thay đổi",
+   "lane": "CB",
+   "cot": 5,
+   "hang": 3
+  },
+  {
+   "id": "GM",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "CB",
+   "cot": 5,
+   "hang": 2
+  },
+  {
+   "id": "PROC-01",
+   "loai": "subprocess",
+   "ten": "Quản lý danh mục hàng hóa và giá bán",
+   "lane": "CB",
+   "cot": 6,
+   "hang": 2
+  },
+  {
+   "id": "EC",
+   "loai": "end",
+   "ten": "Giá bán Có hiệu lực, Đã hủy hoặc Đã hủy duyệt",
+   "lane": "CB",
+   "cot": 7,
+   "hang": 2
+  },
+  {
+   "id": "SD",
+   "loai": "start",
+   "ten": "Kho cần điều chuyển hàng hóa",
+   "lane": "CB",
+   "cot": 7,
+   "hang": 3
+  },
+  {
+   "id": "PROC-04",
+   "loai": "subprocess",
+   "ten": "Điều chuyển hàng hóa giữa các kho",
+   "lane": "CB",
+   "cot": 8,
+   "hang": 3
+  },
+  {
+   "id": "ED",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển Hoàn thành hoặc Đã hủy",
+   "lane": "CB",
+   "cot": 9,
+   "hang": 3
+  },
+  {
+   "id": "SE",
+   "loai": "start",
+   "ten": "Đến kỳ hoặc cần kiểm kê đột xuất",
+   "lane": "TCS",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05",
+   "loai": "subprocess",
+   "ten": "Kiểm kê tồn kho",
+   "lane": "TCS",
+   "cot": 10,
+   "hang": 0
+  },
+  {
+   "id": "EE",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã duyệt hoặc Đã hủy duyệt",
+   "lane": "TCS",
+   "cot": 11,
+   "hang": 0
+  },
+  {
+   "id": "SF",
+   "loai": "start",
+   "su_kien": "timer",
+   "ten": "Đến giờ quét hằng ngày hoặc tồn kho giảm",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "PROC-06",
+   "loai": "subprocess",
+   "ten": "Cảnh báo tồn kho và hạn sử dụng",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "EF",
+   "loai": "end",
+   "ten": "Cảnh báo Đã xem hoặc không có cảnh báo",
+   "lane": "HT",
+   "cot": 5,
+   "hang": 1
+  },
+  {
+   "id": "D1",
+   "loai": "store",
+   "ten": "Danh mục NCC, giá nhập, kho",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "D2",
+   "loai": "store",
+   "ten": "Tồn kho theo lô",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "D3",
+   "loai": "store",
+   "ten": "Giá bán theo lô",
+   "lane": "CB",
+   "cot": 7,
+   "hang": 1
+  }
+ ],
+ "flows": [
+  {
+   "tu": "SA",
+   "den": "PROC-02"
+  },
+  {
+   "tu": "PROC-02",
+   "den": "EA"
+  },
+  {
+   "tu": "SB",
+   "den": "PROC-03"
+  },
+  {
+   "tu": "PROC-03",
+   "den": "GB"
+  },
+  {
+   "tu": "GB",
+   "den": "EB",
+   "nhan": "Không"
+  },
+  {
+   "tu": "GB",
+   "den": "GM",
+   "nhan": "Có",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "SC",
+   "den": "GM",
+   "ra": "tren",
+   "vao": "duoi"
+  },
+  {
+   "tu": "GM",
+   "den": "PROC-01"
+  },
+  {
+   "tu": "PROC-01",
+   "den": "EC"
+  },
+  {
+   "tu": "SD",
+   "den": "PROC-04"
+  },
+  {
+   "tu": "PROC-04",
+   "den": "ED"
+  },
+  {
+   "tu": "SE",
+   "den": "PROC-05"
+  },
+  {
+   "tu": "PROC-05",
+   "den": "EE"
+  },
+  {
+   "tu": "SF",
+   "den": "PROC-06"
+  },
+  {
+   "tu": "PROC-06",
+   "den": "EF"
+  },
+  {
+   "tu": "PROC-02",
+   "den": "D1",
+   "loai": "data",
+   "ra": "duoi",
+   "vao": "trai"
+  },
+  {
+   "tu": "D1",
+   "den": "PROC-03",
+   "loai": "data",
+   "ra": "phai",
+   "vao": [
+    0.25,
+    1
+   ]
+  },
+  {
+   "tu": "PROC-03",
+   "den": "D2",
+   "loai": "data",
+   "ra": [
+    0.75,
+    1
+   ],
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-04",
+   "den": "D2",
+   "loai": "data",
+   "ra": "duoi",
+   "vao": [
+    1,
+    0.3
+   ]
+  },
+  {
+   "tu": "PROC-05",
+   "den": "D2",
+   "loai": "data",
+   "ra": [
+    0.25,
+    1
+   ],
+   "vao": [
+    1,
+    0.7
+   ]
+  },
+  {
+   "tu": "D2",
+   "den": "PROC-06",
+   "loai": "data",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-01",
+   "den": "D3",
+   "loai": "data",
+   "ra": "tren",
+   "vao": "trai"
+  },
+  {
+   "tu": "PROC-01",
+   "den": "POS",
+   "loai": "message",
+   "nhan": "Giá bán theo lô",
+   "ra": "duoi"
+  },
+  {
+   "tu": "PROC-05",
+   "den": "POS",
+   "loai": "message",
+   "nhan": "Khóa, mở khóa bán tại kho",
+   "ra": [
+    0.75,
+    1
+   ]
+  }
+ ]
+}

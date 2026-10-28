@@ -1,0 +1,353 @@
+{
+ "ten": "PROC-01 Quản lý danh mục hàng hóa và giá bán",
+ "cap": 2,
+ "pools": [
+  {
+   "id": "P",
+   "ten": "PROC-01 Quản lý danh mục hàng hóa và giá bán",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Cán bộ căng tin"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống quản lý kho căng tin"
+    }
+   ]
+  },
+  {
+   "id": "P03",
+   "ten": "PROC-03 Nhập kho hàng hóa từ nhà cung cấp",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 0,
+   "so_cot": 3
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 4,
+   "so_cot": 6
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Cần bán mặt hàng mới",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "PROC-01.01",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Thêm mặt hàng vào danh mục",
+   "ghi_chu": "không cần duyệt",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "su_kien": "message",
+   "ten": "Lô cần giá bán mới",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 2
+  },
+  {
+   "id": "S3",
+   "loai": "start",
+   "ten": "Giá bán lẻ địa phương thay đổi",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 1
+  },
+  {
+   "id": "G0",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "PROC-01.02",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Lập hoặc sửa đề xuất giá bán",
+   "ghi_chu": "lô áp dụng, ngày hiệu lực, giá nhập, chi phí, giá bán lẻ ĐP",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trình đề xuất?",
+   "lane": "CB",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Đề xuất giá bán Đã hủy",
+   "lane": "CB",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "PROC-01.03",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Duyệt đề xuất giá bán",
+   "ghi_chu": "≤ giá bán lẻ ĐP; mặt hàng không thuộc TT79 Đ16",
+   "lane": "TCS",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đồng ý?",
+   "lane": "TCS",
+   "cot": 6,
+   "hang": 0
+  },
+  {
+   "id": "PROC-01.04",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Ghi giá bán Đã duyệt theo lô",
+   "lane": "HT",
+   "cot": 7,
+   "hang": 0
+  },
+  {
+   "id": "I1",
+   "loai": "intermediate",
+   "su_kien": "timer",
+   "huong": "catch",
+   "ten": "Đến ngày hiệu lực",
+   "lane": "HT",
+   "cot": 8,
+   "hang": 0
+  },
+  {
+   "id": "PROC-01.05",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Áp giá bán cho lô, mở bán lô chờ giá",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Giá bán Có hiệu lực",
+   "lane": "HT",
+   "cot": 10,
+   "hang": 0
+  },
+  {
+   "id": "S4",
+   "loai": "start",
+   "ten": "Cần hủy giá bán đã duyệt",
+   "lane": "TCS",
+   "cot": 4,
+   "hang": 2
+  },
+  {
+   "id": "PROC-01.06",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Hủy phê duyệt giá bán",
+   "lane": "TCS",
+   "cot": 5,
+   "hang": 2
+  },
+  {
+   "id": "PROC-01.07",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Kiểm tra giá chưa tới ngày hiệu lực",
+   "lane": "HT",
+   "cot": 5,
+   "hang": 2
+  },
+  {
+   "id": "G3",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Chưa tới ngày hiệu lực?",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 2
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Giá bán Đã hủy duyệt",
+   "lane": "HT",
+   "cot": 7,
+   "hang": 2
+  },
+  {
+   "id": "E4",
+   "loai": "end",
+   "ten": "Hủy duyệt bị chặn, lập đề xuất giá mới",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 3
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S1",
+   "den": "PROC-01.01"
+  },
+  {
+   "tu": "PROC-01.01",
+   "den": "G0"
+  },
+  {
+   "tu": "P03",
+   "den": "S2",
+   "loai": "message",
+   "nhan": "Lô chờ giá / lô cần giá mới"
+  },
+  {
+   "tu": "S2",
+   "den": "G0",
+   "ra": "phai",
+   "vao": [
+    0.75,
+    1
+   ],
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 2.25,
+     "hang": 2
+    }
+   ]
+  },
+  {
+   "tu": "S3",
+   "den": "G0",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "G0",
+   "den": "PROC-01.02"
+  },
+  {
+   "tu": "PROC-01.02",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "PROC-01.03",
+   "nhan": "Có",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "G1",
+   "den": "E2",
+   "nhan": "Không, hủy",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-01.03",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "PROC-01.04",
+   "nhan": "Có",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "G2",
+   "den": "PROC-01.02",
+   "nhan": "Không, ghi lý do",
+   "ra": "duoi",
+   "vao": "duoi",
+   "qua": [
+    {
+     "lane": "TCS",
+     "cot": 6,
+     "hang": 1
+    },
+    {
+     "lane": "TCS",
+     "cot": 3,
+     "hang": 1
+    }
+   ]
+  },
+  {
+   "tu": "PROC-01.04",
+   "den": "I1"
+  },
+  {
+   "tu": "I1",
+   "den": "PROC-01.05"
+  },
+  {
+   "tu": "PROC-01.05",
+   "den": "E1"
+  },
+  {
+   "tu": "PROC-01.05",
+   "den": "POS",
+   "loai": "message",
+   "nhan": "Giá bán theo lô"
+  },
+  {
+   "tu": "S4",
+   "den": "PROC-01.06"
+  },
+  {
+   "tu": "PROC-01.06",
+   "den": "PROC-01.07",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-01.07",
+   "den": "G3"
+  },
+  {
+   "tu": "G3",
+   "den": "E3",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G3",
+   "den": "E4",
+   "nhan": "Không",
+   "ra": "duoi",
+   "vao": "tren"
+  }
+ ]
+}

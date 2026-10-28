@@ -1,0 +1,131 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* PM1 LOOK — phối màu và chi tiết ô nhập theo PM1 (ý 2–6 của đợt chốt PM1 LOOK).
+ * Gom MỌI thay đổi vào 1 tệp nạp sau tokens/base để không sửa rải rác các tệp đang có phiên khác làm.
+ * ① Màu: đỏ chỉ còn cho NHẬN DIỆN (thanh tiêu đề, logo, chấm chuông) và NGUY HIỂM / LỖI.
+ * Mọi thao tác, focus, đang chọn chuyển sang xanh dương PM1 (antd mặc định #1677FF).
+ * Cách làm: đổi giá trị biến --color-brand (đang dùng 234 chỗ, phần lớn là thao tác) sang xanh,
+ * rồi đặt lại đỏ cho đúng các chỗ nhận diện và nguy hiểm bằng biến --color-identity / --color-danger.
+ * ② Dấu x ô tìm, ô ngày, combobox · ③ gạch chân ngày đang chọn mảnh · ④ focus viền mảnh có quầng bóng. */
+
+html:root {
+  --color-identity: #D0202B; --color-identity-hover: #B01B24; --color-identity-weak: #FDE8E9;
+  --color-danger: #D0202B; --color-danger-hover: #A8151E;
+  /* xanh theo ảnh mẫu được duyệt (màu tiêu đề bài báo), thay tông trầm #2E5C9A.
+ * Mã #076DB6 là AI ƯỚC bằng mắt từ ảnh (ảnh không lưu ra đĩa nên không đo được điểm ảnh). */
+  --color-brand: #076DB6; --color-brand-hover: #2A87CF; --color-brand-active: #055A96; --color-brand-weak: #E6F1FA;
+  --focus-ring: 0 0 0 2px rgba(7, 109, 182, .12);
+  /* viền nhạt đi cùng nền --color-brand-weak (chip Nguồn đặt lịch, thân nhân chính, hàng chi tiết…). Trước đây biến này
+ * CHƯA khai báo nên 5 chỗ dùng rơi về giá trị dự phòng #F7CDCD (hồng đỏ) — sinh lỗi viền đỏ */
+  --color-brand-line: #B5D3EC;
+  /* nền dòng khi rê chuột: xám trung tính như bảng antd, thay hồng #FDF7F7 (tông đỏ dễ nhầm với lỗi) */
+  --color-row-hover: #FAFAFA;
+  /* gạch ngăn dòng dữ liệu (bảng · khối nhãn và giá trị): 1 mã toàn hệ thống theo màn Chi tiết —, thay #F0F0F0 */
+  --color-row-line: #E5E7EB;
+}
+
+/* ── ① Giữ đỏ: nhận diện ── */
+.hd-legacy { background: var(--color-identity) !important; border-bottom-color: var(--color-identity) !important; }
+.hd-logo-legacy { color: var(--color-identity) !important; }
+.bell-dot { color: var(--color-identity) !important; }
+
+/* ── ① Giữ đỏ: nguy hiểm và lỗi ── */
+/* nút đỏ .form-btn-danger: khai 1 nơi ở styles/base.css «MÀU NÚT CHỮ» */
+.over-limit.is-danger .over-limit-title { color: var(--color-danger) !important; }
+.field-hint.is-error { color: var(--color-danger) !important; }
+
+/* ── ④ Focus: bàn phím Tab tới nút, link ⇒ viền 2px màu chủ đạo cách 2px (WCAG 2.4.7); ô nhập giữ viền xanh + quầng mảnh ── */
+button:focus-visible, a:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--color-brand) !important; outline-offset: 2px; box-shadow: none !important; }
+input:not([type=checkbox]):not([type=radio]):focus, textarea:focus, select:focus {
+  outline: none !important; border-color: var(--color-brand) !important; box-shadow: var(--focus-ring) !important;
+}
+.filter-select.is-open .filter-select-btn { outline: none !important; border-color: var(--color-brand) !important; box-shadow: var(--focus-ring) !important; }
+/* combobox có ô gõ tìm (filter-select-box): khung ngoài 1px + quầng như antd; ô gõ bên trong KHÔNG tự vẽ quầng (trước đây quầng của ô trong hiện thành vạch dọc cạnh mũi tên và khung ngoài viền 2px dày) */
+.filter-select.is-open .filter-select-box { outline: none !important; border-color: var(--color-brand) !important; box-shadow: var(--focus-ring) !important; }
+.filter-select .filter-select-input:not([type=checkbox]):not([type=radio]):focus { border-color: transparent !important; box-shadow: none !important; }
+.date-range:focus-within { outline: none !important; border-color: var(--color-brand) !important; box-shadow: var(--focus-ring) !important; }
+/* ô bên trong khung ngày không tự vẽ thêm viền (độ ưu tiên phải cao hơn luật focus chung ở trên) */
+.date-range input:not([type=checkbox]):not([type=radio]):focus { border-color: transparent !important; box-shadow: none !important; }
+
+/* ── ③ Gạch chân ô ngày đang chọn: 1px, mảnh — thắng cả luật focus (ô đang chọn thường cũng đang focus) ── */
+.date-range .range-input.is-current,
+.date-range input.range-input.is-current:not([type=checkbox]):not([type=radio]):focus { box-shadow: inset 0 -1px 0 var(--color-brand) !important; }
+
+/* ── ② Dấu x ô tìm và ô ngày: tròn xám đặc, «×» trắng, cách mép 11px — CÙNG kiểu dấu x combobox ở ⑤ (antd allowClear) ── */
+.filter-clear { width: 14px !important; height: 14px !important; border-radius: 50% !important;
+  background: rgba(0, 0, 0, .25) !important; color: var(--color-surface, #FFFFFF) !important; transition: background .2s; }
+.filter-clear svg { width: 8px !important; height: 8px !important; stroke-width: 2 !important; }   /* nét icon luôn 2 */
+.filter-clear:hover { background: rgba(0, 0, 0, .45) !important; color: var(--color-surface, #FFFFFF) !important; }
+.filter-search .filter-clear { right: 11px !important; }
+/* dấu x khoảng ngày: đứng ĐÚNG chỗ biểu tượng lịch (rê chuột thì thay biểu tượng lịch) như antd RangePicker —
+ * trước đây đứng ở right:30px nên đè lên chữ «Đến ngày» */
+.date-range .range-clear { right: 11px !important; opacity: 0; transition: opacity .2s, background .2s; }
+.date-range .range-cal { transition: opacity .2s; }
+.date-range.has-text:hover .range-clear { opacity: 1; z-index: 1; }
+/* lịch ẩn bằng opacity vẫn nhận cú bấm và nằm SAU x trong DOM ⇒ phải tắt nhận chuột, không thì bấm x lại mở lịch */
+.date-range.has-text:hover .range-cal { opacity: 0; pointer-events: none; }
+/* luật kính lúp «.filter-search svg» (base.css) cũng trúng svg của dấu x ⇒ đặt lại cho dấu x nằm giữa vòng tròn */
+.filter-search .filter-clear svg { position: static !important; transform: none !important; color: var(--color-surface, #FFFFFF) !important; pointer-events: none; }
+
+/* ── ⑤ Dấu x combobox: tròn xám, đứng ĐÚNG chỗ mũi tên (rê chuột thì thay mũi tên) như antd ── */
+.filter-select-clear {
+  right: 11px !important; width: 14px !important; height: 14px !important; border-radius: 50% !important;
+  background: rgba(0, 0, 0, .25) !important; color: var(--color-surface, #FFFFFF) !important; opacity: 0; transition: opacity .2s, background .2s;
+}
+.filter-select-clear svg { width: 8px !important; height: 8px !important; stroke-width: 2 !important; }   /* nét icon luôn 2 */
+.filter-select-clear:hover { background: rgba(0, 0, 0, .45) !important; }
+.filter-select.has-value:hover .filter-select-clear, .filter-select.has-text .filter-select-clear { opacity: 1; }
+.filter-select.has-value:hover .filter-select-caret, .filter-select.has-text .filter-select-caret { opacity: 0 !important; }
+
+/* ── ⑥ Điều hướng và header GIỮ ĐỎ NHẠT (điều hướng đỏ nhạt, header đỏ nhạt chữ đen) ──
+ * Mục đang chọn: menu trên cùng · menu bên trái · tab của màn. Header: tiêu đề cột bảng và đầu lịch theo buồng. */
+.nv-b:hover, .nv-b.on { color: var(--color-identity) !important; }
+.nv-b.on { background: var(--color-identity-weak) !important; border-bottom-color: var(--color-identity) !important; }
+.sb-i.on, .dd-i.on { background: var(--color-identity-weak) !important; color: var(--color-identity) !important; }
+.tab-n:hover, .tab-n.is-current { color: var(--color-identity) !important; }
+.tab-n.is-current { border-bottom-color: var(--color-identity) !important; }
+.tab-btn.on, .mode-b.on { color: var(--color-identity) !important; }
+.tab-btn.on::before { background: var(--color-identity) !important; }
+th, .grid th { background: var(--color-identity-weak); color: var(--color-ink-1); }
+
+th.col-act { background: var(--color-identity-weak); }
+/* Dải nền phía trên thanh cuộn dọc (góc bo trên-phải) phải CÙNG MÀU ô tiêu đề — base.css còn dùng --color-brand-weak nay đã là xanh ⇒ góc lệch màu */
+.shell-body.tbl { background: linear-gradient(var(--color-identity-weak) 40px, var(--color-surface, #FFFFFF) 40px); }
+.sb-i.on .sb-dot { background: var(--color-identity) !important; }
+
+/* ── ⑦ ĐANG CHỌN = XANH (đỏ dễ nhầm là lỗi) ──
+ * Thẻ người cai nghiện · thẻ khung giờ · thẻ khu vực · dòng gợi ý tra cứu đang chọn: trước đây nền hồng gán cứng #FEF2F2 / #FDECEC. */
+.student-card.is-selected, .hours-card.is-selected, .zone-card.is-selected { background: var(--color-brand-weak) !important; border-color: var(--color-brand) !important; }
+.lookup-item.is-selected { background: var(--color-brand-weak) !important; }
+
+/* ── ⑧ Nút Lưu nháp: kiểu nút mặc định antd — nền trắng, viền #D9D9D9, chữ đậm 88%; rê chuột thì viền và chữ xanh, KHÔNG xám đi
+ * (nền xám làm nút trông như bị khoá — trước đây rê chuột chuyển nền xám #F1F5F9 + viền xám) ── */
+/* áp CHUNG cho mọi nút phụ .form-btn (Lưu nháp · Hủy · Quay lại · Quay lại bước trước…), trừ nút có màu riêng */
+/* nút phụ: khai 1 nơi ở styles/base.css «MÀU NÚT CHỮ» */
+
+/* ── ⑨ Ô chỉ hiển thị (Quan hệ · CCCD) trong bảng Thân nhân đi cùng: như ô bị khoá của antd, CÙNG cao 36px · bo 8px · kín cột với ô chọn bên cạnh
+ * (theo khuôn PM1 — trước đây ô chưa có CSS nào, ra kiểu mặc định trình duyệt 23px ── */
+input.o-nhap:disabled { box-sizing: border-box; width: 100%; height: 36px; padding: 0 11px; border: 1px solid var(--color-line, #E5E7EB);
+  border-radius: 8px; background: var(--palette-neutral-100, #F5F5F5); color: rgba(0, 0, 0, .88); -webkit-text-fill-color: rgba(0, 0, 0, .88); opacity: 1;
+  font: inherit; font-size: 14px; cursor: default; }
+
+/* ── ⑩ Bong bóng nhắc: co theo độ dài chữ, câu ngắn thì 1 dòng ── */
+.tooltip { width: max-content; max-width: 400px; }   /* chuẩn hoá theo rộng tối đa 400px, bản cũ 440px */
+
+/* ── ⑥ ĐỒNG BỘ CONTROL TOÀN HỆ THỐNG: cùng loại control thì xử lý giống nhau ── */
+/* ô chọn có tìm ở form: dấu x tròn xám đứng ĐÚNG chỗ mũi tên, chỉ hiện khi có giá trị và rê chuột — y hệt ô lọc ở ⑤ */
+.lookup-clear { position: absolute; right: 11px; top: 50%; transform: translateY(-50%); z-index: 2; display: grid; place-items: center;
+  width: 14px; height: 14px; padding: 0; border: 0; border-radius: 50%; background: rgba(0, 0, 0, .25); color: var(--color-surface, #FFFFFF); cursor: pointer;
+  opacity: 0; pointer-events: none; transition: opacity .2s, background .2s; }
+.lookup-clear svg { width: 8px; height: 8px; }
+.lookup-clear:hover { background: rgba(0, 0, 0, .45); }
+.lookup-wrap.has-value:hover .lookup-clear { opacity: 1; pointer-events: auto; }
+.lookup-wrap.has-value:hover::after { opacity: 0; }
+.lookup-wrap.has-value .lookup-input { padding-right: 34px; }
+/* bo góc control = 8px (DesignStandards/tokens/pm2-antd-theme.js: borderRadius 8) cho ô nhập, ô chọn, ô lọc, ô tìm, ô ngày */
+.filter-cell input:not([type="checkbox"]):not([type="radio"]):not(.filter-select-input), .filter-cell select, .filter-select-box,
+.filter-search input, .noti-search input, .date-range, .text-input, textarea.ta, textarea.text-input { border-radius: 8px !important; }
+/* ô chọn antd (.app-select, gồm «Chọn số bản ghi») lấy bo góc 8px từ theme pm2-antd-theme.js borderRadius —, ⛔ ép bằng !important */
+/* ô tích cùng 1 cỡ 16px, màu chủ đạo — trừ ô tích antd (antd tự vẽ) */
+.app input[type="checkbox"]:not(.ant-checkbox-input) { width: 16px; height: 16px; accent-color: var(--color-brand); cursor: pointer; }
+
+/* nút xác nhận phá hủy trong hộp thoại đỏ đặc: khai 1 nơi ở styles/base.css «MÀU NÚT CHỮ» */

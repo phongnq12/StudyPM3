@@ -1,0 +1,32 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Nút và popup «Hướng dẫn thao tác» — Lịch theo buồng, khuôn hộp phím tắt, chỉ màu trung tính */
+.cal-bar { display: flex; align-items: center; }
+.grid-guide-btn { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 14px;
+  border: 1px solid var(--color-line, #E5E7EB); border-radius: 6px; background: var(--color-surface, #FFFFFF); color: var(--color-ink-2, #334155); font-size: 14px; cursor: pointer; }
+.grid-guide-btn svg { width: 16px; height: 16px; color: var(--color-ink-3, #64748B); }
+.grid-guide-btn:hover { border-color: var(--palette-slate-300, #CBD5E1); background: var(--color-hovered, #F8FAFC); color: var(--palette-slate-900, #0F172A); }
+
+.grid-guide-dlg { width: 640px; max-width: calc(100vw - 32px); }
+.grid-guide-close { margin-left: auto; border: none; background: transparent; font-size: 20px; line-height: 1; cursor: pointer; color: var(--color-ink-4, #94A3B8); }
+.grid-guide-close:hover { color: var(--color-ink-2, #334155); }
+
+/* câu dẫn: chữ đen, xám nhạt khó đọc */
+.grid-guide-section { font-size: 14px; font-weight: 400; color: rgba(0, 0, 0, .88); margin: 4px 0 4px; }
+.grid-guide-rows { list-style: none; margin: 0; padding: 0; }
+/* biểu tượng và chip phím CANH GIỮA theo chiều cao dòng */
+.grid-guide-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--color-page, #F1F5F9); }
+.grid-guide-row:last-child { border-bottom: none; }
+.grid-guide-ic { flex: none; width: 32px; height: 32px; border-radius: 8px; background: var(--color-page, #F1F5F9); display: grid; place-items: center; }
+.grid-guide-ic svg { width: 16px; height: 16px; color: var(--palette-slate-600, #475569); }
+.grid-guide-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.grid-guide-name { font-size: 14px; font-weight: 500; color: var(--palette-slate-900, #0F172A); }
+.grid-guide-desc { font-size: 13px; line-height: 1.5; color: var(--color-ink-3, #64748B); }
+.grid-guide-keys { flex: none; display: flex; gap: 4px; }
+.grid-guide-keys kbd { font-family: inherit; font-size: 12px; line-height: 20px; padding: 0 8px; border: 1px solid var(--palette-slate-200, #E2E8F0);
+  border-bottom-width: 2px; border-radius: 4px; background: var(--color-hovered, #F8FAFC); color: var(--color-ink-2, #334155); white-space: nowrap; }
+
+.grid-guide-note { display: flex; align-items: center; gap: 10px; margin-top: 12px; padding: 10px 12px; border-radius: 8px; background: var(--color-hovered, #F8FAFC); border: 1px solid var(--color-page, #F1F5F9); }
+.grid-guide-note-ic { display: grid; place-items: center; }
+.grid-guide-note-ic svg { width: 16px; height: 16px; color: var(--color-ink-3, #64748B); }
+.grid-guide-note ul { margin: 0; padding-left: 16px; font-size: 13px; line-height: 1.6; color: var(--palette-slate-600, #475569); }
+.grid-guide-note b { font-weight: 600; color: rgba(0, 0, 0, .88); }

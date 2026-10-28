@@ -1,0 +1,122 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Phần RIÊNG màn Quầy (Tạo · Sửa · Chi tiết) — nạp SAU @/styles/form.css. Luật trùng khít với form.css đã bỏ, sửa luật chung thì sửa form.css. */
+/* CSS riêng của màn — thông số khớp thiết kế đã duyệt, đổi giá trị thì đối chiếu lại Design System */
+
+.cal-h{color:var(--color-ink-3);font-size:var(--fs-caption)}
+.lookup .form-btn{flex:none;height:32px;padding:0 20px}
+.lookup-scan{position:absolute;right:6px;top:50%;transform:translateY(-50%);
+          width:28px;height:28px;display:grid;place-items:center;
+          background:none;border:none;border-radius:6px;cursor:pointer;
+          color:var(--color-ink-3);
+          transition:background 150ms var(--ease-std),color 150ms var(--ease-std)}
+.input-error{display:none;margin-top:4px;
+  flex:0 0 100%;width:100%;order:9;
+  font-size:12px;line-height:16px;font-weight:400;color:rgb(239,68,68)}
+
+.lookup-wrap{position:relative}
+.lookup-wrap>select{position:absolute;opacity:0;pointer-events:none;
+                width:1px;height:1px;left:0;top:0}
+.lookup-input{width:100%;cursor:pointer}
+.lookup-input[readonly]{cursor:pointer}
+.lookup-input:disabled{cursor:not-allowed}
+.lookup-list{position:fixed;z-index:900;
+        background:var(--color-surface, #FFFFFF);border:1px solid var(--color-line);border-radius:8px;
+        box-shadow:rgba(0,0,0,.09) 0 6px 16px 0, rgba(0,0,0,.05) 0 3px 6px -4px;
+        max-height:320px;overflow:auto;padding:4px;
+        display:none}
+.lookup-list.is-open{display:block}
+
+.lookup-item{display:block;padding:5px 12px;border-radius:4px;
+         font-size:14px;font-weight:400;color:var(--color-ink-1);
+         cursor:pointer;line-height:1.5715;
+         white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+         transition:background 120ms var(--ease-std)}
+.lookup-item:hover,.lookup-item.is-highlighted{background:rgba(0,0,0,.04)}
+.lookup-item.is-selected{background:var(--color-err-bg, #FEF2F2);color:var(--color-brand);font-weight:600}
+.lookup-item b{color:var(--color-brand);font-weight:600}
+.lookup-group{padding:7px 12px 5px;font-size:12px;font-weight:600;
+          color:var(--color-ink-3);text-transform:uppercase;
+          letter-spacing:.03em;cursor:default;user-select:none}
+.lookup-group:not(:first-child){margin-top:4px;
+          border-top:1px solid var(--color-line);padding-top:9px}
+.lookup-empty{padding:22px 13px;font-size:var(--fs-caption);
+          color:var(--color-ink-3);text-align:center}
+
+.lookup-list::-webkit-scrollbar{width:6px}
+.lookup-list::-webkit-scrollbar-thumb{background:var(--palette-slate-300, #CBD5E1);border-radius:3px}
+.lookup-list::-webkit-scrollbar-track{background:transparent}   /* tiêu đề bảng góc vuông — theo base.css */
+
+.input-invalid{border-color:var(--color-err,#DC2626)!important}
+.field-error.is-visible{display:block}
+.field-label-sub{font-weight:400;color:var(--color-ink-3);margin-left:4px}
+
+.form-grid:not(:has(.row-error .is-visible)) .row-error{display:none}
+
+.zone-list{display:flex;flex-wrap:wrap;gap:10px}
+.zone-card{display:flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--color-line);
+  border-radius:var(--radius-md);cursor:pointer;font-size:var(--fs-body);background:var(--color-surface, #FFFFFF);user-select:none}
+.zone-card:hover{border-color:var(--color-ink-4)}
+.zone-card.is-selected{border-color:var(--color-brand);background:var(--palette-xfdecec, #FDECEC)}
+.zone-card b{font-weight:600}
+.zone-list.input-invalid .zone-card{border-color:var(--color-err,#DC2626)}
+.chk-dong{display:flex;align-items:center;gap:8px;height:32px;font-size:var(--fs-body);cursor:pointer}
+
+.capacity-head{display:flex;align-items:center;gap:10px;margin:0 0 12px}
+.capacity-head .card-title{margin:0}
+.capacity-spacer{flex:1}
+.capacity-table{width:100%;min-width:0 !important;border-collapse:collapse;table-layout:fixed;font-size:var(--fs-body)}
+/* đầu bảng theo khuôn chung của bảng danh sách (th ở base.css + pm1-look.css: nền, chữ, cỡ 12px/600, in hoa) — 1 kiểu mọi màn; ở đây chỉ giữ lề, căn */
+.capacity-table th{text-align:left;padding:8px 8px;
+  border-bottom:1px solid var(--color-line);white-space:nowrap;line-height:1.35;vertical-align:middle}
+.capacity-table td{padding:8px;border-bottom:1px solid var(--color-line);vertical-align:top}
+.capacity-table input{height:36px;width:100%;box-sizing:border-box;padding:4px 8px;border:1px solid var(--color-line);
+  border-radius:var(--radius-sm);font:inherit}
+.capacity-table td.num-cell{text-align:right;font-variant-numeric:tabular-nums;padding-top:14px}
+.weekday-list{display:flex;gap:3px;flex-wrap:nowrap}
+.weekday-btn{min-width:30px;padding:0 4px;height:28px;border:1px solid var(--color-line);border-radius:6px;background:var(--color-surface, #FFFFFF);
+  cursor:pointer;font:inherit;font-size:var(--fs-sm);color:var(--color-ink-2)}
+.weekday-btn.is-selected{background:var(--color-brand);border-color:var(--color-brand);color:var(--color-surface, #FFFFFF)}
+.weekday-list.input-invalid .weekday-btn{border-color:var(--color-err,#DC2626)}
+.capacity-empty{padding:28px;text-align:center;color:var(--color-ink-4);border:1px dashed var(--color-line);border-radius:var(--radius-md)}
+.capacity-total{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:var(--fs-sm);color:var(--color-ink-3)}
+.capacity-total b{color:var(--color-ink);font-variant-numeric:tabular-nums}
+.capacity-total .today-value b{color:var(--color-brand)}
+.ib-x{display:grid;place-items:center;width:30px;height:30px;border:0;background:transparent;border-radius:6px;cursor:pointer;color:var(--color-ink-3)}
+.ib-x:hover{background:var(--color-page);color:var(--color-ink)}
+.ib-x svg{width:16px;height:16px}
+.capacity-hint{color:var(--palette-teal-700, #0F766E);font-size:var(--fs-sm)}
+.appointment-link{color:var(--color-link);font-size:var(--fs-sm);font-weight:600;text-decoration:none}
+.appointment-link:hover{text-decoration:underline}
+.form-error{display:none;margin:0 0 14px;padding:10px 14px;border-radius:var(--radius-md);background:var(--color-err-bg, #FEF2F2);
+  border:1px solid var(--color-err-line, #FECACA);color:var(--palette-red-800, #991B1B);font-size:var(--fs-body)}
+.form-error.is-visible{display:block}
+/* tag trạng thái quầy: components/app/CatalogStatusTag (1 bảng màu cho quầy và buồng) */
+
+.shift-list{display:flex;gap:6px;flex-wrap:wrap}
+
+/* Suất riêng của quầy — the page CSS gives every td a fixed height, the reserved table grows with its select */
+.reserved-table td{height:auto;max-height:none;white-space:normal;overflow:visible}
+/* hàng suất riêng: ô khoảng giờ (TimeRangeInput) · ô chọn buồng · nút xóa cùng tâm dọc — mỗi ô 1 khung cao bằng ô chọn buồng, chữ đỏ ngay dưới ô sai */
+.reserved-table .sr-ctl{display:flex;align-items:center;min-height:36px}
+/* ô gõ tìm bên trong ô chọn nhiều của antd không nhận khuôn ô nhập của .capacity-table (cao 36, viền) — trước đó đẩy ô chọn lên 44px, lệch chuẩn ô chọn 36px */
+.reserved-table .ant-select input{height:auto;padding:0;border:0;border-radius:0}
+.reserved-table .sr-ctl>.ant-select{flex:1;min-width:0}
+.reserved-table .sr-ctl .time-range-wrap{max-width:240px}
+.reserved-table .sr-ctl .date-range.time-range{max-width:240px}
+.reserved-table .date-range input{border:0;border-radius:0;background:transparent}
+.reserved-table td>.field-error{margin-top:4px}
+.reserved-table td:last-child .sr-ctl{justify-content:center}
+.dorm-warning{margin-top:8px}
+/* error text 4px below its input (field gap 6px) */
+/* .field>.field-error 4px: đã chuyển về base.css dùng chung */
+#oMa::placeholder{text-transform:none}
+
+/* Bảng chọn giờ (TimeRangeInput) của suất riêng cao 242px phải thò ra ngoài bảng và khung trắng — 2 lớp overflow:hidden đang cắt cụt, không chọn được giờ */
+table.reserved-table{overflow:visible!important}
+.shell:has(table.reserved-table){overflow:visible}
+
+/* bảng Buồng nhập thẳng — ô nhập, ô tích, tag, nút cùng tâm dọc với ô nhập 36px; chữ đỏ ngay dưới ô sai */
+.qb-table td{vertical-align:top}
+.qb-table .text-input{width:100%}
+.qb-ctl{display:inline-flex;align-items:center;min-height:36px}
+.qb-skip{margin:8px 0 0}

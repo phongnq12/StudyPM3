@@ -1,0 +1,19 @@
+.env
+.env.*
+.DS_Store
+.playwright-mcp/
+.claude/settings.local.json
+exports/
+kit/tools/ba-verify/node_modules/
+
+# ba-bpmn: file trung gian khi sinh sơ đồ (chỉ commit .bpmn.json và .drawio.svg)
+2-ba-overview/2-business-process/*.drawio
+2-ba-overview/2-business-process/*.png
+1-ba-init/0-dau-vao/ban-do-quy-trinh/**/*.drawio
+1-ba-init/0-dau-vao/ban-do-quy-trinh/**/*.png
+
+# Bản chữ của docx, xlsx trong 0-inputs/ (office.cjs), sinh lại được
+.ba-cache/
+
+# File nén lớn
+*.zip

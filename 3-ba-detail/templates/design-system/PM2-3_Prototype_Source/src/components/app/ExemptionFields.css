@@ -1,0 +1,7 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Đơn xin Trưởng cơ sở duyệt — ô nhập dùng chung màn Tạo (Đăng ký tại quầy) và màn Chỉnh sửa đơn ngoại lệ (chuyển từ CounterRegistration.css) */
+/* Thân nhân đi kèm của đơn ngoại lệ */
+.exempt-companions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:12px;width:100%}
+.exempt-companion-row{width:100%;align-items:end}
+.exempt-companion-rel{display:flex;align-items:center;gap:12px}
+.exempt-companion-rel > :first-child{flex:1;min-width:0}

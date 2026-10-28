@@ -1,0 +1,141 @@
+# Design System PM2
+
+> Chuẩn control và màn hình Prototype PM2 (phần mềm thăm gặp và gọi điện có hình ảnh). 88 mục control trong 9 nhóm, mọi mẫu chạy chính component và CSS của Prototype. Chỉ có giao diện sáng. Bản đầy đủ: AGENTS.md.
+
+© 2026 TrangNT5. Design System PM2 is designed and maintained by TrangNT5. All rights reserved.
+
+## Tài liệu
+
+- [AGENTS.md](https://trangnt5-pm2-design-system.vercel.app/AGENTS.md): toàn bộ nguyên tắc, quy tắc, hướng dẫn, lớp CSS và thuộc tính của mọi mục
+- [Site](https://trangnt5-pm2-design-system.vercel.app): bản trình bày có mẫu chạy thật (có mật khẩu)
+
+## Nguyên tắc
+
+- UX-L1: Mỗi loại control có ĐÚNG `1` cách dựng dùng chung — màn mới không tự dựng control, không chép code control sang màn
+- UX-L2: Cùng loại control ⇒ cùng hình dạng trên MỌI màn, đúng giá trị file chuẩn
+- UX-A6: CĂN GIỮA DÒNG là luật cứng — nhãn, giá trị, tag, nút, icon cạnh chữ cùng `1` đường giữa
+- UX-C1: Nút
+- UX-A3: Tag và thẻ trạng thái
+- UX-A4: Màu tag và tông số đếm
+- UX-A7: Màu chủ đạo PM2
+- UX-A16: Số đếm khác tag — chấm hoặc SỐ gắn vào phần tử khác *(chuông, tab, nút lọc)* dùng khuôn số đếm `UX-L26` · nhãn CHỮ đứng riêng *(trạng thái, vai người)* dùng tag `UX-A3`. Chỉ áp PM2
+- UX-A8: Chữ hiển thị không chứa mã nội bộ *(`BR-` · `MSG-` · `TAM-` · `UC` · `GL-` · `WEB-`…)*
+- UX-A12: Chữ hướng dẫn viết cho NGƯỜI DÙNG — không đưa căn cứ pháp lý, mã quy tắc, câu diễn giải quy tắc lên giao diện; những thứ đó chỉ ghi trong SRS
+- UX-A15: Cùng `1` khái niệm ⇒ cùng `1` chữ ở MỌI màn — nhãn trường, tên khối, giá trị kết quả, tên vai người. Trước khi đặt chữ cho màn mới, tra chữ màn đã có đang dùng cho khái niệm đó rồi
+- UX-E1: Mọi thông báo đi qua `1` toast chung
+- UX-M1: Prototype gọi message THEO MÃ của `PM2_MessageList.md` qua `1` hàm `msg(mã, …)` *(catalog `src/data/messageCatalog.js` sinh tự động, không sửa tay)* — áp toast, chữ đỏ, tiêu đề và 
+
+## Tư duy dựng màn
+
+- Lưới 12 cột và căn chỉnh ô (`grid`): Dùng lưới 12 cột `.form-grid` cho mọi form Tạo, Sửa, mỗi ô là `.field span-N`.
+- Chia khối fields theo nhóm thông tin (`blocks`): Dữ liệu khác loại thì tách thành khối riêng, mỗi khối là 1 thẻ `.card` có tiêu đề `.card-title`.
+- Trạng thái ô nhập: thường · bắt buộc · lỗi · khoá · gợi ý (`field-states`): Dùng 1 lớp chung `.required-mark` cho dấu `*` ở form, popup và bộ lọc.
+- Đầu màn Danh sách (`list-head`): Đầu mọi màn Danh sách: icon, tiêu đề, cụm nút góc phải.
+- Câu thông báo gọi theo mã (`messages`): Mọi chuỗi hiển thị (toast, chữ đỏ, tiêu đề và thân popup, cảnh báo, trạng thái rỗng, lỗi hệ thống) gọi theo mã qua `msg(mã, …)`.
+
+## Khối màn thật
+
+- Khuôn màn Danh sách đầy đủ: chế độ · tab đếm · bộ lọc · bảng · hàng loạt (`list-screen`): Dùng cho màn Danh sách có nhiều trạng thái cần theo dõi, cần đủ đầu trang, tab trạng thái, bộ lọc, bảng và phân trang.
+- Tra cứu thân nhân và quẹt thẻ (`lookup`): Dùng khi phải tìm hồ sơ có sẵn theo số căn cước công dân hoặc số điện thoại trước khi đi tiếp form.
+- Chọn người cai nghiện dạng thẻ có quỹ thăm (`student-list`): Chọn bản ghi liên quan dùng thẻ bấm chọn, thẻ không đủ điều kiện thì khoá kèm lý do.
+- Ô chỉ đọc · ô ngày có lối tắt · tiêu đề con · nhắc chưa đủ · giá trị khoá (`schedule-fields`): Trường có giá trị cố định thì hiện khối chỉ đọc khoá cứng 1 giá trị, tooltip nói vì sao khoá.
+- Bảng nhập nhiều dòng, nút thêm và xoá dòng (`companions`): Dùng cho người hoặc mục đi kèm cần nhiều dòng, mỗi dòng chọn từ danh sách và tự điền trường kèm theo.
+- Chọn luồng dạng thẻ radio (`route-options`): Dùng khi người tạo phải chọn 1 trong vài luồng xử lý ngay từ đầu và mỗi luồng cần câu giải thích hệ quả.
+- Bảng cấu hình theo ngày có công tắc (`config-days`): Dùng khi cấu hình theo từng ngày trong tuần, mỗi ngày bật tắt và có khung giờ riêng.
+- Bảng lịch sử thao tác (`history`): Dùng ở mọi màn Chi tiết, mỗi thao tác đã lưu sinh 1 dòng.
+- Bảng cài đặt có công tắc khoá và cụm nút thao tác (`settings-rows`): Dùng cho bảng cài đặt chia theo nhóm, mỗi dòng có công tắc bật tắt và nút xem, sửa.
+- Thông tin chi tiết dạng nhãn–giá trị, nút nguy hiểm viền (`detail-info`): Dùng ở màn Chi tiết và bước xác nhận của màn Tạo để hiện dữ liệu dạng nhãn và giá trị.
+- Nhắc thiếu thông tin trước khi lưu (`missing-hint`): Dùng ở chân mỗi bước form, ngay trên thanh nút, để nói còn thiếu trường nào.
+- Bảng buồng nhập thẳng trong form Quầy (`counter-tables`): Dùng khi đối tượng con (buồng) được quản lý ngay trong màn của đối tượng cha (quầy).
+
+## Nhập liệu
+
+- Ô nhập chữ (`text-input`): Ô nhập chữ 1 dòng trong form Tạo/Sửa dựng bằng lớp text-input dùng chung.
+- Ô nhập nhiều dòng (`multi-line-text`): Ô ghi chú, lý do dài dùng dạng nhiều dòng, tối đa 1000 ký tự.
+- Ô nhập có bộ đếm ký tự (`counter-input`): Ô nhập chữ có giới hạn ký tự trong form Tạo/Sửa.
+- Ô tìm kiếm (`search-input`): Ô tìm từ khoá dùng chung ở mọi danh sách.
+- Ô chọn không tìm (`select`): Ô chọn KHÔNG cần tìm, ví dụ ô Chọn số bản ghi.
+- Ô chọn có tìm (danh mục Mã — Tên) (`search-select`): Ô chọn CÓ tìm cho danh mục trong form, ví dụ Dãy nhà phục vụ, Quan hệ với người cai nghiện.
+- Ô chọn của bộ lọc (`filter-dropdown`): Ô lọc ở màn Danh sách.
+- Ô khoảng ngày (`date`): Lọc theo khoảng ngày ở danh sách, là 1 ô span 3 cạnh ô từ khoá.
+- Ô khoảng giờ (`time-range`): Mỗi ca 1 ô khoảng giờ từ → đến, như Khung giờ ở màn Cấu hình thời gian.
+- Ô chọn ngày giờ (`date-time`): Chọn 1 thời điểm có cả ngày và giờ trong cùng 1 ô, giá trị dạng dd/MM/yyyy HH:mm.
+- Ô tích (`checkbox`): Chọn có hoặc không cho 1 thuộc tính đi kèm nhãn, ví dụ «Có vách ngăn».
+- Công tắc Bật/Tắt (`switch`): Bật hoặc tắt 1 thuộc tính, ví dụ ô Cho phép thăm gặp theo ngày ở Cấu hình thời gian.
+- Tài liệu đính kèm (`attachment`): Ô «Tài liệu đính kèm» không bắt buộc ở đơn xin Trưởng cơ sở duyệt, để gửi tài liệu cho Trưởng cơ sở xem khi duyệt.
+- Người nhận thông báo (`notify-recipients`): Trường «Gửi thông báo cho» ở mục Gửi thông báo của lịch hẹn và ở mỗi popup thao tác (Phê duyệt, Từ chối duyệt, Hủy, Điều chỉnh, Vắng mặt).
+- Khối đơn xin Trưởng cơ sở duyệt (`exemption`): Thân nhân lần đầu đến, thiếu giấy tờ xác nhận, chưa có tài khoản hoặc sổ thăm gặp thì tạo 1 đơn xin Trưởng cơ sở duyệt.
+- Nhóm radio (chọn 1 trong vài giá trị) (`radio-group`): Chọn đúng 1 giá trị và người dùng cần thấy hết lựa chọn cùng lúc.
+- Nhóm ô tích (chọn nhiều) (`checkbox-group`): Chọn nhiều giá trị trong danh sách ngắn, thấy hết lựa chọn.
+- Ô số có nút tăng giảm (`number-input`): Nhập số nguyên trong khoảng biết trước, có nút tăng giảm.
+- Ô chọn theo cây (`tree-select`): Danh mục có cấp cha con như đơn vị, phòng ban, địa giới hành chính.
+- Ô chọn nhiều (`multi-select`): Trường nhận nhiều giá trị như giảng viên phụ trách, chuyên đề, nhóm quyền.
+
+## Nút và thao tác
+
+- Nút chính, nút phụ, nút nguy hiểm (`buttons`): Form dùng `form-btn form-btn-primary` cho nút chính, `form-btn` cho nút phụ.
+- Màu nút chữ theo vai trò (`button-colors`): Chọn màu nút theo VAI TRÒ của thao tác, không theo sở thích: chính xanh, phụ trắng viền xám, phá hủy đỏ.
+- Nút icon trong bảng (`icon-buttons`): Thao tác trên từng dòng của bảng, đủ 10 loại: Xem chi tiết, Chỉnh sửa, Phê duyệt, Từ chối duyệt, Điều chỉnh thời gian và buồng thăm gặp, Hủy lịch hẹn, Đánh dấu 
+- Thanh nút đầu màn (ghim khi cuộn) (`page-actions`): Mọi màn PM2: 1 thanh nút duy nhất ở đầu màn, ghim mép trên khi cuộn, không còn thanh chân trang.
+- Khoảng cách giữa các nút (`button-gap`): Khoảng cách giữa 2 nút liền kề cố định 8px trên mọi thanh nút: đầu trang, chân trang, thanh nút danh sách, nút trong khối, hộp Thao tác hàng loạt.
+- Đầu màn Tạo / Sửa / Chi tiết (nút quay lại) (`back`): Đầu màn Tạo, Sửa, Chi tiết.
+- Nút chuyển dạng phân đoạn (chế độ xem) (`segmented`): Đổi chế độ xem của cùng 1 dữ liệu.
+- Thanh công cụ (`toolbar`): Gom nhiều nút thao tác cùng nhóm trên 1 vùng.
+
+## Hiển thị dữ liệu
+
+- Bảng dữ liệu và dòng rỗng (`table`): Hiển thị tập bản ghi dạng hàng cột ở màn danh sách, bảng trong form, màn Chi tiết và popup
+- Tag trạng thái (`status-tags`): Màu tag theo 5 mức của PM1, đọc theo câu hỏi «ai đang phải ra tay»: Mặc định (Nháp, Đã hủy, Vô hiệu hóa) · Đang xử lý (Đã duyệt, Chờ check-in, Đang diễn ra) · C
+- Tag màu theo giá trị (Buồng thăm gặp, Quầy tiếp đón) (`value-tags`): Cột Buồng thăm gặp và Quầy tiếp đón trên danh sách lịch hẹn: mỗi giá trị 1 màu, cùng giá trị cùng màu trên mọi dòng.
+- Tooltip cho chữ không hiển thị hết (`tooltip-full`): Mọi chữ không hiển thị hết nội dung có tooltip hiện toàn bộ nội dung khi di chuột.
+- Thanh tab (`tabs`): Đối tượng con chỉ sống trong 1 đối tượng cha (vd buồng trong quầy) được quản lý ở tab của màn cha
+- Phân trang (`pager`): Mọi bảng có phân trang: danh sách và Lịch sử thao tác
+- Ô chọn trang trong thanh phân trang (`page-select`): Ô «Chọn trang» đặt ngay cạnh chữ «Trang X/Y», sau vạch ngăn và trước «Chọn số bản ghi»
+- Khối bộ lọc danh sách (`filter-panel`): Màn danh sách có điều kiện tìm kiếm
+- Lưới lịch theo buồng (`table-calendar`): Hiện buồng theo thời gian, 1 giao diện chung cho tab Lịch theo buồng, màn Tạo mới và Đăng ký tại quầy, chỉ logic đặc thù khác nhau
+- Thanh đồng bộ PM1 (`pm1-sync`): Đặt ở tiêu đề khối Người cai nghiện của màn Tạo mới, Chỉnh sửa lịch hẹn và Đăng ký lượt thăm gặp tại quầy
+- Thông tin thân nhân · Tra cứu điều kiện (`detail-blocks`): Popup thông tin thân nhân dùng chung mọi màn: Tạo lịch hẹn, Đăng ký tại quầy, Chi tiết lịch hẹn
+- Avatar chữ cái đầu tên (`avatar`): Đại diện 1 người bằng chữ cái đầu khi không có ảnh.
+- Số đếm gắn vào phần tử (`count-badge`): Số hoặc chấm gắn vào phần tử khác: chuông, tab, nút lọc.
+- Thanh tiến độ (`progress`): Tỷ lệ đã dùng trên tổng.
+- Đường phân cách (`divider`): Tách 2 nhóm nội dung trong cùng 1 khối.
+- Khối thu gọn (`accordion`): Nhiều mục nội dung phụ, mở từng mục khi cần.
+- Hiển thị ảnh và video (`media-gallery`): Xem lại bản ghi cuộc gọi video và ảnh gắn với 1 lịch hẹn hoặc 1 lượt thăm gặp.
+- Cây thư mục, cây tổ chức (`tree`): Dữ liệu phân cấp nhiều tầng: cơ sở → dãy nhà → quầy → buồng, cây tổ chức.
+- Thẻ số liệu (`stat-cards`): Thống kê đầu trang, ví dụ Tổng người nghiện kèm mức thay đổi so với tuần trước.
+- Bóng cuộn ngang (`scroll-shadow`): Báo người dùng vùng nội dung còn cuộn được.
+- Ô mẫu màu (`color-swatch`): Tra bảng màu token trên trang Design System, tài liệu bàn giao.
+
+## Phản hồi và thông báo
+
+- Khung Lưu ý — xanh và xám (`notebox`): Khung XANH (items) cho nội dung cần nổi bật để nhắc nhở, hướng dẫn người dùng, vd quy tắc nhập liệu
+- Khung gợi ý dưới bảng (`table-hint`): Đặt ngay dưới bảng một câu nói KHI NÀO bảng có dữ liệu, dạng «… sẽ có giá trị nếu …».
+- Hướng dẫn cài đặt khi chưa có dữ liệu (`setup-hint`): Màn chưa có dữ liệu cần cài đặt trước: để trống vùng dữ liệu, hiện câu hướng dẫn kèm link mở thẳng màn cài đặt
+- Khung cảnh báo hệ quả (`warning`): Nói hệ quả của thao tác ngay trong hộp xác nhận, vd vô hiệu hóa quầy hoặc buồng còn lịch chưa diễn ra (W001-15)
+- Thông báo nổi (toast) (`toast`): Mọi thông báo kết quả thao tác (thành công, lỗi, cảnh báo) đi qua 1 toast chung
+- Thanh báo phiên bản mới (`version-notice`): Báo người đang mở bản cũ rằng hệ thống vừa có bản build mới, kèm lối tải lại trang 1 bấm
+- Lỗi dưới ô nhập (`field-error`): Bấm nút khi còn thiếu: hiện chữ đỏ dưới mọi ô bắt buộc còn trống
+- Vòng xoay đang tải (`spinner`): Báo đang xử lý khi chưa biết bao lâu xong.
+- Khung chờ tải (`skeleton`): Giữ chỗ đúng hình nội dung sắp hiện để màn không nhảy.
+- Trạng thái rỗng và lỗi (`empty-states`): Chưa có dữ liệu bao giờ: câu giải thích kèm nút tạo mới.
+
+## Hộp thoại
+
+- Hộp xác nhận theo mức rủi ro (`confirm`): Hỏi lại trước việc khó lùi như Xóa, Vô hiệu hóa, Kích hoạt, người dùng phải chọn 1 nút.
+- Hộp Xóa lịch hẹn (`delete-appointment`): Xóa lịch hẹn ở Danh sách lịch hẹn và Chi tiết lịch hẹn, chỉ lịch Nháp và Từ chối duyệt được xóa.
+- Hộp Hủy lịch hẹn (`cancel-appointment`): Hủy lịch hẹn ở Danh sách lịch hẹn và Chi tiết lịch hẹn, cùng 1 thao tác thì cùng 1 hộp.
+- Chặn rời trang khi chưa lưu (`leave-guard`): Gắn ở màn Tạo, Sửa, đang gõ dở mà rời trang thì hiện hộp `Thay đổi chưa lưu`.
+- Ngăn kéo bên phải (`drawer`): Xem hoặc sửa nhanh mà không rời màn hiện tại.
+- Hộp nổi (`popover`): Giải thích ngắn hoặc vài thao tác phụ, bấm mới mở.
+- Nhập khẩu Excel (`import-excel`): Nhập dữ liệu hàng loạt từ tệp Excel.
+
+## Điều hướng và khung trang
+
+- Khung trang: đầu trang · menu ngang · sidebar · breadcrumb (`shell`): Khung chung mọi màn Prototype: đầu trang, menu ngang, sidebar, breadcrumb.
+- Breadcrumb (đường dẫn trang) (`breadcrumb`): Mọi màn trong khung trang: cho biết đang ở đâu và quay lên cấp trên.
+- Thanh bước (`stepper`): Biểu mẫu dài thì chia bước.
+- Liên kết (`link`): Chuyển tới màn hoặc trang khác, nằm trong câu chữ.
+- Phím tắt (`kbd`): Hiện tên phím trong câu hướng dẫn.
+
+## Trạng thái theo thao tác
+

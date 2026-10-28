@@ -1,0 +1,1625 @@
+{
+  "note": "Bản rút gọn cho trang Changelog (QD-413, chuẩn Keep a Changelog): title = tiêu đề 1 dòng; phiên bản sau v1.0.0 có items [{type, text}], quyết định thuộc v1.0.0 có type. type chỉ nhận Added, Changed, Fixed. points giữ cho trang luật (ý chính quyết định). Nguyên văn đầy đủ ở Sổ BA PM2. Thêm QD mới vào Sổ BA thì bổ sung 1 mục ở đây, thiếu là lệnh deploy dừng.",
+  "entries": {
+    "QD-400": {
+      "points": [
+        "Sửa 11/12 góp ý của Designer: ô lỗi không bị thấp, ô chọn nhiều giữ 1 dòng kèm «+N», nút có trạng thái đang xử lý, lỗi nằm dưới ô nhập.",
+        "Hộp xác nhận chỉ ghi hành động ở tiêu đề, tên đối tượng in đậm trong nội dung (Message List v2.18).",
+        "Thêm mẫu nút có số đếm, Breadcrumb, Hiển thị ảnh và video, Cây thư mục."
+      ],
+      "request": "Sửa Design System theo góp ý của Designer.",
+      "title": "11 góp ý của Designer về ô lỗi, ô chọn nhiều và trạng thái nút",
+      "type": "Fixed"
+    },
+    "QD-401": {
+      "points": [
+        "Bổ sung Design System PM2 theo Design System PM1: 49 mục thiếu, quy tắc PM1 mâu thuẫn PM2 thì bỏ.",
+        "Thêm 5 control: Ô chọn theo cây, Ô chọn nhiều, Thẻ số liệu, Trạng thái rỗng và lỗi, Nhập khẩu Excel.",
+        "Sửa 4 chỗ PM2 tự lệch: nút icon 32×32, câu rỗng của ô chọn dùng I001-28, ngoại lệ tag màu theo giá trị, nút «Xuất Excel»."
+      ],
+      "request": "Đối chiếu Design System PM1, bổ sung những gì PM2 chưa có.",
+      "title": "49 mục và 5 control bổ sung theo Design System PM1",
+      "type": "Added"
+    },
+    "QD-398": {
+      "points": [
+        "Mỗi control trên Design System xếp thành khung: Mẫu thật, Usage, Quy tắc, Khi dùng và Khi không dùng.",
+        "Usage có nút Copy; mục nhiều kiểu thì mỗi kiểu 1 cặp control chạy thật kèm code.",
+        "Quy tắc hiện ý chính, nguyên văn gập lại; các mục phụ giữ đủ, gập mặc định."
+      ],
+      "request": "Bố cục lại từng control cho dễ đọc, dễ dùng cho các Prototype sau.",
+      "title": "Mỗi control trình bày theo khung Mẫu thật, Usage, Quy tắc",
+      "type": "Changed"
+    },
+    "QD-370": {
+      "points": [
+        "Mỗi lịch hẹn và mỗi popup thao tác có trường «Gửi thông báo cho», tách theo nhóm người nhận, tự nạp người mặc định theo luồng.",
+        "Nhóm bắt buộc (Cán bộ tổ thăm gặp, Thân nhân, Trưởng cơ sở ở đơn ngoại lệ) khoá ô tick; chỉ gửi cho nhóm đang tick và có tên trong ô.",
+        "Cán bộ tổ thăm gặp mặc định theo cán bộ phụ trách của quầy; thao tác hàng loạt gửi thông báo gộp."
+      ]
+    },
+    "QD-342": {
+      "points": [
+        "Tách 2 màn: Lịch hẹn thăm gặp trực tiếp (Cán bộ Tổ thăm gặp duyệt) và Lịch hẹn gặp trực tiếp ngoại lệ (Trưởng cơ sở duyệt, trạng thái «Chờ Trưởng cơ sở duyệt»).",
+        "Đơn ngoại lệ duyệt xong chuyển sang màn Thăm gặp trực tiếp; đánh dấu bằng tag «Ngoại lệ» và cột «Luồng đăng ký»."
+      ]
+    },
+    "QD-358": {
+      "points": [
+        "Khối Đơn xin Trưởng cơ sở duyệt có ô «Tài liệu đính kèm», không bắt buộc, mỗi tệp tối đa 10MB (DATA-02).",
+        "Định dạng và số tệp tối đa chưa chốt."
+      ]
+    },
+    "QD-244": {
+      "points": [
+        "Mỗi khu vực 1 nút chính màu xanh; Hủy lịch hẹn đặt trên trang dùng viền đỏ, đỏ đặc chỉ cho nút xác nhận trong hộp thoại.",
+        "Cùng loại control thì xử lý giống nhau: ô chọn có nút xoá, bo góc 8px, ô tích 16px.",
+        "Hủy ở Chi tiết dùng chung hộp Hủy với Danh sách."
+      ]
+    },
+    "QD-357": {
+      "points": [
+        "Giờ nhận lịch cuối của ca = giờ kết thúc ca − 15 phút.",
+        "Cuối ca còn từ 15 phút trở lên thì vẫn cho đặt, thời lượng tự rút về số phút còn lại."
+      ]
+    },
+    "QD-328": {
+      "points": [
+        "Khối Người cai nghiện hiện thời điểm đồng bộ PM1 lần cuối và nút «Đồng bộ lại»."
+      ]
+    },
+    "QD-350": {
+      "points": [
+        "Hộp xác nhận xóa là câu hỏi: «Bạn có chắc chắn muốn xóa {0} {1}? Hành động này không thể hoàn tác.» (C001-01)."
+      ]
+    },
+    "QD-352": {
+      "points": [
+        "Hộp vô hiệu hóa hỏi và cảnh báo hậu quả: «Bạn có chắc chắn muốn vô hiệu hóa {0}? Bản ghi sẽ không còn xuất hiện trong danh sách chọn khi tạo mới.» (C001-09)."
+      ]
+    },
+    "QD-320": {
+      "points": [
+        "Hộp xóa lịch hẹn theo khuôn MSG-CF-01: tiêu đề «Xác nhận xóa lịch hẹn {mã}», nút «Hủy» và «Xóa lịch hẹn»."
+      ]
+    },
+    "QD-361": {
+      "points": [
+        "Gộp khai Quầy, Bàn thăm gặp, Suất riêng vào 1 màn Quầy: Tạo dùng 3 bước, Sửa và Xem dùng tab.",
+        "Bỏ màn Tạo bàn riêng; giữ màn Danh sách bàn thăm gặp để tra cứu."
+      ]
+    },
+    "QD-394": {
+      "points": [
+        "Trang Nhật ký phiên bản chỉ hiển thị điểm thay đổi chính của mỗi quyết định; nguyên văn đầy đủ lưu tại Sổ BA PM2."
+      ],
+      "request": "Trình bày nhật ký ngắn gọn, nêu điểm chính và dùng văn phong trang trọng.",
+      "title": "Nhật ký phiên bản chỉ hiện điểm thay đổi chính",
+      "type": "Changed"
+    },
+    "QD-393": {
+      "points": [
+        "Thanh nút ghim ở đáy màn hình thay cho cặp thanh nút đầu và chân trang, luôn nhìn thấy nút khi cuộn.",
+        "Làm thử ở màn Tạo lịch hẹn thăm gặp trực tiếp; màn Sửa giữ 2 thanh nút."
+      ],
+      "request": "Chỉ dùng 1 bộ nút và ghim khu vực nút để người dùng luôn thao tác được.",
+      "title": "Thanh nút ghim ở đáy màn Tạo lịch hẹn",
+      "type": "Changed"
+    },
+    "QD-392": {
+      "points": [
+        "Khối trong khung trắng lùi vào 24px, thẳng hàng icon tiêu đề; khe giữa 2 khối 12px.",
+        "Áp cho site Design System và các màn Tạo, Sửa, Chi tiết của Prototype."
+      ],
+      "request": "Các khối cần có khoảng cách đồng nhất, không đặt sát mép khung.",
+      "title": "Khoảng cách khối đồng nhất: lùi vào 24px, khe 12px",
+      "type": "Changed"
+    },
+    "QD-391": {
+      "points": [
+        "Prototype dùng dữ liệu chung: mọi người mở link cùng thấy và cùng sửa một bộ dữ liệu.",
+        "Mỗi lần lưu tạo 1 phiên bản mới, giữ 50 bản gần nhất làm bản sao lưu."
+      ],
+      "request": "Người được chia sẻ link cần thấy dữ liệu TrangNT5 đã tạo, và ngược lại.",
+      "title": "Prototype dùng chung 1 bộ dữ liệu cho mọi người",
+      "type": "Changed"
+    },
+    "QD-390": {
+      "points": [
+        "Quy tắc màu nút chữ theo vai trò, khai tại 1 nơi duy nhất (styles/base.css).",
+        "Design System bổ sung luật UX-L27 và khối mẫu đủ các loại nút."
+      ],
+      "request": "Design System cần có đầy đủ quy tắc màu cho các loại nút để đảm bảo đồng bộ.",
+      "title": "Quy tắc màu nút chữ theo vai trò",
+      "type": "Added"
+    },
+    "QD-389": {
+      "points": [
+        "Nút thao tác trên trang và form luôn gồm icon và chữ; nút trong popup giữ chữ trần.",
+        "Khối 07 của Design System thay 2 nút sai ngữ cảnh bằng đúng nút «Lưu» của màn Cấu hình thăm gặp."
+      ],
+      "request": "Bỏ 2 nút màu đỏ và cam không đúng ngữ cảnh; mọi nút cần có icon và chữ.",
+      "title": "Nút trên trang và form luôn có icon và chữ",
+      "type": "Changed"
+    },
+    "QD-388": {
+      "points": [
+        "Ô «Chọn trang» ở thanh phân trang không có nút xoá, vì danh sách luôn ở một trang cụ thể."
+      ],
+      "request": "Bỏ nút xoá ở ô chọn trang.",
+      "title": "Bỏ nút xoá ở ô Chọn trang",
+      "type": "Fixed"
+    },
+    "QD-387": {
+      "points": [
+        "Cụm nút chế độ xem «Danh sách / Lịch theo buồng» đặt bên phải hàng tiêu đề, trước nút Xuất Excel.",
+        "Chiều cao nút có chữ giảm còn 32px theo PM1."
+      ],
+      "request": "Đặt cụm nút chế độ xem cạnh nút thao tác và giảm chiều cao nút theo PM1.",
+      "title": "Cụm nút chế độ xem đặt bên phải, nút có chữ cao 32px",
+      "type": "Changed"
+    },
+    "QD-386": {
+      "points": [
+        "Đổi toàn bộ tên gọi «System Design» thành «Design System», gồm chữ hiển thị, tên miền và tài liệu liên quan."
+      ],
+      "request": "Thống nhất 100% tên gọi Design System.",
+      "title": "Đổi tên «System Design» thành «Design System»",
+      "type": "Changed"
+    },
+    "QD-385": {
+      "points": [
+        "Cột Buồng thăm gặp và Quầy tiếp đón: mỗi giá trị một màu riêng, cùng giá trị cùng màu trên mọi dòng."
+      ],
+      "request": "Phân biệt các giá trị khác nhau bằng màu sắc.",
+      "title": "Mỗi giá trị Buồng thăm gặp và Quầy tiếp đón có 1 màu riêng",
+      "type": "Changed"
+    },
+    "QD-384": {
+      "points": [
+        "Khoảng cách giữa 2 nút liền kề cố định 8px trên mọi thanh nút, theo PM1."
+      ],
+      "request": "Chuẩn hoá khoảng cách giữa các nút theo PM1.",
+      "title": "Khoảng cách giữa 2 nút cố định 8px",
+      "type": "Changed"
+    },
+    "QD-383": {
+      "points": [
+        "Mọi nội dung hiển thị không hết đều có tooltip hiện toàn bộ nội dung khi di chuột."
+      ],
+      "request": "Bổ sung tooltip cho mọi vị trí bị cắt nội dung.",
+      "title": "Tooltip cho mọi nội dung bị cắt",
+      "type": "Added"
+    },
+    "QD-382": {
+      "points": [
+        "Màn danh sách: phần đầu màn và khu tìm kiếm chiếm 1/3 khung nhìn, lưới dữ liệu chiếm 2/3.",
+        "Khuôn khu tìm kiếm của màn Thăm gặp trực tiếp áp dụng cho các màn danh sách."
+      ],
+      "request": "Tăng không gian hiển thị lưới dữ liệu lên 2/3 màn hình và đồng bộ khu tìm kiếm.",
+      "title": "Lưới dữ liệu chiếm 2/3 màn danh sách",
+      "type": "Changed"
+    },
+    "QD-380": {
+      "points": [
+        "Học hỏi HeroUI Badge, chỉ áp cho PM2: bổ sung luật UX-A16 và UX-L26 về số đếm và nhãn.",
+        "Màu tag dồn về base.css; Design System cập nhật theo màn thật của Prototype."
+      ],
+      "request": "Nghiên cứu HeroUI Badge và đề xuất nội dung nên áp dụng cho PM2.",
+      "title": "Luật số đếm và nhãn theo HeroUI Badge",
+      "type": "Added"
+    },
+    "QD-379": {
+      "points": [
+        "Nâng trang Design System theo chuẩn quốc tế (Material 3, Carbon, GOV.UK, WCAG 2.2 AA).",
+        "Bổ sung 9 trang Nền tảng, token chuẩn W3C, trang Nhật ký phiên bản và Hướng dẫn đóng góp."
+      ],
+      "request": "Hoàn thiện Design System theo chuẩn quốc tế để gửi team BA tham khảo và làm theo.",
+      "title": "9 trang Nền tảng, token chuẩn W3C và trang Hướng dẫn đóng góp",
+      "type": "Added"
+    },
+    "QD-378": {
+      "points": [
+        "Thu hẹp nền xám quanh khung trắng còn 16px và đệm đầu màn danh sách còn 12px.",
+        "Cột bảng rộng theo nội dung, tối đa 200 ký tự; cột Thao tác căn giữa."
+      ],
+      "request": "Tăng không gian hiển thị nội dung và hiển thị đủ dữ liệu trong bảng.",
+      "title": "Thu hẹp nền xám, cột bảng rộng theo nội dung",
+      "type": "Changed"
+    },
+    "QD-377": {
+      "points": [
+        "Bộ lọc danh sách: 1 dòng điều kiện cố định, bên phải có nút «Tìm kiếm mở rộng» để mở thêm điều kiện.",
+        "Làm thử ở màn Thăm gặp trực tiếp trước khi áp dụng các màn khác."
+      ],
+      "request": "Bố trí 1 dòng điều kiện tìm kiếm cố định kèm nút mở rộng điều kiện.",
+      "title": "Bộ lọc 1 dòng cố định kèm nút Tìm kiếm mở rộng",
+      "type": "Changed"
+    },
+    "QD-376": {
+      "points": [
+        "Bỏ dòng mô tả dưới tiêu đề ở mọi màn.",
+        "Ô icon cạnh tiêu đề thu nhỏ bằng chiều cao dòng tiêu đề (28px)."
+      ],
+      "request": "Bỏ dòng ghi chú dưới tiêu đề và thu nhỏ icon bằng tên màn.",
+      "title": "Bỏ dòng mô tả dưới tiêu đề màn",
+      "type": "Changed"
+    },
+    "QD-375": {
+      "points": [
+        "Thanh menu ngang và breadcrumb dùng cỡ chữ, chiều cao theo PM1; giữ màu nhận diện PM2."
+      ],
+      "request": "Thu nhỏ thanh menu và breadcrumb tương tự PM1.",
+      "title": "Menu ngang và breadcrumb theo cỡ chữ của PM1",
+      "type": "Changed"
+    },
+    "QD-374": {
+      "points": [
+        "Bảng màu nút thao tác (Xem, Sửa, Duyệt, Xóa, Cảnh báo…) khai tại 1 nơi duy nhất, dùng chung mọi màn.",
+        "Ô chọn có tìm luôn cập nhật câu gợi ý theo danh sách hiện tại."
+      ],
+      "request": "Chuẩn hoá và đồng bộ màu nút thao tác trên toàn hệ thống.",
+      "title": "Màu nút thao tác khai tại 1 nơi dùng chung",
+      "type": "Changed"
+    },
+    "QD-373": {
+      "points": [
+        "Xoá giá trị ở trường phía trên thì mọi dữ liệu phụ thuộc phía dưới bị bỏ theo; chọn lại đúng giá trị cũ thì giữ nguyên.",
+        "Thanh phân trang theo chuẩn PM1, bổ sung ô «Chọn trang» dùng chung control ô chọn có tìm."
+      ],
+      "request": "Rà soát và chuẩn hoá logic phụ thuộc dữ liệu giữa các trường trên toàn hệ thống; phân trang theo PM1, bổ sung chọn trang.",
+      "title": "Xoá trường phía trên thì bỏ dữ liệu phụ thuộc phía dưới",
+      "type": "Changed"
+    },
+    "QD-372": {
+      "points": [
+        "Khung Lưu ý có 2 mức: màu xanh cho nội dung cần nhắc nhở, hướng dẫn; màu xám cho ghi chú bổ sung.",
+        "Chuẩn hoá đệm nút Tra cứu và ô nhập trong bảng."
+      ],
+      "request": "Phân biệt mức nhấn mạnh của khung Lưu ý theo tính chất nội dung.",
+      "title": "Khung Lưu ý có 2 mức: xanh và xám",
+      "type": "Changed"
+    },
+    "QD-367": {
+      "points": [
+        "Không hiển thị riêng mã của đối tượng: luôn «Mã — Tên» hoặc tách 2 cột.",
+        "Màn Chỉnh sửa quầy lưu riêng từng tab; dòng thêm mới hiển thị trên cùng."
+      ],
+      "request": "Luôn hiển thị kèm tên cùng mã; chỉnh sửa và lưu theo từng tab.",
+      "title": "Luôn hiển thị «Mã — Tên», không hiện mã trần",
+      "type": "Changed"
+    },
+    "QD-365": {
+      "points": [
+        "Thông báo E001-25: tên quầy hiển thị thành link mở màn Chỉnh sửa quầy để bổ sung dãy nhà."
+      ],
+      "request": "Hoàn thiện phần còn lại của việc T971.",
+      "title": "Thông báo thiếu dãy nhà có link tới màn Chỉnh sửa quầy",
+      "type": "Added"
+    },
+    "QD-354": {
+      "points": [
+        "Đổi mã bàn T2 thành T02; bổ sung cơ chế bản vá dữ liệu dùng cho các lần sửa dữ liệu sau."
+      ],
+      "request": "Sửa mã bàn nhập nhầm thành T02.",
+      "title": "Mã bàn T2 đổi thành T02",
+      "type": "Fixed"
+    },
+    "QD-353": {
+      "points": [
+        "Form Bàn thăm gặp: Quầy, Mã bàn, Tên hiển thị trên cùng 1 hàng; lưới 4 4 4 / 4 4."
+      ],
+      "request": "Bố trí các trường cùng tính chất cạnh nhau, Mã và Tên cùng cặp.",
+      "title": "Form Bàn thăm gặp xếp Quầy, Mã bàn, Tên trên cùng 1 hàng",
+      "type": "Changed"
+    },
+    "QD-349": {
+      "points": [
+        "Màn Cấu hình thời gian dùng đúng khuôn chế độ Sửa: URL riêng, nút quay lại, chỉ có nút Lưu.",
+        "Mã quầy ở danh sách không còn là link; xem chi tiết qua nút Xem."
+      ],
+      "request": "Chuẩn hoá chế độ chỉnh sửa và bỏ link ở mã quầy để tránh nhầm lẫn.",
+      "title": "Màn Cấu hình thời gian theo khuôn chế độ Sửa",
+      "type": "Changed"
+    },
+    "QD-348": {
+      "points": [
+        "Màn chưa có dữ liệu cần cài đặt trước thì hiện câu hướng dẫn kèm link tới màn cài đặt tương ứng (I001-94, luật UX-L14)."
+      ],
+      "request": "Bổ sung thông báo hướng dẫn kèm link cài đặt cho các màn chưa có dữ liệu.",
+      "title": "Màn chưa có dữ liệu hiện hướng dẫn kèm link tới màn cài đặt",
+      "type": "Added"
+    },
+    "QD-347": {
+      "points": [
+        "Màn Cấu hình thời gian: ghi chú đồng bộ từ C04 là 1 dòng chữ xám cuối khối.",
+        "Quy tắc nhập liệu dùng khung Lưu ý; ngày thăm gặp chỉ cần 1 ca sáng hoặc chiều."
+      ],
+      "request": "Hoàn thiện cách trình bày ghi chú, quy tắc nhập liệu và thông báo lỗi của màn Cấu hình thời gian.",
+      "title": "Ghi chú và quy tắc nhập liệu của màn Cấu hình thời gian",
+      "type": "Changed"
+    },
+    "QD-346": {
+      "points": [
+        "Chuẩn hoá dòng rỗng, ô khoảng ngày, 10 bản ghi mỗi trang và lề 2 bên theo PM1.",
+        "Ưu tiên bảng ít cột không sinh thanh cuộn ngang; Tạo, Sửa, Xem giữ nguyên thứ tự thông tin."
+      ],
+      "request": "Đồng bộ các quy ước giao diện dùng chung giữa các màn.",
+      "title": "Đồng bộ dòng rỗng, ô khoảng ngày và 10 bản ghi mỗi trang",
+      "type": "Changed"
+    },
+    "QD-345": {
+      "points": [
+        "Dọn dữ liệu mẫu để TrangNT5 tự tạo dữ liệu từ đầu; giữ danh sách người cai nghiện và điều kiện thăm gặp.",
+        "Bổ sung người cai nghiện ở các trạng thái không được gặp thân nhân. (Đã thay bằng QD-391.)"
+      ],
+      "request": "Làm sạch dữ liệu mẫu, giữ dữ liệu cần cho kiểm thử.",
+      "title": "Làm sạch dữ liệu mẫu",
+      "type": "Changed"
+    },
+    "QD-339": {
+      "points": [
+        "Cập nhật SRS WEB-06 theo Prototype; bổ sung luật chạy bộ test hành vi trước khi deploy (UX-L4)."
+      ],
+      "request": "Duyệt các phương án đồng bộ Prototype và SRS.",
+      "title": "Cập nhật SRS WEB-06 theo Prototype",
+      "type": "Changed"
+    },
+    "QD-335": {
+      "points": [
+        "Lưu 46 lời trích của TrangNT5 trong chú thích code vào 1 file nguồn riêng để tra cứu."
+      ],
+      "request": "Lưu trữ nguyên văn các lời trích trước khi viết lại chú thích code.",
+      "title": "Lưu nguyên văn 46 lời trích trong chú thích code",
+      "type": "Added"
+    },
+    "QD-334": {
+      "points": [
+        "Popup Hủy lịch hẹn: nút thao tác «Xác nhận hủy lịch hẹn» để phân biệt với nút đóng «Hủy».",
+        "Đơn xin duyệt hiện lỗi dưới từng ô bắt buộc."
+      ],
+      "request": "Rà soát theo chuẩn quốc tế, đồng bộ hệ thống và đề xuất chuẩn.",
+      "title": "Nút «Xác nhận hủy lịch hẹn» tách khỏi nút đóng «Hủy»",
+      "type": "Changed"
+    },
+    "QD-331": {
+      "points": [
+        "Icon hộp xác nhận theo chuẩn quốc tế, màu theo mức độ ảnh hưởng của thao tác.",
+        "Message List gốc của PM2 là PM2_MessageList.md."
+      ],
+      "request": "Áp dụng chuẩn quốc tế cho hộp xác nhận và thống nhất Message List gốc.",
+      "title": "Icon và màu hộp xác nhận theo chuẩn quốc tế",
+      "type": "Changed"
+    },
+    "QD-330": {
+      "points": [
+        "Form lịch hẹn: gộp khối loại hình và khung giờ; bước xác nhận theo đúng thứ tự màn Tạo."
+      ],
+      "request": "Sắp xếp khối và trường theo thứ tự nhập liệu của màn Tạo.",
+      "title": "Form lịch hẹn sắp theo thứ tự nhập liệu",
+      "type": "Changed"
+    },
+    "QD-326": {
+      "points": [
+        "Dấu * trường bắt buộc luôn màu đỏ trên mọi màn và popup."
+      ],
+      "request": "Dấu * bắt buộc dùng màu đỏ.",
+      "title": "Dấu * bắt buộc luôn màu đỏ",
+      "type": "Changed"
+    },
+    "QD-324": {
+      "points": [
+        "Ô chọn thông thường hiển thị dạng «Mã — Tên» (gạch dài)."
+      ],
+      "request": "Chuẩn hoá hiển thị Mã — Tên cho mọi ô chọn thông thường.",
+      "title": "Ô chọn hiển thị dạng «Mã — Tên»",
+      "type": "Changed"
+    },
+    "QD-323": {
+      "points": [
+        "Màn Tạo, Sửa, Chi tiết có thanh nút ở cả đầu và chân trang, hoạt động giống nhau.",
+        "Màn danh sách bắt buộc có Xuất Excel; dữ liệu khác loại tách khối, dữ liệu liên kết đặt cạnh nhau."
+      ],
+      "request": "Đồng bộ bố cục nút, khối dữ liệu và bảng trên mọi màn.",
+      "title": "Thanh nút ở cả đầu và chân màn Tạo, Sửa, Chi tiết",
+      "type": "Changed"
+    },
+    "QD-321": {
+      "points": [
+        "Nút xoá ô lọc đồng bộ mọi màn; Danh sách bàn bổ sung Xuất Excel; bàn chỉ xoá được khi ở trạng thái Nháp."
+      ],
+      "request": "Chuẩn hoá control và bổ sung chức năng còn thiếu.",
+      "title": "Xuất Excel cho Danh sách bàn, đồng bộ nút xoá ô lọc",
+      "type": "Added"
+    },
+    "QD-312": {
+      "points": [
+        "Popup Vô hiệu hóa, Kích hoạt, Xóa của Quầy và Bàn dùng khuôn chung PM2 (MSG-CF)."
+      ],
+      "request": "Dùng khuôn popup chung của PM2, PM5 chỉ để tham khảo.",
+      "title": "Popup của Quầy và Bàn dùng khuôn chung PM2",
+      "type": "Changed"
+    },
+    "QD-311": {
+      "points": [
+        "Popup Vô hiệu hóa của Quầy và Bàn tham khảo khuôn PM5. (Phần câu chữ đã thay bằng QD-312.)"
+      ],
+      "request": "Chuẩn hoá popup Vô hiệu hóa.",
+      "title": "Popup Vô hiệu hóa tham khảo khuôn PM5",
+      "type": "Changed"
+    },
+    "QD-310": {
+      "points": [
+        "Form Tạo/Sửa Quầy và Bàn theo khuôn danh mục PM5: không có ô Trạng thái, có bộ đếm ký tự.",
+        "Lưới 12 cột, điểm tách giữa các ô thẳng hàng theo cột dọc."
+      ],
+      "request": "Chuẩn hoá bố cục form theo lưới 12 cột, các ô thẳng hàng.",
+      "title": "Form theo lưới 12 cột, các ô thẳng hàng",
+      "type": "Changed"
+    },
+    "QD-309": {
+      "points": [
+        "Thăm gặp trực tiếp không cần nhắc giờ: bỏ 2 ô cảnh báo lần một, lần hai."
+      ],
+      "request": "Bỏ các tham số nhắc giờ không cần thiết.",
+      "title": "Bỏ 2 ô cảnh báo nhắc giờ",
+      "type": "Changed"
+    },
+    "QD-308": {
+      "points": [
+        "Màn Cấu hình thời gian bỏ khung Thời hạn đặt lịch; khung Giới hạn thời lượng giữ ở chế độ chỉ xem, lấy từ C04."
+      ],
+      "request": "Bỏ các tham số không dùng, giữ thông số lấy từ C04.",
+      "title": "Bỏ khung Thời hạn đặt lịch",
+      "type": "Changed"
+    },
+    "QD-307": {
+      "points": [
+        "Bỏ trường «Tính vào ngưỡng hủy quá mức» và hạn hủy tối thiểu; lý do hủy chọn được ở mọi thời điểm."
+      ],
+      "request": "Bỏ giới hạn thời điểm hủy lịch.",
+      "title": "Bỏ giới hạn thời điểm hủy lịch",
+      "type": "Changed"
+    },
+    "QD-306": {
+      "points": [
+        "Khung giờ: mỗi ca 1 ô khoảng giờ; ô Cho phép thăm gặp đổi thành công tắc."
+      ],
+      "request": "Duyệt phương án trình bày khung giờ.",
+      "title": "Mỗi ca 1 ô khoảng giờ, Cho phép thăm gặp là công tắc",
+      "type": "Changed"
+    },
+    "QD-305": {
+      "points": [
+        "Đổi tên màn thành «Cấu hình thời gian»; bỏ ô «Tự ngắt sau khi hết giờ»."
+      ],
+      "request": "Đặt tên màn ngắn gọn và chỉ giữ các ô thực sự sử dụng.",
+      "title": "Đổi tên màn thành «Cấu hình thời gian»",
+      "type": "Changed"
+    },
+    "QD-304": {
+      "points": [
+        "Đổi nhãn «Dãy nhà (Phân khu)» thành «Dãy nhà»; ô tìm kiếm có nút X xoá nội dung.",
+        "Ca mặc định: sáng 07:30 ~ 11:00, chiều 13:30 ~ 17:00."
+      ],
+      "request": "Chuẩn hoá nhãn, control và giá trị mặc định.",
+      "title": "Chuẩn hoá nhãn và ca mặc định",
+      "type": "Changed"
+    },
+    "QD-303": {
+      "points": [
+        "Đổi quầy cho bàn đã có lịch: hệ thống tự tìm bàn trống đúng giờ cũ để đề xuất, không có thì báo cần đổi giờ."
+      ],
+      "request": "Tự động đề xuất bàn thay thế khi đổi quầy.",
+      "title": "Tự đề xuất bàn thay thế khi đổi quầy",
+      "type": "Added"
+    },
+    "QD-302": {
+      "points": [
+        "Bỏ ngưỡng hủy lịch và giới hạn số lượt mỗi ngày.",
+        "Cho phép đổi quầy của bàn đã có lịch; lịch hẹn phải chọn lại giờ và bàn."
+      ],
+      "request": "Bỏ các giới hạn không cần thiết và cho phép đổi quầy.",
+      "title": "Bỏ ngưỡng hủy lịch, cho phép đổi quầy",
+      "type": "Changed"
+    },
+    "QD-301": {
+      "points": [
+        "Mã bàn thăm gặp là duy nhất ở mọi trạng thái."
+      ],
+      "request": "Mã bàn không được trùng.",
+      "title": "Mã bàn là duy nhất ở mọi trạng thái",
+      "type": "Changed"
+    },
+    "QD-300": {
+      "points": [
+        "Hiển thị Dãy / Phòng thay Đội; Tạo/Sửa Bàn là màn hình riêng.",
+        "Tab Tình hình sử dụng mặc định từ Thứ Hai đến Chủ Nhật của tuần tìm kiếm."
+      ],
+      "request": "Duyệt các điều chỉnh của GATE Prototype danh mục.",
+      "title": "Hiển thị Dãy / Phòng; Tạo và Sửa Bàn là màn riêng",
+      "type": "Changed"
+    },
+    "QD-299": {
+      "points": [
+        "Tạo Bàn và Quầy có 2 nút Lưu nháp, Lưu và kích hoạt; Sửa chỉ có nút Lưu. Bàn có thêm trạng thái Nháp."
+      ],
+      "request": "Thống nhất bộ nút Tạo và Sửa cho Bàn và Quầy.",
+      "title": "Thống nhất bộ nút Tạo và Sửa cho Bàn và Quầy",
+      "type": "Changed"
+    },
+    "QD-298": {
+      "points": [
+        "Vòng đời Bàn giống Quầy; vô hiệu hóa quầy giữ nguyên dãy nhà.",
+        "Hủy lịch do vô hiệu hóa có gửi thông báo cho thân nhân; tạo bàn từng bàn một."
+      ],
+      "request": "Duyệt các quy tắc vòng đời và hủy lịch của Quầy, Bàn.",
+      "title": "Vòng đời Bàn giống Quầy",
+      "type": "Changed"
+    },
+    "QD-274": {
+      "points": [
+        "Sửa 4 chỗ lệch của WEB-06: mốc check-in, lưu lý do hủy, gửi thông báo và màu trạng thái."
+      ],
+      "request": "Duyệt phương án sửa.",
+      "title": "4 chỗ lệch của WEB-06",
+      "type": "Fixed"
+    },
+    "QD-270": {
+      "points": [
+        "Nút icon thao tác dòng cố định 32px trên mọi màn; xoá các popup không còn được sử dụng."
+      ],
+      "request": "Đồng bộ kích thước nút và loại bỏ popup không dùng.",
+      "title": "Nút icon thao tác trên dòng cố định 32px",
+      "type": "Changed"
+    },
+    "QD-269": {
+      "points": [
+        "Popup Hủy lịch dùng danh sách lý do theo WEB-38."
+      ],
+      "request": "Duyệt phương án và thời điểm thực hiện.",
+      "title": "Popup Hủy lịch dùng danh sách lý do theo WEB-38",
+      "type": "Changed"
+    },
+    "QD-268": {
+      "points": [
+        "Menu «Thông tin quầy tiếp đón» chuyển sang nhóm «Vận hành Cơ sở»."
+      ],
+      "request": "Chuyển menu sang nhóm Vận hành Cơ sở.",
+      "title": "Menu Thông tin quầy tiếp đón chuyển sang nhóm Vận hành Cơ sở",
+      "type": "Changed"
+    },
+    "QD-260": {
+      "points": [
+        "Rà UI/UX cụm Lịch hẹn: đồng bộ kích thước nút và bề rộng popup.",
+        "Bổ sung popup xác nhận Đánh dấu vắng mặt."
+      ],
+      "request": "Rà soát và đồng bộ style popup toàn cụm.",
+      "title": "Đồng bộ kích thước nút và bề rộng popup cụm Lịch hẹn",
+      "type": "Fixed"
+    },
+    "QD-263": {
+      "points": [
+        "Khung đầu và chân popup cao 57px, tiêu đề 18px, áp chung mọi màn."
+      ],
+      "request": "Chuẩn hoá khung trên và khung dưới cho mọi popup.",
+      "title": "Đầu và chân popup cao 57px",
+      "type": "Changed"
+    },
+    "QD-247": {
+      "points": [
+        "Mở Chi tiết lịch hẹn bằng mã không tồn tại thì hiện thông báo MSG-TS-21 thay cho lịch mẫu."
+      ],
+      "request": "Duyệt phương án xử lý.",
+      "title": "Mã lịch hẹn không tồn tại thì hiện thông báo thay cho lịch mẫu",
+      "type": "Fixed"
+    },
+    "QD-245": {
+      "points": [
+        "Cơ chế đồng bộ control toàn hệ thống: mỗi loại control 1 cách dựng dùng chung (luật UX-L1 đến UX-L4).",
+        "Cổng kiểm tra đo mọi loại control trên mọi màn."
+      ],
+      "request": "Đảm bảo cùng một vấn đề không phải góp ý lặp lại trên từng màn.",
+      "title": "Cơ chế đồng bộ control trên toàn hệ thống",
+      "type": "Added"
+    },
+    "QD-243": {
+      "points": [
+        "Gom toàn bộ file sao lưu về 1 kho duy nhất PM2/0_backup."
+      ],
+      "request": "Duyệt phương án.",
+      "title": "Gom file sao lưu về 1 kho",
+      "type": "Changed"
+    },
+    "QD-241": {
+      "points": [
+        "«Tạo» dùng khi sinh chủ thể mới; «Thêm» dùng khi gắn đối tượng đã có vào danh sách."
+      ],
+      "request": "Phân biệt cách dùng từ «Tạo» và «Thêm».",
+      "title": "Phân biệt cách dùng «Tạo» và «Thêm»",
+      "type": "Changed"
+    },
+    "QD-240": {
+      "points": [
+        "Bổ sung các popup ngoại lệ được rộng 640px."
+      ],
+      "request": "Duyệt phương án.",
+      "title": "Popup ngoại lệ rộng 640px",
+      "type": "Added"
+    },
+    "QD-238": {
+      "points": [
+        "Mọi popup có nút thoát ở chân: «Hủy» cho popup có thao tác, «Quay lại» cho popup chỉ xem."
+      ],
+      "request": "Bổ sung nút đóng ở chân mọi popup để đồng bộ.",
+      "title": "Nút thoát ở chân mọi popup",
+      "type": "Added"
+    },
+    "QD-237": {
+      "points": [
+        "Bỏ hẳn bản HTML; chỉ dùng bản React trên Vercel làm chuẩn."
+      ],
+      "request": "Chuyển bản HTML vào sao lưu, chỉ dùng bản React mới nhất.",
+      "title": "Chỉ dùng bản React làm chuẩn",
+      "type": "Changed"
+    },
+    "QD-205": {
+      "points": [
+        "Tên file bộ quy ước viết dạng Naming_Conventions.md."
+      ],
+      "request": "Thống nhất cách đặt tên file quy ước.",
+      "title": "Tên file quy ước Naming_Conventions.md",
+      "type": "Changed"
+    },
+    "QD-192": {
+      "points": [
+        "Bộ file quy ước đặt tại Prototype_Conventions, sinh từ 1 nguồn JSON."
+      ],
+      "request": "Duyệt phương án.",
+      "title": "Bộ file quy ước sinh từ 1 nguồn JSON",
+      "type": "Changed"
+    },
+    "QD-191": {
+      "points": [
+        "Thời điểm hệ thống dùng hậu tố …At, thời điểm nghiệp vụ dùng …DateTime, theo PM1."
+      ],
+      "request": "Đặt tên theo PM1.",
+      "title": "Hậu tố …At và …DateTime theo PM1",
+      "type": "Changed"
+    },
+    "QD-190": {
+      "points": [
+        "Bản React là bản chuẩn duy nhất. (Đã cập nhật theo QD-237.)"
+      ],
+      "request": "Duyệt phương án.",
+      "title": "Bản React là bản chuẩn duy nhất",
+      "type": "Changed"
+    },
+    "QD-189": {
+      "points": [
+        "Đặt tên tiếng Anh theo PM1 tối đa; có bộ file quy ước dùng chung."
+      ],
+      "request": "Quy tắc đặt tên theo PM1 và có tài liệu quy ước để tham chiếu.",
+      "title": "Đặt tên tiếng Anh theo PM1",
+      "type": "Changed"
+    },
+    "QD-188": {
+      "points": [
+        "Giữ nguyên tên component PM2, bổ sung file quản lý dùng chung."
+      ],
+      "request": "Cần file quản lý tên component.",
+      "title": "File quản lý tên component",
+      "type": "Added"
+    },
+    "QD-187": {
+      "points": [
+        "Class CSS và tên hàm theo PM1; tên mới đặt tiếng Anh kèm file mapping giải thích."
+      ],
+      "request": "Đặt theo PM1 và có file mapping giải thích mục đích.",
+      "title": "Class CSS và tên hàm theo PM1",
+      "type": "Changed"
+    },
+    "QD-186": {
+      "points": [
+        "Prototype không dựng API."
+      ],
+      "request": "API chỉ dựng khi có Backend.",
+      "title": "Prototype không dựng API",
+      "type": "Changed"
+    },
+    "QD-185": {
+      "points": [
+        "Tham số truy vấn theo PM1 tối đa."
+      ],
+      "request": "Dùng theo PM1.",
+      "title": "Tham số truy vấn theo PM1",
+      "type": "Changed"
+    },
+    "QD-184": {
+      "points": [
+        "Mã trạng thái dùng chung bộ của PM1."
+      ],
+      "request": "Dùng chung bộ mã trạng thái PM1.",
+      "title": "Dùng chung bộ mã trạng thái của PM1",
+      "type": "Changed"
+    },
+    "QD-183": {
+      "points": [
+        "Hậu tố thời gian: …Date, …Time, …DateTime."
+      ],
+      "request": "Đưa quy tắc hậu tố thời gian vào danh sách quy ước.",
+      "title": "Hậu tố thời gian …Date, …Time, …DateTime",
+      "type": "Changed"
+    },
+    "QD-182": {
+      "points": [
+        "Tên trường của Thân nhân dùng lại tối đa của PM1."
+      ],
+      "request": "Áp dụng như nguyên tắc dùng lại tên trường PM1.",
+      "title": "Tên trường Thân nhân dùng lại của PM1",
+      "type": "Changed"
+    },
+    "QD-181": {
+      "points": [
+        "Tên trường dữ liệu dùng lại tối đa của PM1; trường mới đặt theo quy tắc PM1."
+      ],
+      "request": "Lập bộ tên trường PM1 để PM2 tham chiếu và dùng lại.",
+      "title": "Tên trường dữ liệu dùng lại của PM1",
+      "type": "Changed"
+    },
+    "QD-180": {
+      "points": [
+        "Trang con theo bản ghi theo PM1; đường dẫn giữ 2 cấp của PM2."
+      ],
+      "request": "Đường dẫn trang con theo PM1, giữ 2 cấp của PM2.",
+      "title": "Đường dẫn trang con theo PM1",
+      "type": "Changed"
+    },
+    "QD-396": {
+      "points": [
+        "Mỗi mục có thêm khối Tra cứu kỹ thuật, thu gọn mặc định: bảng lớp CSS chia 3 nhóm Cơ bản và kích thước · Biến thể · Trạng thái.",
+        "Mỗi biến thể có 1 ví dụ chạy thật kèm code, chỉ lấy biến thể tự có nền hoặc viền.",
+        "File nguồn component và bảng thuộc tính đọc từ chữ ký hàm.",
+        "Dữ liệu sinh tự động từ code mỗi lần deploy, cổng phủ đủ mọi mục."
+      ],
+      "request": "Học cách trình bày thư viện component HeroUI để tra cứu lớp CSS, biến thể và thuộc tính được nhanh hơn.",
+      "title": "Khối Tra cứu kỹ thuật cho từng control",
+      "type": "Added"
+    },
+    "QD-411": {
+      "points": [
+        "Thanh báo phiên bản mới nổi đáy màn, dùng chung với Prototype",
+        "Trang đang mở tự dò bản mới 5 phút 1 lần và khi quay lại tab, có nút Tải lại ngay và Đóng",
+        "Ngoài ra: sửa xong thì deploy thẳng bản live, các cổng đo tự động khi deploy vẫn giữ"
+      ],
+      "request": "Báo cho người xem khi có phiên bản mới.",
+      "title": "Thông báo phiên bản mới",
+      "items": [
+        {
+          "type": "Added",
+          "text": "Thanh báo phiên bản mới nổi đáy màn, dùng chung với Prototype"
+        },
+        {
+          "type": "Changed",
+          "text": "Trang đang mở tự dò bản mới 5 phút 1 lần và khi quay lại tab, có nút Tải lại ngay và Đóng"
+        },
+        {
+          "type": "Changed",
+          "text": "Ngoài ra: sửa xong thì deploy thẳng bản live, các cổng đo tự động khi deploy vẫn giữ"
+        }
+      ]
+    },
+    "QD-410": {
+      "points": [
+        "Breadcrumb, sidebar và menu thả xuống dùng được bằng bàn phím: Tab tới được, Enter mở được.",
+        "Phím Escape tắt tooltip đang hiện theo WCAG 1.4.13.",
+        "Độ rộng tối đa của tooltip thống nhất 400px trên mọi nơi."
+      ],
+      "request": "Chuẩn hoá thao tác bàn phím và tooltip cho đồng bộ.",
+      "title": "Thao tác bàn phím và tooltip",
+      "items": [
+        {
+          "type": "Added",
+          "text": "Breadcrumb, sidebar và menu thả xuống dùng được bằng bàn phím"
+        },
+        {
+          "type": "Added",
+          "text": "Phím Escape tắt tooltip đang hiện (WCAG 1.4.13)"
+        },
+        {
+          "type": "Fixed",
+          "text": "Độ rộng tối đa của tooltip thống nhất 400px"
+        }
+      ]
+    },
+    "QD-409": {
+      "points": [
+        "Thang chữ cố định, bớt chữ đậm, bớt khung lồng khung; khối code dùng đúng font code",
+        "Menu dùng nhãn tiếng Anh, tên control ghi dạng «Tiếng Anh (Tiếng Việt)» theo thuật ngữ BA",
+        "Ngoài ra: thêm Ô chọn ngày giờ, mục Multiple Lines of Text, mẫu nút Xóa trên trang dùng viền đỏ"
+      ],
+      "request": "Làm trang Design System nhìn chuyên nghiệp, dễ tra, nhưng vẫn giữ đúng chất giao diện PM2.",
+      "title": "Giao diện tài liệu chuyên nghiệp hơn",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Thang chữ cố định, bớt chữ đậm, bớt khung lồng khung; khối code dùng đúng font code"
+        },
+        {
+          "type": "Changed",
+          "text": "Menu dùng nhãn tiếng Anh, tên control ghi dạng «Tiếng Anh (Tiếng Việt)» theo thuật ngữ BA"
+        },
+        {
+          "type": "Added",
+          "text": "Ngoài ra: thêm Ô chọn ngày giờ, mục Multiple Lines of Text, mẫu nút Xóa trên trang dùng viền đỏ"
+        }
+      ]
+    },
+    "QD-408": {
+      "points": [
+        "Mô tả cho 252 thuộc tính và 3–6 ví dụ chạy thật cho khoảng 35 control",
+        "Hướng dẫn cho 31 mục còn thiếu, đối chiếu chuẩn quốc tế",
+        "Ngoài ra: đánh số phiên bản theo semver, rà duyệt các ý hướng dẫn do AI tự suy"
+      ],
+      "request": "Học theo HeroUI để khắc phục 2 điểm yếu nhất: thiếu mô tả thuộc tính và thiếu ví dụ.",
+      "title": "Mô tả thuộc tính và ví dụ cho từng control",
+      "items": [
+        {
+          "type": "Added",
+          "text": "Mô tả cho 252 thuộc tính và 3–6 ví dụ chạy thật cho khoảng 35 control"
+        },
+        {
+          "type": "Added",
+          "text": "Hướng dẫn cho 31 mục còn thiếu, đối chiếu chuẩn quốc tế"
+        },
+        {
+          "type": "Changed",
+          "text": "Ngoài ra: đánh số phiên bản theo semver, rà duyệt các ý hướng dẫn do AI tự suy"
+        }
+      ]
+    },
+    "QD-407": {
+      "points": [
+        "Dọn trùng lặp: mỗi khái niệm chỉ có 1 trang chủ, nơi khác trỏ link về. Một bản dùng chung cho BA, Dev, QC.",
+        "Gỡ nhãn nguồn và mã quyết định khỏi trang, mỗi câu 1 gạch đầu dòng.",
+        "Rà và sửa các ý mâu thuẫn hoặc mơ hồ so với nguồn đã chốt; ý chưa có nguồn thì ẩn."
+      ],
+      "request": "Nâng cấp Design System thành 1 bản thật chuẩn cho cả nhóm cùng đọc, không trùng lặp thông tin.",
+      "title": "Dọn trùng lặp thông tin",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Mỗi khái niệm chỉ có 1 trang chủ, nơi khác trỏ link về"
+        },
+        {
+          "type": "Changed",
+          "text": "Gỡ nhãn nguồn và mã quyết định khỏi trang"
+        },
+        {
+          "type": "Fixed",
+          "text": "Sửa các ý mâu thuẫn với nguồn đã chốt, ẩn các ý chưa có nguồn"
+        }
+      ]
+    },
+    "QD-406": {
+      "points": [
+        "Thêm bộ tài liệu cho AI (llms.txt, AGENTS.md), trang Tất cả control, trang Nguyên tắc thiết kế, thao tác bàn phím và sơ đồ cấu tạo.",
+        "Thêm 4 control: ScrollShadow, Kbd, Toolbar, ColorSwatch.",
+        "Không làm chế độ tối vì PM2 chỉ có giao diện sáng."
+      ],
+      "request": "Học tối đa bộ tài liệu Design System của HeroUI.",
+      "title": "Bộ tài liệu cho AI, trang Tất cả control và trang Nguyên tắc thiết kế",
+      "type": "Added"
+    },
+    "QD-405": {
+      "points": [
+        "Chốt từng điểm lệch giữa PM1 và PM2: điểm nào giữ theo PM2, điểm nào đổi theo PM1.",
+        "Đổi theo PM1: toast ở góc trên bên phải, ô bắt buộc báo lỗi cả khi rời ô và khi bấm Lưu, ngăn kéo bên phải rộng 360–560px.",
+        "Màu tag trạng thái theo 5 mức của PM1; 640 mã màu thô đổi sang biến chuẩn, giao diện không đổi."
+      ],
+      "request": "Đối chiếu PM1 và PM2 để thống nhất giao diện, chỗ nào PM1 chuẩn hơn thì theo PM1.",
+      "title": "Thống nhất các điểm lệch giữa PM1 và PM2",
+      "type": "Changed"
+    },
+    "QD-404": {
+      "points": [
+        "Ngoại lệ chiều cao nút: nút «Đồng bộ lại» trên thanh đồng bộ PM1 giữ cao 28px để dòng tiêu đề khối không bị phình."
+      ],
+      "request": "Giữ nút Đồng bộ lại cao 28px.",
+      "title": "Nút «Đồng bộ lại» giữ cao 28px",
+      "type": "Changed"
+    },
+    "QD-403": {
+      "points": [
+        "Rà xung đột sau đợt áp Design System PM1: không có chỗ nào đè nhau.",
+        "Ô số chặn vượt trần ngay khi gõ: max 100 thì gõ 101 ô vẫn giữ 100.",
+        "Ngăn kéo bên phải trượt vào trong 400ms, tắt hiệu ứng khi người dùng bật giảm chuyển động."
+      ],
+      "request": "Kiểm tra đợt áp PM1 có đè lên việc đã làm không, và chốt cách chặn của ô số.",
+      "title": "Ô số chặn vượt giá trị tối đa ngay khi gõ",
+      "type": "Changed"
+    },
+    "QD-399": {
+      "points": [
+        "Thêm 14 control PM2 còn thiếu, đối chiếu với HeroUI: nhóm radio, nhóm ô tích, ô số, ngăn kéo bên phải, thanh tiến độ, khung chờ tải và các control khác.",
+        "Bỏ các control không có nghiệp vụ dùng như chọn màu và OTP.",
+        "Chỉ thêm file mới, không sửa màn cũ."
+      ],
+      "request": "Bổ sung các control PM2 chưa có.",
+      "title": "14 control còn thiếu",
+      "type": "Added"
+    },
+    "QD-397": {
+      "points": [
+        "Chữ đỏ báo lỗi cách ô nhập 4px trên mọi màn, nằm trên dòng gợi ý.",
+        "Mục Nút icon liệt kê theo loại nút: Xem chi tiết, Chỉnh sửa, Phê duyệt, Xóa và các loại khác.",
+        "Thêm nhóm «Trạng thái theo thao tác», phủ đủ 317/317 lớp dùng chung."
+      ],
+      "request": "Căn khoảng cách chữ báo lỗi theo chuẩn của PM2 và sắp mục nút icon theo loại nút.",
+      "title": "Chữ báo lỗi cách ô nhập 4px trên mọi màn",
+      "type": "Fixed"
+    },
+    "QD-402": {
+      "points": [
+        "Cụm nút đổi chế độ xem «Danh sách / Lịch theo buồng» bị trượt vị trí khi đổi chế độ.",
+        "Phương án A: giữ bên phải và chừa sẵn chỗ để cụm nút đứng yên. Phương án B: chuyển cụm nút sang sát tên màn."
+      ],
+      "request": "Góp ý của Designer, đang chờ chốt phương án."
+    },
+    "QD-413": {
+      "title": "Changelog theo chuẩn Keep a Changelog",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Mỗi phiên bản là 1 khối gồm số phiên bản, ngày, tiêu đề và các thay đổi có phân loại"
+        },
+        {
+          "type": "Changed",
+          "text": "Mỗi mục chỉ hiện bản tóm tắt ngắn, nguyên văn đầy đủ giữ ở Sổ BA PM2"
+        },
+        {
+          "type": "Changed",
+          "text": "Bỏ nhãn khu vực, trạng thái, giờ chốt và dòng Yêu cầu khỏi trang"
+        }
+      ],
+      "points": [
+        "Mỗi phiên bản là 1 khối gồm số phiên bản, ngày, tiêu đề và các thay đổi có phân loại.",
+        "Mỗi mục chỉ hiện bản tóm tắt ngắn, nguyên văn đầy đủ giữ ở Sổ BA PM2.",
+        "Bỏ nhãn khu vực, trạng thái, giờ chốt và dòng Yêu cầu khỏi trang."
+      ]
+    },
+    "QD-412": {
+      "title": "Khung trang kín đáy màn",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Khung trắng luôn giãn kín tới đáy màn"
+        },
+        {
+          "type": "Changed",
+          "text": "Màn Danh sách: vùng bảng giãn lấp khung, thanh phân trang nằm sát đáy, nhiều dữ liệu thì bảng tự cuộn"
+        },
+        {
+          "type": "Fixed",
+          "text": "Ngoài ra: bảng rỗng hết đường kẻ đáy thừa, thêm luật UX-B10 và UX-G14"
+        }
+      ],
+      "points": [
+        "Khung trắng luôn giãn kín tới đáy màn",
+        "Màn Danh sách: vùng bảng giãn lấp khung, thanh phân trang nằm sát đáy, nhiều dữ liệu thì bảng tự cuộn",
+        "Ngoài ra: bảng rỗng hết đường kẻ đáy thừa, thêm luật UX-B10 và UX-G14"
+      ]
+    },
+    "QD-414": {
+      "title": "Date and Time theo khuôn tài liệu HeroUI",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Đường dẫn trang All Components đổi thành #/all-components, link cũ tự chuyển sang trang mới"
+        },
+        {
+          "type": "Added",
+          "text": "Date and Time thêm 4 ví dụ chạy thật, hướng dẫn When to Use và Related Components"
+        },
+        {
+          "type": "Fixed",
+          "text": "Ngoài ra: bảng chọn trong khung ví dụ không bị cắt khi mở, rà bổ sung các mục còn thiếu hướng dẫn"
+        }
+      ],
+      "points": [
+        "Đường dẫn trang All Components đổi thành #/all-components, link cũ tự chuyển sang trang mới",
+        "Date and Time thêm 4 ví dụ chạy thật, hướng dẫn When to Use và Related Components",
+        "Ngoài ra: bảng chọn trong khung ví dụ không bị cắt khi mở, rà bổ sung các mục còn thiếu hướng dẫn"
+      ]
+    },
+    "QD-415": {
+      "title": "Thanh báo phiên bản mới cho Prototype",
+      "items": [
+        {
+          "type": "Added",
+          "text": "Prototype tự báo khi có bản build mới, nút Tải lại ngay để mở bản mới"
+        },
+        {
+          "type": "Added",
+          "text": "Kiểu pill nổi giữa đáy, nền đỏ theo thanh tiêu đề site, icon động và câu in hoa"
+        },
+        {
+          "type": "Added",
+          "text": "Ngoài ra: Design System dùng chung thanh báo với câu riêng, xem trước bằng ?preview=version-notice"
+        }
+      ],
+      "points": [
+        "Prototype tự báo khi có bản build mới, nút Tải lại ngay để mở bản mới",
+        "Kiểu pill nổi giữa đáy, nền đỏ theo thanh tiêu đề site, icon động và câu in hoa",
+        "Ngoài ra: Design System dùng chung thanh báo với câu riêng, xem trước bằng ?preview=version-notice"
+      ]
+    },
+    "QD-416": {
+      "title": "Độ đủ nội dung cho mọi control",
+      "items": [
+        {
+          "type": "Added",
+          "text": "Cổng độ đủ nội dung khi deploy: mục control phải có When to Use, Related và ít nhất 3 ví dụ"
+        },
+        {
+          "type": "Added",
+          "text": "Ví dụ và hướng dẫn cho 9 control còn thiếu"
+        },
+        {
+          "type": "Fixed",
+          "text": "Ngoài ra: bảng chọn ngày giờ và khoảng giờ không bị cắt, tự lật lên khi sát đáy; hướng dẫn Tài liệu đính kèm khớp component, thêm ví dụ Nhiều tệp"
+        }
+      ],
+      "points": [
+        "Cổng độ đủ nội dung khi deploy: mục control phải có When to Use, Related và ít nhất 3 ví dụ",
+        "Ví dụ và hướng dẫn cho 9 control còn thiếu",
+        "Ngoài ra: bảng chọn ngày giờ và khoảng giờ không bị cắt, tự lật lên khi sát đáy; hướng dẫn Tài liệu đính kèm khớp component, thêm ví dụ Nhiều tệp"
+      ]
+    },
+    "QD-417": {
+      "title": "Tải tệp đính kèm ở màn Xem chi tiết",
+      "items": [
+        {
+          "type": "Added",
+          "text": "Màn Xem chi tiết: tên tệp đính kèm là link tải về, kèm icon"
+        },
+        {
+          "type": "Added",
+          "text": "Ví dụ Chế độ Xem có tải về cho Tài liệu đính kèm"
+        },
+        {
+          "type": "Fixed",
+          "text": "Ví dụ Lỗi của Ô khoảng giờ hiện chữ đỏ E001-17 dưới ô như màn thật"
+        }
+      ],
+      "points": [
+        "Màn Xem chi tiết: tên tệp đính kèm là link tải về, kèm icon",
+        "Ví dụ Chế độ Xem có tải về cho Tài liệu đính kèm",
+        "Ví dụ Lỗi của Ô khoảng giờ hiện chữ đỏ E001-17 dưới ô như màn thật"
+      ]
+    },
+    "QD-419": {
+      "title": "Lịch theo buồng khi ngày không có lịch",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Lịch theo buồng: ngày không có lịch thì chỉ hiện câu «Chưa có lịch hẹn nào», bỏ lưới buồng trống"
+        },
+        {
+          "type": "Changed",
+          "text": "Khung câu báo giãn kín tới đáy khung màn như vùng bảng tab Danh sách"
+        }
+      ],
+      "points": [
+        "Lịch theo buồng: ngày không có lịch thì chỉ hiện câu «Chưa có lịch hẹn nào», bỏ lưới buồng trống",
+        "Khung câu báo giãn kín tới đáy khung màn như vùng bảng tab Danh sách"
+      ]
+    },
+    "QD-420": {
+      "points": [
+        "Màn trải phẳng, khối ngăn bằng đường kẻ ngang, nền xám quanh khung còn 8px, bo góc 8px theo PM1",
+        "Thanh nút form nhiều bước: Quay lại bước trước, Tiếp tục, Lưu nháp, Lưu và gửi duyệt",
+        "Ngoài ra: icon tiêu đề chỉ ở màn Danh sách, Lịch theo buồng thành màn riêng, tiêu đề cột không xuống dòng, Lịch sử thao tác dạng dòng thời gian, thanh bước bọc khung, Cấu hình thời gian chế độ xem theo khuôn Xem chi tiết, Tìm kiếm mở rộng dạng link có icon phễu"
+      ],
+      "request": "Làm giao diện Prototype gọn và thoáng hơn theo 12 góp ý về khối, bo góc, nút và lịch sử thao tác.",
+      "title": "Giao diện trải phẳng và 12 điều chỉnh bố cục toàn Prototype",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Màn trải phẳng, khối ngăn bằng đường kẻ ngang, nền xám quanh khung còn 8px, bo góc 8px theo PM1"
+        },
+        {
+          "type": "Changed",
+          "text": "Thanh nút form nhiều bước: Quay lại bước trước, Tiếp tục, Lưu nháp, Lưu và gửi duyệt"
+        },
+        {
+          "type": "Changed",
+          "text": "Ngoài ra: icon tiêu đề chỉ ở màn Danh sách, Lịch theo buồng thành màn riêng, tiêu đề cột không xuống dòng, Lịch sử thao tác dạng dòng thời gian, thanh bước bọc khung, Cấu hình thời gian chế độ xem theo khuôn Xem chi tiết, Tìm kiếm mở rộng dạng link có icon phễu"
+        }
+      ]
+    },
+    "QD-421": {
+      "title": "8 điều chỉnh vòng 2: Lịch sử thao tác tải thêm, nút viền xanh, căn chỉnh",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Lịch sử thao tác bỏ phân trang: hiện 10 mốc, Xem thêm tải tiếp 10, cuộn tới cuối tự tải"
+        },
+        {
+          "type": "Changed",
+          "text": "Mỗi mốc có khối Lý do, ý kiến và Nội dung thay đổi có tiêu đề, mỗi trường thay đổi 1 dòng"
+        },
+        {
+          "type": "Changed",
+          "text": "Ngoài ra: nút Lịch theo buồng viền xanh, Cấu hình thời gian hiện Bật/Tắt, khối quỹ lượt giữ khung viền, Tìm kiếm mở rộng sát ô lọc, căn lại cột Thao tác, đường kẻ ngăn khối và hàng tab"
+        }
+      ],
+      "points": [
+        "Lịch sử thao tác bỏ phân trang: hiện 10 mốc, Xem thêm tải tiếp 10, cuộn tới cuối tự tải",
+        "Mỗi mốc có khối Lý do, ý kiến và Nội dung thay đổi có tiêu đề, mỗi trường thay đổi 1 dòng",
+        "Ngoài ra: nút Lịch theo buồng viền xanh, Cấu hình thời gian hiện Bật/Tắt, khối quỹ lượt giữ khung viền, Tìm kiếm mở rộng sát ô lọc, căn lại cột Thao tác, đường kẻ ngăn khối và hàng tab"
+      ],
+      "request": "Hoàn thiện thêm 8 điểm sau lượt chỉnh giao diện trải phẳng, ưu tiên Lịch sử thao tác rõ ràng và chuyên nghiệp."
+    },
+    "QD-422": {
+      "title": "Khoảng cách cân bằng: lề trong khung 16px cho mọi khối",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Lề trong khung trắng giảm từ 24px xuống 16px, khai 1 biến chung --shell-gutter cho mọi khối"
+        },
+        {
+          "type": "Fixed",
+          "text": "Chữ tab đầu, ô lọc đầu, bảng, tiêu đề khối thẳng cùng 1 mép trái ở mọi màn; lề phải bằng lề trái"
+        }
+      ],
+      "points": [
+        "Lề trong khung trắng giảm từ 24px xuống 16px, khai 1 biến chung --shell-gutter cho mọi khối",
+        "Chữ tab đầu, ô lọc đầu, bảng, tiêu đề khối thẳng cùng 1 mép trái ở mọi màn; lề phải bằng lề trái"
+      ],
+      "request": "Giảm khoảng trắng đang hơi rộng, giữ khoảng cách cân bằng trong cả hệ thống."
+    },
+    "QD-423": {
+      "title": "Tab thẳng mép khối và chữ menu trái 13px",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Hàng tab lùi vào thẳng mép khu lọc và bảng ở mọi màn có tab"
+        },
+        {
+          "type": "Changed",
+          "text": "Chữ menu trái 13px, cùng cỡ menu trên cùng"
+        }
+      ],
+      "points": [
+        "Hàng tab lùi vào thẳng mép khu lọc và bảng ở mọi màn có tab",
+        "Chữ menu trái 13px, cùng cỡ menu trên cùng"
+      ],
+      "request": "Căn hàng tab thẳng với nội dung bên dưới và giảm cỡ chữ menu trái."
+    },
+    "QD-424": {
+      "title": "Khung trang thoáng như PM1: breadcrumb vào trong khung trắng",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Breadcrumb thành dòng đầu của khung trắng, bỏ dải riêng phía trên, phần khung trang gọn từ 3 tầng còn 2 tầng"
+        }
+      ],
+      "points": [
+        "Breadcrumb thành dòng đầu của khung trắng, bỏ dải riêng phía trên, phần khung trang gọn từ 3 tầng còn 2 tầng"
+      ],
+      "request": "Làm giao diện thoáng như PM1 mà vẫn giữ lề gọn."
+    },
+    "QD-425": {
+      "title": "Link Tìm kiếm mở rộng và icon cờ đơn ngoại lệ",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Tìm kiếm mở rộng dạng link chữ có gạch chân"
+        },
+        {
+          "type": "Changed",
+          "text": "Đơn ngoại lệ ở danh sách hiển thị bằng icon cờ cạnh mã, rê chuột hiện giải thích"
+        }
+      ],
+      "points": [
+        "Tìm kiếm mở rộng dạng link chữ có gạch chân",
+        "Đơn ngoại lệ ở danh sách hiển thị bằng icon cờ cạnh mã, rê chuột hiện giải thích"
+      ],
+      "request": "Làm link Tìm kiếm mở rộng rõ hơn và đổi cách hiển thị đơn ngoại lệ cho gọn đẹp."
+    },
+    "QD-426": {
+      "title": "Tooltip icon cờ đơn ngoại lệ rõ trạng thái duyệt",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Icon cờ đơn ngoại lệ dùng con trỏ thường, tooltip nói rõ đơn đã hoặc chưa được Trưởng cơ sở phê duyệt"
+        }
+      ],
+      "points": [
+        "Icon cờ đơn ngoại lệ dùng con trỏ thường, tooltip nói rõ đơn đã hoặc chưa được Trưởng cơ sở phê duyệt"
+      ],
+      "request": "Sửa tooltip icon cờ đơn ngoại lệ cho gọn và đúng ý."
+    },
+    "QD-427": {
+      "title": "Icon và tiêu đề đầu màn sát nhau hơn",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Khe giữa icon hoặc nút quay về với tiêu đề màn còn 8px ở mọi đầu màn"
+        }
+      ],
+      "points": [
+        "Khe giữa icon hoặc nút quay về với tiêu đề màn còn 8px ở mọi đầu màn"
+      ],
+      "request": "Thu khoảng cách giữa icon và chữ tiêu đề màn."
+    },
+    "QD-428": {
+      "title": "Tag nhỏ lại 12px cho cân bằng",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Mọi tag giảm còn 12px, cao 22px, đồng bộ toàn hệ thống"
+        }
+      ],
+      "points": [
+        "Mọi tag giảm còn 12px, cao 22px, đồng bộ toàn hệ thống"
+      ],
+      "request": "Giảm cỡ tag cho cân bằng và áp đồng bộ mọi màn."
+    },
+    "QD-429": {
+      "title": "Tag theo cỡ PM1 và mũi tên Lịch sử thao tác rõ hơn",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Tag theo đúng cỡ PM1: chữ 12px, cao 24px"
+        },
+        {
+          "type": "Fixed",
+          "text": "Mũi tên ở Lịch sử thao tác dạng icon 16px, dễ nhìn hơn"
+        }
+      ],
+      "points": [
+        "Tag theo đúng cỡ PM1: chữ 12px, cao 24px",
+        "Mũi tên ở Lịch sử thao tác dạng icon 16px, dễ nhìn hơn"
+      ],
+      "request": "Chỉnh cỡ tag cho giống PM1 và làm mũi tên to rõ hơn."
+    },
+    "QD-430": {
+      "title": "Sửa lỗi giá trị cũ sai ở Lịch sử thao tác",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Lưu nháp khi chưa chọn ngày không còn lưu chữ gợi ý làm ngày hẹn; dọn các lịch sử đã lỡ ghi sai"
+        }
+      ],
+      "points": [
+        "Lưu nháp khi chưa chọn ngày không còn lưu chữ gợi ý làm ngày hẹn; dọn các lịch sử đã lỡ ghi sai"
+      ],
+      "request": "Nội dung thay đổi phải hiện đúng giá trị cũ và giá trị mới."
+    },
+    "QD-431": {
+      "title": "Khối có viền, nút chuyển bước ở cuối bước, nút phễu có số đếm",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Mỗi khối thông tin bọc viền, tên khối nằm trên đường viền"
+        },
+        {
+          "type": "Changed",
+          "text": "Form nhiều bước: Quay lại và Tiếp tục ở cuối bước, đầu màn giữ nút chính"
+        },
+        {
+          "type": "Changed",
+          "text": "Ngoài ra: Tìm kiếm mở rộng là nút phễu có số đếm, form có lỗi tự cuộn tới ô lỗi đầu tiên, bảng cách phân trang 16px"
+        }
+      ],
+      "points": [
+        "Mỗi khối thông tin bọc viền, tên khối nằm trên đường viền",
+        "Form nhiều bước: Quay lại và Tiếp tục ở cuối bước, đầu màn giữ nút chính",
+        "Ngoài ra: Tìm kiếm mở rộng là nút phễu có số đếm, form có lỗi tự cuộn tới ô lỗi đầu tiên, bảng cách phân trang 16px"
+      ],
+      "request": "Bọc khối rõ ràng, tách nút chuyển bước, gọn khu tìm kiếm và hỗ trợ sửa lỗi nhanh."
+    },
+    "QD-432": {
+      "title": "Ẩn thay đổi trùng giá trị, danh sách không lọc ngày mặc định",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Lịch sử thao tác không hiện thay đổi khi giá trị cũ trùng giá trị mới"
+        },
+        {
+          "type": "Changed",
+          "text": "Danh sách lịch hẹn mặc định không lọc theo ngày, thấy toàn bộ dữ liệu"
+        }
+      ],
+      "points": [
+        "Lịch sử thao tác không hiện thay đổi khi giá trị cũ trùng giá trị mới",
+        "Danh sách lịch hẹn mặc định không lọc theo ngày, thấy toàn bộ dữ liệu"
+      ],
+      "request": "Chỉ hiện thay đổi thật và mở danh sách thấy toàn bộ dữ liệu."
+    },
+    "QD-433": {
+      "title": "Thang chữ Lịch sử thao tác",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Lịch sử thao tác có thang chữ rõ tầng: nội dung 13px nhỏ hơn tên thao tác 14px"
+        },
+        {
+          "type": "Changed",
+          "text": "Tiêu đề mục trong Lịch sử thao tác lên 12px in hoa (trước 11px, ngoài thang chữ UX-A2), nội dung giữ 13px."
+        }
+      ],
+      "points": [
+        "Lịch sử thao tác có thang chữ rõ tầng: nội dung 13px nhỏ hơn tên thao tác 14px",
+        "Tiêu đề mục trong Lịch sử thao tác lên 12px in hoa (trước 11px, ngoài thang chữ UX-A2), nội dung giữ 13px."
+      ],
+      "request": "Nội dung trong Lịch sử thao tác nhỏ hơn đầu mục."
+    },
+    "QD-434": {
+      "title": "Khối đơn không bọc viền, toast 5 giây",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Chỉ bọc viền khi có nhiều khối nhỏ; nhãn và giá trị căn giữa dọc"
+        },
+        {
+          "type": "Changed",
+          "text": "Toast hiện 5 giây, nút đóng icon X căn đúng tâm"
+        },
+        {
+          "type": "Fixed",
+          "text": "Lịch sử thao tác hiện «Trống → giá trị mới» khi trước đó chưa có giá trị"
+        }
+      ],
+      "points": [
+        "Chỉ bọc viền khi có nhiều khối nhỏ; nhãn và giá trị căn giữa dọc",
+        "Toast hiện 5 giây, nút đóng icon X căn đúng tâm",
+        "Lịch sử thao tác hiện «Trống → giá trị mới» khi trước đó chưa có giá trị"
+      ],
+      "request": "Gọn khối, căn đều dữ liệu, toast dễ đọc hơn."
+    },
+    "QD-435": {
+      "title": "Sửa vị trí lỗi chọn người cai nghiện",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Lỗi chọn người cai nghiện hiện dưới danh sách người cai nghiện, không còn dưới ô tra cứu thân nhân"
+        }
+      ],
+      "points": [
+        "Lỗi chọn người cai nghiện hiện dưới danh sách người cai nghiện, không còn dưới ô tra cứu thân nhân"
+      ],
+      "request": "Chữ đỏ phải nằm đúng trường đang thiếu."
+    },
+    "QD-436": {
+      "title": "Chip lưới lịch 12px",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Chip trạng thái trên lưới Lịch theo buồng dùng chữ 12px như tag ở mọi màn"
+        }
+      ],
+      "points": [
+        "Chip trạng thái trên lưới Lịch theo buồng dùng chữ 12px như tag ở mọi màn"
+      ],
+      "request": "Đồng bộ cỡ chữ tag toàn hệ thống."
+    },
+    "QD-437": {
+      "title": "Nút Lưu và gửi duyệt màu chủ đạo",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Nút Lưu và gửi duyệt ở đầu màn Chỉnh sửa lịch hẹn dùng màu xanh chủ đạo"
+        }
+      ],
+      "points": [
+        "Nút Lưu và gửi duyệt ở đầu màn Chỉnh sửa lịch hẹn dùng màu xanh chủ đạo"
+      ],
+      "request": "Nút gửi duyệt nổi bật như nút chính."
+    },
+    "QD-438": {
+      "title": "Tách Lý do, ý kiến khỏi ghi chú hệ thống",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Lý do, ý kiến chỉ còn lời người dùng nhập"
+        },
+        {
+          "type": "Added",
+          "text": "Mục Ghi chú hệ thống cho ghi chú tự sinh (thông báo đã gửi, lưu và duyệt, nhắc lịch)"
+        },
+        {
+          "type": "Changed",
+          "text": "Ngoài ra: Quầy tiếp đón ghi ở Nội dung thay đổi kèm (chọn tay) khi khác quầy mặc định, lịch sử cũ được tách lại theo quy tắc mới"
+        }
+      ],
+      "points": [
+        "Lý do, ý kiến chỉ còn lời người dùng nhập",
+        "Mục Ghi chú hệ thống cho ghi chú tự sinh (thông báo đã gửi, lưu và duyệt, nhắc lịch)",
+        "Ngoài ra: Quầy tiếp đón ghi ở Nội dung thay đổi kèm (chọn tay) khi khác quầy mặc định, lịch sử cũ được tách lại theo quy tắc mới"
+      ],
+      "request": "Thay đổi dữ liệu phải nằm ở Nội dung thay đổi."
+    },
+    "QD-439": {
+      "title": "Đồng bộ hành vi Danh sách và Chi tiết",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Danh sách ghi thông báo đã gửi vào Ghi chú hệ thống như màn Chi tiết"
+        },
+        {
+          "type": "Fixed",
+          "text": "Duyệt đơn ngoại lệ ở màn Chi tiết báo đúng câu lịch đã chuyển sang Thăm gặp trực tiếp"
+        },
+        {
+          "type": "Fixed",
+          "text": "Sửa lịch Nháp của thân nhân đã có sổ: nút gửi ghi Lưu và duyệt"
+        }
+      ],
+      "points": [
+        "Danh sách ghi thông báo đã gửi vào Ghi chú hệ thống như màn Chi tiết",
+        "Duyệt đơn ngoại lệ ở màn Chi tiết báo đúng câu lịch đã chuyển sang Thăm gặp trực tiếp",
+        "Sửa lịch Nháp của thân nhân đã có sổ: nút gửi ghi Lưu và duyệt"
+      ],
+      "request": "Rà Prototype trước khi cập nhật SRS."
+    },
+    "QD-440": {
+      "title": "Đặt con trỏ vào ô lỗi khi tự cuộn",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Tự cuộn tới lỗi đầu tiên thì đặt con trỏ vào đúng ô, kể cả ô tra cứu thân nhân"
+        }
+      ],
+      "points": [
+        "Tự cuộn tới lỗi đầu tiên thì đặt con trỏ vào đúng ô, kể cả ô tra cứu thân nhân"
+      ],
+      "request": "Cổng đo phát hiện khi làm việc chờ."
+    },
+    "QD-441": {
+      "title": "Menu theo luồng sử dụng, menu ngang chỉ hiện tên nhóm",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Menu ngang xếp theo luồng sử dụng: Tổng quan, Hồ sơ, Thăm gặp trực tiếp, Thăm gặp từ xa, Vận hành Cơ sở, Quản trị & Báo cáo."
+        },
+        {
+          "type": "Changed",
+          "text": "Nhóm Thăm gặp trực tiếp theo vòng đời 1 ca, Đăng ký lượt thăm gặp tại quầy đứng đầu vì là điểm vào của lịch thường và đơn ngoại lệ."
+        },
+        {
+          "type": "Changed",
+          "text": "Menu ngang chỉ hiện tên nhóm, mục con chỉ ở menu dọc nên 2 menu không trùng nhau. Đường dẫn các màn giữ nguyên."
+        }
+      ],
+      "points": [
+        "Menu ngang xếp theo luồng sử dụng: Tổng quan, Hồ sơ, Thăm gặp trực tiếp, Thăm gặp từ xa, Vận hành Cơ sở, Quản trị & Báo cáo.",
+        "Nhóm Thăm gặp trực tiếp theo vòng đời 1 ca, Đăng ký lượt thăm gặp tại quầy đứng đầu vì là điểm vào của lịch thường và đơn ngoại lệ.",
+        "Menu ngang chỉ hiện tên nhóm, mục con chỉ ở menu dọc nên 2 menu không trùng nhau. Đường dẫn các màn giữ nguyên."
+      ],
+      "request": "Tái cấu trúc menu theo luồng sử dụng, tránh trùng lặp giữa menu ngang và menu dọc."
+    },
+    "QD-442": {
+      "title": "Nút X toast xám, icon toast rõ hơn",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Nút X đóng toast luôn màu xám ở mọi loại toast và mọi màn"
+        },
+        {
+          "type": "Changed",
+          "text": "Icon thành công và cảnh báo tối hơn 1 bậc cùng họ Ant Design, đạt tương phản 3:1 trên nền trắng"
+        }
+      ],
+      "points": [
+        "Nút X đóng toast luôn màu xám ở mọi loại toast và mọi màn",
+        "Icon thành công và cảnh báo tối hơn 1 bậc cùng họ Ant Design, đạt tương phản 3:1 trên nền trắng"
+      ],
+      "request": "Thống nhất màu nút X và tăng độ rõ icon trạng thái."
+    },
+    "QD-443": {
+      "title": "Lịch sử thao tác: tạo đơn luôn là mốc đầu, mốc tự động hiện rút gọn",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Thao tác tạo đơn luôn là mốc đầu tiên của 1 đơn, không ghi thông báo nhắc lịch có mốc trước lúc tạo đơn."
+        },
+        {
+          "type": "Changed",
+          "text": "Mốc của Hệ thống · Tự động hiện rút gọn 1 dòng kèm nhãn «Hệ thống · Tự động», chi tiết gập sau nút Xem chi tiết."
+        },
+        {
+          "type": "Changed",
+          "text": "Mốc do người thao tác giữ nguyên cách hiển thị."
+        }
+      ],
+      "points": [
+        "Thao tác tạo đơn luôn là mốc đầu tiên của 1 đơn, không ghi thông báo nhắc lịch có mốc trước lúc tạo đơn.",
+        "Mốc của Hệ thống · Tự động hiện rút gọn 1 dòng kèm nhãn «Hệ thống · Tự động», chi tiết gập sau nút Xem chi tiết.",
+        "Mốc do người thao tác giữ nguyên cách hiển thị."
+      ],
+      "request": "Dữ liệu lịch sử thao tác phải hợp lý: tạo mới là thao tác đầu tiên của 1 đơn."
+    },
+    "QD-444": {
+      "title": "Nút chuyển bước trắng viền xanh, ghim đáy khung, gạch ngăn dòng dùng chung 1 mã",
+      "items": [
+        {
+          "type": "Changed",
+          "text": "Nút Quay lại bước trước và Tiếp tục ở mọi form nhiều bước: nền trắng, viền và chữ xanh như nút viền."
+        },
+        {
+          "type": "Changed",
+          "text": "Thanh nút chuyển bước ghim đáy khung, nội dung ngắn vẫn nằm sát đáy."
+        },
+        {
+          "type": "Changed",
+          "text": "Gạch ngăn dòng dữ liệu (ô bảng, khối nhãn và giá trị, dòng danh sách thông báo) dùng chung 1 token --color-row-line #E5E7EB theo màn Chi tiết."
+        }
+      ],
+      "points": [
+        "Nút Quay lại bước trước và Tiếp tục ở mọi form nhiều bước: nền trắng, viền và chữ xanh như nút viền.",
+        "Thanh nút chuyển bước ghim đáy khung, nội dung ngắn vẫn nằm sát đáy.",
+        "Gạch ngăn dòng dữ liệu (ô bảng, khối nhãn và giá trị, dòng danh sách thông báo) dùng chung 1 token --color-row-line #E5E7EB theo màn Chi tiết."
+      ],
+      "request": "Nút chuyển bước dễ nhận biết hơn và luôn ở cuối khung; kẻ dòng bảng rõ như PM1."
+    },
+    "QD-445": {
+      "title": "Gộp code nhiều phiên qua phiên trưởng, không phải chờ nhau deploy",
+      "items": [
+        {
+          "type": "Added",
+          "text": "Mỗi phiên làm trên bản riêng, xong thì gửi phần vá vào hộp thư; phiên trưởng gộp rồi deploy 1 lượt."
+        },
+        {
+          "type": "Added",
+          "text": "File 2 bên sửa khác dòng thì gộp 3 chiều; đụng cùng dòng thì giữ cả gói và hỏi lại."
+        },
+        {
+          "type": "Added",
+          "text": "Sao lưu mọi file trước khi ghi; lệnh deploy chạy trong bản riêng tự từ chối."
+        }
+      ],
+      "points": [
+        "Mỗi phiên làm trên bản riêng, xong thì gửi phần vá vào hộp thư; phiên trưởng gộp rồi deploy 1 lượt.",
+        "File 2 bên sửa khác dòng thì gộp 3 chiều; đụng cùng dòng thì giữ cả gói và hỏi lại.",
+        "Sao lưu mọi file trước khi ghi; lệnh deploy chạy trong bản riêng tự từ chối."
+      ],
+      "request": "Nhiều phiên làm song song gửi phần việc cho 1 bên gộp, không phải chờ nhau."
+    },
+    "QD-446": {
+      "title": "Breadcrumb đủ tầng cho màn con",
+      "items": [
+        {
+          "type": "Fixed",
+          "text": "Màn con của danh sách có đủ tầng breadcrumb: Lịch theo buồng, Tạo lịch hẹn, Tạo quầy tiếp đón thêm cấp tên màn, cấp danh sách bấm được để quay về."
+        },
+        {
+          "type": "Added",
+          "text": "Mục Breadcrumb trên Design System có mẫu đủ tầng và luật «màn con thêm 1 cấp, không dùng chung breadcrumb của màn danh sách»."
+        },
+        {
+          "type": "Changed",
+          "text": "Mẫu breadcrumb lấy tên cấp từ menu thật nên đổi tên menu thì mẫu tự đổi theo."
+        }
+      ],
+      "points": [
+        "Màn con của danh sách có đủ tầng breadcrumb: Lịch theo buồng, Tạo lịch hẹn, Tạo quầy tiếp đón thêm cấp tên màn, cấp danh sách bấm được để quay về.",
+        "Mục Breadcrumb trên Design System có mẫu đủ tầng và luật «màn con thêm 1 cấp, không dùng chung breadcrumb của màn danh sách».",
+        "Mẫu breadcrumb lấy tên cấp từ menu thật nên đổi tên menu thì mẫu tự đổi theo."
+      ],
+      "request": "Màn mở thêm 1 lớp phải có thêm 1 cấp breadcrumb, Design System có đủ tầng."
+    },
+    "QD-454": {
+      "points": [
+        "Prototype PM2 có màn Đăng nhập bố cục như PM1: nửa trái giới thiệu hệ thống, nửa phải thẻ form có nút hiện mật khẩu, Ghi nhớ đăng nhập và Đăng nhập SSO.",
+        "Dùng 1 tài khoản giả lập admin. Đăng nhập xong vẫn đổi vai Cán bộ Tổ tham mưu, Trưởng cơ sở, Cán bộ Tổ thăm gặp như cũ. Nút Đăng xuất đã chạy.",
+        "Trang Design System có màn đăng nhập mới theo mẫu quốc tế, vẫn giữ mã hoá nội dung."
+      ],
+      "request": "Làm màn đăng nhập cho Prototype PM2 giống PM1 và màn đăng nhập chuyên nghiệp cho trang Design System.",
+      "title": "Màn đăng nhập cho Prototype PM2 và trang Design System",
+      "type": "Added"
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+ "note": "Quy tắc Nền tảng bổ sung theo Design System PM1 (QD-401). Nhãn Based on Docs, nguồn PM1 DS › mục. Chỗ PM1 mâu thuẫn PM2 đã bỏ. Nhà gốc: gpdv-rehab-common/project-docs/requirements/PM1/design-system/design_system.html",
+ "src": {
+  "type": "PM1 DS › Màu sắc › Chữ — bốn bậc · PM1 DS › Kiểu chữ › Ba quy tắc chữ sinh từ bug",
+  "spacing": "PM1 DS › Khoảng cách · bo góc · đổ bóng",
+  "shadow": "PM1 DS › Khoảng cách · bo góc · đổ bóng › Đổ bóng (giá trị từ khối :root dòng 54-57)",
+  "motion": "PM1 DS › Chuyển động & thời lượng › Thang thời lượng · Độ trễ (delay) · Đường cong & kiểu chuyển động",
+  "icons": "PM1 DS › Bộ biểu tượng › Thông số · Bảng ánh xạ hành động → icon",
+  "bans": "PM1 DS › Quy tắc & cấm kỵ",
+  "label": "Based on Docs"
+ },
+ "type": [
+  {
+   "t": "--text-4 #94A3B8 tương phản 2.56:1 chỉ dùng cho icon trang trí và placeholder.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Màu sắc › Chữ — bốn bậc"
+  },
+  {
+   "t": "Cấm dùng --text-4 cho chữ mang thông tin như nhãn cột, giá trị, chú thích, thời gian.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Màu sắc › Chữ — bốn bậc"
+  },
+  {
+   "t": "Nội dung nhập ở ô nhiều dòng hiển thị lại phải giữ xuống dòng bằng white-space pre-wrap.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Kiểu chữ › Ba quy tắc chữ sinh từ bug"
+  },
+  {
+   "t": "Bốn mức đậm: 400 nội dung, 500 nhấn nhẹ và nút, 600 tiêu đề và nhãn, 700 tiêu đề trang.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Kiểu chữ › Ba quy tắc chữ sinh từ bug"
+  },
+  {
+   "t": "Không dùng mức đậm 300 hay 800.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Kiểu chữ › Ba quy tắc chữ sinh từ bug"
+  },
+  {
+   "t": "Không viết hoa giữa câu, chỉ hoa chữ đầu và danh từ riêng.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Kiểu chữ › Ba quy tắc chữ sinh từ bug"
+  },
+  {
+   "t": "Không để lọt tên kỹ thuật như tên entity, snake_case ra giao diện.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Kiểu chữ › Ba quy tắc chữ sinh từ bug"
+  }
+ ],
+ "spacing": [
+  {
+   "token": "sp-1",
+   "value": "4px",
+   "use": "Khe giữa icon và chữ trong tag"
+  },
+  {
+   "token": "sp-2",
+   "value": "8px",
+   "use": "Khe giữa 2 nút cạnh nhau, icon và nhãn"
+  },
+  {
+   "token": "sp-3",
+   "value": "12px",
+   "use": "Khe giữa phần tử trong 1 nhóm, dùng nhiều nhất"
+  },
+  {
+   "token": "sp-4",
+   "value": "16px",
+   "use": "Khe giữa các trường biểu mẫu, đệm dọc ô bảng"
+  },
+  {
+   "token": "sp-6",
+   "value": "24px",
+   "use": "Đệm trong thẻ và modal, đệm ngang ô bảng"
+  },
+  {
+   "token": "sp-8",
+   "value": "32px",
+   "use": "Khe giữa các mục lớn trong trang"
+  }
+ ],
+ "spacingNote": {
+  "t": "Lưới 4px, 4 giá trị 8, 12, 16, 24 phủ gần hết nhu cầu, còn lại là ngoại lệ.",
+  "label": "Based on Docs",
+  "src": "PM1 DS › Khoảng cách · bo góc · đổ bóng"
+ },
+ "shadow": [
+  {
+   "level": "sm",
+   "value": "0 1px 4px rgba(0,0,0,.05)",
+   "use": "Phần tử phẳng"
+  },
+  {
+   "level": "md",
+   "value": "0 2px 8px rgba(0,0,0,.05)",
+   "use": "Thẻ, mặc định"
+  },
+  {
+   "level": "lg",
+   "value": "0 4px 14px rgba(15,23,42,.10)",
+   "use": "Dropdown, tooltip"
+  },
+  {
+   "level": "pop",
+   "value": "0 12px 32px rgba(0,0,0,.10)",
+   "use": "Modal, drawer, toast"
+  }
+ ],
+ "shadowRules": [
+  {
+   "t": "Bóng trung tính, không nhuốm màu nhấn.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Khoảng cách · bo góc · đổ bóng › Đổ bóng"
+  },
+  {
+   "t": "Bóng chỉ dành cho vùng chứa nổi trên nền trang như thẻ, khung bảng, modal, dropdown, không dành cho nút.",
+   "label": "Based on Docs",
+   "src": "PM1 DS › Nút › Nút không đổ bóng"
+  }
+ ],
+ "motion": {
+  "duration": [
+   {
+    "name": "dur-instant",
+    "ms": 100,
+    "use": "Đổi màu nền khi rê chuột lên hàng bảng, mục menu"
+   },
+   {
+    "name": "dur-fast",
+    "ms": 150,
+    "use": "Mặc định cho nút, input, viền, mọi đổi màu và viền"
+   },
+   {
+    "name": "dur-normal",
+    "ms": 250,
+    "use": "Dropdown mở, tooltip hiện, tab đổi nội dung, accordion"
+   },
+   {
+    "name": "dur-slow",
+    "ms": 400,
+    "use": "Modal, drawer trượt vào, toast xuất hiện và biến mất"
+   }
+  ],
+  "delay": [
+   {
+    "name": "delay-tooltip",
+    "ms": 400,
+    "use": "Tooltip chỉ hiện sau khi con trỏ dừng lại để không nhấp nháy khi lướt hàng nút"
+   },
+   {
+    "name": "delay-hover-menu",
+    "ms": 150,
+    "use": "Menu con sidebar mở sau khi rê vào, tránh mở nhầm khi lướt qua"
+   },
+   {
+    "name": "delay-hover-menu-close",
+    "ms": 300,
+    "use": "Menu con đóng sau khi rời chuột để kịp di chéo sang menu con"
+   },
+   {
+    "name": "toast-auto-close",
+    "ms": 3000,
+    "use": "Toast tự tắt, đủ đọc 1 câu"
+   },
+   {
+    "name": "loading-threshold",
+    "ms": 300,
+    "use": "Thao tác xong dưới ngưỡng này thì không hiện chỉ báo tải"
+   }
+  ],
+  "easing": [
+   {
+    "name": "ease",
+    "value": "cubic-bezier(.4,0,.2,1)",
+    "use": "Đổi màu, viền, bóng với dur-fast"
+   },
+   {
+    "name": "ease-out",
+    "value": "cubic-bezier(0,0,.2,1)",
+    "use": "Drawer trượt ngang từ mép phải với dur-slow"
+   }
+  ],
+  "rules": [
+   "Cái người dùng vừa bấm thì phản hồi gần như tức thì, cái tự xuất hiện thì trượt vào đủ chậm để mắt kịp bắt.",
+   "Không animate width hay height vì gây giật khung.",
+   "Dropdown và tooltip xuất hiện bằng mờ dần cộng trượt lên 4px trong dur-normal, biến mất thì chỉ mờ dần.",
+   "Modal: lớp phủ mờ dần, hộp phóng từ 0.97 lên 1 trong dur-slow.",
+   "Đang tải nền dùng thanh chạy 3px trên đầu vùng nội dung, không khoá cả màn.",
+   "Cấm hiệu ứng nảy, xoay, phóng to bóng khi rê chuột lên thẻ và animation lặp vô hạn ở vùng nội dung.",
+   "Người dùng bật giảm chuyển động thì bỏ mọi trượt và phóng, chỉ giữ đổi màu."
+  ]
+ },
+ "icons": {
+  "spec": [
+   "Cỡ 16px trong nút và ô bảng, đi kèm chữ 14px.",
+   "Cỡ 18px trong menu và tab.",
+   "Cỡ 20 tới 24px trong thẻ số liệu và trạng thái rỗng.",
+   "Cỡ 12px trong thẻ trạng thái, 14px khi đứng cạnh chữ nhỏ.",
+   "Độ dày nét strokeWidth 2, không đổi lẻ tẻ theo màn.",
+   "Khe giữa icon và chữ 6px.",
+   "Icon đơn độc bắt buộc có aria-label và tooltip.",
+   "Một hành động 1 icon, dùng thống nhất mọi màn.",
+   "Icon xóa chỉ xuất hiện khi thật sự có thứ để xóa."
+  ],
+  "map": [
+   {
+    "action": "Thêm mới",
+    "icon": "Plus"
+   },
+   {
+    "action": "Xem chi tiết",
+    "icon": "Eye"
+   },
+   {
+    "action": "Sửa",
+    "icon": "SquarePen"
+   },
+   {
+    "action": "Xóa",
+    "icon": "Trash2"
+   },
+   {
+    "action": "Xuất Excel",
+    "icon": "Download"
+   },
+   {
+    "action": "Nhập / tải lên",
+    "icon": "Upload"
+   },
+   {
+    "action": "Tìm kiếm",
+    "icon": "Search"
+   },
+   {
+    "action": "Bộ lọc",
+    "icon": "Filter"
+   },
+   {
+    "action": "Làm mới",
+    "icon": "RotateCw"
+   },
+   {
+    "action": "Duyệt",
+    "icon": "CircleCheck"
+   },
+   {
+    "action": "Từ chối",
+    "icon": "CircleX"
+   },
+   {
+    "action": "Gửi duyệt",
+    "icon": "Send"
+   },
+   {
+    "action": "Khoá hồ sơ",
+    "icon": "Lock"
+   },
+   {
+    "action": "In / xuất phiếu",
+    "icon": "Printer"
+   },
+   {
+    "action": "Tệp đính kèm",
+    "icon": "Paperclip"
+   },
+   {
+    "action": "Chọn ngày",
+    "icon": "Calendar"
+   },
+   {
+    "action": "Chọn giờ",
+    "icon": "Clock"
+   },
+   {
+    "action": "Quay lại",
+    "icon": "ArrowLeft"
+   },
+   {
+    "action": "Cảnh báo",
+    "icon": "TriangleAlert"
+   },
+   {
+    "action": "Thông tin",
+    "icon": "Info"
+   },
+   {
+    "action": "Xác nhận",
+    "icon": "Check"
+   },
+   {
+    "action": "Đóng / xóa chọn",
+    "icon": "X"
+   },
+   {
+    "action": "Đang xử lý",
+    "icon": "LoaderCircle"
+   }
+  ]
+ },
+ "bans": [
+  "Viết hex thô trong component, luôn dùng biến var(--*).",
+  "Dùng --text-4 cho chữ mang thông tin vì tương phản 2.56:1 trượt WCAG AA.",
+  "Hai nút primary trên cùng 1 màn.",
+  "Ghi đè màu Ant Design bằng CSS !important.",
+  "Nút icon không có tooltip.",
+  "Modal đổi kích thước theo dữ liệu bên trong.",
+  "Modal lồng trong modal.",
+  "Dropdown giãn ngang theo nhãn dài nhất.",
+  "Dropdown hiện bản ghi Nháp hoặc đã Vô hiệu hoá.",
+  "Bảng rỗng vẫn hiện thanh cuộn ngang.",
+  "Icon xóa hiện khi chưa có gì để xóa.",
+  "Bảng rỗng không phân biệt chưa có dữ liệu và lọc không ra.",
+  "Trường text không khai maxlength.",
+  "Dropdown không ghi nguồn dữ liệu.",
+  "Ô nhiều dòng hiển thị lại mất xuống dòng.",
+  "Hiệu ứng nảy, xoay, phóng to khi rê chuột, animation lặp vô hạn.",
+  "Tooltip không có độ trễ.",
+  "Tự đặt số bản ghi mỗi trang khác 10.",
+  "Tự đặt tên nút kết xuất khác Xuất Excel."
+ ]
+}

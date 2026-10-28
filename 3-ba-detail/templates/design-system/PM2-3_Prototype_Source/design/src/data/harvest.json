@@ -1,0 +1,1108 @@
+{
+ "harvestedAt": "2026-10-14T13:39:23.349Z",
+ "base": "https://pm2-prototype-iota.vercel.app",
+ "seed": "ok",
+ "routes": [
+  {
+   "route": "/tong-quan",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/tong-quan.png",
+   "types": []
+  },
+  {
+   "route": "/lich-hen/tham-gap-truc-tiep",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 2,
+   "screen": "screens/lich-hen-tham-gap-truc-tiep.png",
+   "types": [
+    "Ô tìm kiếm",
+    "Ô chọn có tìm (lookup)",
+    "Ô chọn của bộ lọc",
+    "Ô chọn antd",
+    "Nút chính",
+    "Nút phụ",
+    "Bảng dữ liệu",
+    "Phân trang",
+    "Thanh tab",
+    "Khối bộ lọc",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/lich-hen/gap-truc-tiep-ngoai-le",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 2,
+   "screen": "screens/lich-hen-gap-truc-tiep-ngoai-le.png",
+   "types": [
+    "Ô tìm kiếm",
+    "Ô chọn có tìm (lookup)",
+    "Ô chọn của bộ lọc",
+    "Ô chọn antd",
+    "Nút phụ",
+    "Bảng dữ liệu",
+    "Phân trang",
+    "Thanh tab",
+    "Khối bộ lọc",
+    "Ghi chú phụ (xám)",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/lich-hen/tham-gap-truc-tiep/tao-moi",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/lich-hen-tham-gap-truc-tiep-tao-moi.png",
+   "types": [
+    "Ô nhập chữ",
+    "Nút chính",
+    "Nút phụ",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Thanh bước"
+   ]
+  },
+  {
+   "route": "/lich-hen/tham-gap-truc-tiep/LH-2026-0914",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/lich-hen-tham-gap-truc-tiep-lh-2026-0914.png",
+   "types": [
+    "Nút phụ",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/lich-hen-tham-gap-truc-tiep-lh-2026-0914-chinh-sua.png",
+   "types": [
+    "Nút chính",
+    "Nút phụ",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Thanh bước"
+   ]
+  },
+  {
+   "route": "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/lich-hen-gap-truc-tiep-ngoai-le-lh-2026-0914.png",
+   "types": [
+    "Nút phụ",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/lich-hen-gap-truc-tiep-ngoai-le-lh-2026-0914-chinh-sua.png",
+   "types": [
+    "Nút chính",
+    "Nút phụ",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Thanh bước"
+   ]
+  },
+  {
+   "route": "/tiep-don/dang-ky-luot-tai-quay",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/tiep-don-dang-ky-luot-tai-quay.png",
+   "types": [
+    "Nút chính",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Thanh bước"
+   ]
+  },
+  {
+   "route": "/tiep-don/quay-tiep-don",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/tiep-don-quay-tiep-don.png",
+   "types": [
+    "Ô tìm kiếm",
+    "Ô chọn có tìm (lookup)",
+    "Ô chọn của bộ lọc",
+    "Ô chọn antd",
+    "Nút chính",
+    "Nút phụ",
+    "Nút icon trong bảng",
+    "Tag trạng thái",
+    "Bảng dữ liệu",
+    "Phân trang",
+    "Thanh tab",
+    "Khối bộ lọc",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/tiep-don/quay-tiep-don/tao-moi",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/tiep-don-quay-tiep-don-tao-moi.png",
+   "types": [
+    "Ô nhập chữ",
+    "Ô nhập nhiều dòng",
+    "Ô chọn antd",
+    "Nút chính",
+    "Nút phụ",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Thanh bước"
+   ]
+  },
+  {
+   "route": "/tiep-don/quay-tiep-don/Q01/chinh-sua",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 3,
+   "screen": "screens/tiep-don-quay-tiep-don-q01-chinh-sua.png",
+   "types": [
+    "Ô nhập chữ",
+    "Ô nhập nhiều dòng",
+    "Ô chọn antd",
+    "Nút chính",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Tag trạng thái",
+    "Thanh tab",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Ô nhập trong bảng",
+    "Ô tích",
+    "Nút phụ",
+    "Bảng dữ liệu",
+    "Ô ngày / khoảng ngày",
+    "Ô khoảng giờ"
+   ]
+  },
+  {
+   "route": "/tiep-don/quay-tiep-don/Q01",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 5,
+   "screen": "screens/tiep-don-quay-tiep-don-q01.png",
+   "types": [
+    "Nút chính",
+    "Nút phụ",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Tag trạng thái",
+    "Thanh tab",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Nút icon trong bảng",
+    "Bảng dữ liệu",
+    "Ghi chú phụ (xám)",
+    "Ô chọn có tìm (lookup)",
+    "Ô chọn antd",
+    "Phân trang"
+   ]
+  },
+  {
+   "route": "/van-hanh-co-so/cau-hinh-thoi-gian",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 1,
+   "screen": "screens/van-hanh-co-so-cau-hinh-thoi-gian.png",
+   "types": [
+    "Nút chính",
+    "Thanh nút đầu trang",
+    "Bảng dữ liệu",
+    "Thanh tab",
+    "Tiêu đề khối",
+    "Khung Lưu ý nổi bật (xanh)",
+    "Ghi chú phụ (xám)",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 1,
+   "screen": "screens/van-hanh-co-so-cau-hinh-thoi-gian-chinh-sua.png",
+   "types": [
+    "Ô nhập trong bảng",
+    "Ô ngày / khoảng ngày",
+    "Ô khoảng giờ",
+    "Công tắc",
+    "Nút chính",
+    "Thanh nút đầu trang",
+    "Nút quay lại",
+    "Bảng dữ liệu",
+    "Thanh tab",
+    "Tiêu đề khối",
+    "Khung Lưu ý nổi bật (xanh)",
+    "Ghi chú phụ (xám)",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/quan-tri/thong-bao",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 0,
+   "screen": "screens/quan-tri-thong-bao.png",
+   "types": [
+    "Ô tìm kiếm",
+    "Ô chọn có tìm (lookup)",
+    "Ô chọn antd",
+    "Phân trang",
+    "Thanh tab",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang"
+   ]
+  },
+  {
+   "route": "/quan-tri/cai-dat-thong-bao",
+   "opened": true,
+   "account": "VISIT_TEAM_STAFF",
+   "tabs": 2,
+   "screen": "screens/quan-tri-cai-dat-thong-bao.png",
+   "types": [
+    "Công tắc",
+    "Nút icon trong bảng",
+    "Bảng dữ liệu",
+    "Thanh tab",
+    "Tiêu đề khối",
+    "Tiêu đề trang",
+    "Breadcrumb",
+    "Menu trái",
+    "Menu ngang",
+    "Ô chọn có tìm (lookup)",
+    "Ô chọn antd",
+    "Phân trang"
+   ]
+  }
+ ],
+ "jsErrors": [],
+ "types": [
+  {
+   "group": "input",
+   "name": "Ô nhập chữ",
+   "selector": "main input.text-input:not(.lookup-input):not(td input), main input.inp:not(td input)",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:8px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);backgroundColor:rgb(255, 255, 255);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:12px;paddingTop:4px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy"
+     ],
+     "count": 8,
+     "sample": "",
+     "size": "956×36",
+     "shot": "shots/o-nhap-chu-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô nhập trong bảng",
+   "selector": "main td input.text-input",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:8px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);backgroundColor:rgb(255, 255, 255);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:8px;paddingTop:4px",
+     "screens": [
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 7,
+     "sample": "Buồng mẫu 1",
+     "size": "408×36",
+     "shot": "shots/o-nhap-trong-bang-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô nhập nhiều dòng",
+   "selector": "main textarea",
+   "variants": [
+    {
+     "sig": "borderTopLeftRadius:8px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);fontSize:14px;paddingLeft:12px;paddingTop:6px",
+     "screens": [
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy"
+     ],
+     "count": 2,
+     "sample": "",
+     "size": "1070×81",
+     "shot": "shots/o-nhap-nhieu-dong-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô tìm kiếm",
+   "selector": "main .filter-search, main .noti-search",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(12, 26, 46);backgroundColor:rgba(0, 0, 0, 0);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don",
+      "/quan-tri/thong-bao"
+     ],
+     "count": 4,
+     "sample": "",
+     "size": "345×36",
+     "shot": "shots/o-tim-kiem-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô chọn có tìm (lookup)",
+   "selector": "main .lookup-wrap",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(12, 26, 46);backgroundColor:rgba(0, 0, 0, 0);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/quan-tri/thong-bao",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 6,
+     "sample": "Chọn trang\n1",
+     "size": "61×36",
+     "shot": "shots/o-chon-co-tim-lookup-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô chọn của bộ lọc",
+   "selector": "main .filter-select",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(12, 26, 46);backgroundColor:rgba(0, 0, 0, 0);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don"
+     ],
+     "count": 4,
+     "sample": "Tất cả trạng thái",
+     "size": "259×36",
+     "shot": "shots/o-chon-cua-bo-loc-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô chọn antd",
+   "selector": "main .app-select",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(51, 65, 85);backgroundColor:rgba(0, 0, 0, 0);color:rgb(51, 65, 85);fontSize:14px;fontWeight:400;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/quan-tri/thong-bao",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 11,
+     "sample": "10",
+     "size": "61×36",
+     "shot": "shots/o-chon-antd-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô ngày / khoảng ngày",
+   "selector": "main .date-range, main button.date-input, main .ant-picker",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:8px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);backgroundColor:rgb(255, 255, 255);color:rgb(51, 65, 85);fontSize:14px;fontWeight:400;paddingLeft:11px;paddingTop:4px",
+     "screens": [
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 7,
+     "sample": "",
+     "size": "240×36",
+     "shot": "shots/o-ngay-khoang-ngay-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô khoảng giờ",
+   "selector": "main .time-range",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:8px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);backgroundColor:rgb(255, 255, 255);color:rgb(51, 65, 85);fontSize:14px;fontWeight:400;paddingLeft:11px;paddingTop:4px",
+     "screens": [
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 7,
+     "sample": "",
+     "size": "240×36",
+     "shot": "shots/o-khoang-gio-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Ô tích",
+   "selector": "main .chk, main .filter-check, main label:has(> input[type=checkbox])",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(51, 65, 85);backgroundColor:rgba(0, 0, 0, 0);color:rgb(51, 65, 85);fontSize:14px;fontWeight:400;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp"
+     ],
+     "count": 2,
+     "sample": "Có",
+     "size": "48×36",
+     "shot": "shots/o-tich-1.png"
+    }
+   ]
+  },
+  {
+   "group": "input",
+   "name": "Công tắc",
+   "selector": "main .ant-switch",
+   "variants": [
+    {
+     "sig": "height:22px;borderTopLeftRadius:100px",
+     "screens": [
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp"
+     ],
+     "count": 22,
+     "sample": "",
+     "size": "44×22",
+     "shot": "shots/cong-tac-1.png"
+    }
+   ]
+  },
+  {
+   "group": "button",
+   "name": "Nút chính",
+   "selector": "main .btn-primary, main .form-btn-primary, main .ant-btn-primary",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:6px;borderTopWidth:1px;borderTopColor:rgb(7, 109, 182);backgroundColor:rgb(7, 109, 182);color:rgb(255, 255, 255);fontSize:14px;fontWeight:500;paddingLeft:16px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 18,
+     "sample": "Tạo mới",
+     "size": "108×36",
+     "shot": "shots/nut-chinh-1.png"
+    }
+   ]
+  },
+  {
+   "group": "button",
+   "name": "Nút phụ",
+   "selector": "main button.btn:not(.btn-primary):not(.btn-danger):not(.btn-danger-ghost), main .form-btn:not(.form-btn-primary):not(.form-btn-danger)",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:6px;borderTopWidth:1px;borderTopColor:rgb(217, 217, 217);backgroundColor:rgb(255, 255, 255);color:rgba(0, 0, 0, 0.88);fontSize:14px;fontWeight:500;paddingLeft:16px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác"
+     ],
+     "count": 21,
+     "sample": "Xuất Excel",
+     "size": "121×36",
+     "shot": "shots/nut-phu-1.png"
+    }
+   ]
+  },
+  {
+   "group": "button",
+   "name": "Nút nguy hiểm",
+   "selector": "main .btn-danger, main .form-btn-danger",
+   "variants": []
+  },
+  {
+   "group": "button",
+   "name": "Nút icon trong bảng",
+   "selector": "main .ib",
+   "variants": [
+    {
+     "sig": "height:32px;borderTopLeftRadius:6px;borderTopWidth:0px;fontSize:13.3333px",
+     "screens": [
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp"
+     ],
+     "count": 40,
+     "sample": "",
+     "size": "32×32",
+     "shot": "shots/nut-icon-trong-bang-1.png"
+    }
+   ]
+  },
+  {
+   "group": "button",
+   "name": "Thanh nút đầu trang",
+   "selector": "main .page-head-actions",
+   "variants": [
+    {
+     "sig": "height:36px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(12, 26, 46);backgroundColor:rgba(0, 0, 0, 0);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 15,
+     "sample": "Lưu nháp\nTiếp tục",
+     "size": "231×36",
+     "shot": "shots/thanh-nut-dau-trang-1.png"
+    }
+   ]
+  },
+  {
+   "group": "button",
+   "name": "Nút quay lại",
+   "selector": "main .page-head-back",
+   "variants": [
+    {
+     "sig": "height:34px;borderTopLeftRadius:6px;borderTopWidth:0px;borderTopColor:rgb(51, 65, 85);backgroundColor:rgba(0, 0, 0, 0);color:rgb(51, 65, 85);fontSize:13.3333px;fontWeight:400;paddingLeft:6px;paddingTop:1px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 14,
+     "sample": "",
+     "size": "34×34",
+     "shot": "shots/nut-quay-lai-1.png"
+    }
+   ]
+  },
+  {
+   "group": "display",
+   "name": "Tag trạng thái",
+   "selector": "main .tag",
+   "variants": [
+    {
+     "sig": "height:24px;borderTopLeftRadius:999px;borderTopWidth:1px;fontSize:13px;fontWeight:500;paddingLeft:8px",
+     "screens": [
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác"
+     ],
+     "count": 15,
+     "sample": "Hoạt động",
+     "size": "94×24",
+     "shot": "shots/tag-trang-thai-1.png"
+    }
+   ]
+  },
+  {
+   "group": "display",
+   "name": "Bảng dữ liệu",
+   "selector": "main table",
+   "variants": [
+    {
+     "sig": "fontSize:14px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 17,
+     "sample": "STT\tMÃ LỊCH HẸN\tNGÀY GIỜ HẸN\tNGƯỜI CAI NGHIỆN\tDÃY NHÀ\tPHÒNG\t",
+     "size": "2556×191",
+     "shot": "shots/bang-du-lieu-1.png"
+    }
+   ]
+  },
+  {
+   "group": "display",
+   "name": "Phân trang",
+   "selector": "main .pager, main .pg",
+   "variants": [
+    {
+     "sig": "height:69px;borderTopLeftRadius:0px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);backgroundColor:rgb(255, 255, 255);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:24px;paddingTop:16px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/quan-tri/thong-bao",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 6,
+     "sample": "Trang trước\nTổng số: 0\nTrang 1/1\nChọn trang\nChọn trang\n1\nChọ",
+     "size": "1166×69",
+     "shot": "shots/phan-trang-1.png"
+    }
+   ]
+  },
+  {
+   "group": "display",
+   "name": "Thanh tab",
+   "selector": "main [data-fe=\"AppTabs\"] .tabs, main .tabs",
+   "variants": [
+    {
+     "sig": "borderTopWidth:0px;fontSize:14px;paddingLeft:20px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/thong-bao",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 16,
+     "sample": "Tất cả\n0\nChờ duyệt\n0\nĐã duyệt\n0\nĐang diễn ra\n0\nĐã kết thúc\n0",
+     "size": "1166×56",
+     "shot": "shots/thanh-tab-1.png"
+    }
+   ]
+  },
+  {
+   "group": "display",
+   "name": "Tiêu đề khối",
+   "selector": "main .card-title",
+   "variants": [
+    {
+     "sig": "height:21px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(100, 116, 139);backgroundColor:rgba(0, 0, 0, 0);color:rgb(100, 116, 139);fontSize:14px;fontWeight:700;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp"
+     ],
+     "count": 26,
+     "sample": "NGUỒN ĐẶT LỊCH",
+     "size": "1070×21",
+     "shot": "shots/tieu-de-khoi-1.png"
+    }
+   ]
+  },
+  {
+   "group": "display",
+   "name": "Khối bộ lọc",
+   "selector": "main .filter-panel",
+   "variants": [
+    {
+     "sig": "borderTopLeftRadius:12px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);backgroundColor:rgb(255, 255, 255);fontSize:14px;paddingLeft:0px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don"
+     ],
+     "count": 3,
+     "sample": "Tất cả trạng thái\nTìm kiếm mở rộng",
+     "size": "1118×70",
+     "shot": "shots/khoi-bo-loc-1.png"
+    }
+   ]
+  },
+  {
+   "group": "display",
+   "name": "Thanh thao tác hàng loạt",
+   "selector": "main .bulk-actions",
+   "variants": []
+  },
+  {
+   "group": "feedback",
+   "name": "Khung Lưu ý nổi bật (xanh)",
+   "selector": "main .note-box:not(.is-muted)",
+   "variants": [
+    {
+     "sig": "borderTopLeftRadius:6px;borderTopWidth:1px;borderTopColor:rgb(191, 219, 254);backgroundColor:rgb(239, 246, 255);fontSize:14px;paddingLeft:16px;paddingTop:12px",
+     "screens": [
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 2,
+     "sample": "Lưu ý\nĐối với các ngày được bật thăm gặp thì bắt buộc có thô",
+     "size": "1070×94",
+     "shot": "shots/khung-luu-y-noi-bat-xanh-1.png"
+    }
+   ]
+  },
+  {
+   "group": "feedback",
+   "name": "Ghi chú phụ (xám)",
+   "selector": "main .note-box.is-muted",
+   "variants": [
+    {
+     "sig": "borderTopLeftRadius:6px;borderTopWidth:1px;borderTopColor:rgb(229, 231, 235);backgroundColor:rgb(248, 250, 252);fontSize:14px;paddingLeft:16px;paddingTop:10px",
+     "screens": [
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp"
+     ],
+     "count": 4,
+     "sample": "Lưu ý: Danh sách lịch hẹn gặp trực tiếp ngoại lệ sẽ có giá t",
+     "size": "1118×42",
+     "shot": "shots/ghi-chu-phu-xam-1.png"
+    }
+   ]
+  },
+  {
+   "group": "feedback",
+   "name": "Hướng dẫn cài đặt",
+   "selector": "main .setup-hint",
+   "variants": []
+  },
+  {
+   "group": "feedback",
+   "name": "Khung cảnh báo",
+   "selector": "main .eff",
+   "variants": []
+  },
+  {
+   "group": "feedback",
+   "name": "Lỗi dưới ô",
+   "selector": "main .field-error.on",
+   "variants": []
+  },
+  {
+   "group": "nav",
+   "name": "Tiêu đề trang",
+   "selector": "main .page-head",
+   "variants": [
+    {
+     "sig": "fontSize:14px;paddingLeft:24px;paddingTop:18px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 17,
+     "sample": "Tạo lịch hẹn thăm gặp trực tiếp\nLưu nháp\nTiếp tục",
+     "size": "1166×72",
+     "shot": "shots/tieu-de-trang-1.png"
+    }
+   ]
+  },
+  {
+   "group": "nav",
+   "name": "Breadcrumb",
+   "selector": ".bc",
+   "variants": [
+    {
+     "sig": "height:37px;borderTopLeftRadius:0px;borderTopWidth:0px;borderTopColor:rgb(100, 116, 139);backgroundColor:rgb(255, 255, 255);color:rgb(100, 116, 139);fontSize:12px;fontWeight:400;paddingLeft:24px;paddingTop:0px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/tham-gap-truc-tiep › Lịch theo buồng",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Lịch theo buồng",
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/thong-bao",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 25,
+     "sample": "Tổng quan\nLịch hẹn\nThăm gặp trực tiếp",
+     "size": "1200×37",
+     "shot": "shots/breadcrumb-1.png"
+    }
+   ]
+  },
+  {
+   "group": "nav",
+   "name": "Menu trái",
+   "selector": ".sb",
+   "variants": [
+    {
+     "sig": "backgroundColor:rgb(255, 255, 255);fontSize:14px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/tham-gap-truc-tiep › Lịch theo buồng",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Lịch theo buồng",
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/thong-bao",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 25,
+     "sample": "LỊCH HẸN\nThăm gặp trực tiếp\nLịch hẹn gặp trực tiếp ngoại lệ\n",
+     "size": "240×796",
+     "shot": "shots/menu-trai-1.png"
+    }
+   ]
+  },
+  {
+   "group": "nav",
+   "name": "Menu ngang",
+   "selector": ".hd-menu",
+   "variants": [
+    {
+     "sig": "backgroundColor:rgba(0, 0, 0, 0);fontSize:13.3333px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep › Danh sách",
+      "/lich-hen/tham-gap-truc-tiep › Lịch theo buồng",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Danh sách",
+      "/lich-hen/gap-truc-tiep-ngoai-le › Lịch theo buồng",
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don",
+      "/tiep-don/quay-tiep-don/tao-moi",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01/chinh-sua › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Thông tin quầy",
+      "/tiep-don/quay-tiep-don/Q01 › Buồng thăm gặp",
+      "/tiep-don/quay-tiep-don/Q01 › Suất riêng",
+      "/tiep-don/quay-tiep-don/Q01 › Tình hình sử dụng",
+      "/tiep-don/quay-tiep-don/Q01 › Lịch sử thao tác",
+      "/van-hanh-co-so/cau-hinh-thoi-gian › Thăm gặp trực tiếp",
+      "/van-hanh-co-so/cau-hinh-thoi-gian/chinh-sua › Thăm gặp trực tiếp",
+      "/quan-tri/thong-bao",
+      "/quan-tri/cai-dat-thong-bao › Thăm gặp trực tiếp",
+      "/quan-tri/cai-dat-thong-bao › Lịch sử thao tác"
+     ],
+     "count": 25,
+     "sample": "",
+     "size": "36×36",
+     "shot": "shots/menu-ngang-1.png"
+    }
+   ]
+  },
+  {
+   "group": "nav",
+   "name": "Thanh bước",
+   "selector": "main .stepper",
+   "variants": [
+    {
+     "sig": "height:62px;borderTopLeftRadius:12px;borderTopWidth:0px;borderTopColor:rgb(12, 26, 46);backgroundColor:rgb(255, 255, 255);color:rgb(12, 26, 46);fontSize:14px;fontWeight:400;paddingLeft:24px;paddingTop:18px",
+     "screens": [
+      "/lich-hen/tham-gap-truc-tiep/tao-moi",
+      "/lich-hen/tham-gap-truc-tiep/LH-2026-0914/chinh-sua",
+      "/lich-hen/gap-truc-tiep-ngoai-le/LH-2026-0914/chinh-sua",
+      "/tiep-don/dang-ky-luot-tai-quay",
+      "/tiep-don/quay-tiep-don/tao-moi"
+     ],
+     "count": 5,
+     "sample": "1\nNgười nghiện và thân nhân\n2\nKhung giờ và buồng thăm gặp\n3\n",
+     "size": "1118×62",
+     "shot": "shots/thanh-buoc-1.png"
+    }
+   ]
+  }
+ ]
+}

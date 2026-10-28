@@ -1,0 +1,347 @@
+{
+ "ten": "PROC-05 Kiểm kê tồn kho",
+ "cap": 2,
+ "pools": [
+  {
+   "id": "P",
+   "ten": "PROC-05 Kiểm kê tồn kho",
+   "lanes": [
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "TKK",
+     "ten": "Tổ kiểm kê",
+     "cao": 230
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống quản lý kho căng tin"
+    }
+   ]
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 2,
+   "so_cot": 8
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Đến kỳ kiểm kê hoặc cần kiểm kê đột xuất",
+   "lane": "TCS",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05.01",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Giao kiểm kê kho cho tổ kiểm kê",
+   "ghi_chu": "kho, thành viên tổ",
+   "lane": "TCS",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05.02",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Kiểm tra phiếu chờ duyệt, hàng đang chuyển",
+   "lane": "HT",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Kho còn phiếu dở dang?",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Chưa kiểm kê được, còn phiếu dở dang",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "PROC-05.03",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Chốt số sách theo lô, khóa giao dịch kho",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05.04",
+   "loai": "task",
+   "kieu": "manual",
+   "ten": "Kiểm đếm thực tế theo lô",
+   "lane": "TKK",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05.05",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Lập biên bản kiểm kê",
+   "ghi_chu": "số thực tế, lý do chênh lệch",
+   "lane": "TKK",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05.06",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Tính chênh lệch so với số sách",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05.07",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Duyệt biên bản kiểm kê",
+   "lane": "TCS",
+   "cot": 7,
+   "hang": 0
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đồng ý?",
+   "lane": "TCS",
+   "cot": 8,
+   "hang": 0
+  },
+  {
+   "id": "PROC-05.08",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Điều chỉnh tồn kho theo số thực tế, mở khóa kho",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã duyệt, tồn đã điều chỉnh",
+   "lane": "HT",
+   "cot": 10,
+   "hang": 0
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Cần hủy biên bản kiểm kê đã duyệt",
+   "lane": "TCS",
+   "cot": 10,
+   "hang": 1
+  },
+  {
+   "id": "PROC-05.09",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Hủy phê duyệt biên bản kiểm kê",
+   "lane": "TCS",
+   "cot": 11,
+   "hang": 1
+  },
+  {
+   "id": "PROC-05.10",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Kiểm tra kho chưa có giao dịch mới",
+   "lane": "HT",
+   "cot": 11,
+   "hang": 2
+  },
+  {
+   "id": "G3",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Chưa có giao dịch mới?",
+   "lane": "HT",
+   "cot": 12,
+   "hang": 2
+  },
+  {
+   "id": "PROC-05.11",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Đảo điều chỉnh tồn kho",
+   "lane": "HT",
+   "cot": 13,
+   "hang": 2
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã hủy duyệt",
+   "lane": "HT",
+   "cot": 14,
+   "hang": 2
+  },
+  {
+   "id": "E4",
+   "loai": "end",
+   "ten": "Hủy duyệt bị chặn",
+   "lane": "HT",
+   "cot": 12,
+   "hang": 3
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S1",
+   "den": "PROC-05.01"
+  },
+  {
+   "tu": "PROC-05.01",
+   "den": "PROC-05.02",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-05.02",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "PROC-05.03",
+   "nhan": "Không"
+  },
+  {
+   "tu": "G1",
+   "den": "E2",
+   "nhan": "Có",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-05.03",
+   "den": "PROC-05.04",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "PROC-05.03",
+   "den": "POS",
+   "loai": "message",
+   "nhan": "Khóa bán tại kho",
+   "ra": "duoi",
+   "vao": [
+    0.19,
+    0
+   ]
+  },
+  {
+   "tu": "PROC-05.04",
+   "den": "PROC-05.05"
+  },
+  {
+   "tu": "PROC-05.05",
+   "den": "PROC-05.06",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-05.06",
+   "den": "PROC-05.07",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "PROC-05.07",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "PROC-05.08",
+   "nhan": "Có",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "G2",
+   "den": "PROC-05.04",
+   "nhan": "Không, kiểm đếm lại",
+   "ra": "duoi",
+   "vao": "duoi",
+   "qua": [
+    {
+     "lane": "TKK",
+     "cot": 8,
+     "hang": 0.8
+    },
+    {
+     "lane": "TKK",
+     "cot": 4,
+     "hang": 0.8
+    }
+   ]
+  },
+  {
+   "tu": "PROC-05.08",
+   "den": "E1"
+  },
+  {
+   "tu": "PROC-05.08",
+   "den": "POS",
+   "loai": "message",
+   "nhan": "Mở khóa bán tại kho",
+   "ra": "duoi",
+   "vao": [
+    0.94,
+    0
+   ]
+  },
+  {
+   "tu": "S2",
+   "den": "PROC-05.09"
+  },
+  {
+   "tu": "PROC-05.09",
+   "den": "PROC-05.10",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-05.10",
+   "den": "G3"
+  },
+  {
+   "tu": "G3",
+   "den": "PROC-05.11",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G3",
+   "den": "E4",
+   "nhan": "Không",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-05.11",
+   "den": "E3"
+  }
+ ]
+}

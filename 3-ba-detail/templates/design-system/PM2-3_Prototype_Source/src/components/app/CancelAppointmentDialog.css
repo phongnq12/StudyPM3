@@ -1,0 +1,5 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Hộp «Hủy lịch hẹn» dùng chung: chữ đỏ và viền đỏ của lỗi đi kèm component, không phụ thuộc CSS riêng của màn mở hộp */
+#dlgHuy .field-error { display: none; margin-top: 4px; color: var(--color-err); font-size: var(--fs-caption); line-height: 1.5; }
+#dlgHuy .field-error.on { display: block; }
+#dlgHuy .input-error { border-color: var(--color-err) !important; }

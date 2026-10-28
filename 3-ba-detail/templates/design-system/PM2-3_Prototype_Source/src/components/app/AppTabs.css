@@ -1,0 +1,14 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* AppTabs — kiểu tab CHUẨN đi kèm component: màn nào dùng AppTabs với lớp mặc định .tabs / .tab-n là đúng ngay, không phải tự viết CSS.
+ * Cùng giá trị khuôn tab màn Lịch hẹn (AppointmentDetail.css) · Chi tiết quầy (.rd-detail) · Cấu hình thời gian (.vc-page).
+ * KHÔNG đặt margin-bottom của thanh tab — mỗi màn tự canh khoảng cách với nội dung. */
+.app-tabs .tabs{display:flex;gap:2px;border-bottom:2px solid var(--color-line);padding:0 var(--shell-gutter, 16px)}   /* mép tab đầu thẳng mép khối bên dưới */
+.app-tabs .tab-n{appearance:none;border:none;background:transparent;cursor:pointer;
+  padding:12px 14px;   /* cùng đệm tab-btn ⇒ chữ tab đầu thẳng mép khối */
+  font-family:inherit;font-size:var(--fs-body);font-weight:600;
+  color:var(--color-ink-3);border-bottom:3px solid transparent;margin-bottom:-2px;
+  transition:color .15s,border-color .15s;white-space:nowrap}
+.app-tabs .tab-n:hover{color:var(--color-brand)}
+.app-tabs .tab-n.is-current{color:var(--color-brand);border-bottom-color:var(--color-brand)}
+.app-tabs .tab-panel{display:none}
+.app-tabs .tab-panel.is-current{display:block}

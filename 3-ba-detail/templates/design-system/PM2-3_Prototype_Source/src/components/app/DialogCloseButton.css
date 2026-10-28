@@ -1,0 +1,8 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Nút X đóng popup dùng chung — xem DialogCloseButton.jsx */
+.dlg-close{display:inline-flex;align-items:center;justify-content:center;flex:none;margin-left:auto;
+  height:36px;padding:0 10px;box-sizing:border-box;
+  border:1px solid var(--palette-xd9d9d9, #D9D9D9);border-radius:8px;background:var(--color-surface, #FFFFFF);color:rgba(0,0,0,.88);
+  cursor:pointer;transition:all 150ms ease}
+.dlg-close:hover{border-color:var(--color-ink-4,#94A3B8);background:var(--color-page,#F8FAFC)}
+.dlg-close svg{width:16px;height:16px;display:block;stroke-width:2}

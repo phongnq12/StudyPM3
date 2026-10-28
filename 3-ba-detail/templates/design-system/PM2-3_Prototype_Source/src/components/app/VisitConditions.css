@@ -1,0 +1,27 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Link + popup «Danh sách điều kiện thăm gặp» — same look as the «Hướng dẫn thao tác» popup (GridGuide.css) */
+.visit-conditions-link { font-size: 13px; font-weight: 500; color: var(--color-link, #1D4ED8); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; white-space: nowrap; }
+.visit-conditions-link:hover { color: var(--color-link-hover, #1E40AF); }
+.visit-conditions-link:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; border-radius: 2px; }
+.card-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.card-title-row .card-title { margin-bottom: 0; }
+.visit-conditions-dlg { width: 640px; max-width: calc(100vw - 32px); }
+.visit-conditions-intro { margin: 4px 0 6px; }
+.visit-conditions-rows { list-style: none; margin: 0; padding: 0; }
+.visit-conditions-row { display: flex; align-items: flex-start; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--color-page, #F1F5F9); }
+.visit-conditions-row-wrap:last-child .visit-conditions-row { border-bottom: none; }
+/* tên nhóm điều kiện — cùng khuôn tiêu đề đầu mục .card-title (14px/700 IN HOA) */
+.visit-conditions-group { margin: 14px 0 2px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: var(--color-ink-3, #64748B); }
+.visit-conditions-row-wrap:first-child .visit-conditions-group { margin-top: 6px; }
+.visit-conditions-code { flex: none; min-width: 32px; height: 24px; padding: 0 6px; border-radius: 6px; background: var(--color-page, #F1F5F9); display: grid; place-items: center; font-size: 12px; font-weight: 700; color: var(--palette-slate-600, #475569); font-variant-numeric: tabular-nums; }
+.visit-conditions-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.visit-conditions-name { font-size: 14px; font-weight: 500; color: var(--palette-slate-900, #0F172A); }
+.visit-conditions-desc { font-size: 13px; line-height: 1.5; color: var(--color-ink-3, #64748B); }
+.visit-conditions-source { flex: none; font-size: 12px; color: var(--color-ink-3, #64748B); background: var(--color-hovered, #F8FAFC); border: 1px solid var(--palette-slate-200, #E2E8F0); border-radius: 6px; padding: 1px 8px; line-height: 20px; white-space: nowrap; }
+.visit-conditions-note { margin-top: 12px; padding: 10px 12px; border-radius: 8px; background: var(--color-hovered, #F8FAFC); border: 1px solid var(--palette-slate-200, #E2E8F0); font-size: 13px; line-height: 1.5; color: var(--palette-slate-600, #475569); }
+/* student card: eligible tag · reason of the first failed condition */
+/* cỡ theo khuôn tag chung 13/500 cao 24 */
+.visit-ok-tag { display: inline-block; margin-left: 8px; padding: 0 10px; border-radius: 999px; font-size: 13px; font-weight: 500; line-height: 22px; vertical-align: 1px;
+  background: var(--color-ok-bg); color: var(--color-ok); border: 1px solid var(--color-ok-line); }
+.visit-block-reason { display: flex; align-items: flex-start; gap: 6px; margin-top: 4px; font-size: 13px; line-height: 1.45; color: var(--palette-red-700, #B91C1C); font-weight: 500; }
+.visit-block-reason svg { flex: none; width: 15px; height: 15px; margin-top: 1px; }

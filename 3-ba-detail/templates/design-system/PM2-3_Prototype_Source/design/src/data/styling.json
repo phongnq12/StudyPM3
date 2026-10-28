@@ -1,0 +1,8339 @@
+{
+ "generatedAt": "2026-10-20T03:17:44.629Z",
+ "items": {
+  "grid": {
+   "classes": [
+    {
+     "base": "form-grid",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "form-grid"
+     ],
+     "variant": [],
+     "state": [
+      "row-error"
+     ]
+    },
+    {
+     "base": "field",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/VisitConfig/VisitConfig.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "field"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "span-9",
+     "tag": "div",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "span-9"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "blocks": {
+   "classes": [
+    {
+     "base": "card",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "card"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "card-title",
+     "tag": "h2",
+     "files": [
+      "src/components/app/VisitConditions.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "card-title"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "form-grid",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "form-grid"
+     ],
+     "variant": [],
+     "state": [
+      "row-error"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "field-states": {
+   "classes": [
+    {
+     "base": "field-label",
+     "tag": "label",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "field-label"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "required-mark",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "required-mark"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "text-input",
+     "tag": "input",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "text-input"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":focus"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "list-head": {
+   "classes": [
+    {
+     "base": "shell-head",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "shell-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "shell-title",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "shell-title"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "shell-text",
+     "tag": "div",
+     "files": [
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "shell-text"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "head-actions",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "head-actions"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "messages": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "list-screen": {
+   "classes": [
+    {
+     "base": "head-actions",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "head-actions"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "nhom-nut-bang",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "nhom-nut-bang"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "mode",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "mode"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "mode-b",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "mode-b"
+     ],
+     "variant": [],
+     "state": [
+      ":hover",
+      "on"
+     ]
+    },
+    {
+     "base": "tabs",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppTabs.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/pages/VisitConfig/VisitConfig.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "tabs"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "tab-btn",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "tab-btn"
+     ],
+     "variant": [],
+     "state": [
+      ":hover",
+      "is-empty",
+      "on"
+     ]
+    },
+    {
+     "base": "tab-label",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "tab-label"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "tab-dot",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "tab-dot"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "mode-b on",
+     "label": "on (trạng thái)",
+     "state": true
+    },
+    {
+     "tag": "span",
+     "cls": "tab-btn is-empty",
+     "label": "is-empty (trạng thái)",
+     "state": true
+    },
+    {
+     "tag": "span",
+     "cls": "tab-btn on",
+     "label": "on (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": []
+  },
+  "lookup": {
+   "classes": [
+    {
+     "base": "lookup",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "lookup"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "lookup-field",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "lookup-field"
+     ],
+     "variant": [],
+     "state": [
+      "is-error"
+     ]
+    },
+    {
+     "base": "text-input",
+     "tag": "input",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "text-input"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":focus"
+     ]
+    },
+    {
+     "base": "form-btn",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "form-btn"
+     ],
+     "variant": [
+      "form-btn-add",
+      "form-btn-danger",
+      "form-btn-primary",
+      "form-btn-remove",
+      "form-btn-success",
+      "form-btn-warning"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-outline"
+     ]
+    },
+    {
+     "base": "lookup-not-found",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "lookup-not-found"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "relative-card",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "relative-card"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "relative-avatar",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "relative-avatar"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "relative-name",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "relative-name"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-add",
+     "label": "form-btn-add"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-danger",
+     "label": "form-btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-primary",
+     "label": "form-btn-primary"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-remove",
+     "label": "form-btn-remove"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-success",
+     "label": "form-btn-success"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-warning",
+     "label": "form-btn-warning"
+    }
+   ],
+   "sources": []
+  },
+  "student-list": {
+   "classes": [
+    {
+     "base": "card-title-row",
+     "tag": "span",
+     "files": [
+      "src/components/app/VisitConditions.css"
+     ],
+     "base_list": [
+      "card-title-row"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "card-title-tools",
+     "tag": "span",
+     "files": [
+      "src/components/app/Pm1SyncBar.css"
+     ],
+     "base_list": [
+      "card-title-tools"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "student-list",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "student-list"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "student-avatar",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "student-avatar"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "student-body",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "student-body"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "student-name",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "student-name"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "status-note",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "status-note"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "visit-block-reason",
+     "tag": "span",
+     "files": [
+      "src/components/app/VisitConditions.css"
+     ],
+     "base_list": [
+      "visit-block-reason"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "Pm1SyncBar",
+     "file": "src/components/app/Pm1SyncBar.jsx",
+     "css": "src/components/app/Pm1SyncBar.css",
+     "about": "Thời điểm đồng bộ dữ liệu người cai nghiện từ PM1 + nút «Đồng bộ lại» (T957 Q-10) — đặt ở tiêu đề khối NGƯỜI CAI NGHIỆN",
+     "props": [
+      {
+       "name": "onSync",
+       "def": "",
+       "note": "Gọi khi bấm nút Đồng bộ lại, sau khi cập nhật giờ đồng bộ, không nhận đối số.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "schedule-fields": {
+   "classes": [
+    {
+     "base": "locked-value",
+     "tag": "span",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "locked-value"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "select-field",
+     "tag": "span",
+     "files": [
+      "src/lib/searchSelect.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "select-field"
+     ],
+     "variant": [],
+     "state": [
+      "is-readonly"
+     ]
+    },
+    {
+     "base": "text-input",
+     "tag": "input",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "text-input"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":focus"
+     ]
+    },
+    {
+     "base": "date-row",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "date-row"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "date-icon",
+     "tag": "span",
+     "files": [
+      "src/components/app/DateTimeInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "date-icon"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "quick-link",
+     "tag": "a",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "quick-link"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    },
+    {
+     "base": "form-grid-title",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "form-grid-title"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "hours-empty",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "hours-empty"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "companions": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "route-options": {
+   "classes": [
+    {
+     "base": "route-options",
+     "tag": "span",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "route-options"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "route-option",
+     "tag": "button",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "route-option"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":hover",
+      "is-selected"
+     ]
+    },
+    {
+     "base": "route-radio",
+     "tag": "span",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "route-radio"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "route-text",
+     "tag": "span",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "route-text"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "route-title",
+     "tag": "span",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "route-title"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "route-hint",
+     "tag": "span",
+     "files": [
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "route-hint"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "button",
+     "cls": "route-option is-selected",
+     "label": "is-selected (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": []
+  },
+  "config-days": {
+   "classes": [
+    {
+     "base": "vc-switch",
+     "tag": "span",
+     "files": [
+      "src/pages/VisitConfig/VisitConfig.css"
+     ],
+     "base_list": [
+      "vc-switch"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vc-off",
+     "tag": "span",
+     "files": [
+      "src/pages/VisitConfig/VisitConfig.css"
+     ],
+     "base_list": [
+      "vc-off"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "range-input",
+     "tag": "input",
+     "files": [
+      "src/components/app/TimeRangeInput.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "range-input"
+     ],
+     "variant": [
+      "time-range-input"
+     ],
+     "state": [
+      ":focus",
+      "is-active",
+      "is-current"
+     ]
+    },
+    {
+     "base": "time-range-wrap",
+     "tag": "div",
+     "files": [
+      "src/components/app/TimeRangeInput.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css"
+     ],
+     "base_list": [
+      "time-range-wrap"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "date-range",
+     "tag": "div",
+     "files": [
+      "src/components/app/TimeRangeInput.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "date-range"
+     ],
+     "variant": [
+      "time-range"
+     ],
+     "state": [
+      ":focus-within",
+      ":hover",
+      "has-text",
+      "input-border-error",
+      "is-disabled"
+     ]
+    },
+    {
+     "base": "range-arrow",
+     "tag": "svg",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "range-arrow"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "time-panel",
+     "tag": "div",
+     "files": [
+      "src/components/app/TimeRangeInput.css"
+     ],
+     "base_list": [
+      "time-panel"
+     ],
+     "variant": [
+      "time-panel-cell",
+      "time-panel-head"
+     ],
+     "state": []
+    },
+    {
+     "base": "time-panel-col",
+     "tag": "div",
+     "files": [
+      "src/components/app/DateTimeInput.css",
+      "src/components/app/TimeRangeInput.css"
+     ],
+     "base_list": [
+      "time-panel-col"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "date-range has-text",
+     "label": "has-text (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": [
+    {
+     "name": "TimeRangeInput",
+     "file": "src/components/app/TimeRangeInput.jsx",
+     "css": "src/components/app/TimeRangeInput.css",
+     "about": "Ô khoảng giờ [ HH:mm → HH:mm ] — cùng khuôn ô khoảng ngày màn Danh sách lịch hẹn (.date-range · .range-input · .range-arrow, styles/base.css + pm1-look.css).",
+     "props": [
+      {
+       "name": "from",
+       "def": "",
+       "note": "Giờ bắt đầu dạng `HH:mm` hiện ở nửa trái, sai dạng thì bảng chọn không đánh dấu ô nào.",
+       "type": "string"
+      },
+      {
+       "name": "to",
+       "def": "",
+       "note": "Giờ kết thúc dạng `HH:mm` hiện ở nửa phải, sai dạng thì bảng chọn không đánh dấu ô nào.",
+       "type": "string"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi gõ hoặc chọn giờ, nhận nửa đang sửa (`from` hoặc `to`) và chuỗi giá trị mới chưa chuẩn hoá.",
+       "type": "function"
+      },
+      {
+       "name": "disabled",
+       "def": "",
+       "note": "Khoá cả 2 ô nhập, thêm lớp `is-disabled` và đóng bảng chọn giờ đang mở.",
+       "type": "boolean"
+      },
+      {
+       "name": "invalid",
+       "def": "",
+       "note": "Bật viền lỗi bằng lớp `input-border-error` cho khung khoảng giờ.",
+       "type": "boolean"
+      },
+      {
+       "name": "idPrefix",
+       "def": "",
+       "note": "Tiền tố id, sinh id `{tiền tố}-from`, `{tiền tố}-to` và `{tiền tố}-panel`, bỏ trống thì không gán id.",
+       "type": "string"
+      },
+      {
+       "name": "labelFrom",
+       "def": "",
+       "note": "Nhãn đọc và title của ô giờ bắt đầu, cũng là nhãn bảng chọn khi đang chọn giờ bắt đầu.",
+       "type": "string"
+      },
+      {
+       "name": "labelTo",
+       "def": "",
+       "note": "Nhãn đọc và title của ô giờ kết thúc, cũng là nhãn bảng chọn khi đang chọn giờ kết thúc.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "history": {
+   "classes": [],
+   "examples": [],
+   "sources": [
+    {
+     "name": "HistoryTable",
+     "file": "",
+     "css": "",
+     "about": "",
+     "props": null
+    },
+    {
+     "name": "AppTag",
+     "file": "src/components/app/AppTag.jsx",
+     "css": "",
+     "about": "Tag — antd Tag (FE-07: PM1 dùng thẳng Tag của antd). className = lớp màu chuẩn vàng (.tt-lon .tt-ckin · .dc-tag .t-dm · .tag-ad…)",
+     "props": [
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp màu của tag, ghép sau lớp `app-reset` trên Tag của antd.",
+       "type": "string"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung hiển thị bên trong tag.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "settings-rows": {
+   "classes": [
+    {
+     "base": "card",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "card"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "ns-table-wrap",
+     "tag": "span",
+     "files": [
+      "src/pages/NotificationSettings/NotificationSettings.css"
+     ],
+     "base_list": [
+      "ns-table-wrap"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "ns-switch",
+     "tag": "span",
+     "files": [
+      "src/pages/NotificationSettings/NotificationSettings.css"
+     ],
+     "base_list": [
+      "ns-switch"
+     ],
+     "variant": [],
+     "state": [
+      "is-locked"
+     ]
+    },
+    {
+     "base": "col-act",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "col-act"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "acts",
+     "tag": "span",
+     "files": [
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "acts"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "detail-info": {
+   "classes": [
+    {
+     "base": "form-btn",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "form-btn"
+     ],
+     "variant": [
+      "form-btn-add",
+      "form-btn-danger",
+      "form-btn-primary",
+      "form-btn-remove",
+      "form-btn-success",
+      "form-btn-warning"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-outline"
+     ]
+    },
+    {
+     "base": "adjust",
+     "tag": "span",
+     "files": [
+      "src/components/app/ExemptionInfo.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "adjust"
+     ],
+     "variant": [
+      "adjust-frame",
+      "exempt-info"
+     ],
+     "state": []
+    },
+    {
+     "base": "adjust-label",
+     "tag": "span",
+     "files": [
+      "src/components/app/ExemptionInfo.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "adjust-label"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "adjust-value",
+     "tag": "span",
+     "files": [
+      "src/components/app/ExemptionInfo.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "adjust-value"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "adjust-tag",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "adjust-tag"
+     ],
+     "variant": [
+      "tag-category",
+      "tag-penalty",
+      "tag-table",
+      "tag-type",
+      "tag-visit-other",
+      "tag-visit-standard",
+      "tag-wrap"
+     ],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-add",
+     "label": "form-btn-add"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-danger",
+     "label": "form-btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-primary",
+     "label": "form-btn-primary"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-remove",
+     "label": "form-btn-remove"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-success",
+     "label": "form-btn-success"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-warning",
+     "label": "form-btn-warning"
+    },
+    {
+     "tag": "span",
+     "cls": "adjust-tag tag-category",
+     "label": "tag-category"
+    },
+    {
+     "tag": "span",
+     "cls": "adjust-tag tag-penalty",
+     "label": "tag-penalty"
+    },
+    {
+     "tag": "span",
+     "cls": "adjust-tag tag-table",
+     "label": "tag-table"
+    },
+    {
+     "tag": "span",
+     "cls": "adjust-tag tag-type",
+     "label": "tag-type"
+    },
+    {
+     "tag": "span",
+     "cls": "adjust-tag tag-visit-other",
+     "label": "tag-visit-other"
+    },
+    {
+     "tag": "span",
+     "cls": "adjust-tag tag-visit-standard",
+     "label": "tag-visit-standard"
+    }
+   ],
+   "sources": []
+  },
+  "missing-hint": {
+   "classes": [
+    {
+     "base": "missing-hint",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "missing-hint"
+     ],
+     "variant": [],
+     "state": [
+      "is-enough",
+      "is-hidden-block"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "missing-hint is-enough",
+     "label": "is-enough (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": []
+  },
+  "counter-tables": {
+   "classes": [
+    {
+     "base": "capacity-head",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css"
+     ],
+     "base_list": [
+      "capacity-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "capacity-spacer",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css"
+     ],
+     "base_list": [
+      "capacity-spacer"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "form-btn",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "form-btn"
+     ],
+     "variant": [
+      "form-btn-danger",
+      "form-btn-primary",
+      "form-btn-success",
+      "form-btn-warning"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-outline"
+     ]
+    },
+    {
+     "base": "chk-dong",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css"
+     ],
+     "base_list": [
+      "chk-dong"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-danger",
+     "label": "form-btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-primary",
+     "label": "form-btn-primary"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-success",
+     "label": "form-btn-success"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-warning",
+     "label": "form-btn-warning"
+    }
+   ],
+   "sources": []
+  },
+  "text-input": {
+   "classes": [
+    {
+     "base": "text-input",
+     "tag": "input",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "text-input"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":focus"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "multi-line-text": {
+   "classes": [
+    {
+     "base": "app-counter",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppCounterInput.css"
+     ],
+     "base_list": [
+      "app-counter"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-counter-wrap",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "app-counter-wrap"
+     ],
+     "variant": [],
+     "state": [
+      "is-multiline"
+     ]
+    },
+    {
+     "base": "text-input",
+     "tag": "textarea",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "text-input"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":focus"
+     ]
+    },
+    {
+     "base": "app-counter-foot",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppCounterInput.css"
+     ],
+     "base_list": [
+      "app-counter-foot"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppCounterInput",
+     "file": "src/components/app/AppCounterInput.jsx",
+     "css": "src/components/app/AppCounterInput.css",
+     "about": "Ô nhập chữ có bộ đếm \"n / max\": ô 1 dòng thì bộ đếm nằm trong ô sát phải, textarea thì bộ đếm dưới ô canh phải (QD-310).",
+     "props": [
+      {
+       "name": "multiline",
+       "def": "false",
+       "note": "Dùng textarea với bộ đếm ở hàng chân dưới ô thay cho ô 1 dòng có bộ đếm nằm trong ô.",
+       "type": "boolean"
+      },
+      {
+       "name": "maxLength",
+       "def": "",
+       "note": "Số ký tự tối đa được nhập, đồng thời là mẫu số của bộ đếm `n / max`.",
+       "type": "number"
+      },
+      {
+       "name": "value",
+       "def": "''",
+       "note": "Nội dung ô nhập, độ dài của nó là tử số của bộ đếm.",
+       "type": "string"
+      },
+      {
+       "name": "counterId",
+       "def": "",
+       "note": "Id gán cho phần tử bộ đếm.",
+       "type": "string"
+      },
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp bổ sung, ghép sau lớp `text-input` của ô nhập.",
+       "type": "string"
+      },
+      {
+       "name": "style",
+       "def": "",
+       "note": "Style của ô nhập, ô 1 dòng luôn bị ghi đè `paddingRight` để chừa chỗ cho bộ đếm.",
+       "type": "object"
+      },
+      {
+       "name": "error",
+       "def": "null",
+       "note": "Chữ đỏ đặt bên trái bộ đếm ở hàng chân, chỉ dùng khi `multiline` bật, ô 1 dòng bỏ qua.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "counter-input": {
+   "classes": [
+    {
+     "base": "app-counter",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppCounterInput.css"
+     ],
+     "base_list": [
+      "app-counter"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-counter-wrap",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "app-counter-wrap"
+     ],
+     "variant": [],
+     "state": [
+      "is-multiline"
+     ]
+    },
+    {
+     "base": "text-input",
+     "tag": "textarea",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "text-input"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":focus"
+     ]
+    },
+    {
+     "base": "app-counter-foot",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppCounterInput.css"
+     ],
+     "base_list": [
+      "app-counter-foot"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppCounterInput",
+     "file": "src/components/app/AppCounterInput.jsx",
+     "css": "src/components/app/AppCounterInput.css",
+     "about": "Ô nhập chữ có bộ đếm \"n / max\": ô 1 dòng thì bộ đếm nằm trong ô sát phải, textarea thì bộ đếm dưới ô canh phải (QD-310).",
+     "props": [
+      {
+       "name": "multiline",
+       "def": "false",
+       "note": "Dùng textarea với bộ đếm ở hàng chân dưới ô thay cho ô 1 dòng có bộ đếm nằm trong ô.",
+       "type": "boolean"
+      },
+      {
+       "name": "maxLength",
+       "def": "",
+       "note": "Số ký tự tối đa được nhập, đồng thời là mẫu số của bộ đếm `n / max`.",
+       "type": "number"
+      },
+      {
+       "name": "value",
+       "def": "''",
+       "note": "Nội dung ô nhập, độ dài của nó là tử số của bộ đếm.",
+       "type": "string"
+      },
+      {
+       "name": "counterId",
+       "def": "",
+       "note": "Id gán cho phần tử bộ đếm.",
+       "type": "string"
+      },
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp bổ sung, ghép sau lớp `text-input` của ô nhập.",
+       "type": "string"
+      },
+      {
+       "name": "style",
+       "def": "",
+       "note": "Style của ô nhập, ô 1 dòng luôn bị ghi đè `paddingRight` để chừa chỗ cho bộ đếm.",
+       "type": "object"
+      },
+      {
+       "name": "error",
+       "def": "null",
+       "note": "Chữ đỏ đặt bên trái bộ đếm ở hàng chân, chỉ dùng khi `multiline` bật, ô 1 dòng bỏ qua.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "search-input": {
+   "classes": [
+    {
+     "base": "filter-cell",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "filter-cell"
+     ],
+     "variant": [
+      "filter-wide"
+     ],
+     "state": []
+    },
+    {
+     "base": "filter-clear",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "filter-clear"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppSearchInput",
+     "file": "src/components/app/AppSearchInput.jsx",
+     "css": "",
+     "about": "AppSearchInput — ô tìm dùng chung của mọi danh sách (UX-L1 · UX-L6, QD-304).",
+     "props": [
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp bố cục của màn, ghép trước lớp `filter-search` của khung ô tìm.",
+       "type": "string"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Chữ trong ô tìm, có chữ thì thêm lớp `has-text` để hiện nút X.",
+       "type": "string"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi gõ chữ hoặc bấm nút X, nhận chuỗi mới (chuỗi rỗng khi bấm X).",
+       "type": "function"
+      },
+      {
+       "name": "id",
+       "def": "",
+       "note": "Id của ô nhập tìm kiếm.",
+       "type": "string"
+      },
+      {
+       "name": "placeholder",
+       "def": "",
+       "note": "Chữ gợi ý hiện khi ô tìm trống.",
+       "type": "string"
+      },
+      {
+       "name": "title",
+       "def": "",
+       "note": "Chữ chú thích hiện khi di chuột lên ô nhập.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "select": {
+   "classes": [],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppSelect",
+     "file": "src/components/app/AppSelect.jsx",
+     "css": "",
+     "about": "AppSelect — bọc antd Select như PM1 (FE-07). Giao diện antd NGUYÊN BẢN (không reset) theo chốt D2: giống PM1 —",
+     "props": [
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp bổ sung, ghép sau lớp `app-select` của Select antd.",
+       "type": "string"
+      },
+      {
+       "name": "width",
+       "def": "",
+       "note": "Bề rộng ô chọn, đặt vào `style.width` và bị ghi đè nếu `style` có `width`.",
+       "type": "number | string"
+      },
+      {
+       "name": "style",
+       "def": "",
+       "note": "Style bổ sung của ô chọn, trộn sau `width`.",
+       "type": "object"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "search-select": {
+   "classes": [
+    {
+     "base": "select-field",
+     "tag": "div",
+     "files": [
+      "src/lib/searchSelect.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "select-field"
+     ],
+     "variant": [],
+     "state": [
+      "is-readonly"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppSearchSelect",
+     "file": "src/components/app/AppSearchSelect.jsx",
+     "css": "",
+     "about": "AppSearchSelect — Ô CHỌN CÓ TÌM dùng chung mọi màn (luật UX-L1, D14A).",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Id của thẻ `select` gốc.",
+       "type": "string"
+      },
+      {
+       "name": "options",
+       "def": "",
+       "note": "Danh sách lựa chọn `{ value, label }`, có thể kèm `relationship`, `citizenId`, `birthDate` ghi ra thuộc tính data của option.",
+       "type": "array"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Giá trị đang chọn, dùng làm giá trị ban đầu khi bật `uncontrolled`.",
+       "type": "string"
+      },
+      {
+       "name": "disabled",
+       "def": "",
+       "note": "Khoá ô chọn, ô gõ tìm tự đồng bộ theo trạng thái này.",
+       "type": "boolean"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi người dùng đổi lựa chọn, nhận chuỗi giá trị mới.",
+       "type": "function"
+      },
+      {
+       "name": "hasErrorBorder",
+       "def": "",
+       "note": "Bật viền lỗi bằng lớp `input-border-error` trên ô gõ tìm.",
+       "type": "boolean"
+      },
+      {
+       "name": "className",
+       "def": "'text-input'",
+       "note": "Lớp của thẻ `select` gốc, mặc định `text-input`.",
+       "type": "string"
+      },
+      {
+       "name": "wrapperId",
+       "def": "",
+       "note": "Id của khối bọc `select-field`.",
+       "type": "string"
+      },
+      {
+       "name": "uncontrolled",
+       "def": "",
+       "note": "Để DOM giữ giá trị qua `defaultValue` thay vì `value`, dùng cho ô trong bảng.",
+       "type": "boolean"
+      },
+      {
+       "name": "noClear",
+       "def": "",
+       "note": "Ẩn nút xóa của ô gõ tìm bằng thuộc tính `data-no-clear`.",
+       "type": "boolean"
+      }
+     ]
+    }
+   ]
+  },
+  "filter-dropdown": {
+   "classes": [
+    {
+     "base": "filter-select-box",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "filter-select-box"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    },
+    {
+     "base": "filter-select-text",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css"
+     ],
+     "base_list": [
+      "filter-select-text"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "filter-select-input",
+     "tag": "input",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "filter-select-input"
+     ],
+     "variant": [],
+     "state": [
+      ":focus"
+     ]
+    },
+    {
+     "base": "filter-select-caret",
+     "tag": "svg",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "filter-select-caret"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "filter-select-panel",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "filter-select-panel"
+     ],
+     "variant": [],
+     "state": [
+      "is-empty"
+     ]
+    },
+    {
+     "base": "filter-select-list",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css"
+     ],
+     "base_list": [
+      "filter-select-list"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "filter-select-item",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "filter-select-item"
+     ],
+     "variant": [],
+     "state": [
+      ":hover",
+      "is-selected"
+     ]
+    },
+    {
+     "base": "filter-select-empty",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css"
+     ],
+     "base_list": [
+      "filter-select-empty"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "filter-select-item is-selected",
+     "label": "is-selected (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppFilterDropdown",
+     "file": "src/components/app/AppFilterDropdown.jsx",
+     "css": "",
+     "about": "AppFilterDropdown — filter dropdown in PM1 style (.fdd): type to filter items, accent-insensitive search.",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Hậu tố id, sinh id `dd{id}` cho khối, `chu{id}` cho chữ hiển thị và `o{id}` cho ô gõ lọc.",
+       "type": "string"
+      },
+      {
+       "name": "ariaLabel",
+       "def": "",
+       "note": "Nhãn đọc của ô gõ lọc.",
+       "type": "string"
+      },
+      {
+       "name": "placeholder",
+       "def": "",
+       "note": "Chữ hiện ở ô khi chưa chọn giá trị nào.",
+       "type": "string"
+      },
+      {
+       "name": "items",
+       "def": "",
+       "note": "Danh sách chuỗi lựa chọn, lọc theo từ khoá gõ vào không phân biệt dấu.",
+       "type": "array"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Mục đang chọn, được hiện trong ô và đánh dấu `is-selected` trong danh sách.",
+       "type": "string"
+      },
+      {
+       "name": "open",
+       "def": "",
+       "note": "Mở bảng lựa chọn và cho gõ lọc, đóng thì xóa từ khoá đã gõ.",
+       "type": "boolean"
+      },
+      {
+       "name": "onOpen",
+       "def": "",
+       "note": "Gọi khi bấm vào ô, nhận sự kiện click.",
+       "type": "function"
+      },
+      {
+       "name": "onPick",
+       "def": "",
+       "note": "Gọi khi bấm 1 mục trong danh sách, nhận chuỗi của mục đó.",
+       "type": "function"
+      },
+      {
+       "name": "onClear",
+       "def": "",
+       "note": "Gọi khi bấm nút Xóa lựa chọn, không nhận đối số.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "date": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "time-range": {
+   "classes": [
+    {
+     "base": "range-input",
+     "tag": "input",
+     "files": [
+      "src/components/app/TimeRangeInput.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "range-input"
+     ],
+     "variant": [
+      "time-range-input"
+     ],
+     "state": [
+      ":focus",
+      "is-active",
+      "is-current"
+     ]
+    },
+    {
+     "base": "time-range-wrap",
+     "tag": "div",
+     "files": [
+      "src/components/app/TimeRangeInput.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css"
+     ],
+     "base_list": [
+      "time-range-wrap"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "date-range",
+     "tag": "div",
+     "files": [
+      "src/components/app/TimeRangeInput.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "date-range"
+     ],
+     "variant": [
+      "time-range"
+     ],
+     "state": [
+      ":focus-within",
+      ":hover",
+      "has-text",
+      "input-border-error",
+      "is-disabled"
+     ]
+    },
+    {
+     "base": "range-arrow",
+     "tag": "svg",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "range-arrow"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "time-panel",
+     "tag": "div",
+     "files": [
+      "src/components/app/TimeRangeInput.css"
+     ],
+     "base_list": [
+      "time-panel"
+     ],
+     "variant": [
+      "time-panel-cell",
+      "time-panel-head"
+     ],
+     "state": []
+    },
+    {
+     "base": "time-panel-col",
+     "tag": "div",
+     "files": [
+      "src/components/app/DateTimeInput.css",
+      "src/components/app/TimeRangeInput.css"
+     ],
+     "base_list": [
+      "time-panel-col"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "date-range has-text",
+     "label": "has-text (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": [
+    {
+     "name": "TimeRangeInput",
+     "file": "src/components/app/TimeRangeInput.jsx",
+     "css": "src/components/app/TimeRangeInput.css",
+     "about": "Ô khoảng giờ [ HH:mm → HH:mm ] — cùng khuôn ô khoảng ngày màn Danh sách lịch hẹn (.date-range · .range-input · .range-arrow, styles/base.css + pm1-look.css).",
+     "props": [
+      {
+       "name": "from",
+       "def": "",
+       "note": "Giờ bắt đầu dạng `HH:mm` hiện ở nửa trái, sai dạng thì bảng chọn không đánh dấu ô nào.",
+       "type": "string"
+      },
+      {
+       "name": "to",
+       "def": "",
+       "note": "Giờ kết thúc dạng `HH:mm` hiện ở nửa phải, sai dạng thì bảng chọn không đánh dấu ô nào.",
+       "type": "string"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi gõ hoặc chọn giờ, nhận nửa đang sửa (`from` hoặc `to`) và chuỗi giá trị mới chưa chuẩn hoá.",
+       "type": "function"
+      },
+      {
+       "name": "disabled",
+       "def": "",
+       "note": "Khoá cả 2 ô nhập, thêm lớp `is-disabled` và đóng bảng chọn giờ đang mở.",
+       "type": "boolean"
+      },
+      {
+       "name": "invalid",
+       "def": "",
+       "note": "Bật viền lỗi bằng lớp `input-border-error` cho khung khoảng giờ.",
+       "type": "boolean"
+      },
+      {
+       "name": "idPrefix",
+       "def": "",
+       "note": "Tiền tố id, sinh id `{tiền tố}-from`, `{tiền tố}-to` và `{tiền tố}-panel`, bỏ trống thì không gán id.",
+       "type": "string"
+      },
+      {
+       "name": "labelFrom",
+       "def": "",
+       "note": "Nhãn đọc và title của ô giờ bắt đầu, cũng là nhãn bảng chọn khi đang chọn giờ bắt đầu.",
+       "type": "string"
+      },
+      {
+       "name": "labelTo",
+       "def": "",
+       "note": "Nhãn đọc và title của ô giờ kết thúc, cũng là nhãn bảng chọn khi đang chọn giờ kết thúc.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "date-time": {
+   "classes": [
+    {
+     "base": "datetime-wrap",
+     "tag": "div",
+     "files": [
+      "src/components/app/DateTimeInput.css"
+     ],
+     "base_list": [
+      "datetime-wrap"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "text-input",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppCounterInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/pm1-look.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "text-input"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":focus"
+     ]
+    },
+    {
+     "base": "date-icon",
+     "tag": "svg",
+     "files": [
+      "src/components/app/DateTimeInput.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "date-icon"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "datetime-panel",
+     "tag": "div",
+     "files": [
+      "src/components/app/DateTimeInput.css"
+     ],
+     "base_list": [
+      "datetime-panel"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "datetime-body",
+     "tag": "div",
+     "files": [
+      "src/components/app/DateTimeInput.css"
+     ],
+     "base_list": [
+      "datetime-body"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "date-picker",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "date-picker"
+     ],
+     "variant": [],
+     "state": [
+      "is-open"
+     ]
+    },
+    {
+     "base": "date-picker-head",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "date-picker-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "date-picker-nav",
+     "tag": "button",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "date-picker-nav"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "DateTimeInput",
+     "file": "src/components/app/DateTimeInput.jsx",
+     "css": "src/components/app/DateTimeInput.css",
+     "about": "Ô chọn ngày giờ [ dd/MM/yyyy HH:mm ] — định nghĩa sẵn cho màn cần cả ngày lẫn giờ (QD-409, TrangNT5 15/10/2026: \"hệ thống chưa có nhưng define sẵn\").",
+     "props": [
+      {
+       "name": "value",
+       "def": "",
+       "note": "Ngày giờ dạng `dd/MM/yyyy HH:mm` hiện trong ô, sai dạng thì bảng chọn không đánh dấu ngày và giờ nào.",
+       "type": "string"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi gõ, chọn ngày, chọn giờ phút hoặc bấm «Bây giờ», nhận chuỗi giá trị mới chưa chuẩn hoá.",
+       "type": "function"
+      },
+      {
+       "name": "disabled",
+       "def": "",
+       "note": "Khoá ô nhập, thêm lớp `is-disabled` và đóng bảng chọn đang mở.",
+       "type": "boolean"
+      },
+      {
+       "name": "invalid",
+       "def": "",
+       "note": "Bật viền lỗi bằng lớp `input-border-error` cho ô.",
+       "type": "boolean"
+      },
+      {
+       "name": "id",
+       "def": "",
+       "note": "Id của ô nhập, bảng chọn nhận id `{id}-panel`, bỏ trống thì không gán id.",
+       "type": "string"
+      },
+      {
+       "name": "label",
+       "def": "",
+       "note": "Nhãn đọc và title của ô, cũng là nhãn của bảng chọn.",
+       "type": "string"
+      },
+      {
+       "name": "minuteStep",
+       "def": "5",
+       "note": "Bước của cột Phút, mặc định 5 như ô khoảng giờ.",
+       "type": "number"
+      },
+      {
+       "name": "placeholder",
+       "def": "'dd/MM/yyyy HH:mm'",
+       "note": "Chữ gợi ý khi ô trống, mặc định `dd/MM/yyyy HH:mm`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "checkbox": {
+   "classes": [
+    {
+     "base": "chk",
+     "tag": "label",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "chk"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "switch": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "attachment": {
+   "classes": [
+    {
+     "base": "attach-field",
+     "tag": "div",
+     "files": [
+      "src/components/app/AttachmentField.css"
+     ],
+     "base_list": [
+      "attach-field"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "attach-list",
+     "tag": "ul",
+     "files": [
+      "src/components/app/AttachmentField.css",
+      "src/components/app/ExemptionInfo.css"
+     ],
+     "base_list": [
+      "attach-list"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "attach-name",
+     "tag": "span",
+     "files": [
+      "src/components/app/AttachmentField.css"
+     ],
+     "base_list": [
+      "attach-name"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "attach-size",
+     "tag": "span",
+     "files": [
+      "src/components/app/AttachmentField.css"
+     ],
+     "base_list": [
+      "attach-size"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "btn",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "btn"
+     ],
+     "variant": [
+      "btn-danger",
+      "btn-danger-ghost",
+      "btn-outline",
+      "btn-primary"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-primary"
+     ]
+    },
+    {
+     "base": "attach-remove",
+     "tag": "span",
+     "files": [
+      "src/components/app/AttachmentField.css"
+     ],
+     "base_list": [
+      "attach-remove"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "btn btn-danger",
+     "label": "btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger-ghost",
+     "label": "btn-danger-ghost"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-outline",
+     "label": "btn-outline"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-primary",
+     "label": "btn-primary"
+    }
+   ],
+   "sources": [
+    {
+     "name": "AttachmentField",
+     "file": "src/components/app/AttachmentField.jsx",
+     "css": "src/components/app/AttachmentField.css",
+     "about": "Ô «Tài liệu đính kèm» — không bắt buộc.",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Id của khối, cũng là tiền tố id ô chọn tệp `{id}Input` và chữ lỗi `{id}Loi`.",
+       "type": "string"
+      },
+      {
+       "name": "value",
+       "def": "[]",
+       "note": "Danh sách tệp đã chọn dạng `{ name, size }`, hiện tên và dung lượng kèm nút Bỏ tệp.",
+       "type": "array"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi thêm tệp không vượt 10MB hoặc bỏ 1 tệp, nhận danh sách tệp mới.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "notify-recipients": {
+   "classes": [
+    {
+     "base": "fld",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "fld"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "notify-groups",
+     "tag": "div",
+     "files": [
+      "src/components/app/NotifyRecipientsField.css"
+     ],
+     "base_list": [
+      "notify-groups"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "notify-block",
+     "tag": "div",
+     "files": [
+      "src/components/app/NotifyRecipientsField.css"
+     ],
+     "base_list": [
+      "notify-block"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "notify-block-title",
+     "tag": "div",
+     "files": [
+      "src/components/app/NotifyRecipientsField.css"
+     ],
+     "base_list": [
+      "notify-block-title"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "notify-group",
+     "tag": "div",
+     "files": [
+      "src/components/app/NotifyRecipientsField.css"
+     ],
+     "base_list": [
+      "notify-group"
+     ],
+     "variant": [],
+     "state": [
+      "is-off"
+     ]
+    },
+    {
+     "base": "chk",
+     "tag": "label",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "chk"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "required-mark",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "required-mark"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "notify-group-body",
+     "tag": "div",
+     "files": [
+      "src/components/app/NotifyRecipientsField.css"
+     ],
+     "base_list": [
+      "notify-group-body"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "NotifyRecipientsField",
+     "file": "src/components/app/NotifyRecipientsField.jsx",
+     "css": "src/components/app/NotifyRecipientsField.css",
+     "about": "NotifyRecipientsField — trường «Gửi thông báo cho» dùng chung (QD-370 ④ ⑧ ⑭).",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Id của khối trường, cũng là tiền tố id ô chọn mỗi nhóm `{id}-{nhóm}`.",
+       "type": "string"
+      },
+      {
+       "name": "code",
+       "def": "",
+       "note": "Mã thông báo của thao tác, đang tắt ở Cài đặt thông báo thì ẩn cả trường và dùng để suy nhóm, người bắt buộc.",
+       "type": "string"
+      },
+      {
+       "name": "groups",
+       "def": "",
+       "note": "Danh sách mã nhóm người nhận cần hiện, bỏ trống thì lấy theo `code` và `records`.",
+       "type": "array"
+      },
+      {
+       "name": "records",
+       "def": "",
+       "note": "Bản ghi đang thao tác, dùng để suy nhóm, danh sách người gợi ý và người bắt buộc nhận.",
+       "type": "array"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Người nhận theo từng nhóm dạng `{ [nhóm]: [id], off: [nhóm bỏ tick] }`.",
+       "type": "object"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi tick hoặc bỏ tick nhóm, hay đổi người trong ô chọn, nhận object giá trị mới đã trộn thay đổi.",
+       "type": "function"
+      },
+      {
+       "name": "label",
+       "def": "'Gửi thông báo cho'",
+       "note": "Nhãn của trường.",
+       "type": "string"
+      },
+      {
+       "name": "hint",
+       "def": "",
+       "note": "Chữ hướng dẫn dưới trường, bỏ trống thì dùng câu mặc định về nhóm và người bắt buộc.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "exemption": {
+   "classes": [
+    {
+     "base": "student-avatar",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "student-avatar"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "student-body",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "student-body"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "student-name",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "student-name"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "visit-ok-tag",
+     "tag": "span",
+     "files": [
+      "src/components/app/VisitConditions.css"
+     ],
+     "base_list": [
+      "visit-ok-tag"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "status-note",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "status-note"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "visit-block-reason",
+     "tag": "div",
+     "files": [
+      "src/components/app/VisitConditions.css"
+     ],
+     "base_list": [
+      "visit-block-reason"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "student-side",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "student-side"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "quota-box",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "quota-box"
+     ],
+     "variant": [],
+     "state": [
+      "is-exhausted"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "quota-box is-exhausted",
+     "label": "is-exhausted (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": [
+    {
+     "name": "ExemptionFields",
+     "file": "src/components/app/ExemptionFields.jsx",
+     "css": "src/components/app/ExemptionFields.css",
+     "about": "Đơn xin Trưởng cơ sở duyệt — các ô nhập dùng chung màn Tạo (Đăng ký tại quầy) và màn Chỉnh sửa đơn ngoại lệ (Q17). Cùng thứ tự, cùng ô, cùng id ⇒ 2 màn không lệch nhau.",
+     "props": [
+      {
+       "name": "e",
+       "def": "",
+       "note": "Dữ liệu đơn gồm thông tin thân nhân, người cai nghiện, quan hệ, lý do, thân nhân đi cùng và tệp đính kèm.",
+       "type": "object"
+      },
+      {
+       "name": "set",
+       "def": "",
+       "note": "Gọi khi đổi 1 ô, nhận tên trường và giá trị mới.",
+       "type": "function"
+      },
+      {
+       "name": "err",
+       "def": "none",
+       "note": "Nhận id chữ lỗi và trả phần tử chữ đỏ đặt dưới ô, mặc định trả `null`.",
+       "type": "function"
+      },
+      {
+       "name": "excludeCode",
+       "def": "",
+       "note": "Mã lịch bỏ qua khi xét điều kiện thăm gặp và quỹ lượt, dùng ở màn Sửa để không tính chính lịch đó.",
+       "type": "string"
+      }
+     ]
+    },
+    {
+     "name": "ExemptionInfo",
+     "file": "src/components/app/ExemptionInfo.jsx",
+     "css": "src/components/app/ExemptionInfo.css",
+     "about": "Đơn ngoại lệ dạng XEM (nhãn · giá trị) — 1 nguồn nhãn và thứ tự cho màn Sửa, Xem, popup gửi duyệt lại.",
+     "props": null
+    }
+   ]
+  },
+  "radio-group": {
+   "classes": [
+    {
+     "base": "app-choice-group",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-choice-group"
+     ],
+     "variant": [],
+     "state": [
+      "is-vertical"
+     ]
+    },
+    {
+     "base": "app-choice",
+     "tag": "label",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-choice"
+     ],
+     "variant": [],
+     "state": [
+      "is-disabled"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppRadioGroup",
+     "file": "src/components/app/AppRadioGroup.jsx",
+     "css": "",
+     "about": "Nhóm radio — chọn đúng 1 trong vài giá trị ngắn (2–5), hiện hết lựa chọn trên màn (QD-399). Nhiều hơn 5 giá trị thì dùng Ô chọn.",
+     "props": [
+      {
+       "name": "name",
+       "def": "",
+       "note": "Thuộc tính `name` chung của các ô radio trong nhóm.",
+       "type": "string"
+      },
+      {
+       "name": "label",
+       "def": "",
+       "note": "Nhãn đọc của nhóm, gán vào `aria-label`, không hiện chữ trên màn.",
+       "type": "string"
+      },
+      {
+       "name": "options",
+       "def": "[]",
+       "note": "Danh sách lựa chọn `{ value, label, disabled }`, mỗi mục là 1 ô radio.",
+       "type": "array"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Giá trị đang chọn, ô radio có `value` bằng giá trị này được tick.",
+       "type": "string | number"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi người dùng chọn 1 ô radio, nhận `value` của lựa chọn đó.",
+       "type": "function"
+      },
+      {
+       "name": "disabled",
+       "def": "false",
+       "note": "Khoá mọi ô radio trong nhóm và thêm lớp `is-disabled`.",
+       "type": "boolean"
+      },
+      {
+       "name": "vertical",
+       "def": "false",
+       "note": "Xếp các lựa chọn theo cột bằng lớp `is-vertical` thay vì hàng ngang.",
+       "type": "boolean"
+      },
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp bổ sung, ghép sau lớp `app-choice-group`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "checkbox-group": {
+   "classes": [
+    {
+     "base": "app-choice-group",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-choice-group"
+     ],
+     "variant": [],
+     "state": [
+      "is-vertical"
+     ]
+    },
+    {
+     "base": "app-choice",
+     "tag": "label",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-choice"
+     ],
+     "variant": [],
+     "state": [
+      "is-disabled"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppCheckboxGroup",
+     "file": "src/components/app/AppCheckboxGroup.jsx",
+     "css": "",
+     "about": "Nhóm ô tích — chọn nhiều giá trị trong danh sách ngắn, hiện hết lựa chọn (QD-399). Ô tích 16x16 như Ô tích đơn (UX-L1).",
+     "props": [
+      {
+       "name": "label",
+       "def": "",
+       "note": "Tên đọc màn hình của nhóm, gắn vào `aria-label` của khối `role=group`, không hiện thành chữ.",
+       "type": "string"
+      },
+      {
+       "name": "options",
+       "def": "[]",
+       "note": "Danh sách lựa chọn dạng `{ value, label, disabled }`, lựa chọn có `disabled` thì khoá riêng ô đó.",
+       "type": "array"
+      },
+      {
+       "name": "value",
+       "def": "[]",
+       "note": "Mảng giá trị đang được tích, ô có `value` nằm trong mảng thì hiện đã tích.",
+       "type": "array"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi người dùng tích hoặc bỏ tích 1 ô, nhận mảng giá trị mới sau khi thêm hoặc bớt giá trị đó.",
+       "type": "function"
+      },
+      {
+       "name": "disabled",
+       "def": "false",
+       "note": "Khoá toàn bộ ô tích trong nhóm và gắn lớp `is-disabled` cho từng lựa chọn.",
+       "type": "boolean"
+      },
+      {
+       "name": "vertical",
+       "def": "false",
+       "note": "Xếp các lựa chọn theo cột bằng lớp `is-vertical`, mặc định xếp theo hàng.",
+       "type": "boolean"
+      },
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp CSS thêm vào khối bọc `app-choice-group`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "number-input": {
+   "classes": [
+    {
+     "base": "app-number",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-number"
+     ],
+     "variant": [],
+     "state": [
+      ":focus-within",
+      "is-disabled"
+     ]
+    },
+    {
+     "base": "app-number-step",
+     "tag": "button",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-number-step"
+     ],
+     "variant": [],
+     "state": [
+      ":disabled",
+      ":hover"
+     ]
+    },
+    {
+     "base": "app-number-input",
+     "tag": "input",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-number-input"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppNumberInput",
+     "file": "src/components/app/AppNumberInput.jsx",
+     "css": "",
+     "about": "Ô số — nhập số nguyên trong khoảng min..max, 2 nút giảm/tăng theo bước (QD-399). Gõ chữ không phải số thì bỏ.",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã định danh gắn lên ô nhập số bên trong.",
+       "type": "string"
+      },
+      {
+       "name": "label",
+       "def": "",
+       "note": "Tên đọc màn hình của ô nhập, cũng ghép sau chữ «Giảm» và «Tăng» làm tên của 2 nút bước.",
+       "type": "string"
+      },
+      {
+       "name": "value",
+       "def": "0",
+       "note": "Giá trị số đang hiển thị, đổi từ ngoài thì ô cập nhật lại chữ theo giá trị mới.",
+       "type": "number"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi rời ô hoặc bấm nút giảm, tăng, nhận số đã kẹp trong khoảng `min` tới `max`.",
+       "type": "function"
+      },
+      {
+       "name": "min",
+       "def": "0",
+       "note": "Giá trị nhỏ nhất, rời ô khi đang dưới mức này thì kẹp về `min`, chạm mức thì khoá nút giảm.",
+       "type": "number"
+      },
+      {
+       "name": "max",
+       "def": "999",
+       "note": "Giá trị lớn nhất được nhập, gõ vượt thì ô giữ ở giá trị này, chạm mức thì khoá nút tăng.",
+       "type": "number"
+      },
+      {
+       "name": "step",
+       "def": "1",
+       "note": "Bước cộng hoặc trừ mỗi lần bấm nút tăng, giảm.",
+       "type": "number"
+      },
+      {
+       "name": "disabled",
+       "def": "false",
+       "note": "Khoá ô nhập và cả 2 nút bước, gắn lớp `is-disabled` cho khối bọc.",
+       "type": "boolean"
+      }
+     ]
+    }
+   ]
+  },
+  "tree-select": {
+   "classes": [
+    {
+     "base": "app-tree-select",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-tree-select"
+     ],
+     "variant": [
+      "ant-select"
+     ],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppTreeSelect",
+     "file": "src/components/app/AppTreeSelect.jsx",
+     "css": "",
+     "about": "Ô chọn theo cây — bọc antd TreeSelect như bộ App* (FE-07), đối chiếu Design System PM1 (QD-401).",
+     "props": [
+      {
+       "name": "treeData",
+       "def": "[]",
+       "note": "Cây lựa chọn dạng `{ value, title, children }`, ô tìm lọc theo `title`.",
+       "type": "array"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Giá trị đang chọn, là 1 giá trị khi chọn đơn hoặc mảng giá trị khi bật `multiple`.",
+       "type": "string | array"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi người dùng chọn, bỏ chọn hoặc xoá, chuyển thẳng tới `onChange` của antd TreeSelect.",
+       "type": "function"
+      },
+      {
+       "name": "placeholder",
+       "def": "",
+       "note": "Chữ gợi ý khi chưa chọn, đồng thời làm `aria-label` mặc định của ô.",
+       "type": "string"
+      },
+      {
+       "name": "multiple",
+       "def": "false",
+       "note": "Cho chọn nhiều nhánh bằng ô tích, chỉ hiện nút cha khi chọn đủ nhánh con và gom thẻ thừa thành số.",
+       "type": "boolean"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "multi-select": {
+   "classes": [],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppSelect",
+     "file": "src/components/app/AppSelect.jsx",
+     "css": "",
+     "about": "AppSelect — bọc antd Select như PM1 (FE-07). Giao diện antd NGUYÊN BẢN (không reset) theo chốt D2: giống PM1 —",
+     "props": [
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp bổ sung, ghép sau lớp `app-select` của Select antd.",
+       "type": "string"
+      },
+      {
+       "name": "width",
+       "def": "",
+       "note": "Bề rộng ô chọn, đặt vào `style.width` và bị ghi đè nếu `style` có `width`.",
+       "type": "number | string"
+      },
+      {
+       "name": "style",
+       "def": "",
+       "note": "Style bổ sung của ô chọn, trộn sau `width`.",
+       "type": "object"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "buttons": {
+   "classes": [
+    {
+     "base": "btn-loading-ring",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "btn-loading-ring"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppButton",
+     "file": "src/components/app/AppButton.jsx",
+     "css": "",
+     "about": "AppButton · AppButtonWithIcon — bọc antd Button như bộ App* của PM1 (FE-07).",
+     "props": [
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp giao diện chuẩn của nút, ghép sau lớp `app-reset`.",
+       "type": "string"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung nút, không phải chữ hoặc số thì nút lấy `title` làm `aria-label` khi chưa có tên đọc riêng.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "button-colors": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "icon-buttons": {
+   "classes": [
+    {
+     "base": "ib",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "ib"
+     ],
+     "variant": [
+      "dg",
+      "ib-approve",
+      "ib-danger",
+      "ib-edit",
+      "ib-neutral",
+      "ib-view",
+      "ib-warn",
+      "ib-x"
+     ],
+     "state": [
+      ":disabled",
+      ":hover",
+      "[aria-disabled=\"true\"]"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "ib dg",
+     "label": "dg"
+    },
+    {
+     "tag": "span",
+     "cls": "ib ib-approve",
+     "label": "ib-approve"
+    },
+    {
+     "tag": "span",
+     "cls": "ib ib-danger",
+     "label": "ib-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "ib ib-edit",
+     "label": "ib-edit"
+    },
+    {
+     "tag": "span",
+     "cls": "ib ib-neutral",
+     "label": "ib-neutral"
+    },
+    {
+     "tag": "span",
+     "cls": "ib ib-view",
+     "label": "ib-view"
+    },
+    {
+     "tag": "span",
+     "cls": "ib ib-warn",
+     "label": "ib-warn"
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppButtonWithIcon",
+     "file": "",
+     "css": "",
+     "about": "",
+     "props": null
+    }
+   ]
+  },
+  "page-actions": {
+   "classes": [
+    {
+     "base": "page-head",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "page-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "shell",
+     "tag": "span",
+     "files": [
+      "src/components/app/TableCalendar.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "shell"
+     ],
+     "variant": [
+      "reserved-table"
+     ],
+     "state": []
+    },
+    {
+     "base": "shell-head",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "shell-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "status-bar",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "status-bar"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "page-head-actions",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "page-head-actions"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "step-nav",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "step-nav"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "step-nav-spacer",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "step-nav-spacer"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "form-footer",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/CounterDialogs.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "form-footer"
+     ],
+     "variant": [
+      "eff",
+      "stepper"
+     ],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "PageActions",
+     "file": "src/components/app/PageActions.jsx",
+     "css": "",
+     "about": "PageActions — cặp thanh nút đầu trang và chân trang dựng từ 1 cấu hình (UX-L9, Sổ PM2 QD-323).",
+     "props": null
+    }
+   ]
+  },
+  "button-gap": {
+   "classes": [
+    {
+     "base": "nhom-nut-bang",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "nhom-nut-bang"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "head-actions",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "head-actions"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "page-head-actions",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "page-head-actions"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "form-footer",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/CounterDialogs.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "form-footer"
+     ],
+     "variant": [
+      "eff",
+      "stepper"
+     ],
+     "state": []
+    },
+    {
+     "base": "person-actions",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "person-actions"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "bulk-actions",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "bulk-actions"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": []
+  },
+  "back": {
+   "classes": [
+    {
+     "base": "page-head",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "page-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "page-head-text",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "page-head-text"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "page-head-row",
+     "tag": "h1",
+     "files": [
+      "src/components/app/CatalogStatusTag.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "page-head-row"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "page-head-back",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "page-head-back"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    },
+    {
+     "base": "tag",
+     "tag": "span",
+     "files": [
+      "src/components/app/CatalogStatusTag.css",
+      "src/components/app/TableCalendar.css",
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "tag"
+     ],
+     "variant": [
+      "catalog-status",
+      "tag-absent",
+      "tag-active",
+      "tag-applied",
+      "tag-applied-sub",
+      "tag-approved",
+      "tag-cancelled",
+      "tag-category",
+      "tag-checked-in",
+      "tag-completed",
+      "tag-discipline",
+      "tag-dot",
+      "tag-draft",
+      "tag-exception",
+      "tag-expired",
+      "tag-in-progress",
+      "tag-inactive",
+      "tag-penalty",
+      "tag-pending-approval",
+      "tag-registrant",
+      "tag-rejected",
+      "tag-relationship",
+      "tag-relationship-child",
+      "tag-relationship-father",
+      "tag-relationship-mother",
+      "tag-relationship-sibling",
+      "tag-relationship-spouse",
+      "tag-status",
+      "tag-table",
+      "tag-type",
+      "tag-unassigned",
+      "tag-visit-other",
+      "tag-visit-standard",
+      "tag-waiting-check-in"
+     ],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "tag tag-absent",
+     "label": "tag-absent"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-applied",
+     "label": "tag-applied"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-approved",
+     "label": "tag-approved"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-cancelled",
+     "label": "tag-cancelled"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-category",
+     "label": "tag-category"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-checked-in",
+     "label": "tag-checked-in"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-completed",
+     "label": "tag-completed"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-dot",
+     "label": "tag-dot"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-draft",
+     "label": "tag-draft"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-exception",
+     "label": "tag-exception"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-in-progress",
+     "label": "tag-in-progress"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-penalty",
+     "label": "tag-penalty"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-pending-approval",
+     "label": "tag-pending-approval"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-registrant",
+     "label": "tag-registrant"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-rejected",
+     "label": "tag-rejected"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-relationship",
+     "label": "tag-relationship"
+    }
+   ],
+   "sources": [
+    {
+     "name": "CatalogStatusTag",
+     "file": "src/components/app/CatalogStatusTag.jsx",
+     "css": "src/components/app/CatalogStatusTag.css",
+     "about": "Tag trạng thái danh mục Nháp · Hoạt động · Vô hiệu hóa — 1 bảng màu cho Quầy tiếp đón và Buồng thăm gặp, dùng ở Danh sách, Chi tiết, tiêu đề màn Sửa.",
+     "props": [
+      {
+       "name": "status",
+       "def": "",
+       "note": "Trạng thái danh mục quyết định màu: `DRAFT` lớp `tag-draft`, `ACTIVE` lớp `tag-active`, `INACTIVE` lớp `tag-inactive`.",
+       "type": "'DRAFT' | 'ACTIVE' | 'INACTIVE'"
+      },
+      {
+       "name": "label",
+       "def": "",
+       "note": "Chữ hiển thị trong tag, truyền nguyên văn từ nơi gọi.",
+       "type": "string"
+      },
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp CSS thêm vào sau các lớp `tag tag-dot catalog-status`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "segmented": {
+   "classes": [
+    {
+     "base": "mode",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "mode"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "mode-b",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "mode-b"
+     ],
+     "variant": [],
+     "state": [
+      ":hover",
+      "on"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "mode-b on",
+     "label": "on (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppSegmented",
+     "file": "src/components/app/AppSegmented.jsx",
+     "css": "",
+     "about": "Nút chuyển dạng phân đoạn — đổi chế độ xem của cùng 1 dữ liệu (Danh sách · Lịch) (QD-399).",
+     "props": [
+      {
+       "name": "items",
+       "def": "[]",
+       "note": "Danh sách đoạn dạng `{ key, label, icon, iconRaw, title }`, mỗi đoạn vẽ thành 1 nút có icon.",
+       "type": "array"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Khoá của đoạn đang chọn, đoạn trùng khoá được gắn lớp `on` và `aria-selected` bằng true.",
+       "type": "string"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi người dùng bấm 1 đoạn, nhận `key` của đoạn đó.",
+       "type": "function"
+      },
+      {
+       "name": "label",
+       "def": "'Chế độ xem'",
+       "note": "Tên đọc màn hình của thanh, gắn vào `aria-label` của khối `role=tablist`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "toolbar": {
+   "classes": [
+    {
+     "base": "app-toolbar",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-toolbar"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-toolbar-sep",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-toolbar-sep"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-toolbar-group",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-toolbar-group"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppToolbar",
+     "file": "src/components/app/AppToolbar.jsx",
+     "css": "",
+     "about": "Thanh công cụ — gom các nút thao tác cùng nhóm (trên bảng, trên khối), chia nhóm bằng vạch ngăn (QD-406 D16 A).",
+     "props": [
+      {
+       "name": "label",
+       "def": "",
+       "note": "Tên đọc màn hình của thanh công cụ, gắn vào `aria-label` của khối `role=toolbar`.",
+       "type": "string"
+      },
+      {
+       "name": "groups",
+       "def": "[]",
+       "note": "Mảng nhóm nút, mỗi nhóm vẽ trong `app-toolbar-group` và ngăn với nhóm trước bằng vạch dọc.",
+       "type": "array"
+      }
+     ]
+    }
+   ]
+  },
+  "table": {
+   "classes": [
+    {
+     "base": "app-reset-table",
+     "tag": "span",
+     "files": [
+      "src/styles/antd-reset.css"
+     ],
+     "base_list": [
+      "app-reset-table"
+     ],
+     "variant": [
+      "ant-table-wrapper"
+     ],
+     "state": []
+    },
+    {
+     "base": "col-select",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "col-select"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "empty-state",
+     "tag": "td",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "empty-state"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "empty-state-text",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "empty-state-text"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppTable",
+     "file": "src/components/app/AppTable.jsx",
+     "css": "",
+     "about": "AppTable — bọc antd Table (FE-07). Thẻ <table> thật mang lớp + id chuẩn vàng (tableClassName · tableId) qua components.table,",
+     "props": [
+      {
+       "name": "columns",
+       "def": "",
+       "note": "Danh sách cột dạng `{ key, title, className, thClassName, thStyle, render }`, `render` nhận dòng và số thứ tự đã cộng `indexOffset`.",
+       "type": "array"
+      },
+      {
+       "name": "dataSource",
+       "def": "",
+       "note": "Mảng dòng dữ liệu, mảng rỗng thì thân bảng hiện `emptyRow` thay cho các dòng.",
+       "type": "array"
+      },
+      {
+       "name": "rowKey",
+       "def": "",
+       "note": "Tên trường hoặc hàm lấy khoá dòng, cũng dùng ghép tên đọc «Chọn dòng» cho ô tích chọn.",
+       "type": "string | function"
+      },
+      {
+       "name": "tableClassName",
+       "def": "''",
+       "note": "Lớp CSS gắn lên thẻ `table` thật bên trong antd Table.",
+       "type": "string"
+      },
+      {
+       "name": "tableId",
+       "def": "",
+       "note": "Mã định danh gắn lên thẻ `table` thật.",
+       "type": "string"
+      },
+      {
+       "name": "tbodyId",
+       "def": "",
+       "note": "Mã định danh gắn lên thẻ `tbody` của bảng.",
+       "type": "string"
+      },
+      {
+       "name": "emptyRow",
+       "def": "",
+       "note": "Dòng `tr` tự vẽ hiện khi `dataSource` rỗng, không truyền thì thân bảng để trống.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "rowClassName",
+       "def": "",
+       "note": "Lớp CSS riêng cho từng thẻ `tr`, dạng hàm thì nhận dòng dữ liệu, chuyển thẳng tới antd Table.",
+       "type": "string | function"
+      },
+      {
+       "name": "indexOffset",
+       "def": "0",
+       "note": "Số cộng thêm vào chỉ số dòng trước khi truyền cho `render` của cột, dùng khi bảng đang ở trang sau.",
+       "type": "number"
+      },
+      {
+       "name": "rowSelection",
+       "def": "",
+       "note": "Cấu hình ô tích chọn dòng của antd, mỗi ô tích được gắn sẵn tên đọc «Chọn dòng» kèm khoá dòng.",
+       "type": "object"
+      },
+      {
+       "name": "selectionClassName",
+       "def": "'col-select'",
+       "note": "Lớp CSS thêm vào ô tiêu đề và ô dữ liệu của cột chọn dòng.",
+       "type": "string"
+      }
+     ]
+    },
+    {
+     "name": "EmptyRow",
+     "file": "src/components/app/EmptyRow.jsx",
+     "css": "",
+     "about": "Dòng rỗng của bảng danh sách — 1 khuôn cho mọi danh sách.",
+     "props": [
+      {
+       "name": "colSpan",
+       "def": "",
+       "note": "Số cột ô rỗng trải ngang, thường bằng số cột của bảng.",
+       "type": "number"
+      },
+      {
+       "name": "entity",
+       "def": "",
+       "note": "Tên đối tượng ghép vào câu `I001-27` khi danh sách chưa có bản ghi nào.",
+       "type": "string"
+      },
+      {
+       "name": "hasRecords",
+       "def": "",
+       "note": "Có bản ghi mà bộ lọc không ra thì hiện câu `I001-28`, ngược lại hiện câu `I001-27`.",
+       "type": "boolean"
+      }
+     ]
+    }
+   ]
+  },
+  "status-tags": {
+   "classes": [
+    {
+     "base": "tag",
+     "tag": "span",
+     "files": [
+      "src/components/app/CatalogStatusTag.css",
+      "src/components/app/TableCalendar.css",
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "tag"
+     ],
+     "variant": [
+      "catalog-status",
+      "tag-absent",
+      "tag-active",
+      "tag-applied",
+      "tag-applied-sub",
+      "tag-approved",
+      "tag-cancelled",
+      "tag-category",
+      "tag-checked-in",
+      "tag-completed",
+      "tag-discipline",
+      "tag-dot",
+      "tag-draft",
+      "tag-exception",
+      "tag-expired",
+      "tag-in-progress",
+      "tag-inactive",
+      "tag-penalty",
+      "tag-pending-approval",
+      "tag-registrant",
+      "tag-rejected",
+      "tag-relationship",
+      "tag-relationship-child",
+      "tag-relationship-father",
+      "tag-relationship-mother",
+      "tag-relationship-sibling",
+      "tag-relationship-spouse",
+      "tag-status",
+      "tag-table",
+      "tag-type",
+      "tag-unassigned",
+      "tag-visit-other",
+      "tag-visit-standard",
+      "tag-waiting-check-in"
+     ],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "tag tag-absent",
+     "label": "tag-absent"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-applied",
+     "label": "tag-applied"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-approved",
+     "label": "tag-approved"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-cancelled",
+     "label": "tag-cancelled"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-category",
+     "label": "tag-category"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-checked-in",
+     "label": "tag-checked-in"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-completed",
+     "label": "tag-completed"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-dot",
+     "label": "tag-dot"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-draft",
+     "label": "tag-draft"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-exception",
+     "label": "tag-exception"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-in-progress",
+     "label": "tag-in-progress"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-penalty",
+     "label": "tag-penalty"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-pending-approval",
+     "label": "tag-pending-approval"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-registrant",
+     "label": "tag-registrant"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-rejected",
+     "label": "tag-rejected"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-relationship",
+     "label": "tag-relationship"
+    }
+   ],
+   "sources": [
+    {
+     "name": "CatalogStatusTag",
+     "file": "src/components/app/CatalogStatusTag.jsx",
+     "css": "src/components/app/CatalogStatusTag.css",
+     "about": "Tag trạng thái danh mục Nháp · Hoạt động · Vô hiệu hóa — 1 bảng màu cho Quầy tiếp đón và Buồng thăm gặp, dùng ở Danh sách, Chi tiết, tiêu đề màn Sửa.",
+     "props": [
+      {
+       "name": "status",
+       "def": "",
+       "note": "Trạng thái danh mục quyết định màu: `DRAFT` lớp `tag-draft`, `ACTIVE` lớp `tag-active`, `INACTIVE` lớp `tag-inactive`.",
+       "type": "'DRAFT' | 'ACTIVE' | 'INACTIVE'"
+      },
+      {
+       "name": "label",
+       "def": "",
+       "note": "Chữ hiển thị trong tag, truyền nguyên văn từ nơi gọi.",
+       "type": "string"
+      },
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp CSS thêm vào sau các lớp `tag tag-dot catalog-status`.",
+       "type": "string"
+      }
+     ]
+    },
+    {
+     "name": "AppointmentStatusTag",
+     "file": "src/components/app/AppointmentStatusTag.jsx",
+     "css": "",
+     "about": "Tag trạng thái lịch hẹn dùng chung Danh sách · Chi tiết · tiêu đề màn Sửa (UX-L2 tag cùng nhãn cùng màu, UX-A3, QD-330 D9).",
+     "props": [
+      {
+       "name": "status",
+       "def": "",
+       "note": "Trạng thái lịch hẹn quyết định nhãn và lớp màu `tag-{trạng thái}`, rỗng thì không vẽ gì.",
+       "type": "string"
+      },
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã định danh gắn lên thẻ tag.",
+       "type": "string"
+      },
+      {
+       "name": "hidden",
+       "def": "",
+       "note": "Ẩn thẻ tag bằng thuộc tính `hidden` của HTML, tag vẫn có trong DOM.",
+       "type": "boolean"
+      }
+     ]
+    },
+    {
+     "name": "AppTag",
+     "file": "src/components/app/AppTag.jsx",
+     "css": "",
+     "about": "Tag — antd Tag (FE-07: PM1 dùng thẳng Tag của antd). className = lớp màu chuẩn vàng (.tt-lon .tt-ckin · .dc-tag .t-dm · .tag-ad…)",
+     "props": [
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp màu của tag, ghép sau lớp `app-reset` trên Tag của antd.",
+       "type": "string"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung hiển thị bên trong tag.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "value-tags": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "tooltip-full": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "tabs": {
+   "classes": [
+    {
+     "base": "app-tabs",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppTabs.css"
+     ],
+     "base_list": [
+      "app-tabs"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "tabs",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppTabs.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/pages/VisitConfig/VisitConfig.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "tabs"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "tab-n",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppTabs.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/pages/VisitConfig/VisitConfig.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "tab-n"
+     ],
+     "variant": [],
+     "state": [
+      ":hover",
+      "is-current"
+     ]
+    },
+    {
+     "base": "tab-panel",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppTabs.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/NotificationSettings/NotificationSettings.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/pages/VisitConfig/VisitConfig.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "tab-panel"
+     ],
+     "variant": [],
+     "state": [
+      "is-current"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppTabs",
+     "file": "src/components/app/AppTabs.jsx",
+     "css": "src/components/app/AppTabs.css",
+     "about": "AppTabs — bọc antd Tabs như PM1 (FE-07). Thanh tab vẽ bằng renderTabBar theo khuôn chuẩn vàng (.tabs > .tab-n · tab đang mở .dang),",
+     "props": [
+      {
+       "name": "items",
+       "def": "",
+       "note": "Danh sách tab dạng `{ key, label, id, children }`, mọi tab đều vẽ sẵn trong DOM.",
+       "type": "array"
+      },
+      {
+       "name": "activeKey",
+       "def": "",
+       "note": "Khoá của tab đang mở, nút tab và khung nội dung trùng khoá được gắn `activeClass`.",
+       "type": "string"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi người dùng bấm 1 nút tab, nhận `key` của tab đó.",
+       "type": "function"
+      },
+      {
+       "name": "barClassName",
+       "def": "'tabs'",
+       "note": "Lớp CSS của thanh chứa các nút tab.",
+       "type": "string"
+      },
+      {
+       "name": "tabClassName",
+       "def": "'tab-n'",
+       "note": "Lớp CSS của từng nút tab.",
+       "type": "string"
+      },
+      {
+       "name": "paneClassName",
+       "def": "'tab-panel'",
+       "note": "Lớp CSS của khung bọc nội dung mỗi tab.",
+       "type": "string"
+      },
+      {
+       "name": "activeClass",
+       "def": "'is-current'",
+       "note": "Lớp CSS gắn thêm cho nút tab và khung nội dung của tab đang mở.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "pager": {
+   "classes": [
+    {
+     "base": "pager",
+     "tag": "span",
+     "files": [
+      "src/components/app/TableCalendar.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "pager"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "useListResult",
+     "file": "src/components/app/useListResult.js",
+     "css": "",
+     "about": "Kết quả quay về Danh sách sau Tạo / Sửa — cùng cách màn mẫu Danh sách lịch hẹn:",
+     "props": [
+      {
+       "name": "tableSelector",
+       "def": "",
+       "note": "Bộ chọn CSS của bảng, dùng tìm dòng có `data-row-key` trùng mã vừa tạo hoặc sửa để cuộn tới.",
+       "type": "string"
+      },
+      {
+       "name": "created",
+       "def": "",
+       "note": "Gọi khi URL có `created`, nhận mã và tham số URL, trả câu toast báo tạo thành công.",
+       "type": "function"
+      },
+      {
+       "name": "updated",
+       "def": "",
+       "note": "Gọi khi URL có `updated`, nhận mã và tham số URL, trả câu toast báo sửa thành công.",
+       "type": "function"
+      },
+      {
+       "name": "deleted",
+       "def": "",
+       "note": "Gọi khi URL có `deleted`, nhận mã và tham số URL, trả câu toast báo xoá, không truyền thì không báo.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "page-select": {
+   "classes": [
+    {
+     "base": "pg-i",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "pg-i"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "pg-v",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "pg-v"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "pg-page-select",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "pg-page-select"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "PageSelect",
+     "file": "src/components/app/PageSelect.jsx",
+     "css": "",
+     "about": "Ô «Chọn trang» cạnh chữ «Trang X/Y» ở mọi thanh phân trang (QD-373 · UX-L1): dùng ô chọn có tìm chung;",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã định danh chuyển tới ô chọn có tìm bên trong.",
+       "type": "string"
+      },
+      {
+       "name": "current",
+       "def": "",
+       "note": "Số trang đang xem, hiện làm giá trị đã chọn của ô.",
+       "type": "number"
+      },
+      {
+       "name": "total",
+       "def": "",
+       "note": "Tổng số trang, ô liệt kê từ 1 tới số này và luôn có ít nhất 1 trang.",
+       "type": "number"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi người dùng chọn 1 trang khác trang đang xem, nhận số trang mới.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "filter-panel": {
+   "classes": [
+    {
+     "base": "filter-panel",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "filter-panel"
+     ],
+     "variant": [],
+     "state": [
+      "is-fixed"
+     ]
+    },
+    {
+     "base": "filter-body",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "filter-body"
+     ],
+     "variant": [],
+     "state": [
+      "has-route"
+     ]
+    },
+    {
+     "base": "filter-cell",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "filter-cell"
+     ],
+     "variant": [
+      "filter-wide"
+     ],
+     "state": []
+    },
+    {
+     "base": "filter-more",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "filter-more"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "filter-row-more",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "filter-row-more"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "btn",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "btn"
+     ],
+     "variant": [
+      "btn-danger",
+      "btn-danger-ghost",
+      "btn-outline",
+      "btn-primary"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-primary"
+     ]
+    },
+    {
+     "base": "filter-clear",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "filter-clear"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "filter-panel is-fixed",
+     "label": "is-fixed (trạng thái)",
+     "state": true
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger",
+     "label": "btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger-ghost",
+     "label": "btn-danger-ghost"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-outline",
+     "label": "btn-outline"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-primary",
+     "label": "btn-primary"
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppSearchInput",
+     "file": "src/components/app/AppSearchInput.jsx",
+     "css": "",
+     "about": "AppSearchInput — ô tìm dùng chung của mọi danh sách (UX-L1 · UX-L6, QD-304).",
+     "props": [
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp bố cục của màn, ghép trước lớp `filter-search` của khung ô tìm.",
+       "type": "string"
+      },
+      {
+       "name": "value",
+       "def": "",
+       "note": "Chữ trong ô tìm, có chữ thì thêm lớp `has-text` để hiện nút X.",
+       "type": "string"
+      },
+      {
+       "name": "onChange",
+       "def": "",
+       "note": "Gọi khi gõ chữ hoặc bấm nút X, nhận chuỗi mới (chuỗi rỗng khi bấm X).",
+       "type": "function"
+      },
+      {
+       "name": "id",
+       "def": "",
+       "note": "Id của ô nhập tìm kiếm.",
+       "type": "string"
+      },
+      {
+       "name": "placeholder",
+       "def": "",
+       "note": "Chữ gợi ý hiện khi ô tìm trống.",
+       "type": "string"
+      },
+      {
+       "name": "title",
+       "def": "",
+       "note": "Chữ chú thích hiện khi di chuột lên ô nhập.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "table-calendar": {
+   "classes": [
+    {
+     "base": "table-calendar-no-drag",
+     "tag": "svg",
+     "files": [
+      "src/components/app/TableCalendar.css"
+     ],
+     "base_list": [
+      "table-calendar-no-drag"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "table-calendar-grip",
+     "tag": "button",
+     "files": [
+      "src/components/app/TableCalendar.css"
+     ],
+     "base_list": [
+      "table-calendar-grip"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    },
+    {
+     "base": "table-calendar-text",
+     "tag": "span",
+     "files": [
+      "src/components/app/TableCalendar.css"
+     ],
+     "base_list": [
+      "table-calendar-text"
+     ],
+     "variant": [],
+     "state": [
+      "is-tiny"
+     ]
+    },
+    {
+     "base": "table-calendar-name",
+     "tag": "span",
+     "files": [
+      "src/components/app/TableCalendar.css"
+     ],
+     "base_list": [
+      "table-calendar-name"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "table-calendar-line",
+     "tag": "span",
+     "files": [
+      "src/components/app/TableCalendar.css"
+     ],
+     "base_list": [
+      "table-calendar-line"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "tag",
+     "tag": "span",
+     "files": [
+      "src/components/app/CatalogStatusTag.css",
+      "src/components/app/TableCalendar.css",
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskDetail/ReceptionDeskDetail.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "tag"
+     ],
+     "variant": [
+      "catalog-status",
+      "tag-absent",
+      "tag-active",
+      "tag-applied",
+      "tag-applied-sub",
+      "tag-approved",
+      "tag-cancelled",
+      "tag-category",
+      "tag-checked-in",
+      "tag-completed",
+      "tag-discipline",
+      "tag-dot",
+      "tag-draft",
+      "tag-exception",
+      "tag-expired",
+      "tag-in-progress",
+      "tag-inactive",
+      "tag-penalty",
+      "tag-pending-approval",
+      "tag-registrant",
+      "tag-rejected",
+      "tag-relationship",
+      "tag-relationship-child",
+      "tag-relationship-father",
+      "tag-relationship-mother",
+      "tag-relationship-sibling",
+      "tag-relationship-spouse",
+      "tag-status",
+      "tag-table",
+      "tag-type",
+      "tag-unassigned",
+      "tag-visit-other",
+      "tag-visit-standard",
+      "tag-waiting-check-in"
+     ],
+     "state": []
+    },
+    {
+     "base": "table-calendar-resize",
+     "tag": "span",
+     "files": [
+      "src/components/app/TableCalendar.css"
+     ],
+     "base_list": [
+      "table-calendar-resize"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    },
+    {
+     "base": "table-calendar-mark",
+     "tag": "i",
+     "files": [
+      "src/components/app/TableCalendar.css"
+     ],
+     "base_list": [
+      "table-calendar-mark"
+     ],
+     "variant": [],
+     "state": [
+      "is-five",
+      "is-half",
+      "is-hour",
+      "is-quarter"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "tag tag-absent",
+     "label": "tag-absent"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-applied",
+     "label": "tag-applied"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-approved",
+     "label": "tag-approved"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-cancelled",
+     "label": "tag-cancelled"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-category",
+     "label": "tag-category"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-checked-in",
+     "label": "tag-checked-in"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-completed",
+     "label": "tag-completed"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-dot",
+     "label": "tag-dot"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-draft",
+     "label": "tag-draft"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-exception",
+     "label": "tag-exception"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-in-progress",
+     "label": "tag-in-progress"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-penalty",
+     "label": "tag-penalty"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-pending-approval",
+     "label": "tag-pending-approval"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-registrant",
+     "label": "tag-registrant"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-rejected",
+     "label": "tag-rejected"
+    },
+    {
+     "tag": "span",
+     "cls": "tag tag-relationship",
+     "label": "tag-relationship"
+    }
+   ],
+   "sources": [
+    {
+     "name": "TableCalendar",
+     "file": "src/components/app/TableCalendar.jsx",
+     "css": "src/components/app/TableCalendar.css",
+     "about": "Table calendar — ONE shared look for the 3 places that show tables over time (QD-230):",
+     "props": [
+      {
+       "name": "rows",
+       "def": "",
+       "note": "Danh sách buồng, mỗi dòng `{ code, label, shifts, group, unassigned }`, giờ mở cửa các dòng dựng nên trục giờ làm việc.",
+       "type": "array"
+      },
+      {
+       "name": "items",
+       "def": "",
+       "note": "Danh sách khối lịch, mỗi khối có `key`, `tableCode`, `start`, `duration`, `variant`, `movable`, `resizable` và `content` để vẽ lên dòng buồng.",
+       "type": "array"
+      },
+      {
+       "name": "now",
+       "def": "null",
+       "note": "Phút hiện tại trong ngày, nằm trong trục thì vẽ vạch giờ hiện tại và nhãn giờ trên thước.",
+       "type": "number"
+      },
+      {
+       "name": "pastUntil",
+       "def": "null",
+       "note": "Phút trong ngày mà phần trục trước đó được phủ lớp đã qua giờ hiện tại.",
+       "type": "number"
+      },
+      {
+       "name": "minDuration",
+       "def": "10",
+       "note": "Thời lượng nhỏ nhất (phút) khi kéo mép phải để đổi thời lượng khối.",
+       "type": "number"
+      },
+      {
+       "name": "maxDuration",
+       "def": "45",
+       "note": "Thời lượng lớn nhất (phút) khi kéo mép phải để đổi thời lượng khối.",
+       "type": "number"
+      },
+      {
+       "name": "cornerLabel",
+       "def": "'Buồng thăm gặp'",
+       "note": "Chữ ở ô góc trên trái, đứng đầu cột tên buồng.",
+       "type": "string"
+      },
+      {
+       "name": "validate",
+       "def": "",
+       "note": "Gọi khi đang kéo, nhận khối, mã buồng, phút bắt đầu, thời lượng và kiểu kéo, trả về lý do không hợp lệ hoặc chuỗi rỗng.",
+       "type": "function"
+      },
+      {
+       "name": "onMove",
+       "def": "",
+       "note": "Gọi khi thả khối ở chỗ hợp lệ khác chỗ cũ, nhận khối, `{ tableCode, start, duration }` mới và kiểu kéo `move` hoặc `resize`.",
+       "type": "function"
+      },
+      {
+       "name": "onInvalidDrop",
+       "def": "",
+       "note": "Gọi khi thả ra ngoài lịch, thả chỗ không hợp lệ hoặc bấm Esc, nhận lý do và kiểu kéo (`cancel` khi bấm Esc).",
+       "type": "function"
+      },
+      {
+       "name": "onEmptyClick",
+       "def": "",
+       "note": "Gọi khi bấm vào chỗ trống trên dòng buồng, nhận mã buồng, phút tại điểm bấm và `closed` nếu bấm vào vùng nghỉ trưa hoặc ngoài giờ.",
+       "type": "function"
+      },
+      {
+       "name": "ghostAt",
+       "def": "",
+       "note": "Gọi khi rê chuột trên chỗ trống, nhận mã buồng và phút, trả về `{ tableCode, start, duration, reason }` để vẽ khối gợi ý hoặc `null` để ẩn.",
+       "type": "function"
+      },
+      {
+       "name": "legend",
+       "def": "null",
+       "note": "Nội dung chú giải hiện ở thanh công cụ, bên trái nút thu phóng.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "notice",
+       "def": "''",
+       "note": "Câu thông báo hiện trên lưới lịch, hỗ trợ chữ in đậm, rỗng thì không hiện.",
+       "type": "string"
+      },
+      {
+       "name": "initialScrollMinute",
+       "def": "null",
+       "note": "Phút cần cuộn tới khi mở lịch, đổi `scrollKey` hoặc đổi mức thu phóng, bỏ trống thì cuộn về đầu trục.",
+       "type": "number"
+      },
+      {
+       "name": "scrollKey",
+       "def": "''",
+       "note": "Khoá cuộn, đổi giá trị thì lịch cuộn lại tới `initialScrollMinute`.",
+       "type": "string"
+      },
+      {
+       "name": "maxHeight",
+       "def": "",
+       "note": "Chiều cao tối đa của vùng cuộn lịch, bỏ trống thì không giới hạn.",
+       "type": "number | string"
+      }
+     ]
+    },
+    {
+     "name": "TablePicker",
+     "file": "src/components/app/TablePicker.jsx",
+     "css": "",
+     "about": "Time and table picker for Create / Edit appointment and Counter registration — the SPECIFIC logic on top of the shared TableCalendar look (QD-230).",
+     "props": null
+    }
+   ]
+  },
+  "pm1-sync": {
+   "classes": [
+    {
+     "base": "pm1-sync-bar",
+     "tag": "span",
+     "files": [
+      "src/components/app/Pm1SyncBar.css"
+     ],
+     "base_list": [
+      "pm1-sync-bar"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "pm1-sync-time",
+     "tag": "span",
+     "files": [
+      "src/components/app/Pm1SyncBar.css"
+     ],
+     "base_list": [
+      "pm1-sync-time"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "btn",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "btn"
+     ],
+     "variant": [
+      "btn-chip",
+      "btn-danger",
+      "btn-danger-ghost",
+      "btn-hl",
+      "btn-loading-ring",
+      "btn-outline",
+      "btn-primary"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-primary"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "btn btn-chip",
+     "label": "btn-chip"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger",
+     "label": "btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger-ghost",
+     "label": "btn-danger-ghost"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-hl",
+     "label": "btn-hl"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-outline",
+     "label": "btn-outline"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-primary",
+     "label": "btn-primary"
+    }
+   ],
+   "sources": [
+    {
+     "name": "Pm1SyncBar",
+     "file": "src/components/app/Pm1SyncBar.jsx",
+     "css": "src/components/app/Pm1SyncBar.css",
+     "about": "Thời điểm đồng bộ dữ liệu người cai nghiện từ PM1 + nút «Đồng bộ lại» (T957 Q-10) — đặt ở tiêu đề khối NGƯỜI CAI NGHIỆN",
+     "props": [
+      {
+       "name": "onSync",
+       "def": "",
+       "note": "Gọi khi bấm nút Đồng bộ lại, sau khi cập nhật giờ đồng bộ, không nhận đối số.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "detail-blocks": {
+   "classes": [
+    {
+     "base": "adjust",
+     "tag": "div",
+     "files": [
+      "src/components/app/ExemptionInfo.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "adjust"
+     ],
+     "variant": [
+      "adjust-frame",
+      "exempt-info"
+     ],
+     "state": []
+    },
+    {
+     "base": "relative-detail-head",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "relative-detail-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "relative-avatar",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "relative-avatar"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "relative-detail-name",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "relative-detail-name"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "adjust-label",
+     "tag": "div",
+     "files": [
+      "src/components/app/ExemptionInfo.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "adjust-label"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "adjust-value",
+     "tag": "div",
+     "files": [
+      "src/components/app/ExemptionInfo.css",
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "adjust-value"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "visit-conditions-link",
+     "tag": "a",
+     "files": [
+      "src/components/app/VisitConditions.css"
+     ],
+     "base_list": [
+      "visit-conditions-link"
+     ],
+     "variant": [],
+     "state": [
+      ":focus-visible",
+      ":hover"
+     ]
+    },
+    {
+     "base": "dlg-h",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "dlg-h"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "RelativeDetailBody",
+     "file": "src/components/app/RelativeDetailBody.jsx",
+     "css": "",
+     "about": "Thân popup \"Thông tin chi tiết thân nhân\" dùng chung mọi màn: avatar chữ tắt + họ tên ở đầu, các dòng thông tin bên dưới (QD-262)",
+     "props": [
+      {
+       "name": "relative",
+       "def": "",
+       "note": "Bản ghi thân nhân cần hiện, dựng avatar chữ tắt, họ tên và các dòng thông tin, bỏ trống thì hiện khối rỗng.",
+       "type": "object"
+      }
+     ]
+    },
+    {
+     "name": "VisitConditions",
+     "file": "src/components/app/VisitConditions.jsx",
+     "css": "src/components/app/VisitConditions.css",
+     "about": "Link «Tra cứu điều kiện thăm gặp» + popup (QD-231) — đặt ở góc phải tiêu đề khối NGƯỜI CAI NGHIỆN của màn Tạo mới / Chỉnh sửa / Đăng ký tại quầy.",
+     "props": null
+    }
+   ]
+  },
+  "avatar": {
+   "classes": [
+    {
+     "base": "app-avatar",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-avatar"
+     ],
+     "variant": [],
+     "state": [
+      "is-lg",
+      "is-md",
+      "is-sm"
+     ]
+    },
+    {
+     "base": "app-avatar-group",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-avatar-group"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppAvatar",
+     "file": "src/components/app/AppAvatar.jsx",
+     "css": "",
+     "about": "Avatar — chữ cái đầu của TÊN (từ cuối của họ tên), hình tròn nền màu chủ đạo, cùng hình .relative-avatar (QD-399).",
+     "props": [
+      {
+       "name": "name",
+       "def": "",
+       "note": "Họ tên, lấy chữ cái đầu của từ cuối làm chữ hiển thị và dùng làm nhãn cho trình đọc màn hình.",
+       "type": "string"
+      },
+      {
+       "name": "size",
+       "def": "'md'",
+       "note": "Cỡ avatar: `sm` 28px, `md` 36px hoặc `lg` 44px.",
+       "type": "'sm' | 'md' | 'lg'"
+      },
+      {
+       "name": "title",
+       "def": "",
+       "note": "Chữ gợi ý khi rê chuột, bỏ trống thì dùng `name`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "count-badge": {
+   "classes": [
+    {
+     "base": "app-badge-anchor",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-badge-anchor"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-badge",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-badge"
+     ],
+     "variant": [],
+     "state": [
+      "is-dot"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppBadge",
+     "file": "src/components/app/AppBadge.jsx",
+     "css": "",
+     "about": "Số đếm gắn vào phần tử khác (icon, nút) — UX-A16 · UX-L26 (QD-380, QD-399). Nhãn chữ đứng riêng thì dùng tag (UX-A3), không dùng control này.",
+     "props": [
+      {
+       "name": "count",
+       "def": "0",
+       "note": "Số đếm hiển thị, bằng 0 thì ẩn huy hiệu.",
+       "type": "number"
+      },
+      {
+       "name": "max",
+       "def": "99",
+       "note": "Ngưỡng số lớn nhất, `count` vượt ngưỡng thì hiện dạng `max+`.",
+       "type": "number"
+      },
+      {
+       "name": "dot",
+       "def": "false",
+       "note": "Chỉ hiện chấm tròn, không hiện số, kể cả khi `count` bằng 0.",
+       "type": "boolean"
+      },
+      {
+       "name": "label",
+       "def": "",
+       "note": "Nhãn cho trình đọc màn hình, bỏ trống thì dùng số đếm hoặc câu `Có mục mới` khi bật `dot`.",
+       "type": "string"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Phần tử được gắn huy hiệu, như icon hoặc nút.",
+       "type": "ReactNode"
+      }
+     ]
+    }
+   ]
+  },
+  "progress": {
+   "classes": [
+    {
+     "base": "app-progress",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-progress"
+     ],
+     "variant": [],
+     "state": [
+      "is-ok",
+      "is-warn"
+     ]
+    },
+    {
+     "base": "app-progress-head",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-progress-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-progress-track",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-progress-track"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-progress-fill",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-progress-fill"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppProgress",
+     "file": "src/components/app/AppProgress.jsx",
+     "css": "",
+     "about": "Thanh tiến độ — tỷ lệ đã dùng / tổng (quỹ lượt, sức chứa, tiến độ xử lý) (QD-399).",
+     "props": [
+      {
+       "name": "label",
+       "def": "",
+       "note": "Nhãn bên trái phía trên thanh, đồng thời là nhãn của thanh cho trình đọc màn hình.",
+       "type": "string"
+      },
+      {
+       "name": "value",
+       "def": "0",
+       "note": "Giá trị đã đạt, chia cho `max` ra phần trăm tô đầy, giới hạn trong 0 tới 100.",
+       "type": "number"
+      },
+      {
+       "name": "max",
+       "def": "100",
+       "note": "Giá trị tổng, bằng 0 hoặc nhỏ hơn thì thanh để trống.",
+       "type": "number"
+      },
+      {
+       "name": "tone",
+       "def": "'brand'",
+       "note": "Tông màu thanh: `brand` màu chủ đạo, `ok` hoặc `warn`.",
+       "type": "'brand' | 'ok' | 'warn'"
+      },
+      {
+       "name": "showValue",
+       "def": "true",
+       "note": "Hiện chữ `value / max` ở bên phải phía trên thanh.",
+       "type": "boolean"
+      }
+     ]
+    }
+   ]
+  },
+  "divider": {
+   "classes": [
+    {
+     "base": "app-divider",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-divider"
+     ],
+     "variant": [],
+     "state": [
+      "has-label"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppDivider",
+     "file": "src/components/app/AppDivider.jsx",
+     "css": "",
+     "about": "Đường phân cách — tách 2 nhóm nội dung trong cùng 1 khối, có thể kèm nhãn ở giữa (QD-399).",
+     "props": [
+      {
+       "name": "label",
+       "def": "",
+       "note": "Nhãn ở giữa đường phân cách, bỏ trống thì chỉ kẻ đường ngang.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "accordion": {
+   "classes": [
+    {
+     "base": "app-accordion",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-accordion"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-accordion-item",
+     "tag": "details",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-accordion-item"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-accordion-head",
+     "tag": "summary",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-accordion-head"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    },
+    {
+     "base": "app-accordion-body",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-accordion-body"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppAccordion",
+     "file": "src/components/app/AppAccordion.jsx",
+     "css": "",
+     "about": "Khối thu gọn — nhiều mục nội dung phụ, mở từng mục khi cần (câu hỏi thường gặp, chi tiết phụ) (QD-399).",
+     "props": [
+      {
+       "name": "items",
+       "def": "[]",
+       "note": "Danh sách mục `{ key, title, children, open }`, mỗi mục là 1 khối thu gọn, `open` cho mục mở sẵn.",
+       "type": "array"
+      }
+     ]
+    }
+   ]
+  },
+  "media-gallery": {
+   "classes": [
+    {
+     "base": "app-media-thumb",
+     "tag": "button",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-thumb"
+     ],
+     "variant": [],
+     "state": [
+      ":focus-visible",
+      ":hover"
+     ]
+    },
+    {
+     "base": "app-media-pic",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-pic"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-media-play",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-play"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-media-dur",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-dur"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-media-cap",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-cap"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-media-title",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-title"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-media-meta",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-meta"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-media-grid",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-media-grid"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppMediaGallery",
+     "file": "src/components/app/AppMediaGallery.jsx",
+     "css": "",
+     "about": "Hiển thị ảnh và video — lưới ảnh thu nhỏ, bấm để xem lớn trong hộp (QD-400 D4 A, góp ý Designer:",
+     "props": [
+      {
+       "name": "id",
+       "def": "'mediaXem'",
+       "note": "Mã của hộp xem lớn, cũng làm tiền tố mã tiêu đề hộp.",
+       "type": "string"
+      },
+      {
+       "name": "items",
+       "def": "[]",
+       "note": "Danh sách ảnh và video `{ key, type, src, poster, title, meta, duration }`, thiếu `src` thì hiện ô giữ chỗ kèm icon.",
+       "type": "array"
+      }
+     ]
+    }
+   ]
+  },
+  "tree": {
+   "classes": [
+    {
+     "base": "app-tree",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-tree"
+     ],
+     "variant": [
+      "ant-tree"
+     ],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppTree",
+     "file": "src/components/app/AppTree.jsx",
+     "css": "",
+     "about": "Cây thư mục, cây tổ chức — bọc antd Tree như bộ App* (FE-07) (QD-400 D4 A, góp ý Designer).",
+     "props": [
+      {
+       "name": "treeData",
+       "def": "[]",
+       "note": "Dữ liệu cây, mỗi nút `{ key, title, children }`.",
+       "type": "array"
+      },
+      {
+       "name": "defaultExpandedKeys",
+       "def": "",
+       "note": "Danh sách khoá các nhánh mở sẵn khi hiện cây.",
+       "type": "array"
+      },
+      {
+       "name": "defaultExpandAll",
+       "def": "false",
+       "note": "Mở sẵn mọi nhánh khi hiện cây.",
+       "type": "boolean"
+      },
+      {
+       "name": "onSelect",
+       "def": "",
+       "note": "Gọi khi người dùng chọn 1 nút, nhận khoá của nút được chọn.",
+       "type": "function"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "stat-cards": {
+   "classes": [
+    {
+     "base": "app-stat-cards",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-stat-cards"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-stat",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-stat"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-stat-label",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-stat-label"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-stat-value",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-stat-value"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-stat-delta",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-stat-delta"
+     ],
+     "variant": [],
+     "state": [
+      "is-down",
+      "is-up"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppStatCards",
+     "file": "src/components/app/AppStatCards.jsx",
+     "css": "",
+     "about": "Thẻ số liệu — hàng thẻ nhãn · giá trị · so sánh, đối chiếu Design System PM1 (QD-401).",
+     "props": [
+      {
+       "name": "items",
+       "def": "[]",
+       "note": "Danh sách thẻ `{ key, label, value, delta, tone }`, giá trị số định dạng dấu chấm hàng nghìn, `tone` nhận `up`, `down` hoặc `flat`.",
+       "type": "array"
+      }
+     ]
+    }
+   ]
+  },
+  "scroll-shadow": {
+   "classes": [
+    {
+     "base": "app-scroll-shadow",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-scroll-shadow"
+     ],
+     "variant": [],
+     "state": [
+      "is-end",
+      "is-start"
+     ]
+    },
+    {
+     "base": "app-scroll-shadow-body",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-scroll-shadow-body"
+     ],
+     "variant": [],
+     "state": [
+      ":focus-visible"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppScrollShadow",
+     "file": "src/components/app/AppScrollShadow.jsx",
+     "css": "",
+     "about": "Bóng cuộn — vùng cuộn ngang (bảng rộng, dải thẻ) hiện bóng mờ ở mép còn nội dung bị che, hết thì bóng tắt (QD-406 D16 A).",
+     "props": [
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung cuộn ngang bên trong vùng có bóng mép.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "label",
+       "def": "",
+       "note": "Nhãn của vùng cuộn cho trình đọc màn hình.",
+       "type": "string"
+      },
+      {
+       "name": "className",
+       "def": "''",
+       "note": "Lớp CSS thêm vào khung ngoài, nối sau lớp `app-scroll-shadow`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "color-swatch": {
+   "classes": [
+    {
+     "base": "app-swatch-list",
+     "tag": "ul",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-swatch-list"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-swatch",
+     "tag": "li",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-swatch"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-swatch-chip",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-swatch-chip"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-swatch-text",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-swatch-text"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-swatch-hex",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-swatch-hex"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppColorSwatch",
+     "file": "src/components/app/AppColorSwatch.jsx",
+     "css": "",
+     "about": "Ô mẫu màu — hiện 1 bảng màu kèm tên token và mã màu ĐỌC TỪ CSS THẬT lúc chạy, không gõ mã màu (QD-406 D16 A).",
+     "props": [
+      {
+       "name": "colors",
+       "def": "[]",
+       "note": "Danh sách màu `{ name, token }`, `token` là biến CSS, mã màu đọc từ CSS lúc chạy.",
+       "type": "array"
+      }
+     ]
+    }
+   ]
+  },
+  "notebox": {
+   "classes": [
+    {
+     "base": "note-box",
+     "tag": "div",
+     "files": [
+      "src/components/app/NoteBox.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "note-box"
+     ],
+     "variant": [],
+     "state": [
+      "is-muted"
+     ]
+    },
+    {
+     "base": "note-box-line",
+     "tag": "div",
+     "files": [
+      "src/components/app/NoteBox.css"
+     ],
+     "base_list": [
+      "note-box-line"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "note-box-title",
+     "tag": "div",
+     "files": [
+      "src/components/app/NoteBox.css"
+     ],
+     "base_list": [
+      "note-box-title"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "NoteBox",
+     "file": "src/components/app/NoteBox.jsx",
+     "css": "src/components/app/NoteBox.css",
+     "about": "Ghi chú trong khối form — 1 nguồn cho mọi màn PM2 (UX-L13, QD-347).",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã gắn vào khung ghi chú.",
+       "type": "string"
+      },
+      {
+       "name": "title",
+       "def": "'Lưu ý'",
+       "note": "Tiêu đề khung, ở dạng 1 dòng thì đứng trước câu kèm dấu hai chấm.",
+       "type": "string"
+      },
+      {
+       "name": "items",
+       "def": "",
+       "note": "Danh sách ý, mỗi ý 1 gạch đầu dòng, bắt buộc khi không truyền `line`.",
+       "type": "array"
+      },
+      {
+       "name": "line",
+       "def": "",
+       "note": "Câu thông tin 1 dòng, có giá trị thì hiện khung tông xám và bỏ qua `items`.",
+       "type": "ReactNode"
+      }
+     ]
+    }
+   ]
+  },
+  "table-hint": {
+   "classes": [
+    {
+     "base": "table-hint",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "table-hint"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "note-box",
+     "tag": "div",
+     "files": [
+      "src/components/app/NoteBox.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "note-box"
+     ],
+     "variant": [],
+     "state": [
+      "is-muted"
+     ]
+    },
+    {
+     "base": "note-box-line",
+     "tag": "div",
+     "files": [
+      "src/components/app/NoteBox.css"
+     ],
+     "base_list": [
+      "note-box-line"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "note-box-title",
+     "tag": "div",
+     "files": [
+      "src/components/app/NoteBox.css"
+     ],
+     "base_list": [
+      "note-box-title"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "NoteBox",
+     "file": "src/components/app/NoteBox.jsx",
+     "css": "src/components/app/NoteBox.css",
+     "about": "Ghi chú trong khối form — 1 nguồn cho mọi màn PM2 (UX-L13, QD-347).",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã gắn vào khung ghi chú.",
+       "type": "string"
+      },
+      {
+       "name": "title",
+       "def": "'Lưu ý'",
+       "note": "Tiêu đề khung, ở dạng 1 dòng thì đứng trước câu kèm dấu hai chấm.",
+       "type": "string"
+      },
+      {
+       "name": "items",
+       "def": "",
+       "note": "Danh sách ý, mỗi ý 1 gạch đầu dòng, bắt buộc khi không truyền `line`.",
+       "type": "array"
+      },
+      {
+       "name": "line",
+       "def": "",
+       "note": "Câu thông tin 1 dòng, có giá trị thì hiện khung tông xám và bỏ qua `items`.",
+       "type": "ReactNode"
+      }
+     ]
+    }
+   ]
+  },
+  "setup-hint": {
+   "classes": [
+    {
+     "base": "setup-hint",
+     "tag": "div",
+     "files": [
+      "src/components/app/SetupHint.css"
+     ],
+     "base_list": [
+      "setup-hint"
+     ],
+     "variant": [],
+     "state": [
+      "is-inline"
+     ]
+    },
+    {
+     "base": "setup-hint-link",
+     "tag": "a",
+     "files": [
+      "src/components/app/SetupHint.css"
+     ],
+     "base_list": [
+      "setup-hint-link"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "SetupHint",
+     "file": "src/components/app/SetupHint.jsx",
+     "css": "src/components/app/SetupHint.css",
+     "about": "Màn chưa có dữ liệu cần cài đặt trước — 1 khuôn cho mọi màn PM2 (UX-L14, QD-348).",
+     "props": [
+      {
+       "name": "what",
+       "def": "",
+       "note": "Tên dữ liệu còn thiếu, điền vào chỗ {0} của câu I001-94.",
+       "type": "string"
+      },
+      {
+       "name": "screen",
+       "def": "",
+       "note": "Tên màn cài đặt, làm chữ của link ở chỗ {1} khi không truyền `parts`.",
+       "type": "string"
+      },
+      {
+       "name": "to",
+       "def": "",
+       "note": "Đường dẫn mở màn cài đặt, gắn vào link.",
+       "type": "string"
+      },
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã gắn vào khối gợi ý.",
+       "type": "string"
+      },
+      {
+       "name": "inline",
+       "def": "false",
+       "note": "Hiện gọn trong dòng thay vì khối thay vùng dữ liệu trống.",
+       "type": "boolean"
+      },
+      {
+       "name": "parts",
+       "def": "",
+       "note": "Câu đã cắt sẵn `{ truoc, link, sau }` dùng cho câu khác I001-94, có giá trị thì bỏ qua `what` và `screen`.",
+       "type": "object"
+      },
+      {
+       "name": "onLinkClick",
+       "def": "",
+       "note": "Gọi khi bấm link, không nhận đối số, có giá trị thì chặn chuyển trang theo `to`.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "warning": {
+   "classes": [
+    {
+     "base": "eff",
+     "tag": "div",
+     "files": [
+      "src/pages/ReceptionDeskShared/CounterDialogs.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "eff"
+     ],
+     "variant": [
+      "form-footer"
+     ],
+     "state": [
+      "is-warning"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "eff form-footer",
+     "label": "form-footer"
+    }
+   ],
+   "sources": []
+  },
+  "toast": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "version-notice": {
+   "classes": [
+    {
+     "base": "vn-region",
+     "tag": "div",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-region"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vn-chip",
+     "tag": "div",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-chip"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vn-seal",
+     "tag": "span",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-seal"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vn-new",
+     "tag": "span",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-new"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vn-new-icon",
+     "tag": "span",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-new-icon"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vn-label",
+     "tag": "span",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-label"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vn-action-icon",
+     "tag": "span",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-action-icon"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "vn-action",
+     "tag": "span",
+     "files": [
+      "src/components/app/VersionNotice.css"
+     ],
+     "base_list": [
+      "vn-action"
+     ],
+     "variant": [
+      "ant-btn"
+     ],
+     "state": [
+      ":focus-visible",
+      ":hover"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "VersionNotice",
+     "file": "src/components/app/VersionNotice.jsx",
+     "css": "src/components/app/VersionNotice.css",
+     "about": "Thanh báo phiên bản mới — cơ chế dò chép NGUYÊN PM5 STG (TrangNT5 chốt 19/10/2026, nguyên văn: \"t mún làm theo PM5\").",
+     "props": [
+      {
+       "name": "label",
+       "def": "LABEL",
+       "note": "Tuỳ chọn. Chữ chính trên thanh. Mặc định là chữ PM5 «Đã có phiên bản mới của hệ thống»; trang Design System truyền câu của TrangNT5 (TrangNT5 chốt 19/10/2026).",
+       "type": "string"
+      },
+      {
+       "name": "actionLabel",
+       "def": "ACTION_LABEL",
+       "note": "Tuỳ chọn. Chữ nút tải lại. Mặc định «Tải lại ngay».",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "field-error": {
+   "classes": [],
+   "examples": [],
+   "sources": []
+  },
+  "spinner": {
+   "classes": [
+    {
+     "base": "app-spinner",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-spinner"
+     ],
+     "variant": [],
+     "state": [
+      "is-lg"
+     ]
+    },
+    {
+     "base": "app-spinner-ring",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-spinner-ring"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppSpinner",
+     "file": "src/components/app/AppSpinner.jsx",
+     "css": "",
+     "about": "Vòng xoay đang tải — báo đang xử lý khi chưa biết bao lâu xong (QD-399). Có chữ đi kèm thì đọc được bằng trình đọc màn hình.",
+     "props": [
+      {
+       "name": "text",
+       "def": "",
+       "note": "Chữ hiện cạnh vòng xoay, có giá trị thì không dùng `label`.",
+       "type": "string"
+      },
+      {
+       "name": "size",
+       "def": "'md'",
+       "note": "Cỡ vòng xoay: `md` 18px hoặc `lg` 32px.",
+       "type": "'md' | 'lg'"
+      },
+      {
+       "name": "label",
+       "def": "'Đang tải'",
+       "note": "Nhãn cho trình đọc màn hình, chỉ dùng khi không có `text`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "skeleton": {
+   "classes": [
+    {
+     "base": "app-skeleton",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-skeleton"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-skeleton-line",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-skeleton-line"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppSkeleton",
+     "file": "src/components/app/AppSkeleton.jsx",
+     "css": "",
+     "about": "Khung chờ tải — giữ chỗ đúng hình nội dung sắp hiện để màn không nhảy bố cục (QD-399).",
+     "props": [
+      {
+       "name": "lines",
+       "def": "3",
+       "note": "Số dòng giữ chỗ, từ 2 dòng trở lên thì dòng cuối ngắn 60%.",
+       "type": "number"
+      },
+      {
+       "name": "label",
+       "def": "'Đang tải nội dung'",
+       "note": "Nhãn cho trình đọc màn hình.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "empty-states": {
+   "classes": [
+    {
+     "base": "btn",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "btn"
+     ],
+     "variant": [
+      "btn-chip",
+      "btn-danger",
+      "btn-danger-ghost",
+      "btn-hl",
+      "btn-loading-ring",
+      "btn-outline",
+      "btn-primary"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-primary"
+     ]
+    },
+    {
+     "base": "app-empty",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-empty"
+     ],
+     "variant": [],
+     "state": [
+      "is-error"
+     ]
+    },
+    {
+     "base": "app-empty-icon",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-empty-icon"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-empty-text",
+     "tag": "p",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-empty-text"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-empty-action",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-empty-action"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "btn btn-chip",
+     "label": "btn-chip"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger",
+     "label": "btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger-ghost",
+     "label": "btn-danger-ghost"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-hl",
+     "label": "btn-hl"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-outline",
+     "label": "btn-outline"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-primary",
+     "label": "btn-primary"
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppEmptyState",
+     "file": "src/components/app/AppEmptyState.jsx",
+     "css": "",
+     "about": "Trạng thái rỗng và lỗi của vùng dữ liệu, đối chiếu Design System PM1 (QD-401).",
+     "props": [
+      {
+       "name": "kind",
+       "def": "'empty'",
+       "note": "Loại trạng thái, quyết định icon, `error` thì khối mang vai trò cảnh báo.",
+       "type": "'empty' | 'forbidden' | 'error' | 'deleted'"
+      },
+      {
+       "name": "text",
+       "def": "",
+       "note": "Câu hiển thị dưới icon.",
+       "type": "string"
+      },
+      {
+       "name": "action",
+       "def": "",
+       "note": "Nút hành động hiện dưới câu, như nút tạo mới hoặc Thử lại.",
+       "type": "ReactNode"
+      }
+     ]
+    }
+   ]
+  },
+  "confirm": {
+   "classes": [
+    {
+     "base": "dlg",
+     "tag": "span",
+     "files": [
+      "src/components/app/ExemptionInfo.css",
+      "src/components/app/NotifyRecipientsField.css",
+      "src/pages/AppointmentForm/AppointmentForm.css",
+      "src/pages/CounterRegistration/popup.css",
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "dlg"
+     ],
+     "variant": [
+      "dlg-notify"
+     ],
+     "state": []
+    },
+    {
+     "base": "dlg-ic",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "dlg-ic"
+     ],
+     "variant": [],
+     "state": [
+      "is-danger"
+     ]
+    },
+    {
+     "base": "dlg-close",
+     "tag": "span",
+     "files": [
+      "src/components/app/DialogCloseButton.css"
+     ],
+     "base_list": [
+      "dlg-close"
+     ],
+     "variant": [],
+     "state": [
+      ":hover"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "dlg-ic is-danger",
+     "label": "is-danger (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppModal",
+     "file": "src/components/app/AppModal.jsx",
+     "css": "",
+     "about": "AppModal — bọc antd Modal (FE-07). antd lo: cổng đưa ra body · Escape · bấm nền để đóng · giữ focus trong popup.",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã định danh gắn vào lớp phủ bọc ngoài popup.",
+       "type": "string"
+      },
+      {
+       "name": "open",
+       "def": "",
+       "note": "Bật thì hiện popup và nhớ phần tử đang giữ focus, tắt thì trả focus về phần tử đó.",
+       "type": "boolean"
+      },
+      {
+       "name": "onClose",
+       "def": "",
+       "note": "Gọi khi người dùng nhấn Esc hoặc bấm ra nền ngoài khung popup.",
+       "type": "function"
+      },
+      {
+       "name": "labelledBy",
+       "def": "",
+       "note": "Mã phần tử tiêu đề, gắn vào `aria-labelledby` của khung popup để trình đọc màn hình đọc tên.",
+       "type": "string"
+      },
+      {
+       "name": "dlgClassName",
+       "def": "'dlg'",
+       "note": "Lớp CSS của khung popup, thêm lớp riêng như `dlg dlg-notify` để đổi giao diện.",
+       "type": "string"
+      },
+      {
+       "name": "dlgStyle",
+       "def": "",
+       "note": "Style riêng gắn thẳng vào khung `.dlg` của popup.",
+       "type": "object"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung bên trong khung popup, thường gồm phần đầu, thân và chân.",
+       "type": "ReactNode"
+      }
+     ]
+    },
+    {
+     "name": "DialogIcon",
+     "file": "src/components/app/DialogIcon.jsx",
+     "css": "",
+     "about": "Icon tiêu đề hộp xác nhận có rủi ro — 1 nguồn cho mọi popup PM2 (UX-F4, QD-300 D47, QD-334).",
+     "props": [
+      {
+       "name": "level",
+       "def": "'warn'",
+       "note": "Mức rủi ro: `danger` thêm lớp `is-danger` cho thao tác không hoàn tác, `warn` cho thao tác có ảnh hưởng.",
+       "type": "'warn' | 'danger'"
+      }
+     ]
+    },
+    {
+     "name": "DialogCloseButton",
+     "file": "src/components/app/DialogCloseButton.jsx",
+     "css": "src/components/app/DialogCloseButton.css",
+     "about": "Nút X đóng popup DÙNG CHUNG — khuôn vuông có viền (chuẩn hoá mọi nút X popup).",
+     "props": [
+      {
+       "name": "onClick",
+       "def": "",
+       "note": "Gọi khi người dùng bấm nút X.",
+       "type": "function"
+      },
+      {
+       "name": "title",
+       "def": "'Đóng'",
+       "note": "Chữ gợi ý hiện khi rê chuột lên nút, nhãn đọc màn hình luôn là `Đóng`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "delete-appointment": {
+   "classes": [
+    {
+     "base": "dlg-h",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "dlg-h"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-t",
+     "tag": "h3",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "dlg-t"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-b",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "dlg-b"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-text",
+     "tag": "div",
+     "files": [
+      "src/pages/ReceptionDeskShared/CounterDialogs.css"
+     ],
+     "base_list": [
+      "dlg-text"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-f",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "dlg-f"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "btn",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "btn"
+     ],
+     "variant": [
+      "btn-danger",
+      "btn-danger-ghost",
+      "btn-outline",
+      "btn-primary"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-primary"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "btn btn-danger",
+     "label": "btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger-ghost",
+     "label": "btn-danger-ghost"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-outline",
+     "label": "btn-outline"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-primary",
+     "label": "btn-primary"
+    }
+   ],
+   "sources": [
+    {
+     "name": "DeleteAppointmentDialog",
+     "file": "src/components/app/DeleteAppointmentDialog.jsx",
+     "css": "",
+     "about": "Hộp «Xóa lịch hẹn» dùng chung cho Danh sách lịch hẹn và Chi tiết lịch hẹn — chỉ lịch Nháp và Từ chối duyệt được xóa (ROW_ACTIONS_BY_STATUS).",
+     "props": [
+      {
+       "name": "open",
+       "def": "",
+       "note": "Bật thì hiện hộp xác nhận xóa lịch hẹn.",
+       "type": "boolean"
+      },
+      {
+       "name": "code",
+       "def": "",
+       "note": "Mã lịch hẹn ghép vào tiêu đề và câu thông báo theo mã `C001-01`, hiện chữ đậm.",
+       "type": "string"
+      },
+      {
+       "name": "onClose",
+       "def": "",
+       "note": "Gọi khi người dùng bấm Hủy, nút X, nhấn Esc hoặc bấm ra nền.",
+       "type": "function"
+      },
+      {
+       "name": "onConfirm",
+       "def": "",
+       "note": "Gọi khi người dùng bấm nút Xóa lịch hẹn, không truyền đối số.",
+       "type": "function"
+      }
+     ]
+    }
+   ]
+  },
+  "cancel-appointment": {
+   "classes": [
+    {
+     "base": "dlg-h",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "dlg-h"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-t",
+     "tag": "h3",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "dlg-t"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-b",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "dlg-b"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "fld",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "fld"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "required-mark",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "required-mark"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-f",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "dlg-f"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "ta",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "ta"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "btn",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "btn"
+     ],
+     "variant": [
+      "btn-danger",
+      "btn-danger-ghost",
+      "btn-outline",
+      "btn-primary"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-primary"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "btn btn-danger",
+     "label": "btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger-ghost",
+     "label": "btn-danger-ghost"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-outline",
+     "label": "btn-outline"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-primary",
+     "label": "btn-primary"
+    }
+   ],
+   "sources": [
+    {
+     "name": "CancelAppointmentDialog",
+     "file": "src/components/app/CancelAppointmentDialog.jsx",
+     "css": "src/components/app/CancelAppointmentDialog.css",
+     "about": "Hộp «Hủy lịch hẹn» dùng chung cho Danh sách lịch hẹn và Chi tiết lịch hẹn — cùng 1 thao tác thì cùng 1 hộp (Sổ PM2 QD-244, D28A).",
+     "props": [
+      {
+       "name": "open",
+       "def": "",
+       "note": "Bật thì hiện hộp hủy lịch hẹn, mỗi lần mở xóa trắng lý do, ghi chú, lỗi và nạp lại người nhận thông báo.",
+       "type": "boolean"
+      },
+      {
+       "name": "onClose",
+       "def": "",
+       "note": "Gọi khi người dùng bấm Hủy, nút X, nhấn Esc hoặc bấm ra nền.",
+       "type": "function"
+      },
+      {
+       "name": "onConfirm",
+       "def": "",
+       "note": "Gọi khi hợp lệ, nhận object gồm `reason`, `reasonLabel`, `note`, `recipients` và `withProposal`.",
+       "type": "function"
+      },
+      {
+       "name": "records",
+       "def": "[]",
+       "note": "Các lịch hẹn đang hủy, dùng để nạp người nhận thông báo mặc định và kiểm thiếu người nhận.",
+       "type": "array"
+      }
+     ]
+    }
+   ]
+  },
+  "leave-guard": {
+   "classes": [
+    {
+     "base": "dlg-h",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "dlg-h"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-t",
+     "tag": "h3",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "dlg-t"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-b",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentList/AppointmentList.css",
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "dlg-b"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "dlg-f",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "dlg-f"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "btn",
+     "tag": "span",
+     "files": [
+      "src/pages/ReceptionDeskList/ReceptionDeskList.css",
+      "src/styles/base.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "btn"
+     ],
+     "variant": [
+      "btn-danger",
+      "btn-danger-ghost",
+      "btn-outline",
+      "btn-primary"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-primary"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "btn btn-danger",
+     "label": "btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-danger-ghost",
+     "label": "btn-danger-ghost"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-outline",
+     "label": "btn-outline"
+    },
+    {
+     "tag": "span",
+     "cls": "btn btn-primary",
+     "label": "btn-primary"
+    }
+   ],
+   "sources": [
+    {
+     "name": "LeaveGuard",
+     "file": "src/components/app/LeaveGuard.jsx",
+     "css": "",
+     "about": "Hộp \"Thay đổi chưa lưu\" dùng chung — MSG-CF-03 (Message List, đúng chữ QC-04) · QD-300 D47. Tách từ WEB-54 (VisitConfig).",
+     "props": null
+    }
+   ]
+  },
+  "drawer": {
+   "classes": [
+    {
+     "base": "app-drawer-mask",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-drawer-mask"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-drawer",
+     "tag": "aside",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-drawer"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-drawer-head",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-drawer-head"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-drawer-body",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-drawer-body"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-drawer-foot",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-drawer-foot"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppDrawer",
+     "file": "src/components/app/AppDrawer.jsx",
+     "css": "",
+     "about": "Ngăn kéo bên phải — xem hoặc sửa nhanh 1 bản ghi mà không rời màn danh sách (QD-399).",
+     "props": [
+      {
+       "name": "open",
+       "def": "",
+       "note": "Bật thì hiện ngăn kéo bên phải, tắt thì không vẽ gì.",
+       "type": "boolean"
+      },
+      {
+       "name": "title",
+       "def": "",
+       "note": "Tiêu đề ở đầu ngăn kéo, cũng là tên đọc màn hình của ngăn kéo.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "onClose",
+       "def": "",
+       "note": "Gọi khi người dùng bấm nút X, nhấn Esc hoặc bấm ra nền tối.",
+       "type": "function"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung thân ngăn kéo.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "footer",
+       "def": "",
+       "note": "Nội dung chân ngăn kéo, thường là các nút, bỏ trống thì không có phần chân.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã định danh của ngăn kéo, tiêu đề lấy mã này thêm hậu tố `Title`, bỏ trống thì dùng `appDrawerTitle`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "popover": {
+   "classes": [
+    {
+     "base": "app-popover",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-popover"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-popover-panel",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-popover-panel"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "form-btn",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "form-btn"
+     ],
+     "variant": [
+      "form-btn-danger",
+      "form-btn-primary",
+      "form-btn-success",
+      "form-btn-warning"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-outline"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-danger",
+     "label": "form-btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-primary",
+     "label": "form-btn-primary"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-success",
+     "label": "form-btn-success"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-warning",
+     "label": "form-btn-warning"
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppPopover",
+     "file": "src/components/app/AppPopover.jsx",
+     "css": "",
+     "about": "Hộp nổi — giải thích ngắn hoặc vài thao tác phụ, mở khi bấm, không chặn màn (QD-399).",
+     "props": [
+      {
+       "name": "triggerLabel",
+       "def": "",
+       "note": "Chữ trên nút mở hộp nổi, cũng làm tên đọc màn hình khi không có `title`.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "triggerIcon",
+       "def": "",
+       "note": "Tên icon trong bộ `lib/icons` hiện trên nút mở hộp nổi.",
+       "type": "string"
+      },
+      {
+       "name": "title",
+       "def": "",
+       "note": "Tiêu đề in đầu hộp nổi, bỏ trống thì không có dòng tiêu đề.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung bên trong hộp nổi.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "id",
+       "def": "'appPopover'",
+       "note": "Mã định danh của hộp nổi, nút mở trỏ tới qua `aria-controls`.",
+       "type": "string"
+      }
+     ]
+    }
+   ]
+  },
+  "import-excel": {
+   "classes": [
+    {
+     "base": "app-import",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-import"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-import-step",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-import-step"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-import-no",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-import-no"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-import-drop",
+     "tag": "label",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-import-drop"
+     ],
+     "variant": [],
+     "state": [
+      ":focus-within",
+      ":hover"
+     ]
+    },
+    {
+     "base": "app-import-drop-icon",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-import-drop-icon"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-import-progress",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-import-progress"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-import-table",
+     "tag": "div",
+     "files": [
+      "src/components/app/AppPm1Controls.css"
+     ],
+     "base_list": [
+      "app-import-table"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "form-btn",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/pages/ReceptionDeskShared/ReceptionDeskForm.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "form-btn"
+     ],
+     "variant": [
+      "form-btn-danger",
+      "form-btn-primary",
+      "form-btn-success",
+      "form-btn-warning"
+     ],
+     "state": [
+      ":active",
+      ":hover",
+      "is-outline"
+     ]
+    }
+   ],
+   "examples": [
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-danger",
+     "label": "form-btn-danger"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-primary",
+     "label": "form-btn-primary"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-success",
+     "label": "form-btn-success"
+    },
+    {
+     "tag": "span",
+     "cls": "form-btn form-btn-warning",
+     "label": "form-btn-warning"
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppImportExcel",
+     "file": "src/components/app/AppImportExcel.jsx",
+     "css": "",
+     "about": "Nhập khẩu Excel — thân hộp thoại 3 bước, đối chiếu Design System PM1 (QD-401). Đặt trong AppModal rộng 720px.",
+     "props": [
+      {
+       "name": "labels",
+       "def": "",
+       "note": "Chữ hiển thị gồm `template`, `templateButton`, `pick`, `dropHint`, `preview`, `errorCount`, `errorColumn`, trong đó `{0}` thay bằng số dòng lỗi.",
+       "type": "object"
+      },
+      {
+       "name": "fileName",
+       "def": "",
+       "note": "Tên tệp đã chọn, hiện trong vùng chọn tệp thay cho chữ gợi ý.",
+       "type": "string"
+      },
+      {
+       "name": "percent",
+       "def": "",
+       "note": "Tiến độ đọc tệp từ 0 tới 100, chỉ hiện thanh tiến độ khi là số.",
+       "type": "number"
+      },
+      {
+       "name": "columns",
+       "def": "[]",
+       "note": "Các cột bảng xem trước, mỗi cột gồm `key` và `title`, luôn thêm cột lỗi ở cuối.",
+       "type": "array"
+      },
+      {
+       "name": "rows",
+       "def": "[]",
+       "note": "Các dòng xem trước, dòng có trường `error` tô đỏ, mảng rỗng thì ẩn bước 3.",
+       "type": "array"
+      },
+      {
+       "name": "onTemplate",
+       "def": "",
+       "note": "Gọi khi người dùng bấm nút tải tệp mẫu.",
+       "type": "function"
+      },
+      {
+       "name": "onPick",
+       "def": "",
+       "note": "Gọi khi người dùng chọn tệp, nhận đối tượng tệp đầu tiên.",
+       "type": "function"
+      }
+     ]
+    },
+    {
+     "name": "AppModal",
+     "file": "src/components/app/AppModal.jsx",
+     "css": "",
+     "about": "AppModal — bọc antd Modal (FE-07). antd lo: cổng đưa ra body · Escape · bấm nền để đóng · giữ focus trong popup.",
+     "props": [
+      {
+       "name": "id",
+       "def": "",
+       "note": "Mã định danh gắn vào lớp phủ bọc ngoài popup.",
+       "type": "string"
+      },
+      {
+       "name": "open",
+       "def": "",
+       "note": "Bật thì hiện popup và nhớ phần tử đang giữ focus, tắt thì trả focus về phần tử đó.",
+       "type": "boolean"
+      },
+      {
+       "name": "onClose",
+       "def": "",
+       "note": "Gọi khi người dùng nhấn Esc hoặc bấm ra nền ngoài khung popup.",
+       "type": "function"
+      },
+      {
+       "name": "labelledBy",
+       "def": "",
+       "note": "Mã phần tử tiêu đề, gắn vào `aria-labelledby` của khung popup để trình đọc màn hình đọc tên.",
+       "type": "string"
+      },
+      {
+       "name": "dlgClassName",
+       "def": "'dlg'",
+       "note": "Lớp CSS của khung popup, thêm lớp riêng như `dlg dlg-notify` để đổi giao diện.",
+       "type": "string"
+      },
+      {
+       "name": "dlgStyle",
+       "def": "",
+       "note": "Style riêng gắn thẳng vào khung `.dlg` của popup.",
+       "type": "object"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung bên trong khung popup, thường gồm phần đầu, thân và chân.",
+       "type": "ReactNode"
+      }
+     ]
+    }
+   ]
+  },
+  "shell": {
+   "classes": [
+    {
+     "base": "bc",
+     "tag": "nav",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "bc"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "nav",
+     "tag": "nav",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "nav"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "nv",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "nv"
+     ],
+     "variant": [],
+     "state": [
+      ":focus-within",
+      ":hover"
+     ]
+    },
+    {
+     "base": "sb",
+     "tag": "aside",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "sb"
+     ],
+     "variant": [
+      "min"
+     ],
+     "state": []
+    },
+    {
+     "base": "sb-nav",
+     "tag": "nav",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "sb-nav"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "sb-g",
+     "tag": "div",
+     "files": [
+      "src/styles/base.css"
+     ],
+     "base_list": [
+      "sb-g"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "sb-i",
+     "tag": "a",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "sb-i"
+     ],
+     "variant": [],
+     "state": [
+      ":hover",
+      "on"
+     ]
+    },
+    {
+     "base": "sb-dot",
+     "tag": "span",
+     "files": [
+      "src/styles/base.css",
+      "src/styles/pm1-look.css"
+     ],
+     "base_list": [
+      "sb-dot"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "a",
+     "cls": "sb-i on",
+     "label": "on (trạng thái)",
+     "state": true
+    }
+   ],
+   "sources": [
+    {
+     "name": "AppLayout",
+     "file": "src/layout/AppLayout.jsx",
+     "css": "",
+     "about": "Page frame — 60px brand-red header (base.css .hd; QD-405 L2) · horizontal menu like PM1 · sidebar of the active group · breadcrumb row",
+     "props": [
+      {
+       "name": "cluster",
+       "def": "",
+       "note": "Khóa cụm trong `menuConfig`, dùng lấy menu và sidebar mặc định khi không truyền riêng.",
+       "type": "string"
+      },
+      {
+       "name": "menu",
+       "def": "",
+       "note": "Menu ngang riêng của trang, mỗi mục gồm `icon`, `label`, `href`, `active`, `children`, bỏ trống thì lấy theo `cluster`.",
+       "type": "array"
+      },
+      {
+       "name": "sidebar",
+       "def": "",
+       "note": "Sidebar riêng của trang dạng `{ group, items }`, bỏ trống thì lấy theo `cluster`.",
+       "type": "object"
+      },
+      {
+       "name": "breadcrumb",
+       "def": "",
+       "note": "Các mục đường dẫn dạng `{ label, href, onClick }`, mục cuối là màn hiện tại in đậm.",
+       "type": "array"
+      },
+      {
+       "name": "descriptions",
+       "def": "{}",
+       "note": "Chữ gợi ý theo nhãn nút, nạp vào tooltip một lần lúc dựng khung.",
+       "type": "object"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Nội dung chính của trang, đặt trong vùng `.shell`.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "overlays",
+       "def": "",
+       "note": "Các popup vẽ sau khung trang.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "brand",
+       "def": "",
+       "note": "Nhận diện riêng dạng `{ logo, alt, title, sub }`, bỏ trống thì dùng quốc huy và tên phần mềm.",
+       "type": "object"
+      },
+      {
+       "name": "fixedAccount",
+       "def": "",
+       "note": "Tài khoản cố định dạng `{ initials, name, role }`, truyền vào thì ẩn menu đổi tài khoản.",
+       "type": "object"
+      }
+     ]
+    }
+   ]
+  },
+  "breadcrumb": {
+   "classes": [],
+   "examples": [],
+   "sources": [
+    {
+     "name": "Breadcrumb",
+     "file": "",
+     "css": "",
+     "about": "",
+     "props": null
+    }
+   ]
+  },
+  "stepper": {
+   "classes": [
+    {
+     "base": "stepper",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "stepper"
+     ],
+     "variant": [
+      "form-footer"
+     ],
+     "state": []
+    },
+    {
+     "base": "step",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "step"
+     ],
+     "variant": [],
+     "state": [
+      ":hover",
+      "is-current",
+      "is-done"
+     ]
+    },
+    {
+     "base": "step-number",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "step-number"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "step-title",
+     "tag": "span",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/form.css"
+     ],
+     "base_list": [
+      "step-title"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "card",
+     "tag": "div",
+     "files": [
+      "src/pages/AppointmentDetail/AppointmentDetail.css",
+      "src/styles/base.css",
+      "src/styles/form.css",
+      "src/styles/tokens.css"
+     ],
+     "base_list": [
+      "card"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [
+    {
+     "tag": "div",
+     "cls": "stepper form-footer",
+     "label": "form-footer"
+    }
+   ],
+   "sources": []
+  },
+  "link": {
+   "classes": [
+    {
+     "base": "app-link",
+     "tag": "a",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-link"
+     ],
+     "variant": [],
+     "state": [
+      ":focus-visible",
+      ":hover",
+      "is-disabled"
+     ]
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppLink",
+     "file": "src/components/app/AppLink.jsx",
+     "css": "",
+     "about": "Liên kết — chuyển tới màn hoặc trang khác, nằm trong câu chữ (QD-399). Thao tác thay đổi dữ liệu thì dùng Nút, không dùng liên kết.",
+     "props": [
+      {
+       "name": "href",
+       "def": "",
+       "note": "Địa chỉ đích của liên kết, bỏ khi liên kết bị khóa.",
+       "type": "string"
+      },
+      {
+       "name": "children",
+       "def": "",
+       "note": "Chữ hiển thị của liên kết.",
+       "type": "ReactNode"
+      },
+      {
+       "name": "external",
+       "def": "false",
+       "note": "Bật thì mở tab mới, thêm `rel` an toàn và icon mũi tên ra ngoài.",
+       "type": "boolean"
+      },
+      {
+       "name": "disabled",
+       "def": "false",
+       "note": "Bật thì bỏ `href`, thêm lớp `is-disabled` và `aria-disabled` nên không bấm đi được.",
+       "type": "boolean"
+      },
+      {
+       "name": "...rest",
+       "def": "",
+       "type": "object",
+       "note": "thuộc tính còn lại, chuyển xuống phần tử gốc"
+      }
+     ]
+    }
+   ]
+  },
+  "kbd": {
+   "classes": [
+    {
+     "base": "app-kbd-group",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-kbd-group"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-kbd-plus",
+     "tag": "span",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-kbd-plus"
+     ],
+     "variant": [],
+     "state": []
+    },
+    {
+     "base": "app-kbd",
+     "tag": "kbd",
+     "files": [
+      "src/components/app/AppExtraControls.css"
+     ],
+     "base_list": [
+      "app-kbd"
+     ],
+     "variant": [],
+     "state": []
+    }
+   ],
+   "examples": [],
+   "sources": [
+    {
+     "name": "AppKbd",
+     "file": "src/components/app/AppKbd.jsx",
+     "css": "",
+     "about": "Phím tắt — hiện tên phím trong câu hướng dẫn, nhiều phím nối bằng dấu + (QD-406 D16 A).",
+     "props": [
+      {
+       "name": "keys",
+       "def": "[]",
+       "note": "Mảng tên phím, mỗi phím vẽ trong thẻ `kbd` và nối nhau bằng dấu `+`.",
+       "type": "array"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

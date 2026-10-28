@@ -1,0 +1,9 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Toast góc trên — chép nguyên khối CSS mà script chung của bản HTML tự chèn vào <head> */
+.toast-area{position:fixed;top:72px;right:24px;z-index:2000;display:flex;flex-direction:column;align-items:flex-end;gap:8px;pointer-events:none}   /* góc trên bên phải, dưới thanh tiêu đề (như PM1) */
+.tmsg{display:inline-flex;align-items:center;gap:10px;background:var(--color-surface, #FFFFFF);border-radius:8px;padding:11px 14px;box-shadow:rgba(0,0,0,.08) 0 6px 16px 0,rgba(0,0,0,.12) 0 3px 6px -4px;font-size:14px;line-height:1.5;color:rgba(0,0,0,.88);max-width:min(560px,92vw);pointer-events:auto;animation:tv 240ms ease-out}
+.tmsg svg{width:16px;height:16px;flex:none}.tmsg.is-success > svg{color:var(--palette-x389e0d, #389E0D)}.tmsg.is-error > svg{color:var(--palette-xff4d4f, #FF4D4F)}.tmsg.is-warning > svg{color:var(--palette-xd48806, #D48806)}   /* chỉ tô icon trạng thái, nút X giữ xám */
+.tmsg-x{display:inline-grid;place-items:center;width:24px;height:24px;margin-left:4px;padding:0;border:0;background:transparent;cursor:pointer;color:rgba(0,0,0,.65);border-radius:4px;flex:none}   /* icon X căn giữa đúng tâm dòng thay ký tự × · xám .65 (~7:1), .45 nhìn như bị khóa */
+.tmsg .tmsg-x svg{width:16px;height:16px;color:inherit}   /* 16px nét 2 như icon trạng thái và nút X popup — 14px chỉ còn nét 1,17px, ở màn 1x trông đứt */
+.tmsg-x:hover{background:rgba(0,0,0,.06);color:rgba(0,0,0,.88)}.tmsg.is-closed{animation:tr 200ms ease-in forwards}
+@keyframes tv{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}@keyframes tr{to{opacity:0;transform:translateY(-12px)}}

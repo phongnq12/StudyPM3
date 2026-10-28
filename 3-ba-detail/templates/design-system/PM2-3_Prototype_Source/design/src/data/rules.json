@@ -1,0 +1,1192 @@
+{
+ "generatedAt": "2026-10-20T03:17:42.292Z",
+ "sections": [
+  {
+   "title": "🅰️ UX-A — NỀN CHUNG: CHỮ · ICON · CĂN DÒNG · MÀU",
+   "rules": [
+    {
+     "code": "UX-A1",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "**`1` font dùng chung toàn hệ thống**, khai `1` chỗ ở file token",
+     "threshold": "`system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif` · ⛔ webfont · nút, ô nhập, ô chọn **kế thừa** font trang",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-A2",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "**Thang chữ PM2**",
+     "threshold": "Tiêu đề màn **`18/700` cao dòng `28`** *(`1` cái mỗi màn · đo PM1 thật `30/09/2026`, token `V5` — thay mức `24/700` cũ)* · tiêu đề popup `18/700` · tiêu đề đầu mục `14/700` IN HOA · tab `14/500`, đang chọn `600` · nhãn trường `13/400` · nội dung `14/400`, giá trị nhấn `14/600` · ghi chú, mô tả phụ, breadcrumb `13/400` · 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-423)`)* **chữ menu trái `.sb-i` và menu trên `.nv-b` cùng `13px`** *(menu trái trước `14px`)*, nguyên văn: *\"Xem lại size text menu này có vẻ hơi to\"* · tiêu đề cột bảng `12/600` IN HOA giãn `0.6px` · chữ đỏ dưới ô `12` · ⛔ bậc `11/15/18/22px` ngoài ngoại lệ đã chốt",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-A3",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "**Tag và thẻ trạng thái**",
+     "threshold": "🔴 *(ĐỔI 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-428)`, trước `13/500` cao `24` dòng `18`)* **`12/500`, khoảng dòng `16px`, đệm `2px 8px`, cao `22`** *(gồm viền `2px`)* — khai luật chung ở `styles/tokens.css`, áp **MỌI tag** kể cả `.tag-status` và tag cạnh tiêu đề đầu màn, khớp cỡ tag `12px` của Design System. Nguyên văn: *\"size của tag có lẽ cần cho nhỏ lại 1 chút cho cân bằng hơn nhỉ. Cần xử lý đồng bộ all hết\"* · đo `8` màn: `100%` tag `12/500` cao `22` · bo tròn `999px` · 🔴 **mọi lớp tag riêng** *(`dc-tag` `tag-ad` `tn-tag`…, bản React thêm `.ant-tag` `.tag-status` `.adjust-tag` `.person-tag`)* vào **CÙNG `1` dòng quy chuẩn** · tag cạnh tiêu đề màn Sửa, Chi tiết cùng `1` kiểu *(cao, cỡ chữ, đệm, bo)* giữa mọi màn",
+     "check": "Cổng ✔ · `--sync` ✔"
+    },
+    {
+     "code": "UX-A4",
+     "source": "`Verified (QuyChuan B2.2)` · `Verified (TrangNT5 14/10/2026 · PM2 QD-380)`",
+     "rule": "**Màu tag và tông số đếm**",
+     "threshold": "Tag mặc định dùng bộ xanh lá `#D1FAE5 / #A7F3D0 / #047857` · tag có ý nghĩa riêng dùng **đúng lớp màu của màn mẫu**, ⛔ tự chế mã màu · 🆕 *(QD-380, học HeroUI Badge, chỉ áp PM2)* **bảng màu tag `.tag-*` và tông số đếm `.tone-*` chỉ khai ở `styles/base.css`** — CSS khác khai màu cho lớp `.tag-*` = `0` · **mỗi bộ màu (nền · chữ) chỉ `1` tên lớp tông** — `2` lớp `.tone-*` khác tên mà trùng hệt bộ màu = `0`",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-A5",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "**Icon**",
+     "threshold": "Nút và bảng `16px` · menu và tab `18px` · nét **luôn `2`**",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-A6",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "🔴 **CĂN GIỮA DÒNG là luật cứng** — nhãn, giá trị, tag, nút, icon cạnh chữ cùng `1` đường giữa",
+     "threshold": "Tâm hộp chữ và tâm hộp tag lệch **`≤ 1px`** · tag cao `22px` *(ĐỔI 19/10/2026 theo `UX-A3` QD-428, trước \"khoảng dòng `24px` = chiều cao tag\"; đo lại sau khi đổi vẫn đạt)*, tag `vertical-align: top` *(⛔ `middle`, lệch `4,5px`)* · 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-421 ⑦)`)* **trong BẢNG CHỈ XEM và LƯỚI NHÃN – GIÁ TRỊ** *(lưới nhãn – giá trị thêm 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-434 ①)`, nguyên văn: \"để cho data sẽ căn giữa nhé\")* **, ô căn giữa dọc, cả tag** *(`vertical-align: middle`)* để chữ, tag, nút cùng tâm hàng, lệch **`≤ 0,5px`** *(đo Chi tiết quầy tab Buồng thăm gặp: trước lệch `6px`)* · bảng nhập liệu có chữ đỏ dưới ô thì **giữ căn trên** · cột Thao tác dùng khuôn chung `.acts` `+` lớp cột `col-act`, nút icon `32×32` svg `16` *(`UX-C1`)*. Nguyên văn: *\"Sao thao tác lại lệch được nhỉ, cần xử lý căn chỉnh chuẩn 100%. Size icon cũng phải phù hợp\"*",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-A7",
+     "source": "`Verified (Knowhow WEB-06 #2)`",
+     "rule": "**Màu chủ đạo PM2**",
+     "threshold": "Đỏ `#D0202B` — lấy từ token, ⛔ gõ mã màu trong màn",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-A8",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "🔴 **Chữ hiển thị ⛔ chứa mã nội bộ** *(`BR-` · `MSG-` · `TAM-` · `UC` · `GL-` · `WEB-`…)*",
+     "threshold": "Quét **`2` lớp** ra **`0`**: ① chữ đã vẽ ở mọi tab, mọi popup đang ẩn, `placeholder`, `title`, `option` · ② chuỗi trong mã nguồn **ngoài chú thích** *(bắt chữ chỉ hiện khi bấm)*",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-A9",
+     "source": "`Verified (Rules 29-30/09)`",
+     "rule": "🔴 **Tên trường GIỮA CÂU viết thường chữ đầu**, 🔴 **mục ĐẦU SAU DẤU `:` viết HOA**",
+     "threshold": "*\"Vui lòng chọn phân khu thăm gặp\"* · *\"Cần chọn đủ thông tin để tiếp tục: Phân khu thăm gặp, ngày thăm gặp…\"* · chỉ giữ hoa cho **tên riêng thật** và **chữ viết tắt IN HOA** · 🔴 **\"căn cước công dân\" KHÔNG phải tên riêng** *(30/09/2026)*",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-A10",
+     "source": "`Verified (QuyChuan F1④)` · `Verified (TrangNT5 14/10/2026)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-420 ⑦)`",
+     "rule": "**Chữ ⛔ bị cắt, ⛔ tràn khung, ⛔ bị ép** — tên cột bảng **tuyệt đối** ⛔ bị lấp · 🔴 *(19/10/2026, QD-420 ⑦)* **tiêu đề cột MỌI bảng ⛔ xuống dòng** — `th` luôn `white-space: nowrap`, ⛔ ngoại lệ *(bỏ `3` ngoại lệ cũ của bảng công suất, cột `col-wrap` ở danh sách, bảng người đi cùng ở đơn ngoại lệ)*; cột hẹp thì nới bề rộng cột hoặc để bảng cuộn ngang theo `UX-G10`. Nguyên văn: *\"Đảm bảo các Title các bảng không cho xuống dòng\"* · chữ và thẻ nhãn ⛔ vượt mép khung chứa · chữ ⛔ bị ép còn `1`–`2` từ mỗi dòng. 🔴 Hàng «thẻ nhãn + chữ»: hàng `flex-wrap`, chữ `flex: 1 1 260px; min-width: 0`, thẻ ⛔ khoá `nowrap` · icon cỡ cố định ⛔ chứa chữ",
+     "threshold": "① `scrollWidth ≤ clientWidth` ở mọi ô · ⓪ mọi `th` có `white-space: nowrap` và cao đúng `1` dòng chữ · ② cạnh phải phần tử có chữ ≤ mép nội dung khung tổ tiên `+2px` *(bỏ qua vùng cuộn ngang bên trong `.shell`)* · ③ khối chữ `≥ 12` ký tự ⛔ hẹp `< 90px` mà `≥ 4` dòng chữ thật — đo ở `5` bề rộng",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-A11",
+     "source": "`Verified (TrangNT5 29/09, bóc tách màn Tạo)`",
+     "rule": "**Giá trị chọn từ danh mục hiện DẠNG TAG** ở mọi chỗ chỉ xem *(bước xác nhận, màn Chi tiết, bảng)* — đồng bộ mọi nơi · ngày và khung giờ để chữ thường",
+     "threshold": "Đếm giá trị danh mục ở chỗ chỉ xem ⛔ bọc tag = **`0`**",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-A12",
+     "source": "`Verified (TrangNT5 29/09)`",
+     "rule": "🔴 **Chữ hướng dẫn viết cho NGƯỜI DÙNG** — ⛔ đưa căn cứ pháp lý, mã quy tắc, câu diễn giải quy tắc lên giao diện; những thứ đó chỉ ghi trong SRS",
+     "threshold": "Mỗi câu hướng dẫn trả lời được *\"người dùng cần làm gì\"*",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-A13",
+     "source": "`AI Inferred (từ lỗi bóc tách 30/09)`",
+     "rule": "🔴 **Chữ hiển thị phải khớp hành vi thật và chỉ chứa CHỮ** — câu hứa hành vi *(tự làm mới, chạm đúp để tạo)* thì màn phải có hàm thật, ⛔ ký hiệu icon nằm giữa câu",
+     "threshold": "Chuỗi hiển thị chứa ký hiệu icon = **`0`** · mỗi câu hứa hành vi có hàm thật",
+     "check": "Cổng ✔ · Mắt"
+    },
+    {
+     "code": "UX-A14",
+     "source": "`Based on Docs (WCAG 2.1 AA 1.4.3)`",
+     "rule": "**Chữ giá trị ở chế độ chỉ đọc đủ tương phản** — ô khoá, ô chỉ đọc, giá trị màn Chi tiết",
+     "threshold": "Tương phản chữ với nền thật `≥ 4.5:1` · chỉ **CẢNH BÁO**, ⛔ tính HỎNG",
+     "check": "Cổng `--behavior` ⚠️"
+    },
+    {
+     "code": "UX-A15",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-359 ① ⑤)`",
+     "rule": "🔴 **Cùng `1` khái niệm ⇒ cùng `1` chữ ở MỌI màn** — nhãn trường, tên khối, giá trị kết quả, tên vai người. Trước khi đặt chữ cho màn mới, **tra chữ màn đã có** đang dùng cho khái niệm đó rồi dùng lại; `2` màn đang lệch nhau ⇒ báo lệch, ⛔ tự chọn bên. Nguyên văn: *\"Dùng chung là Khớp giống màn hình tạo nhé ==> Sử dụng các khái niệm cùng 1 cái ở mọi nơi phải y hệt nhau nhé\"* · *\"Q15 phải đồng bộ chứ\"* · *\"Q16 Đồng bộ thi: Nó là Đối chiếu CCCD/Giấy tờ tùy thân của thân nhân\"*. Ví dụ đã áp: kết quả đối chiếu giấy tờ «Khớp» *(bỏ «Đạt»)* · khối «Đối chiếu CCCD/Giấy tờ tùy thân của thân nhân» · «thân nhân đi cùng» · nhãn giờ hẹn «Khung giờ»",
+     "threshold": "Mỗi khái niệm trong bảng thuật ngữ của chức năng ra đúng **`1`** chữ trên mọi màn *(Tạo · Sửa · Chi tiết · Danh sách · popup)*",
+     "check": "Agent review"
+    },
+    {
+     "code": "UX-A16",
+     "source": "`Based on Docs (HeroUI Badge)` · `Verified (TrangNT5 14/10/2026 · PM2 QD-380)`",
+     "rule": "🔴 **Số đếm khác tag** — chấm hoặc SỐ **gắn vào phần tử khác** *(chuông, tab, nút lọc)* dùng khuôn số đếm `UX-L26` · nhãn **CHỮ đứng riêng** *(trạng thái, vai người)* dùng tag `UX-A3`. Chỉ áp PM2",
+     "threshold": "Phần tử có lớp kết thúc bằng `-badge` hoặc thuộc khuôn số đếm `UX-L26` mà đang hiện CHỮ, ⛔ phải số *(dạng `99+` vẫn tính là số)* = `0`",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-A17",
+     "source": "`Based on Docs (WCAG 2.2 AA 2.4.7 · canvas PM2 bản ui-ux-pro-max 19/10/2026)`",
+     "rule": "**Viền focus khi dùng bàn phím** — mọi nút, link, phần tử có `tabindex` có viền rõ khi `Tab` tới. Khai **`1` luật chung** ở `styles/tokens.css`, CSS riêng màn ⛔ gỡ viền mà không thay bằng dấu hiệu khác",
+     "threshold": "`outline: 2px solid var(--color-brand)` · lệch ra `2px` · luật chung còn trong CSS nền",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-A18",
+     "source": "`Based on Docs (WCAG 2.2 AA 2.3.3 · canvas PM2 bản ui-ux-pro-max 19/10/2026)`",
+     "rule": "**Giảm chuyển động** — máy người dùng bật chế độ giảm chuyển động thì tắt hiệu ứng chạy. Khai **`1` luật chung** ở `styles/base.css`",
+     "threshold": "`@media (prefers-reduced-motion: reduce)` đặt thời lượng `animation` và `transition` về gần `0` cho mọi phần tử",
+     "check": "Cổng `--sync` ✔"
+    }
+   ]
+  },
+  {
+   "title": "🅱️ UX-B — BỐ CỤC · LƯỚI · KHOẢNG CÁCH",
+   "rules": [
+    {
+     "code": "UX-B1",
+     "source": "`Verified (QuyChuan A1 · TrangNT5 08/10/2026 PM2 QD-310)`",
+     "rule": "**Lưới `12` cột.** Lưới lọc danh sách: mỗi ô `span {n}` với `n` là **bội số của `3`**. 🔴 *(14/10/2026, QD-377 · QD-382)* **Dòng điều kiện CỐ ĐỊNH** dựng flex tỷ lệ `4 · 3 · 3` nên chỉ kiểm **kín mép phải**, luật bội `3` áp cho **dòng mở rộng**. 🔴 **Form Tạo/Sửa theo `UX-B6`** *(điểm tách ô `2` hàng liền nhau lồng nhau)*, ⛔ ràng buộc bội số `3` — `8 4` · `4 2 2 4` · `4 4 4` đều hợp lệ *(ví dụ của TrangNT5, PM2 `QD-310`)*",
+     "threshold": "Mép phải hàng `1` **TRÙNG** mép phải hàng `2` và **kín mép phải lưới**, lệch `≤ 1px`, ở **`5` bề rộng** `1920 · 1600 · 1440 · 1366 · 1280` · bản React đo ô `.filter-body > .filter-cell` · `--sync` so **bố cục lọc giữa mọi danh sách**: lưới `12` cột, mỗi ô span bội `3`, mọi hàng kín mép phải, cùng khung *(khe, đệm, cao ô)*",
+     "check": "Cổng ✔ · `--sync` ✔"
+    },
+    {
+     "code": "UX-B2",
+     "source": "`Verified (QuyChuan A2)`",
+     "rule": "🔴 **Mọi ô GIÃN HẾT CỘT — CẤM `max-width` cho ô.** Muốn hẹp thì **đổi số cột**",
+     "threshold": "Ô hẹp hơn cột **`> 2px`** là SAI · câu lọc: *\"khoảng trống nằm TRONG viền ô hay NGOÀI viền ô?\"* — TRONG ⇒ ⛔ đụng vào",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-B3",
+     "source": "`Verified (QuyChuan A3 · TrangNT5 09/10/2026 PM2 QD-355)`",
+     "rule": "🔴 **Mỗi ô đúng `1` lớp viền**, ⛔ chữa bằng `!important` · 🔴 áp cả **ô gõ tìm bên trong ô chọn nhiều** *(antd Select `mode=multiple`)*: lúc focus ⛔ vẽ khung riêng sau các tag đã chọn. Nguyên văn: *\"Không cần cái này đâu\"* *(ô vuông thừa trong ô chọn bàn của suất riêng)*",
+     "threshold": "Đếm phần tử `border-width > 0` trong `1` ô = **`1`** · ô gõ tìm của ô chọn nhiều khi focus: viền, `outline`, `box-shadow` đều trống",
+     "check": "Cổng ✔ · Mắt *(phần ô chọn nhiều)*"
+    },
+    {
+     "code": "UX-B4",
+     "source": "`Verified (QuyChuan A2 · TrangNT5 07/10/2026 PM1 LOOK pm1-look.css ② · PM2 QD-321 D69)`",
+     "rule": "**Đệm trong ô nhập có icon**",
+     "threshold": "Trái `10px` · phải `46px` *(chừa mũi tên `14px` và nút xoá `14px` — dấu x tròn xám kiểu PM1/antd allowClear, đồng bộ mọi màn; sửa 09/10/2026 từ `16px` của QuyChuan A2 theo quyết định PM1 LOOK mới hơn)* · icon ⛔ tràn viền",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-B5",
+     "source": "`Verified (tokens 29/09)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-420 ③ ④)`",
+     "rule": "**Khoảng cách theo lưới `4px`**",
+     "threshold": "🔴 *(19/10/2026, QD-420 ③)* **Vùng nền xám quanh khung trắng** *(`.main`)* đệm **`8px`** *(trước `16px`)* để rộng chỗ nội dung, nguyên văn: *\"Vùng xám 4 góc cho nhỏ nữa lại để mở rộng không gian màn hình hơn\"* · khối nội dung `.card` có viền đệm `24/16/16` *(ĐỔI 19/10/2026 theo QD-431 ⑤, 👉 Xem `UX-B11`)* · 🔴 *(ĐỔI 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-422)`, trước `24px` theo QD-346 ⑤)* **lề trái phải TRONG khung trắng `16px`, khai `1` biến chung `--shell-gutter: 16px`** ở `:root` của `styles/base.css` — mọi khối dùng biến này, ⛔ gõ số: `.shell-head`, hàng tab, khu lọc *(`.filter-body` ⛔ đệm ngang riêng)*, khung bảng, `.pager`, `.card`, `.stepper`, `.missing-hint`, `.table-hint`, đầu màn, thanh trạng thái, màn lưới lịch; khối cuối chừa đáy cũng bằng biến này. Nguyên văn: *\"Có khoảng cách trắng giảm lại 1 xíu, đang bị hơi rộng ==> Cần có khoảng cách cân bằng trong hệ thống nhé. Vẫn tiêu chí đẹp nhé\"*. Đo `8` màn: mọi khối thẳng mép trái `17px` *(`16` + viền `1`)*, lề phải `17px`. Design System *(`design.css`)* dùng cùng biến · 🔴 **tên biến CSS viết tiếng Anh** *(TrangNT5 19/10/2026: \"Biến để tiếng anh đi\")*: `--shell-gutter` *(cũ `--le-khung`)* · `--block-gap` *(cũ `--khe-khoi`, `12px`)* · `--section-gap` *(cũ `--khe`)* · `--tone-bg` *(cũ `--nen`)* · `--tone-fg` *(cũ `--chu`)* *(QD-420 ④, 👉 Xem `UX-B11`)* · các dòng nhãn – giá trị cách `12` · thân popup giãn `16` · icon trong nút cách chữ `6` · 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-427)`)* **icon tiêu đề màn Danh sách và nút quay về cách chữ tiêu đề `8`** *(`.shell-title`, `.page-head`, `.status-bar` `gap: 8px`; trước `12` và `14`)*, nguyên văn: *\"Icon và text xa nhau quá nhỉ\"* · nhãn trường cách ô `6` · tiêu đề thẻ cách nội dung `12`",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-B6",
+     "source": "`Verified (TrangNT5 08/10/2026)`",
+     "rule": "🔴 **Form chia lưới `12` cột, ĐIỂM TÁCH ô của `2` hàng liền nhau phải LỒNG NHAU** — mỗi hàng tổng span = `12` · điểm tách là vị trí cột cộng dồn giữa các ô *(`9 3` ⇒ `{9}` · `3 3 3 3` ⇒ `{3,6,9}`)* · tập điểm tách của hàng ít ô hơn nằm trọn trong tập của hàng nhiều ô hơn · hàng trọn `12` *(ô chọn nhiều, Ghi chú, bảng)* thì bỏ qua · chọn tỷ lệ theo độ dài nội dung từng ô *(mã ngắn, tên dài)*. Nguyên văn: *\"mình chia bố cục thành 12 ô cho mỗi phần cần chia - Làm sao chia đều các tỷ lệ cho đẹp cân đối để các hàng thẳng hàng nhau đều nhất có thể. Ví dụ hàng 1 là 9 và 3, hàng 2 sẽ là 3 3 3 3. Hàng 1 là 8 4, Hàng 2 có thể là 4 2 2 4 hoặc 4 4 4. Tức là để nếu hàng thì các chỗ mà tách ô thẳng hàng nhau, nhìn k lôm côm ấy\"* *(PM2 `QD-310`)*. **Ví dụ ĐÚNG:** form Quầy `Mã 3 · Tên 9` rồi `SĐT 3 · Vị trí 9` ⇒ `{3}` và `{3}` · form Bàn `Quầy 9 · Mã 3` rồi `Tên 6 · Số chỗ 3 · Vách ngăn 3` ⇒ `{9}` nằm trong `{6,9}`. **Ví dụ SAI:** `Mã 3 · Tên 9` rồi `Vị trí 6 · SĐT 3` ⇒ `{3}` và `{6}` không lồng nhau",
+     "threshold": "Trong mỗi `.form-grid` gom ô theo hàng *(cùng mép trên)*, điểm tách = mép trái các ô trừ ô đầu, sai số `≤ 2px` · `2` hàng liền nhau không trọn hàng mà không lồng nhau ⇒ HỎNG kèm tên màn và hàng, đo ở `5` bề rộng",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-B7",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-346 ⑨)`",
+     "rule": "🔴 **Màn Tạo · Sửa · Xem của cùng `1` đối tượng giữ Y NGUYÊN thứ tự thông tin** *(khối, trường, thứ tự trong khối)* — người dùng nhập theo thứ tự nào thì sửa và đọc lại theo thứ tự đó. 🔴 **Ở màn Sửa, trường KHÔNG được sửa hiện theo khuôn Xem chi tiết** *(nhãn · giá trị)*, chỉ trường được sửa mới là ô nhập. Nguyên văn: *\"Hiển thị đúng thứ tự Tạo, Sửa, Xem cần giữ nguyên toàn bộ thứ tự thông tin\"* · *\"Nếu ở Sửa mà có những thông tin không cho phép sửa chỉ cho xem thì hiển thị theo format của xem chi tiết ấy. Chỉ cho field nào được chỉnh sửa thì dàn text thôi, thì thông tin sẽ gọn gàng\"* *(sửa 09/10/2026: bản cũ `AI Inferred` chỉ so Tạo với Chi tiết)*",
+     "threshold": "So nhãn chung của Tạo và Chi tiết *(bỏ `*`, chữ trong ngoặc)*: thứ tự `2` bên trùng nhau · cặp `0` nhãn chung ⇒ HỎNG *(UX-J6)* · màn Sửa: ô nhập đang khoá *(`disabled`, `readonly`)* hiện như ô nhập = **`0`**",
+     "check": "Cổng `--behavior` ✔ *(Tạo ↔ Chi tiết)* · Mắt *(Sửa)*"
+    },
+    {
+     "code": "UX-B8",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-323)`",
+     "rule": "🔴 **Dữ liệu khác loại ⇒ tách thành KHỐI riêng**, mỗi khối `1` thẻ `.card` có tiêu đề `.card-title` — ⛔ trộn thông tin của `2` đối tượng *(vd người nghiện và thân nhân, quầy và bàn)* hoặc `2` nhóm nghiệp vụ *(thông tin chung và lịch sử)* trong `1` khối. Nguyên văn: *\"Các khối data khác nhau khi hiển thị cần tách khối, tránh để lẫn lộn khó hiểu\"*. Khối bọc viền, tên trên viền theo `UX-B11` *(ĐỔI 19/10/2026, QD-431 ⑤ thay trải phẳng)*. 🔴 **Ngoại lệ** *(19/10/2026, QD-420 ⑩)*: khối là nội dung **DUY NHẤT** của `1` tab mà tiêu đề khối trùng tên tab *(tab Lịch sử thao tác ở Chi tiết lịch hẹn, Chi tiết quầy)* ⇒ **bỏ tiêu đề khối**, tên tab đóng vai tiêu đề. Nguyên văn: *\"Màn hình Lịch sử hoạt động bỏ tên màn hình vì trùng lặp\"*",
+     "threshold": "Mọi `.card` trong vùng `main` có đúng `1` `.card-title` không rỗng, **trừ** `.card` là con duy nhất của `1` tab-panel *(QD-420 ⑩)* · tiêu đề khối trùng chữ tên tab đang mở = `0` · `2` khối liền nhau ⛔ trùng tiêu đề · phần \"khối có trộn dữ liệu không\" do agent `srs-uiux-review` soi từng màn",
+     "check": "Cổng `--sync` ✔ *(phần tiêu đề)* · Agent review"
+    },
+    {
+     "code": "UX-B9",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-323)`",
+     "rule": "🔴 **Trường có LIÊN KẾT đặt CẠNH nhau, trường chọn TRƯỚC đứng TRƯỚC** — trường B lọc theo, tính từ hoặc chỉ mở khi đã có trường A ⇒ A đứng ngay trước B, cùng hàng hoặc hàng liền kề, cùng khối *(vd Quầy rồi Bàn · Ngày rồi Khung giờ · tra Thân nhân rồi chọn Người cai nghiện theo luồng `QD-297` · Người cai nghiện rồi Thân nhân đi cùng)*. Nguyên văn: *\"Các dữ liệu có sự liên kết thì cần đặt cạnh nhau + theo thứ tự cái nào chọn trước thì để trước\"*. Bổ sung cho `UX-B7` *(thứ tự Chi tiết theo Tạo)*",
+     "threshold": "Trường phụ thuộc *(ô bị khoá tới khi ô khác có giá trị, hoặc danh sách đổi theo ô khác)* nằm sau ô nó phụ thuộc theo thứ tự đọc *(trên xuống, trái sang)* và không cách quá `1` hàng",
+     "check": "Agent review · `--behavior` *(ô khoá chờ ô trước)*"
+    },
+    {
+     "code": "UX-B10",
+     "source": "`Verified (TrangNT5 19/10/2026 · PM2 QD-412 · D1A)`",
+     "rule": "🔴 **Khung trắng `.shell` luôn GIÃN KÍN tới đáy màn**, cả Prototype lẫn Design System — trang ngắn ⛔ hở dải nền xám giữa màn. Phần chân khung **dính đáy khung khi trang ngắn**, nằm sau khối cuối khi trang dài. Nguyên văn: *\"màn hình sẽ luôn cố định kéo hết trang, chỗ nào k có data thì là nền trắng\"*. Đối chiếu quốc tế: mẫu sticky footer của Ant Design `Layout` và GOV.UK Frontend",
+     "threshold": "Đáy `.shell` cách đáy khung nhìn đúng đệm `8px` của `.main` *(đổi 19/10/2026 theo QD-420 ③, trước `16px`, 👉 Xem `UX-B5`)* · khối cuối và chân khung cách đáy khung `16px` bằng lề trong khung `--shell-gutter` *(đổi 20/10/2026 theo số đo thật, trước ghi `24px` lỗi thời từ QD-422)* · trang dài: khối trước chân khung giữ khe `12px` · cài ở `base.css` `main.main > .shell{flex:1}` và `design.css` khối «khung trắng kín đáy, dòng bản quyền dính đáy»",
+     "check": "Cổng ✔ `TrangNT5_BlockSpacing.mjs --site`"
+    },
+    {
+     "code": "UX-B11",
+     "source": "`Verified (TrangNT5 19/10/2026 · PM2 QD-431 ⑤)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-434 ① ②)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-421 ⑥)`",
+     "rule": "🔴 **KHỐI THÔNG TIN CÓ VIỀN, TÊN KHỐI NẰM TRÊN ĐƯỜNG VIỀN TRÊN** *(kiểu `fieldset` / `legend`)*, áp **mọi màn** — 🔴 **THAY luật màn trải phẳng của QD-420 ④ và đường gạch giữa khối của QD-421 ⑧** *(hết hiệu lực 19/10/2026)*. Khối `.card` nền trắng, viền `1px var(--color-line)`, bo `8px` *(`UX-B12`)*, ⛔ bóng, khối cách nhau `20px`, đệm **trên `24` · ngang `16` · dưới `16`** · tên khối `.card-title` đặt `position: absolute; top: -10px`, nền trắng che đường viền. 🔴 **Chỉ bọc khi màn hoặc tab có NHIỀU khối nhỏ** — màn hoặc tab chỉ có **`1` khối** *(vd tab Lịch sử thao tác)* ⇒ ⛔ bọc viền *(QD-434 ②)*. Khối **kết thúc bằng lưới nhãn – giá trị** ⇒ đệm đáy `4px` *(QD-434 ①)*. Khung khác vẫn giữ: khung trắng `.shell` *(`UX-B10`)*, khung bảng *(`UX-G2`)*, popup *(`UX-F5`)*, ô nhập, thanh bước *(Playbook CreateEdit khối `3`)*, khối số liệu tổng `.qb` *(QD-421 ⑥)*, vùng Tìm kiếm mở rộng *(viền nền nhạt, Playbook List khối `6`)*. ⛔ khung lồng khung *(khối có viền bên trong khối có viền)*. Nguyên văn: *\"Các khổi thông tin sẽ có border để bọc từng khối. Đầu mỗi khối thì có tên của khu vực ở gạch ngang border khối phía trên ấy\"* · *\"Lịch sử thao tác không phân khối thì k cần bọc, Chỉ màn hình nào có phân khối nhỏ mới cần bọc, còn k có khối nhỏ k cần đâu, cho đỡ rối và thừa\"* · *\"Căn chỉnh chỗ dưới này đều hơn ... bọc cuối đang hơi rộng\"*",
+     "threshold": "Màn hoặc tab có `≥ 2` `.card` đang hiện: mỗi `.card` có viền `1px`, bo `8px`, đệm `24/16/16`, `.card-title` nằm vắt qua viền trên *(tâm chữ cách viền trên `≤ 2px`)* · màn hoặc tab có đúng `1` `.card`: viền `0` · `.card` kết thúc bằng lưới nhãn – giá trị: đệm đáy `4px` · khối có viền lồng trong khối có viền = `0`",
+     "check": "Mắt *(đề xuất cổng)*"
+    },
+    {
+     "code": "UX-B12",
+     "source": "`Verified (TrangNT5 19/10/2026 · PM2 QD-420 ⑤)` · `Verified (PM1 tokens pm1-tokens.css)`",
+     "rule": "🔴 **Thang bo góc `3` bậc theo PM1, khai `1` nơi** ở `styles/tokens.css` *(`--radius-*`)* và `pm2-antd-theme.js` *(`borderRadiusLG`)*: **`6px`** nút, huy hiệu *(`--radius-sm`)* · **`8px`** ô nhập, ô con, thẻ, **khung bảng, popup** *(`--radius-md` = `--radius-lg` = `--radius-xl` = `--radius-2xl`, trước `12px`)* · **`999px`** tag. Nguyên văn: *\"Bo tròn các góc cần cân nhắc xem có thể bo bớt tròn hơn. Xem kỹ quy tắc PM1 và PM5 sao cho phù hợp\"* · ⛔ gõ số bo góc trong CSS riêng màn — dùng biến",
+     "threshold": "Bo góc đo trên mọi màn chỉ ra các giá trị `{0, 6, 8, 999}` *(cộng `50%` cho chấm tròn)* · giá trị `10px`, `12px`, `16px` = `0` · biến `--radius-lg` = `8px`",
+     "check": "Mắt *(đề xuất cổng)*"
+    }
+   ]
+  },
+  {
+   "title": "🅲 UX-C — NÚT · ICON THAO TÁC · TOOLTIP",
+   "rules": [
+    {
+     "code": "UX-C1",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "**Nút**",
+     "threshold": "`14/500` · cao `36` · bo `6` · ⛔ bóng · nút icon trong bảng `32×32` *(sửa `14/10/2026` theo PM2 `QD-270`, bản cũ ghi `28` lệch Prototype thật)*",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-C2",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "🔴 **Tooltip icon thao tác — CHỮ CỐ ĐỊNH mọi màn**",
+     "threshold": "Mắt ⇒ `Xem chi tiết` · sửa ⇒ `Chỉnh sửa` · hủy ⇒ `Hủy {đối tượng}` · xóa ⇒ `Xóa {đối tượng}` · duyệt ⇒ `Phê duyệt` · từ chối ⇒ `Từ chối duyệt` · icon khác ghi đúng tên thao tác",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-C3",
+     "source": "`Verified (TrangNT5 30/09/2026)` · `Based on Docs (antd v5 mặc định, bundle PM1)`",
+     "rule": "🔴 **Tooltip CHỈ hiện khi chữ bị cắt thành \"…\"**, nội dung là **bản đầy đủ của chính chữ đang bị cắt** · style **nền đen như PM1** *(antd Tooltip: nền `rgba(0,0,0,.85)` · chữ trắng `14px` · bo `6px` · đệm `6px 8px` · rộng tối đa `400px` — SỬA `14/10/2026` PM2 `QD-405` L8, bản `250px` lệch Prototype thật)* · 🆕 rê chuột **trễ `400ms`** mới hiện · **Tab tới thì hiện ngay** · ⛔ dùng `title` gốc của trình duyệt. **`4` ngoại lệ đã chốt** *(TrangNT5 chốt D3A 30/09/2026 · ④ PM2 QD-346 ⑧ 09/10/2026)*: ① nút icon không chữ ⇒ hiện tên thao tác · ② khối lịch ⇒ hiện thông tin nhiều dòng · ③ sidebar thu gọn ⇒ hiện tên mục · ④ **nút bị khoá vì đã đạt tối đa ⇒ rê chuột hiện lý do**, dùng **CHUNG câu** với màn đã có tình huống này *(vd nút «Thêm thân nhân đi cùng»)*, nguyên văn: *\"Khi đặt max thì di chuột vào show tooltips ==> Có màn khác có TH này tương tự rồi mà k làm theo ah\"*. Ngoài `4` diện này ⇒ chỉ hiện khi chữ bị cắt. *(Đổi `30/09/2026`, nguyên văn: \"Tooltips chỉ nên sinh ra khi bị lấp chữ, sinh ra dấu ... ấy Chứ lúc nào cũng hiện e là hơi rối\". Bản cũ \"100% nút có tooltip\" hết hiệu lực)*",
+     "threshold": "Rê chuột lên chữ bị cắt ⇒ hiện đúng chữ đầy đủ · chữ không bị cắt ⇒ **`0`** tooltip · đếm thuộc tính `title` gốc trên nút có chữ = **`0`** · `--sync` **rê chuột THẬT** lên ô bảng có `text-overflow: ellipsis` đang bị cắt *(`scrollWidth > clientWidth`)* ở `1280px`, chờ `800ms` ⇒ `.tooltip.is-visible` *(cơ chế chung `lib/legacyUi.js`)* chứa đúng bản đầy đủ, hoặc `title` đủ chữ. Mọi màn `0` ô ellipsis ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng ✔ · `--sync` ✔"
+    },
+    {
+     "code": "UX-C4",
+     "source": "`Verified (QuyChuan D3)`",
+     "rule": "**Icon xoá màu đỏ**",
+     "threshold": "`var(--color-err, #DC2626)`, nền hover `#FEF2F2`",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-C5",
+     "source": "`Verified (lời TrangNT5 29/09, phiên a24ce3e5 · TrangNT5 09/10/2026 PM2 QD-362 ③)`",
+     "rule": "🔴 **Nút bấm được thì phải có phản hồi** — nút đã khoá thì ít cần chữ đỏ, nhưng **nút còn bấm được mà bấm im lặng là SAI** · 🔴 **nút điều hướng** *(`Tiếp tục`)* phải **chuyển sang bước sau** hoặc **báo chữ đỏ dưới ô còn thiếu**; màn **không có bước sau** ⇒ **BỎ nút**. Nguyên văn: *\"Tiếp tục đang k thấy làm được gì nữa (Nếu k làm gì thì bỏ đi nhé. Còn nếu có thì cần phải cho next\"*",
+     "threshold": "Bấm thật mọi nút ở ca thiếu dữ liệu ⇒ phải có chữ đỏ hoặc toast · bấm `Tiếp tục` ở ca đủ dữ liệu ⇒ bước đang mở đổi",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-C6",
+     "source": "`Verified (Knowhow WEB-06 #28)`",
+     "rule": "🔴 **Nút khoá phải TRÔNG khoá** — ⛔ để nút khoá mà vẫn màu đỏ",
+     "threshold": "Nút `disabled` phải đổi kiểu hiển thị; ưu tiên **để nút luôn bấm được + chữ đỏ**",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-C7",
+     "source": "`Verified (TrangNT5 07/10/2026)`",
+     "rule": "🔴 **Chữ `Tạo` và `Thêm` theo bản chất thao tác** — **`Tạo` (Create)** khi sinh ra **`1` chủ thể mới hoàn toàn** · **`Thêm` (Add)** khi **lấy `1` thứ đã có rồi gắn vào danh sách**. Nguyên văn: *\"Màn hình Tạo mới ==> Là tạo 1 chủ thể hoàn toàn. Thêm mới thì dùng kiểu láy từ cái nào đó rồi thêm vào. Kiểu như thêm người nghiện vào danh sách ấy\"*. Đè lên chữ \"Thêm mới\" ở BRD `STD_01` dòng `33-34` *(PM2 `QD-241`)*",
+     "threshold": "Nút ở màn danh sách, breadcrumb và tiêu đề màn tạo bản ghi ⇒ `Tạo mới` · `Tạo {đối tượng}` *(ví dụ \"Tạo lịch hẹn thăm gặp\", \"Tạo quầy tiếp đón\")* · chọn từ thứ đã có ⇒ `Thêm {đối tượng}` *(ví dụ \"Thêm thân nhân đi cùng\")* · nút, breadcrumb và tiêu đề của cùng `1` luồng phải dùng **cùng `1` chữ**",
+     "check": "Mắt"
+    }
+   ]
+  },
+  {
+   "title": "🅳 UX-D — Ô NHẬP · KIỂM NHẬP LIỆU",
+   "rules": [
+    {
+     "code": "UX-D1",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "**Ô nhập**",
+     "threshold": "`14/400` · cao `36`",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-D2",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "🔴 **Bấm nút khi còn thiếu ⇒ chữ đỏ dưới MỌI ô bắt buộc còn trống**, ⛔ chỉ ô đầu · 🆕 **rời 1 ô bắt buộc còn trống ⇒ chữ đỏ ô đó hiện ngay**, cùng câu với nút *(`14/10/2026` PM2 `QD-405` M9)* · 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-431 ③)`)* **chữ đỏ mới hiện mà ô lỗi ĐẦU TIÊN nằm ngoài khung nhìn ⇒ tự cuộn ô đó tới GIỮA khung nhìn và đặt con trỏ vào ô**, nguyên văn: *\"Khi form có error thì tự scroll đến field bị lỗi đầu tiên ( trường hợp field đó đang k trong khung nhìn thì tự lăn đến vị trí tương ứng)\"*",
+     "threshold": "Số chữ đỏ = số ô bắt buộc trống · ô lỗi đầu ngoài khung nhìn: sau khi bấm, tâm ô lệch tâm khung nhìn dọc `≤ 1/4` chiều cao khung và `document.activeElement` là ô đó · ô viền đỏ · chọn lại thì chữ đỏ ô đó tắt · 🔴 bảng ghép tên trường phải trỏ **ô CÓ THẬT** *(đo thật: `4` id sai làm chỉ `1/5` ô có chữ đỏ)*",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-D3",
+     "source": "`Verified (Rules 29-30/09)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-435)`",
+     "rule": "🔴 **Vị trí chữ đỏ** — 🆕 *(19/10/2026, QD-435)* **MỖI trường bắt buộc có chỗ báo lỗi RIÊNG ngay dưới chính nó**, ⛔ dồn về ô đại diện của bước. Ca thật: chưa chọn người cai nghiện mà chữ đỏ hiện dưới ô tra cứu thân nhân; sửa: chỗ báo lỗi ngay dưới danh sách người cai nghiện, chưa có danh sách thì mới báo ở ô tra cứu. Nguyên văn: *\"Ủa validate này bị sai rồi\"* · *\"đây là thân nhân và đã tìm kiếm thành công rồi mà\"*",
+     "threshold": "Nằm **ngay dưới khung ô nhìn thấy được** của **đúng trường đang thiếu** *(ô có lớp tìm kiếm thì dưới khung bọc · ô ngày thì dưới ô, TRÊN link \"Chọn ngày hôm nay\" · lưới giờ thì dưới khối gợi ý hoặc lưới)* · **sát mép trái ô `0px`** · cách mép dưới ô **đúng `4px`** — đo trên ô thật",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-D4",
+     "source": "`Verified (Rules 29/09)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-425)`",
+     "rule": "**Link chữ** *(kiểu \"Chọn ngày hôm nay\")* *(QD-425 từng áp cho link `Tìm kiếm mở rộng`; từ 19/10/2026 nút này là nút icon phễu theo QD-431 ①, ⛔ còn là link — Playbook List khối `6`)*",
+     "threshold": "Màu xanh dương `--color-link #2563EB`, **gạch chân LUÔN hiện** *(⛔ chỉ hiện khi rê chuột)*",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-D5",
+     "source": "`Verified (Knowhow WEB-06 #20 #28 · PM2 QD-310)`",
+     "rule": "**Ô ghi chú, lý do dài**",
+     "threshold": "Bộ đếm `n / max` *(có khoảng trắng `2` bên dấu `/`, vd `0 / 1000`)* dựng bằng `components/app/AppCounterInput.jsx` *(PM2 `QD-310`)*, tối đa `1000` · ⛔ ràng buộc số ký tự tối thiểu · ⛔ khuôn cũ `n/1000 ký tự`",
+     "check": "Cổng `--sync` ✔ *(`UX-L7`)*"
+    },
+    {
+     "code": "UX-D6",
+     "source": "`Verified (Knowhow WEB-06 #26)`",
+     "rule": "🔴 **Bấm lưu nhiều lần chỉ sinh `1` bản ghi**",
+     "threshold": "Bấm `3` lần liền ⇒ **`1`** bản ghi, **`1`** thông báo · lỗi lưu thì mở khoá lại",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-D7",
+     "source": "`Based on Docs (MSG-CF-03 common_messages.md mục 4)`",
+     "rule": "🔴 **Rời trang khi đang gõ dở ở form Tạo/Sửa ⇒ hộp `Thay đổi chưa lưu`** *(nút `Ở lại trang`)* — mọi đường rời: nút Quay lại, breadcrumb, menu",
+     "threshold": "Gõ `1` ô rồi bấm từng đường rời ⇒ hộp hiện và địa chỉ trang ⛔ đổi",
+     "check": "Cổng `--behavior` ✔"
+    },
+    {
+     "code": "UX-D8",
+     "source": "`Based on Docs (UX-D3)`",
+     "rule": "🔴 **Chữ đỏ trong HÀNG BẢNG của form** *(suất riêng, danh sách con)* **nằm dưới đúng ô lỗi**, ⛔ dồn sang cột khác",
+     "threshold": "Chữ đỏ nằm trong ô *(td)* của ô viền đỏ ĐẦU TIÊN trong hàng, cách mép dưới ô `0`–`12px`",
+     "check": "Cổng `--behavior` ✔"
+    },
+    {
+     "code": "UX-D9",
+     "source": "`Verified (TrangNT5 13-14/10/2026 · PM2 QD-373)`",
+     "rule": "🔴 **DỮ LIỆU PHỤ THUỘC — trường CHA đổi thì dữ liệu CON phải đúng theo, chọn lại ĐÚNG giá trị cũ thì giữ.** Mở rộng Common Rule `UX-24` *(chỉ nói ô lọc cha–con)* sang **mọi chuỗi phụ thuộc trong form và danh sách**: ① **xoá** giá trị cha ⇒ bỏ mọi dữ liệu con *(xoá trắng ô tra cứu thân nhân ⇒ bỏ thẻ thân nhân, danh sách người cai nghiện, thân nhân đi cùng)* · ② **chọn lại đúng giá trị đang chọn** *(cùng thẻ, cùng ngày, Tra cứu lại cùng số)* ⇒ **GIỮ** dữ liệu con · ③ **ô tra cứu**: sửa sang số khác thì GIỮ kết quả cũ, phải bấm Tra cứu mới thay; bấm Tiếp tục hoặc Lưu nháp khi số trong ô khác số đã tra ⇒ ô **tự trả về số đã tra** *(⛔ trả lúc rời ô — bấm nút Tra cứu sẽ tra nhầm số cũ)* · ④ **danh sách con cùng nguồn** *(thân nhân đi cùng nhiều dòng)*: người đã chọn ở dòng này **biến khỏi** lựa chọn dòng khác, đổi dòng thì trả lại · ⑤ **form nhiều bước**: lùi rồi tiến mà không đổi gì ⇒ giữ kết quả bước sau *(đối chiếu CCCD)*, chỉ bỏ phần của người không còn · đổi người ở bước 1 ⇒ quầy, giờ, bàn bước 2 dựng lại **trước mọi đường lưu**, kể cả Lưu nháp từ bước 1 · ⑥ **danh sách**: đổi từ khoá, bộ lọc, tab, trang ⇒ bỏ dòng đang tích; thao tác hàng loạt chỉ tính dòng **đang hiện** · ô lọc bị ẩn theo tab ⇒ ⛔ còn lọc · ⑦ đổi trạng thái tại Chi tiết ⇒ **tính lại** số liệu suy ra từ trạng thái *(quỹ lượt tuần)* · ⑧ câu nhắc và chữ đỏ phải nói đúng thứ **đang thiếu**, sửa xong ô nào thì chữ đỏ ô đó tắt",
+     "threshold": "Mỗi chuỗi thử **`2` ca ngược nhau**: đổi giá trị cha ⇒ con mất hoặc cập nhật · giữ nguyên giá trị ⇒ con còn. Đo thật `13/10/2026`: rà `71` chuỗi ra **`17` lỗi**, `40/40` ca đạt sau khi sửa — bộ thử ở `Prototype_React/_tools/TrangNT5_CascadeE2E/`",
+     "check": "Bộ thử ✔"
+    },
+    {
+     "code": "UX-D10",
+     "source": "`Based on Docs (WCAG 2.2 A 1.3.1 · 3.3.1 · canvas PM2 bản ui-ux-pro-max 19/10/2026)`",
+     "rule": "🔴 **Chữ đỏ phải NỐI với ô nhập** để trình đọc màn hình đọc được lỗi: ô lỗi mang `aria-invalid=\"true\"`, `aria-describedby` chứa `id` của chữ đỏ · chữ đỏ tắt thì gỡ cả `2`. Nhóm lựa chọn `role=\"radiogroup\"` nhận trên khung nhóm. Dựng **`1` chỗ** ở `src/lib/fieldErrorA11y.js` *(gọi trong `main.jsx`)*, màn mới dùng lớp `.field-error` là tự được nối, ⛔ tự gắn `aria` từng màn",
+     "threshold": "Bấm nút đi tiếp khi còn thiếu ⇒ số chữ đỏ chưa nối = `0`. Đo thật `19/10/2026`: bản live cũ `2/2` chưa nối · bản vá `4/4` form đạt, gõ sửa ô thì gỡ đúng",
+     "check": "Cổng ✔"
+    }
+   ]
+  },
+  {
+   "title": "🅴 UX-E — THÔNG BÁO",
+   "rules": [
+    {
+     "code": "UX-E1",
+     "source": "`Verified (Rules 29/09 · QuyChuan C1)`",
+     "rule": "🔴 **Mọi thông báo đi qua `1` toast chung**",
+     "threshold": "🆕 **Góc trên bên phải**, cách mép phải `24px`, dưới thanh tiêu đề *(SỬA `14/10/2026` theo PM2 `QD-405` M8, như PM1; bản cũ ở đỉnh giữa hết hiệu lực)* · nền trắng bo `8px` đệm `11px 14px` · chữ `14px` · icon `16px` *(thành công `#389E0D` · lỗi `#FF4D4F` · cảnh báo `#D48806` — ĐỔI 20/10/2026, `Verified (TrangNT5 20/10/2026 · PM2 QD-442)`: tối hơn 1 bậc cùng họ Ant Design để đạt tương phản `3:1`, trước `#52C41A` `2,27:1` · `#FAAD14` `1,90:1`; chỉ tô icon trạng thái `.tmsg.is-x > svg`, ⛔ tô svg nút X)* · hiện **`5` giây** *(ĐỔI 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-434 ④)`, trước `3` giây; nguyên văn: \"Toast message cho hiển thị 5s mới tắt nhé, ngoài ra dấu x xóa đang bị lệch ở dưới, cần căn chỉnh chuẩn lại cho đẹp\")*, rê chuột **dừng đồng hồ**, **có nút đóng là icon X `24px` căn đúng tâm dòng chữ** *(QD-434 ④)*, icon X bên trong `16px` nét `2`, xám `rgba(0,0,0,.65)` ở MỌI loại toast và mọi màn, rê chuột `.88` *(ĐỔI 20/10/2026, `Verified (TrangNT5 20/10/2026 · PM2 QD-442)`: trước `14px` xám `.45` — nguyên văn: \"2 dấu x nên thống nhất\" · \"Icon X bị mờ quá nhỉ, nhìn như disable luôn ấy\" · \"Có vẻ là do icon nhìn hơi đứt đứt\")* · ⛔ toast đen góc dưới · ⛔ `alert()`",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-E2",
+     "source": "`Verified (QuyChuan C1.1)`",
+     "rule": "🔴 **`1` hành động chỉ `1` thông báo** — lưu xong chuyển trang thì **chỉ màn đích báo**",
+     "threshold": "Đếm toast sau `1` thao tác = **`1`**",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-E3",
+     "source": "`Verified (Rules 29/09 · PM2 QD-337 TrangNT5 09/10/2026)`",
+     "rule": "🔴 **Câu thông báo: tra Message List TRƯỚC** (`01. TrangNT5_Common_Kit\\PM2_MessageList.md`), ⛔ có thì tự soạn câu cho người dùng",
+     "threshold": "⛔ chữ kỹ thuật *(`e.message`, tên hàm, mã lỗi trình duyệt)* · **Dấu câu (QD-337):** toast và message dạng thông báo (lỗi, chữ đỏ, cảnh báo, banner, trạng thái rỗng) ⛔ **dấu chấm cuối câu** (2 câu thì chấm chỉ ngăn giữa) · câu hỏi dùng `?`, câu cảm thán dùng `!` được phép · **chỉ thân popup hướng dẫn, diễn giải** (kể cả câu nói hệ quả trong hộp xác nhận) mới có dấu chấm cuối mọi câu · tiêu đề, nhãn nút ⛔ chấm · câu tự soạn chưa có mã ⇒ ghi Knowhow để bổ sung Message List khi viết SRS",
+     "check": "Cổng ✔ · Mắt"
+    },
+    {
+     "code": "UX-E4",
+     "source": "`Verified (QuyChuan C1.3)`",
+     "rule": "**Thông báo có mã bản ghi**",
+     "threshold": "*\"Đã cập nhật lịch hẹn {mã}\"*",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-E5",
+     "source": "`Verified (QuyChuan C1.4)`",
+     "rule": "**Tên lớp CSS ⛔ trùng lớp đã có** *(bài học `.toast` bị đè ⇒ dùng `.tmsg`)*",
+     "threshold": "`grep` tên lớp trong màn trước khi đặt = **`0`** chỗ trùng",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-E6",
+     "source": "`Based on Docs (UX-E2)`",
+     "rule": "**Tải lại trang sau khi lưu ⛔ hiện lại toast** — toast gắn với hành động, ⛔ gắn với địa chỉ trang *(`?created`)*",
+     "threshold": "Lưu xong về danh sách, tải lại ⇒ **`0`** toast mới trong `1.6` giây",
+     "check": "Cổng `--behavior` ✔"
+    },
+    {
+     "code": "UX-M1",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-341)`",
+     "rule": "🔴 **Prototype gọi message THEO MÃ** của `PM2_MessageList.md` qua `1` hàm `msg(mã, …)` *(catalog `src/data/messageCatalog.js` sinh tự động, ⛔ sửa tay)* — áp toast, chữ đỏ, tiêu đề và thân popup, cảnh báo, trạng thái rỗng, lỗi hệ thống · trường hợp tương tự **BẮT BUỘC dùng chung `1` mã**, ⛔ câu riêng từng màn. Nguyên văn: *\"tớ muốn Prototype gọi chuẩn mã dùng nhé message nhé. Còn hiển thị lên toast mgs thì lấy theo nội dung\"* · *\"sau này nếu đổi mã thì rà đc 1 loạt chỗ cần đổi chuẩn hơn + các trg hợp tương tự bắt buộc phải dùng chung mã\"* *(ghi vào Rules 09/10/2026, trước đó cổng đã có phép mà Rules chưa có dòng)*",
+     "threshold": "`_tools/TrangNT5_ScanMessages.cjs`: chuỗi gõ cứng `0` · toast, chữ đỏ truyền chuỗi `0` · số lời gọi theo mã `> 0`",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-M2",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-341)`",
+     "rule": "**Mã gọi trong code phải có trong Message List và ⛔ ở trạng thái Ngừng dùng** · mã Nháp được gọi tạm nhưng cổng **cảnh báo** tới khi TrangNT5 duyệt",
+     "threshold": "Mã sai `0` · mã Nháp liệt kê ở dòng cảnh báo",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-E7",
+     "source": "`Based on Docs (UX-D6 · UX-E1)`",
+     "rule": "🔴 **Lưu hỏng ⇒ toast lỗi và Ở LẠI màn**, ⛔ toast thành công, ⛔ im lặng",
+     "threshold": "Cổng giả lỗi lưu *(`localStorage.setItem` ném lỗi chỉ sau khi bấm nút `Lưu…`)* ⇒ có toast lỗi · `0` toast thành công · địa chỉ trang ⛔ đổi *(màn Cấu hình: vẫn ở chế độ sửa)*",
+     "check": "Cổng `--behavior` ✔"
+    }
+   ]
+  },
+  {
+   "title": "🅵 UX-F — POPUP",
+   "rules": [
+    {
+     "code": "UX-F1",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "🔴 **Góc phải là DẤU X để đóng; chân có thao tác thì nút thoát ghi `Hủy`**, ⛔ ghi `Đóng`",
+     "threshold": "**`2` ngoại lệ ghi `Quay lại`:** ① popup có nút thao tác cũng bắt đầu bằng chữ `Hủy` · ② popup chỉ để xem",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-F2",
+     "source": "`Verified (Knowhow WEB-06 #20 · tokens)`",
+     "rule": "**Đầu và chân popup cao bằng nhau**",
+     "threshold": "`min-height 57px` cả `2` · thân giãn `16`. 🔴 Luật khung đặt ở `styles/base.css` dùng chung mọi màn, ⛔ chỉ để trong CSS riêng từng màn *(07/10/2026: màn Quản lý thông báo không có CSS khung nên nút dính đáy 27/0)*. `52px` là SAI: nút `36px` tràn đáy, lệch `10/5`",
+     "check": "Cổng ✔ đúng `57px` và nút cách trên, dưới lệch ≤ `2px`"
+    },
+    {
+     "code": "UX-F3",
+     "source": "`Verified (Knowhow WEB-06 #34)`",
+     "rule": "**Bề rộng popup**",
+     "threshold": "Hộp xác nhận `520px` · popup có lưới lớn hoặc nhiều chữ được rộng hơn khi `TrangNT5` chốt ngoại lệ: Điều chỉnh `1200px` · Tra cứu điều kiện thăm gặp, Hướng dẫn thao tác `640px` *(D8A 07/10/2026)* · Quẹt thẻ căn cước công dân `520px` như hộp xác nhận, ⛔ còn `460px` *(QD-260 08/10/2026, áp cả Tạo mới và Quầy)* · Chi tiết khen thưởng, kỷ luật ở màn Chi tiết lịch hẹn `640px` *(id `dlgQuy`, Sổ PM2 QD-262)* · 🆕 *(09/10/2026)* bảng chọn **Giả lập quẹt thẻ** `min(1200px, 94vw)` *(id `dlgQuetThe`, `SimulatedCardPicker.jsx` — `Based on Docs (tóm tắt phiên Prototype PM2 09/10/2026)`: ứng với comment #33 *\"cho màn hình to rộng ra, sao phải khổ thế\"*)* · **Sửa thông báo** `1080px` *(id `dlgSuaThongBao`)* và **Chi tiết thông báo** `960px` *(id `dlgXemThongBao`)* ở màn Cài đặt thông báo — dựng trong phiên theo yêu cầu bố cục không chật của TrangNT5 *(`Based on Docs (tóm tắt phiên)`)*. Cổng đo bề rộng THẬT của hộp, ⛔ đo max-width · 🆕 popup chọn người nhận thông báo `880px` *(PM2 `QD-370` ⑭ «popup thao tác rộng hơn», ghi ngoại lệ `14/10/2026` theo `QD-405` L14)*",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-F4",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-300 D47)` · `Based on Docs (Ant Design Modal.confirm · Microsoft UX guide vis-std-icons, mess-confirm)`",
+     "rule": "🔴 **Icon tiêu đề hộp xác nhận theo MỨC rủi ro, 1 hình chung** — tròn chấm than `22px`, dựng bằng `components/app/DialogIcon.jsx`, không dùng dấu hỏi, không dùng tam giác. **Đỏ** `--color-err` + nút chính đỏ: thao tác không hoàn tác *(Xóa, Hủy lịch hẹn)* · **Cam** `--color-warn` + nút chính thường: thao tác có ảnh hưởng *(Vô hiệu hóa, Rời trang khi chưa lưu, Đổi khung giờ, Đổi quầy, Vắng mặt, Từ chối, Check-in khác ngày)* · **Không icon**: thao tác thường *(Kích hoạt, Duyệt, Điều chỉnh)*. *(Sửa `09/10/2026` theo bàn giao phiên Danh mục, bản cũ \"dấu hỏi 20px vàng\" hết hiệu lực)*",
+     "threshold": "Mọi icon tiêu đề popup cùng cỡ `22×22`, svg có `circle` · màu đúng mức theo tiêu đề *(«Xác nhận xóa…», «Xác nhận hủy lịch hẹn…» ⇒ đỏ · «Xác nhận kích hoạt / duyệt / điều chỉnh…» ⇒ không icon · còn lại cam)*",
+     "check": "Cổng `--actions` ✔"
+    },
+    {
+     "code": "UX-F5",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 QD-260)`",
+     "rule": "🔴 **Mọi popup cùng `1` khung** — bo góc, tiêu đề, đầu, **thân**, nút X, chân, nút chân",
+     "threshold": "Bo `8` *(đổi 19/10/2026 theo PM2 `QD-420` ⑤, trước `12`, 👉 Xem `UX-B12`)* · tiêu đề `18/700` · đầu `10 20` · **thân đệm `20px`** · X `DialogCloseButton` · chân căn phải · nút chân `36`. ⛔ Ghi đè `padding-top` riêng cho thân 1 popup *(08/10/2026: Hướng dẫn thao tác và Điều kiện thăm gặp đệm `8px`, `11` popup kia `20px`)* · chữ ký khung có cả **thứ tự nút chân** *(phụ trước, chính sau, theo vị trí thật)* · nút phụ `1` kiểu · nút chính `≤ 2` màu *(chính, nguy hiểm)* · bảng trong popup ⛔ cuộn ngang *(`scrollWidth ≤ clientWidth + 1`)*, tiêu đề cột ⛔ xuống dòng. `--actions` bấm cả nút đầu trang, mọi tab ở Chi tiết cụm danh mục và chuỗi đổi quầy ở Sửa bàn `Q01-01` rồi Lưu",
+     "check": "Cổng `--actions` ✔"
+    },
+    {
+     "code": "UX-F6",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 QD-260)`",
+     "rule": "**Cùng `1` thao tác mở ở nhiều màn ⇒ popup cùng tiêu đề**; thao tác trên `1` bản ghi thì tiêu đề **kèm mã bản ghi**",
+     "threshold": "✔ `Xác nhận duyệt lịch hẹn LH-2026-0917` ở cả Danh sách và Chi tiết. ⛔ Đo thật 08/10/2026: Danh sách không có mã, Chi tiết có mã",
+     "check": "Cổng ✔ `--actions` *(gom popup theo tiêu đề bỏ mã và nút chính; cùng thao tác mà màn có mã, màn không mã là HỎNG)*"
+    },
+    {
+     "code": "UX-F7",
+     "source": "`Verified (PM2 MessageList common_messages.md mục 4 MSG-CF)`",
+     "rule": "🔴 **Popup `2` nút theo khuôn chung `MSG-CF`** — nút hủy đúng chữ `Hủy` *(riêng rời trang `MSG-CF-03`: `Ở lại trang`)* · nút OK là tên hành động thật, ⛔ `OK` `Đồng ý` `Thực hiện` · tiêu đề ⛔ dấu `?` · popup xác nhận *(có icon cạnh tiêu đề `UX-F4`, hoặc `Modal.confirm`)* tiêu đề bắt đầu `Xác nhận`, trừ danh sách ngoại lệ khai trong cổng *(`Thay đổi chưa lưu` của `MSG-CF-03`)* · 🆕 **hộp Xóa và Vô hiệu hóa: nội dung là CÂU HỎI** `Bạn có chắc chắn muốn …?` kèm cảnh báo hậu quả *(SỬA 09/10/2026 theo PM2 `QD-350` `QD-352` — luật cũ cấm `Bạn có chắc` NGƯỢC quyết định TrangNT5, hết hiệu lực)* · nút có chữ `Xóa` phải đỏ *(danger)*",
+     "threshold": "Mọi popup `2` nút mở bằng `--actions` *(thao tác dòng ở MỌI danh sách)* `+` popup đang ẩn trên MỌI màn *(AppModal forceRender)*: sai `1` điều ⇒ HỎNG kèm màn và tiêu đề. Số popup đo được `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--actions` ✔"
+    }
+   ]
+  },
+  {
+   "title": "🅶 UX-G — BẢNG DỮ LIỆU · TAB · DANH SÁCH",
+   "rules": [
+    {
+     "code": "UX-G1",
+     "source": "`Verified (QuyChuan D1)`",
+     "rule": "**Cột STT**",
+     "threshold": "Căn giữa · rộng `56px`",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-G2",
+     "source": "`Verified (QuyChuan D2 · TrangNT5 09/10/2026 PM2 QD-323)`",
+     "rule": "🔴 **Mọi bảng có khung viền bọc bo góc, GÓC liền màu tiêu đề** — áp cho bảng danh sách, bảng trong form, Chi tiết và popup. Có thanh cuộn dọc thì vùng phía trên thanh cuộn tô liền màu dòng tiêu đề cột, thanh cuộn mảnh và chạy từ dưới dòng tiêu đề *(khuôn gốc `.shell-body.tbl` ở `styles/base.css`)*. Nguyên văn: *\"Bo góc bảng\"* và *\"Góc bảng màn danh sách liền màu tiêu đề ==> Add vào nhé\"* *(sửa `09/10/2026`, bản cũ chỉ ghi bo `8px`, kiểm bằng mắt)*. 🆕 *(20/10/2026, `Verified (TrangNT5 20/10/2026 · PM2 QD-444)`)* **Gạch ngăn dòng dữ liệu dùng CHUNG 1 mã** `--color-row-line` `#E5E7EB` *(khai ở `pm1-look.css`)* cho ô bảng, khối nhãn và giá trị ở màn Chi tiết, dòng danh sách thông báo — ⛔ khai thẳng màu xám khác cho gạch ngăn dòng. Viền khung, thẻ, ô nhập vẫn `--color-line`. Nguyên văn: *\"gạch xám này toàn hệ thống có dùng chung 1 mã không\"* · *\"D2 A dùng theo màn chi tiết ấy\"*",
+     "threshold": "Khung bảng viền `1px var(--color-line)`, bo `var(--radius-lg)` `8px` *(đổi 19/10/2026 theo PM2 `QD-420` ⑤ về đúng PM1, trước `12px`, 👉 Xem `UX-B12`)* · mọi bảng ra cùng `1` kiểu viền và bo · bảng có cuộn dọc: vùng trên thanh cuộn liền màu nền `th` · thanh cuộn rộng `8px` · khuôn chung `table.people-table`, `table.vc-days`, `table.capacity-table`, `table.vt-move-table`, `.history-table-wrap` ở `styles/base.css`",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-G3",
+     "source": "`Verified (QuyChuan D5)`",
+     "rule": "**Mọi dòng đủ số ô bằng số cột**",
+     "threshold": "Số ô mỗi hàng bằng nhau",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-G4",
+     "source": "`Verified (QuyChuan D4)`",
+     "rule": "**Bản ghi mới tạo hoặc vừa sửa tô sáng**",
+     "threshold": "`#ECFDF5` trong `3` giây rồi nhạt dần · `--behavior` lưu thật Tạo quầy, Tạo bàn, Sửa quầy, Sửa bàn rồi đo nền dòng vừa lưu trong `3` giây phải khác nền dòng thường",
+     "check": "Cổng `--behavior` ✔"
+    },
+    {
+     "code": "UX-G5",
+     "source": "`Verified (Knowhow WEB-06 #26)`",
+     "rule": "🔴 **Cột Thao tác dính bên phải luôn nền đặc**",
+     "threshold": "Kể cả dòng đang tô sáng, chữ cột khác ⛔ lộ qua",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-G6",
+     "source": "`Verified (Rules 30/09)`",
+     "rule": "🔴 **Tab đếm `0` hiển thị bình thường**, vẫn bấm được",
+     "threshold": "`opacity = 1`",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-G7",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-323)`",
+     "rule": "🔴 **Mọi màn Danh sách có bảng dữ liệu BẮT BUỘC có nút `Xuất Excel`** ở thanh nút đầu trang, theo khuôn Playbook List khối `10`. Nguyên văn: *\"Button Xuất Excel tất cả các màn hình danh sách List bắt buộc cần có\"*. **Ngoại lệ đã chốt (D2A):** màn Thông báo `/quan-tri/thong-bao` là hộp thư cá nhân, không có bảng ⇒ không áp · màn **Cài đặt thông báo** `/quan-tri/cai-dat-thong-bao` là màn cấu hình dữ liệu seed sẵn, ⛔ thêm, ⛔ xoá *(PM2 `QD-366` ④)* ⇒ không áp, ⛔ thêm nút Xuất Excel *(phiên chính chốt 09/10/2026, khai trong cổng `G7_NGOAI_LE`)*",
+     "threshold": "Mọi route danh sách *(không có `tao-moi`, `chinh-sua`, mã bản ghi)* có `table` trong `main` ⇒ có nút chữ `Xuất Excel` đang hiện · số màn danh sách đo được `0` ⇒ HỎNG *(UX-J6)* · 🆕 **Trên `1.000` dòng thì tách sheet**, mỗi sheet lặp tiêu đề, STT đánh tiếp, tên sheet thêm `_2` `_3`… — hàm chung `lib/excelChunks.js` *(`14/10/2026` PM2 `QD-405` L9)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-G8",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-346 ① · D32 A)`",
+     "rule": "🔴 **Dòng rỗng của MỌI bảng cùng `1` khuôn** — *(mở rộng 09/10/2026 theo D32 A, nguyên văn: «D32 áp dụng hết»)* áp cả bảng trong tab màn Chi tiết, Sửa *(Bàn, Suất riêng, Tình hình sử dụng; riêng **Lịch sử thao tác** từ 19/10/2026 là dạng tiến trình `HistoryTable.jsx` theo PM2 `QD-420` ⑧, rỗng hiện `1` mục `li.tl-empty` cùng câu `I001-27`)*, ⛔ khung nét đứt hay chữ tự gõ «Không có dữ liệu» — component `components/app/EmptyRow.jsx`: màn **chưa có bản ghi nào** ⇒ `I001-27` *«Chưa có {đối tượng} nào»* · **có bản ghi mà lọc không ra** ⇒ `I001-28` · cùng màu chữ, cỡ chữ, chiều cao, đầu bảng vẫn hiện · 🔴 chữ nằm **giữa PHẦN KHUNG ĐANG NHÌN THẤY**, ⛔ giữa cả bảng *(bảng nhiều cột rộng hơn khung thì chữ không bị đẩy lệch phải)*. Nguyên văn: *\"Ơ hay cùng trường hợp không có data mà 3 màn hình khác nhau 1. Câu hiển thị mesage khác nhau 2. Có cái thì mở cả Header có cái thì không 3. Có cái text đen, cais text xám\"* · *\"câu này cho đồng bộ đi\"*",
+     "threshold": "Mọi danh sách có ô tìm: gõ chuỗi không khớp ⇒ đúng `1` dòng `td.empty-state` chữ `= I001-28` *(màn chưa có bản ghi nào ⇒ `I001-27`)*, đầu bảng vẫn hiện · 🆕 cổng bấm lần lượt **mọi tab AppTabs** của mọi màn: dòng rỗng nào cũng là `EmptyRow`, chữ `I001-27`/`I001-28`, cùng kiểu dòng rỗng danh sách · mọi dòng rỗng đo được trên các màn ra **`1`** kiểu *(màu · cỡ · cao)* · tâm chữ lệch tâm khung nhìn thấy `≤ 2px` · số mẫu `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-G9",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-346 ③)`",
+     "rule": "**Số bản ghi mặc định mỗi trang là `10`** ở mọi bảng có phân trang *(danh sách; riêng Lịch sử thao tác từ 19/10/2026 ⛔ phân trang mà hiện `10` mốc rồi tải thêm `10`, PM2 `QD-421` ①, Playbook ViewDetail khối `7`)*, lựa chọn `10/20/50/100`. Nguyên văn: *\"Số bản ghi default 1 trang để là 10 nhé ==> Đang để là 20\"*. Đè lên mức `20` của `BRD-STD-01` mục `1.9` *(Prototype là bản chốt)* · 🔴 **Nút `Trang trước`/`Trang sau` theo PM1** *(đo PM1 STG `14/10/2026`, PM2 `QD-373` D6 D12)*: nền trắng · viền `#BFDBFE` · bo `6px` · cao `36px` *(đổi `14/10/2026` theo PM2 `QD-387` D30 A: mọi nút có chữ `36px` bằng ô nhập)* · chữ và mũi tên `#2563EB` `14/500` · nút tắt ở trang đầu/cuối **giữ màu, mờ `0.8`** · rê chuột mờ `0.9` · **⛔ title, ⛔ tooltip**",
+     "threshold": "Ô `Chọn số bản ghi` đang hiện ở mọi màn có giá trị **`10`** khi mới mở · số ô đo được `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-G10",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-346 ⑥)`",
+     "rule": "🔴 **Bảng ÍT cột ưu tiên căn chỉnh để KHÔNG sinh thanh cuộn ngang** — cột tên rộng vừa phải và xuống dòng, cột Thao tác đủ chứa nút *(UX-G11)*, bề ngang tối thiểu của bảng vừa khung ở màn `1366` · **bảng NHIỀU cột** *(vd Lịch hẹn `15` cột)* dài quá thì có thanh cuộn ngang là bình thường, ⛔ gộp cột để né cuộn. Nguyên văn: *\"Cho cột tên Quầy nhỏ lại ==> Luôn ưu tiên căn chỉnh màn hình để hạn chế sinh ra scroll ngang nhé, vì có ít field mà\"* · *\"Q11 ah nó dài quá thì sinh ra scroll bar ngang bình thường ý\"*",
+     "threshold": "Ở `1366px`: bảng **`≤ 8` cột** *(ngưỡng TẠM theo D33 A, nguyên văn: «D33 Tạm để như A đi cần thì cải thiện thêm» — tạm, cần thì cải thiện thêm)* có khung cuộn `scrollWidth − clientWidth ≤ 1px`, đo cả bảng trong tab · **ngoại lệ** `Verified (TrangNT5 09/10/2026 · D34 A, nguyên văn «D34 OK»)`: bảng **Lịch sử thao tác** *(`table.history-table`)* là bảng nhiều thông tin, được cuộn ngang như bảng Lịch hẹn — 🔴 **HẾT ĐỐI TƯỢNG 19/10/2026**: Lịch sử thao tác đổi sang dạng tiến trình *(PM2 `QD-420` ⑧, Playbook ViewDetail khối `7`)*, ⛔ còn bảng",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-G12",
+     "source": "`Verified (TrangNT5 09/10/2026 · D32)`",
+     "rule": "🔴 **Bảng có dòng bị LỌC THEO ĐIỀU KIỆN NGHIỆP VỤ** *(không phải theo ô tìm, ô lọc người dùng nhập)* ⇒ **câu hướng dẫn ngay DƯỚI bảng** nói dữ liệu lấy theo điều kiện nào, **luôn hiện kể cả khi bảng có dòng**. Khuôn câu: *«{Danh sách X} sẽ có giá trị nếu {điều kiện}»*. Dựng bằng `NoteBox line=…` *(khung xám `1` dòng như `UX-L13` ②, component tự thêm tiền tố «Lưu ý: »)* bọc trong `.table-hint`. 🔴 **Điều kiện viết từ CODE lọc thật hoặc từ QD trong Sổ BA, ⛔ tự đặt** — code lọc mà không có nguồn nghiệp vụ ⇒ hỏi TrangNT5. Nguyên văn: *\"nếu những bảng nào mà phụ thuộc điều kiện đặc biệt nào để lấy data thì thêm câu hướng dẫn ở phía dưới. Kiểu như 'Danh sách người nghiện sẽ có giá trị nếu người nghiện ở trạng thái Đang cai nghiện'\"*",
+     "threshold": "Mọi bảng khai trong `BANG_GOI_Y` của cổng *(màn → id câu)* có câu `.table-hint` đứng ngay sau khung bảng, chứa « sẽ có giá trị nếu » · đo cả tab đang ẩn · số bảng khai `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-G13",
+     "source": "`Verified (TrangNT5 14/10/2026 · PM2 QD-382)`",
+     "rule": "🔴 **Màn danh sách có khu tìm kiếm: phần đầu màn tới hết khu tìm kiếm ≤ `1/3` khung nhìn, lưới dữ liệu chiếm `2/3`.** Nguyên văn: *\"Màn hình đến khu vực tìm kiếm chiếm 1/3 toàn bộ khung giao diện ==> Tức là phần chứa data Gridview cần chiếm 2/3 khuôn màn hình\"*. Cách giữ: chế độ xem khác *(lưới lịch)* là màn riêng mở bằng nút ở thanh nút đầu trang *(đổi 19/10/2026 theo PM2 `QD-420` ②, Playbook List khối `4`)*, ⛔ hàng chuyển chế độ · khu tìm kiếm `1` dòng cố định *(QD-377)* · ⛔ đổi cỡ chữ để ép tỷ lệ *(đo 14/10/2026: chữ theo PM1 bớt `0px`)*. **Ngoại lệ đã chốt:** Danh sách lịch hẹn · lịch ngoại lệ · Danh sách quầy GIỮ hàng tab trạng thái ⇒ `357px` `38,1%`",
+     "threshold": "Mép trên bảng ≤ `312px` ở khung nhìn `1920×937` trên mọi màn có `.shell-filters` · mức CẢNH BÁO · số màn đo `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` *(cảnh báo)*"
+    },
+    {
+     "code": "UX-G11",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-346 ⑦)`",
+     "rule": "🔴 **Cột Thao tác rộng theo SỐ NÚT TỐI ĐA mà VAI đang đăng nhập thấy ở màn đó**, ⛔ theo tổng mọi nút của mọi vai — đổi vai thì bề rộng đổi theo. Nguyên văn: *\"Xem lại với role thì tối đa hiển thị bao nhiêu button thì cột Thao tác để rộng bấy nhiêu thôi nhé, k phải là theo all button đâu\"*",
+     "threshold": "Với từng vai: bề rộng cột ≈ số nút tối đa trên `1` dòng × *(nút `32` + khe `4`)* `+` đệm `2` bên, ⛔ dư chỗ đủ cho thêm `1` nút",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-G14",
+     "source": "`Verified (TrangNT5 19/10/2026 · PM2 QD-412 · D2A)`",
+     "rule": "🔴 **Màn Danh sách: vùng bảng GIÃN lấp phần còn lại của khung, thanh phân trang `.pager` DÍNH ĐÁY khung** — nhiều dữ liệu thì bảng tự cuộn trong vùng, phân trang luôn nhìn thấy. 🔴 **Bảng RỖNG:** dòng rỗng ⛔ kẻ đáy *(kẻ đáy lơ lửng giữa vùng trắng thành «ngấn»)* và câu thông báo **căn giữa** vùng bảng đã giãn. Nguyên văn: *\"Áp dụng việc mở rộng khung này vào màn hình Prototype\"* · *\"Ngấn này k ổn lắm nhỉ\"* · *\"chỗ nà câu đó giờ ntn\"*. Khuôn dòng rỗng vẫn theo `UX-G8`",
+     "threshold": "Đáy `.pager` = đáy khung `.shell` · 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-431 ②)`)* **khe `16px` giữa đáy bảng và thanh phân trang** như Ant Design Table, Material Data table, nguyên văn: *\"Table thêm khoảng cách chỗ phân trang\"* · vùng bảng cao tối thiểu `320px` · bảng rỗng: dòng rỗng cao = vùng bảng trừ hàng tiêu đề `40px`, `border-bottom: 0` · chỉ áp khi khung có `.pager`, bảng có dữ liệu giữ chiều cao hàng như cũ · cài ở `base.css` khối «màn danh sách (khung có .pager)»",
+     "check": "Đo ✔ màn Lịch hẹn thăm gặp trực tiếp: vùng bảng `357`–`914`, phân trang `914`–`983` (khung nhìn `1600×1000`)"
+    }
+   ]
+  },
+  {
+   "title": "🅷 UX-H — TÌM KIẾM",
+   "rules": [
+    {
+     "code": "UX-H1",
+     "source": "`Verified (QuyChuan E1)`",
+     "rule": "🔴 **Tìm ⛔ phân biệt dấu, ⛔ phân biệt hoa thường, `đ` khớp `d`**",
+     "threshold": "Gõ `\"đa\"` ra đủ `Đã duyệt` · `Đang diễn ra` · `Đã kết thúc` · `Đã hủy`",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-H2",
+     "source": "`Verified (QuyChuan E1.4 · E2)`",
+     "rule": "🔴 **Mọi ô tìm dùng CHUNG hàm `boDau()`** cho **cả `2` vế** *(chuỗi gõ và chuỗi đem so)*",
+     "threshold": "Áp cả ô tìm của bảng, ô nhập trong dropdown, ô tìm trong hộp thoại, ô tra cứu số",
+     "check": "Cổng ✔"
+    }
+   ]
+  },
+  {
+   "title": "🅸 UX-I — MENU · ĐIỀU HƯỚNG · ĐẦU TRANG",
+   "rules": [
+    {
+     "code": "UX-I1",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "🔴 **Màn đã dựng ⇒ menu và thanh bên bấm vào được ngay**, kể cả mục đang sáng",
+     "threshold": "Bấm mọi mục dẫn tới màn đã dựng ⇒ địa chỉ trang đổi đúng · mục chưa có màn báo *\"Chức năng đang phát triển\"* · trang mục lục liệt kê đủ mọi màn",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-I2",
+     "source": "`Verified (lời TrangNT5 29/09, phiên a24ce3e5)` · `Verified (TrangNT5 14/10/2026 · PM2 QD-376)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-420 ①)`",
+     "rule": "🔴 **Đầu trang màn Tạo mới · Chỉnh sửa · Xem chi tiết:** nút quay lại · tên màn kèm mã bản ghi, **cạnh đó là tag trạng thái** — gọn như PM1 màn Khen thưởng học viên. 🔴 *(19/10/2026, QD-420 ①)* **ICON TIÊU ĐỀ CHỈ CÓ Ở MÀN DANH SÁCH** — mọi màn có nút quay lại *(Tạo, Sửa, Chi tiết, Đăng ký tại quầy, Cấu hình, Cài đặt, màn lưới Lịch theo buồng)* ⛔ ô icon cạnh tiêu đề, vì sẽ thành `2` icon đứng cạnh nhau. Nguyên văn: *\"Icon sẽ chỉ ở màn hình Danh sách. Còn ở màn hình Create/Edit thì sẽ không cần có icon nữa (Lý do có icon quay về rồi nên có 2 icon cạnh nhau)\"* · TrangNT5 trả lời: *\"Bỏ, chỉ màn Danh sách có icon (Recommended)\"*. ⛔ **câu mục đích bên dưới tiêu đề** *(QD-376, bản cũ \"câu bên dưới diễn giải mục đích\" hết hiệu lực 14/10/2026)*",
+     "threshold": "Tiêu đề và tag cùng đường giữa *(UX-A6)* · màn có nút quay lại: số `.page-head-icon`, `.dt-icon` đang hiện = `0` · màn Danh sách: đúng `1` icon tiêu đề",
+     "check": "Mắt *(đề xuất cổng)*"
+    },
+    {
+     "code": "UX-I3",
+     "source": "`Verified (Q1 30/09)`",
+     "rule": "**Đường dẫn URL** theo quy tắc dự án Việt, tham khảo hệ thống thật PM1 *(ví dụ `/lich-hen/tham-gap-truc-tiep/`)*",
+     "threshold": "⛔ đổi route sang tiếng Anh — luật tên file tiếng Anh **chỉ áp cho tên file**",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-I4",
+     "source": "`Verified (TrangNT5 19/10/2026 · PM2 QD-424 · D1 A)`",
+     "rule": "🔴 **Khung trang chỉ `2` tầng như PM1** *(dải tiêu đề đỏ · menu)* — **breadcrumb `.bc` là con ĐẦU TIÊN của khung trắng `section.shell`**, ⛔ dải riêng ngoài khung *(dựng ở `layout/AppLayout.jsx`)*. Breadcrumb cao `30px`, đệm trên `12px`, đệm ngang `--shell-gutter`, nền trắng, ⛔ viền, **ghim** `sticky; top: 0` · đầu màn *(`.shell-head` `.page-head` `.status-bar`)* ghim `top: 30px` ngay dưới, đệm trên `8px` *(👉 Xem `UX-L9`)*. Nguồn: TrangNT5 chốt D1 A *(làm PM2 thoáng như PM1: giữ lề ngang `16px`, gộp dòng breadcrumb vào đầu khung trắng, tăng đệm dọc đầu màn như PM1)*, nguyên văn: *\"D1 A\"*. Lý do đo: phần trên cùng PM1 `1` thanh `64px`, PM2 trước đó `141px`",
+     "threshold": "`.bc` nằm trong `.shell` và là con đầu tiên · cao `30px` · cuộn `.shell` hết cỡ: `.bc` lệch `0px`, đầu màn lệch `0px`, đáy `.bc` trùng đỉnh đầu màn · ngoài `.shell` không còn dải breadcrumb",
+     "check": "Mắt *(đề xuất cổng; `UX-L9` đã đo đầu màn lệch `0px`)*"
+    }
+   ]
+  },
+  {
+   "title": "🅹 UX-J — KIỂM THỬ PROTOTYPE",
+   "rules": [
+    {
+     "code": "UX-J1",
+     "source": "`Verified (Rules 29/09)`",
+     "rule": "🔴 **Test bấm chuột THẬT như người dùng** — ⛔ gọi thẳng hàm JS, ⛔ ép `disabled = false`",
+     "threshold": "Đủ `3` vế: ① bấm thật từng bước · ② thử **ca THIẾU** dữ liệu bên cạnh ca đủ · ③ mở **mọi màn người dùng xem kết quả**, kể cả sau khi tải lại trang",
+     "check": "Agent Review soát script test"
+    },
+    {
+     "code": "UX-J2",
+     "source": "`Verified (QuyChuan F1)`",
+     "rule": "**`0` lỗi JavaScript**",
+     "threshold": "Ở mọi bề rộng màn",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-J3",
+     "source": "`Verified (QuyChuan F2)`",
+     "rule": "🔴 **`TrangNT5` gửi ảnh báo lỗi ⇒ `3` việc:** chụp ảnh cắt đúng vùng rồi nhìn · chạy `elementFromPoint` · chụp bản chuẩn PM1 đặt cạnh",
+     "threshold": "Ảnh `TrangNT5` gửi **có thẩm quyền cao hơn** phép đo `DOM` — mâu thuẫn thì đo lại tới khi giải thích được ảnh",
+     "check": "Mắt"
+    },
+    {
+     "code": "UX-J4",
+     "source": "`Verified (QuyChuan F3)`",
+     "rule": "**Cổng báo hỏng ⇒ soi chính cổng trước**",
+     "threshold": "`3` bẫy: `querySelector` trả phần tử đứng trước · đo con thay vì ô chứa · đếm cả bảng đang ẩn",
+     "check": "—"
+    },
+    {
+     "code": "UX-J5",
+     "source": "`Verified (TrangNT5 07/10/2026)`",
+     "rule": "🔴 **Báo LỆCH CĂN HÀNG (chữ với icon, chữ với nút) ⇒ ĐẾM ĐIỂM ẢNH trên ảnh chụp thật**, ⛔ suy từ hộp DOM hoặc số liệu font",
+     "threshold": "Chụp vùng ở tỉ lệ `3x`, đếm hàng điểm ảnh tối của chữ (thân chữ và cả dấu) và của icon, so tâm. ⛔ Đo thật 07/10/2026: đo hộp `h3` báo \"trùng tâm\", đo số liệu font báo \"thân chữ thấp 2.5px\" rồi nâng `2px` — đếm điểm ảnh lại ra nâng xong lệch NGƯỢC `2.5px`, phải gỡ",
+     "check": "Ảnh `3x`"
+    },
+    {
+     "code": "UX-J6",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 QD-260)`",
+     "rule": "🔴 **Cổng báo ĐẠT phải kèm SỐ MẪU lớn hơn `0`** — đọc số mẫu trước khi đọc chữ ĐẠT",
+     "threshold": "Phép `UX-L0` *(số control đo được)* và `UX-J0` *(số lần bấm)* bằng `0` ⇒ HỎNG. `--goc` chỉ nhận **gốc trang**, cổng tự cắt phần đường dẫn. ⛔ Đo thật 07/10/2026: truyền link màn Chi tiết vào `--goc` ⇒ đo `0` màn mà báo `2/2 ĐẠT` suốt `3` lượt · 🔴 **mỗi phép có CA DƯƠNG TÍNH chạy được**: `--tiem {MÃ}` tiêm lỗi vào DOM, CSS hoặc hành vi lúc chạy *(⛔ sửa sản phẩm)*, phép tương ứng phải ra HỎNG — bảng mã ở `TIEM_DS` trong cổng",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-J7",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 QD-260)`",
+     "rule": "🔴 **Màn bàn giao ⇒ `0` thao tác báo `Chức năng đang phát triển`**",
+     "threshold": "Nút có trên Prototype mà chưa chạy: **nguồn có** quy tắc ⇒ dựng *(vd `Đánh dấu vắng mặt` theo SRS `TR-9` `BR1-11`)* · **nguồn nói không áp** ⇒ BỎ khỏi màn *(vd nút `Xác nhận dùng suất quỹ chung` chép nhầm từ màn Quầy sang form đặt trước, QD-021)*. Popup và code không nút nào mở được ⇒ xoá. Menu sang chức năng chưa dựng được phép báo",
+     "check": "Cổng `--actions` ✔"
+    },
+    {
+     "code": "UX-J8",
+     "source": "`Verified (TrangNT5 07/10/2026 · PM2 QD-259)`",
+     "rule": "🔴 **Dữ liệu demo phải hợp lệ theo vòng đời và THỨ TỰ THỜI GIAN** của nghiệp vụ",
+     "threshold": "Trước khi gắn dữ liệu mẫu, xếp các sự kiện theo thời gian rồi hỏi *\"thứ tự này hệ thống có cho xảy ra không\"*. ⛔ Đo thật 07/10/2026: demo kỷ luật trừ hết lượt kèm lịch Chờ duyệt cùng tuần — vô lý vì đã hết lượt thì không tạo được lịch",
+     "check": "Mắt"
+    }
+   ]
+  },
+  {
+   "title": "🧹 UX-K — VỆ SINH THƯ MỤC OUTPUT BA — CHỐNG RÁC",
+   "rules": [
+    {
+     "code": "UX-K1",
+     "source": "`Verified (TrangNT5 30/09)` · `AI Inferred (cách làm)`",
+     "rule": "🔴 **Chú thích code CHỈ ghi \"VÌ SAO kỹ thuật\" mà đọc code ⛔ thấy được**, tối đa `2` dòng mỗi khối. 🔴 **CẤM trong chú thích:** trích lời `TrangNT5` · ngày chốt · số đo thật · nhãn `Verified` · lịch sử sửa · icon 🔴. Quyết định nghiệp vụ hoặc giao diện ⇒ **chỉ để mã tham chiếu** `/* UX-D3 */` · `/* WEB-06 #28 */`",
+     "threshold": "Chú thích **`≤ 10%`** dung lượng mỗi màn *(hiện `36`-`44%`)* · khối trích lời hoặc mang ngày = **`0`** · 🔴 *(thêm 09/10/2026)* quét **TOÀN `src`** gồm `components` `lib` `data` `styles` `routes.js` `App.jsx`, ⛔ chỉ thư mục màn — đo thật cùng ngày: phép từng màn báo ĐẠT trong khi `components` `lib` `data` còn `40+` khối mang «TrangNT5 09/10/2026»",
+     "check": "Cổng ✔ · `--sync` ✔ *(toàn `src`)*"
+    },
+    {
+     "code": "UX-K2",
+     "source": "`Verified (CLAUDE.md 4.8e)` · `AI Inferred (câu lọc)`",
+     "rule": "🔴 **Mỗi lời `TrangNT5` chốt ⇒ phân loại NGAY vào ĐÚNG `1` nhà**, ghi `1` dòng có mã. Câu lọc `3` tầng: *\"Đúng cho MỌI màn?\"* ⇒ file này · *\"Đúng cho mọi màn CÙNG LOẠI?\"* ⇒ Playbook loại đó · *\"Chỉ chức năng này?\"* ⇒ Knowhow Phần C",
+     "threshold": "Cùng `1` quyết định xuất hiện ở **`1`** nhà · đổi luật ⇒ **sửa thẳng dòng cũ**",
+     "check": "Agent Review"
+    },
+    {
+     "code": "UX-K3",
+     "source": "`Verified (CLAUDE.md 4.6 điều 3b)`",
+     "rule": "🔴 **Script vá `1` lần đặt ở `scratchpad`, ⛔ đặt trong thư mục Output.** Script dựng lặp lại được *(sinh file, dựng màn từ nguồn)* ⇒ `1` thư mục `_tools\\` duy nhất có `README`",
+     "threshold": "Thư mục Output có **`0`** script lẻ",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-K4",
+     "source": "`AI Inferred`",
+     "rule": "🔴 **Sao lưu vào `1` thư mục DUY NHẤT `{Output}\\0_backup\\`**, giữ cây thư mục gốc, tên `{tên file}_{yyyyMMddHHmm}_{lý do tiếng Anh ngắn}` · ⛔ sao lưu cạnh file thật · ⛔ hậu tố số `epoch` · giữ **`3` bản gần nhất mỗi file** `+` gói zip mỗi lần đóng gói",
+     "threshold": "**`1`** chỗ sao lưu · mỗi file **`≤ 3`** bản · 🛑 phần vượt ⇒ lập danh sách, **HỎI `TrangNT5` trước khi xoá**",
+     "check": "Cổng ✔ · `hook_tuanthu.js` chặn trước lệnh ghi vào kho lẻ của PM2"
+    },
+    {
+     "code": "UX-K5",
+     "source": "`AI Inferred`",
+     "rule": "🔴 **File hỏng, khoá, thử ⇒ xử lý TRONG CÙNG PHIÊN**: khôi phục hoặc dời vào `0_backup`",
+     "threshold": "Thư mục Output có **`0`** file `_HONG_` · `_KHONG_CHAY_` · `_tam` · `_soi`",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-K6",
+     "source": "`Verified (D3A 30/09)` · `AI Inferred (hệ quả)`",
+     "rule": "🔴 **Có Base rồi thì CẤM clone cả file màn khác.** Màn mới dựng từ Base `+` Playbook; CSS, JS dùng chung **link tới Base**, ⛔ chép vào màn",
+     "threshold": "Hàm và bộ chọn CSS lặp ở `≥ 3` màn = **`0`** *(hiện `160/289` hàm · `504/773` bộ chọn)*",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-K7",
+     "source": "`AI Inferred`",
+     "rule": "🔴 **Trước khi đóng gói hoặc bàn giao ⇒ chạy phép vệ sinh `UX-K1`→`K6`**, đạt mới đóng gói",
+     "threshold": "Cả `6` phép **Đạt**",
+     "check": "Mắt"
+    }
+   ]
+  },
+  {
+   "title": "🔁 UX-L — ĐỒNG BỘ CONTROL TOÀN HỆ THỐNG",
+   "rules": [
+    {
+     "code": "UX-L1",
+     "source": "`Verified (TrangNT5 07/10/2026)`",
+     "rule": "🔴 **Mỗi loại control có ĐÚNG `1` cách dựng dùng chung** — màn mới ⛔ tự dựng control, ⛔ chép code control sang màn",
+     "threshold": "Bảng ánh xạ bên dưới · `0` thẻ `<select>` trần · `100%` nút X popup là `DialogCloseButton`",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-L2",
+     "source": "`Verified (TrangNT5 07/10/2026)`",
+     "rule": "🔴 **Cùng loại control ⇒ cùng hình dạng trên MỌI màn**, đúng giá trị file chuẩn",
+     "threshold": "Mỗi loại ra đúng `1` kiểu `=` chuẩn khi đo `--sync`. Bỏ qua khác biệt do trạng thái *(nút khoá, ô đang focus, ô đang báo lỗi viền đỏ, màu tag theo trạng thái, ô con trong ô ghép, chiều cao textarea)* · 🔴 so thêm *(09/10/2026)*: **tag cùng NHÃN ⇒ cùng nền, chữ, viền** giữa mọi màn · **công tắc** cùng trạng thái `1` kiểu · **ô khoảng giờ** `.time-range` theo chuẩn ô nhập · **đầu bảng** *(nền, chữ, cỡ, đậm, in hoa)* `1` kiểu kể cả bảng trong popup *(`--actions`)* · **icon tiêu đề popup** `1` kiểu *(`--actions`)*",
+     "check": "Cổng ✔ · `--actions` ✔"
+    },
+    {
+     "code": "UX-L3",
+     "source": "`Verified (TrangNT5 07/10/2026)`",
+     "rule": "🔴 **`1` nguồn chuẩn kích thước:** `DesignStandards/tokens/pm2-antd-theme.js` nạp ở `main.jsx`. CSS chỉ ghi đè bố cục; ⛔ vá từng lớp bằng `!important` để ép kích thước control",
+     "threshold": "Màu thương hiệu đổi `1` chỗ trong `main.jsx` *(bảng `MAU_THUONG_HIEU`)*",
+     "check": "Cổng ✔ `--sync` *(quét CSS trong `src`: lớp `.ant-` mang `!important` ở thuộc tính kích thước)*"
+    },
+    {
+     "code": "UX-L4",
+     "source": "`Verified (TrangNT5 07/10/2026 · PM2 QD-339 D16)`",
+     "rule": "🔴 **Dựng hoặc sửa xong `1` màn ⇒ BẮT BUỘC chạy `--sync` VÀ `--actions` trên TOÀN bộ màn**, đạt mới bàn giao — ⛔ chỉ đo màn vừa sửa. 🔴 **Thêm `09/10/2026`: sửa HÀNH VI form** *(listener sự kiện, state, luồng lưu, chặn rời trang)* ⇒ trước khi deploy BẮT BUỘC chạy thêm **bộ test hành vi nghiệp vụ** của màn đó nếu có *(vd `_tools/TrangNT5_StoreRoundTrip.mjs`, `_tools/TrangNT5_SeedInvariant.mjs`, bộ test lịch sử thao tác của phiên WEB-06)* và **gõ phím thật** vào ít nhất `1` ô của form. Lý do: cổng UI/UX báo ĐẠT trong khi form mất ký tự đầu, phát hiện nhờ bộ test `lichsu3`",
+     "threshold": "`MSYS_NO_PATHCONV=1 node TrangNT5_UIUXGate.mjs --react --sync [--base URL]` ra `DONG BO: n/n phep DAT` · thêm `--actions` ra `THAO TAC: n/n phep DAT` · thêm `--behavior` ra `HANH VI: n/n phep DAT` *(hành vi form: rời trang, tô sáng, tải lại, lưu hỏng — chạy `≈ 8` phút)* · bộ test nghiệp vụ của màn đạt hết",
+     "check": "Cổng ✔ · Bộ test nghiệp vụ"
+    },
+    {
+     "code": "UX-L5",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 QD-260)`",
+     "rule": "🔴 **Nút icon cùng chức năng (cùng tooltip) ⇒ cùng kích thước trên MỌI màn**",
+     "threshold": "Mỗi tooltip ra đúng `1` kích thước. Nút `Quay lại danh sách` dùng chung lớp `page-head-back` `34px` *(08/10/2026: Chi tiết tự dựng `dt-back` `32px`)*. Cột thao tác ⛔ được ép nút co lại",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L6",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 QD-304)`",
+     "rule": "🔴 **Ô tìm kiếm gõ chữ xong ⇒ PHẢI hiện nút X xóa nội dung**, bấm X thì xóa chữ và focus lại ô — mọi ô tìm dựng bằng `components/app/AppSearchInput.jsx`, ⛔ màn tự dựng ô tìm. Nguyên văn: **\"Ô nhập xong k có dấu x ==> K đồng bộ control ah\"**",
+     "threshold": "Mọi ô `input` text có placeholder bắt đầu `Tìm theo` trên mọi màn: gõ chữ ⇒ có nút X đang hiện. Số ô đo được bằng `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L7",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 QD-310)`",
+     "rule": "🔴 **Ô nhập chữ có giới hạn ký tự trong form Tạo/Sửa ⇒ PHẢI có bộ đếm `n / max`** — dựng bằng `components/app/AppCounterInput.jsx` *(ô `1` dòng: bộ đếm trong ô sát phải · textarea: dưới ô canh phải)*, ⛔ màn tự dựng bộ đếm",
+     "threshold": "Mọi `input[type=text]` và `textarea` có `maxlength` trong vùng `main` của trang `/tao-moi` · `/chinh-sua` · có `.form-grid`, tính cả bước form đang ẩn · bỏ ô tìm *(`Tìm theo…`)*, ô giờ, ô ngày, ô trong popup: thiếu bộ đếm đúng khuôn ⇒ HỎNG kèm id ô. Số ô `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L8",
+     "source": "`Verified (TrangNT5 08/10/2026 · PM2 Sổ BA)`",
+     "rule": "🔴 **Ô ngày, ô giờ bấm vào ⇒ PHẢI mở bảng chọn** — ô khoảng ngày *(`.date-range` mở `.calendar`)* · ô khoảng giờ *(`components/app/TimeRangeInput.jsx` mở `.time-panel`)* · ô antd *(`.ant-picker-dropdown`)*",
+     "threshold": "Mọi `.date-range` *(gồm `.time-range`)*, `.ant-picker`, nút ngày đơn `.date-input` và **mọi ô có placeholder `HH:mm`, `dd/MM/yyyy`** nằm ngoài khung khoảng *(vd ô giờ suất riêng của Quầy)* ⛔ khoá trên mọi màn: bấm ⇒ trong `≤ 800ms` có bảng chọn MỚI hiện. Ô ở chế độ Xem ⛔ tính; màn Cấu hình thời gian bấm `Chỉnh sửa` trước khi đo. Số ô `0` ⇒ HỎNG *(UX-J6)* · 🔴 *(thêm 09/10/2026, PM2 `QD-355`)* **bảng chọn mở ra phải hiện TRỌN, ⛔ bị khung cha cắt** *(`overflow: hidden/auto` của bảng, thẻ, panel)* — nguyên văn: *\"Ê chỗ tạo suát riêng k chọn được ngày giờ má ơi\"*: bảng chọn mới hiện nằm trọn trong mọi tổ tiên có `overflow ≠ visible`, lệch `≤ 1px`",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L9",
+     "source": "`Verified (TrangNT5 14/10/2026 · PM2 QD-393 · D28 A)` · `Verified (PM2 QD-323)`",
+     "rule": "🔴 **1 THANH NÚT DUY NHẤT ở ĐẦU MÀN, GHIM mép trên khi cuộn — ⛔ thanh chân trang** *(đổi 14/10/2026 theo D28 A; trước là cặp đầu và chân theo QD-323)*. Khung `.shell` tự cuộn, đầu màn (`.page-head`, `.shell-head`, `.status-bar`) dính mép trên ngay từ đầu nên ⛔ trôi, ⛔ lộ lớp, ⛔ giật — 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-424)`)* đầu màn ghim **`top: 30px` ngay dưới breadcrumb** *(👉 Xem `UX-I4`)*. Thanh nút dựng từ `1` cấu hình `components/app/PageActions.jsx`, nút đầu màn mang **id gốc** (engine, E2E tra id này); `PageFooter` ⛔ vẽ. 🔴 **NGOẠI LỆ màn NHIỀU BƯỚC** *(ĐỔI 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-431 ④)`, thay thứ tự `4` nút trên `1` thanh của QD-420 ⑥)*: `Quay lại bước trước` *(trái)* và `Tiếp tục` *(icon mũi tên phải, phải)* đặt ở **CHÂN nội dung bước** *(`.step-nav`, nhóm trái · nhóm phải)* như Ant Design Steps, Material Stepper · **đầu màn chỉ còn nút chính** *(`Lưu nháp`, nút lưu cuối như `Lưu và gửi duyệt`)* — chi tiết ở Playbook CreateEdit khối `8`. 🆕 *(20/10/2026, `Verified (TrangNT5 20/10/2026 · PM2 QD-444)`)* thanh `.step-nav` **GHIM ĐÁY khung** `.shell` *(`position: sticky; bottom: 0`, nền trắng, viền và bóng phía trên đối xứng đầu màn ghim)*, nội dung ngắn vẫn nằm sát đáy. Nguyên văn: *\"Cho button Tiếp tục, quay lại fix ở phía dưới footer ấy\"*. Nguyên văn: *\"Thử tách button Quay lại và Tiếp tục đối với màn hình đặc thù nhiều Steps. Còn ở trên sẽ chỉ là button action chính\"* · TrangNT5 trả lời: *\"Tách: Quay lại/Tiếp tục ở cuối bước (Recommended)\"*. Dải nhắc thiếu thông tin nằm ngay dưới đầu màn. Áp **mọi màn** gồm Danh sách. Nguyên văn: *\"Chỗ này mọi ng có ý kiến không muốn có 2 bộ button\"* · *\"Phải xử lý các lớp đừng bị đè lộ và giật giật\"* · *\"Apply cả vụ pin khu vực button + button vào toàn bộ các MH PM2\"*",
+     "threshold": "Mọi route Tạo, Sửa, Chi tiết, Cấu hình: có nút trong `.page-head-actions` · `0` thanh `.form-footer` đang hiện · cuộn `.shell` hết cỡ thì đầu màn lệch **`0px`** · số màn đo `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L10",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-324)`",
+     "rule": "🔴 **Mở rộng QD-367: MỌI chỗ hiển thị 1 đối tượng khác (bàn, quầy…) luôn có «Mã — Tên» hoặc 2 cột Mã · Tên, ⛔ chỉ hiện mã trơn** — hàm chung `tableLabel` · `counterLabelOf` (`lib/tableTimeline.js`). Nguyên văn: *\"k ở đâu chỉ hiển thị mỗi mã ấy, k ai hiểu đâu\"*. · 🔴 **Ô chọn thông thường hiển thị `Mã — Tên`** — gạch dài `—` *(U+2014)*, `1` khoảng trắng mỗi bên, áp cả chữ trong ô đã chọn lẫn từng dòng trong danh sách thả xuống. Nguyên văn: *\"Tất cả các combobox thông thường nếu không có gì đặc biệt luôn hiển thị Mã - Tên (gạch là gạch dài dài nhé)\"*. **Không áp** cho ô chọn mà đối tượng không có Mã *(trạng thái, Có/Không, số bản ghi, ngày trong tuần)* và ô hiển thị đặc biệt đã chốt riêng *(vd ô người có ảnh, CCCD)*",
+     "threshold": "Mọi ô `AppSearchSelect`, `AppFilterDropdown` của danh mục có Mã: chữ hiển thị khớp `^\\S+ — .+$` · ⛔ dùng `-` hay `–`",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L11",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-326)`",
+     "rule": "🔴 **Dấu `*` trường bắt buộc luôn màu ĐỎ báo lỗi** `var(--color-err)` `#DC2626` — ⛔ lấy màu thương hiệu *(màu thương hiệu đổi thì dấu `*` đổi theo, sai nghĩa)*. `1` lớp chung `.required-mark` cho form, popup và bộ lọc. Nguyên văn: *\"Ô vãi dấu * bắt buộc cần màu đỏ nhá\"*. Đo `09/10/2026` trước khi sửa: `45` dấu `*` trên `8` màn đang xanh `#076DB6`",
+     "threshold": "Mọi nút chữ chỉ chứa `*` trong `main` và popup: màu chữ `= rgb(220, 38, 38)` · số dấu đo được `0` ⇒ HỎNG *(UX-J6)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L12",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-333 ý 6)`",
+     "rule": "🔴 **Key trong câu thông báo in đậm bằng biến bọc `**{n}**`, dấu `**` ⛔ lọt ra màn hình** *(ghi vào Rules 09/10/2026, trước đó cổng đã có phép mà Rules chưa có dòng)*",
+     "threshold": "Chữ hiển thị trong `main`, popup, toast, tooltip chứa `**` = **`0`**",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L13",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-347)`",
+     "rule": "🆕 **QD-372 ②: 2 mức nhấn mạnh — XANH (`<NoteBox items>`) cho nội dung cần nổi bật để nhắc nhở, hướng dẫn người dùng; XÁM (`<NoteBox line>`) cho ghi chú nhắc thêm, vô hại.** 🔴 **Ghi chú trong khối form dùng component chung `components/app/NoteBox.jsx`, ⛔ viết bằng dòng chữ xám `.field-hint`.** **`NoteBox` đặt ở CUỐI khối, `2` biến thể** *(sửa 09/10/2026 theo Q12)*: ① **quy tắc nhập liệu** *(vd ngày bật thăm gặp bắt buộc ít nhất `1` ca)* ⇒ khung info: nền info, viền trái `4px`, icon info, tiêu đề «Lưu ý», gạch đầu dòng, từ khoá in đậm · ② **`1` câu thông tin về nguồn số liệu** *(vd số đồng bộ từ C04)* ⇒ `NoteBox line=…`: khung **XÁM**, **`1` dòng** «Lưu ý: …», chữ xám, ⛔ nổi bật như khung info — nguyên văn: *\"Chỗ này chỗ Lưu ý chỗ giới hạn thời lượng vẫn k ưng, nó quá nổi bật và không cần thiết. Ngoài ra icon Lưu ý có vẻ bị to so với chữ nhìn nó lệch\"* · *\"Cho thành 1 dòng và chỗ này để màu xám\"* · *\"Ý là có bọc khối như thế này nhưng là khối màu xám và câu của tớ đẻ màu xám luôn\"*. Icon cùng cỡ dòng chữ, tâm icon trùng tâm dòng *(UX-A6)*. ⛔ đặt ghi chú cạnh hoặc dưới tên khối *(đã thử `3` kiểu ngày `09/10/2026`, TrangNT5 chốt: \"Cho giống Lưu ý phía trên vậy\")*. `.field-hint` chỉ dành cho gợi ý ngắn dưới `1` ô. Nguyên văn: *\"Ai dạy bạn làm cái kiểu ghi chú hời hợt thế này, đấm cho giờ, làm tử tế vào\"* · *\"Cái này nên để ở đây hợp lý hơn cạnh tên khối\"*. Thay dấu `*` lẻ ở `1` cột bảng bằng câu bắt buộc trong `NoteBox` *(màn Cấu hình thời gian)*",
+     "threshold": "Mọi màn: số `.field-hint` có chữ «bắt buộc» `= 0` · mỗi `.note-box` có `.note-box-title`",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L14",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-348)`",
+     "rule": "🔴 **Màn CHƯA CÓ DỮ LIỆU CẦN CÀI ĐẶT TRƯỚC ⇒ để trống vùng dữ liệu, hiện câu hướng dẫn kèm LINK mở thẳng màn cài đặt.** `1` component chung `components/app/SetupHint.jsx`, message `I001-94` *«Chưa có {0} nào. Vui lòng cài đặt tại {1}»*, `{1}` là tên màn cài đặt hiển thị thành link. ⛔ vẽ khung lưới hoặc bảng rỗng không lời giải thích. Nguyên văn: *\"Tớ muốn có quy tắc là nếu những màn hình nào mà chưa có dữ liệu cần cài đặt thì có mgs hướng dẫn và link đến trực tiếp màn hình đó\"*. Áp đầu tiên: tab Lịch theo buồng chưa có buồng ⇒ link màn Buồng thăm gặp",
+     "threshold": "Mọi `.setup-hint` có đúng `1` link, `href` là route có thật trong `App.jsx` *(so đường dẫn, link kèm `?tab=` hoặc `#khối` trong cùng màn vẫn hợp lệ)* · 🆕 *(D36 A, TrangNT5 09/10/2026 nguyên văn «D36 OK»)* câu chờ cài đặt khác `I001-94` *(vd `I001-79` Suất riêng khi quầy chưa có buồng)* cũng dựng bằng `SetupHint`, giữ nguyên chữ, cụm chỉ nơi cài đặt thành link *(`linkInMsg` ở `lib/setupHint.js`)*, ⛔ khung nét đứt",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L15",
+     "source": "`Verified (TrangNT5 09/10/2026)`",
+     "rule": "🔴 **Chữ hiển thị đứng sau dấu `:` viết HOA chữ đầu** *(luật viết hoa sau dấu `:` của TrangNT5)*. Bắt cả `2` dạng: `: chữ` trong `1` đoạn chữ, và `<b>Nhãn:</b> chữ` *(đoạn kế tiếp)*. Bỏ qua giờ `07:30`, URL, ô nhập. Nguyên văn: *\"Sau dấu : phải viết hoa nhé, cái này nhắc rất nhiều rồi\"*",
+     "threshold": "Mọi màn: số đoạn chữ có chữ thường sau `:` `= 0` *(hàm `soiHaiCham`)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L16",
+     "source": "`Verified (TrangNT5 09/10/2026 · T975)`",
+     "rule": "🔴 **Thanh tab dùng `AppTabs` — kiểu chuẩn ĐI KÈM component** *(`components/app/AppTabs.css`, lớp `.app-tabs`)*, ⛔ tự viết CSS tab riêng cho màn. Màn dùng `AppTabs` với lớp mặc định `.tabs` / `.tab-n` là đúng ngay. 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-421 ③)`)* hàng tab đứng ngay dưới đầu màn *(`.shell-head + .tabs`)* cách đầu màn **`8px`** *(`padding-top`)*, nguyên văn: *\"Chỗ Tab hơi sát, cho xuống 1 xíu cho cân đối\"* · 🆕 *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-423)`)* hàng tab đệm ngang đúng `--shell-gutter` ⇒ **mép tab đầu, kể cả gạch chân, thẳng mép khu lọc và bảng bên dưới** · `.tab-n` mọi màn đệm `12px 14px` *(cùng `.tab-btn`)*. Nguyên văn: *\"Ê tab phải cho dịch vào căn chỉnh thẳng với phía dưới chứ\"*. Nguồn: tab màn Sửa quầy hiện thành nút trần vì `AppTabs` trước đây không tự mang kiểu, TrangNT5: *\"Vãi tab kinh thế này … Khi làm Prototype k đọc các mẫu control có sẵn ah\"*",
+     "threshold": "Mọi màn có tab: chữ ký kiểu `.tab-n` *(đệm · cỡ · đậm · viền trên · nền · gạch dưới)* chỉ `1` kiểu, viền trên `0px` *(hàm `kieuTab`)* · cổng tự tạo quầy mẫu Q01 + bàn Q01-01 qua giao diện để vào được màn Sửa / Chi tiết khi dữ liệu trống",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L17",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-351)`",
+     "rule": "🔴 **Tên trạng thái nằm trong câu thông báo là KEY ⇒ in đậm**, kể cả khi trạng thái là biến `{n}` truyền vào *(vd `C001-11` «**Hoạt động**»)*. Áp cùng luật key in đậm `QD-333`",
+     "threshold": "Mọi chuỗi trong Message List có nhắc tên trạng thái: chữ trạng thái nằm trong `**…**`",
+     "check": "Cổng ✔ `--sync` *(đọc `messageCatalog.js`, gom nhãn trạng thái từ khai báo `{ KEY: { label } }`, chữ đứng đầu câu là động từ nên không tính)*"
+    },
+    {
+     "code": "UX-L18",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-361 QD-368)`",
+     "rule": "🔴 **Đối tượng CON chỉ sống trong 1 đối tượng CHA** *(bàn trong quầy)* **⇒ quản lý ở TAB của màn cha, ⛔ dựng màn danh sách hay màn Sửa riêng cho con.** Mọi thao tác của con *(Xóa · Vô hiệu hóa · Kích hoạt, Xuất Excel)* đặt ở tab con của màn Chi tiết cha và sheet phụ của file Excel cha. Nút **Chỉnh sửa** ở Chi tiết cha mở màn Sửa **đúng tab đang xem** (`?tab=`). Nguồn: TrangNT5 *\"Kiểu tạo 1 màn nhiều Tab luôn nhỉ, đang thấy tạo 2 MH quay lại lk hợp lý lắm\"* và *\"T thấy cái màn hình này bị vô dụng á\"*",
+     "threshold": "Menu ⛔ có mục riêng cho đối tượng con · Chi tiết cha có tab con kèm cột Thao tác",
+     "check": "Cổng ✔ `--sync` *(bảng khai báo `CHILD_ENTITIES` trong `TrangNT5_GateExtraChecks.mjs` — thêm đối tượng con mới thì thêm `1` dòng)*"
+    },
+    {
+     "code": "UX-L19",
+     "source": "`Verified (TrangNT5 09/10/2026)`",
+     "rule": "🔴 **Bảng nhập nhiều dòng trong form: dòng THÊM MỚI chèn LÊN ĐẦU** *(cùng thứ tự mới lên trên của danh sách)*; ô tích mặc định theo **giá trị phổ biến** của nghiệp vụ *(Có vách ngăn = tích sẵn)*. Nguồn: TrangNT5 *\"add thêm thì cho lên trên cùng nhé, vì thứ tự của mình là mới lên trên mà\"* và *\"Có vách ngăn mặc định có nên là defalut dòng mới là tick hộ\"*",
+     "threshold": "Bấm Thêm dòng ⇒ dòng mới ở vị trí `1`",
+     "check": "Cổng ✔ `--sync` *(mở mọi màn Tạo/Sửa, mọi tab, bấm nút «Thêm …» trong bảng nhập rồi đo vị trí dòng mới; `0` nút đo được = HỎNG)*"
+    },
+    {
+     "code": "UX-L20",
+     "source": "`Verified (TrangNT5 09/10/2026 · PM2 QD-349)`",
+     "rule": "🔴 **Mã trong bảng danh sách là chữ thường, ⛔ làm link** sang màn Chi tiết — vào Chi tiết bằng nút thao tác của dòng. Nguồn: TrangNT5 *\"Bỏ click vào mã vào đc màn chi tiết nhé ==> Nó bị lẫn\"*",
+     "threshold": "Cột Mã ⛔ chứa thẻ `a`",
+     "check": "Cổng ✔ `--sync` *(cột có tiêu đề bắt đầu «Mã» ⛔ chứa thẻ `a`)*"
+    },
+    {
+     "code": "UX-L21",
+     "source": "`Verified (TrangNT5 09/10/2026)`",
+     "rule": "🔴 **Tình huống ĐÃ CÓ cách xử lý ở màn khác ⇒ làm Y HỆT cách đó; CHƯA có tiền lệ ⇒ ⛔ tự chế kiểu trình bày mới**, đưa vào `deXuatThem` chờ TrangNT5 chốt. Kiểu tự chế đã bắt: **đánh số `①②③` / `1. 2. 3.` trước tiêu đề khối, nhóm** — PM2 ⛔ màn nào làm vậy *(thanh bước của form nhiều bước là ngoại lệ, số nằm trong vòng tròn của thanh bước)*. Nguyên văn: *\"k cần đánh 1,2,3 đừng tự bịa cách làm\"* · *\"Khi đặt max thì di chuột vào show tooltips ==> Có màn khác có TH này tương tự rồi mà k làm theo ah\"* · *\"Q14 Học t hằng đã làm sẵn rồi mà\"*",
+     "threshold": "Tiêu đề khối, nhóm, tab *(`.card-title` · `h2` · `h3` trong `main` và popup)* bắt đầu bằng số thứ tự = **`0`** · số tiêu đề đo được `0` ⇒ HỎNG *(UX-J6)* · phần \"có tiền lệ mà không theo\" do agent review soi",
+     "check": "Cổng `--sync` ✔ *(phần đánh số)* · Agent review"
+    },
+    {
+     "code": "UX-L22",
+     "source": "`Verified (TrangNT5 10/10/2026 · PM2 QD-372)`",
+     "rule": "🔴 **Ô nhập nằm TRONG BẢNG nhập liệu đệm trái `8px`** cho gọn nhiều cột *(vd bảng Buồng thăm gặp ở màn Sửa quầy)*; ô nhập trong form giữ `12px`. Nút chính mọi nơi đệm `16px`, ⛔ quy tắc riêng theo ngữ cảnh (QD-372 ①)",
+     "threshold": "Ô `td input.text-input` đệm `8px` · ô nhập ngoài bảng `12px`",
+     "check": "Trang Design System: thu hoạch tách loại «Ô nhập trong bảng», báo LỆCH khi khác kiểu"
+    },
+    {
+     "code": "UX-L23",
+     "source": "`Verified (TrangNT5 10/10/2026 · PM2 QD-370 ⑭)`",
+     "rule": "🔴 **Style của control dùng chung nằm trong CSS CHÍNH nạp ở mọi màn** (`styles/base.css`), ⛔ để trong CSS riêng của 1 màn (`form.css`) — popup dùng chung (Hủy lịch hẹn…) mở từ màn nào cũng phải cùng kiểu. Đo thật: `.text-input` chỉ ở `form.css` ⇒ ô Lý do hủy trong popup mở từ màn Danh sách viền đen dày, mở từ Chi tiết lại đúng",
+     "threshold": "Cổng `--sync` đọc CSS chính trên URL gốc, đếm lớp control dùng chung thiếu = **`0`**",
+     "check": "Cổng ✔"
+    },
+    {
+     "code": "UX-L24",
+     "source": "`Verified (TrangNT5 D25 · D29 10/10/2026)`",
+     "rule": "🔴 **CSS riêng của 1 màn CHỈ chứa phần riêng của màn đó** — ⛔ chép lại luật của CSS dùng chung (`styles/form.css`, `styles/base.css`); màn cần style dùng chung thì `import '@/styles/form.css'` TRƯỚC CSS riêng. **Lớp lưới `.span-*` chỉ khai ở `form.css`.** Đo thật: màn Quầy chép nguyên `form.css` (263 luật) nên lớp `.span-9` chỉ có ở màn Quầy, màn khác dùng là vỡ lưới",
+     "threshold": "`0` luật trùng · `0` lớp `span-*` ngoài `form.css`",
+     "check": "Cổng ✔ `--sync` *(tạm cảnh báo)* **D35 (13/10/2026):** chữ lỗi `.field-error`, ô lọc `.filter-cell input`/`.filter-select-input`, ô chọn `.select-field select.text-input` đã về `base.css` (1 bản) — sửa rò khi chuyển màn. **Còn chép trùng có chủ đích ở 3 màn** (Chi tiết lịch hẹn · Danh sách lịch hẹn · Danh sách quầy): 3 màn KHÔNG nạp `form.css` vì `form.css` còn nhiều luật bộ chọn chung chung rò sang màn khác (đo 2 lần: lệch 101 rồi lệch đầu trang 14→13px). Muốn dọn ⇒ tách `form.css` thành luật có phạm vi form trước. Kiểm bằng ảnh chụp style MỞ THẲNG + CHUỖI MÀN (chuyển màn trong ứng dụng)"
+    },
+    {
+     "code": "UX-L25",
+     "source": "`Verified (TrangNT5 14/10/2026 · PM2 QD-374 · D6 A)`",
+     "rule": "🔴 **Màu nút thao tác `.ib.ib-*` ĐÚNG bảng chuẩn ở MỌI màn, mọi tab** — Xem `#1D5FA6` · Sửa `#C2410C` · Duyệt/Kích hoạt `#0E7C6B` · Từ chối/Hủy/Xóa `#B91C1C` · Điều chỉnh `#475569` · Cảnh báo `#A16207` (Playbook List «Màu icon thao tác», TrangNT5 I1A). Bảng màu (biến `--ic-*` + luật `.ib.ib-*`) khai **1 NƠI** ở `styles/base.css`, KHÔNG khai lại hay ghi đè ở CSS riêng màn",
+     "threshold": "Phép tĩnh: `0` file CSS ngoài `base.css` khai `--ic-*` hay màu `.ib.ib-*` · phép động: mọi nút `.ib.ib-*` đang hiện (không khoá) trên mọi màn, bấm qua mọi tab, màu chữ = bảng chuẩn",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L26",
+     "source": "`Based on Docs (HeroUI Badge)` · `Verified (TrangNT5 14/10/2026 · PM2 QD-380)`",
+     "rule": "🔴 **Số đếm cùng `1` khuôn ở mọi màn** *(chuông `.bell-dot` · tab `.tab-count` `.tab-number` · nút lọc `.filter-count` `.filter-unassigned-count`)*. Chỉ áp PM2",
+     "threshold": "① `font-variant-numeric: tabular-nums` *(số đổi thì bề ngang không giật)* · ② `min-width ≥ height` *(`1` chữ số ra hình tròn)* · ③ chuông quá `99` hiện `99+` *(hằng `UNREAD_BADGE_MAX = 99` ở `data/notificationStore.js`)*",
+     "check": "Cổng `--sync` ✔"
+    },
+    {
+     "code": "UX-L27",
+     "source": "`Verified (TrangNT5 14/10/2026 · PM2 QD-390 · D4 A)` · `Verified (PM2 QD-244)`",
+     "rule": "🔴 **Màu NÚT CHỮ theo VAI TRÒ, khai `1` NƠI** ở `styles/base.css` khối «MÀU NÚT CHỮ», CSS riêng màn KHÔNG khai lại hay ghi đè màu nút. **Phụ** `.form-btn` `.btn` *(Lưu nháp · Hủy · Quay lại)* nền trắng viền `#D9D9D9`, rê chuột viền và chữ xanh · **Chính** `.form-btn-primary` `.btn-primary` xanh thương hiệu, mỗi khu vực `1` nút · **Đỏ đặc** `.form-btn-danger` `.btn-danger` CHỈ cho nút xác nhận phá hủy TRONG HỘP THOẠI · **Viền đỏ** `.form-btn-danger.is-outline` `.btn-danger-ghost` cho phá hủy đặt TRÊN TRANG · **Cam** `.form-btn-warning` lối phụ cạnh nút chính · **Xanh lá** `.form-btn-success` kết quả chấm Khớp · **Viền xanh nền nhạt** `.btn-hl` thao tác hàng loạt · 🆕 **Viền thương hiệu** `.btn.btn-outline` *(19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-421 ⑤)`)* nền trắng, viền và chữ màu thương hiệu, rê chuột nền nhạt — cho **nút mở màn con** đứng cạnh nút phụ *(mẫu `Lịch theo buồng` cạnh `Xuất Excel`)* để khác nút phụ, nguyên văn: *\"Lịch theo buồng cần set button có màu gì nhỉ, viền xanh ah. Kiểu để nó khác Xuất Excel đó\"*. 🆕 *(20/10/2026, `Verified (TrangNT5 20/10/2026 · PM2 QD-444)`)* **2 nút chuyển bước** `Quay lại bước trước` và `Tiếp tục` trong `.step-nav` cũng dùng kiểu viền thương hiệu này *(luật `#root .step-nav .form-btn` ở `base.css`, thắng luật nút phụ)*. Nguyên văn: *\"Button Tiếp tục và Quay lại trang trước: nên để button trắng, viền xanh\"*. Nút trang và form luôn có icon + chữ, nút popup giữ chữ trần (QD-389)",
+     "threshold": "Phép tĩnh: `0` file CSS ngoài `base.css` khai màu `background`/`color`/`border-color` cho `.form-btn-primary` `-danger` `-warning` `-success` `.btn-primary` `.btn-danger` `.btn-danger-ghost` · phép động: chèn đủ `11` loại nút vào mọi màn, màu tính toán giống nhau giữa các màn *(đo `14/10/2026`: trước khi gom, `3` loại hiện xám mặc định ở màn không nạp `form.css`)*",
+     "check": "Cổng ✔ `UIUXGate` *(2 phép UX-L27: tĩnh + chèn `11` loại nút mọi màn, thử ca dương tính bắt đủ `4` file và `3` loại lệch)*"
+    }
+   ]
+  }
+ ],
+ "playbooks": [
+  {
+   "name": "List",
+   "file": "TrangNT5_Playbook_List.md",
+   "sections": [
+    {
+     "title": "🎯 MỤC ĐÍCH",
+     "md": "Sổ tay của agent `srs-uiux-list`. Đọc **SAU** `TrangNT5_UIUX_Rules.md` — luật dùng chung mọi màn ở đó *(mã `UX-xxx`)*, ⛔ chép lại ở đây.\n\n| Màn mẫu chuẩn | Đường dẫn |\n|:---|:---|\n| Danh sách lịch hẹn thăm gặp trực tiếp — tab **Danh sách** | `https://pm2-prototype-iota.vercel.app/lich-hen/tham-gap-truc-tiep` *(code `C:\\TrangNT5_VS Code\\srs\\SRS Gen AI\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\src\\pages\\AppointmentList\\`)* |\n| Ma trận nút theo trạng thái *(sinh từ chính màn mẫu)* | `…\\PM2\\03_TrangNT5_WorkingDocs\\TrangNT5_ButtonByStatus_WEB-06.md` · công cụ `…\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\_tools\\TrangNT5_GenButtonByStatus.cjs` *(sinh từ `listLogic.js` bản React và tự đối chiếu SRS `BR1-9`, thay công cụ cũ đọc bản HTML từ 09/10/2026)* |\n| Mẫu gốc PM1 *(phân trang, Xuất Excel, dropdown, đầu trang)* | `https://pm1-cs02-stag-fe.aequitas.dev/khen-thuong-hoc-vien` |\n\n---"
+    },
+    {
+     "title": "① KHUNG MÀN — `10` KHỐI THEO THỨ TỰ TỪ TRÊN XUỐNG",
+     "md": "| # | Khối | Mẫu đã chốt | Nguồn |\n|:---:|:---|:---|:---|\n| 1 | **Breadcrumb** | `Tổng quan` › `{nhóm menu}` › **`{tên màn}`** — cấp đầu mở màn Tổng quan, cấp cuối đậm ⛔ bấm được · 🔴 nằm **trong khung trắng, dòng đầu tiên, ghim khi cuộn** *(ĐỔI 19/10/2026, PM2 `QD-424`, 👉 Xem `UX-I4`)* | `Verified (TrangNT5)` |\n| 2 | **Đầu trang** | Icon bọc khối `28×28` nền đỏ nhạt *(cao bằng dòng tiêu đề, icon `16`)* — 🔴 **màn Danh sách là loại màn DUY NHẤT có icon tiêu đề** *(19/10/2026, PM2 `QD-420` ①, 👉 Xem `UX-I2`)* · tiêu đề `18/700` · 🔴 **KHÔNG câu diễn giải bên dưới** *(ĐỔI 14/10/2026, PM2 QD-376: \"Bỏ phần ghi chú ở dưới mỗi màn hình. Cho icon nhỏ bằng tên\")* · ⛔ dải thông báo mô tả màn | `Verified (TrangNT5 · QD-376)` |\n| 3 | **Nút chính góc phải** | Thứ tự: nút mở màn chế độ xem khác *(mẫu `Lịch theo buồng`, khối `4`)* · `Xuất Excel` · `Hàng loạt (n)` *(ẩn tới khi chọn dòng)* · `Thêm mới` *(nút chính đỏ)* · chỉ hiện ở tab Danh sách | `Verified (TrangNT5)` |\n| 4 | **Chế độ xem khác** *(lưới lịch theo tài nguyên…)* | 🔴 *(ĐỔI 19/10/2026, PM2 `QD-420` ②, thay QD-382)* **Chế độ xem khác là MÀN RIÊNG có URL riêng** `{route danh sách}/{tên chế độ viết không dấu}` *(mẫu `/lich-hen/tham-gap-truc-tiep/lich-theo-buong` · `/lich-hen/gap-truc-tiep-ngoai-le/lich-theo-buong`)* · ở Danh sách là **`1` nút** trên thanh nút đầu trang, đứng **trước** `Xuất Excel` *(mẫu chữ `Lịch theo buồng`, id `modeLich`)* · màn lưới có **nút quay về Danh sách** *(id `nutVeDanhSach`)*, ⛔ icon tiêu đề *(UX-I2)* · ⛔ cặp nút chuyển chế độ `.mode` trong hàng Đầu trang. Nguyên văn: *\"Lịch theo buồng để dạng button ==> CLick vào đó thì di chuyển trên màn hình khác và có URL mới, có button bak về MH danh sách\"* | `Verified (TrangNT5 19/10/2026 · PM2 QD-420)` |\n| 5 | **Tab trạng thái** | Kiểu **gạch chân** · mỗi tab có chấm màu `8px` + badge số cùng màu thẻ trạng thái · số **đếm SAU bộ lọc** · tab đếm `0` hiển thị bình thường *(UX-G6)* | `Verified (TrangNT5)` |\n| 6 | **Khối Điều kiện tìm kiếm** | 🔴 *(ĐỔI 14/10/2026, PM2 QD-377 · QD-382)* **`1` dòng điều kiện CỐ ĐỊNH luôn hiện**: ô từ khoá · khoảng ngày · Trạng thái *(ẩn ở tab khác Tất cả, ô từ khoá giãn ra)* · 🔴 *(ĐỔI 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-431 ①)`, thay link chữ của QD-420 ⑫ · QD-421 ② · QD-425)* cuối dòng là **nút vuông `36×36` CHỈ icon phễu** *(`.filter-more-btn-icon`, id `nutLoc`, rộng cố định nên mở/đóng ⛔ xô lệch hàng)*, tooltip và `aria-label` `Tìm kiếm mở rộng` / `Thu gọn tìm kiếm` · **chấm số đếm** góc trên phải = số điều kiện mở rộng đang chọn *(`.filter-more-count`, khuôn số đếm `UX-L26`)*, ẩn khi `0` · đang mở thì nút tô xanh nhạt · **vùng mở rộng có khung viền `1px`, bo `8px`, nền nhạt, đệm `16`** *(`.filter-row-more`)* · bấm lần nữa thì gập, mở màn thì gập sẵn. Nguyên văn: *\"Khu vực mở thêm điều kiện tìm kiếm thì thêm border cho khu vực mở thêm. Cân nhắc nếu chỉ để lại mỗi button phễu thì có ổn không, gây xô lệch không\"* · TrangNT5 trả lời: *\"Chỉ icon phễu + số đếm (Recommended)\"* · khung tìm kiếm ⛔ viền bọc ngoài · **⛔ dải gập «Điều kiện tìm kiếm»** · màn có ít điều kiện, đủ `1` dòng ⇒ ⛔ nút mở rộng · khuôn CSS `.filter-panel.is-fixed` ở `styles/base.css`, màn mẫu Danh sách lịch hẹn · ⛔ chip Hôm nay / Ngày mai | `Verified (TrangNT5 · QD-377 · QD-382 · QD-431)` |\n| 7 | **Ô lọc** | 🔴 *(ĐỔI 14/10/2026, PM2 QD-377 · QD-382)* **Dòng cố định**: từ khoá · khoảng ngày · Trạng thái · nút phễu `Tìm kiếm mở rộng` cuối dòng *(khối `6`)*, các ô giãn theo tỷ lệ `4 · 3 · 3` *(khuôn `.filter-row-main` ở `styles/base.css`)* · **dòng mở rộng** các dropdown còn lại lưới `12` cột `3+3+3+3` *(UX-B1)* · màn đủ điều kiện trên `1` dòng thì ⛔ có dòng mở rộng · ⛔ nhãn ngoài, chữ `Tất cả …` là placeholder · mỗi ô có nút X xoá · khoảng ngày là **`1` ô**, lịch `2` tháng kiểu PM1, 🔴 **mặc định ĐỂ TRỐNG Từ ngày / Đến ngày ⇒ mở màn thấy toàn bộ dữ liệu** *(ĐỔI 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-432 ②)`, thay mặc định hôm nay tới `7` ngày sau; mẫu Danh sách lịch hẹn; nguyên văn: \"chuyển để ngày ở màn hình danh sách là blank ==> để search all dữ liệu\")* | `Verified (TrangNT5)` |\n| 8 | **Bảng** | Cuộn dọc trong khối, **tiêu đề cột ghim** · tiêu đề đỏ nhạt, hàng rê chuột nhạt hơn `1` bậc · cột Thao tác **ghim phải, nền đặc**, rộng theo **số nút tối đa mà VAI đang đăng nhập thấy** *(👉 Xem `UX-G11`)* · ⛔ gom icon vào \"…\" · checkbox chỉ ở tab trạng thái cụ thể · bảng ít cột ⛔ cuộn ngang ở `1366` *(👉 Xem `UX-G10`)* | `Verified (TrangNT5 · PM2 QD-346 ⑥ ⑦)` |\n| 9 | **Phân trang** | Khuôn PM1: `Trang trước` · `Tổng số: n` │ `Trang a/b` │ `Chọn trang [▾]` │ `Chọn số bản ghi [10/20/50/100] trên 1 trang` · `Trang sau` · mặc định **`10`** *(👉 Xem `UX-G9`, sửa 09/10/2026 từ `20`)* · nút tắt vẫn hiện. 🔴 *(ĐỔI 14/10/2026, PM2 QD-373)* chữ `Trang a/b` GIỮ như PM1, thêm ô **`Chọn trang`** = `components/app/PageSelect.jsx` (ô chọn có tìm chung, tìm chữ chứa) · danh sách đúng số trang đang có · **1 trang vẫn hiện ô, chỉ có số 1** · nhảy theo Trang trước/sau, lọc, số bản ghi · áp MỌI thanh phân trang. Nguyên văn: *\"Trang 1/1 ==> Giữ nguyên text. Và thêm 1 field khá cạnh đó. Chọn trang\"* · *\"T mún dùng chung control mọi chỗ\"* | `Verified (Knowhow WEB-06 C.4 · PM2 QD-346 ③ · QD-373)` |\n| 10 | **Trạng thái rỗng** | `1` dòng gộp cột, cao `150px`, dựng bằng `EmptyRow`: chưa có bản ghi nào ⇒ `I001-27` *«Chưa có {đối tượng} nào»* · lọc không ra ⇒ `I001-28` *«Không có dữ liệu phù hợp với điều kiện tìm kiếm»* · đầu bảng vẫn hiện · chữ giữa khung nhìn thấy *(👉 Xem `UX-G8`)* | `Verified (màn mẫu · PM2 QD-346 ①)` |"
+    },
+    {
+     "title": "② BÓC TÁCH BẮT BUỘC TỪ SRS — trả lời đủ trước khi vẽ",
+     "md": "| # | Phải xác định | Ghi chú |\n|:---:|:---|:---|\n| 1 | **Danh sách cột theo thứ tự** + căn lề từng cột | Căn theo loại: STT, ngày giờ, trạng thái, tag **giữa** · chữ **trái** · số **phải** |\n| 2 | **Cột nhiều dòng** | Ô chính `3` dòng *(tên đậm · dòng phụ · dòng phụ)* — hàng `82px`, ⛔ bóp đệm |\n| 3 | **Dòng phụ hay thêm cột** | Thông tin phụ của mã *(nguồn, loại)* ⇒ **dòng phụ**, ⛔ thêm cột · 🔴 *(19/10/2026, PM2 `QD-425`)* **cờ phân loại đặc biệt của bản ghi** *(mẫu: đơn ngoại lệ)* ở bảng danh sách ⇒ **icon nhỏ cạnh mã**, ⛔ tag chữ: icon `14px` trong ô `20px`, màu theo ý nghĩa *(mẫu cờ cam `.exception-flag`)*, có tooltip `data-tip` giải thích và `aria-label` · 🔴 *(19/10/2026, PM2 `QD-426`)* icon **con trỏ thường** *(⛔ `cursor: help` hiện dấu hỏi chấm)*, câu tooltip **nói đúng tình trạng theo màn đang mở** *(mẫu: màn Thăm gặp trực tiếp «Đơn ngoại lệ đã được Trưởng cơ sở phê duyệt» · màn Lịch hẹn gặp trực tiếp ngoại lệ «Đơn ngoại lệ chưa được Trưởng cơ sở phê duyệt»)*, nguyên văn: *\"Sao tooltips có hỏi chấm gì đấy. Tooltips nội dung \"Đơn ngoại lệ đã được trưởng cơ sở duyệt\" ==> Đại ý câu thế, có thêt sửa lại cho hay hơn\"* · màn **Chi tiết GIỮ tag** cạnh trạng thái ở đầu màn · người dùng **lọc được** loại đó trong Tìm kiếm mở rộng *(mẫu: Luồng đăng ký › «Ngoại lệ — thân nhân cần xin duyệt»)*. Nguyên văn: *\"Chỗ Ngoại lệ có search được không. Chỗ thẻ Ngoại lệ có cách biểu đạt khác không. Thấy hơi xấu\"* · TrangNT5 trả lời: *\"Icon nhỏ cạnh mã (Recommended)\"* |\n| 4 | **Tập trạng thái và tab** | Tab nào hiện, tab nào gộp · giữ tab dù đếm `0` |\n| 5 | **Ma trận nút theo trạng thái** | Mỗi trạng thái hiện icon nào · nút ⛔ đủ điều kiện ⇒ **ẩn hẳn** *(khác nút hàng loạt: tắt nhưng vẫn hiện)* |\n| 6 | **Popup của từng nút đổi trạng thái** | Trường · bắt buộc · bộ đếm · nút chân · thông báo · trạng thái đích |\n| 7 | **Thao tác hàng loạt** | Chỉ áp cho các dòng **cùng trạng thái** · ⛔ ở tab Tất cả · ngưỡng cần phê duyệt *(mẫu: hủy quá `10`)* |\n| 8 | **Bộ lọc** | Trường nào · dropdown nào sinh từ dữ liệu *(⛔ gõ tay)* · ô tìm từ khoá tìm trên trường nào *(liệt kê đủ trong tooltip)* |\n| 9 | **Sắp xếp mặc định** | Mẫu: **ngày tạo mới nhất ở dòng `1`**, cùng ngày thì mã lớn trên · ⛔ bấm tiêu đề cột để sắp |\n| 10 | **Xuất Excel** | Khuôn PM1 · xuất **đúng tập đang hiển thị** · bảng rỗng vẫn xuất file chỉ tiêu đề và **báo thành công** |\n| 13 | **Bảng có lọc theo điều kiện nghiệp vụ** *(vd 2 danh sách tách theo luồng duyệt)* | Viết câu hướng dẫn ngay dưới bảng theo khuôn *«{Danh sách X} sẽ có giá trị nếu {điều kiện}»*, điều kiện lấy từ code lọc hoặc QD *(👉 Xem `UX-G12`, D32)* · khai id câu vào `BANG_GOI_Y` của cổng |\n| 11 | **Luồng về từ màn khác** | `?moi={mã}` / `?sua={mã}` ⇒ cuộn tới, tô sáng dòng `3` giây *(UX-G4)* và toast |\n| 12 | **Cột nào vào bảng, cột nào để màn Chi tiết** | 🔴 Bảng danh sách **chỉ giữ cột NGẮN đủ nhận diện và thao tác nhanh** *(mã, tên, mốc, trạng thái, công tắc)* · thông tin **dài** *(nội dung mẫu, danh sách người nhận, mô tả thao tác)* chỉ hiện ở màn hoặc popup **Chi tiết**. Nguyên văn: *\"Ở màn hình danh sách chỉ có Mã thông báo, Tên thông báo, Gửi khi nào , Bật/ Tắt. Còn chi tiết thì mới có nhiều thông tin thêm. Để cho bảng danh sách k bị chứa thông tin dài\"* *(PM2 `QD-366` ⑰)* |"
+    },
+    {
+     "title": "③ THÔNG SỐ RIÊNG LOẠI NÀY *(luật chung xem `UX-xxx`)*",
+     "md": "| Nguồn | Thông số | Giá trị |\n|:---|:---|:---|\n| `Verified (màn mẫu)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-423)` | Tab trạng thái | Cao `44` · `.tab-n` đệm `12px 14px` *(ĐỔI 19/10/2026, cùng `.tab-btn`)* · tab đầu thẳng mép khu lọc và bảng *(👉 Xem `UX-L16`)* · `14/500`, đang chọn `600` đỏ, gạch chân `2px` · badge pill tối thiểu `22`, `12/600` |\n| `Verified (TrangNT5 19/10/2026 · PM2 QD-420 ② · QD-421 ⑤)` | Nút mở chế độ xem khác | 🔴 *(ĐỔI 19/10/2026, thay khuôn nút chuyển gọn của QD-382)* Nút **viền thương hiệu `.btn.btn-outline`** *(nền trắng, viền và chữ màu thương hiệu, rê chuột nền nhạt — QD-421 ⑤, 👉 Xem `UX-L27`)* để khác nút phụ `Xuất Excel` · icon lịch + chữ, cao `36` *(`UX-C1`)* · trên thanh nút đầu trang, trước `Xuất Excel` · bấm thì chuyển URL sang màn riêng · ⛔ khung nền xám chứa cặp nút chuyển |\n| `Verified (màn mẫu)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-431 ①)` | Khối lọc | 🔴 *(ĐỔI 19/10/2026)* ⛔ dải đầu, ⛔ khung viền ngoài · khe ô `12 16`, ô cao `36` · nút phễu `36×36` viền `1px` bo `6px`, svg `16`, rê chuột viền và icon màu thương hiệu, đang mở nền `--color-brand-weak` · chấm số đếm lệch `-7px` góc trên phải · vùng mở rộng viền `1px` bo `8px` nền `#F8FAFC` đệm `16`, cách dòng cố định `4px`, ô span `3` *(`styles/base.css` khối «QD-431 ①»)* |\n| `Verified (màn mẫu)` | Bảng | Tiêu đề cột cao `40`, đệm `0 24` · hàng cao `82`, đệm `12 24` · ô `1` dòng cắt `…` · chuỗi > `100` ký tự cắt `…` · icon thao tác `32×32`, svg `16`, khe `4` |\n| `Verified (TrangNT5)` | Khoảng giữa các khối | `1` biến `--block-gap` `12px` *(tên cũ `--khe-khoi`, đổi sang tiếng Anh 19/10/2026)*, khe màu trắng |\n| `Verified (TrangNT5 09/10/2026 · PM2 QD-346 ⑤)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-422)` | Lề `2` bên | 👉 **Luật chung ở `UX-B5`** *(ĐỔI 19/10/2026: `24px` ⇒ **`16px`**, biến `--shell-gutter`)*. Khung lọc, khung bảng, màn lưới Lịch theo buồng cách mép khung trắng bằng lề tiêu đề `.shell-head` và `.pager` · ⛔ khít mép. Nguyên văn QD-346 ⑤: *\"Xử lý căn lề 2 bên như thế này, vì PM2 đang khít 2 bên quá nhìn khó dùng\"* |\n| `Verified (TrangNT5 09/10/2026 · ĐỔI 13/10/2026 · PM2 QD-346 ②)` | Ô khoảng ngày | Ô **chia `2` nửa** như antd RangePicker: `Từ ngày` **căn giữa nửa trái**, `Đến ngày` **căn giữa nửa phải**, mũi tên ở giữa, biểu tượng lịch sát mép phải *(trước `13/10/2026`: cả cụm ngày dồn vào giữa ô)* · gạch chân ô đang chọn **chỉ dài đúng phần chữ ngày**. Cách dựng: mỗi `input.range-input` co theo chữ `field-sizing:content` và có `margin-left:auto; margin-right:auto` *(Prototype_React `src/styles/base.css`)*. Nguyên văn: *\"cHO NGÀY THÁNG ở giữa nhé, nhìn lệch sang hơi khó chịu. ngoài ra cái gạch chân chỉ ở đúng thông tin ngày tháng\"* · *\"Cái này cho kiểu căn giữa thành 2 khu như t khoanh được không\"* |\n| `Verified (TrangNT5 I1A · ĐỔI 13/10/2026 D5 · PM2 QD-374)` | Màu icon thao tác | Theo ý nghĩa: Xem xanh `#1D5FA6` · Sửa cam `#C2410C` · Duyệt / Kích hoạt xanh lá `#0E7C6B` · Từ chối / Hủy / Xóa đỏ `#B91C1C` · Điều chỉnh `#475569` · Cảnh báo (Vô hiệu hóa, Vắng mặt) `#A16207`. 🔴 **Khai ĐÚNG 1 NƠI** ở `styles/base.css` (biến `--ic-*` + luật `.ib.ib-*`), KHÔNG khai lại ở CSS riêng màn và KHÔNG ghi đè màu trong màn — trước đây khai lặp ở 2 màn danh sách nên màn khác hiện xám (Xóa bàn ở Chi tiết quầy) hoặc tự ghi đè lệch chuẩn (Xem ở Cài đặt thông báo). Nguyên văn: *\"D5 Cần chuẩn đồng bộ + hợp lý\"* |\n| `Verified (TrangNT5 14/10/2026 · PM2 QD-390)` | Màu nút chữ | 👉 Theo `UX-L27` ở `TrangNT5_UIUX_Rules.md` *(màu theo vai trò, khai 1 nơi `base.css`)*. Nút trang và form có icon + chữ, nút popup chữ trần *(QD-389)* |\n| `Verified (TrangNT5)` | Icon | Hủy = lịch có dấu X *(⛔ icon xoá)* · Từ chối = tròn có dấu X · ⛔ dùng chung `1` icon cho `2` ý nghĩa |\n| `Verified (màn mẫu)` | Excel | Tên `{DanhSach…}_yyyyMMdd_HHmmss.xlsx` · dòng `1` tiêu đề `14` đậm · dòng `2` *\"Ngày kết xuất: dd/MM/yyyy HH:mm\"* nghiêng · dòng `4` tiêu đề cột nền `059669` chữ trắng · đóng băng `4` dòng · autoFilter · Calibri `11` · sọc xen kẽ · toast *\"Đã kết xuất {n} {đối tượng} theo bộ lọc hiện hành\"* kể cả `n = 0` |"
+    },
+    {
+     "title": "④ BỘ CÂU HỎI CHUẨN — agent TỰ TRẢ LỜI từ SRS trước, ⛔ trả lời được mới hỏi TrangNT5",
+     "md": "🔴 Câu có đáp án **luật chung** ⇒ áp luôn · câu có đáp án **\"theo nghiệp vụ\"** ⇒ đọc SRS · SRS ⛔ nói ⇒ đưa vào danh sách hỏi `1` lượt.\n\n| # | Câu hỏi | Đáp án đã chốt | Nguồn |\n|:---:|:---|:---|:---|\n| 1 | Tiêu đề cỡ bao nhiêu, có câu diễn giải? | `18/700`, **không** câu diễn giải, ô icon `28` *(QD-376)* | `Verified` |\n| 2 | Cấp đầu breadcrumb? | `Tổng quan` | `Verified` |\n| 3 | Có dải thông báo mô tả màn? | ⛔ — phản ánh nghiệp vụ vào chính bộ lọc | `Verified (A2)` |\n| 4 | Nhiều chế độ xem thì segmented hay tab? | ⛔ cả `2` — chế độ xem khác là **màn riêng URL riêng**, mở bằng `1` nút trước `Xuất Excel`, màn đó có nút quay về Danh sách *(ĐỔI 19/10/2026 theo khối `4`, PM2 `QD-420` ②)* | `Verified (QD-420)` |\n| 5 | Nút Xuất Excel, Thêm mới ở tab nào? | Chỉ tab Danh sách | `Verified` |\n| 6 | Số trên tab có chạy theo bộ lọc? | Có | `Verified` |\n| 7 | Tab đếm `0`? | Hiển thị bình thường, vẫn giữ tab | `Verified (D34 · 30/09)` |\n| 8 | Ô lọc Trạng thái hiện khi nào? | Chỉ ở tab Tất cả | `Verified` |\n| 9 | Tìm cơ bản + nâng cao? | `1` dòng cố định `+` **nút icon phễu `36px` kèm chấm số đếm**, vùng mở rộng có viền nền nhạt *(ĐỔI 14/10/2026 QD-377 · 19/10/2026 QD-431 ①, thay link chữ)* | `Verified (QD-377 · QD-431)` |\n| 10 | Khi gập khối lọc có hiện tóm tắt? | ⛔ dải gập; phần mở rộng gập sẵn · nút phễu **CÓ chấm số** đếm điều kiện mở rộng đang chọn *(ĐỔI 19/10/2026, QD-431 ①; trước QD-377 ⛔ số)* | `Verified (QD-431)` |\n| 11 | Ô lọc có nhãn ngoài? | ⛔, placeholder `Tất cả …` | `Verified` |\n| 12 | Khoảng ngày `1` ô hay `2` ô? Mặc định? | `1` ô kiểu PM1 · **để trống, thấy toàn bộ dữ liệu** *(ĐỔI 19/10/2026, QD-432 ②; trước hôm nay → `7` ngày sau)* | `Verified (QD-432)` |\n| 13 | Có nút X xoá từng ô lọc? | Có, hiện luôn khi có dữ liệu | `Verified` |\n| 14 | Placeholder ô tìm bị cắt thì sao? | Placeholder ngắn, danh sách trường đầy đủ để trong tooltip | `Verified` |\n| 15 | Dropdown theo mẫu nào? | PM1: đang mở vẫn hiện giá trị đã chọn mờ, ⛔ `2` lớp viền | `Verified (UX-B3)` |\n| 16 | Tên cột có được bị cắt? | ⛔ tuyệt đối | `Verified (UX-A10)` |\n| 17 | Căn lề cột? | Theo loại cột | `Verified (Knowhow #32)` |\n| 18 | Cột Thao tác? | Ghim phải, rộng theo số nút tối đa của **vai đang đăng nhập**, ⛔ gom \"…\" | `Verified (Knowhow #32 · PM2 QD-346 ⑦)` |\n| 19 | Icon thao tác trơn hay màu? | Có màu theo ý nghĩa | `Verified (I1A)` |\n| 20 | Nút theo trạng thái? | Theo **ma trận** của SRS · mẫu: Sửa chỉ ở trạng thái chờ duyệt | `Verified (Knowhow #23)` |\n| 21 | Thông tin phụ ⇒ dòng phụ hay thêm cột? | Dòng phụ | `Verified` |\n| 22 | Số vượt giới hạn hiển thị sao? | Vẫn hiện số, **icon cảnh báo đứng TRƯỚC số** + tooltip ngắn | `Verified` |\n| 23 | Tag danh mục? | Mỗi giá trị `1` màu pastel · thẻ trạng thái có chấm | `Verified (UX-A3 A4)` |\n| 24 | Checkbox và hàng loạt ở tab Tất cả? | Ẩn checkbox, cấm hàng loạt | `Verified` |\n| 25 | Hàng loạt dùng mấy nút? | `1` nút `Hàng loạt (n)` mở popup có các thao tác | `Verified (D21)` |\n| 26 | Sắp xếp mặc định? | Ngày tạo mới nhất ở dòng `1` — gặp *\"cũ đến mới\"* thì hỏi bằng ví dụ dòng đầu, dòng cuối | `Verified (Knowhow #19)` |\n| 27 | Phân trang? | Y hệt PM1, mặc định **`10`** | `Verified (PM2 QD-346 ③)` |\n| 28 | Xuất Excel khi rỗng? | Vẫn xuất, báo thành công | `Verified (Knowhow #32)` |\n| 29 | Xuất theo bộ lọc hay toàn bộ? | Đúng tập đang hiển thị | `Verified (D2A)` |\n| 30 | Popup Hủy trường nào bắt buộc? | Theo SRS · mẫu: lý do chọn từ danh mục + ghi chú bắt buộc tối đa `1000` | `Verified (Knowhow #20)` |\n| 31 | Popup Duyệt, Từ chối? | Mẫu: Duyệt lý do **⛔ bắt buộc** · Từ chối lý do **bắt buộc** · cả `2` có bộ đếm `1000` | `Verified` |\n| 32 | Popup có tick \"Gửi thông báo\"? | Mẫu: có, tick sẵn — xác nhận lại theo SRS chức năng mới | `Verified (màn mẫu)` |\n| 33 | Chức năng đang phát triển trên màn? | Nút vẫn hiện, bấm báo *\"Chức năng đang phát triển\"* | `Verified` |\n| 34 | 🆕 Trạng thái nào thành **tab**? | 🔴 **⛔ phải mọi trạng thái** — chỉ trạng thái **người dùng cần XỬ LÝ hoặc THEO DÕI** trong ngày. Mẫu `6` tab: Tất cả · Chờ duyệt · Chờ check-in · Đang diễn ra · Đã kết thúc · Vắng mặt. Trạng thái đã khép *(Đã hủy · Bị từ chối)* ⛔ thành tab — TrangNT5 từng thêm tab Đã hủy rồi bỏ: *\"Thôi lại bỏ đã Hủy\"* | `Verified (màn mẫu · TrangNT5 29/09)` |\n| 35 | 🆕 Bộ lọc lấy bao nhiêu ô? | 🔴 **⛔ chép đủ tiêu chí lọc của SRS** — mặc định `2` hàng: từ khoá `9` + khoảng ngày `3` · `4` dropdown `3+3+3+3`. Tiêu chí **chỉ có `1` giá trị** thì bỏ *(TrangNT5: \"bỏ điều kiện tìm kiếm Loại hình đi vì chỉ còn 1 loại thôi\")*. SRS có nhiều hơn ⇒ đề xuất `4` dropdown quan trọng nhất và **hỏi** phần còn lại | `Verified (màn mẫu · TrangNT5 29/09)` |\n| 36 | 🆕 Ô người chính *(3 dòng)* gồm gì? | Tên đậm · **`2` dòng định danh tra được ngoài đời** *(mẫu: CCCD · Ngày sinh)* — ⛔ mã nội bộ *(mã hồ sơ)* dù SRS ghi | `Verified (màn mẫu · TrangNT5 \"1 dòng CCCD - 1 dòng Ngày sinh\")` |"
+    },
+    {
+     "title": "⑤ LỖI ĐÃ PHÁT HIỆN Ở MÀN MẪU — ⛔ chép sang màn mới",
+     "md": "| Nguồn | Chỗ lệch | Xử lý |\n|:---|:---|:---|\n| `Verified (bóc tách 30/09)` | Huy hiệu đếm điều kiện **⛔ tăng khi chọn mục đầu tiên** của dropdown *(đếm chỉ số > 0 trong khi mục \"Tất cả\" đã bị gỡ)* | Base đếm theo **giá trị đã chọn**, ⛔ theo chỉ số |\n| `Verified (bóc tách 30/09)` | **Phân trang chưa cắt dữ liệu** — vẽ toàn bộ bản ghi, `Trang sau` ⛔ gắn hàm | Base làm phân trang thật |\n| `Verified (bóc tách 30/09)` | Hủy hàng loạt mở popup Hủy mà ⛔ gán mã đang thao tác ⇒ toast ghép sai mã | Popup nhận **danh sách mã** |\n| `Verified (bóc tách 30/09)` | Tooltip tab trạng thái là **chuỗi cứng** *(\"18 lịch hẹn, tăng 4 so với hôm qua\")* ⛔ khớp số thật | Tooltip phải tính từ dữ liệu hoặc bỏ |\n| `Verified (bóc tách 30/09)` | Ô tìm từ khoá tìm trên `5` trường nhưng tooltip ghi `4` trường | Tooltip sinh từ chính danh sách trường tìm |\n| `Verified (bóc tách 30/09)` | Bề rộng bảng `min-width` `2390px` ≠ tổng `15` cột `2450px` | Base tính từ tổng cột |\n| `Verified (chạy thử ngược 30/09)` | Bảng nút mục `13` của BPS cụm Thăm gặp còn nút **Check-in** ở trạng thái Chờ check-in, trong khi màn thật đã bỏ *(TrangNT5: \"Màn hình danh sách này sẽ bỏ chức năng checkin nhé\")* | Ma trận nút lấy từ **`TrangNT5_ButtonByStatus_WEB-06.md`** *(sinh từ chính màn)*, ⛔ từ BPS khi 2 bên lệch |\n| `Verified (bóc tách 30/09)` | Knowhow C.4 còn `2` ngưỡng đã bị chốt khác *(gom \"…\" khi > `5` nút · hủy tối thiểu `20` ký tự)* | Đã chốt lại: ⛔ gom · ⛔ tối thiểu — sửa Knowhow C.4 theo |\n| `Based on Docs (PM2 QD-439 · QD-438)` | Màn Danh sách ghi «Đã gửi thông báo…» của Phê duyệt, Từ chối duyệt và câu «Đã quá giờ hẹn mà thân nhân chưa đến» của Đánh dấu vắng mặt vào mục **Lý do, ý kiến** — lệch QD-438 và lệch màn Chi tiết cùng thao tác. `AI` phát hiện khi gom dữ kiện viết SRS WEB-06, đã sửa 20/10/2026 | Ghi chú tự sinh vào mục **Ghi chú hệ thống** *(👉 Xem Playbook ViewDetail khối `7`)* · 🔴 **cùng `1` thao tác ⇒ cùng cách ghi Lịch sử và cùng câu toast ở màn Danh sách và màn Chi tiết** |"
+    },
+    {
+     "title": "⑥ THÀNH PHẦN DÙNG CHUNG — đưa vào Base",
+     "md": "> 🧩 **Tra control và khối màn chạy thật trên trang Design System** `https://trangnt5-pm2-design-system.vercel.app` *(có mật khẩu · AI đọc `…\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\design\\src\\catalog.jsx`)* — dùng đúng component và markup ở đó, ⛔ tự dựng control mới khi trang đã có.\n\n> ⚛️ **Bản React:** thành phần dùng chung dựng thành component `App*` trên antd, cách chuyển và điều kiện XONG `<Ref: <Source> | TrangNT5_Prototype_FE_Conventions.md | \"⑦ HIỆN THỰC TRÊN REACT\">`\n\n| Thành phần | Ghi chú |\n|:---|:---|\n| **Đầu trang danh sách** *(icon `28` · tiêu đề · cụm nút — không câu diễn giải, QD-376)* | Mọi màn List |\n| **Tab trạng thái có badge đếm sau lọc** | Nhận danh sách trạng thái + màu |\n| **Khối lọc `1` dòng cố định `.filter-panel.is-fixed` `+` nút phễu `.filter-more-btn-icon` có chấm số `.filter-more-count` `+` vùng mở rộng `.filter-row-more` có viền** *(ĐỔI 14/10/2026 QD-377 · QD-382 · 19/10/2026 QD-431 ①)* | Khuôn CSS ở `styles/base.css`, ⛔ dải gập, ⛔ khung viền ngoài |\n| **Dropdown có tìm kiếm** *(khuôn PM1, tìm ⛔ dấu `boDau`)* | Dùng chung Form |\n| **Bộ chọn khoảng ngày `2` tháng** | Mọi màn có lọc ngày |\n| **Bảng có tiêu đề ghim + cột Thao tác ghim phải** | Nhận cấu hình cột |\n| **Phân trang PM1** | Cắt dữ liệu thật |\n| **Xuất Excel khuôn PM1** *(ExcelJS)* | Nhận tên file, tiêu đề, cột |\n| **Popup đổi trạng thái** *(lý do + bộ đếm + gửi thông báo)* | Nhận cấu hình bắt buộc và trạng thái đích |\n| **Ma trận nút theo trạng thái** `NUT_THEO_TT` | Nguồn duy nhất để vẽ icon và sinh tài liệu |\n\n\n> 🔴 **Danh sách có tích chọn, bộ lọc, tab, phân trang ⇒ áp `UX-D9` mục ⑥**: đổi từ khoá, bộ lọc, tab, trang thì bỏ dòng đang tích · thao tác hàng loạt chỉ tính dòng đang hiện · ô lọc bị ẩn theo tab thì ⛔ còn lọc. `<Ref: <Source> | TrangNT5_UIUX_Rules.md | \"UX-D9\">`"
+    }
+   ]
+  },
+  {
+   "name": "CreateEdit",
+   "file": "TrangNT5_Playbook_CreateEdit.md",
+   "sections": [
+    {
+     "title": "🎯 MỤC ĐÍCH",
+     "md": "Sổ tay của agent `srs-uiux-createedit`. Đọc **SAU** `TrangNT5_UIUX_Rules.md` — luật chữ đỏ, thông báo, nút đều ở đó *(UX-C · UX-D · UX-E)*.\n\n| Màn mẫu chuẩn | Đường dẫn *(bản React `C:\\TrangNT5_VS Code\\srs\\SRS Gen AI\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\src\\pages\\AppointmentForm\\` · chạy thật `https://pm2-prototype-iota.vercel.app/lich-hen/tham-gap-truc-tiep/tao-moi`)* |\n|:---|:---|\n| Tạo lịch hẹn thăm gặp — biểu mẫu `3` bước | `tao-moi\\index.html` |\n| Chỉnh sửa lịch hẹn thăm gặp | `chinh-sua\\index.html?ma={mã}` |\n| Biến thể cùng biểu mẫu, khác nguồn | `…\\prototype\\tiep-don\\dang-ky-luot-tai-quay\\index.html` |\n\n---"
+    },
+    {
+     "title": "① KHUNG MÀN",
+     "md": "| # | Khối | Mẫu đã chốt | Nguồn |\n|:---:|:---|:---|:---|\n| 1 | **Breadcrumb** | Tạo mới: cấp cuối là tên màn danh sách *(⛔ bấm được)* · Sửa: thêm cấp `Chỉnh sửa {đối tượng}` | `Verified (màn mẫu)` |\n| 2 | **Đầu trang** | Nút quay lại *\"Quay lại danh sách\"* · tiêu đề `Tạo {đối tượng}` / `Chỉnh sửa {đối tượng} {mã}` · màn **Sửa có tag trạng thái cạnh tiêu đề** · 🔴 **⛔ ô icon tiêu đề** *(ĐỔI 19/10/2026, PM2 `QD-420` ①: đã có nút quay lại, thêm icon thành `2` icon cạnh nhau — chỉ màn Danh sách có icon)* · 🔴 **KHÔNG câu mục đích bên dưới** *(ĐỔI 14/10/2026, PM2 QD-376; mã bản ghi nằm cuối tiêu đề)* | `Verified (TrangNT5 · QD-376 · QD-420)` · UX-I2 |\n| 3 | **Thanh bước** *(nếu biểu mẫu dài)* | Mẫu `3` bước: ① chọn chủ thể và người liên quan · ② chọn thời gian và tài nguyên · ③ **đối chiếu và xác nhận** · bước đã qua có dấu `✓` · đổi bước tự cuộn lên đầu · 🔴 *(19/10/2026, PM2 `QD-420` ⑨)* thanh bước **bọc khung nền nhạt, viền `1px`, bo `8px`** *(`.stepper` ở `styles/form.css`)* — là khung được giữ theo `UX-B11`, nguyên văn: *\"Khu vực các Tab di chuyển thì lại bọc vào để nhìn rõ tiến trình hơn\"* | `Verified (TrangNT5 · QD-420)` |\n| 4 | **Thẻ khối** | Tên khối IN HOA · lưới `12` cột `o-12 / o-6 / o-4` · các dòng cùng mốc cột · 🔴 *(ĐỔI 19/10/2026, QD-431 ⑤ thay trải phẳng QD-420 ④)* khối **có viền bo `8px`, tên khối nằm trên đường viền trên** kiểu `legend`, đệm `24/16/16` · màn chỉ `1` khối thì ⛔ bọc *(👉 Xem `UX-B11`)* | `Verified (TrangNT5 · QD-431 · QD-434)` |\n| 5 | **Bước xác nhận** | Bảng nhãn – giá trị **theo đúng thứ tự đã nhập** · giá trị chọn từ dropdown hiện **dạng tag** · ô trống ghi `Chưa chọn` · ⛔ lặp phần đã xác nhận ở bước trước | `Verified (TrangNT5)` |\n| 6 | **Thông tin khác** | Ghi chú ⛔ bắt buộc, tối đa `1000`, bộ đếm `n / max` *(vd `0 / 1000`, dựng bằng `AppCounterInput`)* | `Verified (TrangNT5 · PM2 QD-310)` |\n| 7 | **Chân trang** | ⛔ **KHÔNG có thanh nút chân trang** *(đổi 14/10/2026, PM2 QD-393 D28 A)* — dải nhắc thiếu thông tin đặt ngay dưới đầu màn *(👉 Xem `UX-L9`)* · 🔴 **NGOẠI LỆ màn nhiều bước** *(19/10/2026, QD-431 ④)*: có thanh chuyển bước `.step-nav` ở **chân nội dung bước** *(khối `8`)* — đây là thanh chuyển bước, ⛔ phải thanh nút lưu | `Verified (TrangNT5 · QD-431)` |\n| 8 | **Nút đầu trang** và **thanh chuyển bước** | 🔴 *(ĐỔI 19/10/2026, `Verified (TrangNT5 19/10/2026 · PM2 QD-431 ④)`, thay thứ tự `4` nút trên `1` thanh của QD-420 ⑥ cho màn nhiều bước)* **Đầu màn** *(`1` thanh, GHIM khi cuộn, dựng từ `PageActions.jsx`)* **chỉ còn nút chính**: `Lưu nháp` *(chỉ khi SRS có trạng thái Nháp, câu `3`)* · nút lưu chính **đứng cuối** *(mẫu `Lưu và gửi duyệt` · `Lưu và duyệt` · `Lưu và kích hoạt`)* · **Chân nội dung bước** *(`.step-nav`, cách nội dung `20`, có đường kẻ trên, đệm trên `16`)*: nhóm trái `Quay lại bước trước` *(ẩn ở bước `1`)* · nhóm phải `Tiếp tục` *(icon mũi tên PHẢI, ⛔ ở bước cuối)* — như Ant Design Steps, Material Stepper. Áp: Tạo/Sửa lịch hẹn, Đăng ký tại quầy, Tạo quầy. Nút lưu chính có ở bước giữa hay chỉ bước cuối là **quyết định nghiệp vụ từng màn**. Nguyên văn: *\"Thử tách button Quay lại và Tiếp tục đối với màn hình đặc thù nhiều Steps. Còn ở trên sẽ chỉ là button action chính. Thủ tư duy cách làm này xem. Thử site quốc tế có làm theo hướng đó ok không\"* · TrangNT5 trả lời: *\"Tách: Quay lại/Tiếp tục ở cuối bước (Recommended)\"* | `Verified (TrangNT5 · QD-431)` |"
+    },
+    {
+     "title": "② BÓC TÁCH BẮT BUỘC TỪ SRS — trả lời đủ trước khi vẽ",
+     "md": "| # | Phải xác định | Mẫu đã chốt |\n|:---:|:---|:---|\n| 1 | **Số bước và điều kiện qua bước** | Bước nào kiểm trường nào · trường ⛔ có dấu sao thì **⛔ chặn** |\n| 2 | **Trường có giá trị cố định** | Hiện **khối chỉ đọc khoá cứng `1` giá trị**, ⛔ radio · tooltip nói vì sao khoá |\n| 3 | **Chuỗi phụ thuộc** | Khối sau chỉ hiện khi khối trước ra đúng *(mẫu: tra thân nhân ⇒ hiện người cai nghiện ⇒ hiện người đi cùng)* · ô phụ thuộc khoá, placeholder `Chọn {ô trước} trước` · 🔴 **Đổi hoặc xoá khối trước ⇒ khối sau xử lý theo `UX-D9`** *(xoá thì bỏ · chọn lại đúng giá trị thì giữ · ô tra cứu phải bấm Tra cứu)* `<Ref: <Source> | TrangNT5_UIUX_Rules.md | \"UX-D9\">` |\n| 4 | **Chọn bản ghi liên quan** | **Thẻ bấm chọn**, ⛔ nút tròn · thẻ ⛔ đủ điều kiện khoá kèm lý do |\n| 5 | **Người / mục đi kèm** | Ô **chọn**, ⛔ nhập tay · tự điền trường kèm theo · giới hạn số lượng hiện ở **tooltip của nút đang khoá** · mục đã chọn ⛔ hiện ở dòng khác |\n| 6 | **Trường vai này ⛔ dùng** | **Bỏ khỏi biểu mẫu**, lưu rỗng *(mẫu: cán bộ đặt hộ ⛔ chọn quầy)* |\n| 7 | **Nút lưu** | `1` nút theo đúng động từ nghiệp vụ *(mẫu: `Đăng ký`)* · ⛔ nút Hủy · ⛔ Lưu nháp trừ khi SRS có trạng thái Nháp · màu nút theo vai trò `UX-L27`, nút có icon + chữ *(QD-389 · QD-390)* |\n| 8 | **Trạng thái sau khi lưu** | Theo vòng đời trong SRS · mẫu: `Đã duyệt`, còn ≤ `60` phút thì `Chờ check-in` |\n| 9 | **Màn Sửa khoá gì** | **Khoá chủ thể bản ghi** và trường kéo theo danh sách con · giữ mã, ngày tạo, nguồn, trạng thái · 🔴 trường khoá hiện **dạng Xem** *(nhãn · giá trị)*, ⛔ ô nhập xám; thứ tự khối và trường Y NGUYÊN màn Tạo *(👉 Xem `UX-B7`, PM2 `QD-346` ⑨)* |\n| 10 | **Màn Sửa có bắt buộc bước xác nhận** | Giữ khu đối chiếu nhưng **⛔ bắt buộc** — vẫn lưu được |\n| 11 | **Màn Sửa mở ở trạng thái nào** | Theo ma trận nút · mẫu: chỉ trạng thái chờ duyệt |\n| 12 | **Biến thể cùng biểu mẫu** *(khác nguồn, khác lối vào)* | Dùng lại biểu mẫu, chỉ đổi phần khác · nút quay lại và sau khi lưu **về đúng màn Danh sách** của đối tượng · 🔴 **`1` bản ghi nằm ở `2` danh sách *(2 menu)* ⇒ VẪN `1` màn Sửa, vào bằng `2` đường dẫn** — đường dẫn quyết định breadcrumb, mục menu đang sáng và nơi quay về *(Quay lại, Hủy, sau khi lưu)*; nội dung, tiêu đề, cách sửa, cách lưu giống hệt. Nguyên văn: *\"thực chất là gọi vào 1 màn hình Edit, chỉ là nguồn URL màn hình khác nhau để đến khi back về thì đúng menu\"* *(PM2 `QD-360`)* |\n| 14 | **Bảng chọn trong form, popup** *(bảng chọn thẻ giả lập, bảng chọn bản ghi)* | Dòng rỗng dùng `EmptyRow` *(👉 Xem `UX-G8`)* · bảng chỉ liệt kê bản ghi đạt điều kiện nghiệp vụ ⇒ câu hướng dẫn dưới bảng *(👉 Xem `UX-G12`)*; bảng liệt kê đủ, chỉ hiện kết quả điều kiện từng dòng ⇒ ⛔ cần câu |\n| 13 | **Bảng nhập nhiều dòng có kiểm trùng giữa các dòng** | 🔴 Dòng trùng ⇒ chữ đỏ ở **CẢ `2` dòng**, câu **nêu đích danh** giá trị trùng và dòng kia *(vd bàn và khung giờ đang chồng)* để người nhập rà lại · ⛔ câu chung kiểu *\"Dữ liệu bị trùng\"*. Nguyên văn: *\"Khi các dòng suất riêng mà có bàn và khung giờ trùng nhau thì báo trùng message báo và chỉ định bàn và thời gian đang trùng để người tạo rà soát lại\"* *(PM2 `QD-355`)* · chữ đỏ dưới đúng ô lỗi *(👉 Xem `UX-D8`)* |"
+    },
+    {
+     "title": "③ LUỒNG LƯU — bắt buộc cho mọi biểu mẫu",
+     "md": "| # | Bước | Mẫu đã chốt | Nguồn |\n|:---:|:---|:---|:---|\n| 1 | Bấm nút khi thiếu | Nút **luôn bấm được** · chữ đỏ dưới **mọi** ô thiếu, mỗi trường có chỗ báo lỗi riêng *(QD-435)* · ô lỗi đầu ngoài khung nhìn ⇒ tự cuộn tới **giữa khung** và đặt con trỏ vào ô *(QD-431 ③)* *(UX-D2 D3)* · dải nhắc vàng *\"Cần chọn đủ thông tin để tiếp tục: {Mục đầu viết hoa}, {mục sau viết thường}\"* · đủ thì dải xanh *\"Đã đủ điều kiện đi tiếp\"* | `Verified (TrangNT5)` |\n| 2 | Chặn lưu trùng | Cờ chặn lượt `2`, lỗi thì mở lại *(UX-D6)* | `Verified (Knowhow #26)` |\n| 3 | Lưu | Tạo mới: **thêm** bản ghi · Sửa: ghi **phần thay đổi** theo mã, giữ bản gốc | `Verified (màn mẫu)` |\n| 4 | Chuyển trang | Về màn Danh sách kèm `?moi={mã}` hoặc `?sua={mã}` | `Verified (màn mẫu)` |\n| 5 | Thông báo | **Chỉ màn Danh sách báo** *(UX-E2)*: *\"Đã tạo {đối tượng} {mã}\"* · *\"Đã cập nhật {đối tượng} {mã}\"* · lỗi: *\"Chưa lưu được {đối tượng}, vui lòng thử lại\"* | `Verified (TrangNT5)` |\n| 6 | Tô sáng | Dòng vừa lưu `#ECFDF5` `3` giây *(UX-G4)* | `Verified` |"
+    },
+    {
+     "title": "④ BỘ CÂU HỎI CHUẨN — agent TỰ TRẢ LỜI từ SRS trước",
+     "md": "| # | Câu hỏi | Đáp án đã chốt | Nguồn |\n|:---:|:---|:---|:---|\n| 1 | Biểu mẫu chia mấy bước? | Theo cụm thông tin, gộp bớt bước của bản gốc nếu được *(mẫu `4` → `3`)* | `Verified` |\n| 2 | Câu dưới tiêu đề? Icon tiêu đề? | ⛔ câu mục đích *(ĐỔI 14/10/2026, QD-376)* · ⛔ icon tiêu đề *(ĐỔI 19/10/2026, QD-420 ①)* | `Verified (QD-376 · QD-420)` |\n| 3 | Có nút Hủy, Lưu nháp? | ⛔ cả `2`, trừ khi SRS có trạng thái Nháp | `Verified` |\n| 4 | Trường cố định: radio hay khoá? | Khoá cứng `1` giá trị | `Verified` |\n| 5 | Khối phụ thuộc hiện khi nào? | Khi khối trước ra đúng | `Verified` |\n| 6 | Placeholder ô bắt buộc chính có nói \"bắt buộc\"? | Có — mẫu: *\"(Đây là mục bắt buộc)\"* | `Verified` |\n| 7 | Có công cụ nhập nhanh *(quẹt thẻ)*? | Icon mở popup · mẫu có nút giả lập | `Verified` |\n| 8 | Chọn bản ghi: radio hay thẻ? | Thẻ bấm chọn | `Verified` |\n| 9 | Người đi kèm nhập tay hay chọn? | Chọn, ⛔ nhập tay | `Verified (D61A)` |\n| 10 | Trường ⛔ dấu sao có chặn? | ⛔ | `Verified` |\n| 11 | Căn cứ pháp lý có hiện trên giao diện? | ⛔, chỉ ghi trong SRS | `Verified` |\n| 12 | Báo giới hạn số lượng ở đâu? | Tooltip của nút đang khoá | `Verified` |\n| 13 | Trường vai này ⛔ dùng? | Bỏ khỏi biểu mẫu, lưu rỗng | `Verified` |\n| 14 | Định dạng ngày? | `Thứ, dd/mm/yyyy` — cùng khuôn lịch | `Verified` |\n| 15 | Danh sách giá trị có giới hạn luật? | Chỉ giữ giá trị hợp lệ theo luật *(mẫu: thời lượng `15/30/45`)* | `Verified` |\n| 16 | Chọn thời gian và tài nguyên tách hay gộp? | Gộp `1` lưới, `1` lần bấm *(Playbook Others)* | `Verified (L1A)` |\n| 17 | Có hiện lại kết quả đã chọn? | Có, ô chỉ đọc | `Verified` |\n| 18 | Câu diễn giải quy tắc trên giao diện? | Bỏ câu thừa, viết theo hướng người dùng | `Verified` |\n| 19 | Bước xác nhận sắp xếp thế nào? | Theo thứ tự nhập, bỏ phần đã xác nhận ở trên | `Verified` |\n| 20 | Giá trị dropdown ở bước xác nhận? | Dạng tag, đồng bộ mọi nơi | `Verified` |\n| 21 | Thiếu trường thì khoá nút hay báo lỗi? | Nút luôn bấm được, báo lỗi dưới từng ô | `Verified` |\n| 22 | Dải nhắc ẩn hay đổi màu? | Luôn hiện, vàng → xanh · bước xác nhận thì ẩn | `Verified` |\n| 23 | Chữ trong dải nhắc? | *\"Cần chọn đủ thông tin để tiếp tục\"* | `Verified` |\n| 24 | Chuỗi lỗi lấy từ đâu? | Message List, thay tên trường giữa câu viết thường | `Verified (UX-E3 A9)` |\n| 25 | Báo thành công ở màn nào? | Chỉ màn Danh sách | `Verified` |\n| 26 | Nút cho luồng đặc biệt *(cần cấp trên)*? | Dùng *\"Xác nhận\"*, ⛔ *\"Duyệt\"* · chỉ `1` luồng gửi duyệt | `Verified` |\n| 27 | Dựng màn Sửa thế nào? | Từ **cùng biểu mẫu Base** với màn Tạo *(trước đây clone file — nay cấm theo UX-K6)*, nạp sẵn bản ghi | `Verified (C26)` · `AI Inferred (đổi cách dựng)` |\n| 28 | Sửa khoá trường nào? | Chủ thể bản ghi và trường kéo theo danh sách con | `Verified (C24)` |\n| 29 | Sửa có bắt buộc đối chiếu? | Giữ nhưng ⛔ bắt buộc | `Verified (C25)` |\n| 30 | Tiêu đề màn Sửa? | Mã + tag trạng thái · ⛔ câu mục đích *(QD-376)* · ⛔ icon tiêu đề *(QD-420 ①)* | `Verified (QD-376 · QD-420)` |\n| 31 | Chọn lại chủ thể thì danh sách đi kèm? | Đặt lại toàn bộ | `Verified` |\n| 32 | Ô chọn có tìm kiếm? | Có, tìm ⛔ dấu theo giá trị bên trong *(UX-H1)* · ô chỉ `1` giá trị thì ⛔ gắn tìm | `Verified` |"
+    },
+    {
+     "title": "⑤ LỖI ĐÃ PHÁT HIỆN Ở MÀN MẪU — ⛔ chép sang màn mới",
+     "md": "| Nguồn | Chỗ lệch | Xử lý |\n|:---|:---|:---|\n| `Verified (bóc tách 30/09)` | Dải xanh *\"Đã đủ điều kiện đi tiếp.\"* còn **dấu chấm cuối** | Vi phạm `UX-E3` — bỏ dấu chấm |\n| `Verified (bóc tách 30/09)` | `3` chuỗi hiển thị chứa **ký hiệu icon cấm giữa câu** *(\"Thời lượng này … không còn mốc trống\", \"Người này … có thân nhân\", tooltip khoá nguồn)* | Chữ hiển thị chỉ chứa chữ — thay bằng *\"không\"* |\n| `Verified (bóc tách 30/09)` | Thông báo `MSG-WEB-60-03` khai mà ⛔ chỗ nào gọi | Hoặc gắn đúng chỗ, hoặc bỏ |\n| `Verified (bóc tách 30/09)` | Giá trị dự phòng thời lượng vẫn `60` trong khi trần là `45` | Dữ liệu dự phòng phải theo đúng luật |\n| `Verified (bóc tách 30/09)` | Lỗi của `2` trường trỏ vào ô trong **khối ẩn chết**, phải đi đường vòng qua ô đại diện | Base gắn lỗi theo **ô đang hiện**, ⛔ giữ khối chết |\n| `Verified (bóc tách 30/09)` | Màn Sửa **clone cả file** ⇒ lệch `+2/+3` dòng, sửa `1` bên phải nhớ sửa bên kia | Dựng từ Base *(UX-K6)* |\n| `Verified (TrangNT5 09/10/2026 · PM2 QD-355)` | Bảng chọn giờ của dòng suất riêng **bị `2` lớp `overflow:hidden` của bảng và khung cắt cụt** ⇒ không chọn được giờ | Bảng chọn phải hiện trọn *(👉 Xem `UX-L8`)* — ô chọn đặt trong bảng, thẻ có cuộn thì kiểm lại |\n| `Verified (TrangNT5 09/10/2026 · PM2 QD-362 ③)` | Nút `Tiếp tục` ở màn Sửa đơn ngoại lệ bấm không thấy gì | Nút điều hướng phải đi bước sau hoặc báo chữ đỏ, không có bước sau thì bỏ *(👉 Xem `UX-C5`)* |\n| `Verified (TrangNT5 09/10/2026 · PM2 QD-346 ⑨)` | Màn Sửa hiện trường không sửa được thành ô nhập xám, thứ tự khác màn Tạo — TrangNT5: *\"Vãi thông tin hiển thị lôm côm thế má ơi\"* | Trường khoá hiện dạng Xem, giữ thứ tự màn Tạo *(👉 Xem `UX-B7`)* |\n| `Verified (TrangNT5 19/10/2026 · PM2 QD-435)` | Bước `1` Tạo/Sửa lịch hẹn: đã tra cứu thân nhân xong mà chưa chọn người cai nghiện, bấm `Tiếp tục` ⇒ chữ đỏ «Vui lòng chọn người cai nghiện» hiện **dưới ô tra cứu thân nhân** — trường người cai nghiện ⛔ có chỗ báo lỗi riêng nên dồn về ô đại diện của bước. TrangNT5: *\"Ủa validate này bị sai rồi\"* · *\"đây là thân nhân và đã tìm kiếm thành công rồi mà\"* | Mỗi trường bắt buộc có chỗ báo lỗi riêng ngay dưới chính nó *(👉 Xem `UX-D3`)* — mẫu: chỗ báo lỗi dưới danh sách người cai nghiện, chưa có danh sách thì mới báo ở ô tra cứu |\n| `Based on Docs (PM2 QD-439 · QD-297)` | Màn Sửa lịch **Nháp** của thân nhân **đã có sổ hoặc tài khoản**: nút gửi ghi «Lưu và gửi duyệt», trong khi trạng thái sau khi lưu là **Đã duyệt**. `AI` phát hiện khi gom dữ kiện viết SRS WEB-06, đã sửa 20/10/2026 | 🔴 **Nhãn nút lưu phải đúng TRẠNG THÁI SAU KHI LƯU** — sau lưu là Đã duyệt ⇒ `Lưu và duyệt` · sau lưu là Chờ duyệt ⇒ `Lưu và gửi duyệt` *(khối `8`)* |"
+    },
+    {
+     "title": "⑥ THÀNH PHẦN DÙNG CHUNG — đưa vào Base",
+     "md": "> 🧩 **Tra control và khối màn chạy thật trên trang Design System** `https://trangnt5-pm2-design-system.vercel.app` *(có mật khẩu · AI đọc `…\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\design\\src\\catalog.jsx`)* — dùng đúng component và markup ở đó, ⛔ tự dựng control mới khi trang đã có.\n\n> ⚛️ **Bản React:** thành phần dùng chung dựng thành component `App*` trên antd, cách chuyển và điều kiện XONG `<Ref: <Source> | TrangNT5_Prototype_FE_Conventions.md | \"⑦ HIỆN THỰC TRÊN REACT\">`\n\n| Thành phần | Ghi chú |\n|:---|:---|\n| **Thanh bước** + điều kiện qua bước theo cấu hình | Nhận danh sách bước và hàm kiểm |\n| **Bộ kiểm nhập** *(chữ đỏ dưới ô `4px`, dải nhắc, viết thường giữa câu, viết hoa sau dấu `:`)* | `1` cơ chế duy nhất cho mọi biểu mẫu và popup |\n| **Khối chỉ đọc khoá giá trị** | — |\n| **Thẻ bấm chọn** | — |\n| **Bảng người / mục đi kèm** *(ô chọn, tự điền, giới hạn, loại trùng)* | — |\n| **Bảng xác nhận** *(nhãn – giá trị, tag cho giá trị danh mục)* | Dùng chung màn Chi tiết |\n| **Luồng lưu** *(chặn trùng, ghi, chuyển trang kèm `?moi=` / `?sua=`)* | — |\n| **Ô ghi chú có bộ đếm** | — |"
+    }
+   ]
+  },
+  {
+   "name": "ViewDetail",
+   "file": "TrangNT5_Playbook_ViewDetail.md",
+   "sections": [
+    {
+     "title": "🎯 MỤC ĐÍCH",
+     "md": "Sổ tay của agent `srs-uiux-viewdetail`. Đọc **SAU** `TrangNT5_UIUX_Rules.md`.\n\n⚠️ **Mới có `1` màn mẫu** ⇒ luật nào chỉ thấy ở `1` mẫu thì agent **đề xuất kèm câu hỏi**, ⛔ áp thẳng như luật chung.\n\n| Màn mẫu chuẩn | Đường dẫn |\n|:---|:---|\n| Chi tiết lịch hẹn thăm gặp | `https://pm2-prototype-iota.vercel.app/lich-hen/tham-gap-truc-tiep/{mã}` *(code `C:\\TrangNT5_VS Code\\srs\\SRS Gen AI\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\src\\pages\\AppointmentDetail\\`)* |\n| Mẫu gốc đầu trang | PM1 màn Chi tiết Khen thưởng học viên `https://pm1-cs02-stag-fe.aequitas.dev/khen-thuong-hoc-vien` |\n\n---"
+    },
+    {
+     "title": "① BÓC TÁCH BẮT BUỘC — trả lời đủ trước khi vẽ",
+     "md": "| # | Hạng mục | Phải xác định | Mẫu đã chốt |\n|:---:|:---|:---|:---|\n| 1 | **Đầu trang** | Tên thực thể + mã · trạng thái · nút thao tác | Nút quay lại `32` · 🔴 **⛔ ô icon tiêu đề** *(ĐỔI 19/10/2026, PM2 `QD-420` ①: chỉ màn Danh sách có icon, 👉 Xem `UX-I2`)* · tiêu đề `18/700` = **\"{Tên thực thể} {mã}\"** · **tag trạng thái cạnh tiêu đề** · 🔴 **KHÔNG câu mục đích bên dưới** *(ĐỔI 14/10/2026, QD-376)* · nút thao tác ở mép phải — theo **ma trận nút theo trạng thái** · 🔴 **⛔ thanh nút chân trang**, chỉ `1` thanh nút ghim đầu màn *(👉 Xem `UX-L9`, PM2 `QD-393` D28 A thay `QD-323` D3A — sửa 19/10/2026 vì dòng cũ còn ghi \"chân trang lặp lại\")* |\n| 2 | **Trạng thái hiện mấy chỗ** | — | **`1` chỗ duy nhất** là tag cạnh tiêu đề, ⛔ lặp dòng Trạng thái trong khối |\n| 3 | **Chia tab** | Nhóm thông tin nào vào tab nào | Mẫu `3` tab: Thông tin chính · Người liên quan · **Lịch sử thao tác**. ⛔ thêm tab chỉ để xem mà người dùng không thao tác gì *(TrangNT5 chốt 30/09/2026 khi bỏ tab \"Điều kiện kiểm tra\" của PO: \"cái này người dùng cần làm gì đâu á\")* — thông tin giải trình như bỏ qua điều kiện ghi thành **1 dòng ở Lịch sử thao tác** · 🔴 *(19/10/2026, PM2 `QD-420` ⑩)* tab chỉ chứa `1` khối mà tên khối trùng tên tab *(tab Lịch sử thao tác)* ⇒ **bỏ tiêu đề khối**, nguyên văn: *\"Màn hình Lịch sử hoạt động bỏ tên màn hình vì trùng lặp\"* *(👉 Xem `UX-B8` ngoại lệ)* · vùng nội dung tab ⛔ nền xám · tab chỉ `1` khối ⇒ ⛔ bọc viền, tab nhiều khối nhỏ ⇒ mỗi khối có viền, tên trên viền *(QD-431 ⑤ · QD-434 ②, `UX-B11`)* |\n| 4 | **Thứ tự trường** | Theo màn nào | 🔴 **Giống hệt thứ tự lúc TẠO**, chia khối như màn Tạo — khuôn `.the` / `.dc` của bước xác nhận |\n| 5 | **Thông tin trùng** | Trường nào đã có ở đầu trang hoặc tab khác | **Bỏ trùng** — mã đã ở tiêu đề thì ⛔ lặp trong khối |\n| 6 | **Giá trị từ danh mục** | Hiện tag hay chữ | Giá trị chọn từ danh mục ⇒ **tag** *(cùng lớp màu màn Tạo)* · ngày và khung giờ ⇒ **chữ thường** |\n| 7 | **Lịch sử thao tác — DẠNG TIẾN TRÌNH** | Thông tin mỗi mốc, sắp xếp, tải thêm | 🔴 *(ĐỔI 19/10/2026, PM2 `QD-420` ⑧ — thay bảng `8` cột)* **`1` component dùng chung** `pages/ReceptionDeskShared/HistoryTable.jsx` cho mọi màn Chi tiết *(⛔ chép bản riêng)* · khuôn `ol.timeline > li.tl-item`, mỗi mốc: **chấm màu theo loại thao tác** *(Tạo xanh lá · thao tác phá huỷ đỏ · còn lại màu thương hiệu)* · **dòng đầu** Thao tác `+` trạng thái trước → sau, **thời điểm bên phải** *(`DD/MM/YYYY HH:mm:ss` — TrangNT5 chốt 30/09/2026)* · 🔴 **trạng thái trước trùng sau ⇒ chỉ `1` tag, ⛔ mũi tên** *(QD-432 ①)* · **dòng người thực hiện** tên │ vai trò *(QD-421 ①)* · phần chi tiết trong **`1` khối viền `.tl-card`, chia TỐI ĐA `3` mục `.tl-section` theo đúng thứ tự** *(ĐỔI 20/10/2026, `Verified (TrangNT5 20/10/2026 · PM2 QD-438)`)*: ① **`Lý do, ý kiến`** — **CHỈ lời người dùng nhập** ở hộp thoại hoặc form *(lý do hủy kèm ghi chú, lý do từ chối, ý kiến duyệt, lý do xin duyệt ngoại lệ, lý do điều chỉnh)* · ② **`Nội dung thay đổi`** — thay đổi dữ liệu, mỗi trường `1` dòng cũ → mới; **quầy tiếp đón là `1` dòng thay đổi** `Quầy tiếp đón: cũ → mới`, kèm `(chọn tay)` khi khác quầy mặc định, **chỉ ghi khi quầy thật sự đổi** *(tạo mới: `Trống` → quầy)* · ③ **`Ghi chú hệ thống`** *(chữ xám, `.tl-note`)* — ghi chú **hệ thống tự sinh** *(đã gửi hoặc chưa gửi được thông báo · lưu và duyệt vì thân nhân đã có sổ hoặc tài khoản · chưa check-in / quá giờ hẹn của Vắng mặt · đề xuất lịch thay thế · nội dung nhắc lịch)* · **mục trống thì ẩn** · dữ liệu lịch sử cũ dồn hết vào lý do thì **tách lại lúc đọc** theo quy tắc này. Nguyên văn: *\"D1 A\"* · *\"Cái này là thay đổi data phải ở chỗ nội dung thay đổi mà\"* · tiêu đề mục ⛔ kèm dấu `:` *(QD-421 ①)* · **Nội dung thay đổi là danh sách `dl`, MỖI TRƯỜNG `1` DÒNG**: cột tên trường `200px` │ giá trị cũ gạch ngang → giá trị mới · 🔴 **trường có giá trị cũ TRÙNG giá trị mới ⇒ ⛔ hiện** vì ⛔ phải thay đổi; khối Nội dung thay đổi **ẩn hẳn** khi ⛔ còn dòng nào *(QD-432 ①, nguyên văn: \"ndung giống nhau thì gọi gì là thay đổi ta\")* · 🔴 **giá trị cũ trống ⇒ hiện `Trống` → giá trị mới** *(QD-434 ③, nguyên văn: \"Có vẻ chỗ này muốn là Bỏ trống ==> Có giá trị đúng không\")* · **quá `2` trường thì gập**, nút `Xem thêm {n} thay đổi` · 🔴 **THANG CHỮ** *(QD-433, nguyên văn: \"Chỗ ndung này cần cho nhỏ đi nhé, set rules text ntn cho hợp lý. Vì to bằng đầu mục k ổn lắm\")*: tên thao tác `14/600` · người thực hiện và thời điểm `12` · tiêu đề mục `11/600` IN HOA · nội dung mục `13/400` · giá trị mới `13/500` — nội dung nhỏ hơn đầu mục · **mới nhất trên đầu, dần xuống lần tạo** *(TrangNT5 làm rõ 30/09/2026)* · ⛔ phân trang *(QD-421 ①)*: hiện **`10` mốc**, nút `Xem thêm {n} thao tác` *(id `lsXemThem`)* kèm dòng `Đang hiện x/y`, cuộn tới cuối tự tải thêm `10` · tab Lịch sử chỉ `1` khối ⇒ ⛔ bọc viền khối ngoài *(QD-434 ②, `UX-B11`)* · rỗng hiện `1` mục câu `I001-27`. Nguyên văn gốc: *\"Lịch sử thao tác thay đổi dạng tiến trình. Cần tham khảo để cho tiến trình ok nhất có thể. Ndung thay đổi nên cho xuống cuối, hiển thị 2 dòng thôi và có Xem thêm để mở ra thông tin tiếp\"* · vòng `2`: *\"Phần paging k còn phù hợp ...\"* · *\"Mục nội dung thay đổi cần có Title Nội dung thay đổi ... (Đảm bảo mỗi field thay đổi là 1 dòng nhé)\"* · *\"Kiểu chõ Lý do ý kiến sao nhiều dấu : thế nhỉ\"* |\n| 8 | **Nạp dữ liệu** | Mở theo tham số nào, gộp những nguồn nào | Mở theo `?ma=` · gộp dữ liệu mẫu `+` bản vừa tạo `+` bản đã sửa `+` điều chỉnh đã lưu · mỗi thao tác đã lưu sinh `1` dòng Lịch sử |\n| 9 | **Popup từ màn chi tiết** | Popup xem, popup chọn | Popup chỉ xem ⇒ chỉ có dấu X *(UX-F1 ngoại lệ ②)* · popup chọn `1` từ danh sách ⇒ nút xác nhận khoá tới khi chọn · tình trạng hiện bằng **tag** |\n| 10 | **Khối số liệu tổng** *(nếu có)* | Công thức hiển thị | Thanh chia ô `1` ô = `1` đơn vị · chú giải có số · hộp giải thích cách ra con số tổng · 🔴 khối **giữ khung viền** *(mẫu quỹ lượt `.qb` ở Chi tiết lịch hẹn — khung được giữ theo `UX-B11`, PM2 `QD-421` ⑥)* |\n| 12 | **Bảng trong tab** *(Lịch sử, đối tượng con, số liệu)* | Rỗng thì sao, lọc theo gì | Dòng rỗng dùng `EmptyRow` như danh sách *(👉 Xem `UX-G8`, D32 A)* · bảng lọc theo điều kiện nghiệp vụ *(vd Tình hình sử dụng theo khung giờ ngày bật thăm gặp — câu này TrangNT5 duyệt tạm 09/10/2026, sẽ review kỹ sau, D35)* có câu hướng dẫn dưới bảng *(👉 Xem `UX-G12`)* |\n| 11 | **Bản ghi xét duyệt NHIỀU LẦN** *(bị từ chối rồi gửi lại)* | Người duyệt xem lại được gì | 🔴 Hiện **lộ trình duyệt** theo thứ tự `Lần 1`, `Lần 2`, …, **lần hiện tại cuối cùng** — mỗi lần: lý do xin duyệt, tài liệu đính kèm, lý do từ chối kèm người và thời điểm · ⛔ chỉ hiện lần mới nhất. Nguyên văn: *\"Vì gửi duyệt nhiều lần nên tớ muốn người xem phê duyệt sẽ xem được toàn bộ thông tin của Lần duyệt 1 - Lý do xin duyệt - Lý do từ chối. Sau đó là đến thông tin duyệt lần 2 này ... Để kiểm tra rõ lộ trình duyệt và xem xét lại\"* *(PM2 `QD-362` ②)* |\n| 13 | **Màn có CHẾ ĐỘ XEM và chế độ sửa trên cùng `1` màn** *(màn cấu hình, cài đặt)* | Chế độ xem dựng thế nào | 🔴 *(19/10/2026, PM2 `QD-420` ⑪)* **Chế độ xem dựng theo khuôn Xem chi tiết** — nhãn · giá trị **bằng chữ** *(mẫu Cấu hình thời gian: `Có` / `Không`, khung giờ `07:30 - 11:00`, số phút)* · giá trị bật/tắt hiện **tag** *(mẫu cột Thăm gặp: `Bật` xanh lá `tag-active` · `Tắt` xám `tag-inactive`, căn giữa ô — PM2 `QD-421` ④, nguyên văn: \"Thăm gặp Tắt/Bật nhé ==> Xem theo chỗ file aritfact mà có người làm đó\")*, khối nhiều trường dựng nhãn – giá trị `.vc-info` · ⛔ dùng lại form Sửa rồi khoá ô. Nguyên văn: *\"Ở mode xem chi tiết thiết kế dưới dạng xem chi tiết nhé. Đang làm dạng màn Edit mà disable k hợp lý. Chi tiết phải làm mode chi tiết\"* · ngoại lệ D28 ô khoá xám ở `TrangNT5_UIUX_Rules.md` đã **hết hiệu lực** |"
+    },
+    {
+     "title": "② THÔNG SỐ RIÊNG LOẠI NÀY *(luật chung xem `UX-xxx`)*",
+     "md": "| Nguồn | Thông số | Giá trị |\n|:---|:---|:---|\n| `Verified (màn mẫu · tokens)` · `Verified (TrangNT5 19/10/2026 · PM2 QD-434 ①)` | Nhãn – giá trị | Nhãn `13/400` ⛔ đậm · giá trị `14/600` · cột nhãn `220px` *(bố cục `2` cột `180px`, trong popup `160px`)* · **chỉ vạch ngang, ⛔ vạch dọc** · ô trống hiện `—` · 🔴 *(19/10/2026, QD-434 ①)* nhãn và giá trị **căn giữa dọc, cả tag** *(👉 Xem `UX-A6`)* · khối kết thúc bằng lưới này **đệm đáy `4px`** *(`UX-B11`)* |\n| `Verified (màn mẫu)` | Tên khối | `14/700` IN HOA màu `#64748B`, cách nội dung `12px` |\n| `Verified (màn mẫu)` | Bố cục `2` cột | `2` khung ⛔ bắt buộc cao bằng nhau · dưới `1100px` thành `1` cột |\n| `Verified (màn mẫu)` | Thẻ người | Tên đậm + tag vai trò · thẻ chủ thể **nổi màu và xếp đầu** · lưới khoá – giá trị `96px` |"
+    },
+    {
+     "title": "③ BỘ CÂU HỎI CHUẨN — agent TỰ TRẢ LỜI từ SRS trước",
+     "md": "| # | Câu hỏi | Đáp án đã chốt ở màn mẫu | Nguồn |\n|:---:|:---|:---|:---|\n| 1 | Trình bày theo khuôn nào? | Khuôn bước xác nhận của màn Tạo | `Verified (TrangNT5)` |\n| 2 | Thứ tự trường? | Giống hệt lúc tạo | `Verified (TrangNT5)` |\n| 3 | Trạng thái hiện mấy chỗ? | `1` — tag cạnh tiêu đề | `Verified (TrangNT5)` |\n| 4 | Thông tin trùng giữa đầu trang và tab? | Bỏ | `Verified (TrangNT5)` |\n| 5 | Đầu trang theo mẫu nào, cỡ chữ? | PM1 Khen thưởng học viên, tiêu đề `18/700`, gọn | `Verified (TrangNT5)` |\n| 6 | Dưới tiêu đề ghi gì? Có icon tiêu đề? | ⛔ câu mục đích *(ĐỔI 14/10/2026, QD-376)* · ⛔ icon tiêu đề *(ĐỔI 19/10/2026, QD-420 ①)* | `Verified (TrangNT5 · QD-376 · QD-420)` |\n| 7 | Đầu trang có nút gì? | Chỉ thao tác hợp lệ ở trạng thái đó — mẫu bỏ Dời lịch và Check-in, giữ Hủy | `Verified (TrangNT5)` |\n| 8 | Nhãn đậm không, có vạch dọc không? | Nhãn thường, giá trị đậm, chỉ vạch ngang | `Verified (TrangNT5)` |\n| 9 | Khoảng cách tiêu đề khối tới nội dung? | `12px`, dải tab ⛔ lề dưới | `Verified (TrangNT5)` |\n| 10 | `2` khung cạnh nhau có phải cao bằng nhau? | ⛔ | `Verified (TrangNT5)` |\n| 11 | Tên vai trò người liên quan? | Theo thuật ngữ nghiệp vụ đã chốt của chức năng *(mẫu: Thân nhân đăng ký · Thân nhân đi cùng)* | `Verified (Knowhow #14)` |\n| 12 | Lịch sử thao tác trình bày thế nào, gồm thông tin gì? | **Dạng tiến trình** `HistoryTable.jsx` *(ĐỔI 19/10/2026, QD-420 ⑧)* · thông tin theo bản gốc, ⛔ tự thêm; trạng thái trước → sau trên dòng đầu, khối `.tl-card` tối đa `3` mục theo thứ tự `Lý do, ý kiến` *(chỉ lời người dùng nhập)* · `Nội dung thay đổi` *(mỗi trường `1` dòng, quá `2` trường thì gập — QD-421 ①)* · `Ghi chú hệ thống` *(chữ xám, ghi chú tự sinh — QD-438)*, mục trống ẩn | `Verified (TrangNT5 · QD-420 · QD-438)` |\n| 13 | Lịch sử sắp chiều nào? | Mới nhất ở trên — 🔴 gặp cụm *\"cũ đến mới\"* thì **hỏi bằng ví dụ dòng đầu, dòng cuối** | `Verified (Knowhow #19)` |\n| 14 | Lịch sử có phân trang? | ⛔ — hiện `10` mốc, nút `Xem thêm {n} thao tác` tải thêm `10`, cuộn tới cuối tự tải *(ĐỔI 19/10/2026, PM2 `QD-421` ①; trước đó phân trang mặc định `10` theo QD-346 ③)* | `Verified (TrangNT5 · PM2 QD-421)` |\n| 15 | Mô tả lịch sử có ghi mã nội bộ? | ⛔ *(UX-A8)* | `Verified (TrangNT5)` |\n| 16 | Có hiện trường kỹ thuật nội bộ *(kiểu \"Suất đã trừ\")*? | ⛔, trừ khi nghiệp vụ cần | `Verified (Knowhow #22)` |\n| 17 | Popup chọn và popup chi tiết trình bày ra sao? | Popup chọn gọn `1` hàng, tình trạng bằng tag | `Verified (TrangNT5)` |\n| 18 | Tệp đính kèm ở màn Xem có tải về được không? | Có — tên tệp là liên kết kèm icon tải về, dùng `AttachmentView` *(ExemptionInfo.jsx)*, theo Design System PM1; Prototype tải `1` tệp mẫu cùng tên. Ai xem được màn Chi tiết thì tải được, không giới hạn thêm theo vai trò *(PM2 `QD-418`, TrangNT5 trả lời 19/10/2026)* | `Verified (TrangNT5 · PM2 QD-417)` |"
+    },
+    {
+     "title": "④ LỖI ĐÃ PHÁT HIỆN Ở MÀN MẪU — ⛔ chép sang màn mới",
+     "md": "| Nguồn | Chỗ lệch | Xử lý |\n|:---|:---|:---|\n| `Verified (bóc tách 30/09)` | Mở mã **⛔ tồn tại** ⇒ màn **lặng lẽ hiện dữ liệu mẫu**, ⛔ báo gì | Màn mới: báo rõ không tìm thấy bản ghi *(chờ TrangNT5 confirm câu chữ)* |\n| `Verified (bóc tách 30/09)` | Nút **Hủy** ở đầu trang **luôn hiện**, ⛔ lọc theo trạng thái | Màn mới lấy nút theo **ma trận nút theo trạng thái** của chức năng |\n| `Verified (bóc tách 30/09 · PM2 QD-346 ③)` | ~~Phân trang Lịch sử mặc định `10`, trái chuẩn `20` của `BRD-STD-01`~~ — **HẾT HIỆU LỰC 09/10/2026**: TrangNT5 chốt mặc định `10` | Mọi phân trang mặc định **`10`** *(👉 Xem `UX-G9`)* |\n| `Verified (bóc tách 30/09)` | Dữ liệu mẫu còn trường quỹ **theo tháng** trái chốt \"chỉ quỹ tuần\" | Dữ liệu mẫu phải theo đúng luật đã chốt |\n| `Verified (bóc tách 30/09)` | Phần lớn file là mã **chép từ màn Danh sách** | Màn mới dựng trên Base *(UX-K6)* |\n| `Based on Docs (PM2 QD-439 · QD-342)` | Màn Chi tiết **duyệt đơn ngoại lệ** báo toast `I001-07`, trong khi màn Danh sách cùng thao tác báo `I001-67` «Đã duyệt … Lịch đã chuyển sang màn Thăm gặp trực tiếp» — `AI` phát hiện khi gom dữ kiện viết SRS WEB-06, đã sửa 20/10/2026 | 🔴 **Cùng `1` thao tác ⇒ cùng câu toast VÀ cùng cách ghi Lịch sử ở màn Danh sách và màn Chi tiết** — đối chiếu `2` màn trước khi bàn giao *(Playbook List mục lỗi cùng mã `QD-439`)* |"
+    },
+    {
+     "title": "⑤ THÀNH PHẦN DÙNG CHUNG — đưa vào Base",
+     "md": "> 🧩 **Tra control và khối màn chạy thật trên trang Design System** `https://trangnt5-pm2-design-system.vercel.app` *(có mật khẩu · AI đọc `…\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\design\\src\\catalog.jsx`)* — dùng đúng component và markup ở đó, ⛔ tự dựng control mới khi trang đã có.\n\n> ⚛️ **Bản React:** thành phần dùng chung dựng thành component `App*` trên antd, cách chuyển và điều kiện XONG `<Ref: <Source> | TrangNT5_Prototype_FE_Conventions.md | \"⑦ HIỆN THỰC TRÊN REACT\">`\n\n| Thành phần | Ghi chú |\n|:---|:---|\n| **Đầu trang chi tiết** *(quay lại · tiêu đề + mã · tag · nút thao tác — không câu mục đích QD-376, ⛔ icon tiêu đề QD-420 ①)* | Dùng chung Chi tiết và Chỉnh sửa |\n| **Khối nhãn – giá trị `.the` / `.dc`** | Dùng chung Chi tiết và bước xác nhận của Tạo |\n| **Lịch sử thao tác dạng tiến trình** `pages/ReceptionDeskShared/HistoryTable.jsx` *(chấm màu theo loại · trước → sau · khối `.tl-card` `2` mục có tiêu đề · nội dung thay đổi mỗi trường `1` dòng, quá `2` trường gập · `10` mốc rồi `Xem thêm` / cuộn tự tải — ĐỔI 19/10/2026 QD-420 ⑧ · QD-421 ①, thay bảng `8` cột)* | Mọi màn Chi tiết *(đang dùng: Chi tiết lịch hẹn, Chi tiết quầy, Cài đặt thông báo)* |\n| **Thẻ người** · **thanh chia ô** · **popup chọn `1`** | Dùng lại khi chức năng có |"
+    }
+   ]
+  },
+  {
+   "name": "Others",
+   "file": "TrangNT5_Playbook_Others.md",
+   "sections": [
+    {
+     "title": "🎯 MỤC ĐÍCH",
+     "md": "Sổ tay của agent `srs-uiux-others`: thành phần **không thuộc** Danh sách, Tạo/Sửa, Chi tiết — lưới lịch theo tài nguyên, lưới chọn khung giờ × tài nguyên, popup lớn có lưới. Đọc **SAU** `TrangNT5_UIUX_Rules.md` — luật chung ở đó, ⛔ chép lại ở đây.\n\n| Màn mẫu chuẩn | Đường dẫn *(bản React `C:\\TrangNT5_VS Code\\srs\\SRS Gen AI\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\src\\pages\\` · chạy thật `https://pm2-prototype-iota.vercel.app`)* |\n|:---|:---|\n| Lưới lịch theo buồng, kéo thả | 🔴 *(ĐỔI 19/10/2026, PM2 `QD-420` ②)* **màn riêng** `/lich-hen/tham-gap-truc-tiep/lich-theo-buong` · `/lich-hen/gap-truc-tiep-ngoai-le/lich-theo-buong` *(code `pages\\AppointmentList\\AppointmentList.jsx`, nhánh `isGridMode`)* — trước là tab **Lịch theo bàn** trong màn Danh sách, hàm `veLuoi` |\n| Popup lớn có lưới chọn | cùng file — popup **Điều chỉnh thời gian và bàn thăm gặp** |\n| Lưới chọn trong biểu mẫu | `lich-hen\\tham-gap-truc-tiep\\tao-moi\\index.html` — bước chọn khung giờ và bàn |\n\n---"
+    },
+    {
+     "title": "① BÓC TÁCH BẮT BUỘC — trả lời đủ trước khi vẽ",
+     "md": "| # | Hạng mục | Phải xác định | Mẫu đã chốt |\n|:---:|:---|:---|:---|\n| 1 | **Trục lưới** | Ngang là gì, dọc là gì | Lịch theo tài nguyên: **ngang = khung giờ, dọc = tài nguyên** · lưới chọn trong popup/biểu mẫu: **dải tên tài nguyên ghim trên, hàng là giờ** *(kiểu chọn ghế rạp)* |\n| 2 | **Nguồn khung giờ và tài nguyên** | Lấy từ cấu hình nào, chia buổi thế nào | `1` nguồn chung giờ × tài nguyên theo ngày · chia **Buổi sáng / Buổi chiều** theo mốc `12:00` hoặc theo ca cấu hình |\n| 3 | **Bản ghi nào hiện trên lưới** | Trạng thái nào đang **giữ tài nguyên** | Chỉ bản ghi đang giữ chỗ — ẩn trạng thái đã **nhả** tài nguyên *(Đã hủy · Bị từ chối · Đã kết thúc · Vắng mặt)* |\n| 4 | **Bốn loại ô** | Luật của từng loại, dùng **CHUNG `1` hàm tính** | Còn trống · Đã có lịch · Ngoài giờ hoặc đang dọn *(gạch chéo xám đậm)* · Hiện tại · Đang chọn |\n| 5 | **Kéo thả** | Trạng thái nào kéo được, thả vào đâu | Chỉ trạng thái **cho sửa** kéo được *(mẫu: Chờ duyệt)* · còn lại có **icon cấm** trước tên, con trỏ `not-allowed` · ⛔ thả đè ô đã có lịch, ô chặn, hàng chưa xếp, chính chỗ cũ ⇒ khối tự về chỗ cũ |\n| 6 | **Xác nhận trước khi lưu** | Popup xác nhận nội dung gì | *\"Lịch hẹn {mã} của {tên} sẽ được dời: {cũ} → {mới}. Bạn có chắc chắn không?\"* · nút `Hủy` `Xác nhận` · Hủy thì khối về chỗ cũ |\n| 7 | **Tooltip khối** | Các dòng cố định | Mẫu `5` dòng: Mã · Thời gian `{từ} ~ {đến} {ngày}` · Người chính · Người đăng ký · Người đi cùng |\n| 8 | **Bộ chọn ngày** | `1` ngày hay khoảng | Nhãn ngày **chính là nút mở lịch** · `2` nút mũi tên ‹ › icon SVG cân xứng |\n| 9 | **Lưu xong** | Vẽ lại gì, báo gì | Vẽ lại lưới **và** bảng danh sách **và** số đếm · toast *\"Đã cập nhật {đối tượng} {mã}\"* · chặn bấm `2` lần |\n| 10 | **Popup lớn `2` khung** | Trái = hiện tại, phải = điều chỉnh | Khung phải viền xanh `2px` nền trắng · đổi ngày ⇒ lưới vẽ lại theo ngày đó · lý do bắt buộc, bộ đếm `1000` · nút xác nhận **luôn bấm được** + chữ đỏ khi thiếu |\n| 11 | **Lưới lịch đứng ở đâu** | Tab trong màn Danh sách hay màn riêng | 🔴 *(19/10/2026, PM2 `QD-420` ②)* **Màn riêng, URL riêng**, mở từ nút trên thanh nút đầu trang màn Danh sách *(mẫu `Lịch theo buồng`, id `modeLich`, đứng trước `Xuất Excel`)* · đầu màn: nút quay về Danh sách *(id `nutVeDanhSach`)* · tiêu đề theo đối tượng *(mẫu `Lịch hẹn thăm gặp trực tiếp theo buồng`)* · ⛔ icon tiêu đề *(`UX-I2`)* · ⛔ cặp nút chuyển chế độ. Nguyên văn: *\"Lịch theo buồng để dạng button ==> CLick vào đó thì di chuyển trên màn hình khác và có URL mới, có button bak về MH danh sách\"* *(👉 Xem Playbook List khối `4`)* |"
+    },
+    {
+     "title": "② THÔNG SỐ RIÊNG LOẠI NÀY *(luật chung xem `UX-xxx`)*",
+     "md": "| Nguồn | Thông số | Giá trị |\n|:---|:---|:---|\n| `Verified (Knowhow WEB-06 #29)` | Lưới lịch: cột tài nguyên · cột khung giờ · chiều cao ô | `160px` dính trái · `150px` · `56px` · cuộn ngang trong khung |\n| `Verified (Knowhow WEB-06 #34)` | Popup có lưới lớn | Rộng `1200px` *(ngoại lệ đã chốt)* — các popup xác nhận vẫn `520px` *(UX-F3)* |\n| `Verified (màn mẫu)` | Lưới chọn trong popup | Ô `30px` · nhãn giờ `62px` · tên tài nguyên **in đậm** · focus cùng tông xanh |\n| `Verified (màn mẫu)` | Khối buổi | `<details>` cùng khuôn khối lọc · số trên dải = **số ô còn trống** · buổi hết ô trống tự gập |"
+    },
+    {
+     "title": "③ BỘ CÂU HỎI CHUẨN — agent TỰ TRẢ LỜI từ SRS trước, ⛔ trả lời được mới hỏi TrangNT5",
+     "md": "| # | Câu hỏi | Đáp án đã chốt ở màn mẫu | Nguồn |\n|:---:|:---|:---|:---|\n| 1 | Trục ngang, trục dọc? | Ngang giờ, dọc tài nguyên | `Verified (TrangNT5 C21)` |\n| 2 | Dữ liệu lưới lấy từ đâu? | Toàn bộ dữ liệu của màn Danh sách, gồm bản vừa tạo và vừa sửa | `Verified (C21)` |\n| 3 | Thả xong lưu ngay không? | Hỏi xác nhận, đồng ý mới lưu | `Verified (C21)` |\n| 4 | Thả đè ô đã có lịch? | ⛔ cho, tự về chỗ cũ | `Verified (C21)` |\n| 5 | Trạng thái nào hiện trên lưới? | Chỉ bản ghi đang giữ tài nguyên | `Verified (C22)` |\n| 6 | Trạng thái nào kéo được? | Chỉ trạng thái cho sửa, còn lại có icon cấm | `Verified (C22)` |\n| 7 | Tooltip khối gồm gì? | `5` dòng cố định | `Verified (Knowhow #29)` |\n| 8 | Bộ chọn ngày là ô nhập hay lịch? | Nhãn ngày là nút mở lịch | `Verified (màn mẫu)` |\n| 9 | Popup điều chỉnh bố cục? | `2` khung trái hiện tại, phải điều chỉnh | `Verified (Knowhow #21)` |\n| 10 | Đổi ngày ở khung phải? | Lưới vẽ lại theo ngày đó | `Verified (Knowhow #21)` |\n| 11 | Lưới trong popup chia thế nào? | `2` khối Buổi sáng / Buổi chiều đóng mở như khối lọc | `Verified (màn mẫu)` |\n| 12 | Kiểu ô lưới chọn? | Như đặt chỗ app CGV | `Verified (màn mẫu)` |\n| 13 | Lưu thật hay giả lập? | Lưu thật, tải lại trang vẫn còn, báo theo Message List | `Verified (Knowhow #28)` |\n| 14 | Lưu xong bản ghi nằm ngoài bộ lọc? | Tự nới bộ lọc, tô sáng `3` giây, cuộn tới dòng | `Verified (Knowhow #28)` |\n| 15 | Lưới chọn trong biểu mẫu hiện khi nào? | Chỉ sau khi chọn ngày; `1` lần bấm chọn cả giờ lẫn tài nguyên, ghi vào `2` ô chỉ đọc | `Verified (màn mẫu Tạo mới)` |\n| 16 | Tooltip dùng khi nào? | Chỉ khi có thông tin cụ thể | `Verified (màn mẫu)` |\n| 17 | 🆕 Chức năng mới có tài nguyên thứ `3` *(phòng, thiết bị…)* ⇒ trục nào? | ⚠️ **Chưa có mẫu** ⇒ đưa lên câu hỏi, kèm đề xuất theo trục ngang giờ | `AI Inferred` |"
+    },
+    {
+     "title": "④ LỖI ĐÃ PHÁT HIỆN Ở MÀN MẪU — ⛔ chép sang màn mới",
+     "md": "| Nguồn | Chỗ lệch | Xử lý |\n|:---|:---|:---|\n| `Verified (bóc tách 30/09 · Knowhow WEB-06 C.4)` | Dòng hướng dẫn ghi *\"Tự làm mới mỗi 60 giây\"* nhưng màn ⛔ có cơ chế làm mới — mà **đây là yêu cầu `BRD-WEB-06` mục `1.5`** | 🔴 **Làm cơ chế làm mới thật `60` giây** *(sửa `30/09/2026`: bản đầu kết luận nhầm là \"bỏ vế đó\")*. 🆕 **`TrangNT5` chốt `30/09/2026` 08:00, nguyên văn *\"Bỏ câu này nhé\"*: ⛔ IN dòng hướng dẫn thao tác trên lưới lịch** *(kéo thả · chạm đúp · tự làm mới)* — cơ chế làm mới vẫn chạy ngầm, ⛔ cần chữ báo |\n| `Verified (bóc tách 30/09)` | *\"Chạm đúp ô trống để tạo mới\"* chỉ báo *\"Chức năng đang phát triển\"* | Bỏ cùng dòng hướng dẫn ở trên *(chốt `30/09/2026`)* |\n| `Verified (bóc tách 30/09)` | Lưu kéo thả ⛔ gọi đếm lại \"chưa xếp\", lưu popup có gọi | Lưu xong **vẽ lại cùng `1` bộ** ở mọi đường lưu |\n| `Verified (TrangNT5 30/09/2026)` | Khối lịch trên lưới theo bàn | 🆕 **Khối `3` dòng:** tên người cai nghiện · `HH:MM - Tên thân nhân đăng ký` · chip trạng thái *(cùng lớp màu chip của bảng)*. 🔴 **NGOẠI LỆ cỡ chip: `11px`** trên lưới lịch *(nguyên văn: \"Đây là màn hình ngoại lệ nên t cho phép Chip là 11px nhé\")* — các màn khác giữ khoá `12px` *(sửa 19/10/2026 theo `UX-A3` PM2 `QD-428`, trước `13px`)* |\n| `Verified (bóc tách 30/09)` | **`3` cách tính ô bận khác nhau** *(làm tròn theo khung · so khớp đúng giờ · theo khoảng)* ⇒ `08:15` bận ở lưới này mà trống ở lưới kia | Base dựng **`1` hàm tính trạng thái ô** dùng chung |\n| `Verified (bóc tách 30/09)` | Chuỗi tooltip màn Tạo mới chứa ký hiệu icon cấm ngay trong chữ hiển thị | Vi phạm `UX-A8` tinh thần — chữ hiển thị chỉ chứa chữ, vá khi dựng Base |\n| `Verified (bóc tách 30/09)` | Chú giải lưới popup `5` màu, lưới biểu mẫu `3` màu với chữ khác *(\"Bàn bận khoảng này\" ≠ \"Đã có lịch\")* | Base dùng **`1` bộ chú giải** |"
+    },
+    {
+     "title": "⑤ THÀNH PHẦN DÙNG CHUNG — đưa vào Base",
+     "md": "> 🧩 **Tra control và khối màn chạy thật trên trang Design System** `https://trangnt5-pm2-design-system.vercel.app` *(có mật khẩu · AI đọc `…\\PM2\\01_Input Documents\\Input_Level4_Standards\\Prototype_React\\design\\src\\catalog.jsx`)* — dùng đúng component và markup ở đó, ⛔ tự dựng control mới khi trang đã có.\n\n> ⚛️ **Bản React:** thành phần dùng chung dựng thành component `App*` trên antd, cách chuyển và điều kiện XONG `<Ref: <Source> | TrangNT5_Prototype_FE_Conventions.md | \"⑦ HIỆN THỰC TRÊN REACT\">`\n\n| Thành phần | Hiện có ở | Ghi chú |\n|:---|:---|:---|\n| **Lưới chọn khung giờ × tài nguyên** *(`.dc-*`, khối buổi, dải tên ghim trên, `5` loại ô, chú giải, chọn `1` ô ra `{giờ, tài nguyên}`)* | `2` bản chép: màn Danh sách và màn Tạo mới | Ứng viên component rõ nhất |\n| **Hàm tính trạng thái `1` ô** | `3` hàm lệch nhau | Gộp `1` |\n| **Lịch chọn `1` ngày** | màn Danh sách | Tham số hoá chế độ và tông màu |\n| **Tooltip nhiều dòng** *(`data-nhac`, tự lật trên/dưới, ⛔ tràn mép)* | màn Danh sách | Dùng chung mọi màn |\n| **Khuôn popup xác nhận** *(icon cạnh tiêu đề, `Hủy` / `Xác nhận`)* | màn Danh sách | Dùng chung mọi màn |"
+    }
+   ]
+  }
+ ],
+ "decisions": {
+  "QD-244": {
+   "text": "Nút chức năng luồng chính dùng màu xanh chủ đạo (form-btn-primary): Phê duyệt ở Chi tiết lịch hẹn, Duyệt trong hộp Thao tác hàng loạt; mỗi khu vực giữ 1 nút chủ đạo (lối phụ như \"Đăng ký và chờ check-in\" cạnh nút chính đã xanh thì giữ màu riêng). Hủy lịch hẹn đặt trên trang: thử viền đỏ, chữ đỏ, nền trắng (D26, theo Carbon, Atlassian, GitLab: đỏ đặc dành cho nút xác nhận trong hộp thoại) và dùng icon lịch có dấu X, khác icon Từ chối duyệt. Khu vực thông báo (chuông, Danh sách thông báo) không có tooltip · Bổ sung D28A · D29A: cùng loại control thì cả hệ thống xử lý giống nhau — mọi ô chọn có giá trị đều có nút xoá (dấu x tròn xám thay mũi tên khi rê chuột, kể cả ô bắt buộc trong form; xoá xong ô bắt buộc báo thiếu như chưa chọn); bo góc ô nhập, ô chọn, ô lọc, ô tìm, nút X đóng hộp thoại = 8px theo pm2-antd-theme; ô tích cùng cỡ 16px; ô tìm dùng đúng khung ô tìm chuẩn của các màn danh sách · Hủy lịch hẹn ở Chi tiết làm giống Danh sách: cả 2 dùng chung 1 hộp Hủy (lý do bắt buộc, hệ quả theo lý do, ghi chú bắt buộc, gửi thông báo cho thân nhân, nút Xác nhận hủy đỏ đặc); nút Hủy ở Chi tiết chỉ hiện khi trạng thái cho phép hủy như Danh sách · Tên màn ghi đủ loại thăm gặp: \"Tạo lịch hẹn thăm gặp trực tiếp\", \"Chỉnh sửa lịch hẹn thăm gặp trực tiếp\" (vì có nhiều loại thăm gặp)",
+   "status": "Đã áp (Prototype)"
+  },
+  "QD-320": {
+   "text": "(T957 Q-09) Hộp xác nhận xóa lịch hẹn theo khuôn MSG-CF-01 của Message List: tiêu đề \"Xác nhận xóa lịch hẹn {mã}\", nội dung \"Lịch hẹn {mã} sẽ bị xóa khỏi hệ thống. Hành động này không hoàn tác được.\", nút \"Hủy\" và \"Xóa lịch hẹn\"",
+   "status": "Đã chốt"
+  },
+  "QD-328": {
+   "text": "(T957 Q-10) Khối Người cai nghiện ở màn Tạo mới, Chỉnh sửa lịch hẹn và Đăng ký lượt thăm gặp tại quầy hiện thời điểm đồng bộ lần cuối từ PM1 và nút \"Đồng bộ lại\". PM1 lỗi thì cán bộ bấm Đồng bộ lại để đọc lại đúng thông tin này rồi làm tiếp",
+   "status": "Đã chốt"
+  },
+  "QD-334": {
+   "text": "Vòng 3 đồng bộ Prototype: (D10B) Popup Hủy lịch hẹn: nút đóng \"Hủy\" theo MSG-CF, nút thao tác \"Xác nhận hủy lịch hẹn\" (đỏ) để 2 chữ Hủy không đứng trần cạnh nhau. (D11) Sửa mọi khối chú thích code còn trích lời hoặc ngày (UX-K1) và nâng cổng đo cả nguồn dùng chung của màn. (D12) AI tự rà theo chuẩn quốc tế, đồng bộ hệ thống, sự phù hợp UI/UX rồi đề xuất chuẩn cho tên khối gộp, câu nhắc lưới giờ và mức icon popup. (D13) Đơn xin duyệt: bấm đi tiếp khi thiếu thì chữ đỏ dưới từng ô bắt buộc (UX-D2), cổng thử thêm luồng xin duyệt",
+   "status": "Đã chốt"
+  },
+  "QD-342": {
+   "text": "Tách WEB-06 thành 2 màn theo NGUỒN TẠO và NGƯỜI DUYỆT, thay luật người duyệt của QD-297 (D24, D26, D27): (1) Màn «Lịch hẹn thăm gặp trực tiếp» giữ nguyên, chỉ chứa lịch của thân nhân hợp lệ. Cán bộ đặt hộ ở màn Tạo mới chỉ tạo cho thân nhân đã có sổ/tài khoản thăm gặp (bỏ lựa chọn «Thân nhân cần xin duyệt»). Lịch Chờ duyệt ở màn này (thân nhân đặt trên ứng dụng, lịch bị từ chối gửi lại) do Cán bộ Tổ thăm gặp duyệt. (2) Màn mới «Lịch hẹn gặp trực tiếp ngoại lệ» (/lich-hen/gap-truc-tiep-ngoai-le, menu Lịch hẹn › Lịch hẹn gặp trực tiếp ngoại lệ (ĐỔI 09/10/2026: đúng tên màn, thay nhãn ngắn «Gặp trực tiếp ngoại lệ»)) chứa đơn tạo tại Đăng ký lượt thăm gặp tại quầy ở nhánh «Thân nhân cần xin duyệt»; người duyệt là Trưởng cơ sở; trạng thái mới «Chờ Trưởng cơ sở duyệt» (mã PENDING_HEAD_APPROVAL) để phân biệt với «Chờ duyệt». Màn có tab Tất cả · Chờ Trưởng cơ sở duyệt · Từ chối duyệt · Đã hủy, không có nút Tạo mới. (3) Trưởng cơ sở duyệt xong ⇒ lịch sang màn Thăm gặp trực tiếp ở Đã duyệt và đi tiếp vòng đời ở đó; đơn bị từ chối hoặc hủy khi chưa duyệt ở lại màn ngoại lệ; đơn bị từ chối sửa và gửi lại ⇒ Chờ Trưởng cơ sở duyệt. (4) Lịch theo bàn ở cả 2 màn hiện đủ cả 2 loại lịch; chống trùng bàn tính mọi lịch. (5) Đánh dấu để rà soát: tag «Ngoại lệ» cạnh mã lịch ở Danh sách và tiêu đề Chi tiết, bộ lọc «Luồng đăng ký» ở màn Thăm gặp trực tiếp; Xuất Excel 2 màn có cột «Luồng đăng ký» (bổ sung 09/10/2026, T962), file màn ngoại lệ có tiêu đề và tên riêng. AI Inferred: tên menu, đường dẫn, mã trạng thái, màu tag cam, vị trí tag và bộ lọc, đơn hủy khi chưa duyệt ở lại màn ngoại lệ — TrangNT5 rà lại",
+   "status": "Đã áp (Prototype)"
+  },
+  "QD-350": {
+   "text": "Hộp xác nhận XÓA phải là CÂU HỎI xác nhận, theo mẫu hộp xóa PM1: C001-01 nội dung đổi từ «{0} **{1}** sẽ bị xóa khỏi hệ thống. Hành động này không hoàn tác được.» thành «Bạn có chắc chắn muốn xóa {0} **{1}**? Hành động này không thể hoàn tác.». Áp cho mọi hộp xóa dùng C001-01: lịch hẹn, thông báo, quầy tiếp đón, bàn thăm gặp. Hàm msg() bỏ khoảng trắng trước dấu «?» khi biến {1} để trống",
+   "status": "Đã chốt"
+  },
+  "QD-352": {
+   "text": "Hộp xác nhận VÔ HIỆU HÓA phải HỎI người dùng có muốn thao tác không và CẢNH BÁO hậu quả, theo hộp mẫu TrangNT5 gửi: C001-09 nội dung đổi từ «Giá trị này sẽ không còn xuất hiện trong danh sách chọn.» thành «Bạn có chắc chắn muốn vô hiệu hóa {0}? Bản ghi sẽ không còn xuất hiện trong danh sách chọn khi tạo mới.», giữ icon cảnh báo cam (UX-F4). Áp cho hộp vô hiệu hóa quầy tiếp đón và bàn thăm gặp",
+   "status": "Đã chốt"
+  },
+  "QD-357": {
+   "text": "Giờ nhận lịch cuối của mỗi ca = Giờ kết thúc ca − 15 phút (sửa 09/10/2026 từ − 30 phút theo TrangNT5). Cuối ca không còn đủ thời lượng đã chọn (vd 45 phút) nhưng còn từ 15 phút trở lên ⇒ VẪN cho đặt, thời lượng tự rút về số phút còn lại đến hết ca (vd ca kết thúc 17:00, chọn 45: đặt 16:20 ⇒ 40 phút, 16:30 ⇒ 30 phút, 16:45 ⇒ 15 phút); bắt đầu sau giờ nhận lịch cuối ⇒ chặn, lý do «Sau giờ nhận lịch cuối của ca (HH:mm)». Hỗ trợ tối đa người dùng đặt lịch, không chặn cứng. Áp cho lưới chọn giờ ở Tạo lịch hẹn, Chỉnh sửa lịch hẹn, Đăng ký lượt tại quầy (lib/tableTimeline.js lastStartOf, fitDuration)",
+   "status": "Đã chốt"
+  },
+  "QD-358": {
+   "text": "Khối «Đơn xin Trưởng cơ sở duyệt» (Đăng ký tại quầy và Sửa lịch hẹn ngoại lệ) có thêm ô «Tài liệu đính kèm», KHÔNG bắt buộc, để gửi tài liệu cho Trưởng cơ sở xem khi duyệt. Mỗi tệp tối đa 10MB theo Common Rules DATA-02, vượt thì chặn và báo E001-14. Định dạng cho phép và số tệp tối đa: Common Rules chưa quy định — chờ TrangNT5 chốt (Prototype tạm không chặn định dạng, cho chọn nhiều tệp)",
+   "status": "Đã chốt"
+  },
+  "QD-361": {
+   "text": "Gộp luồng khai Quầy tiếp đón · Bàn thăm gặp · Suất riêng vào 1 màn Quầy, bỏ việc đi 2 vòng (tạo quầy → sang màn Bàn tạo bàn → quay lại Sửa quầy khai suất riêng). (D5) TẠO quầy dùng 3 BƯỚC theo thứ tự phụ thuộc: ① Thông tin quầy → ② Bàn thăm gặp → ③ Suất riêng; bước ② và ③ có «Bỏ qua, khai sau». SỬA và XEM quầy dùng TAB: Thông tin quầy · Bàn thăm gặp · Suất riêng · Lịch sử thao tác. (D6) Giữ màn DANH SÁCH Bàn thăm gặp để tra cứu bàn toàn cơ sở và đổi quầy cho bàn; BỎ màn Tạo bàn riêng — bàn chỉ tạo trong quầy. (D7) Vai được sửa Quầy sửa luôn Bàn của quầy (thay QD-296 D29 cho phần tạo/sửa bàn trong quầy). Thay QD-300 D46 (Tạo/Sửa Bàn là màn riêng)",
+   "status": "Đã chốt"
+  },
+  "QD-370": {
+   "text": "① Hủy lịch hẹn (APPOINTMENT_CANCELLED): người nhận gồm Thân nhân VÀ cán bộ thăm gặp (D1); hộp Hủy vẫn giữ ô tick «Gửi thông báo cho thân nhân» mặc định tick theo QD-366 ⑫. ② Tách công tắc Bật/Tắt thông báo khỏi luật tự hủy lịch Từ chối duyệt: luật tự hủy luôn chạy, công tắc chỉ quyết định có gửi thông báo hay không (D2). ③ Lịch lưu bằng nút «Lưu và duyệt» (vào thẳng Đã duyệt) cũng phát thông báo Lịch hẹn được phê duyệt cho thân nhân; thêm «Lưu và duyệt» vào thao tác kích hoạt của sự kiện này (D3). ④ SỬA 09/10/2026 (thay đề xuất tham số và chỉ định ở màn Cài đặt): MỖI LỊCH HẸN và MỖI POPUP THAO TÁC (Gửi duyệt, Phê duyệt, Từ chối duyệt, Hủy …) có TRƯỜNG «Người nhận thông báo». Trường tự nạp người chuẩn theo luồng nghiệp vụ làm mặc định, cán bộ thêm người khác được bằng cách chọn từ danh sách cán bộ và nhóm cán bộ đặt theo TỪNG CHỨC NĂNG (tham chiếu PM5 Quản trị hệ thống › Người dùng và Nhóm người dùng). ⑤ Ở màn Cài đặt thông báo, người nhận của thông báo do thao tác sinh ra được định nghĩa là «theo trường Người nhận thông báo» của đúng thao tác đó — mọi thông báo gắn về đúng thao tác cần. ⑥ Chỉ thông báo TỰ ĐỘNG NGẦM của hệ thống (nhắc lịch, tự hủy) mới khai người nhận đích danh, theo dữ liệu của trường hợp đó, ví dụ danh sách thân nhân thuộc lịch hẹn. ⑦ Luồng gửi duyệt có 2 nhánh: Duyệt đơn thăm gặp và Duyệt đơn xin ngoại lệ — người nhận mặc định của thao tác Gửi duyệt tách theo 2 nhánh này. ⑧ D12: trường Người nhận thông báo TÁCH RÕ TỪNG NHÓM người nhận — «Cán bộ tổ thăm gặp» hiển thị tên cán bộ tổ thăm gặp đã chọn ở mục chọn thông báo của mỗi lịch hẹn · «Thân nhân» hiển thị danh sách thân nhân thuộc lịch hẹn · «Trưởng cơ sở» · «Người nhận thông tin thêm» liệt kê toàn bộ danh sách cán bộ để chọn. Mỗi thao tác có bộ nhóm người nhận khác nhau. ⑨ Ma trận thao tác × nhóm người nhận (D16, TrangNT5 «tạm như vậy»): Mục chọn thông báo ở Tạo/Sửa lịch = chọn Cán bộ tổ thăm gặp, Thân nhân tự nạp, Thông tin thêm · Lưu và gửi duyệt đơn thăm gặp = Cán bộ tổ thăm gặp · Lưu và gửi duyệt đơn xin ngoại lệ = Trưởng cơ sở (SỬA theo ⑬) · Lưu và duyệt, Phê duyệt, Từ chối duyệt, Điều chỉnh/kéo thả, Hủy = Cán bộ tổ thăm gặp + Thân nhân · Đánh dấu vắng mặt = Thân nhân (thêm thông báo Vắng mặt, báo đã trừ lượt theo QD-265 ⑦) · mọi thao tác có thêm nhóm Người nhận thông tin thêm · Tự động: nhắc lịch = Thân nhân đích danh, Tự hủy = Cán bộ tổ thăm gặp + Thân nhân đích danh. ⑩ D17: nhóm Trưởng cơ sở tự nạp tên người thuộc vai Trưởng cơ sở. ⑪ D18: Cán bộ tổ thăm gặp chọn từ danh sách Tổ thăm gặp; người đăng nhập thuộc Tổ thăm gặp thì mặc định có luôn. ⑫ D14: mốc nhắc sắp đến giờ giữ 30 phút — không có văn bản pháp luật nào quy định 2 giờ; BRD-WEB-03b ghi LH_NHAC_TRUOC_30PHUT «Trước 30 phút» và BRD-APP-00 «Trước 24 giờ và trước 30 phút». Sửa QD-265 ⑩ cùng ngày. ⑬ SỬA 09/10/2026: màn Cài đặt thông báo PHÂN BIỆT 2 thông báo chờ duyệt — «Duyệt lịch hẹn» (lịch thăm gặp trực tiếp Chờ duyệt) gửi Cán bộ tổ thăm gặp · «Duyệt lịch hẹn ngoại lệ» (đơn Chờ Trưởng cơ sở duyệt) gửi Trưởng cơ sở; cả 2 vẫn có nhóm Người nhận thông tin thêm. ⑭ Giao diện trường «Gửi thông báo cho» (09/10/2026): popup thao tác rộng hơn · mỗi nhóm người nhận là 1 ô CHỌN NHIỀU dùng chung với màn khác (antd Select mode=multiple như ô Dãy nhà phục vụ của màn Quầy), có giá trị mặc định, thêm hay bỏ người ngay trong ô đó · nhóm Thân nhân cũng là ô chọn nhiều, sửa xóa thoải mái · trước mỗi nhóm có 1 ô tick, mặc định tick, bỏ tick thì không gửi cho nhóm đó · ô Cán bộ tổ thăm gặp và ô Thân nhân BẮT BUỘC (đang tick thì phải có ít nhất 1 người) · hộp Hủy bỏ khối «Hệ quả khi hủy với lý do này», thay bằng «Lưu ý: Hệ thống sẽ hoàn lại lượt thăm gặp tuần này cho người cai nghiện». ⑮ D19: «bắt buộc có ít nhất 1 người» = người BẮT BUỘC PHẢI NHẬN trong luồng, là người quản lý vận hành chính đối tượng đó. Áp: nhóm Cán bộ tổ thăm gặp ⇒ cán bộ tổ thăm gặp phụ trách lịch (chọn ở mục Gửi thông báo của lịch hẹn) · nhóm Thân nhân ⇒ thân nhân đăng ký của lịch (thân nhân đi cùng bỏ được) · nhóm Trưởng cơ sở ở thông báo Duyệt lịch hẹn ngoại lệ ⇒ người thuộc vai Trưởng cơ sở. Người bắt buộc nằm sẵn trong ô, không bỏ được; nhóm có người bắt buộc thì ô tick khoá ở trạng thái tick. · SỬA 10/10/2026 (D38 thay D37): màn Cài đặt thông báo TÁCH HẲN 2 KHỐI — «Thông báo luồng lịch hẹn thăm gặp» (APPOINTMENT_PENDING_APPROVAL · APPOINTMENT_APPROVED · APPOINTMENT_REJECTED) và «Thông báo luồng đơn xin ngoại lệ» (APPOINTMENT_EXCEPTION_PENDING_APPROVAL · APPOINTMENT_EXCEPTION_APPROVED · APPOINTMENT_EXCEPTION_REJECTED); mỗi khối đủ Gửi duyệt · Phê duyệt · Từ chối duyệt. D39: đổi tên 2 dòng chờ duyệt ở ⑬ thành «Gửi duyệt lịch hẹn» và «Gửi duyệt đơn xin ngoại lệ» (mã giữ nguyên) ⑯ D15A: dựng nút «Hủy và đề xuất lịch thay thế» theo BRD-WEB-06 (Gợi ý xếp lại): hiện khi lý do thuộc nhóm sự cố của cơ sở (CS_), hệ thống tìm khung giờ trống gần nhất trong 7 ngày cho từng lịch hẹn và gửi kèm trong thông báo cho thân nhân; thêm thông báo «Lịch hẹn bị hủy kèm đề xuất lịch thay thế» vào màn Cài đặt thông báo (tab còn 12 dòng). Không tìm được khung trống thì vẫn hủy, Lịch sử thao tác ghi rõ không tìm được. ⑰ D21A: người đang thao tác có tên trong ô «Gửi thông báo cho» thì VẪN NHẬN thông báo — ô hiện ai thì người đó nhận, kể cả chính mình. Sửa QD-265 ③ cùng ngày. ⑱ Tạo đơn tại quầy luồng «Thân nhân cần xin duyệt» (và màn Sửa đơn ngoại lệ): mục Gửi thông báo của lịch hiện nhóm Trưởng cơ sở BẮT BUỘC — tự nạp người thuộc vai Trưởng cơ sở, không bỏ được, ô tick khoá. ⑲ SỬA 13/10/2026 (thay vế «nhóm có người bắt buộc thì ô tick khoá» ở ⑮): nhóm người nhận BẮT BUỘC (có dấu *: Cán bộ tổ thăm gặp, Thân nhân, và nhóm có người bắt buộc như Trưởng cơ sở ở đơn ngoại lệ) thì ô tick KHOÁ ở trạng thái tick, không cho bỏ tick. Chỉ gửi thông báo cho người thỏa CẢ 2 điều kiện: nhóm đang tick VÀ có tên trong ô — nhóm bỏ tick thì không gửi dù trong ô vẫn có tên. Áp cho mọi chỗ dùng trường này (Tạo/Sửa lịch, Đăng ký tại quầy, popup Phê duyệt, Từ chối duyệt, Hủy, Điều chỉnh, kéo thả, Vắng mặt). Kèm D1 B (13/10/2026): dòng gợi ý dưới trường ở màn Tạo/Sửa lịch hẹn và Đăng ký tại quầy GIỮ NGUYÊN, không thêm câu về nhóm bắt buộc; lý do khoá ô hiện ở chú thích khi rê chuột vào ô tick. ⑳ CHỐT 13/10/2026: (a) Quầy tiếp đón có cán bộ Tổ thăm gặp phụ trách; chọn quầy nào thì cán bộ phụ trách của quầy đó là giá trị MẶC ĐỊNH của nhóm Cán bộ tổ thăm gặp ở mục Gửi thông báo của lịch hẹn. (b) Ô Quầy tiếp đón ở lịch hẹn KHÔNG còn chỉ đọc (thay QD-285 D7 · QD-286 D11): chọn người cai nghiện thì nạp quầy MẶC ĐỊNH theo dãy nhà, sau đó chọn được quầy khác tự do. Người cai nghiện chưa có dãy nhà hoặc dãy nhà chưa thuộc quầy nào vẫn chọn được quầy, kèm cảnh báo để ghi nhận. (c) D2: mỗi lịch bắt buộc chọn Quầy nên luôn có cán bộ tổ thăm gặp bắt buộc nhận. (d) D3: thao tác hàng loạt gửi cho đúng người được chọn trong ô, nội dung dạng xử lý hàng loạt. (e) D4: đọc trạng thái bỏ tick qua 1 hàm chung, đồng bộ cả hệ thống. Chi tiết ⑳ (Q1-Q6): Q1 trường «Cán bộ phụ trách» ở tab Thông tin quầy (Tạo, Sửa, Chi tiết), chọn NHIỀU cán bộ Tổ thăm gặp, bắt buộc khi quầy Hoạt động. Q2 ô Quầy ở lịch hẹn chỉ cho chọn quầy Hoạt động, mặc định quầy theo dãy nhà. Q3 không có quầy mặc định (chưa có dãy nhà, dãy chưa thuộc quầy) ⇒ cảnh báo vàng dưới ô Quầy nêu lý do, vẫn cho lưu, ghi Lịch sử thao tác; rà lại vận hành thực tế (bàn, lịch theo bàn, check-in) với quầy chọn tay. Q4 chọn quầy khác quầy gắn với dãy nhà của người cai nghiện (vẫn trong danh sách quầy Hoạt động) ⇒ cũng cảnh báo vàng và ghi Lịch sử như Q3. Q5 người bắt buộc nhóm Cán bộ tổ thăm gặp = cán bộ phụ trách HIỆN TẠI của quầy của lịch (thay mặc định theo người đăng nhập ở ⑪); đổi quầy ở lịch thì thay cán bộ quầy cũ bằng cán bộ quầy mới, giữ người thêm tay; đổi cán bộ phụ trách ở màn Sửa quầy thì báo rõ các thông báo gửi sau chuyển sang người mới, thông báo đã gửi trước đó không đổi. Q6 thao tác hàng loạt: mỗi cán bộ nhận 1 thông báo gộp (tiêu đề kèm số lịch, nội dung liệt kê mã lịch), màn Thông báo có thao tác mở Danh sách lọc đúng các lịch đó; thân nhân vẫn nhận riêng theo lịch của mình. D5 A (13/10/2026): duyệt nguyên văn 3 câu cảnh báo W001-18 (chưa có quầy mặc định) · W001-19 (chọn quầy khác quầy của dãy nhà) · W001-20 (đổi cán bộ phụ trách quầy), Message List PM2 v2.15. D6 A: chú thích mã nguồn không ghi ngày và lời trích (UX-K1). D7 (13/10/2026): quầy chưa từng khai Cán bộ phụ trách thì mặc định là MỌI cán bộ thuộc Tổ thăm gặp (đọc từ danh bạ cán bộ, không gán cứng tên); quầy đã khai thì theo đúng danh sách đã khai. Bổ sung Q6 (14/10/2026): màn Cài đặt thông báo có khối «Thông báo thao tác hàng loạt» gồm 3 dòng APPOINTMENT_BULK_APPROVED (Phê duyệt lịch hẹn hàng loạt) · APPOINTMENT_BULK_REJECTED (Từ chối duyệt lịch hẹn hàng loạt) · APPOINTMENT_BULK_CANCELLED (Hủy lịch hẹn hàng loạt), gửi Cán bộ tổ thăm gặp và Người nhận thông tin thêm; đơn thường và đơn ngoại lệ chung 1 dòng; thêm biến {appointment_count} {appointment_codes}; tắt dòng thì cán bộ không nhận thông báo gộp, thân nhân vẫn theo dòng thông báo đơn. SỬA 14/10/2026: 3 dòng hàng loạt có thêm nhóm Thân nhân của đơn bắt buộc nhận; mỗi thân nhân nhận thông báo theo đúng mã lịch hẹn của mình (nội dung như thông báo đơn); thao tác hàng loạt thì cả cán bộ và thân nhân theo dòng hàng loạt, tắt dòng là tắt cả 2; Hủy và đề xuất lịch thay thế hàng loạt thì thân nhân nhận theo dòng Lịch hẹn bị hủy kèm đề xuất lịch thay thế. D8 A (14/10/2026): thông báo hàng loạt không liệt kê mã trần — biến {appointment_list} (thay {appointment_codes}) hiện tối đa 3 lịch dạng «Thân nhân thăm Người cai nghiện lúc giờ ngày», còn lại ghi «và n lịch hẹn khác», mã lịch xem ở Danh sách mở từ nút; mọi thông báo khác cũng phải nói rõ ai và lúc nào (rà 29/29 nội dung đạt). Màn Cài đặt thông báo: mỗi nội dung (theo từng người nhận) có mục «Ví dụ (dữ liệu minh họa)» dựng từ chính khuôn đang lưu, để Dev và QC hiểu ý BA; ở popup Sửa ví dụ đổi theo chữ đang gõ. ㉑ 14/10/2026: (a) Thân nhân đơn ngoại lệ chưa có tài khoản ⇒ sau này sẽ có tài khoản; hiện xử lý bằng (b). (b) Lịch sử thao tác tách rõ người ĐÃ GỬI thật và người CHƯA GỬI ĐƯỢC kèm lý do. (c) Trường người nhận ở popup chia 2 khối «Gửi theo mặc định» và «Gửi thêm» để người dùng thấy rõ, không bắt buộc thao tác. (d) Đổi bật/tắt 1 thông báo mà dòng đi cặp (thông báo đơn ↔ hàng loạt) đang khác trạng thái ⇒ popup xác nhận có cảnh báo. (e) Quầy chưa khai cán bộ phụ trách thì cả Tổ thăm gặp nhận: giữ nguyên.",
+   "status": "Đã chốt"
+  },
+  "QD-372": {
+   "text": "① (D21) Nút chính «Tra cứu» ở màn Tạo lịch hẹn và Đăng ký tại quầy đệm 16px như mọi nút chính (bỏ quy tắc riêng .lookup .form-btn đệm 20px). ② (D22) Khung Lưu ý có 2 dạng theo MỨC NHẤN MẠNH, đúng như Prototype đang làm: màu XANH cho nội dung cần nổi bật để nhắc nhở, hướng dẫn người dùng (vd quy tắc bắt buộc ở Cấu hình thời gian); màu XÁM cho ghi chú nhắc thêm, vô hại, không cần nhấn mạnh. ③ (D23) Ô nhập nằm TRONG BẢNG nhập liệu (vd bảng Bàn thăm gặp ở màn Sửa quầy) đệm trái 8px cho gọn; ô nhập trong form giữ 12px",
+   "status": "Đã chốt"
+  },
+  "QD-373": {
+   "text": "① Bỏ (xoá) giá trị ở trường phía trên thì mọi dữ liệu phía dưới phụ thuộc vào nó phải bị bỏ theo (vd xoá số CCCD/SĐT đã tra ⇒ bỏ thẻ thân nhân, danh sách người cai nghiện, thân nhân đi cùng, quầy, giờ, bàn đã chọn). ② (D4 A) Chọn lại ĐÚNG giá trị đang chọn (cùng thẻ người cai nghiện, cùng ngày, Tra cứu lại cùng số) thì GIỮ NGUYÊN dữ liệu phía dưới. ③ (D5 A) Màn Đăng ký tại quầy: lùi từ bước 3 về bước 2 rồi Tiếp tục mà người tham gia không đổi thì GIỮ kết quả đối chiếu CCCD; chỉ bỏ kết quả của người không còn trong lượt. ⑤ (D1, đổi 13/10/2026) SỬA ô tra cứu sang số khác (chưa xoá hết) thì GIỮ kết quả cũ, phải bấm Tra cứu mới thay kết quả; chỉ XOÁ TRẮNG ô mới bỏ ngay. ④ (D3 A) Sửa trọn 17 lỗi cùng loại do rà toàn Prototype tìm ra. ⑥ (D6) Thanh phân trang theo đúng chuẩn PM1 (đo PM1 STG 13/10/2026: Trang trước · Tổng số · Trang X/Y · Chọn số bản ghi · Trang sau; nút tắt ở trang đầu/cuối; KHÔNG title, KHÔNG tooltip). (ĐỔI 14/10/2026, thay bản làm thử D9 ô gõ số) Chữ «Trang X/Y» GIỮ NGUYÊN như PM1, thêm ô «Chọn trang» ngay cạnh (sau vạch ngăn, trước «Chọn số bản ghi»): ô chọn có tìm dùng CHUNG control với mọi ô chọn có tìm của Prototype (AppSearchSelect, components/app/PageSelect.jsx) · tìm theo chữ chứa như các ô khác · danh sách đúng các trang đang có · chỉ 1 trang thì ô VẪN HIỆN, danh sách chỉ có số 1 · bấm Trang trước/sau, đổi lọc, đổi số bản ghi thì ô nhảy theo trang thật · bấm x thì giữ trang đang xem · áp đồng bộ cả 5 thanh phân trang (Lịch hẹn · Quầy · Thông báo · Chi tiết lịch hẹn · Lịch sử thao tác). Kèm theo: mũi tên ⌄ của ô chọn có tìm dời từ styles/form.css về src/lib/searchSelect.css để màn danh sách cũng có. Vẫn là chỗ lệch PM1 có chủ đích (PM1 không có ô chọn trang). ⑦ (D7) Chọn dòng theo TRANG đang xem, đổi trang thì bỏ chọn; không chọn qua nhiều trang. ⑧ (D10) Lưới bàn khi chưa có Quầy thì nhắc chọn Quầy (dùng mã có sẵn I001-30 «Vui lòng chọn quầy tiếp đón để xem danh sách bàn và giờ còn trống»); có Quầy rồi mới nhắc chọn ngày (I001-74). ⑨ (D11) Sửa số ở ô tra cứu mà chưa bấm Tra cứu, rồi bấm Tiếp tục hoặc Lưu nháp, thì ô tự trả về số đã tra để khớp thẻ thân nhân đang dùng. Không trả về lúc rời ô, vì người dùng đang gõ số mới rồi bấm nút Tra cứu sẽ bị tra nhầm số cũ. ⑩ (D12) Nút Trang trước/Trang sau làm giống PM1 (đo PM1 STG 14/10/2026): nền trắng, viền #BFDBFE, bo 6px, cao 36px (đổi 14/10/2026 theo QD-387 D30 A: mọi nút có chữ 36px), chữ và mũi tên #2563EB cỡ 14 đậm 500; nút tắt giữ màu, mờ 0.8; rê chuột mờ 0.9.",
+   "status": "Đã chốt"
+  },
+  "QD-376": {
+   "text": "① Khối đầu màn KHÔNG còn dòng phụ (câu diễn giải, câu mục đích) dưới tiêu đề ở MỌI màn: Danh sách lịch hẹn và lịch ngoại lệ · Danh sách quầy · Thông báo · Tạo/Sửa lịch hẹn · Đăng ký tại quầy · Cài đặt thông báo · Chi tiết quầy · Tạo/Sửa quầy · Cấu hình thời gian · Chi tiết lịch hẹn. Màn Sửa lịch hẹn (2 nơi) trước dùng dòng phụ để ghi «Mã lịch hẹn …» ⇒ mã đưa lên cuối tiêu đề, theo khuôn có sẵn của Sửa quầy và Chi tiết lịch hẹn. ② Ô icon cạnh tiêu đề cao bằng dòng tiêu đề: 28px (tiêu đề 18/28), icon 16px, bo 6px — áp cả 3 kiểu đầu màn (danh sách .shell-title · form .page-head-icon · chi tiết .dt-icon). Lệch PM1 có chủ đích (PM1 có câu diễn giải và ô icon 40).",
+   "status": "Đã chốt"
+  },
+  "QD-377": {
+   "text": "Bộ lọc danh sách (LÀM THỬ ở màn Thăm gặp trực tiếp, duyệt xong mới áp các màn khác và sửa Playbook List mục 6): ① 1 dòng điều kiện CỐ ĐỊNH luôn hiện = hàng đầu cũ: ô từ khoá · khoảng ngày · Trạng thái (ô Trạng thái vẫn ẩn ở tab khác Tất cả, khi đó ô từ khoá giãn ra) · cuối dòng là nút «Tìm kiếm mở rộng». ② Bỏ dải gập «Điều kiện tìm kiếm» và số đếm điều kiện. ③ Bấm nút ⇒ mở thêm dòng các điều kiện còn lại (Nguồn đăng ký · Bàn · Quầy · Luồng đăng ký), bấm lần nữa ⇒ gập; nút KHÔNG hiện số điều kiện đang áp. ④ Mở màn ⇒ phần mở rộng gập sẵn. Đảo luật cũ Playbook List mục 6 «⛔ chia cơ bản / nâng cao».",
+   "status": "Đã chốt · TrangNT5 duyệt 14/10/2026, áp các màn danh sách theo QD-382"
+  },
+  "QD-383": {
+   "text": "Mọi chữ không hiển thị hết nội dung phải có tooltip hiện TOÀN BỘ nội dung khi di chuột. Áp 3 loại: chữ cắt bằng CSS (dấu ba chấm, giới hạn số dòng) do cơ chế chung lib/legacyUi.js tự bắt · chữ cắt bằng code quá 200 ký tự (QD-378) · chữ tóm tắt như «+N người» ở cột Thân nhân, tooltip «Thân nhân đi cùng: tên, tên» (cùng khuôn gridTooltip). Cả 2 loại sau gắn thuộc tính data-full, cơ chế chung hiện. Vùng thông báo giữ không tooltip theo chốt cũ.",
+   "status": "Đã chốt"
+  },
+  "QD-384": {
+   "text": "Khoảng cách giữa 2 nút liền kề cố định 8px trên mọi thanh nút (đầu trang, chân trang, thanh nút danh sách, nút trong khối, hộp Thao tác hàng loạt), theo PM1: AI đo PM1 Site DEV 15/15 cặp nút = 8px (gap-2, ant-space nhỏ). Khai 1 biến --btn-gap trong styles/tokens.css, mọi khối nút dùng biến này. Trước khi sửa: Xuất Excel → Tạo mới 3,8px (khối nhom-nut-bang không có CSS), thanh nút Tạo, Sửa, Chi tiết 10px.",
+   "status": "Đã chốt"
+  },
+  "QD-385": {
+   "text": "Cột Buồng thăm gặp và Quầy tiếp đón trên danh sách lịch hẹn: mỗi giá trị 1 màu riêng để phân biệt, cùng giá trị cùng màu trên mọi dòng. Màu theo thứ tự mã trong danh mục, chia đều vòng sắc độ theo số mã, né dải đỏ và cam (màu nguy hiểm, tag Ngoại lệ); chữ tương phản ≥ 4,5:1 (đo thấp nhất 5,39:1). Hàm dùng chung lib/valueTagColor.js.",
+   "status": "Đã chốt"
+  },
+  "QD-389": {
+   "text": "① Khối 07 «Bảng cấu hình theo ngày có công tắc» của Design System bỏ 2 nút «Lưu và hủy lịch» (đỏ) và «Đăng ký» (cam): 2 nút này là nút của popup C001-19 và của màn Đăng ký tại quầy, không thuộc bảng cấu hình. Thay bằng đúng nút «Lưu» (form-btn-primary, icon dấu tích) của màn Cấu hình thăm gặp chế độ Sửa. ② (D1 B) Nút thao tác trên TRANG và FORM luôn có icon + chữ; nút trong POPUP giữ chữ trần theo khuôn MSG-CF. Không áp cho tab, thẻ chọn, nút X xoá ô lọc. Đã thêm icon cho «Quay lại» và «Tiếp tục» ở form Quầy tiếp đón, «Áp dụng khen thưởng» và «Quay lại» ở Chi tiết lịch hẹn, «Xem {n} lịch hẹn» ở Danh sách thông báo, và các khối Nút của Design System; icon lấy từ icon Prototype đang dùng.",
+   "status": "Đã chốt"
+  },
+  "QD-390": {
+   "text": "Quy tắc màu NÚT CHỮ theo vai trò (D4 A), khai 1 nơi ở styles/base.css khối «MÀU NÚT CHỮ», CSS riêng màn không khai lại: nút phụ nền trắng viền #D9D9D9 · nút chính xanh thương hiệu · đỏ đặc cho nút xác nhận phá hủy trong hộp thoại · viền đỏ chữ đỏ nền trắng cho phá hủy đặt trên trang (QD-244, gồm «Xóa đã chọn» ở Danh sách thông báo) · cam cho lối phụ cạnh nút chính · xanh lá cho chấm Khớp · viền xanh nền nhạt cho thao tác hàng loạt. Bỏ 4 bản khai lặp (form.css, AppointmentDetail.css, NotificationList.css, pm1-look.css). Đo trước và sau: 35 khung, 16886 phần tử lệch 0; đo riêng 11 loại nút trên 3 màn: 9 chỗ đổi đều là sửa lỗi cũ (nút xanh, cam, xanh lá hiện xám mặc định ở màn không nạp form.css; «Xóa đã chọn» hiện xám). Design System thêm luật UX-L27, khối demo đủ loại nút và khối Khung gợi ý dưới bảng .table-hint (D3 A).",
+   "status": "Đã chốt"
+  },
+  "QD-393": {
+   "text": "ĐẦU MÀN GHIM, 1 thanh nút duy nhất, ÁP MỌI MÀN PM2 (14/10/2026, D28 A; thay cặp thanh nút đầu và chân của QD-323, sửa UX-L9). Diễn tiến: làm thử ghim chân (sticky) ở màn Tạo lịch hẹn ⇒ nhảy theo độ dài form (74 · 206 · 386px) ⇒ D27 A chuyển ghim đầu màn ⇒ bản sticky đầu màn còn lộ lớp phía trên và trôi 16px ⇒ chốt cách khung .shell tự cuộn, đầu màn là con đầu tiên dính mép trên ngay từ đầu (lệch 0px). Quy tắc: main thôi cuộn, .shell tự cuộn; .page-head / .shell-head ghim (z-index 10, trên cột Thao tác); thanh chân không vẽ (PageFooter rỗng, thanh chân tự dựng ẩn); nút đầu màn mang id gốc cho engine và E2E; dải nhắc thiếu thông tin ngay dưới đầu màn. Lý do chọn trên: cùng vị trí nút với màn Danh sách, chiếm 70px, không nhảy. Đo 14/10/2026 trên 10 màn ở 1366×560: đầu màn lệch 0px, 0 thanh chân, 0% vị trí cuộn mất nút, 0 lỗi JS.",
+   "status": "Đã áp (Prototype)"
+  },
+  "QD-399": {
+   "text": "Thêm 14 control PM2 chưa có, đối chiếu 73 component của HeroUI. Chốt (OK ⇒ A cả 3): ① (D8 A) làm nhóm hữu ích cho màn nghiệp vụ — nhóm radio · nhóm ô tích · ô số · nút chuyển dạng phân đoạn · avatar · số đếm gắn phần tử · thanh tiến độ · vòng xoay đang tải · khung chờ tải · đường phân cách · khối thu gọn · ngăn kéo bên phải · hộp nổi · liên kết; bỏ chọn màu, OTP, Kbd, ScrollShadow, Toolbar vì không có nghiệp vụ dùng; ô chọn 1 ngày đã có ở màn Tạo lịch hẹn nên không làm. ② (D9 A) dựng component dùng chung mới trong src/components/app theo chuẩn PM2, thêm mục Design System nhãn «Chưa đo thấy trên màn», hướng dẫn ghi AI Inferred chờ TrangNT5 duyệt. ③ (D10 A) chỉ tạo file mới, không sửa màn cũ, deploy khi src yên.",
+   "status": "Đã chốt"
+  },
+  "QD-400": {
+   "text": "Sửa Design System và Prototype PM2 theo góp ý của Designer (file «Thông tin bổ sung design system», 12 ý). Chốt (OK ⇒ A cả 4): ① (D1 A) tooltip giữ QD-383 hiện đủ nội dung nhưng cao tối đa 8 dòng, quá thì ba chấm. ② (D2 A) hộp xác nhận không chèn tên đối tượng vào tiêu đề, tên in đậm trong nội dung, áp mọi hộp xác nhận có nội dung lặp tên (C001-01 xóa · C001-09 vô hiệu hóa · C001-11 kích hoạt · C001-13 vắng mặt · C001-18 đổi quầy buồng); hộp Duyệt, Từ chối là hộp nhập lý do không lặp tên nên giữ mã ở tiêu đề. ③ (D3 A) cụm nút màn chi tiết căn phải. ④ (D4 A) thêm mẫu hiển thị video và ảnh, mẫu cây thư mục. AI tự sửa 6 ý: ô lỗi không co chiều cao · ô chọn nhiều giữ 1 dòng, phần dư gom «+N» có tooltip · nút có trạng thái đang xử lý · lỗi dưới ô ở popup Hủy lịch hẹn · nút có chữ kèm số đếm · mẫu breadcrumb. Ý nút chế độ xem nhảy vị trí ngược QD-387, chờ TrangNT5 chốt.",
+   "status": "Đã chốt"
+  },
+  "QD-401": {
+   "text": "Bổ sung site Design System PM2 theo Design System PM1 (74 mục đối chiếu: 13 có, 42 có một phần, 7 chưa có, 12 khác có chủ đích). ① Bổ sung đủ 49 mục thiếu: thêm quy tắc PM1 vào Khi dùng, Khi không dùng, Biến thể của 27 control (nhãn Based on Docs, nguồn PM1 DS › mục), 5 control mới (Ô chọn theo cây AppTreeSelect, Ô chọn nhiều dùng AppSelect mode multiple, Thẻ số liệu AppStatCards, Trạng thái rỗng và lỗi AppEmptyState, Nhập khẩu Excel AppImportExcel), Nền tảng thêm chữ, khoảng cách, đổ bóng, chuyển động, icon, điều cấm. Bỏ mọi quy tắc PM1 mâu thuẫn PM2. ② Sửa 4 chỗ PM2 tự lệch: nút icon trong bảng 32×32 theo QD-270 (UX-C1 và guide còn ghi 28) · 2 ô chọn (AppFilterDropdown, searchSelect) gõ cứng câu rỗng khác nhau, nay cùng gọi I001-28 theo QD-315 · P0-1 thêm ngoại lệ tag màu theo giá trị QD-385 · P0-2 đổi «Kết xuất» thành «Xuất Excel» theo UX-G7. ③ 15 chỗ PM1 mâu thuẫn PM2 (màu icon, ẩn hay khoá nút, menu «…», cột Mã, vị trí thanh nút, mô tả dưới tiêu đề, cỡ chữ và lưới, toast, thời điểm báo lỗi, lỗi hệ thống, tag Nháp, bảng, ô ngày, ô số, drawer) CHỜ TrangNT5 chốt, chưa làm. · CHỐT 14/10/2026 sau khi soi 199 ý với code Prototype (68 đạt, 24 lỗi gốc, 37 chưa áp, 48 cần đo app): (D1 A) chỉ sửa trước chỗ PM2 SAI HẲN, tức trái cả luật PM2: ghi chú nhiều dòng giữ xuống dòng (pre-wrap) ở Chi tiết lịch hẹn và Chi tiết quầy · Chi tiết lịch hẹn có Phê duyệt thì Chỉnh sửa hạ xuống nút phụ (1 nút chủ đạo theo QD-244) · chữ mang thông tin không dùng --color-ink-4 (7 file đổi sang ink-3). (D2 B) giữ trên site các ý PM1 mà PM2 chưa có nghiệp vụ (nhập khẩu Excel, thang xếp loại, in…). (D3) chỗ chỉ lệch PM1 (15 mâu thuẫn M1-M15, nhãn nút đang xử lý, header 56/60, giới hạn ký tự ô tìm, thông báo đầu form, viền focus, 4 trường audit, chiều cao khung bảng) đưa vào trang «Lệch PM1 · PM2» của site để TrangNT5 rà, chưa sửa. · P0-2 đổi nút đầu màn danh sách «Thêm mới» thành «Tạo mới» theo QD-241 (7 chỗ), giữ 1 chỗ là lời trích nguyên văn PM1. · 16 lỗi mức Thấp: sửa 3 chỗ PM2 sai hẳn (cột STT bảng thân nhân đi cùng 56px theo UX-G1 · nét icon về 2 ở 5 chỗ theo UX-A5 · danh sách ô chọn có tìm cao 260px, dòng 36px theo token antd PM2); 11 chỗ chỉ lệch PM1 hoặc PM2 tự lệch đưa vào trang Lệch PM1 · PM2 (L8–L18, tổng 33 dòng) chờ TrangNT5 rà; 2 chỗ đã có sẵn (L1, L2).",
+   "status": "Đã chốt"
+  },
+  "QD-406": {
+   "text": "Học tối đa bộ tài liệu Design System của HeroUI (trang uy tín): ngoài 73 component còn 15 trang tài liệu nền và 4 công cụ cho AI. Chốt (OK ⇒ A cả 4): ① (D14 A) làm 7 phần — bộ tài liệu cho AI (llms.txt và AGENTS.md sinh tự động mỗi lần deploy, có bản trong Kit SRS cho agent dựng màn) · trang Tất cả control dạng thẻ theo nhóm · trang Nguyên tắc thiết kế rút từ Bộ luật UI/UX · cột Kiểu trong bảng thuộc tính · thao tác bàn phím cho control tương tác · sơ đồ cấu tạo sinh từ code · ví dụ trạng thái cho mục còn thiếu. ② (D15 A) không làm chế độ tối, ghi rõ PM2 chỉ có giao diện sáng. ③ (D16 A) thêm 4 control ScrollShadow, Kbd, Toolbar, ColorSwatch; vẫn bỏ 4 loại chọn màu và OTP. ④ (D17 A) cột Kiểu sinh tự động từ giá trị mặc định, cột Mô tả chỉ lấy từ chú thích code có sẵn, không để AI viết hàng loạt.",
+   "status": "Đã chốt"
+  },
+  "QD-409": {
+   "text": "Làm vỏ trang Design System PM2 nhìn chuyên nghiệp hơn, so mẫu HeroUI (AI đo: 10 cỡ chữ có cỡ lẻ nửa pixel, H1 = H2 = 18px, 27% chữ đậm từ 600, khối code ra font thường vì tokens.css ép font-family inherit). Chốt: ① thang chữ cố định, bỏ cỡ lẻ, tiêu đề phân cấp rõ; CHỮ THÂN GIỮ NHƯ APP PM2; menu trái cỡ chữ nhỏ lại cho cân đối. ② khối code hiển thị đúng font code. ③ giảm chữ đậm, chỉ tiêu đề dùng 600. ④ bớt khung lồng khung, ô số và header nhẹ hơn. ⑤ KHÔNG đổi sang Inter, giữ font như app PM2. ⑥ nhãn menu dùng tiếng Anh; các đầu mục ghi dạng «Tiếng Anh (Tiếng Việt)». Phạm vi: chỉ sửa vỏ tài liệu (lớp sd-*), giữ nguyên style component PM2. CHỐT THÊM (15/10/2026): (D1 A) sửa ngay dù 3 phiên khác đang làm cùng thư mục — chỉ sửa file đã đứng yên, thay chuỗi chính xác, deploy khi src yên 10 phút. (D2) tên 98 control đổi sang dạng «Tiếng Anh (Tiếng Việt)» theo thuật ngữ chuyên ngành BA (bộ kiểu trường dữ liệu: Single Line of Text, Multiple Lines of Text, Choice, Lookup, Date and Time, Yes/No, Number, Person or Group…); trường name tiếng Việt giữ nguyên vì công cụ đọc nó, tên tiếng Anh nằm ở design/src/labelsEn.js. (Date and Time) thêm control Ô chọn ngày giờ DateTimeInput (src/components/app): app chưa dùng, định nghĩa sẵn; theo mẫu quốc tế 1 ô + bảng chọn (MUI DateTimePicker bản desktop, Ant Design DatePicker showTime) — lịch 1 tháng, cột Giờ · Phút bước 5, nút «Bây giờ», gõ tay được; chọn ngày, giờ, phút là ghi nhận ngay, bấm ra ngoài hoặc Esc là đóng, KHÔNG có nút «Xong» (ĐỔI 15/10/2026), giá trị dd/MM/yyyy HH:mm; ghép đúng lịch .date-picker và cột giờ .time-panel đang có của PM2. Không chọn kiểu 2 ô riêng của Atlassian vì PM2 đã quen cột giờ phút ở Ô khoảng giờ. Dòng phụ dưới logo đổi sang tiếng Anh: «Component & Screen Standards for PM2 Prototype». (Multiple Lines of Text) tách ô nhập nhiều dòng (AppCounterInput multiline) thành mục riêng ngay sau Single Line of Text — trước nằm lẫn trong mục Ô nhập có bộ đếm ký tự nên BA không tìm thấy. (Nút Xóa) sửa mục Nút chính, nút phụ, nút nguy hiểm: mẫu «Xóa» đỏ đặc đặt trong nhóm Danh sách trái UX-L27 (đỏ đặc CHỈ trong hộp thoại, trên trang là viền đỏ) ⇒ đổi thành «Xóa đã chọn» viền đỏ btn-danger-ghost, thêm mẫu «Xóa» đỏ đặc vào nhóm Popup; app thật đã đúng sẵn (7 chỗ đỏ đặc đều trong hộp thoại). NGUYÊN TẮC LÂU DÀI (15/10/2026): Design System phủ 100% control của PM2; cùng 1 loại control phải đồng bộ trên mọi màn Prototype và mapping 1-1 với Design System — 1 control KHÔNG được map 2 mục. 4 ưu tiên tối cao: ① nhất quán ② quốc tế (theo hệ thống uy tín đang dùng) ③ phù hợp đặc thù PM2, PM1 ④ tiện dụng, cực kỳ dễ dùng. Đã sửa ngay 3 lỗi mapping: Ô nhập nhiều dòng ⇒ mục Multiple Lines of Text · Breadcrumb ⇒ mục Breadcrumb (bỏ khỏi Page Shell) · Tiêu đề khối ⇒ mục Field Grouping by Section (bỏ khỏi Filter Panel).",
+   "status": "Đã chốt"
+  },
+  "QD-411": {
+   "text": "Đánh dấu bản quyền TrangNT5 trên Design System PM2 và báo khi có bản live mới. Chốt: ① combo 2 lớp, câu tiếng Anh — lớp nhìn thấy là 1 dòng chữ xám nhỏ cuối mọi trang «© 2026 TrangNT5 · Design System PM2 · All rights reserved.» (dòng này dính đáy khung khi trang ngắn, theo D1A phiên khác cùng ngày); lớp ẩn là meta author và meta copyright trong HTML, cùng dòng «© 2026 TrangNT5. Design System PM2 is designed and maintained by TrangNT5. All rights reserved.» đầu llms.txt và AGENTS.md (sửa ở script sinh TrangNT5_GenDesignAgents.cjs). ② trang đang mở bản cũ tự dò bản live mỗi 60 giây và khi quay lại tab (so tên file js chính), có bản mới thì hiện thanh báo phiên bản mới (ĐỔI LẦN 2 19/10/2026: dùng CHUNG component VersionNotice của Prototype theo kiểu PM5 STG — viên nổi đáy màn, nền đỏ nhận diện viền vàng, dò 5 phút 1 lần và khi quay lại tab, nút Tải lại ngay và nút Đóng — thay mẫu D thanh đầu trang; GIỮ chữ «TrangNT5 đã có nâng cấp phiên bản mới, bạn hãy F5 và trải nghiệm nhé!» qua prop label, Prototype vẫn giữ chữ PM5); tab mở trước bản này cần F5 tay 1 lần. ③ sửa Design System xong thì deploy thẳng bản live, không mở bản local cho TrangNT5 xem; các cổng đo tự động của script deploy vẫn giữ. ④ (ĐỔI 19/10/2026) trang công khai không nhắc tới dòng bản quyền: bỏ khỏi trang Changelog (tóm tắt QD-411 và QD-412) và khỏi câu luật UX-B10. Kèm: cổng ②b độ khớp khối (TrangNT5_BlockFidelity.mjs) cố định đồng hồ màn thật về 14/10/2026 cho riêng khối Chọn người cai nghiện, vì quỹ thăm xét theo tuần hiện tại nên sang tuần mới cổng báo lệch oan.",
+   "status": "Đã làm"
+  },
+  "QD-415": {
+   "text": "Prototype PM2 có thanh báo phiên bản mới, cơ chế dò theo PM5 STG. Chốt: ① cơ chế giữ đúng PM5: tải lại index.html không qua bộ nhớ đệm mỗi 5 phút và khi quay lại tab hoặc focus cửa sổ (các lần cách nhau tối thiểu 60 giây), so tên file script chính; khác nhau thì hiện thanh. Ẩn khi mất mạng và 4 giây sau khi có mạng lại; bấm Đóng thì ẩn tới khi có bản build khác. Chữ nguyên văn PM5 «Đã có phiên bản mới của hệ thống» · «Tải lại ngay». ② (đổi 19/10/2026, D2 kiểu A) giao diện là pill nổi giữa đáy, nền đỏ theo thanh tiêu đề site, viền vàng chạy vòng, bỏ hiệu ứng mưa và nắng của PM5: huy hiệu vàng gồm icon động và chữ «Mới» (chuỗi mới, chưa có mã Message List) · câu thông báo in hoa · Tải lại ngay dạng link có icon tải lại phía trước · nút X màu trắng · nền vẫn có logo Công an. ③ component src/components/app/VersionNotice.jsx gắn ở App.jsx; site Design System dùng lại với câu riêng của TrangNT5 (prop label). Xem trước không cần bản build mới: thêm ?preview=version-notice vào link.",
+   "status": "Đã chốt"
+  },
+  "QD-417": {
+   "text": "Tải tệp đính kèm ở màn Xem chi tiết và câu báo lỗi Ô khoảng giờ. Chốt: ① (D9 A1) ở chế độ Xem, tên tệp đính kèm là link kèm icon tải về, theo Design System PM1; Prototype không lưu tệp thật nên bấm vào tải 1 tệp mẫu cùng tên. Thêm ví dụ trên Design System, ghi luật vào Playbook ViewDetail, ghi 1 câu hỏi để BA bổ sung SRS WEB-06 (QD-418). Làm ngay sau khi lần deploy Design System đang chạy xong. ② ví dụ «Lỗi» của Ô khoảng giờ hiện thêm chữ đỏ E001-17 «Giờ kết thúc phải sau giờ bắt đầu» dưới ô, như màn thật Cấu hình thời gian.",
+   "status": "Đã chốt"
+  },
+  "QD-431": {
+   "text": "① Tìm kiếm mở rộng: nút vuông 36px chỉ icon phễu (không xô lệch khi mở/đóng), chấm số đếm điều kiện mở rộng đang chọn, đang mở thì tô xanh nhạt; khu mở rộng có khung viền nền nhạt · ② khe 16px giữa bảng và thanh phân trang (như Ant Design Table, Material Data table) · ③ chữ đỏ mới hiện mà ô lỗi đầu tiên nằm ngoài khung nhìn ⇒ tự cuộn tới giữa khung và đặt con trỏ vào ô · ④ form nhiều bước (Tạo/Sửa lịch hẹn, Đăng ký tại quầy, Tạo quầy): Quay lại bước trước (trái) và Tiếp tục (phải) ở cuối nội dung bước như Ant Design Steps, Material Stepper; đầu màn chỉ còn nút chính (Lưu nháp, nút lưu cuối) — thay luật 1 thanh nút QD-393 cho loại màn này · ⑤ mỗi khối thông tin bọc viền bo 8px, tên khối nằm trên đường viền trên kiểu fieldset — thay khối trải phẳng của QD-420 ④.",
+   "status": "Đã chốt"
+  }
+ }
+}

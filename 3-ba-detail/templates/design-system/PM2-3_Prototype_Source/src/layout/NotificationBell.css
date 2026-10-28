@@ -1,0 +1,26 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Chuông + dropdown thông báo (PM1: Popover 360px, thân tự cuộn, dòng chưa đọc nền xanh nhạt viền trái 4px xanh) */
+.bell.is-open{background:rgba(255,255,255,.14)}
+.noti-pop{position:absolute;top:calc(100% + 8px);right:-8px;z-index:1060;width:360px;max-width:calc(100vw - 24px);background:var(--color-surface, #FFFFFF);border-radius:8px;
+  box-shadow:0 12px 32px rgba(15,23,42,.18),0 2px 6px rgba(15,23,42,.08);color:var(--color-ink-1,#0F172A);cursor:default;text-align:left;display:flex;flex-direction:column;max-height:480px}
+.noti-pop-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--color-page, #F1F5F9);font-size:14px}
+.noti-pop-body{flex:1;min-height:0;overflow-y:auto}
+.noti-pop-foot{border-top:1px solid var(--color-page, #F1F5F9);padding:10px 16px;text-align:center;font-size:14px}
+.noti-link{background:none;border:0;padding:0;font:inherit;font-size:14px;color:var(--color-link,#1D4ED8);cursor:pointer;text-decoration:none}
+.noti-link:hover{text-decoration:underline}
+.noti-empty{padding:32px 16px;text-align:center;color:var(--color-ink-3);font-size:14px}
+.noti-item{display:flex;flex-direction:column;gap:3px;width:100%;padding:11px 16px 11px 12px;border:0;border-left:4px solid transparent;border-bottom:1px solid var(--color-page, #F1F5F9);
+  background:var(--color-surface, #FFFFFF);text-align:left;font:inherit;cursor:pointer}
+.noti-item:hover{background:var(--color-hovered, #F8FAFC)}
+.noti-item.is-unread{background:rgba(239,246,255,.6);border-left-color:var(--palette-blue-500, #3B82F6)}
+.noti-item.is-unread:hover{background:var(--color-info-bg, #EFF6FF)}
+.noti-title{font-size:14px;line-height:1.4;color:var(--palette-slate-600, #475569);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.noti-item.is-unread .noti-title{font-weight:700;color:var(--palette-slate-900, #0F172A)}
+.noti-body{font-size:13px;line-height:1.45;color:var(--color-ink-3, #64748B)}
+/* từ khoá in đậm: tên, mã, ngày giờ, buồng, lý do — đậm và sẫm hơn nhãn */
+.noti-key{font-weight:600;color:var(--palette-slate-900, #0F172A)}
+.noti-title .noti-key,.noti-row-title .noti-key{font-weight:700;color:var(--color-brand,#2E5C9A)}   /* mã lịch trong tiêu đề: luôn đậm + màu chủ đạo, kể cả dòng chưa đọc */
+.noti-body.is-one-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.noti-meta{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--color-ink-3)}
+.noti-unread{display:inline-flex;align-items:center;gap:5px;color:var(--color-link, #2563EB);font-weight:500}
+.noti-unread i{width:6px;height:6px;border-radius:50%;background:var(--palette-blue-500, #3B82F6)}

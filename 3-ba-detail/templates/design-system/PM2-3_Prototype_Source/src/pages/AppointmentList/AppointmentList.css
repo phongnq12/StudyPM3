@@ -1,0 +1,126 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* màu tag .tag-* khai ở styles/base.css, không khai lại ở đây */
+/* CSS riêng của màn — thông số khớp thiết kế đã duyệt, đổi giá trị thì đối chiếu lại Design System */
+
+.filter-select-box{position:relative;display:flex;align-items:center;width:100%;height:36px;
+  padding:0 46px 0 10px;border:1px solid var(--color-line);
+  border-radius:var(--radius-sm);background:var(--color-surface, #FFFFFF);cursor:pointer;overflow:hidden}
+.filter-select-box:hover{border-color:var(--color-ink-4)}
+.filter-select.is-open .filter-select-box{border-color:var(--color-brand);outline:2px solid var(--color-brand);
+  outline-offset:-1px;cursor:text}
+.filter-select-text{position:absolute;left:10px;right:46px;font-size:var(--fs-body);
+  color:var(--palette-gray-500, #6B7280);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  pointer-events:none;transition:color .12s}
+.filter-select.has-value .filter-select-text{color:var(--color-ink-1);font-weight:500}
+.filter-select.is-open.has-value .filter-select-text{color:rgba(0,0,0,.25);font-weight:400}
+.filter-select.has-text .filter-select-text{display:none}
+.range-clear{right:30px}
+.has-text .range-clear{display:grid}
+.input-error{border-color:var(--color-err)!important}
+.filter-select-clear{position:absolute;right:30px;top:50%;transform:translateY(-50%);
+  width:16px;height:16px;display:none;place-items:center;border:none;padding:0;
+  background:transparent;color:rgba(0,0,0,.25);cursor:pointer;z-index:2}
+.filter-select-clear svg{width:12px;height:12px}
+.filter-select-clear:hover{color:rgba(0,0,0,.45)}
+.filter-select.has-value .filter-select-clear,.filter-select.has-text .filter-select-clear{display:grid}
+.filter-select.has-value:hover .filter-select-caret,.filter-select.has-text .filter-select-caret{opacity:0}
+.filter-select-empty{padding:10px 12px;font-size:var(--fs-caption,12px);color:var(--color-ink-3);
+  text-align:center;display:none}
+.filter-select-panel.is-empty .filter-select-empty{display:block}
+.filter-select-list{max-height:220px;overflow-y:auto}
+.filter-select-item.is-selected{background:var(--palette-xe6f4ff, #E6F4FF);color:var(--color-ink-1);font-weight:600}
+.filter-counter{grid-column:span 3;order:5}
+.filter-table{grid-column:span 3;order:4}
+/* Luồng đăng ký (rà soát lịch ngoại lệ) chỉ có ở màn Thăm gặp trực tiếp: ô tìm co 6 cột để 2 hàng lọc kín 12 cột */
+.filter-route{grid-column:span 3;order:6}
+.filter-body.has-route .filter-wide{grid-column:span 6}
+td{height:82px;max-height:82px;padding:12px 24px;border-bottom:1px solid var(--color-row-line, #E5E7EB);border-left:none;border-right:none;
+   vertical-align:middle;font-size:var(--fs-body);color:var(--color-ink-2);
+   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.csub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--color-ink-3);font-size:var(--fs-sm);margin-top:0;font-weight:400;line-height:18px}
+/* màu nút thao tác .ib.ib-* khai ở styles/base.css, không khai lại ở đây */
+.date-picker-blue .date-picker-day.is-selected span{background:var(--ic-xem)}
+.date-picker-blue .date-picker-day.is-today span{box-shadow:inset 0 0 0 1px var(--ic-xem);color:var(--ic-xem)}
+.date-picker-blue .date-picker-day.is-today.is-selected span{color:var(--color-surface, #FFFFFF)}
+.grid{border-collapse:collapse;min-width:100%;width:max-content;table-layout:fixed}
+.grid th:not(.col-header),.grid td:not(.col-header){width:150px;min-width:150px}
+.grid th.col-header{position:sticky;left:0;z-index:4;width:160px;min-width:160px}
+.grid td{border:1px solid var(--color-line);height:56px;padding:4px;position:relative;
+         background:var(--color-surface)}
+.grid td.col-header{position:sticky;left:0;z-index:1;background:var(--color-muted);text-align:center;
+            font-size:14px;font-weight:600;color:var(--color-ink-2);width:160px;min-width:160px}
+.grid td.is-blocked{background:repeating-linear-gradient(45deg,var(--palette-slate-200, #E2E8F0),var(--palette-slate-200, #E2E8F0) 6px,var(--palette-slate-300, #CBD5E1) 6px,var(--palette-slate-300, #CBD5E1) 12px)}
+.booking-completed,.booking-cancelled,.booking-absent,.booking-rejected,.booking-checked-in,.booking-other{background:var(--color-page, #F1F5F9);border-left-color:var(--color-ink-4, #94A3B8)}
+.booking[draggable="true"]{cursor:grab}
+.booking{position:relative}
+.booking.is-locked{cursor:not-allowed}
+.booking b{display:flex;align-items:center;gap:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.booking .ic-no-drag{width:12px;height:12px;flex:none;color:var(--color-err, #DC2626)}
+.booking b .booking-name{color:inherit;overflow:hidden;text-overflow:ellipsis}
+.booking .booking-status{margin-top:4px}
+#dcLuoiLoi{margin-top:-2px}   /* khối cha .fld có gap 6px ⇒ bù để chữ đỏ cách lưới đúng 4px */
+.booking .booking-status .tag{display:inline-flex;padding:0 6px;line-height:18px;font-size:12px !important}   /* chip lưới lịch 12px, đồng bộ cỡ chữ tag toàn hệ thống */
+.tooltip{white-space:pre-line;max-width:400px}
+.booking.is-dragging{opacity:.35}
+.grid td.has-multiple .booking{height:auto}
+.grid td[data-b],.grid td.cell-unassigned{vertical-align:top}
+.grid td[data-b] .booking,.grid td.cell-unassigned .booking{height:auto;min-height:46px}
+.grid td.has-multiple .booking+.booking{margin-top:3px}
+.grid tr.row-unassigned td{background:var(--palette-amber-50, #FFFBEB)}
+.grid tr.row-unassigned td.col-header{color:var(--color-warn, #B45309);font-weight:600}
+.grid td.is-drop-target{background:var(--color-info-bg, #EFF6FF);box-shadow:inset 0 0 0 2px var(--ic-xem)}
+.grid td.is-forbidden{background:var(--color-err-bg, #FEF2F2);box-shadow:inset 0 0 0 2px var(--palette-red-500, #EF4444);cursor:no-drop}
+.time-change{display:flex;align-items:center;gap:12px;margin:12px 0;padding:10px 14px;border:1px solid var(--color-line);border-radius:8px;background:var(--color-muted)}
+.time-change-arrow{color:var(--color-brand);font-weight:700}
+.dlg-wide .dlg-b{max-height:calc(100vh - 200px)}
+.dlg-wide{max-width:1200px;width:94vw}
+.adjust-legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;
+       font-size:var(--fs-caption);color:var(--color-ink-3)}
+.adjust-legend span{display:inline-flex;align-items:center;gap:6px}
+.legend-swatch{width:14px;height:14px;border:1px solid var(--color-line);border-radius:2px;display:inline-block}
+.legend-free{background:var(--color-surface, #FFFFFF)}
+.legend-busy{background:var(--ic-trung-bg);border-color:var(--ic-trung)}
+.legend-selected{background:var(--ic-xem);border-color:var(--ic-xem)}
+.legend-blocked{background:repeating-linear-gradient(45deg,var(--palette-slate-200, #E2E8F0),var(--palette-slate-200, #E2E8F0) 3px,var(--palette-slate-300, #CBD5E1) 3px,var(--palette-slate-300, #CBD5E1) 6px)}
+.legend-current{background:var(--ic-canh-bg);border-color:var(--ic-canh)}
+.compare{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
+.compare-box{border:1px solid var(--color-line-strong,#D1D5DB);border-radius:var(--radius-md);padding:12px 14px;background:var(--color-surface, #FFFFFF)}
+.compare-new{border:2px solid var(--ic-xem);background:var(--color-surface, #FFFFFF)}
+.compare-new .compare-title{color:var(--ic-xem)}
+.compare-new .cal-ic{color:var(--ic-xem)}
+.compare-new .cal-date:hover,.compare-new .cal-date:focus,.compare-new .cal-date:focus-visible{border-color:var(--ic-xem);outline:none;
+  box-shadow:0 0 0 3px rgba(29,95,166,.15)}
+.compare-title{font-size:var(--fs-caption);font-weight:700;color:var(--color-ink-3);text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px}
+.compare-grid{display:grid;grid-template-columns:118px 1fr;gap:8px 12px;align-items:center;font-size:var(--fs-body)}
+.compare-grid>span{color:var(--color-ink-3)}
+.compare-grid>b{font-weight:600;color:var(--color-ink-1)}
+.compare-grid>b.compare-empty{font-weight:400;color:var(--color-ink-4)}
+.compare-grid .cal-date{justify-self:start}
+.compare-title{font-size:14px;letter-spacing:.02em}
+.compare-new{padding:11px 13px}
+.compare-grid{row-gap:4px}
+.compare-grid > *{min-height:36px;display:flex;align-items:center}
+.compare-grid .cal-date, .compare-grid .cal-date *{font-size:14px;font-weight:600}
+.compare-arrow{align-self:center;color:var(--color-brand);display:flex}
+.compare-arrow svg{width:20px;height:20px}
+@media (max-width:760px){.compare{grid-template-columns:1fr}.compare-arrow{transform:rotate(90deg);justify-self:center}}
+.cmp-v{font-weight:700;font-size:var(--fs-body)}
+.cmp-a{color:var(--color-brand);display:inline-flex;align-items:center;flex:none}
+.cmp-a svg{width:20px;height:20px;display:block}
+/* Tô sáng dòng vừa tạo / sửa — bản HTML chèn bằng script cùng khối toast */
+tr.row-new>td{background:var(--palette-emerald-50, #ECFDF5)!important;transition:background 1.2s ease}tr.row-new.is-fading>td{background:transparent!important}tr.row-new.is-fading>td.col-act{background:var(--color-surface)!important}
+
+/* ── Lịch theo buồng — lịch trục thời gian (chế độ ①, ListCalendar.jsx): hàng = buồng, giờ chạy ngang, bước 5 phút ── */
+.list-calendar{display:flex;flex-direction:column;gap:8px}
+
+/* khối lịch giữ bố cục đã duyệt: dòng 1 tên người cai nghiện · dòng 2 "giờ - thân nhân" · dòng 3 chip trạng thái; màu theo tag trạng thái của danh sách (tag-*) */
+
+   /* ngoại lệ lưới lịch: chip 11px, giống khối cũ */
+
+/* right-edge handle: drag to change the duration (10–45 minutes) */
+
+/* lunch break band between 2 shifts */
+/* Bộ lọc 1 dòng cố định + Tìm kiếm mở rộng (làm thử ở màn này): từ khoá 4 · ngày 3 · Trạng thái 3 · nút 2 cột; không có Trạng thái ⇒ từ khoá 7 cột.
+ * Dòng mở rộng: mỗi ô 3 cột thẳng hàng dòng trên. */
+/* bảng lịch hẹn: cột rộng theo nội dung để tag Buồng, Quầy… hiện đủ chữ (bề rộng khai ở cột là mức tối thiểu) */
+.shell-body.tbl table{table-layout:auto;width:max-content;min-width:100%}

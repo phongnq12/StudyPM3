@@ -1,0 +1,286 @@
+{
+ "note": "Danh sách chỗ Design System PM1 và PM2 làm khác nhau. Nguồn PM1: gpdv-rehab-common/project-docs/requirements/PM1/design-system/design_system.html. Cột PM2 đo trên code Prototype ngày 14/10/2026. Kết quả chốt: Sổ BA PM2 QD-405.",
+ "rows": [
+  {
+   "code": "M1",
+   "topic": "Màu icon nút thao tác",
+   "pm1": "Icon trung tính, chỉ mức chú ý 2 mang màu",
+   "pm2": "Icon tô màu theo ý nghĩa (Xem xanh, Sửa cam…)",
+   "basis": "UX-L25",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M2",
+   "topic": "Nút không đủ điều kiện",
+   "pm1": "Khoá nút kèm tooltip lý do, không ẩn",
+   "pm2": "Ẩn hẳn, hoặc vẫn bấm được rồi báo chữ đỏ",
+   "basis": "UX-C5 · UX-C6",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M3",
+   "topic": "Menu «…» gom thao tác",
+   "pm1": "Quá 3 thao tác thì gom vào «…»",
+   "pm2": "Không gom, hiện đủ icon",
+   "basis": "Playbook List",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M4",
+   "topic": "Cột Mã trong bảng",
+   "pm1": "Đậm 600, màu link",
+   "pm2": "Chữ thường, không làm link",
+   "basis": "UX-L20",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M5",
+   "topic": "Vị trí thanh nút form",
+   "pm1": "Nút cam kết ở chân khung",
+   "pm2": "1 thanh nút đầu màn, ghim khi cuộn",
+   "basis": "UX-L9 · D28A",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M6",
+   "topic": "Mô tả dưới tiêu đề màn",
+   "pm1": "Tiêu đề kèm 1 dòng mô tả",
+   "pm2": "Không có dòng mô tả",
+   "basis": "QD-376 · P0-2 R1",
+   "decision": "Giữ PM2",
+   "decisionNote": "Đã chốt bỏ mô tả ở PM2"
+  },
+  {
+   "code": "M7",
+   "topic": "Cỡ chữ và lưới form",
+   "pm1": "Tiêu đề 24/700, tag 12px, trường rộng khoảng 400px",
+   "pm2": "Tiêu đề 18/700, tag 13/500, lưới 12 cột, ô giãn hết cột",
+   "basis": "UX-A2 · UX-A3 · UX-B1",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M8",
+   "topic": "Vị trí toast",
+   "pm1": "Góc trên phải",
+   "pm2": "Đỉnh giữa",
+   "basis": "UX-E1 · MSG-08",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Toast góc trên bên phải"
+  },
+  {
+   "code": "M9",
+   "topic": "Thời điểm báo lỗi trường",
+   "pm1": "Khi rời ô (blur)",
+   "pm2": "Khi bấm nút Lưu",
+   "basis": "UX-D2",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Ô bắt buộc báo lỗi cả khi rời ô và khi bấm Lưu"
+  },
+  {
+   "code": "M10",
+   "topic": "Lỗi hệ thống",
+   "pm1": "Hộp thoại có nút Thử lại",
+   "pm2": "Toast SE001-01",
+   "basis": "Message List",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M11",
+   "topic": "Tag Nháp",
+   "pm1": "Màu processing xanh dương",
+   "pm2": "Nền trắng viền đứt",
+   "basis": "guide status-tags",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Tag trạng thái dùng 5 mức màu PM1 (bảng gán ở mục Tag trạng thái)"
+  },
+  {
+   "code": "M12",
+   "topic": "Bảng dữ liệu",
+   "pm1": "Sắp xếp theo cột, hàng 56px, ngày căn trái DD/MM/YYYY",
+   "pm2": "Không sắp xếp theo cột, hàng 82px, ngày căn giữa",
+   "basis": "guide table",
+   "decision": "Giữ PM2",
+   "decisionNote": "Không sắp xếp theo cột; mặc định mới tạo lên đầu, cùng ngày tạo sau lên trên (đã đúng)"
+  },
+  {
+   "code": "M13",
+   "topic": "Ô ngày",
+   "pm1": "Cho gõ tay",
+   "pm2": "Chỉ chọn qua lịch",
+   "basis": "guide date",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "M14",
+   "topic": "Ô số vượt trần",
+   "pm1": "Chặn ngay lúc gõ",
+   "pm2": "Kẹp về min..max khi rời ô",
+   "basis": "AppNumberInput.jsx · QD-403 rule 29",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Chặn vượt trần ngay khi gõ như PM1 (QD-403). Dưới mức tối thiểu thì rời ô mới kẹp về. ĐỔI 14/10/2026 (QD-407 D13): bản chốt trước «Giữ PM2» dựa trên câu hướng dẫn đã lỗi thời"
+  },
+  {
+   "code": "M15",
+   "topic": "Drawer và hàng vừa tạo",
+   "pm1": "Drawer 360-560px, hàng mới nhấp nháy 600ms",
+   "pm2": "Drawer tối đa 480px, hàng mới tô #ECFDF5 trong 3 giây",
+   "basis": "UX-G4 · guide drawer",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Ngăn kéo 360–560px; hàng vừa tạo giữ PM2"
+  },
+  {
+   "code": "L1",
+   "topic": "Nhãn nút đang xử lý",
+   "pm1": "Đổi sang thể tiếp diễn «Đang lưu…»",
+   "pm2": "Giữ nguyên chữ, chỉ hiện vòng xoay",
+   "basis": "Góp ý Designer 14/10 · AppButton.jsx",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "L2",
+   "topic": "Chiều cao header",
+   "pm1": "56px",
+   "pm2": "60px (chú thích AppLayout.jsx ghi 56)",
+   "basis": "base.css .hd",
+   "decision": "Giữ PM2",
+   "decisionNote": "Giữ 60px, sửa chú thích code"
+  },
+  {
+   "code": "L3",
+   "topic": "Giới hạn ký tự ô tìm và ô tra cứu",
+   "pm1": "Mọi ô text có maxlength",
+   "pm2": "Ô tìm, ô tra cứu CCCD/SĐT chưa giới hạn",
+   "basis": "Chưa có luật PM2",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "L4",
+   "topic": "Thông báo đầu form khi còn lỗi",
+   "pm1": "Bấm Lưu còn lỗi thì hiện «Còn N trường…», nói rõ tab nào",
+   "pm2": "Chỉ chữ đỏ dưới từng ô",
+   "basis": "UX-D2",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Form Quầy: toast I001-25 nêu các phần còn lỗi"
+  },
+  {
+   "code": "L5",
+   "topic": "Viền focus bàn phím",
+   "pm1": "Viền 2px màu thương hiệu, cách 2px",
+   "pm2": "Quầng bóng mảnh như PM1 (tắt outline)",
+   "basis": "pm1-look.css ④",
+   "decision": "Theo PM1 · đã làm"
+  },
+  {
+   "code": "L6",
+   "topic": "Trường audit ở màn Chi tiết",
+   "pm1": "4 trường Người tạo, Thời gian tạo, Người cập nhật, Thời gian cập nhật cuối khối chung",
+   "pm2": "Chưa có, xem qua Lịch sử thao tác",
+   "basis": "Chưa có luật PM2",
+   "decision": "Bỏ",
+   "decisionNote": "PM2 dùng Lịch sử thao tác"
+  },
+  {
+   "code": "L7",
+   "topic": "Chiều cao khung bảng",
+   "pm1": "max-height 100% khung, không khoá theo màn hình",
+   "pm2": "Khoá theo calc(100vh − 420px)",
+   "basis": "UX-G13 · base.css .shell-body",
+   "decision": "Giữ PM2"
+  },
+  {
+   "code": "L8",
+   "topic": "Tooltip: bề rộng, độ trễ, hiện khi Tab tới",
+   "pm1": "Rộng tối đa 280px, hiện sau 400ms, hiện cả khi focus bằng bàn phím",
+   "pm2": "Rộng 400–440px (luật UX-C3 của PM2 ghi 250px), hiện ngay khi rê chuột, không hiện khi focus",
+   "basis": "UX-C3 · pm1-look.css ⑩ · legacyUi.js",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Luật đổi 400px, trễ 400ms, hiện khi Tab"
+  },
+  {
+   "code": "L9",
+   "topic": "Xuất Excel nhiều dòng",
+   "pm1": "Quá 1.000 dòng thì tách sheet, mỗi sheet lặp tiêu đề",
+   "pm2": "1 sheet duy nhất",
+   "basis": "exportExcel.js",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "Hàm chung lib/excelChunks.js"
+  },
+  {
+   "code": "L10",
+   "topic": "Bộ đếm ký tự",
+   "pm1": "Còn dưới 10% thì đổi màu cảnh báo; dán quá giới hạn thì báo «Đã cắt bớt…»",
+   "pm2": "Màu không đổi, dán quá giới hạn thì cắt im lặng",
+   "basis": "AppCounterInput.jsx",
+   "decision": "Giữ PM2",
+   "decisionNote": "Dán quá thì tự cắt tới max"
+  },
+  {
+   "code": "L11",
+   "topic": "Màu thao tác trong Lịch sử thao tác",
+   "pm1": "Xóa, Hủy, Trả lại, Thu hồi tô màu lỗi",
+   "pm2": "Chữ trơn, không tô màu",
+   "basis": "HistoryTable.jsx",
+   "decision": "Theo PM1 · đã làm"
+  },
+  {
+   "code": "L12",
+   "topic": "Khối nhãn–giá trị khi màn hẹp",
+   "pm1": "Dưới 900px nhãn nằm trên giá trị",
+   "pm2": "Luôn 2 cột, nhãn 220px",
+   "basis": "ReceptionDeskDetail.css · AppointmentDetail.css",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "WCAG 1.4.10"
+  },
+  {
+   "code": "L13",
+   "topic": "Thanh bước",
+   "pm1": "Bước xong tô đặc, bước hiện tại viền nền nhạt; bấm bước đã qua để quay lại",
+   "pm2": "Màu ngược lại, bước đã qua không bấm được",
+   "basis": "form.css · AppointmentForm.jsx · ReceptionDeskForm.jsx",
+   "decision": "Theo PM1 · đã làm"
+  },
+  {
+   "code": "L14",
+   "topic": "Bề rộng popup chọn người nhận thông báo",
+   "pm1": "Modal biểu mẫu tối đa 720px",
+   "pm2": "880px (QD-370 ⑭ «popup thao tác rộng hơn», UX-F3 chưa ghi ngoại lệ)",
+   "basis": "NotifyRecipientsField.css · QD-370",
+   "decision": "Giữ PM2",
+   "decisionNote": "Ghi ngoại lệ vào UX-F3"
+  },
+  {
+   "code": "L15",
+   "topic": "Thư viện ngày giờ",
+   "pm1": "Toàn hệ thống dùng dayjs",
+   "pm2": "Dùng Date gốc của trình duyệt (Prototype)",
+   "basis": "Ghi chú cho Dev",
+   "decision": "Giữ PM2",
+   "decisionNote": "Ghi chú cho Dev"
+  },
+  {
+   "code": "L16",
+   "topic": "Độ đậm chữ",
+   "pm1": "Chỉ 400, 500, 600, 700; cấm 300 và 800",
+   "pm2": "Tên hệ thống ở header dùng 800",
+   "basis": "base.css .hd-n1",
+   "decision": "Theo PM1 · đã làm"
+  },
+  {
+   "code": "L17",
+   "topic": "Người dùng bật giảm chuyển động",
+   "pm1": "Bỏ hiệu ứng trượt và phóng",
+   "pm2": "Chỉ spinner và skeleton tôn trọng cài đặt này",
+   "basis": "AppExtraControls.css",
+   "decision": "Theo PM1 · đã làm"
+  },
+  {
+   "code": "L18",
+   "topic": "Mã màu thô và !important",
+   "pm1": "Luôn dùng biến var(--*), không ghi đè màu antd bằng !important",
+   "pm2": "Còn khoảng 432 mã màu viết thẳng và một số !important",
+   "basis": "pages · components · layout · UX-L3",
+   "decision": "Theo PM1 · đã làm",
+   "decisionNote": "640 mã màu đổi sang biến kèm mã dự phòng, giao diện không đổi"
+  }
+ ]
+}

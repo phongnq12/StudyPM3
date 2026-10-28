@@ -1,0 +1,145 @@
+{
+ "ten": "PROC-06 Cảnh báo tồn kho và hạn sử dụng",
+ "cap": 2,
+ "pools": [
+  {
+   "id": "P",
+   "ten": "PROC-06 Cảnh báo tồn kho và hạn sử dụng",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Cán bộ căng tin"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống quản lý kho căng tin"
+    }
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "su_kien": "timer",
+   "ten": "Đến giờ quét hằng ngày",
+   "lane": "HT",
+   "cot": 0,
+   "hang": 0
+  },
+  {
+   "id": "PROC-06.01",
+   "loai": "task",
+   "kieu": "businessRule",
+   "ten": "Quét tồn dưới mức tối thiểu, lô sắp hết hạn, quá hạn, chờ giá",
+   "ghi_chu": "theo tồn tối thiểu, số ngày N của kho",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Có mục cần cảnh báo?",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Không có cảnh báo",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "PROC-06.02",
+   "loai": "task",
+   "kieu": "service",
+   "ten": "Gửi cảnh báo cho cán bộ căng tin",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "PROC-06.03",
+   "loai": "task",
+   "kieu": "user",
+   "ten": "Xem cảnh báo, chọn hướng xử lý",
+   "ghi_chu": "nhập kho, điều chuyển, đề nghị kiểm kê",
+   "lane": "CB",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Cảnh báo Đã xem",
+   "lane": "CB",
+   "cot": 6,
+   "hang": 0
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "su_kien": "conditional",
+   "ten": "Tồn kho giảm sau giao dịch",
+   "lane": "HT",
+   "cot": 0,
+   "hang": 1
+  },
+  {
+   "id": "G0",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "HT",
+   "cot": 1,
+   "hang": 0
+  }
+ ],
+ "flows": [
+  {
+   "tu": "PROC-06.01",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "PROC-06.02",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G1",
+   "den": "E2",
+   "nhan": "Không",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "PROC-06.02",
+   "den": "PROC-06.03",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "PROC-06.03",
+   "den": "E1"
+  },
+  {
+   "tu": "S1",
+   "den": "G0"
+  },
+  {
+   "tu": "S2",
+   "den": "G0",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "G0",
+   "den": "PROC-06.01"
+  }
+ ]
+}

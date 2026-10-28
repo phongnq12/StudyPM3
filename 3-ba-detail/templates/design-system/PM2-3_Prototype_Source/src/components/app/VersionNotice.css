@@ -1,0 +1,83 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Thanh báo phiên bản mới — kiểu A «pill nổi giữa đáy» (bỏ hiệu ứng mưa và nắng của PM5):
+ * ① icon động thay chữ New · ② câu thông báo in hoa · ③ Tải lại ngay dạng link, icon tải lại phía trước · ④ nút X màu trắng · ⑤ nền vẫn có logo Công an.
+ * Màu theo thanh tiêu đề site (base.css .hd): đỏ nhận diện, đỏ đậm, viền vàng. */
+@property --vn-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+
+.vn-region { flex-shrink: 0; }
+
+.vn-chip {
+  position: fixed; z-index: 2100; left: 50%; bottom: 28px; transform: translateX(-50%);
+  isolation: isolate; overflow: visible;
+  display: flex; align-items: center; gap: 12px;
+  width: max-content; max-width: calc(100% - 32px); min-height: 48px;
+  padding: 8px 10px 8px 10px; border-radius: 999px;
+  color: var(--color-surface, #FFFFFF);
+  background: linear-gradient(90deg, var(--color-danger-hover, #A8151E) 0%, var(--color-identity, #D0202B) 55%, #E0303A 100%);
+  box-shadow: 0 14px 36px rgba(168, 21, 30, .45), inset 0 1px 0 rgba(255, 255, 255, .25);
+  font-family: inherit; white-space: nowrap;
+  animation: vn-rise .35s ease-out;
+}
+/* viền vàng sáng chạy vòng quanh */
+.vn-chip::before {
+  content: ""; position: absolute; z-index: 3; inset: -2px; padding: 2px; border-radius: inherit; pointer-events: none;
+  background: conic-gradient(from var(--vn-angle), transparent 0 60%, var(--palette-xf2b233, #F2B233) 75%, #FFFFFF 82%, var(--palette-xf2b233, #F2B233) 88%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude;
+  animation: vn-orbit 3s linear infinite;
+}
+
+/* ⑤ logo Công an chìm giữa nền */
+.vn-seal { position: absolute; z-index: 0; inset: 0; display: flex; align-items: center; justify-content: center; border-radius: inherit; overflow: hidden; pointer-events: none; }
+.vn-seal img { display: block; height: 40px; width: auto; opacity: .22; filter: saturate(.6); }
+
+.vn-chip > .vn-new, .vn-chip > .vn-label, .vn-chip > .vn-action, .vn-chip > .vn-close { position: relative; z-index: 1; }
+
+/* ① huy hiệu vàng: icon động (ngôi sao lấp lánh) + chữ MỚI, có vòng sóng lan ra */
+.vn-new {
+  flex: none; display: inline-flex; align-items: center; gap: 5px;
+  height: 28px; padding: 0 11px 0 7px; border-radius: 999px;
+  background: radial-gradient(circle at 25% 30%, #FFE08A, var(--palette-xf2b233, #F2B233) 70%);
+  color: #7A2E00; font-size: 12px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase;
+  animation: vn-pulse 2s ease-out infinite;
+}
+.vn-new-icon { display: inline-flex; }
+.vn-new-icon svg { width: 16px; height: 16px; display: block; animation: vn-twinkle 1.6s ease-in-out infinite; }
+
+/* ② câu thông báo in hoa */
+.vn-label { overflow: hidden; min-width: 0; text-overflow: ellipsis; font-size: 13px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; }
+
+/* ③ Tải lại ngay dạng link, icon tải lại phía trước — trả nút antd (app-reset) về chữ trần */
+.vn-chip .vn-action.ant-btn {
+  display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 6px; margin: 0;
+  border: 0; border-radius: 6px; background: transparent; box-shadow: none; cursor: pointer;
+  color: var(--color-surface, #FFFFFF); font: inherit; font-size: 13px; font-weight: 700; letter-spacing: .4px;
+  text-decoration: underline; text-underline-offset: 3px; text-transform: uppercase;
+}
+.vn-action-icon { display: inline-flex; }
+.vn-action-icon svg { width: 15px; height: 15px; display: block; }
+.vn-chip .vn-action.ant-btn:not(:disabled):hover, .vn-chip .vn-action.ant-btn:not(:disabled):focus-visible { color: #FFEC3D; background: transparent; }
+.vn-chip .vn-action.ant-btn:hover .vn-action-icon svg { animation: vn-spin .8s linear infinite; }
+
+/* ④ nút X màu trắng */
+.vn-chip .vn-close.ant-btn {
+  display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; padding: 0; margin: 0;
+  border: 0; border-radius: 50%; background: transparent; box-shadow: none; cursor: pointer; color: var(--color-surface, #FFFFFF);
+}
+.vn-chip .vn-close.ant-btn svg { width: 16px; height: 16px; display: block; }
+.vn-chip .vn-close.ant-btn:not(:disabled):hover, .vn-chip .vn-close.ant-btn:not(:disabled):focus-visible { background: rgba(255, 255, 255, .16); color: var(--color-surface, #FFFFFF); }
+.vn-chip .vn-action.ant-btn:focus-visible, .vn-chip .vn-close.ant-btn:focus-visible { outline: 2px solid var(--color-surface, #FFFFFF); outline-offset: 2px; }
+
+@keyframes vn-rise { from { transform: translate(-50%, 24px); opacity: 0; } to { transform: translate(-50%, 0); opacity: 1; } }
+@keyframes vn-orbit { to { --vn-angle: 360deg; } }
+@keyframes vn-pulse { 0% { box-shadow: 0 0 0 0 rgba(242, 178, 51, .75); } 70% { box-shadow: 0 0 0 10px rgba(242, 178, 51, 0); } 100% { box-shadow: 0 0 0 0 rgba(242, 178, 51, 0); } }
+@keyframes vn-twinkle { 0%, 100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.22) rotate(18deg); } }
+@keyframes vn-spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 640px) {
+  .vn-chip { white-space: normal; border-radius: 16px; }
+  .vn-label { text-overflow: clip; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vn-chip, .vn-chip::before, .vn-new, .vn-new-icon svg, .vn-chip .vn-action.ant-btn:hover .vn-action-icon svg { animation: none; }
+}

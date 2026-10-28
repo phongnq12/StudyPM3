@@ -1,0 +1,34 @@
+{
+  "ten": "PROC-02 Quản lý nhà cung cấp, giá nhập và kho",
+  "cap": 2,
+  "pools": [
+    {"id": "P", "ten": "PROC-02 Quản lý nhà cung cấp, giá nhập và kho", "lanes": [
+      {"id": "CB", "ten": "Cán bộ căng tin"},
+      {"id": "HT", "ten": "Hệ thống quản lý kho căng tin"}
+    ]}
+  ],
+  "nodes": [
+    {"id": "S1", "loai": "start", "ten": "Cần cập nhật nhà cung cấp, giá nhập hoặc kho", "lane": "CB", "cot": 0, "hang": 1.5},
+    {"id": "G1", "loai": "gateway", "kieu": "xor", "ten": "Cập nhật gì?", "lane": "CB", "cot": 1, "hang": 1.5},
+    {"id": "PROC-02.01", "loai": "task", "kieu": "user", "ten": "Cập nhật hồ sơ nhà cung cấp", "ghi_chu": "thêm, sửa, ngừng hợp tác", "lane": "CB", "cot": 2, "hang": 0},
+    {"id": "PROC-02.02", "loai": "task", "kieu": "user", "ten": "Cập nhật hàng hóa theo nhà cung cấp", "lane": "CB", "cot": 2, "hang": 1},
+    {"id": "PROC-02.03", "loai": "task", "kieu": "user", "ten": "Cập nhật giá nhập theo nhà cung cấp", "lane": "CB", "cot": 2, "hang": 2},
+    {"id": "PROC-02.04", "loai": "task", "kieu": "user", "ten": "Cập nhật kho và hạn mức cảnh báo", "ghi_chu": "tồn tối thiểu theo mặt hàng, số ngày N", "lane": "CB", "cot": 2, "hang": 3},
+    {"id": "G2", "loai": "gateway", "kieu": "xor", "ten": "", "lane": "CB", "cot": 3, "hang": 1.5},
+    {"id": "PROC-02.05", "loai": "task", "kieu": "service", "ten": "Lưu lịch sử thay đổi", "lane": "HT", "cot": 4, "hang": 0},
+    {"id": "E1", "loai": "end", "ten": "Danh mục Đã cập nhật", "lane": "HT", "cot": 5, "hang": 0}
+  ],
+  "flows": [
+    {"tu": "S1", "den": "G1"},
+    {"tu": "G1", "den": "PROC-02.01", "nhan": "Nhà cung cấp", "ra": "duoi", "vao": "trai", "qua": [{"lane": "CB", "cot": 1, "hang": 0}]},
+    {"tu": "G1", "den": "PROC-02.02", "nhan": "Hàng hóa NCC", "ra": "phai", "vao": "trai", "qua": [{"lane": "CB", "cot": 1.5, "hang": 1}]},
+    {"tu": "G1", "den": "PROC-02.03", "nhan": "Giá nhập", "ra": "phai", "vao": "trai", "qua": [{"lane": "CB", "cot": 1.5, "hang": 2}]},
+    {"tu": "G1", "den": "PROC-02.04", "nhan": "Kho", "ra": "duoi", "vao": "trai", "qua": [{"lane": "CB", "cot": 1, "hang": 3}]},
+    {"tu": "PROC-02.01", "den": "G2", "ra": "phai", "vao": "tren"},
+    {"tu": "PROC-02.02", "den": "G2", "ra": "phai", "vao": [0.25, 0]},
+    {"tu": "PROC-02.03", "den": "G2", "ra": "phai", "vao": [0.25, 1]},
+    {"tu": "PROC-02.04", "den": "G2", "ra": "phai", "vao": "duoi"},
+    {"tu": "G2", "den": "PROC-02.05", "ra": "phai", "vao": "tren"},
+    {"tu": "PROC-02.05", "den": "E1"}
+  ]
+}

@@ -1,0 +1,40 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* Danh sách xổ xuống của ô chọn có tìm — nhà DUY NHẤT (dời từ styles/form.css) */
+.lookup-wrap{position:relative}
+.lookup-wrap>select{position:absolute;opacity:0;pointer-events:none;
+                width:1px;height:1px;left:0;top:0}
+.lookup-wrap .lookup-input{width:100%;cursor:pointer}
+.lookup-wrap .lookup-input[readonly]{cursor:pointer}
+.lookup-wrap .lookup-input:disabled{cursor:not-allowed}
+.lookup-list{position:fixed;z-index:900;
+        background:var(--color-surface, #FFFFFF);border:1px solid var(--color-line);border-radius:8px;
+        box-shadow:rgba(0,0,0,.09) 0 6px 16px 0, rgba(0,0,0,.05) 0 3px 6px -4px;
+        max-height:260px;overflow:auto;padding:4px;
+        display:none}
+.lookup-list.is-open{display:block}
+.lookup-item{display:block;box-sizing:border-box;min-height:36px;padding:7px 12px;border-radius:4px;   /* dòng 36px như token antd optionHeight; giữ block để chữ in đậm phần khớp không mất khoảng trắng */
+         font-size:14px;font-weight:400;color:var(--color-ink-1);
+         cursor:pointer;line-height:1.5715;
+         white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+         transition:background 120ms var(--ease-std)}
+.lookup-item:hover,.lookup-item.is-highlighted{background:rgba(0,0,0,.04)}
+.lookup-item.is-selected{background:var(--color-err-bg, #FEF2F2);color:var(--color-brand);font-weight:600}
+.lookup-item b{color:var(--color-brand);font-weight:600}
+.lookup-group{padding:7px 12px 5px;font-size:12px;font-weight:600;
+          color:var(--color-ink-3);text-transform:uppercase;
+          letter-spacing:.03em;cursor:default;user-select:none}
+.lookup-group:not(:first-child){margin-top:4px;
+          border-top:1px solid var(--color-line);padding-top:9px}
+.lookup-empty{padding:22px 13px;font-size:var(--fs-caption);
+          color:var(--color-ink-3);text-align:center}
+.lookup-list::-webkit-scrollbar{width:6px}
+.lookup-list::-webkit-scrollbar-thumb{background:var(--palette-slate-300, #CBD5E1);border-radius:3px}
+.lookup-list::-webkit-scrollbar-track{background:transparent}
+/* Khung và mũi tên của ô chọn có tìm: để cùng file control vì styles/form.css chỉ màn form nạp,
+ * thiếu ở đây thì ô chọn trên màn danh sách mất mũi tên. */
+.select-field{position:relative}
+.select-field::after{content:"";position:absolute;right:12px;top:50%;
+               width:8px;height:8px;margin-top:-5px;pointer-events:none;
+               border-right:1.5px solid var(--color-ink-3);
+               border-bottom:1.5px solid var(--color-ink-3);
+               transform:rotate(45deg)}

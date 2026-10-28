@@ -1,0 +1,65 @@
+{
+  "ten": "PROC-03 Nhập kho hàng hóa từ nhà cung cấp",
+  "cap": 2,
+  "pools": [
+    {"id": "P", "ten": "PROC-03 Nhập kho hàng hóa từ nhà cung cấp", "lanes": [
+      {"id": "CB", "ten": "Cán bộ căng tin"},
+      {"id": "TCS", "ten": "Trưởng cơ sở"},
+      {"id": "HT", "ten": "Hệ thống quản lý kho căng tin"}
+    ]},
+    {"id": "P01", "ten": "PROC-01 Quản lý danh mục hàng hóa và giá bán", "thu_gon": true, "vi_tri": "duoi", "cot": 6, "so_cot": 6}
+  ],
+  "nodes": [
+    {"id": "S1", "loai": "start", "ten": "Hàng hóa từ nhà cung cấp cần nhập kho", "lane": "CB", "cot": 0, "hang": 0},
+    {"id": "PROC-03.01", "loai": "task", "kieu": "user", "ten": "Lập hoặc sửa phiếu nhập kho", "ghi_chu": "kho, NCC, mặt hàng của NCC, lô, HSD, giá nhập", "lane": "CB", "cot": 1, "hang": 0},
+    {"id": "G0", "loai": "gateway", "kieu": "xor", "ten": "Trình phiếu?", "lane": "CB", "cot": 2, "hang": 0},
+    {"id": "E2", "loai": "end", "ten": "Phiếu nhập kho Đã hủy", "lane": "CB", "cot": 2, "hang": 1},
+    {"id": "PROC-03.02", "loai": "task", "kieu": "user", "ten": "Duyệt phiếu nhập kho", "lane": "TCS", "cot": 3, "hang": 0},
+    {"id": "G1", "loai": "gateway", "kieu": "xor", "ten": "Đồng ý?", "lane": "TCS", "cot": 4, "hang": 0},
+    {"id": "PROC-03.03", "loai": "task", "kieu": "service", "ten": "Tăng tồn kho theo lô", "lane": "HT", "cot": 5, "hang": 0},
+    {"id": "PROC-03.04", "loai": "task", "kieu": "businessRule", "ten": "So giá nhập với giá bán hiện hành", "lane": "HT", "cot": 6, "hang": 0},
+    {"id": "G2", "loai": "gateway", "kieu": "xor", "ten": "Giá bán hiện hành ≥ giá nhập?", "lane": "HT", "cot": 7, "hang": 0},
+    {"id": "PROC-03.05", "loai": "task", "kieu": "service", "ten": "Áp giá bán hiện hành cho lô, mở bán", "lane": "HT", "cot": 8, "hang": 0},
+    {"id": "PROC-03.06", "loai": "task", "kieu": "user", "ten": "Chọn có đề xuất giá bán mới cho lô", "lane": "CB", "cot": 9, "hang": 0},
+    {"id": "G3", "loai": "gateway", "kieu": "xor", "ten": "Đề xuất giá mới?", "lane": "CB", "cot": 10, "hang": 0},
+    {"id": "E1", "loai": "end", "ten": "Phiếu nhập kho Đã duyệt, lô bán giá hiện hành", "lane": "CB", "cot": 10, "hang": 1},
+    {"id": "E4", "loai": "end", "su_kien": "message", "ten": "Phiếu nhập kho Đã duyệt, lô chờ duyệt giá mới", "lane": "CB", "cot": 11, "hang": 0},
+    {"id": "PROC-03.07", "loai": "task", "kieu": "service", "ten": "Giữ lô chờ giá, cảnh báo cán bộ căng tin", "lane": "HT", "cot": 7, "hang": 1},
+    {"id": "E3", "loai": "end", "su_kien": "message", "ten": "Phiếu nhập kho Đã duyệt, lô chờ giá", "lane": "HT", "cot": 8, "hang": 1},
+
+    {"id": "S2", "loai": "start", "ten": "Phát hiện sai sót ở phiếu nhập kho đã duyệt", "lane": "TCS", "cot": 3, "hang": 2},
+    {"id": "PROC-03.08", "loai": "task", "kieu": "user", "ten": "Hủy phê duyệt phiếu nhập kho", "lane": "TCS", "cot": 4, "hang": 2},
+    {"id": "PROC-03.09", "loai": "task", "kieu": "service", "ten": "Kiểm tra tồn hiện tại đủ để đảo", "lane": "HT", "cot": 4, "hang": 2},
+    {"id": "G4", "loai": "gateway", "kieu": "xor", "ten": "Tồn mọi dòng ≥ số đã nhập?", "lane": "HT", "cot": 5, "hang": 2},
+    {"id": "PROC-03.10", "loai": "task", "kieu": "service", "ten": "Giảm tồn kho theo các lô của phiếu", "lane": "HT", "cot": 6, "hang": 2},
+    {"id": "E5", "loai": "end", "ten": "Phiếu nhập kho Đã hủy duyệt", "lane": "HT", "cot": 7, "hang": 2},
+    {"id": "E6", "loai": "end", "ten": "Hủy duyệt bị chặn, xử lý qua kiểm kê", "lane": "HT", "cot": 5, "hang": 3}
+  ],
+  "flows": [
+    {"tu": "S1", "den": "PROC-03.01"},
+    {"tu": "PROC-03.01", "den": "G0"},
+    {"tu": "G0", "den": "PROC-03.02", "nhan": "Có", "ra": "phai", "vao": "tren"},
+    {"tu": "G0", "den": "E2", "nhan": "Không, hủy phiếu", "ra": "duoi", "vao": "tren"},
+    {"tu": "PROC-03.02", "den": "G1"},
+    {"tu": "G1", "den": "PROC-03.03", "nhan": "Có", "ra": "phai", "vao": "tren"},
+    {"tu": "G1", "den": "PROC-03.01", "nhan": "Không, ghi lý do", "ra": "duoi", "vao": "duoi", "qua": [{"lane": "TCS", "cot": 4, "hang": 1}, {"lane": "TCS", "cot": 1, "hang": 1}]},
+    {"tu": "PROC-03.03", "den": "PROC-03.04"},
+    {"tu": "PROC-03.04", "den": "G2"},
+    {"tu": "G2", "den": "PROC-03.05", "nhan": "Có"},
+    {"tu": "G2", "den": "PROC-03.07", "nhan": "Không", "ra": "duoi", "vao": "tren"},
+    {"tu": "PROC-03.05", "den": "PROC-03.06", "ra": "phai", "vao": "duoi"},
+    {"tu": "PROC-03.06", "den": "G3"},
+    {"tu": "G3", "den": "E4", "nhan": "Có"},
+    {"tu": "G3", "den": "E1", "nhan": "Không", "ra": "duoi", "vao": "tren"},
+    {"tu": "PROC-03.07", "den": "E3"},
+    {"tu": "E3", "den": "P01", "loai": "message", "nhan": "Lô chờ giá bán mới"},
+    {"tu": "E4", "den": "P01", "loai": "message", "nhan": "Lô cần đề xuất giá bán mới"},
+
+    {"tu": "S2", "den": "PROC-03.08"},
+    {"tu": "PROC-03.08", "den": "PROC-03.09", "ra": "duoi", "vao": "tren"},
+    {"tu": "PROC-03.09", "den": "G4"},
+    {"tu": "G4", "den": "PROC-03.10", "nhan": "Có"},
+    {"tu": "G4", "den": "E6", "nhan": "Không", "ra": "duoi", "vao": "tren"},
+    {"tu": "PROC-03.10", "den": "E5"}
+  ]
+}

@@ -1,0 +1,39 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* CSS của 4 control bổ sung theo Design System PM1 — nạp cùng control. Màu, bo, cỡ chữ lấy từ token PM2 (tokens.css). */
+
+/* Ô chọn theo cây — cao 36, bo 8 như ô chọn có tìm */
+/* thắng luật :where(.css-…) của antd bằng độ ưu tiên selector (3 lớp), không dùng !important */
+.app-tree-select.ant-select .ant-select-selector{min-height:36px;border-radius:var(--radius-md)}
+
+/* Thẻ số liệu — lưới tự xuống dòng, thẻ tối thiểu 240px, khe 16px */
+.app-stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.app-stat{border:1px solid var(--color-line);border-radius:var(--radius-lg);background:var(--color-surface, #FFFFFF);padding:16px;min-width:0}
+.app-stat-label{font-size:var(--fs-sm);color:var(--color-ink-2)}
+.app-stat-value{font-size:28px;font-weight:700;line-height:1.2;color:var(--color-ink-1);font-variant-numeric:tabular-nums;margin-top:4px}
+.app-stat-delta{font-size:var(--fs-sm);margin-top:4px;color:var(--color-ink-2)}
+.app-stat-delta.is-up{color:var(--color-ok)}
+.app-stat-delta.is-down{color:var(--color-err)}
+
+/* Trạng thái rỗng và lỗi — căn giữa vùng dữ liệu, icon xám, chữ 14 */
+.app-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:32px 16px;text-align:center;color:var(--color-ink-2)}
+.app-empty-icon{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--color-muted);color:var(--color-ink-3)}
+.app-empty-icon svg{width:24px;height:24px}
+.app-empty.is-error .app-empty-icon{color:var(--color-err)}
+.app-empty-text{margin:0;font-size:var(--fs-body);max-width:420px}
+.app-empty-action{margin-top:4px}
+
+/* Nhập khẩu Excel — 3 bước xếp dọc, vùng thả tệp viền đứt, bảng xem trước dòng lỗi tô đỏ */
+.app-import{display:flex;flex-direction:column;gap:16px}
+.app-import-step{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:var(--fs-body);color:var(--color-ink-1)}
+.app-import-no{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--color-brand-weak);color:var(--color-brand);font-weight:700;font-size:12px;flex:none}
+.app-import-drop{flex-basis:100%;display:flex;align-items:center;justify-content:center;gap:8px;min-height:88px;border:1px dashed var(--color-line-strong);border-radius:var(--radius-md);background:var(--color-muted);color:var(--color-ink-2);cursor:pointer;position:relative}
+.app-import-drop:hover,.app-import-drop:focus-within{border-color:var(--color-brand);color:var(--color-brand)}
+.app-import-drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.app-import-drop-icon svg{width:20px;height:20px;display:block}
+.app-import-progress{flex-basis:100%;display:flex;align-items:center;gap:8px;height:8px;margin-top:4px}
+.app-import-progress span{display:block;height:8px;border-radius:999px;background:var(--color-brand);max-width:calc(100% - 48px)}
+.app-import-progress b{font-size:12px;font-weight:600;color:var(--color-ink-2)}
+.app-import-table{flex-basis:100%;overflow:auto;border:1px solid var(--color-line);border-radius:var(--radius-md)}
+.app-import-table table{width:100%;min-width:0}
+.app-import-table tr.is-error td{background:var(--color-err-bg)}
+.app-import-table tr.is-error td.app-import-err{color:var(--color-err)}

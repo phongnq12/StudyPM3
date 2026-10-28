@@ -1,0 +1,34 @@
+/* Wireframe low-fidelity — chỉ thang xám, không màu thương hiệu. Dùng cho /ba-wireframe.
+   Chép nội dung file này vào thẻ <style> của mỗi trang wireframe (không gọi mạng). */
+:root {
+  --wf-ink: #222222;
+  --wf-ink-muted: #777777;
+  --wf-line: #999999;
+  --wf-fill: #e6e6e6;
+  --wf-fill-strong: #c8c8c8;
+  --wf-paper: #ffffff;
+  --wf-font: system-ui, sans-serif;
+  --wf-gap: 12px;
+}
+body { margin: 0; font-family: var(--wf-font); color: var(--wf-ink); background: var(--wf-paper); }
+.wf-page { display: grid; grid-template-rows: auto 1fr; min-height: 100vh; }
+.wf-header { border-bottom: 2px solid var(--wf-line); padding: var(--wf-gap); display: flex; gap: var(--wf-gap); align-items: center; }
+.wf-layout { display: grid; grid-template-columns: 200px 1fr; }
+.wf-sidebar { border-right: 2px dashed var(--wf-line); padding: var(--wf-gap); }
+.wf-main { padding: var(--wf-gap); display: grid; gap: var(--wf-gap); align-content: start; }
+.wf-region { border: 2px dashed var(--wf-line); padding: var(--wf-gap); position: relative; }
+.wf-region::before { content: attr(data-label); position: absolute; top: -10px; left: 8px; background: var(--wf-paper); padding: 0 4px; font-size: 12px; color: var(--wf-ink-muted); }
+.wf-box { background: var(--wf-fill); border: 1px solid var(--wf-line); min-height: 40px; display: flex; align-items: center; justify-content: center; color: var(--wf-ink-muted); font-size: 12px; }
+.wf-text { height: 10px; background: var(--wf-fill); margin: 6px 0; }
+.wf-text.short { width: 40%; } .wf-text.medium { width: 70%; }
+.wf-field { display: grid; gap: 4px; }
+.wf-field label { font-size: 12px; }
+.wf-input { height: 32px; border: 1px solid var(--wf-line); background: var(--wf-paper); }
+.wf-button { display: inline-block; padding: 8px 16px; border: 2px solid var(--wf-ink); background: var(--wf-paper); color: var(--wf-ink); text-decoration: none; font-size: 13px; cursor: pointer; }
+.wf-button.primary { background: var(--wf-fill-strong); }
+.wf-table { width: 100%; border-collapse: collapse; }
+.wf-table th, .wf-table td { border: 1px solid var(--wf-line); padding: 6px; font-size: 12px; text-align: left; }
+.wf-table th { background: var(--wf-fill); }
+.wf-note { font-size: 11px; color: var(--wf-ink-muted); border-left: 3px solid var(--wf-line); padding-left: 6px; }
+.wf-tag { position: fixed; right: 8px; bottom: 8px; font-size: 11px; background: var(--wf-fill); padding: 4px 8px; border: 1px solid var(--wf-line); }
+@media (max-width: 720px) { .wf-layout { grid-template-columns: 1fr; } .wf-sidebar { border-right: 0; border-bottom: 2px dashed var(--wf-line); } }

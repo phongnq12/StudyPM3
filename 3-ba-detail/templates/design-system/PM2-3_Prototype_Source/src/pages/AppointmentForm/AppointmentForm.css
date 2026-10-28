@@ -1,0 +1,18 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+/* khung popup Quẹt thẻ rộng 460px như style nội tuyến của bản HTML (AppModal chưa nhận style cho .dlg) */
+#dlgQuetThe .dlg{max-width:520px}
+
+/* báo trước kết quả duyệt ở bước Đối chiếu và xác nhận */
+.approval-notice{display:flex;gap:12px;align-items:flex-start;margin-top:18px;padding:12px 16px;border-radius:var(--radius-sm);border:1px solid;border-left-width:4px}
+.approval-notice svg{flex:none;width:20px;height:20px;margin-top:1px}
+.approval-notice-title{font-weight:700;margin-bottom:2px}
+.approval-notice-text{font-size:13px;line-height:1.55;color:var(--color-ink-2)}
+.approval-notice.is-pending{background:var(--color-warn-bg);border-color:var(--color-warn-line);border-left-color:var(--color-warn);color:var(--color-warn)}
+.approval-notice.is-auto{background:var(--color-ok-bg);border-color:var(--color-ok-line);border-left-color:var(--color-ok);color:var(--color-ok)}
+
+/* checkbox «Hệ thống tự duyệt khi đã đủ điều kiện» */
+.approval-auto-check{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:14px;font-weight:500;color:var(--color-ink-1);cursor:pointer;user-select:none}
+.approval-auto-check input{width:16px;height:16px;accent-color:var(--color-brand);cursor:pointer}
+.approval-auto-check + .approval-notice{margin-top:10px}
+
+/* thẻ chọn luồng đăng ký dời sang styles/form.css (dùng chung với màn Đăng ký tại quầy) */

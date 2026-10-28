@@ -1,0 +1,14 @@
+/* Copyright © 2026 TrangNT5 — All Rights Reserved. */
+.app-counter-wrap{position:relative;display:block;width:100%}
+.app-counter-wrap>.text-input{width:100%;display:block}
+.app-counter{position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;
+  font-size:var(--fs-caption,12px);line-height:1;color:var(--color-ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.app-counter-wrap.is-multiline{display:flex;flex-direction:column;gap:4px}
+.app-counter-wrap.is-multiline .app-counter{position:static;transform:none;align-self:flex-end;line-height:1.4}
+/* hàng chân của textarea: [chữ đỏ canh trái | bộ đếm canh phải] cùng 1 hàng, ngay dưới ô 4px.
+ * !important: thắng lề và thứ tự đặt riêng cho .field-error ở form.css, #dlgHuy, base.css và lề nội tuyến của các hàm căn chữ đỏ cũ */
+.app-counter-foot{display:flex;align-items:flex-start;gap:12px;min-width:0}
+.app-counter-wrap.is-multiline>.app-counter-foot>.app-counter{margin-left:auto;flex:none;align-self:flex-start}   /* chữ đỏ dài xuống dòng ⇒ bộ đếm vẫn ở hàng đầu */
+.app-counter-foot>.field-error{flex:1 1 auto;min-width:0;width:auto!important;flex-basis:auto!important;order:0!important;
+  margin:0!important;padding:0!important;font-size:var(--fs-caption,12px)!important;line-height:1.4!important;overflow-wrap:anywhere}
+.app-counter-foot>.field-error:not(.on){display:none!important}
