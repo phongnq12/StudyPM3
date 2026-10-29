@@ -1,7 +1,7 @@
 {
  "ten": "Bản đồ quy trình dựng ngược — Quản lý kho căng tin (cấp 1)",
  "cap": 1,
- "chu_giai_them": "⊞ QT-nn: quy trình dựng ngược (ban-do-quy-trinh.md mục 1). Link event cùng chữ cái là một chỗ nối (A: nhập kho, B: điều chuyển, C: kiểm kê). Đồng bộ với phần mềm quản lý cơ sở cai nghiện là luồng dữ liệu nền của cả pool, không phải QT (ban-do-quy-trinh.md mục 4).",
+ "chu_giai_them": "⊞ QT-nn: quy trình dựng ngược (ban-do-quy-trinh.md mục 1). Link event cùng chữ cái là một chỗ nối (A: nhập kho, B: điều chuyển, C: kiểm kê, D: đề xuất giá bán). Đồng bộ với phần mềm quản lý cơ sở cai nghiện là luồng dữ liệu nền của cả pool, không phải QT (ban-do-quy-trinh.md mục 4).",
  "pools": [
   {
    "id": "P",
@@ -183,12 +183,30 @@
    "hang": 2
   },
   {
+   "id": "GM3b",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "CB",
+   "cot": 5,
+   "hang": 2
+  },
+  {
    "id": "S3",
    "loai": "start",
    "ten": "Cần bán mặt hàng mới hoặc giá bán lẻ tại địa phương thay đổi",
    "lane": "CB",
-   "cot": 5,
-   "hang": 2
+   "cot": 4,
+   "hang": 3
+  },
+  {
+   "id": "LDc",
+   "loai": "intermediate",
+   "ten": "D: Đề xuất giá bán",
+   "lane": "CB",
+   "cot": 6,
+   "hang": 2,
+   "su_kien": "link"
   },
   {
    "id": "LBc",
@@ -371,6 +389,16 @@
    "hang": 1,
    "su_kien": "link",
    "huong": "throw"
+  },
+  {
+   "id": "LD",
+   "loai": "intermediate",
+   "ten": "D: Đề xuất giá bán",
+   "lane": "HT",
+   "cot": 5,
+   "hang": 1,
+   "su_kien": "link",
+   "huong": "throw"
   }
  ],
  "flows": [
@@ -444,6 +472,18 @@
   },
   {
    "tu": "S3",
+   "den": "GM3b",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "LDc",
+   "den": "GM3b",
+   "ra": "trai",
+   "vao": "phai"
+  },
+  {
+   "tu": "GM3b",
    "den": "GM3",
    "ra": "tren",
    "vao": "duoi"
@@ -525,7 +565,10 @@
    "den": "POS",
    "loai": "message",
    "nhan": "Khóa, mở khóa bán tại kho",
-   "ra": "tren",
+   "ra": [
+    0.85,
+    0
+   ],
    "vao": [
     0,
     0.7
@@ -533,8 +576,8 @@
    "qua": [
     {
      "lane": "CB",
-     "cot": 5,
-     "hang": 3.2
+     "cot": 5.35,
+     "hang": 3.5
     }
    ]
   },
@@ -599,6 +642,25 @@
    "vao": [
     0.3,
     0
+   ]
+  },
+  {
+   "tu": "G6",
+   "den": "LD",
+   "nhan": "Lô chờ giá (ASM-008)",
+   "ra": "duoi",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 3,
+     "hang": 0.75
+    },
+    {
+     "lane": "HT",
+     "cot": 5,
+     "hang": 0.75
+    }
    ]
   },
   {

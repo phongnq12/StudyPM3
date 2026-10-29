@@ -31,3 +31,6 @@
 | 27 | /ba-overview | 1 | quality-reviewer | Review độc lập BRD (vòng 3): 2 Chặn, 12 Nặng, 14 Nhẹ | — (chỉ đọc) | 341.225 | 8 phút 58 giây | — |
 | 28 | /ba-overview | 1 | business-analyst | Sửa BRD theo review vòng 3 + RQ-102…RQ-112 | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 682.158 (cộng dồn phiên) | — | 3 |
 | 29 | /ba-overview | 1 | business-analyst | Áp RQ-113…RQ-115 | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 693.040 (cộng dồn phiên) | 1 phút 12 giây | 3 |
+| 30 | /ba-overview | 2 | business-analyst | Lớp 2 Quy trình nghiệp vụ (create-bp, ba-bpmn) | 2-ba-overview/2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md + sơ đồ; ô BRD mục 6.2, 12 | 579.293 | 27 phút 18 giây | 0 |
+| 31 | /ba-overview | 2 | quality-reviewer | Review độc lập lớp 2 (vòng 1): 0 Chặn, 13 Nặng, 16 Nhẹ | — (chỉ đọc) | — | — | — |
+| 32 | /ba-init --bo-sung | 4 | business-analyst | A5 thêm chuyển giao QT-06 → QT-03 (PH-033) | 1-ba-init/0-dau-vao/ban-do-quy-trinh/ | — | — | 0 |
