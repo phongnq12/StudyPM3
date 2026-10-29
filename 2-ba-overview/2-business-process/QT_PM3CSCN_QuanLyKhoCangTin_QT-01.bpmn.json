@@ -1,0 +1,533 @@
+{
+ "ten": "QT-01 Cập nhật nhà cung cấp và giá nhập",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v00.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-01 Cập nhật nhà cung cấp và giá nhập",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Người phụ trách căng tin"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống"
+    }
+   ]
+  },
+  {
+   "id": "Q03",
+   "ten": "QT-03 Đề xuất và duyệt giá bán",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 11.1,
+   "so_cot": 1.8
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Cần cập nhật nhà cung cấp, hàng hóa theo nhà cung cấp hoặc giá nhập",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 2
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Cập nhật gì?",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 2
+  },
+  {
+   "id": "QT01-B1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B1",
+   "ten": "Cập nhật hồ sơ nhà cung cấp",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "QT01-B2",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B2",
+   "ten": "Cập nhật danh mục hàng hóa cung ứng của nhà cung cấp",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "QT01-B3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B3",
+   "ten": "Khai đợt giá nhập",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 2
+  },
+  {
+   "id": "QT01-B4",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B4",
+   "ten": "Sửa dòng giá nhập",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 3
+  },
+  {
+   "id": "QT01-B5",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B5",
+   "ten": "Xóa dòng giá nhập, ghi lý do",
+   "lane": "CB",
+   "cot": 2,
+   "hang": 4
+  },
+  {
+   "id": "QT01-B6",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B6",
+   "ten": "Kiểm điều kiện dòng giá nhập",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đạt điều kiện?",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "E0",
+   "loai": "end",
+   "ten": "Chặn — dòng giá nhập không lưu được",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 2
+  },
+  {
+   "id": "GM",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "HT",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "QT01-B7",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B7",
+   "ten": "Ghi lịch sử thay đổi",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 0
+  },
+  {
+   "id": "G3",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Nội dung thay đổi?",
+   "lane": "HT",
+   "cot": 7,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Hồ sơ nhà cung cấp, danh mục hàng hóa cung ứng Đã cập nhật",
+   "lane": "HT",
+   "cot": 7,
+   "hang": 1.1
+  },
+  {
+   "id": "QT01-B8",
+   "loai": "task",
+   "kieu": "businessRule",
+   "ma": "B8",
+   "ten": "So giá nhập mới với giá bán hiện hành",
+   "lane": "HT",
+   "cot": 8,
+   "hang": 0
+  },
+  {
+   "id": "G4",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Vượt giá bán hiện hành hoặc chưa có giá bán?",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "QT01-B9",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B9",
+   "ten": "Quyết định có lập đề xuất giá bán, ghi lý do",
+   "lane": "CB",
+   "cot": 10,
+   "hang": 3
+  },
+  {
+   "id": "G5",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Lập đề xuất giá bán?",
+   "lane": "CB",
+   "cot": 11,
+   "hang": 3
+  },
+  {
+   "id": "QT01-B10",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B10",
+   "ten": "Lập đề xuất giá bán ở trạng thái Nháp",
+   "lane": "HT",
+   "cot": 11,
+   "hang": 1
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Đề xuất giá bán Nháp chuyển QT-03",
+   "lane": "HT",
+   "cot": 12,
+   "hang": 1,
+   "su_kien": "message"
+  },
+  {
+   "id": "QT01-B11",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B11",
+   "ten": "Xóa đề xuất giá bán Nháp đang gắn dòng",
+   "lane": "HT",
+   "cot": 10,
+   "hang": 2.2
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Giá nhập Đã cập nhật, không có đề xuất giá bán mới",
+   "lane": "HT",
+   "cot": 11,
+   "hang": 2.2
+  },
+  {
+   "id": "QT01-B12",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B12",
+   "ten": "Áp dụng lại dòng giá nhập bị dòng xóa thay thế",
+   "lane": "HT",
+   "cot": 8.5,
+   "hang": 2.2
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S1",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "QT01-B1",
+   "nhan": "Nhà cung cấp",
+   "ra": "tren",
+   "vao": "trai"
+  },
+  {
+   "tu": "G1",
+   "den": "QT01-B2",
+   "nhan": "Hàng hóa cung ứng",
+   "ra": [
+    0.75,
+    0.25
+   ],
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 1.5,
+     "hang": 1
+    }
+   ]
+  },
+  {
+   "tu": "G1",
+   "den": "QT01-B3",
+   "nhan": "Đợt giá nhập mới"
+  },
+  {
+   "tu": "G1",
+   "den": "QT01-B4",
+   "nhan": "Sửa dòng",
+   "ra": [
+    0.75,
+    0.75
+   ],
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 1.5,
+     "hang": 3
+    }
+   ]
+  },
+  {
+   "tu": "G1",
+   "den": "QT01-B5",
+   "nhan": "Xóa dòng",
+   "ra": "duoi",
+   "vao": "trai"
+  },
+  {
+   "tu": "QT01-B4",
+   "den": "QT01-B6",
+   "ra": "phai",
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 2.55,
+     "hang": 3
+    },
+    {
+     "lane": "HT",
+     "cot": 2.55,
+     "hang": 1
+    }
+   ]
+  },
+  {
+   "tu": "QT01-B5",
+   "den": "QT01-B6",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT01-B6",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "E0",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G2",
+   "den": "GM",
+   "nhan": "Có",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "QT01-B1",
+   "den": "GM",
+   "ra": "phai",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 5,
+     "hang": 0
+    }
+   ]
+  },
+  {
+   "tu": "QT01-B2",
+   "den": "GM",
+   "ra": "phai",
+   "vao": [
+    0.25,
+    0.25
+   ],
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 4.6,
+     "hang": 1
+    },
+    {
+     "lane": "HT",
+     "cot": 4.6,
+     "hang": -0.1
+    }
+   ]
+  },
+  {
+   "tu": "QT01-B3",
+   "den": "QT01-B6",
+   "ra": "phai",
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 2.55,
+     "hang": 2
+    },
+    {
+     "lane": "HT",
+     "cot": 2.55,
+     "hang": 1
+    }
+   ]
+  },
+  {
+   "tu": "GM",
+   "den": "QT01-B7"
+  },
+  {
+   "tu": "QT01-B7",
+   "den": "G3"
+  },
+  {
+   "tu": "G3",
+   "den": "E1",
+   "nhan": "Hồ sơ, hàng hóa cung ứng",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G3",
+   "den": "QT01-B8",
+   "nhan": "Giá nhập mới"
+  },
+  {
+   "tu": "G3",
+   "den": "QT01-B12",
+   "nhan": "Xóa dòng",
+   "ra": [
+    0.75,
+    0.75
+   ],
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 7.5,
+     "hang": 2.2
+    }
+   ]
+  },
+  {
+   "tu": "QT01-B8",
+   "den": "G4"
+  },
+  {
+   "tu": "G4",
+   "den": "QT01-B10",
+   "nhan": "Có",
+   "ra": "phai",
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 10.4,
+     "hang": 0
+    },
+    {
+     "lane": "HT",
+     "cot": 10.4,
+     "hang": 1
+    }
+   ]
+  },
+  {
+   "tu": "G4",
+   "den": "QT01-B9",
+   "nhan": "Không vượt",
+   "ra": [
+    0.75,
+    0.25
+   ],
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 9.5,
+     "hang": -0.5
+    },
+    {
+     "lane": "CB",
+     "cot": 9.5,
+     "hang": 3
+    }
+   ]
+  },
+  {
+   "tu": "QT01-B9",
+   "den": "G5"
+  },
+  {
+   "tu": "G5",
+   "den": "QT01-B10",
+   "nhan": "Tạo đề xuất",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "G5",
+   "den": "QT01-B11",
+   "nhan": "Không tạo",
+   "ra": "phai",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 11.8,
+     "hang": 3
+    },
+    {
+     "lane": "CB",
+     "cot": 11.8,
+     "hang": 4.4
+    },
+    {
+     "lane": "CB",
+     "cot": 9,
+     "hang": 4.4
+    }
+   ]
+  },
+  {
+   "tu": "QT01-B10",
+   "den": "E3"
+  },
+  {
+   "tu": "QT01-B11",
+   "den": "E2"
+  },
+  {
+   "tu": "E3",
+   "den": "Q03",
+   "nhan": "Đề xuất giá bán Nháp (RQ-52)",
+   "loai": "message",
+   "ra": "duoi"
+  },
+  {
+   "tu": "QT01-B12",
+   "den": "QT01-B11"
+  }
+ ]
+}

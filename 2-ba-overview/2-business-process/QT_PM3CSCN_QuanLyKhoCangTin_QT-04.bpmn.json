@@ -1,0 +1,580 @@
+{
+ "ten": "QT-04 Điều chuyển hàng hóa giữa các kho",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v00.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-04 Điều chuyển hàng hóa giữa các kho",
+   "lanes": [
+    {
+     "id": "CBX",
+     "ten": "Người phụ trách căng tin (kho xuất)"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "CBN",
+     "ten": "Người phụ trách căng tin (kho nhận)"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống"
+    }
+   ]
+  },
+  {
+   "id": "Q06",
+   "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 0,
+   "so_cot": 1.8
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Kho cần điều chuyển hàng hóa",
+   "lane": "CBX",
+   "cot": 0,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "QT04-B1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B1",
+   "ten": "Lập hoặc sửa phiếu điều chuyển",
+   "lane": "CBX",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B2",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B2",
+   "ten": "Kiểm điều kiện lập phiếu điều chuyển",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đủ điều kiện?",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "E0",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển không lập được",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "QT04-B3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B3",
+   "ten": "Trình hoặc hủy phiếu điều chuyển",
+   "lane": "CBX",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trình hay hủy?",
+   "lane": "CBX",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển Đã hủy",
+   "lane": "CBX",
+   "cot": 6.6,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B4",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B4",
+   "ten": "Kiểm kho xuất, kho nhận không đang kiểm kê khi trình",
+   "lane": "HT",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "G7",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Kho đang kiểm kê?",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 0
+  },
+  {
+   "id": "E7",
+   "loai": "end",
+   "ten": "Chặn — phiếu chưa trình được",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 1
+  },
+  {
+   "id": "QT04-B5",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B5",
+   "ten": "Duyệt hoặc từ chối phiếu điều chuyển",
+   "lane": "TCS",
+   "cot": 7,
+   "hang": 0
+  },
+  {
+   "id": "G3",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Quyết định?",
+   "lane": "TCS",
+   "cot": 8,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B6",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B6",
+   "ten": "Kiểm điều kiện duyệt phiếu điều chuyển",
+   "lane": "HT",
+   "cot": 8,
+   "hang": 0
+  },
+  {
+   "id": "G6",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đủ điều kiện duyệt?",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "E6",
+   "loai": "end",
+   "ten": "Chặn — phiếu giữ Chờ duyệt",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 1
+  },
+  {
+   "id": "QT04-B7",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B7",
+   "ten": "Trừ tồn kho xuất, ghi hàng đang chuyển",
+   "lane": "HT",
+   "cot": 10,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B8",
+   "loai": "task",
+   "kieu": "manual",
+   "ma": "B8",
+   "ten": "Kiểm tra hàng thực nhận",
+   "lane": "CBN",
+   "cot": 11,
+   "hang": 0,
+   "ghi_chu": "🟡 ngoài phạm vi hệ thống",
+   "vang": true
+  },
+  {
+   "id": "QT04-B9",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B9",
+   "ten": "Xác nhận số lượng thực nhận",
+   "lane": "CBN",
+   "cot": 12,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B10",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B10",
+   "ten": "Cộng tồn kho nhận theo số thực nhận",
+   "lane": "HT",
+   "cot": 13,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B11",
+   "loai": "task",
+   "kieu": "businessRule",
+   "ma": "B11",
+   "ten": "So số thực nhận với số xuất",
+   "lane": "HT",
+   "cot": 14,
+   "hang": 0
+  },
+  {
+   "id": "G4",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Thực nhận đủ số xuất?",
+   "lane": "HT",
+   "cot": 15,
+   "hang": 0
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển Hoàn thành",
+   "lane": "HT",
+   "cot": 16,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B12",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B12",
+   "ten": "Ghi nhận chênh lệch điều chuyển",
+   "lane": "CBX",
+   "cot": 16,
+   "hang": 0
+  },
+  {
+   "id": "QT04-B13",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B13",
+   "ten": "Cộng trả chênh lệch về tồn kho xuất",
+   "lane": "HT",
+   "cot": 16,
+   "hang": 1
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển Hoàn thành có chênh lệch",
+   "lane": "HT",
+   "cot": 17,
+   "hang": 1
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Cần hủy phiếu điều chuyển đã duyệt",
+   "lane": "TCS",
+   "cot": 0,
+   "hang": 1
+  },
+  {
+   "id": "QT04-B14",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B14",
+   "ten": "Hủy phê duyệt phiếu điều chuyển",
+   "lane": "TCS",
+   "cot": 1,
+   "hang": 1
+  },
+  {
+   "id": "QT04-B15",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B15",
+   "ten": "Kiểm điều kiện hủy phê duyệt",
+   "lane": "HT",
+   "cot": 1,
+   "hang": 2
+  },
+  {
+   "id": "G5",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đủ điều kiện hủy phê duyệt?",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 2
+  },
+  {
+   "id": "QT04-B16",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B16",
+   "ten": "Cộng trả tồn kho xuất, bỏ hàng đang chuyển",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 2
+  },
+  {
+   "id": "E4",
+   "loai": "end",
+   "ten": "Phiếu điều chuyển Đã hủy duyệt",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 2
+  },
+  {
+   "id": "E5",
+   "loai": "end",
+   "ten": "Hủy phê duyệt bị chặn",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 3
+  }
+ ],
+ "flows": [
+  {
+   "tu": "Q06",
+   "den": "S1",
+   "nhan": "Chọn điều chuyển (ASM-008)",
+   "loai": "message"
+  },
+  {
+   "tu": "S1",
+   "den": "QT04-B1"
+  },
+  {
+   "tu": "QT04-B1",
+   "den": "QT04-B2",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT04-B2",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "E0",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G1",
+   "den": "QT04-B3",
+   "nhan": "Có",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "QT04-B3",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "E1",
+   "nhan": "Hủy"
+  },
+  {
+   "tu": "G2",
+   "den": "QT04-B4",
+   "nhan": "Trình",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT04-B4",
+   "den": "G7"
+  },
+  {
+   "tu": "G7",
+   "den": "E7",
+   "nhan": "Có",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G7",
+   "den": "QT04-B5",
+   "nhan": "Không",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "QT04-B5",
+   "den": "G3"
+  },
+  {
+   "tu": "G3",
+   "den": "QT04-B1",
+   "nhan": "Từ chối, có lý do",
+   "ra": "tren",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "CBX",
+     "cot": 8,
+     "hang": -0.45
+    },
+    {
+     "lane": "CBX",
+     "cot": 1,
+     "hang": -0.45
+    }
+   ]
+  },
+  {
+   "tu": "G3",
+   "den": "QT04-B6",
+   "nhan": "Duyệt",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT04-B6",
+   "den": "G6"
+  },
+  {
+   "tu": "G6",
+   "den": "E6",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G6",
+   "den": "QT04-B7",
+   "nhan": "Có"
+  },
+  {
+   "tu": "QT04-B7",
+   "den": "QT04-B8",
+   "nhan": "hàng vận chuyển tới kho nhận",
+   "ra": "tren",
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "CBN",
+     "cot": 10,
+     "hang": 0
+    }
+   ]
+  },
+  {
+   "tu": "QT04-B8",
+   "den": "QT04-B9"
+  },
+  {
+   "tu": "QT04-B9",
+   "den": "QT04-B10",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT04-B10",
+   "den": "QT04-B11"
+  },
+  {
+   "tu": "QT04-B11",
+   "den": "G4"
+  },
+  {
+   "tu": "G4",
+   "den": "E2",
+   "nhan": "Đủ"
+  },
+  {
+   "tu": "G4",
+   "den": "QT04-B12",
+   "nhan": "Thiếu",
+   "ra": "duoi",
+   "vao": "duoi",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 15,
+     "hang": 0.55
+    },
+    {
+     "lane": "HT",
+     "cot": 15.5,
+     "hang": 0.55
+    },
+    {
+     "lane": "CBX",
+     "cot": 15.5,
+     "hang": 0.55
+    },
+    {
+     "lane": "CBX",
+     "cot": 16,
+     "hang": 0.55
+    }
+   ]
+  },
+  {
+   "tu": "QT04-B12",
+   "den": "QT04-B13",
+   "ra": "phai",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "CBX",
+     "cot": 16.6,
+     "hang": 0
+    },
+    {
+     "lane": "HT",
+     "cot": 16.6,
+     "hang": 0.7
+    },
+    {
+     "lane": "HT",
+     "cot": 16,
+     "hang": 0.7
+    }
+   ]
+  },
+  {
+   "tu": "QT04-B13",
+   "den": "E3"
+  },
+  {
+   "tu": "S2",
+   "den": "QT04-B14"
+  },
+  {
+   "tu": "QT04-B14",
+   "den": "QT04-B15",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT04-B15",
+   "den": "G5"
+  },
+  {
+   "tu": "G5",
+   "den": "QT04-B16",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G5",
+   "den": "E5",
+   "nhan": "Không (đã xác nhận hoặc kho đang kiểm kê)",
+   "ra": "duoi"
+  },
+  {
+   "tu": "QT04-B16",
+   "den": "E4"
+  }
+ ]
+}

@@ -1,0 +1,353 @@
+{
+ "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v00.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước. Hạn mức cảnh báo (UC 09.04.03) là đầu vào, không vẽ thành bước.",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Người phụ trách căng tin"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống"
+    }
+   ]
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 0.2,
+   "so_cot": 1.6
+  },
+  {
+   "id": "Q02",
+   "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 6.9,
+   "so_cot": 1.6
+  },
+  {
+   "id": "Q04",
+   "ten": "QT-04 Điều chuyển hàng hóa giữa các kho",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 8.7,
+   "so_cot": 1.6
+  },
+  {
+   "id": "Q03",
+   "ten": "QT-03 Đề xuất và duyệt giá bán",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 10.5,
+   "so_cot": 1.6
+  },
+  {
+   "id": "Q05",
+   "ten": "QT-05 Kiểm kê tồn kho",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 12.299999999999999,
+   "so_cot": 1.6
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Đến giờ quét hằng ngày (CH-03)",
+   "lane": "HT",
+   "cot": 0,
+   "hang": 0,
+   "su_kien": "timer"
+  },
+  {
+   "id": "QT06-B1",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B1",
+   "ten": "Quét lô sắp hết hạn, quá hạn, chờ giá",
+   "lane": "HT",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "S3",
+   "loai": "start",
+   "ten": "Tồn kho theo lô giảm sau giao dịch",
+   "lane": "HT",
+   "cot": 0,
+   "hang": 1.1,
+   "su_kien": "conditional"
+  },
+  {
+   "id": "QT06-B2",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B2",
+   "ten": "Kiểm tồn so với tồn tối thiểu",
+   "lane": "HT",
+   "cot": 1,
+   "hang": 1.1
+  },
+  {
+   "id": "GM",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Có mục cần cảnh báo?",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Không có cảnh báo",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 1.1
+  },
+  {
+   "id": "QT06-B3",
+   "loai": "task",
+   "kieu": "send",
+   "ma": "B3",
+   "ten": "Gửi cảnh báo cho người phụ trách căng tin phụ trách kho",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "QT06-B4",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B4",
+   "ten": "Xem cảnh báo, chọn hướng xử lý",
+   "lane": "CB",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Hướng xử lý?",
+   "lane": "CB",
+   "cot": 6.2,
+   "hang": 1
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Cảnh báo Đã đóng — nhập kho",
+   "lane": "CB",
+   "cot": 7.7,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "E4",
+   "loai": "end",
+   "ten": "Cảnh báo Đã đóng — điều chuyển",
+   "lane": "CB",
+   "cot": 7.7,
+   "hang": 1,
+   "su_kien": "message"
+  },
+  {
+   "id": "E5",
+   "loai": "end",
+   "ten": "Cảnh báo Đã đóng — lập đề xuất giá bán",
+   "lane": "CB",
+   "cot": 7.7,
+   "hang": 2,
+   "su_kien": "message"
+  },
+  {
+   "id": "QT06-B6",
+   "loai": "task",
+   "kieu": "manual",
+   "ma": "B6",
+   "ten": "Đề nghị Trưởng cơ sở kiểm kê",
+   "lane": "CB",
+   "cot": 8.9,
+   "hang": 3,
+   "ghi_chu": "🟡 ngoài phạm vi hệ thống",
+   "vang": true
+  },
+  {
+   "id": "E6",
+   "loai": "end",
+   "ten": "Cảnh báo Đã đóng — đề nghị kiểm kê",
+   "lane": "CB",
+   "cot": 10.0,
+   "hang": 3,
+   "su_kien": "message"
+  },
+  {
+   "id": "QT06-B5",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B5",
+   "ten": "Xác nhận cảnh báo",
+   "lane": "CB",
+   "cot": 5.1,
+   "hang": 1
+  }
+ ],
+ "flows": [
+  {
+   "tu": "S2",
+   "den": "QT06-B1"
+  },
+  {
+   "tu": "QT06-B1",
+   "den": "GM"
+  },
+  {
+   "tu": "POS",
+   "den": "S3",
+   "nhan": "Trừ tồn theo lô khi bán (RQ-86)",
+   "loai": "message",
+   "ra": "tren",
+   "vao": "duoi"
+  },
+  {
+   "tu": "S3",
+   "den": "QT06-B2"
+  },
+  {
+   "tu": "QT06-B2",
+   "den": "GM",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "GM",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "E2",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G1",
+   "den": "QT06-B3",
+   "nhan": "Có"
+  },
+  {
+   "tu": "QT06-B3",
+   "den": "QT06-B4",
+   "nhan": "cảnh báo",
+   "ra": "tren",
+   "vao": "duoi"
+  },
+  {
+   "tu": "QT06-B4",
+   "den": "QT06-B5"
+  },
+  {
+   "tu": "QT06-B5",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "E3",
+   "nhan": "Nhập kho",
+   "ra": [
+    0.75,
+    0.25
+   ],
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 6.8,
+     "hang": 0
+    }
+   ]
+  },
+  {
+   "tu": "G2",
+   "den": "E4",
+   "nhan": "Điều chuyển"
+  },
+  {
+   "tu": "G2",
+   "den": "E5",
+   "nhan": "Lập đề xuất giá bán (lô chờ giá)",
+   "ra": [
+    0.75,
+    0.75
+   ],
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 6.8,
+     "hang": 2
+    }
+   ]
+  },
+  {
+   "tu": "G2",
+   "den": "QT06-B6",
+   "nhan": "Đề nghị kiểm kê",
+   "ra": "duoi",
+   "vao": "trai"
+  },
+  {
+   "tu": "QT06-B6",
+   "den": "E6"
+  },
+  {
+   "tu": "E3",
+   "den": "Q02",
+   "nhan": "Chọn nhập kho (ASM-008)",
+   "loai": "message",
+   "ra": "tren"
+  },
+  {
+   "tu": "E4",
+   "den": "Q04",
+   "nhan": "Chọn điều chuyển (ASM-008)",
+   "loai": "message",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "E5",
+   "den": "Q03",
+   "nhan": "Lô chờ giá cần đề xuất (BRQ-31, PH-033)",
+   "loai": "message",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "E6",
+   "den": "Q05",
+   "nhan": "Đề nghị kiểm kê (ASM-008)",
+   "loai": "message",
+   "ra": "phai",
+   "vao": "duoi"
+  }
+ ]
+}

@@ -1,0 +1,729 @@
+{
+ "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v00.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Người phụ trách căng tin"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống"
+    }
+   ]
+  },
+  {
+   "id": "NCC",
+   "ten": "Nhà cung cấp",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 0.1,
+   "so_cot": 1.2
+  },
+  {
+   "id": "Q06",
+   "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 1.6,
+   "so_cot": 1.8
+  },
+  {
+   "id": "KT",
+   "ten": "Bộ phận kế toán",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 4.9,
+   "so_cot": 1.4
+  },
+  {
+   "id": "Q05",
+   "ten": "QT-05 Kiểm kê tồn kho",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 2.2,
+   "so_cot": 1.6
+  },
+  {
+   "id": "Q03",
+   "ten": "QT-03 Đề xuất và duyệt giá bán",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 13.6,
+   "so_cot": 1.8
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Hàng hóa từ nhà cung cấp cần nhập kho",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "QT02-B1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B1",
+   "ten": "Lập hoặc sửa phiếu nhập kho",
+   "lane": "CB",
+   "cot": 1,
+   "hang": 0
+  },
+  {
+   "id": "QT02-B2",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B2",
+   "ten": "Kiểm điều kiện lập phiếu nhập kho",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đủ điều kiện?",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "E0",
+   "loai": "end",
+   "ten": "Phiếu nhập kho không lập được",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "GA",
+   "loai": "gateway",
+   "kieu": "and",
+   "ten": "",
+   "lane": "CB",
+   "cot": 3.6,
+   "hang": 0.5
+  },
+  {
+   "id": "QT02-B3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B3",
+   "ten": "In phiếu nhập kho",
+   "lane": "CB",
+   "cot": 4.6,
+   "hang": 0
+  },
+  {
+   "id": "QT02-B4",
+   "loai": "task",
+   "kieu": "manual",
+   "ma": "B4",
+   "ten": "Chuyển bản in phiếu nhập kho cho kế toán",
+   "lane": "CB",
+   "cot": 5.6,
+   "hang": 0,
+   "ghi_chu": "🟡 ngoài phạm vi hệ thống",
+   "vang": true
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Bản in phiếu nhập kho đã chuyển kế toán",
+   "lane": "CB",
+   "cot": 7.2,
+   "hang": 0
+  },
+  {
+   "id": "QT02-B5",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B5",
+   "ten": "Trình hoặc hủy phiếu nhập kho",
+   "lane": "CB",
+   "cot": 4.6,
+   "hang": 1
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trình hay hủy?",
+   "lane": "CB",
+   "cot": 5.6,
+   "hang": 1
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã hủy",
+   "lane": "CB",
+   "cot": 7.2,
+   "hang": 1
+  },
+  {
+   "id": "QT02-B6",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B6",
+   "ten": "Kiểm kho nhập không đang kiểm kê khi trình",
+   "lane": "HT",
+   "cot": 5.6,
+   "hang": 0
+  },
+  {
+   "id": "G8",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Kho đang kiểm kê?",
+   "lane": "HT",
+   "cot": 6.6,
+   "hang": 0
+  },
+  {
+   "id": "E10",
+   "loai": "end",
+   "ten": "Chặn — phiếu chưa trình được",
+   "lane": "HT",
+   "cot": 6.6,
+   "hang": 1
+  },
+  {
+   "id": "QT02-B7",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B7",
+   "ten": "Duyệt hoặc từ chối phiếu nhập kho",
+   "lane": "TCS",
+   "cot": 7.6,
+   "hang": 0
+  },
+  {
+   "id": "G3",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Quyết định?",
+   "lane": "TCS",
+   "cot": 8.6,
+   "hang": 0
+  },
+  {
+   "id": "QT02-B8",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B8",
+   "ten": "Kiểm kho nhập không đang kiểm kê khi duyệt",
+   "lane": "HT",
+   "cot": 8.6,
+   "hang": 0
+  },
+  {
+   "id": "G7",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Kho đang kiểm kê?",
+   "lane": "HT",
+   "cot": 9.6,
+   "hang": 0
+  },
+  {
+   "id": "E8",
+   "loai": "end",
+   "ten": "Chặn — phiếu giữ Chờ duyệt",
+   "lane": "HT",
+   "cot": 9.6,
+   "hang": 1
+  },
+  {
+   "id": "QT02-B9",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B9",
+   "ten": "Tăng tồn kho theo lô",
+   "lane": "HT",
+   "cot": 10.6,
+   "hang": 0
+  },
+  {
+   "id": "QT02-B10",
+   "loai": "task",
+   "kieu": "businessRule",
+   "ma": "B10",
+   "ten": "So giá nhập của lô với giá bán hiện hành",
+   "lane": "HT",
+   "cot": 11.6,
+   "hang": 0,
+   "ghi_chu": "từng lô của phiếu"
+  },
+  {
+   "id": "G4",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Có giá bán hiện hành ≥ giá nhập?",
+   "lane": "HT",
+   "cot": 12.6,
+   "hang": 0
+  },
+  {
+   "id": "QT02-B11",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B11",
+   "ten": "Áp giá bán hiện hành cho lô",
+   "lane": "HT",
+   "cot": 13.6,
+   "hang": 0
+  },
+  {
+   "id": "QT02-B12",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B12",
+   "ten": "Chọn có đề xuất giá bán mới cho lô",
+   "lane": "CB",
+   "cot": 13.6,
+   "hang": 1
+  },
+  {
+   "id": "G5",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đề xuất giá mới?",
+   "lane": "CB",
+   "cot": 14.6,
+   "hang": 1
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã duyệt, lô bán giá hiện hành",
+   "lane": "CB",
+   "cot": 15.6,
+   "hang": 1
+  },
+  {
+   "id": "QT02-B13",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B13",
+   "ten": "Lập đề xuất giá bán Nháp gắn lô",
+   "lane": "HT",
+   "cot": 15.6,
+   "hang": 0
+  },
+  {
+   "id": "E4",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã duyệt, lô cần giá bán mới",
+   "lane": "HT",
+   "cot": 16.6,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "QT02-B14",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B14",
+   "ten": "Giữ lô chờ giá",
+   "lane": "HT",
+   "cot": 13.6,
+   "hang": 1.3
+  },
+  {
+   "id": "QT02-B15",
+   "loai": "task",
+   "kieu": "send",
+   "ma": "B15",
+   "ten": "Gửi cảnh báo lô chờ giá cho người phụ trách căng tin",
+   "lane": "HT",
+   "cot": 14.6,
+   "hang": 1.3
+  },
+  {
+   "id": "E5",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã duyệt, lô chờ giá",
+   "lane": "HT",
+   "cot": 15.6,
+   "hang": 1.3,
+   "su_kien": "message"
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Phát hiện sai sót ở phiếu nhập kho đã duyệt",
+   "lane": "TCS",
+   "cot": 0,
+   "hang": 1
+  },
+  {
+   "id": "QT02-B16",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B16",
+   "ten": "Hủy phê duyệt phiếu nhập kho",
+   "lane": "TCS",
+   "cot": 1,
+   "hang": 1
+  },
+  {
+   "id": "QT02-B17",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B17",
+   "ten": "Kiểm điều kiện hủy phê duyệt",
+   "lane": "HT",
+   "cot": 1,
+   "hang": 2
+  },
+  {
+   "id": "G6",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đủ điều kiện hủy phê duyệt?",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 2
+  },
+  {
+   "id": "QT02-B18",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B18",
+   "ten": "Giảm tồn kho theo các lô của phiếu",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 2
+  },
+  {
+   "id": "E6",
+   "loai": "end",
+   "ten": "Phiếu nhập kho Đã hủy duyệt",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 2
+  },
+  {
+   "id": "E7",
+   "loai": "end",
+   "ten": "Hủy phê duyệt bị chặn, xử lý qua kiểm kê",
+   "lane": "HT",
+   "cot": 2.6,
+   "hang": 3,
+   "su_kien": "message"
+  },
+  {
+   "id": "E9",
+   "loai": "end",
+   "ten": "Chặn — kho đang kiểm kê",
+   "lane": "HT",
+   "cot": 1.4,
+   "hang": 3
+  }
+ ],
+ "flows": [
+  {
+   "tu": "NCC",
+   "den": "S1",
+   "nhan": "Hàng hóa giao",
+   "loai": "message"
+  },
+  {
+   "tu": "Q06",
+   "den": "S1",
+   "nhan": "Chọn nhập kho (ASM-008)",
+   "loai": "message",
+   "vao": [
+    0.85,
+    0.15
+   ]
+  },
+  {
+   "tu": "S1",
+   "den": "QT02-B1"
+  },
+  {
+   "tu": "QT02-B1",
+   "den": "QT02-B2",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT02-B2",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "E0",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G1",
+   "den": "GA",
+   "nhan": "Có",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "GA",
+   "den": "QT02-B3",
+   "ra": "tren",
+   "vao": "trai"
+  },
+  {
+   "tu": "GA",
+   "den": "QT02-B5",
+   "ra": "duoi",
+   "vao": "trai"
+  },
+  {
+   "tu": "QT02-B3",
+   "den": "QT02-B4"
+  },
+  {
+   "tu": "QT02-B4",
+   "den": "E1"
+  },
+  {
+   "tu": "QT02-B4",
+   "den": "KT",
+   "nhan": "Bản in phiếu nhập kho",
+   "loai": "message",
+   "ra": "tren"
+  },
+  {
+   "tu": "QT02-B5",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "E2",
+   "nhan": "Hủy"
+  },
+  {
+   "tu": "G2",
+   "den": "QT02-B6",
+   "nhan": "Trình",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT02-B6",
+   "den": "G8"
+  },
+  {
+   "tu": "G8",
+   "den": "E10",
+   "nhan": "Có",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G8",
+   "den": "QT02-B7",
+   "nhan": "Không",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "QT02-B7",
+   "den": "G3"
+  },
+  {
+   "tu": "G3",
+   "den": "QT02-B1",
+   "nhan": "Từ chối, có lý do",
+   "ra": "tren",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 8.6,
+     "hang": -0.45
+    },
+    {
+     "lane": "CB",
+     "cot": 1,
+     "hang": -0.45
+    }
+   ]
+  },
+  {
+   "tu": "G3",
+   "den": "QT02-B8",
+   "nhan": "Duyệt",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT02-B8",
+   "den": "G7"
+  },
+  {
+   "tu": "G7",
+   "den": "E8",
+   "nhan": "Có",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G7",
+   "den": "QT02-B9",
+   "nhan": "Không"
+  },
+  {
+   "tu": "QT02-B9",
+   "den": "QT02-B10"
+  },
+  {
+   "tu": "QT02-B10",
+   "den": "G4"
+  },
+  {
+   "tu": "G4",
+   "den": "QT02-B11",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G4",
+   "den": "QT02-B14",
+   "nhan": "Không hoặc chưa có giá",
+   "ra": "duoi",
+   "vao": "trai"
+  },
+  {
+   "tu": "QT02-B11",
+   "den": "QT02-B12",
+   "ra": "tren",
+   "vao": "duoi"
+  },
+  {
+   "tu": "QT02-B12",
+   "den": "G5"
+  },
+  {
+   "tu": "G5",
+   "den": "E3",
+   "nhan": "Không"
+  },
+  {
+   "tu": "G5",
+   "den": "QT02-B13",
+   "nhan": "Có",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT02-B13",
+   "den": "E4"
+  },
+  {
+   "tu": "QT02-B14",
+   "den": "QT02-B15"
+  },
+  {
+   "tu": "QT02-B15",
+   "den": "E5"
+  },
+  {
+   "tu": "E4",
+   "den": "Q03",
+   "nhan": "Lô cần giá bán mới (đề xuất Nháp)",
+   "loai": "message",
+   "ra": "duoi",
+   "vao": [
+    0.85,
+    0
+   ]
+  },
+  {
+   "tu": "E5",
+   "den": "Q03",
+   "nhan": "Lô chờ giá",
+   "loai": "message",
+   "ra": "duoi",
+   "vao": [
+    0.4,
+    0
+   ]
+  },
+  {
+   "tu": "S2",
+   "den": "QT02-B16"
+  },
+  {
+   "tu": "QT02-B16",
+   "den": "QT02-B17",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT02-B17",
+   "den": "G6"
+  },
+  {
+   "tu": "G6",
+   "den": "QT02-B18",
+   "nhan": "Đủ"
+  },
+  {
+   "tu": "G6",
+   "den": "E7",
+   "nhan": "Tồn một dòng < số đã nhập",
+   "ra": [
+    0.75,
+    0.75
+   ],
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 2.6,
+     "hang": 2.3
+    }
+   ]
+  },
+  {
+   "tu": "G6",
+   "den": "E9",
+   "nhan": "Kho đang kiểm kê",
+   "ra": [
+    0.25,
+    0.75
+   ],
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 1.4,
+     "hang": 2.3
+    }
+   ]
+  },
+  {
+   "tu": "QT02-B18",
+   "den": "E6"
+  },
+  {
+   "tu": "E7",
+   "den": "Q05",
+   "nhan": "Hủy phê duyệt bị chặn (ASM-007)",
+   "loai": "message",
+   "ra": "duoi"
+  }
+ ]
+}

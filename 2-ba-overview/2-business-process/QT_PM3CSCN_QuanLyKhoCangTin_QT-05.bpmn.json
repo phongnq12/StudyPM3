@@ -1,0 +1,526 @@
+{
+ "ten": "QT-05 Kiểm kê tồn kho",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v00.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-05 Kiểm kê tồn kho",
+   "lanes": [
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "TKK",
+     "ten": "Tổ kiểm kê"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống"
+    }
+   ]
+  },
+  {
+   "id": "Q02",
+   "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 0.2,
+   "so_cot": 1.6
+  },
+  {
+   "id": "Q06",
+   "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 2.2,
+   "so_cot": 1.8
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 5.6,
+   "so_cot": 2.2
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Đến kỳ kiểm kê hoặc cần kiểm kê đột xuất",
+   "lane": "TCS",
+   "cot": 1,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "QT05-B1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B1",
+   "ten": "Giao kiểm kê: lập biên bản kiểm kê",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 0
+  },
+  {
+   "id": "QT05-B2",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B2",
+   "ten": "Kiểm kho còn phiếu dở dang",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 0
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Còn phiếu dở dang?",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 0
+  },
+  {
+   "id": "E0",
+   "loai": "end",
+   "ten": "Chưa kiểm kê được, còn phiếu dở dang",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "QT05-B3",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B3",
+   "ten": "Chốt số sách theo lô, khóa giao dịch kho",
+   "lane": "HT",
+   "cot": 5,
+   "hang": 0
+  },
+  {
+   "id": "QT05-B4",
+   "loai": "task",
+   "kieu": "manual",
+   "ma": "B4",
+   "ten": "Kiểm đếm thực tế theo lô",
+   "lane": "TKK",
+   "cot": 6,
+   "hang": 0,
+   "ghi_chu": "🟡 ngoài phạm vi hệ thống",
+   "vang": true
+  },
+  {
+   "id": "QT05-B5",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B5",
+   "ten": "Điền số thực tế, lý do chênh lệch",
+   "lane": "TKK",
+   "cot": 7,
+   "hang": 0
+  },
+  {
+   "id": "QT05-B6",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B6",
+   "ten": "Trình biên bản kiểm kê",
+   "lane": "TKK",
+   "cot": 8,
+   "hang": 0
+  },
+  {
+   "id": "QT05-B7",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B7",
+   "ten": "Tính chênh lệch so với số sách",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "QT05-B8",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B8",
+   "ten": "Duyệt hoặc từ chối biên bản kiểm kê",
+   "lane": "TCS",
+   "cot": 10,
+   "hang": 0
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Quyết định?",
+   "lane": "TCS",
+   "cot": 11,
+   "hang": 0
+  },
+  {
+   "id": "QT05-B9",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B9",
+   "ten": "Điều chỉnh tồn kho theo số thực tế, mở khóa kho",
+   "lane": "HT",
+   "cot": 12,
+   "hang": 0
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã duyệt, tồn đã điều chỉnh",
+   "lane": "HT",
+   "cot": 13,
+   "hang": 0
+  },
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Cần hủy biên bản kiểm kê đã duyệt",
+   "lane": "TCS",
+   "cot": 0,
+   "hang": 1
+  },
+  {
+   "id": "QT05-B10",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B10",
+   "ten": "Hủy phê duyệt biên bản kiểm kê",
+   "lane": "TCS",
+   "cot": 1,
+   "hang": 1
+  },
+  {
+   "id": "QT05-B11",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B11",
+   "ten": "Kiểm kho chưa có giao dịch mới",
+   "lane": "HT",
+   "cot": 1,
+   "hang": 2
+  },
+  {
+   "id": "G3",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Chưa có giao dịch mới?",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 2
+  },
+  {
+   "id": "QT05-B12",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B12",
+   "ten": "Đảo điều chỉnh tồn kho",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 2
+  },
+  {
+   "id": "E2",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã hủy duyệt",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 2
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Hủy phê duyệt bị chặn",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 3
+  },
+  {
+   "id": "S3",
+   "loai": "start",
+   "ten": "Cần hủy biên bản kiểm kê bỏ dở",
+   "lane": "TCS",
+   "cot": 13,
+   "hang": 1
+  },
+  {
+   "id": "QT05-B13",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B13",
+   "ten": "Hủy biên bản kiểm kê chưa trình, ghi lý do",
+   "lane": "TCS",
+   "cot": 14,
+   "hang": 1
+  },
+  {
+   "id": "QT05-B14",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B14",
+   "ten": "Kiểm biên bản chưa trình",
+   "lane": "HT",
+   "cot": 14,
+   "hang": 2
+  },
+  {
+   "id": "G4",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Chưa trình?",
+   "lane": "HT",
+   "cot": 15,
+   "hang": 2
+  },
+  {
+   "id": "QT05-B15",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B15",
+   "ten": "Mở khóa kho",
+   "lane": "HT",
+   "cot": 16,
+   "hang": 2
+  },
+  {
+   "id": "E4",
+   "loai": "end",
+   "ten": "Biên bản kiểm kê Đã hủy, kho mở khóa",
+   "lane": "HT",
+   "cot": 17,
+   "hang": 2
+  },
+  {
+   "id": "E5",
+   "loai": "end",
+   "ten": "Chặn — biên bản đã trình",
+   "lane": "HT",
+   "cot": 15,
+   "hang": 3
+  }
+ ],
+ "flows": [
+  {
+   "tu": "Q02",
+   "den": "S1",
+   "nhan": "Hủy duyệt phiếu nhập kho bị chặn (ASM-007)",
+   "loai": "message"
+  },
+  {
+   "tu": "Q06",
+   "den": "S1",
+   "nhan": "Đề nghị kiểm kê (ASM-008)",
+   "loai": "message",
+   "vao": [
+    0.85,
+    0.15
+   ]
+  },
+  {
+   "tu": "S1",
+   "den": "QT05-B1"
+  },
+  {
+   "tu": "QT05-B1",
+   "den": "QT05-B2",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT05-B2",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "E0",
+   "nhan": "Còn",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G1",
+   "den": "QT05-B3",
+   "nhan": "Không"
+  },
+  {
+   "tu": "QT05-B3",
+   "den": "POS",
+   "nhan": "Khóa bán tại kho (tự đọc, RQ-54)",
+   "loai": "message",
+   "ra": "duoi",
+   "vao": [
+    0.15,
+    0
+   ]
+  },
+  {
+   "tu": "QT05-B3",
+   "den": "QT05-B4",
+   "ra": "tren",
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "TKK",
+     "cot": 5,
+     "hang": 0
+    }
+   ]
+  },
+  {
+   "tu": "QT05-B4",
+   "den": "QT05-B5"
+  },
+  {
+   "tu": "QT05-B5",
+   "den": "QT05-B6"
+  },
+  {
+   "tu": "QT05-B6",
+   "den": "QT05-B7",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT05-B7",
+   "den": "QT05-B8",
+   "ra": "phai",
+   "vao": "duoi",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 9.6,
+     "hang": 0
+    },
+    {
+     "lane": "TKK",
+     "cot": 9.6,
+     "hang": 0.5
+    },
+    {
+     "lane": "TKK",
+     "cot": 10,
+     "hang": 0.5
+    }
+   ]
+  },
+  {
+   "tu": "QT05-B8",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "QT05-B4",
+   "nhan": "Từ chối, đếm lại",
+   "ra": "duoi",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "TKK",
+     "cot": 11,
+     "hang": -0.45
+    },
+    {
+     "lane": "TKK",
+     "cot": 6,
+     "hang": -0.45
+    }
+   ]
+  },
+  {
+   "tu": "G2",
+   "den": "QT05-B9",
+   "nhan": "Duyệt",
+   "ra": "phai",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT05-B9",
+   "den": "E1"
+  },
+  {
+   "tu": "QT05-B9",
+   "den": "POS",
+   "nhan": "Mở khóa bán tại kho (tự đọc, RQ-54)",
+   "loai": "message",
+   "ra": "duoi",
+   "vao": [
+    0.85,
+    0
+   ],
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 12,
+     "hang": 3.3
+    }
+   ]
+  },
+  {
+   "tu": "S2",
+   "den": "QT05-B10"
+  },
+  {
+   "tu": "QT05-B10",
+   "den": "QT05-B11",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT05-B11",
+   "den": "G3"
+  },
+  {
+   "tu": "G3",
+   "den": "QT05-B12",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G3",
+   "den": "E3",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "QT05-B12",
+   "den": "E2"
+  },
+  {
+   "tu": "S3",
+   "den": "QT05-B13"
+  },
+  {
+   "tu": "QT05-B13",
+   "den": "QT05-B14",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT05-B14",
+   "den": "G4"
+  },
+  {
+   "tu": "G4",
+   "den": "QT05-B15",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G4",
+   "den": "E5",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "QT05-B15",
+   "den": "E4"
+  }
+ ]
+}

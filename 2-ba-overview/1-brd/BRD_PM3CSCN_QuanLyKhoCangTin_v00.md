@@ -20,7 +20,7 @@
 
 | Tên version | Ngày cập nhật | PIC | Mô tả |
 | :--- | :--- | :--- | :--- |
-| **<span style="color:green">v00<br>(hiện tại)</span>** | **<span style="color:green">2026-10-29</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Khởi tạo tài liệu (/ba-overview đợt 1, lớp BRD).<br>- Sửa theo review độc lập vòng 1: tách BRQ-05, BRQ-16, BRQ-17, BRQ-20 (thêm BRQ-26 → BRQ-29); BRQ-24 viết lại thành nhu cầu của cơ sở; chuyển điều kiện, công thức, tham số sang dẫn RQ, GD và giao lớp 2, 6; thêm Q-B15 → Q-B24, RK-06.<br>- BA chốt 29/10/2026: áp câu trả lời Q-B01 → Q-B24 (RQ-72 → RQ-95). Bỏ OBJ-07 (khách không đặt đích, RQ-76), BRQ-22 chuyển sang OBJ-06. Thêm P-08, OBJ-09, BRQ-30 (TT79 Đ5.1.a, RQ-91), SH-10 (RQ-78), TH-03 (RQ-79), Q-B25. Q-B12 chấp nhận tạm → <span style="color:red">**<u>GD-0006</u>**</span>.<br>- BA chốt 29/10/2026: Q-B25 chấp nhận tạm → <span style="color:red">**<u>GD-0007</u>**</span> (RQ-96); thay dẫn tạm TT79 Đ5 bằng mã điều khoản Đ5.K1.a, Đ5.K2, Đ52.K4 sau /ba-init --bo-sung; dẫn PH-032. Không còn câu chờ BA chốt, chuyển Chờ review.<br>- Sửa theo review độc lập vòng 2 (về Nháp trong lúc sửa): BA chốt 29/10/2026 RQ-98 (phiếu nhập kho đầu kỳ), RQ-99 → <span style="color:red">**<u>GD-0008</u>**</span>, RQ-100 (chỉ kiểm TT79 Đ16 khi duyệt giá đầu, thêm RK-08), RQ-101 (mốc, tần suất đồng bộ giao SRS). Tách BRQ-31 khỏi BRQ-23; gắn lại OBJ cho BRQ-09, BRQ-16, BRQ-21, BRQ-27; thêm Q-B26 → Q-B32, RK-08, RK-09. Chỉ còn ô chưa chốt (BA/PM), chuyển lại Chờ review.<br>- BA chốt 29/10/2026: Q-B26 → Q-B32 (RQ-102 → RQ-108); RQ-109: bỏ OBJ-09, BRQ-30 chuyển thành CON-05; RQ-110 (chặn lập, duyệt phiếu ở kho đang kiểm kê); RQ-111 (số thực nhận không lớn hơn số xuất); RQ-112 (thông tin bắt buộc của đề xuất giá bán).<br>- Sửa theo review độc lập vòng 3: thêm NFR-09, Q-B33 → Q-B35; tiêu chí BRQ-01, 04, 05, 06, 13, 16, 17, 25, 29 viết lại theo kết quả nghiệp vụ.<br>- BA chốt 29/10/2026: Q-B33 → Q-B35 (RQ-113 → RQ-115). Thêm P-09, OBJ-10 cho BRQ-14, 17, 25, 26; BRQ-22 ghi là nhu cầu vận hành (P-05); NFR-09 ưu tiên M; vận hành song song quản lý ngoài hệ thống.</span> |
+| **<span style="color:green">v00<br>(hiện tại)</span>** | **<span style="color:green">2026-10-29</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Khởi tạo tài liệu (/ba-overview đợt 1, lớp BRD).<br>- Sửa theo review độc lập vòng 1: tách BRQ-05, BRQ-16, BRQ-17, BRQ-20 (thêm BRQ-26 → BRQ-29); BRQ-24 viết lại thành nhu cầu của cơ sở; chuyển điều kiện, công thức, tham số sang dẫn RQ, GD và giao lớp 2, 6; thêm Q-B15 → Q-B24, RK-06.<br>- BA chốt 29/10/2026: áp câu trả lời Q-B01 → Q-B24 (RQ-72 → RQ-95). Bỏ OBJ-07 (khách không đặt đích, RQ-76), BRQ-22 chuyển sang OBJ-06. Thêm P-08, OBJ-09, BRQ-30 (TT79 Đ5.1.a, RQ-91), SH-10 (RQ-78), TH-03 (RQ-79), Q-B25. Q-B12 chấp nhận tạm → <span style="color:red">**<u>GD-0006</u>**</span>.<br>- BA chốt 29/10/2026: Q-B25 chấp nhận tạm → <span style="color:red">**<u>GD-0007</u>**</span> (RQ-96); thay dẫn tạm TT79 Đ5 bằng mã điều khoản Đ5.K1.a, Đ5.K2, Đ52.K4 sau /ba-init --bo-sung; dẫn PH-032. Không còn câu chờ BA chốt, chuyển Chờ review.<br>- Sửa theo review độc lập vòng 2 (về Nháp trong lúc sửa): BA chốt 29/10/2026 RQ-98 (phiếu nhập kho đầu kỳ), RQ-99 → <span style="color:red">**<u>GD-0008</u>**</span>, RQ-100 (chỉ kiểm TT79 Đ16 khi duyệt giá đầu, thêm RK-08), RQ-101 (mốc, tần suất đồng bộ giao SRS). Tách BRQ-31 khỏi BRQ-23; gắn lại OBJ cho BRQ-09, BRQ-16, BRQ-21, BRQ-27; thêm Q-B26 → Q-B32, RK-08, RK-09. Chỉ còn ô chưa chốt (BA/PM), chuyển lại Chờ review.<br>- BA chốt 29/10/2026: Q-B26 → Q-B32 (RQ-102 → RQ-108); RQ-109: bỏ OBJ-09, BRQ-30 chuyển thành CON-05; RQ-110 (chặn lập, duyệt phiếu ở kho đang kiểm kê); RQ-111 (số thực nhận không lớn hơn số xuất); RQ-112 (thông tin bắt buộc của đề xuất giá bán).<br>- Sửa theo review độc lập vòng 3: thêm NFR-09, Q-B33 → Q-B35; tiêu chí BRQ-01, 04, 05, 06, 13, 16, 17, 25, 29 viết lại theo kết quả nghiệp vụ.<br>- BA chốt 29/10/2026: Q-B33 → Q-B35 (RQ-113 → RQ-115). Thêm P-09, OBJ-10 cho BRQ-14, 17, 25, 26; BRQ-22 ghi là nhu cầu vận hành (P-05); NFR-09 ưu tiên M; vận hành song song quản lý ngoài hệ thống.<br>- Điền từ QT_PM3CSCN_QuanLyKhoCangTin_v00, không đổi nghĩa: mục 6.2 cột Quy trình, Tài liệu chi tiết; mục 12 cột Quy trình.</span> |
 
 ## Phê duyệt
 
@@ -287,14 +287,14 @@ Cơ sở hiện quản lý kho căng tin bằng sổ; không có số liệu hi�
 
 | Nhóm quy trình | Quy trình | Thay đổi so với hiện trạng | Tài liệu chi tiết |
 |---|---|---|---|
-| Nhà cung cấp và giá nhập | Cập nhật nhà cung cấp và giá nhập — chờ lớp 2 | Hồ sơ nhà cung cấp, danh mục hàng hóa theo nhà cung cấp, giá nhập theo đợt có lịch sử thay đổi, làm căn cứ cho phiếu nhập kho và đề xuất giá bán (BRQ-09, BRQ-10, BRQ-11) | chờ lớp 2 |
-| Nhập kho | Nhập kho hàng hóa từ nhà cung cấp — chờ lớp 2 | Tồn kho chỉ tăng khi Trưởng cơ sở duyệt phiếu nhập kho; mỗi lô có số lô, hạn sử dụng; lô có giá nhập cao hơn giá bán hiện hành bị giữ tới khi giá mới được duyệt (BRQ-04, BRQ-12, BRQ-13) | chờ lớp 2 |
-| Danh mục hàng hóa và giá bán | Đề xuất và duyệt giá bán — chờ lớp 2 | Giá bán gắn theo lô, chỉ có hiệu lực sau khi Trưởng cơ sở duyệt, không vượt giá bán lẻ tại địa phương, không thấp hơn giá nhập; mặt hàng thuộc TT79 Đ16 không được duyệt giá (BRQ-01, BRQ-02, BRQ-03, BRQ-07 · <span style="color:red">**<u>GD-0002</u>**</span>) | chờ lớp 2 |
-| Điều chuyển | Điều chuyển hàng hóa giữa các kho — chờ lớp 2 | Hàng chuyển giữa các kho ngang hàng bằng phiếu điều chuyển được duyệt; kho nhận xác nhận số thực nhận, kho xuất ghi nhận chênh lệch (BRQ-15, BRQ-16, BRQ-27) | chờ lớp 2 |
-| Kiểm kê | Kiểm kê tồn kho — chờ lớp 2 | Trưởng cơ sở giao kiểm kê; số sách chốt khi bắt đầu; kho không có giao dịch trong lúc kiểm kê; điều chỉnh tồn chỉ sau khi biên bản được duyệt (BRQ-18, BRQ-19, BRQ-20, BRQ-29) | chờ lớp 2 |
-| Kho và cảnh báo | Cảnh báo tồn kho và hạn sử dụng — chờ lớp 2 | Người phụ trách căng tin được cảnh báo tồn dưới mức tối thiểu, lô sắp hết hạn, quá hạn, lô chờ giá (BRQ-21, BRQ-22, BRQ-23, BRQ-31) | chờ lớp 2 |
-| Kết nối, đồng bộ dữ liệu | Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện — chờ lớp 2 | Dữ liệu kho (danh mục kho, hàng hóa, nhà cung cấp, tồn kho theo lô, giá bán) được đồng bộ sang phần mềm quản lý cơ sở cai nghiện của cơ sở (CON-05 Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện · <span style="color:red">**<u>GD-0007</u>**</span>) | chờ lớp 2 |
-| Tra cứu, kết xuất | chờ lớp 2 — dự kiến không có quy trình riêng: 8 UC nhóm Tra cứu, kết xuất (mục 3) chỉ đọc dữ liệu của các quy trình trên (bản đồ quy trình bước 1, mục 6.1) | Chứng từ, danh mục, lịch sử tìm và kết xuất được (BRQ-25) | chờ lớp 2 |
+| Nhà cung cấp và giá nhập | QT-01 Cập nhật nhà cung cấp và giá nhập | Hồ sơ nhà cung cấp, danh mục hàng hóa theo nhà cung cấp, giá nhập theo đợt có lịch sử thay đổi, làm căn cứ cho phiếu nhập kho và đề xuất giá bán (BRQ-09, BRQ-10, BRQ-11) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Nhập kho | QT-02 Nhập kho hàng hóa từ nhà cung cấp | Tồn kho chỉ tăng khi Trưởng cơ sở duyệt phiếu nhập kho; mỗi lô có số lô, hạn sử dụng; lô có giá nhập cao hơn giá bán hiện hành bị giữ tới khi giá mới được duyệt (BRQ-04, BRQ-12, BRQ-13) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Danh mục hàng hóa và giá bán | QT-03 Đề xuất và duyệt giá bán | Giá bán gắn theo lô, chỉ có hiệu lực sau khi Trưởng cơ sở duyệt, không vượt giá bán lẻ tại địa phương, không thấp hơn giá nhập; mặt hàng thuộc TT79 Đ16 không được duyệt giá (BRQ-01, BRQ-02, BRQ-03, BRQ-07 · <span style="color:red">**<u>GD-0002</u>**</span>) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Điều chuyển | QT-04 Điều chuyển hàng hóa giữa các kho | Hàng chuyển giữa các kho ngang hàng bằng phiếu điều chuyển được duyệt; kho nhận xác nhận số thực nhận, kho xuất ghi nhận chênh lệch (BRQ-15, BRQ-16, BRQ-27) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Kiểm kê | QT-05 Kiểm kê tồn kho | Trưởng cơ sở giao kiểm kê; số sách chốt khi bắt đầu; kho không có giao dịch trong lúc kiểm kê; điều chỉnh tồn chỉ sau khi biên bản được duyệt (BRQ-18, BRQ-19, BRQ-20, BRQ-29) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Kho và cảnh báo | QT-06 Cảnh báo tồn kho và hạn sử dụng | Người phụ trách căng tin được cảnh báo tồn dưới mức tối thiểu, lô sắp hết hạn, quá hạn, lô chờ giá (BRQ-21, BRQ-22, BRQ-23, BRQ-31) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Kết nối, đồng bộ dữ liệu | Không có quy trình riêng — tác vụ nền N-02 Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện (QT mục 5; D-01 BA chốt 29/10/2026 — RQ-131) · <span style="color:red">**<u>GD-0007</u>**</span> | Dữ liệu kho (danh mục kho, hàng hóa, nhà cung cấp, tồn kho theo lô, giá bán) được đồng bộ sang phần mềm quản lý cơ sở cai nghiện của cơ sở (CON-05 Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện · <span style="color:red">**<u>GD-0007</u>**</span>) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Tra cứu, kết xuất | Không có quy trình riêng — 8 UC nhóm Tra cứu, kết xuất (mục 3) chỉ đọc dữ liệu của QT-01 → QT-05 (bản đồ quy trình bước 1, mục 6.1; QT mục 1 Ngoài phạm vi) | Chứng từ, danh mục, lịch sử tìm và kết xuất được (BRQ-25) | `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md` |
 
 Cột "Thay đổi so với hiện trạng" ghi trạng thái đích; hiện trạng là quản lý bằng sổ (RQ-72), mọi thay đổi trên là thay sổ bằng chứng từ có duyệt trên hệ thống.
 
@@ -411,36 +411,36 @@ Tên ngắn dùng khi dẫn mã của mục này ở lớp khác:
 
 | Mục tiêu | Yêu cầu nghiệp vụ | Quy trình | Business rule | Use case |
 |---|---|---|---|---|
-| OBJ-01 | BRQ-01 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-01 | BRQ-24 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-02 | BRQ-02 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-02 | BRQ-03 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-03 · <span style="color:red">**<u>GD-0002</u>**</span> | BRQ-07 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-16 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-04 | BRQ-18 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-04 | BRQ-19 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-04 | BRQ-20 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-21 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-27 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-04 | BRQ-28 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-04 | BRQ-29 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-05 | BRQ-12 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-05 | BRQ-23 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-05 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-06 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-08 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-10 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-13 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-10 | BRQ-14 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-15 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-10 | BRQ-17 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-10 | BRQ-25 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| n/a — nhu cầu vận hành (P-05, RQ-113) | BRQ-22 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-10 | BRQ-26 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-08 | BRQ-04 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-06 | BRQ-09 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-08 | BRQ-11 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
-| OBJ-08 | BRQ-31 | chờ lớp 2 | chờ lớp 6 | chờ lớp 5 |
+| OBJ-01 | BRQ-01 | QT-02 Nhập kho hàng hóa từ nhà cung cấp · QT-03 Đề xuất và duyệt giá bán | chờ lớp 6 | chờ lớp 5 |
+| OBJ-01 | BRQ-24 | QT-02 Nhập kho hàng hóa từ nhà cung cấp · QT-03 Đề xuất và duyệt giá bán · QT-05 Kiểm kê tồn kho (dữ liệu Hệ thống bán hàng căng tin tự đọc) | chờ lớp 6 | chờ lớp 5 |
+| OBJ-02 | BRQ-02 | QT-01 Cập nhật nhà cung cấp và giá nhập · QT-02 Nhập kho hàng hóa từ nhà cung cấp · QT-03 Đề xuất và duyệt giá bán | chờ lớp 6 | chờ lớp 5 |
+| OBJ-02 | BRQ-03 | QT-03 Đề xuất và duyệt giá bán | chờ lớp 6 | chờ lớp 5 |
+| OBJ-03 · <span style="color:red">**<u>GD-0002</u>**</span> | BRQ-07 | QT-03 Đề xuất và duyệt giá bán | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-16 | QT-04 Điều chuyển hàng hóa giữa các kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-04 | BRQ-18 | QT-05 Kiểm kê tồn kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-04 | BRQ-19 | QT-05 Kiểm kê tồn kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-04 | BRQ-20 | QT-05 Kiểm kê tồn kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-21 | Không có quy trình riêng — danh mục kho dùng chung (bản đồ quy trình bước 1 mục 6.1); kho dùng ở QT-02, QT-04, QT-05, QT-06 | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-27 | QT-04 Điều chuyển hàng hóa giữa các kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-04 | BRQ-28 | QT-05 Kiểm kê tồn kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-04 | BRQ-29 | QT-05 Kiểm kê tồn kho · QT-02 Nhập kho hàng hóa từ nhà cung cấp · QT-04 Điều chuyển hàng hóa giữa các kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-05 | BRQ-12 | QT-02 Nhập kho hàng hóa từ nhà cung cấp (ghi lô); xem tồn kho hiện tại là tra cứu, không quy trình (RQ-88) | chờ lớp 6 | chờ lớp 5 |
+| OBJ-05 | BRQ-23 | QT-06 Cảnh báo tồn kho và hạn sử dụng | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-05 | QT-02 · QT-03 · QT-04 · QT-05 | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-06 | QT-02 · QT-03 · QT-04 · QT-05 | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-08 | QT-03 Đề xuất và duyệt giá bán · QT-01 Cập nhật nhà cung cấp và giá nhập | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-10 | QT-02 Nhập kho hàng hóa từ nhà cung cấp | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-13 | QT-02 · QT-04 · QT-05 · trừ tồn do bán (QT mục 5.1) | chờ lớp 6 | chờ lớp 5 |
+| OBJ-10 | BRQ-14 | QT-02 Nhập kho hàng hóa từ nhà cung cấp | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-15 | QT-04 Điều chuyển hàng hóa giữa các kho | chờ lớp 6 | chờ lớp 5 |
+| OBJ-10 | BRQ-17 | QT-02 · QT-03 · QT-04 | chờ lớp 6 | chờ lớp 5 |
+| OBJ-10 | BRQ-25 | Không có quy trình riêng — 8 UC tra cứu chỉ đọc dữ liệu (bản đồ quy trình bước 1 mục 6.1) | chờ lớp 6 | chờ lớp 5 |
+| n/a — nhu cầu vận hành (P-05, RQ-113) | BRQ-22 | QT-06 Cảnh báo tồn kho và hạn sử dụng | chờ lớp 6 | chờ lớp 5 |
+| OBJ-10 | BRQ-26 | QT-02 · QT-03 · QT-04 · QT-05 | chờ lớp 6 | chờ lớp 5 |
+| OBJ-08 | BRQ-04 | QT-02 Nhập kho hàng hóa từ nhà cung cấp · QT-03 Đề xuất và duyệt giá bán | chờ lớp 6 | chờ lớp 5 |
+| OBJ-06 | BRQ-09 | QT-01 Cập nhật nhà cung cấp và giá nhập | chờ lớp 6 | chờ lớp 5 |
+| OBJ-08 | BRQ-11 | QT-01 Cập nhật nhà cung cấp và giá nhập | chờ lớp 6 | chờ lớp 5 |
+| OBJ-08 | BRQ-31 | QT-02 Nhập kho hàng hóa từ nhà cung cấp · QT-06 Cảnh báo tồn kho và hạn sử dụng | chờ lớp 6 | chờ lớp 5 |
 | n/a — OBJ-09 ⊘ | BRQ-30 ⊘ (thành CON-05 · <span style="color:red">**<u>GD-0007</u>**</span>) | n/a | n/a | n/a |
 
 ---

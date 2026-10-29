@@ -1,0 +1,551 @@
+{
+ "ten": "QT-03 Đề xuất và duyệt giá bán",
+ "cap": 2,
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v00.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "pools": [
+  {
+   "id": "P",
+   "ten": "QT-03 Đề xuất và duyệt giá bán",
+   "lanes": [
+    {
+     "id": "CB",
+     "ten": "Người phụ trách căng tin"
+    },
+    {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
+     "id": "HT",
+     "ten": "Hệ thống"
+    }
+   ]
+  },
+  {
+   "id": "Q01",
+   "ten": "QT-01 Cập nhật nhà cung cấp và giá nhập",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 0,
+   "so_cot": 1.8
+  },
+  {
+   "id": "Q02",
+   "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 2.2,
+   "so_cot": 1.6
+  },
+  {
+   "id": "Q06",
+   "ten": "QT-06 Cảnh báo tồn kho và hạn sử dụng",
+   "thu_gon": true,
+   "vi_tri": "tren",
+   "cot": 4.0,
+   "so_cot": 1.8
+  },
+  {
+   "id": "POS",
+   "ten": "Hệ thống bán hàng căng tin",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 12.2,
+   "so_cot": 1.6
+  }
+ ],
+ "nodes": [
+  {
+   "id": "S2",
+   "loai": "start",
+   "ten": "Giá nhập mới có đề xuất giá bán Nháp",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "S3",
+   "loai": "start",
+   "ten": "Lô cần giá bán mới hoặc lô chờ giá",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 0,
+   "su_kien": "message"
+  },
+  {
+   "id": "S1",
+   "loai": "start",
+   "ten": "Cần bán mặt hàng mới",
+   "lane": "CB",
+   "cot": 0,
+   "hang": 1.5
+  },
+  {
+   "id": "QT03-B1",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B1",
+   "ten": "Thêm mặt hàng vào danh mục hàng hóa căng tin",
+   "lane": "CB",
+   "cot": 1.5,
+   "hang": 1.5
+  },
+  {
+   "id": "S4",
+   "loai": "start",
+   "ten": "Giá bán lẻ tại địa phương thay đổi, hoặc hủy phê duyệt giá bị chặn",
+   "lane": "CB",
+   "cot": 1.5,
+   "hang": 2.8
+  },
+  {
+   "id": "GM",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "",
+   "lane": "CB",
+   "cot": 3,
+   "hang": 1.5
+  },
+  {
+   "id": "QT03-B2",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B2",
+   "ten": "Lập hoặc sửa đề xuất giá bán",
+   "lane": "CB",
+   "cot": 4,
+   "hang": 1.5
+  },
+  {
+   "id": "QT03-B3",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B3",
+   "ten": "Trình hoặc hủy đề xuất giá bán",
+   "lane": "CB",
+   "cot": 5,
+   "hang": 1.5
+  },
+  {
+   "id": "G1",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trình hay hủy?",
+   "lane": "CB",
+   "cot": 6,
+   "hang": 1.5
+  },
+  {
+   "id": "E1",
+   "loai": "end",
+   "ten": "Đề xuất giá bán Đã hủy",
+   "lane": "CB",
+   "cot": 7,
+   "hang": 1.5
+  },
+  {
+   "id": "QT03-B4",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B4",
+   "ten": "Kiểm đề xuất trước khi sang Chờ duyệt",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 0
+  },
+  {
+   "id": "G2",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Đạt điều kiện trình?",
+   "lane": "HT",
+   "cot": 7,
+   "hang": 0
+  },
+  {
+   "id": "QT03-B5",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B5",
+   "ten": "Duyệt hoặc từ chối đề xuất giá bán",
+   "lane": "TCS",
+   "cot": 8,
+   "hang": 0
+  },
+  {
+   "id": "G3",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Quyết định?",
+   "lane": "TCS",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "QT03-B6",
+   "loai": "task",
+   "kieu": "businessRule",
+   "ma": "B6",
+   "ten": "Kiểm giá bán đề xuất trong khoảng giá nhập – giá bán lẻ tại địa phương",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 0
+  },
+  {
+   "id": "G4",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Trong khoảng?",
+   "lane": "HT",
+   "cot": 10,
+   "hang": 0
+  },
+  {
+   "id": "QT03-B7",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B7",
+   "ten": "Ghi giá bán Đã duyệt theo lô",
+   "lane": "HT",
+   "cot": 11,
+   "hang": 0
+  },
+  {
+   "id": "TM",
+   "loai": "intermediate",
+   "su_kien": "timer",
+   "ten": "Đến ngày hiệu lực",
+   "lane": "HT",
+   "cot": 12,
+   "hang": 0
+  },
+  {
+   "id": "QT03-B8",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B8",
+   "ten": "Áp giá bán cho lô, mở bán lô chờ giá",
+   "lane": "HT",
+   "cot": 13,
+   "hang": 0
+  },
+  {
+   "id": "E3",
+   "loai": "end",
+   "ten": "Giá bán Có hiệu lực",
+   "lane": "HT",
+   "cot": 14,
+   "hang": 0
+  },
+  {
+   "id": "S5",
+   "loai": "start",
+   "ten": "Cần hủy giá bán đã duyệt",
+   "lane": "TCS",
+   "cot": 1,
+   "hang": 1
+  },
+  {
+   "id": "QT03-B9",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B9",
+   "ten": "Hủy phê duyệt giá bán",
+   "lane": "TCS",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "QT03-B10",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B10",
+   "ten": "Kiểm giá chưa tới ngày hiệu lực",
+   "lane": "HT",
+   "cot": 2,
+   "hang": 1
+  },
+  {
+   "id": "G5",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Chưa tới ngày hiệu lực?",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 1
+  },
+  {
+   "id": "QT03-B11",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B11",
+   "ten": "Ghi giá bán Đã hủy duyệt, giữ lô chờ giá",
+   "lane": "HT",
+   "cot": 4,
+   "hang": 1
+  },
+  {
+   "id": "E4",
+   "loai": "end",
+   "ten": "Giá bán Đã hủy duyệt",
+   "lane": "HT",
+   "cot": 5,
+   "hang": 1
+  },
+  {
+   "id": "E5",
+   "loai": "end",
+   "ten": "Hủy phê duyệt bị chặn, lập đề xuất giá mới",
+   "lane": "HT",
+   "cot": 3,
+   "hang": 2
+  }
+ ],
+ "flows": [
+  {
+   "tu": "Q01",
+   "den": "S2",
+   "nhan": "Đề xuất giá bán Nháp (RQ-52)",
+   "loai": "message"
+  },
+  {
+   "tu": "Q02",
+   "den": "S3",
+   "nhan": "Lô cần giá bán mới, lô chờ giá",
+   "loai": "message"
+  },
+  {
+   "tu": "Q06",
+   "den": "S3",
+   "nhan": "Lô chờ giá cần đề xuất (BRQ-31, PH-033)",
+   "loai": "message",
+   "vao": [
+    0.85,
+    0.15
+   ]
+  },
+  {
+   "tu": "S2",
+   "den": "GM",
+   "ra": "phai",
+   "vao": [
+    0.25,
+    0.25
+   ],
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 2.4,
+     "hang": 0
+    },
+    {
+     "lane": "CB",
+     "cot": 2.4,
+     "hang": 1.3
+    }
+   ]
+  },
+  {
+   "tu": "S3",
+   "den": "GM",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "S1",
+   "den": "QT03-B1"
+  },
+  {
+   "tu": "QT03-B1",
+   "den": "GM"
+  },
+  {
+   "tu": "S4",
+   "den": "GM",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "GM",
+   "den": "QT03-B2"
+  },
+  {
+   "tu": "QT03-B2",
+   "den": "QT03-B3"
+  },
+  {
+   "tu": "QT03-B3",
+   "den": "G1"
+  },
+  {
+   "tu": "G1",
+   "den": "E1",
+   "nhan": "Hủy"
+  },
+  {
+   "tu": "G1",
+   "den": "QT03-B4",
+   "nhan": "Trình",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT03-B4",
+   "den": "G2"
+  },
+  {
+   "tu": "G2",
+   "den": "QT03-B2",
+   "nhan": "Không đạt, bổ sung",
+   "ra": "duoi",
+   "vao": "duoi",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 7,
+     "hang": 0.75
+    },
+    {
+     "lane": "HT",
+     "cot": 4.5,
+     "hang": 0.75
+    },
+    {
+     "lane": "CB",
+     "cot": 4.5,
+     "hang": 2.4
+    },
+    {
+     "lane": "CB",
+     "cot": 4,
+     "hang": 2.4
+    }
+   ]
+  },
+  {
+   "tu": "G2",
+   "den": "QT03-B5",
+   "nhan": "Đủ",
+   "ra": "phai",
+   "vao": "duoi"
+  },
+  {
+   "tu": "QT03-B5",
+   "den": "G3"
+  },
+  {
+   "tu": "G3",
+   "den": "QT03-B2",
+   "nhan": "Từ chối, có lý do",
+   "ra": "tren",
+   "vao": "tren",
+   "qua": [
+    {
+     "lane": "CB",
+     "cot": 9,
+     "hang": 0.9
+    },
+    {
+     "lane": "CB",
+     "cot": 4,
+     "hang": 0.9
+    }
+   ]
+  },
+  {
+   "tu": "G3",
+   "den": "QT03-B6",
+   "nhan": "Duyệt",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT03-B6",
+   "den": "G4"
+  },
+  {
+   "tu": "G4",
+   "den": "QT03-B5",
+   "nhan": "Không: phải từ chối, ghi lý do",
+   "ra": "duoi",
+   "vao": "duoi",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 10,
+     "hang": 0.7
+    },
+    {
+     "lane": "HT",
+     "cot": 8.5,
+     "hang": 0.7
+    },
+    {
+     "lane": "TCS",
+     "cot": 8.5,
+     "hang": 0.6
+    },
+    {
+     "lane": "TCS",
+     "cot": 8,
+     "hang": 0.6
+    }
+   ]
+  },
+  {
+   "tu": "G4",
+   "den": "QT03-B7",
+   "nhan": "Có"
+  },
+  {
+   "tu": "QT03-B7",
+   "den": "TM"
+  },
+  {
+   "tu": "TM",
+   "den": "QT03-B8"
+  },
+  {
+   "tu": "QT03-B8",
+   "den": "E3"
+  },
+  {
+   "tu": "QT03-B8",
+   "den": "POS",
+   "nhan": "Giá bán theo lô (tự đọc, RQ-54)",
+   "loai": "message",
+   "ra": "duoi"
+  },
+  {
+   "tu": "S5",
+   "den": "QT03-B9"
+  },
+  {
+   "tu": "QT03-B9",
+   "den": "QT03-B10",
+   "ra": "duoi",
+   "vao": "tren"
+  },
+  {
+   "tu": "QT03-B10",
+   "den": "G5"
+  },
+  {
+   "tu": "G5",
+   "den": "QT03-B11",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G5",
+   "den": "E5",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "QT03-B11",
+   "den": "E4"
+  }
+ ]
+}

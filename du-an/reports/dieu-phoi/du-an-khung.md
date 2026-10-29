@@ -34,3 +34,8 @@
 | 30 | /ba-overview | 2 | business-analyst | Lớp 2 Quy trình nghiệp vụ (create-bp, ba-bpmn) | 2-ba-overview/2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v00.md + sơ đồ; ô BRD mục 6.2, 12 | 579.293 | 27 phút 18 giây | 0 |
 | 31 | /ba-overview | 2 | quality-reviewer | Review độc lập lớp 2 (vòng 1): 0 Chặn, 13 Nặng, 16 Nhẹ | — (chỉ đọc) | — | — | — |
 | 32 | /ba-init --bo-sung | 4 | business-analyst | A5 thêm chuyển giao QT-06 → QT-03 (PH-033) | 1-ba-init/0-dau-vao/ban-do-quy-trinh/ | — | — | 0 |
+| 33 | /ba-overview | 2 | business-analyst | Sửa lớp 2 theo review vòng 1 + áp RQ-119…RQ-135 | QT_PM3CSCN_QuanLyKhoCangTin_v00.md + sơ đồ; ô BRD 6.2 | 720.558 (cộng dồn phiên) | — | 2 |
+| 34 | /ba-overview | 2 | quality-reviewer | Review độc lập lớp 2 (vòng 2) | — (chỉ đọc) | — | — | — |
+| 35 | /ba-overview | 2 | quality-reviewer | Review độc lập lớp 2 (vòng 2): 2 Chặn, 11 Nặng, 15 Nhẹ | — (chỉ đọc) | 423.856 | 10 phút 22 giây | — |
+| 36 | /ba-overview | 2 | business-analyst | Sửa lớp 2 theo review vòng 2 + RQ-136…RQ-142 (có lần dừng do giới hạn API) | QT_PM3CSCN_QuanLyKhoCangTin_v00.md + sơ đồ; BRD 6.2 | 824.091 (cộng dồn phiên) | — | 3 |
+| 37 | /ba-overview | 2 | business-analyst | Áp RQ-143…RQ-146 (gộp biên bản kiểm kê, đóng cảnh báo) | QT_PM3CSCN_QuanLyKhoCangTin_v00.md + sơ đồ QT-05, QT-06 | 861.223 (cộng dồn phiên) | 3 phút 55 giây | 3 |
