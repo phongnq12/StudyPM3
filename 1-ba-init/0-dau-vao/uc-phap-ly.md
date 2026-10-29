@@ -1,7 +1,7 @@
 # Ma trận UC presales × pháp lý — Quản lý kho căng tin
 | Số UC presales | Có căn cứ pháp lý | Không có căn cứ | Số điều khoản | Có UC | Chưa có UC | Cập nhật | Trạng thái |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 31 | 5 | 26 | 12 | 10 | 2 (mục 3: 1 áp dụng chung, 1 ngoài phần mềm; 0 lý do "chưa có UC") | 2026-10-29 | draft |
+| 31 | 5 | 26 | 15 | 10 | 5 (mục 3: 1 chưa có UC, 2 áp dụng chung, 2 ngoài phần mềm) | 2026-10-29 | draft |
 
 **File này dùng để làm gì.** Nối hai danh mục với nhau: UC presales (những việc phần mềm đã chào giá sẽ làm,
 `uc-presales.md`) và điều khoản pháp luật (`phap-ly.md`). Mục đích là kiểm cả hai chiều:
@@ -49,10 +49,16 @@ phiếu nhập kho, phiếu điều chuyển, biên bản kiểm kê — Q-019 �
 theo nhà cung cấp — Q-020 đã quyết theo RQ-56), 9 `tiện ích` (tra cứu, xem, kết xuất, theo dõi lịch sử), 2 `quản trị
 hệ thống` (danh mục kho, cấu hình hạn mức cảnh báo), 0 `chưa tìm thấy`. Lý do: các văn bản trong `0-inputs/phap-ly/` chỉ chi phối giá bán và loại hàng của
 căng tin, không có điều khoản nào về chứng từ kho, kiểm kê hàng căng tin hay nhà cung cấp (`phap-ly.md` mục 3, [PH-006]).
-10 trên 12 điều khoản có UC; 2 điều khoản không có UC: `TT79-2026/Đ6.K2` (áp dụng chung: vị trí việc làm căng tin) và
+10 trên 15 điều khoản có UC; 5 điều khoản không có UC: `TT79-2026/Đ5.K1.a` (chưa có UC: phần mềm kết nối, đồng bộ
+với phần mềm quản lý cơ sở cai nghiện, cơ sở dữ liệu quốc gia — không UC presales nào làm việc kết nối, đồng bộ; việc mới
+ngoài presales, BRD BRQ-30 [PH-032]), `TT79-2026/Đ5.K2` (áp dụng chung: công khai, minh bạch, thống nhất khi triển
+khai hệ thống quản lý cơ sở cai nghiện thông minh), `TT79-2026/Đ6.K2` (áp dụng chung: vị trí việc làm căng tin),
 `TT79-2026/Đ41.K7` (ngoài phần mềm: sử dụng tiền qua hệ thống bán hàng căng tin, ngoài phạm vi theo RQ-03; hệ thống
-bán hàng tự đọc dữ liệu kho theo RQ-54). Không điều
-khoản nào ở lý do `chưa có UC`, nên không có phát hiện loại `điều khoản chưa có UC`. Mục 1 có 22 cặp: theo quan hệ 1
+bán hàng tự đọc dữ liệu kho theo RQ-54) và `TT79-2026/Đ52.K4` (ngoài phần mềm: cơ sở bảo đảm cơ sở vật chất, trang
+thiết bị trước khi triển khai). Ba điều khoản Điều 5, Điều 52 bổ sung theo RQ-97; BA xác nhận phần mềm kho thuộc hệ
+thống quản lý cơ sở cai nghiện thông minh [SRC: 0-inputs/answers-2026-10-29.md, RQ-91]. Không ghép `TT79-2026/Đ5.K1.a`
+với các UC tạo dữ liệu được đồng bộ (kho, hàng hóa, nhà cung cấp, giá bán): phạm vi dữ liệu đồng bộ còn là giả định BA
+đang mở `<span style="color:red">**<u>GD-0007</u>**</span>` [SRC: 0-inputs/answers-2026-10-29.md, RQ-96], các UC đó không làm việc kết nối. Mục 1 có 22 cặp: theo quan hệ 1
 `thực hiện`, 10 `ràng buộc`, 1 `dữ liệu`, 10 `đối tượng`; theo cách ghép 22 `đối chiếu`, 0 `presales` (quy trình
 presales nhắc "TT79 Đ16" ở bước QP-04.05 nhưng không gắn bước với UC [Q-014]). 9 cặp dựa trên giả định chờ xác nhận: [ASM-006]
 (8 cặp — hàng hóa căng tin nhập từ nhà cung cấp thuộc diện "đưa vào cơ sở cai nghiện ma túy" của Điều 16, nên danh mục
@@ -184,14 +190,17 @@ vì sao, cột "PH" là phát hiện đi kèm.
 
 | Lý do | Nghĩa là | Cần làm gì | Ví dụ trong file này | Số điều khoản |
 | --- | --- | --- | --- | --- |
-| chưa có UC | Điều khoản chi phối nghiệp vụ mà báo giá chưa có UC làm việc đó | Bắt buộc có phát hiện loại `điều khoản chưa có UC`; bước 2 quyết thêm UC hay ngoài phạm vi | Không có trong file này | 0 |
-| áp dụng chung | Điều khoản nêu phạm vi, nội dung chung hoặc chế tài cho cả quy trình, không gắn riêng UC nào | Không cần UC riêng | `TT79-2026/Đ6.K2` vị trí việc làm "căng tin" | 1 |
-| ngoài phần mềm | Việc làm hoàn toàn trên giấy, ngoài hệ thống | Ghi rõ căn cứ vì sao ngoài phần mềm | `TT79-2026/Đ41.K7` sử dụng tiền trong căng tin qua hệ thống bán hàng căng tin | 1 |
+| chưa có UC | Điều khoản chi phối nghiệp vụ mà báo giá chưa có UC làm việc đó | Bắt buộc có phát hiện loại `điều khoản chưa có UC`; bước 2 quyết thêm UC hay ngoài phạm vi | `TT79-2026/Đ5.K1.a` phần mềm quản lý cơ sở cai nghiện được kết nối, đồng bộ với cơ sở dữ liệu quốc gia | 1 |
+| áp dụng chung | Điều khoản nêu phạm vi, nội dung chung hoặc chế tài cho cả quy trình, không gắn riêng UC nào | Không cần UC riêng | `TT79-2026/Đ6.K2` vị trí việc làm "căng tin" | 2 |
+| ngoài phần mềm | Việc làm hoàn toàn trên giấy, ngoài hệ thống | Ghi rõ căn cứ vì sao ngoài phần mềm | `TT79-2026/Đ41.K7` sử dụng tiền trong căng tin qua hệ thống bán hàng căng tin | 2 |
 
 | Mã điều khoản | Tóm tắt | Lý do | PH |
 | --- | --- | --- | --- |
+| `TT79-2026/Đ5.K1.a` | Hệ thống quản lý cơ sở cai nghiện thông minh gồm "Phần mềm quản lý cơ sở cai nghiện được kết nối, đồng bộ với cơ sở dữ liệu quốc gia về dân cư; cơ sở dữ liệu người nghiện ma túy và người bị quản lý sau cai nghiện ma túy". Phần mềm kho căng tin thuộc hệ thống này [SRC: 0-inputs/answers-2026-10-29.md, RQ-91]; không UC presales nào làm việc kết nối, đồng bộ (31 UC trong `uc-presales.md` chỉ lập, duyệt, tra cứu chứng từ, danh mục trong kho). Phạm vi dữ liệu đồng bộ (danh mục kho, hàng hóa, nhà cung cấp, tồn kho theo lô, giá bán, qua phần mềm quản lý cơ sở cai nghiện của cơ sở, không gửi dữ liệu cá nhân) theo giả định BA đang mở `<span style="color:red">**<u>GD-0007</u>**</span>` [SRC: 0-inputs/answers-2026-10-29.md, RQ-96] | chưa có UC | [PH-032] |
+| `TT79-2026/Đ5.K2` | "Triển khai hệ thống quản lý cơ sở cai nghiện thông minh là hoạt động chuyển đổi số trong lĩnh vực cai nghiện ma túy; việc thực hiện phải bảo đảm tính công khai, minh bạch, thống nhất theo các quy định tại Thông tư này". Yêu cầu chung cho cả việc triển khai hệ thống, không nêu chủ thể, hành vi riêng của UC nào | áp dụng chung | n/a |
 | `TT79-2026/Đ6.K2` | Khung danh mục vị trí việc làm tại cơ sở cai nghiện ma túy công lập có vị trí "căng tin" trong nhóm "Tham mưu, hành chính, tổng hợp; …". Điều khoản xác định vị trí việc làm của người dùng (người phụ trách căng tin theo Q-001; thuật ngữ chuẩn theo luật [SRC: 0-inputs/answers-2026-10-29.md, RQ-66], Q-013 đã quyết A), chung cho mọi UC do người phụ trách căng tin làm, không gắn riêng UC nào | áp dụng chung | n/a |
 | `TT79-2026/Đ41.K7` | "Việc sử dụng tiền trong căng tin được thực hiện qua hệ thống bán hàng căng tin trong cơ sở cai nghiện ma túy, bảo đảm minh bạch, thuận tiện trong quản lý giao dịch". Việc này do Hệ thống bán hàng căng tin làm, là hệ thống khác, ngoài phạm vi phần mềm kho [SRC: 0-inputs/answers-2026-10-28.md, RQ-03]; Hệ thống bán hàng căng tin tự đọc dữ liệu kho (giá bán theo lô, khóa và mở khóa bán tại kho), phần mềm kho không có UC tích hợp riêng [SRC: 0-inputs/answers-2026-10-29.md, RQ-54] (Q-015 đã quyết) | ngoài phần mềm | PH-015 (điểm chạm với Hệ thống bán hàng căng tin, Q-015 đã quyết B) |
+| `TT79-2026/Đ52.K4` | Ứng dụng khoa học công nghệ trong quản lý, điều hành cơ sở cai nghiện ma túy công lập (Điều 5) "được thực hiện sau khi các cơ sở cai nghiện ma túy công lập bảo đảm điều kiện về cơ sở vật chất, trang thiết bị". Chủ thể là cơ sở cai nghiện ma túy công lập, việc chuẩn bị cơ sở vật chất, trang thiết bị trước khi triển khai, không phải chức năng của phần mềm kho | ngoài phần mềm | n/a |
 
 - Lý do: một trong ba giá trị ở bảng trên; `chưa có UC` **bắt buộc** có PH loại `điều khoản chưa có UC`.
 - `TT79-2026/Đ41.K7` ghi `ngoài phần mềm` theo nghĩa ngoài hệ thống của dự án (việc nằm ở Hệ thống bán hàng căng tin),

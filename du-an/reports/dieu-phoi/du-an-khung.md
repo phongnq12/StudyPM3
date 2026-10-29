@@ -21,3 +21,8 @@
 | 17 | /ba-init | áp trả lời BA | business-analyst | A4 áp RQ-62 … RQ-66 | 1-ba-init/0-dau-vao/uc-phap-ly.md | 183.413 | 35 giây | 0 |
 | 18 | /ba-init | áp trả lời BA | business-analyst | A2 áp RQ-62 … RQ-66 | 1-ba-init/0-dau-vao/phap-ly.md | 224.945 | 37 giây | 0 |
 | 19 | /ba-init | áp trả lời BA | business-analyst | A5 áp RQ-64, 66, 67 | 1-ba-init/0-dau-vao/ban-do-quy-trinh/ | 421.390 | 2 phút | 0 |
+| 20 | /ba-overview | 1 | business-analyst | Lớp 1 BRD (create-brd) | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 409.891 | 20 phút 13 giây | 0 |
+| 21 | /ba-overview | 1 | quality-reviewer | Review độc lập BRD (vòng 1): 2 Chặn, 12 Nặng, 11 Nhẹ | — (chỉ đọc) | 345.220 | 9 phút 11 giây | — |
+| 22 | /ba-overview | 1 | business-analyst | Sửa BRD theo review vòng 1 (25 phát hiện) | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | — | — | 1 |
+| 23 | /ba-overview | 1 | business-analyst | Áp RQ-72…RQ-95 vào BRD | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 535.282 (cộng dồn phiên) | 5 phút 21 giây | 2 |
+| 24 | /ba-init --bo-sung | 2–4 | business-analyst | A2 thêm TT79 Đ5.K1.a, Đ5.K2, Đ52.K4; A4 ghép (mục 3, PH-032); A5 bổ sung bản đồ mục 4, cấp 1 | 1-ba-init/0-dau-vao/phap-ly.md, uc-phap-ly.md, ban-do-quy-trinh/ | 235.265 + 197.380 + 440.264 | 59 giây + 1 phút 17 giây + 1 phút 48 giây | 0 |

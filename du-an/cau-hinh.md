@@ -8,10 +8,10 @@ trước `/ba-init`. Mọi agent đọc file này trước khi làm (CLAUDE.md).
 
 | Tham số | Giá trị | Dùng ở | Nguồn |
 | --- | --- | --- | --- |
-| Mã dự án `<MA>` | {{VD: PM10}} | Mã UC WBS `<MA>.<NỀN TẢNG>.<MODULE>.cc.tt`, tên tài liệu business layer `*_<MA>_<PV>_vNN.md`, khóa localStorage prototype `<ma>.CN-xx.*` | {{}} |
-| Tên dự án | {{}} | `khoi-tao.mjs --ten`, tiêu đề sổ, README | {{}} |
-| Khách hàng | {{}} | BRD, bên liên quan | {{}} |
-| Nền tảng | {{WEB / APP / KIOSK / API / JOB}} | Mã UC WBS | {{}} |
+| Mã dự án `<MA>` | PM3CSCN | Mã UC WBS `<MA>.<NỀN TẢNG>.<MODULE>.cc.tt`, tên tài liệu business layer `*_<MA>_<PV>_vNN.md`, khóa localStorage prototype `<ma>.CN-xx.*` | 0-inputs/answers-2026-10-29.md, RQ-69 |
+| Tên dự án | Quản lý kho căng tin | `khoi-tao.mjs --ten`, tiêu đề sổ, README | 0-inputs/presales/prototype/README.md; tên khởi tạo /ba-init |
+| Khách hàng | Cơ sở cai nghiện ma túy công lập | BRD, bên liên quan | 0-inputs/answers-2026-10-29.md, RQ-71 |
+| Nền tảng | WEB | Mã UC WBS | 0-inputs/answers-2026-10-29.md, RQ-69 |
 | Design system | Design System PM2 1.1.0 (`3-ba-detail/templates/design-system/`) | Prototype, đặc tả màn | {{}} |
 | Màu chủ đạo | {{tên màu, mã hex}} | Khung prototype (`antdTheme.js`, `tokens.css`), đặc tả màn khung chung, checklist prototype, G2 | {{}} |
-| Git host | {{GitHub / GitLab}} | Mở PR (`gh` / `glab`) | {{}} |
+| Git host | GitHub | Mở PR (`gh` / `glab`) | remote origin (github.com) |

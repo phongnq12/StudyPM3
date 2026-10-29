@@ -54,7 +54,10 @@ người in và nơi nhận bản in phiếu nhập kho (PH-020, PH-021; Q-021 c
 mới sang đề xuất giá bán qua hộp "Quyết định giá bán" thuộc UC `PM3CSCN.WEB.10.01.01` (PH-017, RQ-52); Hệ thống bán
 hàng căng tin tự đọc dữ liệu kho (PH-015, RQ-54, hai chỗ nối ở QT-03, QT-05); PH-015, PH-017 trong sổ vẫn mở, bước 2
 đóng. Chỉ có 2 QT có căn cứ điều khoản (QT-01, QT-03); 4 QT còn lại chờ Q-019. BA chốt danh sách QT, cách gom, chuyển
-giao [SRC: 0-inputs/answers-2026-10-29.md, RQ-47].
+giao [SRC: 0-inputs/answers-2026-10-29.md, RQ-47]. Bổ sung (RQ-97): phần mềm kho thuộc hệ thống quản lý cơ sở cai
+nghiện thông minh, phải kết nối, đồng bộ (`PL:TT79-2026/Đ5.K1.a`, RQ-91); việc đồng bộ dữ liệu kho với Phần mềm quản lý
+cơ sở cai nghiện ghi ở mục 4 là luồng dữ liệu nền, không thành QT mới (lý do ở mục 4) <span style="color:red">**<u>GD-0007</u>**</span>; điều khoản `chưa có UC`
+PH-032 không sinh QT nên mục 6.2 vẫn trống.
 
 **Căn cứ chuẩn:** BABOK v3 mục 10.35 "Process Modelling"; OMG BPMN 2.0.2 (ISO/IEC 19510:2013) sơ đồ cộng tác cấp
 tổng; ISO/IEC/IEEE 29148:2018 mục 5.2 (truy vết về nguồn).
@@ -63,11 +66,11 @@ tổng; ISO/IEC/IEEE 29148:2018 mục 5.2 (truy vết về nguồn).
 | Nguồn | Đường dẫn | Dùng để |
 | --- | --- | --- |
 | Danh mục UC presales | 1-ba-init/0-dau-vao/uc-presales.md | UC, phân hệ; cột actor, mô tả luồng trống nên actor lấy theo Q-001 (đã quyết) |
-| Ma trận UC × điều khoản | 1-ba-init/0-dau-vao/uc-phap-ly.md | Căn cứ của QT-01, QT-03; 26/31 UC không có căn cứ (Q-019, Q-020) |
-| Danh mục pháp lý | 1-ba-init/0-dau-vao/phap-ly.md | Không có điều khoản loại `thủ tục`, `thời hạn`; `TT79-2026/Đ41.K4` (điều kiện, thẩm quyền) cho trình tự đề xuất rồi duyệt giá bán |
+| Ma trận UC × điều khoản | 1-ba-init/0-dau-vao/uc-phap-ly.md | Căn cứ của QT-01, QT-03; 26/31 UC không có căn cứ (Q-019, Q-020); mục 3: `TT79-2026/Đ5.K1.a` `chưa có UC` (PH-032), `TT79-2026/Đ5.K2` áp dụng chung, `TT79-2026/Đ52.K4` ngoài phần mềm |
+| Danh mục pháp lý | 1-ba-init/0-dau-vao/phap-ly.md | Không có điều khoản loại `thủ tục`, `thời hạn`; `TT79-2026/Đ41.K4` (điều kiện, thẩm quyền) cho trình tự đề xuất rồi duyệt giá bán; `TT79-2026/Đ5.K1.a` (kết nối, đồng bộ) cho hệ thống ngoài ở mục 4 |
 | Danh mục màn presales | 1-ba-init/0-dau-vao/man-presales.md | Luồng màn giá nhập (MP-004 → MP-001) cho QT-01; các QT khác không có màn (man-presales.md mục 4) |
 | Danh mục quy trình presales | 1-ba-init/0-dau-vao/quy-trinh-presales.md | QP-01 cho chuyển giao, hệ thống ngoài; QP-02 → QP-07 cho thứ tự UC, trigger, kết quả (không bước nào gắn UC; presales không có bảng mapping bước ↔ UC, Q-014 đã quyết B <span style="color:red">**<u>GD-0005</u>**</span> [SRC: 0-inputs/answers-2026-10-29.md, RQ-67]) |
-| Câu trả lời BA | 0-inputs/answers-2026-10-28.md | Trả lời bốn câu ở chỗ nối (RQ-01 → RQ-42), loại nguồn "BA xác nhận" |
+| Câu trả lời BA | 0-inputs/answers-2026-10-28.md; 0-inputs/answers-2026-10-29.md | Trả lời bốn câu ở chỗ nối (RQ-01 → RQ-42), quyết định các câu hỏi của bản đồ (RQ-47 → RQ-67), kết nối, đồng bộ (RQ-91, RQ-96, RQ-97); loại nguồn "BA xác nhận" |
 
 ## 1. Danh sách quy trình
 | Mã | Tên | Trigger | Kết quả | Actor chính | Đối tượng nghiệp vụ | UC presales | Điều khoản | Phân hệ | Nguồn |
@@ -159,6 +162,8 @@ Mục này trả lời: các quy trình nối với nhau thế nào, quy trình 
 | Hệ thống bán hàng căng tin | phần mềm | QT-03; QT-05; QT-06 | Gửi giá bán theo lô (QT-03); gửi khóa, mở khóa bán tại kho (QT-05); nhận về: trừ tồn kho theo lô FEFO khi bán, bỏ qua lô chờ giá, lô quá hạn, làm tồn kho giảm và kích hoạt kiểm tồn tối thiểu (QT-06). Hệ thống bán hàng căng tin tự đọc dữ liệu kho (giá bán theo lô, trạng thái khóa kho, tồn theo lô); phần mềm kho không có UC tích hợp riêng (Q-015 đã quyết B); PH-015 trong sổ vẫn mở, bước 2 đóng | [SRC: 1-ba-init/0-dau-vao/quy-trinh-presales.md, QP-01.08, QP-01.15, QP-04.09, QP-06.05, QP-06.11]; [SRC: 0-inputs/answers-2026-10-28.md, RQ-03, RQ-19, RQ-30, RQ-42]; [SRC: 0-inputs/answers-2026-10-29.md, RQ-54]; [SRC: 0-inputs/phap-ly/TT79/1. Thông tư số 79.docx, Điều 41 khoản 7, dòng 444] |
 | Nhà cung cấp | đơn vị | QT-02 | Nhận: hàng hóa giao để nhập kho (số lô, hạn sử dụng ghi trên phiếu nhập kho) | [SRC: 1-ba-init/0-dau-vao/quy-trinh-presales.md, QP-01.04, QP-03.01, QP-03.02]; [SRC: 0-inputs/answers-2026-10-28.md, RQ-14] |
 | Bộ phận kế toán | đơn vị | QT-02 | Gửi: bản in phiếu nhập kho phục vụ lưu trữ kế toán, in khi phiếu đã tạo xong (RQ-57); không UC presales nào có kế toán, người nhận và cách giao chưa rõ [PH-021] | [SRC: 1-ba-init/0-dau-vao/uc-presales.md, `PM3CSCN.WEB.09.01.05`]; [SRC: 0-inputs/answers-2026-10-29.md, RQ-57] |
+| Phần mềm quản lý cơ sở cai nghiện | phần mềm | QT-01; QT-02; QT-03; QT-04; QT-05 | Gửi (đồng bộ): danh mục kho, hàng hóa, nhà cung cấp (QT-01, QT-03 và danh mục kho `PM3CSCN.WEB.09.04.02`), tồn kho theo lô (QT-02, QT-04, QT-05), giá bán (QT-03); không gửi dữ liệu cá nhân người cai nghiện <span style="color:red">**<u>GD-0007</u>**</span>. Phần mềm này là đầu mối kết nối cơ sở dữ liệu quốc gia. Không UC presales nào làm việc kết nối, đồng bộ (PH-032). Không thành QT riêng: không có trigger nghiệp vụ, không đổi trạng thái đối tượng nghiệp vụ nào, chỉ sao dữ liệu do QT-01 → QT-05 tạo; cách kết nối, tần suất chưa có nguồn <span style="color:red">**<u>GD-0007</u>**</span> | [SRC: 1-ba-init/0-dau-vao/phap-ly.md, TT79-2026/Đ5.K1.a]; [SRC: 1-ba-init/0-dau-vao/uc-phap-ly.md, mục 3, TT79-2026/Đ5.K1.a]; [SRC: 0-inputs/answers-2026-10-29.md, RQ-91, RQ-96]; [SRC: 1-ba-init/open-questions.md, PH-032] |
+| Cơ sở dữ liệu quốc gia về dân cư; cơ sở dữ liệu người nghiện ma túy và người bị quản lý sau cai nghiện ma túy | phần mềm | n/a (phần mềm kho không trao đổi trực tiếp; Phần mềm quản lý cơ sở cai nghiện là đầu mối) | Không trao đổi trực tiếp với phần mềm kho; nhận dữ liệu qua Phần mềm quản lý cơ sở cai nghiện <span style="color:red">**<u>GD-0007</u>**</span> | [SRC: 1-ba-init/0-dau-vao/phap-ly.md, TT79-2026/Đ5.K1.a]; [SRC: 0-inputs/answers-2026-10-29.md, RQ-96] |
 
 Mục này trả lời: quy trình của dự án phải gửi, nhận gì với ai nằm ngoài phần mềm.
 
@@ -211,11 +216,14 @@ một luồng nghiệp vụ, hoặc có lý do. Chiều ngược: mọi quy trì
 | Trường | Nghĩa | Cách ghi | Ví dụ |
 | --- | --- | --- | --- |
 | QT | Quy trình chỉ có căn cứ điều khoản, ô "UC presales" ở mục 1 để trống | Mã QT có ở mục 1 | n/a (dự án này không có) |
-| Căn cứ | Điều khoản buộc có quy trình này | Mã điều khoản, thường là điều khoản `chưa có UC` ở uc-phap-ly.md mục 3 | n/a (uc-phap-ly.md mục 3 không có điều khoản `chưa có UC`) |
+| Căn cứ | Điều khoản buộc có quy trình này | Mã điều khoản, thường là điều khoản `chưa có UC` ở uc-phap-ly.md mục 3 | n/a (điều khoản `chưa có UC` duy nhất `TT79-2026/Đ5.K1.a` không sinh QT, xem mục 4) |
 | Q | Câu hỏi trong hay ngoài phạm vi | Mã Q; không kết luận "phát sinh", không ước lượng | n/a |
 
-- Không có QT nào ở mục này: cả 6 QT có UC presales; uc-phap-ly.md mục 3 không có điều khoản `chưa có UC`
-  (`TT79-2026/Đ6.K2` áp dụng chung, `TT79-2026/Đ41.K7` ngoài phần mềm, thuộc Hệ thống bán hàng căng tin ở mục 4).
+- Không có QT nào ở mục này: cả 6 QT có UC presales. uc-phap-ly.md mục 3 có một điều khoản `chưa có UC`,
+  `TT79-2026/Đ5.K1.a` (PH-032): việc kết nối, đồng bộ là luồng dữ liệu nền với Phần mềm quản lý cơ sở cai nghiện, không
+  có trigger, kết quả nghiệp vụ theo method mục 7.1, nên ghi ở mục 4, không thành QT <span style="color:red">**<u>GD-0007</u>**</span>. Các điều khoản còn lại ở mục
+  3: `TT79-2026/Đ6.K2`, `TT79-2026/Đ5.K2` áp dụng chung; `TT79-2026/Đ41.K7` ngoài phần mềm (Hệ thống bán hàng căng tin
+  ở mục 4); `TT79-2026/Đ52.K4` ngoài phần mềm (cơ sở bảo đảm cơ sở vật chất, trang thiết bị).
 
 ## 7. Sơ đồ
 Mỗi cấp một thư mục con của `ban-do-quy-trinh/`:
@@ -239,6 +247,7 @@ Mô tả sơ đồ cấp 1 bằng chữ:
 | Gateway "Lô cần giá bán mới?", "Hủy duyệt bị chặn?" | sau QT-02 | Chuyển giao QT-02 → QT-03, QT-02 → QT-05 | mục 3 dòng 2 → 4 |
 | Gateway "Hướng xử lý cảnh báo?" và link event A, B, C | sau QT-06 | Chuyển giao QT-06 → QT-02 (A: Nhập kho), QT-04 (B: Điều chuyển), QT-05 (C: Cần kiểm kê) | mục 3 dòng 5 → 7 |
 | Pool thu gọn Nhà cung cấp, Bộ phận kế toán, Hệ thống bán hàng căng tin | trên, bên phải | Message flow "Hàng hóa giao", "Bản in phiếu nhập kho", "Giá bán theo lô", "Khóa, mở khóa bán tại kho" | mục 4 |
+| Pool thu gọn Phần mềm quản lý cơ sở cai nghiện | dưới | Message flow từ cả pool dự án (luồng dữ liệu nền, không gắn một QT) "Đồng bộ danh mục kho, hàng hóa, nhà cung cấp, tồn kho theo lô, giá bán"; cơ sở dữ liệu quốc gia không vẽ vì không trao đổi trực tiếp | mục 4; `TT79-2026/Đ5.K1.a`; GD-0007 |
 
 Nguồn: cap-1/cap-1.drawio.svg
 

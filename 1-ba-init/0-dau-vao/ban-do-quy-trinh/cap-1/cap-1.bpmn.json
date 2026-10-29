@@ -1,7 +1,7 @@
 {
  "ten": "Bản đồ quy trình dựng ngược — Quản lý kho căng tin (cấp 1)",
  "cap": 1,
- "chu_giai_them": "⊞ QT-nn: quy trình dựng ngược (ban-do-quy-trinh.md mục 1). Link event cùng chữ cái là một chỗ nối (A: nhập kho, B: điều chuyển, C: kiểm kê).",
+ "chu_giai_them": "⊞ QT-nn: quy trình dựng ngược (ban-do-quy-trinh.md mục 1). Link event cùng chữ cái là một chỗ nối (A: nhập kho, B: điều chuyển, C: kiểm kê). Đồng bộ với phần mềm quản lý cơ sở cai nghiện là luồng dữ liệu nền của cả pool, không phải QT (ban-do-quy-trinh.md mục 4).",
  "pools": [
   {
    "id": "P",
@@ -46,6 +46,14 @@
    "lane": "CB",
    "hang": 3,
    "so_cot": 1.4
+  },
+  {
+   "id": "PMCS",
+   "ten": "Phần mềm quản lý cơ sở cai nghiện (đầu mối kết nối CSDL quốc gia)",
+   "thu_gon": true,
+   "vi_tri": "duoi",
+   "cot": 1.5,
+   "so_cot": 3
   }
  ],
  "nodes": [
@@ -577,6 +585,20 @@
      "cot": 2,
      "hang": 0.6
     }
+   ]
+  },
+  {
+   "tu": "P",
+   "den": "PMCS",
+   "loai": "message",
+   "nhan": "Đồng bộ danh mục kho, hàng hóa, nhà cung cấp, tồn kho theo lô, giá bán (TT79 Đ5.K1.a, GD-0007)",
+   "ra": [
+    0.17,
+    1
+   ],
+   "vao": [
+    0.3,
+    0
    ]
   },
   {
