@@ -82,3 +82,10 @@ PH-032,PH,TT79-2026/Đ5.K1.a chưa có UC (kết nối; đồng bộ CSDL quốc
 PH-033,PH,Bản đồ bước 1 thiếu chuyển giao QT-06 → QT-03,du-an/open-questions.md,,QT-06;QT-03,,draft,2026-10-29
 PH-034,PH,Phân công kho chưa có UC presales,du-an/open-questions.md,,,,draft,2026-10-29
 PH-035,PH,Mô hình giá bán prototype theo cặp khác giá theo lô,du-an/open-questions.md,,,,draft,2026-10-29
+ACT-01,ACT,Người phụ trách căng tin,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
+ACT-02,ACT,Trưởng cơ sở,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
+ACT-03,ACT,Tổ kiểm kê,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
+ACT-04,ACT,Hệ thống — tác vụ nền,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 5,,,draft,2026-10-29
+ACT-05,ACT,Hệ thống bán hàng căng tin,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 5.1,,,draft,2026-10-29
+ACT-06,ACT,Phần mềm quản lý cơ sở cai nghiện,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
+ACT-07,ACT,Hệ thống xác thực dùng chung,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,0-inputs/answers-2026-10-29.md RQ-149,,,draft,2026-10-29

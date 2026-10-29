@@ -56,3 +56,9 @@
 | 52 | /ba-overview | 4 (bổ sung lớp 3) | data-modeler | ERD v01: Mat_Hang_Kho (công tắc), lý do hủy, R-07 gồm STOCK_MISMATCH | ERD_PM3CSCN_QuanLyKhoCangTin_v00.md (→ _v01) | — | 1 phút 42 giây | 0 |
 | 53 | /ba-overview | 4 | data-modeler | Sửa SM theo review vòng 1 + RQ-170…RQ-181 | SM_PM3CSCN_QuanLyKhoCangTin_v00.md | — | — | 1 |
 | 54 | /ba-overview | 4 | data-modeler | SM sửa các điểm Nhẹ review #5, #7–#15; đổi tên ERD _v01 (phiên chính) | SM_PM3CSCN_QuanLyKhoCangTin_v00.md | 461.224 (cộng dồn phiên) | 5 phút 22 giây | 2 |
+| 55 | /ba-overview | 5 | usecase-analyst | Lớp 5 Tác nhân, use case (create-ucl) | 2-ba-overview/5-actor-usecase/UCD_, UCL_, TRACE_PM3CSCN_QuanLyKhoCangTin_v00.md; ô QT mục 10, BRD mục 12 | — | — | 0 |
+| 56 | /ba-overview | 5 | (kết quả) usecase-analyst | Lớp 5 Nháp: 7 ACT, 90 UC; ô QT mục 10, BRD mục 12 | UCD, UCL, TRACE _v00 | — | — | 0 |
+| 57 | /ba-overview | 5 | quality-reviewer | Review độc lập lớp 5 (vòng 1): 1 Chặn, 8 Nặng, 11 Nhẹ | — (chỉ đọc) | 409.195 | 11 phút 55 giây | — |
+| 58 | /ba-overview | 5 (bổ sung lớp 1, 3, 4) | business-analyst, data-modeler ×2 | BRD v02, ERD v02, SM v01: phiếu đề xuất giá bán nhiều dòng, lịch sử giá theo lô (RQ-183…RQ-198) | BRD _v01, ERD _v01, SM _v00 (chờ đổi tên) | 762.584 / 668.235 / 502.273 (cộng dồn) | — | 0 |
+| 59 | /ba-overview | 5 (bổ sung lớp 2) | business-analyst | QT v02: QT-03 phiếu đề xuất nhiều dòng (12 bước, tổng 82), tác nhân xác thực, RQ-183…RQ-198 | QT _v01 (chờ đổi tên) | — | 5 phút 47 giây | 0 |
+| 60 | /ba-overview | 5 (bổ sung) | — (phiên chính) | Đổi tên BRD _v02, QT _v02, ERD _v02, SM _v01; sửa đường dẫn; glossary Phiếu đề xuất giá bán | — | — | — | — |
