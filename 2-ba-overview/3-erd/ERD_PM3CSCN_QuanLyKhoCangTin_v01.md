@@ -2,7 +2,7 @@
 
 > Mô hình dữ liệu cho phần **quản lý kho căng tin, hàng hóa và giá bán, nhà cung cấp và giá nhập** của nhiều cơ sở cai nghiện ma túy, dựng từ [Quy trình nghiệp vụ](../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v01.md) — mục 1.1 Thuật ngữ, 3 Dữ liệu trục và loại biến động, 3.1 Quy tắc dùng chung, 5 Tác vụ nền, 6 Tham số, 8 Chứng từ, 9 Điểm kiểm soát — cùng prototype giá nhập presales (MP-001 → MP-004) và câu trả lời của BA (RQ-01 → RQ-163). **Tài liệu này là nguồn duy nhất** về mô hình dữ liệu và mã kỹ thuật.
 > Không có bản vẽ gốc (`../templates/00_quy_uoc_chung.md` mục 11): mọi bảng, trường ghi ✳; tên bảng, tên trường do ERD đặt. Giá trị liệt kê dùng **mã tiếng Anh**, tên tiếng Việt ghi cạnh.
-> Gồm **24 thực thể** thuộc phạm vi, 2 thực thể tham chiếu ngoài, 28 ràng buộc liên bảng `R-xx`, 13 điểm khác hoặc bổ sung `E-xx`.
+> Gồm **24 thực thể** thuộc phạm vi, 2 thực thể tham chiếu ngoài, 27 ràng buộc liên bảng `R-xx`, 14 điểm khác hoặc bổ sung `E-xx`.
 > Đọc: `*` bắt buộc, `◐` bắt buộc có điều kiện, 🧪 ERD tự đề xuất (mục 7), Δ giá trị dẫn xuất không lưu; câu hỏi và quyết định của BA ở mục 8; giả định của sổ bôi đỏ.
 > Tài liệu **không** chứa index, partition (thiết kế kỹ thuật), chuyển trạng thái (máy trạng thái — lớp 4), nội dung quy tắc nghiệp vụ (business rule — lớp 6), nhãn và validate theo màn (SRS, `/ba-detail`).
 
@@ -12,7 +12,7 @@
 |---|---|
 | Mã tài liệu | `ERD_PM3CSCN_QuanLyKhoCangTin` |
 | Dự án · Phân hệ | Quản lý kho căng tin (mã dự án PM3CSCN, nền tảng WEB — RQ-69) · Ba phân hệ presales: QUẢN LÝ KHO CĂNG TIN; CẤU HÌNH NGHIỆP VỤ HỆ THỐNG (danh mục hàng hóa và giá bán căng tin); QUẢN LÝ NHÀ CUNG CẤP HÀNG HÓA CĂNG TIN — một bộ tài liệu cho cả ba (RQ-70) |
-| Phiên bản · Trạng thái | v00 · Chờ review |
+| Phiên bản · Trạng thái | v01 · Chờ review |
 | Người soạn · Người review · Người duyệt | phongnq12 — BA (AI hỗ trợ soạn) · chưa chốt (BA lead) · chưa chốt (BA) |
 | Mức mật | chưa chốt (BA) |
 | Mức mô hình | Logical |
@@ -23,7 +23,8 @@
 
 | Tên version | Ngày cập nhật | PIC | Mô tả |
 | :--- | :--- | :--- | :--- |
-| **<span style="color:green">v00<br>(hiện tại)</span>** | **<span style="color:green">2026-10-29</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Dựng từ quy trình QT_PM3CSCN_QuanLyKhoCangTin v00 (/ba-overview đợt 3, lớp ERD).<br>- Điền ô của lớp trước (sửa không đổi nghĩa): quy trình mục 1.1 cột Thực thể ERD, mục 3 tên thực thể dữ liệu trục (Q-P13), đường dẫn ERD; BRD mục 9 NFR-02 (· <span style="color:red">**<u>GD-0007</u>**</span> · <span style="color:red">**<u>GD-0006</u>**</span>) dẫn ERD mục 9.<br>- BA chốt 29/10/2026: Q-E1 → Q-E14 (RQ-148 → RQ-162); nhiều cơ sở, dữ liệu riêng từng cơ sở (RQ-151, RQ-152) — thêm `Co_So`, `co_so_id` ở mọi bảng, R-23; đợt giá nhập hết dòng thì xóa mềm (RQ-163).<br>- Sửa theo review độc lập vòng 1: đề xuất giá bán duyệt khi ngày hiệu lực đã tới chuyển thẳng `EFFECTIVE`, giá bán hiện hành chỉ lấy `EFFECTIVE`; bỏ R-06 (sang business rule); thêm R-21, R-22; R-18 đúng một tệp; lô quá hạn theo kho; enum nhật ký thêm phân công kho; dẫn PH-034, PH-035.<br>- Tổng: 24 thực thể trong 7 nhóm, 2 thực thể ngoài, 22 R-xx, 13 E-xx, 14 câu hỏi đã chốt. Chỗ mô tả `trang_thai` trỏ máy trạng thái: chờ lớp 4.<br>- Sửa theo review độc lập vòng 2 và BA chốt 29/10/2026 (RQ-164 → RQ-168): cảnh báo lệch đối soát `STOCK_MISMATCH` của N-04 (R-24); số lượng lô, dòng điều chuyển số nguyên > 0; ngày bắt đầu áp giá là ngày muộn hơn giữa ngày hiệu lực và ngày duyệt; thêm R-24 → R-29; phân công kho không ghi nhật ký, chỉ lưu phân công hiện tại (bỏ `WAREHOUSE_ASSIGNMENT`); dòng giá nhập đã phát sinh chỉ tính phiếu đã trình; người khai báo `Co_So` hoãn theo BRD TH-04; nguồn QT, BRD v01. Tổng 24 thực thể, 28 R-xx đang dùng, 13 E-xx.</span> |
+| v00 | 2026-10-29 | phongnq12 | - Dựng từ quy trình QT_PM3CSCN_QuanLyKhoCangTin v00 (/ba-overview đợt 3, lớp ERD).<br>- Điền ô của lớp trước (sửa không đổi nghĩa): quy trình mục 1.1 cột Thực thể ERD, mục 3 tên thực thể dữ liệu trục (Q-P13), đường dẫn ERD; BRD mục 9 NFR-02 (· <span style="color:red">**<u>GD-0007</u>**</span> · <span style="color:red">**<u>GD-0006</u>**</span>) dẫn ERD mục 9.<br>- BA chốt 29/10/2026: Q-E1 → Q-E14 (RQ-148 → RQ-162); nhiều cơ sở, dữ liệu riêng từng cơ sở (RQ-151, RQ-152) — thêm `Co_So`, `co_so_id` ở mọi bảng, R-23; đợt giá nhập hết dòng thì xóa mềm (RQ-163).<br>- Sửa theo review độc lập vòng 1: đề xuất giá bán duyệt khi ngày hiệu lực đã tới chuyển thẳng `EFFECTIVE`, giá bán hiện hành chỉ lấy `EFFECTIVE`; bỏ R-06 (sang business rule); thêm R-21, R-22; R-18 đúng một tệp; lô quá hạn theo kho; enum nhật ký thêm phân công kho; dẫn PH-034, PH-035.<br>- Tổng: 24 thực thể trong 7 nhóm, 2 thực thể ngoài, 22 R-xx, 13 E-xx, 14 câu hỏi đã chốt. Chỗ mô tả `trang_thai` trỏ máy trạng thái: chờ lớp 4.<br>- Sửa theo review độc lập vòng 2 và BA chốt 29/10/2026 (RQ-164 → RQ-168): cảnh báo lệch đối soát `STOCK_MISMATCH` của N-04 (R-24); số lượng lô, dòng điều chuyển số nguyên > 0; ngày bắt đầu áp giá là ngày muộn hơn giữa ngày hiệu lực và ngày duyệt; thêm R-24 → R-29; phân công kho không ghi nhật ký, chỉ lưu phân công hiện tại (bỏ `WAREHOUSE_ASSIGNMENT`); dòng giá nhập đã phát sinh chỉ tính phiếu đã trình; người khai báo `Co_So` hoãn theo BRD TH-04; nguồn QT, BRD v01. Tổng 24 thực thể, 28 R-xx đang dùng, 13 E-xx.<br>- Điền từ SM_PM3CSCN_QuanLyKhoCangTin_v00, không đổi nghĩa: mục 4 chỗ mô tả `trang_thai` thay `chờ lớp 4` bằng `SM mục n` — `Nha_Cung_Cap` SM mục 2, `Mat_Hang` SM mục 3, `Phieu_Nhap_Kho` SM mục 5, `De_Xuat_Gia_Ban` SM mục 6, `Phieu_Dieu_Chuyen` SM mục 7, `Bien_Ban_Kiem_Ke` SM mục 8, `Canh_Bao` SM mục 9. |
+| **<span style="color:green">v01<br>(hiện tại)</span>** | **<span style="color:green">2026-10-29</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Bổ sung theo lớp 4 (máy trạng thái), thay đổi có nghĩa, về Chờ review. BA chốt 29/10/2026 (RQ-169 → RQ-181):<br>- RQ-170 → RQ-172: công tắc Cho phép bán, Cho phép đặt hàng theo kho × mặt hàng; gộp với tồn tối thiểu thành `Mat_Hang_Kho` (đổi tên từ `Ton_Toi_Thieu`, cùng grain — E-14); `so_luong_toi_thieu` thành không bắt buộc.<br>- RQ-172, RQ-173: nhật ký thêm loại đối tượng `ITEM` Mặt hàng; `MIN_STOCK` đổi thành `ITEM_WAREHOUSE` Mặt hàng tại kho.<br>- RQ-146, RQ-169, RQ-176: R-07 mở rộng cho `STOCK_MISMATCH`; bỏ R-24; Trưởng cơ sở xác nhận đóng cảnh báo lệch đối soát.<br>- RQ-175: lý do bắt buộc khi người lập hủy (`ly_do_huy`) và khi hủy phê duyệt (`ly_do_huy_duyet`) trên bốn chứng từ.<br>- RQ-180: ghi chú chặn hủy phê duyệt phiếu nhập kho khi lô nằm trên đề xuất giá bán chưa đóng (business rule).<br>- Tổng: 24 thực thể, 27 R-xx đang dùng, 14 E-xx.</span> |
 
 ## Phê duyệt
 
@@ -53,7 +54,7 @@
 - Trường chung: `co_so_id` (FK → `Co_So`, `*`; mọi bảng trừ `Co_So`), `nguoi_tao`, `thoi_diem_tao`, `nguoi_cap_nhat`, `thoi_diem_cap_nhat`; trường người là tham chiếu logic tới `Nguoi_Dung`. Kho, mặt hàng, nhà cung cấp, giá nhập, giá bán, chứng từ đều riêng từng cơ sở; người dùng chỉ thấy dữ liệu cơ sở mình (RQ-151, RQ-152). `co_so_id` ở dòng chứng từ, sổ, nhật ký là sao chép khóa phạm vi có chủ đích để lọc theo cơ sở; cha và con luôn cùng cơ sở — R-23 (E-12). **UK nghiệp vụ** tính trong phạm vi `co_so_id` và chỉ trên các dòng chưa xóa mềm. Tài khoản người dùng ghi vào bản ghi phải thuộc cùng cơ sở: thao tác ghi tra hệ thống xác thực dùng chung (R-23; RQ-149, NFR-10 Dữ liệu riêng từng cơ sở). `nguoi_tao` của chứng từ là **người lập** chứng từ đó.
 - Chứng từ có `trang_thai` (`Phieu_Nhap_Kho`, `Phieu_Dieu_Chuyen`, `Bien_Ban_Kiem_Ke`, `De_Xuat_Gia_Ban`, `Canh_Bao`) và sổ `Ton_Kho_Lo` có `row_version int` cho **khóa lạc quan** 🧪 — E-03. Mọi bên ghi `Ton_Kho_Lo`, kể cả Hệ thống bán hàng căng tin, tuân tồn không âm và ghi `Bien_Dong_Ton` cùng giao dịch (RQ-153).
 - Tiền: `decimal` không phần lẻ, đơn vị đồng; số lượng: `int` theo đơn vị tính nhỏ nhất của mặt hàng; độ dài `varchar` không ghi số do SRS đặt (RQ-150); ngoại lệ có số lấy từ prototype giá nhập: `Dot_Gia_Nhap.so_hieu_can_cu` 100 ký tự, `Dong_Gia_Nhap.ly_do_quyet_dinh` và `Dong_Gia_Nhap.ly_do_xoa` 500 ký tự (nguồn ở từng dòng). Ngày giờ lưu kèm múi giờ; so theo ngày dùng giờ Việt Nam UTC+7 (quy trình mục 5), ngày lịch (`GS-03` Ngưỡng sắp hết hạn).
-- **Xóa mềm**: `da_xoa`, `nguoi_xoa_id`, `thoi_diem_xoa` — áp cho `Co_So`, `Kho`, `Mat_Hang`, `Mat_Hang_Nha_Cung_Cap`, `Ton_Toi_Thieu`, `Dong_Gia_Nhap`, và `Dot_Gia_Nhap` khi mọi dòng của đợt đã bị xóa (RQ-163, E-11). Nhà cung cấp không xóa, chỉ ngừng hợp tác (QT-01 bước 1). Chứng từ khác đóng bằng trạng thái, không xóa (quy trình mục 3 Khóa chứng từ đã đóng; NFR-08 Giữ chứng từ đã đóng · <span style="color:red">**<u>GD-0006</u>**</span>). **Xóa hẳn** chỉ ở: đề xuất giá bán Nháp gắn dòng giá nhập ở QT-01 bước 11, kèm `De_Xuat_Gia_Ban_Lo`, `Tep_Dinh_Kem` của nó; dòng con của chứng từ chưa trình bị bỏ khi sửa (`Lo` của phiếu nhập kho ở `DRAFT`, `REJECTED`; `Phieu_Dieu_Chuyen_Dong` của phiếu điều chuyển ở `DRAFT`, `REJECTED`; `De_Xuat_Gia_Ban_Lo`, `Tep_Dinh_Kem` của đề xuất ở `DRAFT`, `REJECTED`); `Phan_Cong_Kho` khi bỏ phân công — chỉ lưu phân công hiện tại (RQ-168). Sổ, nhật ký chỉ thêm.
+- **Xóa mềm**: `da_xoa`, `nguoi_xoa_id`, `thoi_diem_xoa` — áp cho `Co_So`, `Kho`, `Mat_Hang`, `Mat_Hang_Nha_Cung_Cap`, `Mat_Hang_Kho`, `Dong_Gia_Nhap`, và `Dot_Gia_Nhap` khi mọi dòng của đợt đã bị xóa (RQ-163, E-11). Nhà cung cấp không xóa, chỉ ngừng hợp tác (QT-01 bước 1). Chứng từ khác đóng bằng trạng thái, không xóa (quy trình mục 3 Khóa chứng từ đã đóng; NFR-08 Giữ chứng từ đã đóng · <span style="color:red">**<u>GD-0006</u>**</span>). **Xóa hẳn** chỉ ở: đề xuất giá bán Nháp gắn dòng giá nhập ở QT-01 bước 11, kèm `De_Xuat_Gia_Ban_Lo`, `Tep_Dinh_Kem` của nó; dòng con của chứng từ chưa trình bị bỏ khi sửa (`Lo` của phiếu nhập kho ở `DRAFT`, `REJECTED`; `Phieu_Dieu_Chuyen_Dong` của phiếu điều chuyển ở `DRAFT`, `REJECTED`; `De_Xuat_Gia_Ban_Lo`, `Tep_Dinh_Kem` của đề xuất ở `DRAFT`, `REJECTED`); `Phan_Cong_Kho` khi bỏ phân công — chỉ lưu phân công hiện tại (RQ-168). Sổ, nhật ký chỉ thêm.
 - **Tham chiếu ngoài phân hệ** là tham chiếu logic, **không** đặt khóa ngoại cơ sở dữ liệu; dữ liệu cần để quyết định được **chụp** vào chứng từ.
 - **Khóa ngoại đa hình** luôn đi cùng cột loại, có chỉ mục (loại, id) — bảng ánh xạ ở mục 5.2. Trên sơ đồ, đường đa hình mang nhãn `(logic)` và đầu cha `|o`: một dòng con chỉ trỏ tới bảng đó khi cột loại có đúng giá trị tương ứng.
 - **Không lưu cờ** cho các khóa của quy trình mục 3 (khóa kho đang kiểm kê, khóa lô chờ giá, khóa lô quá hạn, khóa dòng giá nhập, khóa chứng từ đã đóng), hiệu lực của dòng giá nhập, giá bán hiện hành, tình trạng ngừng hoạt động của cặp nhà cung cấp – mặt hàng, hàng đang chuyển — suy ra khi truy vấn (dòng Δ ở mục 4).
@@ -72,7 +73,7 @@ Cột `Quy trình ghi` chỉ ghi phía **ghi** (tạo · sửa · xóa); phía �
 | 3 | `Mat_Hang` | A. Cơ sở, danh mục và cấu hình kho | ✳ | Danh mục | QT-03 bước 1 tạo · sửa, ngừng hoạt động, xóa theo `PS:PM3CSCN.WEB.10.01.01` (quy trình mục 1 Ngoài phạm vi) | Người phụ trách căng tin | Một dòng của danh mục hàng hóa căng tin |
 | 4 | `Nha_Cung_Cap` | A. Cơ sở, danh mục và cấu hình kho | ✳ | Danh mục | QT-01 bước 1 tạo, sửa, ngừng hợp tác | Người phụ trách căng tin | Hồ sơ nhà cung cấp |
 | 5 | `Mat_Hang_Nha_Cung_Cap` | A. Cơ sở, danh mục và cấu hình kho | ✳ | Danh mục | QT-01 bước 2 thêm, xóa | Người phụ trách căng tin | Danh mục hàng hóa cung ứng — cặp nhà cung cấp – mặt hàng |
-| 6 | `Ton_Toi_Thieu` | A. Cơ sở, danh mục và cấu hình kho | ✳ | Cấu hình | Thiết lập theo `PS:PM3CSCN.WEB.09.04.03` — đầu vào QT-06, không có bước (quy trình mục 1 Ngoài phạm vi) | Người phụ trách căng tin | Tồn tối thiểu theo kho × mặt hàng — `CH-01` |
+| 6 | `Mat_Hang_Kho` | A. Cơ sở, danh mục và cấu hình kho | ✳ | Cấu hình | Tồn tối thiểu theo `PS:PM3CSCN.WEB.09.04.03` — đầu vào QT-06, không có bước (quy trình mục 1 Ngoài phạm vi); công tắc Cho phép bán, Cho phép đặt hàng do người phụ trách căng tin của kho bật, tắt, không duyệt (RQ-170, RQ-172) | Người phụ trách căng tin | Thiết lập của một mặt hàng tại một kho: tồn tối thiểu `CH-01`, cho phép bán, cho phép đặt hàng |
 | 7 | `Dot_Gia_Nhap` | B. Giá nhập | ✳ | Chứng từ | QT-01 bước 3 tạo · bước 5 xóa mềm khi hết dòng (RQ-163) | Người phụ trách căng tin | Đợt giá nhập của một nhà cung cấp theo một căn cứ |
 | 8 | `Dong_Gia_Nhap` | B. Giá nhập | ✳ | Dòng chứng từ | QT-01 bước 3 tạo · bước 4 sửa · bước 5 xóa | Người phụ trách căng tin | Giá nhập của một cặp trong một đợt |
 | 9 | `Tep_Dinh_Kem` | B. Giá nhập | ✳ 🧪 | Dòng chứng từ | QT-01 bước 3 tạo · QT-03 bước 2 tạo, xóa | Người phụ trách căng tin | Tệp căn cứ của đợt giá nhập, chứng từ giá bán lẻ của đề xuất giá bán |
@@ -89,7 +90,7 @@ Cột `Quy trình ghi` chỉ ghi phía **ghi** (tạo · sửa · xóa); phía �
 | 20 | `Bien_Ban_Kiem_Ke_Dong` | F. Kiểm kê | ✳ | Dòng chứng từ | QT-05 bước 3 tạo (chốt số sách) · bước 5 sửa (số thực tế) | Trưởng cơ sở | Một lô trên biên bản kiểm kê |
 | 21 | `Thanh_Vien_Kiem_Ke` | F. Kiểm kê | ✳ | Dòng chứng từ | QT-05 bước 1 tạo | Trưởng cơ sở | Một thành viên tổ kiểm kê của biên bản |
 | 22 | `Canh_Bao` | G. Cảnh báo và nhật ký | ✳ | Chứng từ | QT-02 bước 15 tạo · QT-06 bước 3 tạo (`N-01` · <span style="color:red">**<u>GD-0003</u>**</span>) · `N-04` tạo cảnh báo lệch đối soát · QT-06 bước 4 xem · bước 5 đóng | Người phụ trách căng tin | Cảnh báo tồn, hạn sử dụng, lô chờ giá |
-| 23 | `Nhat_Ky_Thay_Doi` | G. Cảnh báo và nhật ký | ✳ | Nhật ký | QT-01 bước 7 · mọi thao tác workflow ở QT-02 → QT-06 (quy trình mục 2 — mỗi thao tác một quyền; RQ-121) · thiết lập kho, tồn tối thiểu (NFR-07 Lịch sử thay đổi) | Chủ sở hữu của đối tượng được ghi vết | Lịch sử thay đổi |
+| 23 | `Nhat_Ky_Thay_Doi` | G. Cảnh báo và nhật ký | ✳ | Nhật ký | QT-01 bước 7 · mọi thao tác workflow ở QT-02 → QT-06 (quy trình mục 2 — mỗi thao tác một quyền; RQ-121) · thiết lập kho, mặt hàng tại kho (NFR-07 Lịch sử thay đổi; RQ-172) · ngừng hoạt động, kích hoạt lại mặt hàng, nhà cung cấp (RQ-173) | Chủ sở hữu của đối tượng được ghi vết | Lịch sử thay đổi |
 | 24 | `Co_So` | A. Cơ sở, danh mục và cấu hình kho | ✳ | Danh mục | Hoãn tới kế hoạch triển khai — đơn vị vận hành bản cài đặt chung chưa xác định (BRD Q-B36 → TH-04; RQ-164; E-12) | Hoãn — BRD TH-04 | Một cơ sở cai nghiện ma túy dùng hệ thống |
 
 **Thực thể tham chiếu ngoài:**
@@ -166,10 +167,10 @@ erDiagram
     Nguoi_Dung ||--o{ Phan_Cong_Kho : "(logic) nhận"
     Nha_Cung_Cap ||--o{ Mat_Hang_Nha_Cung_Cap : "cung ứng"
     Mat_Hang ||--o{ Mat_Hang_Nha_Cung_Cap : "được cung ứng qua"
-    Kho ||--o{ Ton_Toi_Thieu : "đặt"
-    Mat_Hang ||--o{ Ton_Toi_Thieu : "có"
+    Kho ||--o{ Mat_Hang_Kho : "đặt"
+    Mat_Hang ||--o{ Mat_Hang_Kho : "có"
     Co_So ||--o{ Mat_Hang_Nha_Cung_Cap : "sở hữu"
-    Co_So ||--o{ Ton_Toi_Thieu : "sở hữu"
+    Co_So ||--o{ Mat_Hang_Kho : "sở hữu"
     Co_So ||--o{ Phan_Cong_Kho : "sở hữu"
     Co_So {
         uuid id PK
@@ -202,7 +203,7 @@ erDiagram
         uuid nha_cung_cap_id FK
         uuid mat_hang_id FK
     }
-    Ton_Toi_Thieu {
+    Mat_Hang_Kho {
         uuid id PK
         uuid kho_id FK
         uuid mat_hang_id FK
@@ -497,7 +498,7 @@ Mỗi dòng là một mặt hàng của danh mục hàng hóa căng tin của m�
 | `ma` | varchar | `*` · UK trong `co_so_id` | ✳ | Mã hàng | MP-001 (ô tìm "mã hàng") · `[SRC: 0-inputs/presales/prototype/src/data/seed/PM3_PurchasePrice_Data.js, dòng 19–29]` · RQ-152 |
 | `ten` | varchar | `*` | ✳ | Tên hàng | QT-03 bước 1 · `[SRC: 0-inputs/presales/prototype/src/data/seed/PM3_PurchasePrice_Data.js, dòng 19–29]` |
 | `don_vi_tinh` | varchar | `*` | ✳ | Đơn vị tính nhỏ nhất; số lượng của lô, tồn kho, tồn tối thiểu là số nguyên theo đơn vị này | Quy trình mục 6 `CH-01` ("số lượng theo đơn vị tính của mặt hàng") · RQ-150 · `[SRC: 0-inputs/presales/prototype/src/data/seed/PM3_PurchasePrice_Data.js, dòng 19–29]` |
-| `trang_thai` | enum | `*` | ✳ | `ACTIVE` Đang hoạt động · `INACTIVE` Ngừng hoạt động — máy trạng thái chờ lớp 4 | Quy trình mục 1.1 Ngừng hoạt động · `PS:PM3CSCN.WEB.10.01.01` |
+| `trang_thai` | enum | `*` | ✳ | `ACTIVE` Đang hoạt động · `INACTIVE` Ngừng hoạt động — máy trạng thái SM mục 3 | Quy trình mục 1.1 Ngừng hoạt động · `PS:PM3CSCN.WEB.10.01.01` · RQ-171 · RQ-173 |
 
 #### `Nha_Cung_Cap` — Hồ sơ nhà cung cấp · ✳
 
@@ -509,7 +510,7 @@ Mỗi dòng là hồ sơ của một nhà cung cấp trong một cơ sở. Ngư�
 | `ten` | varchar | `*` | ✳ | Tên nhà cung cấp | QT-01 bước 1 · `[SRC: 0-inputs/presales/prototype/src/data/seed/PM3_PurchasePrice_Data.js, dòng 10–16]` |
 | `ho_ten_nguoi_lien_he` | varchar | | ✳ | Họ tên người liên hệ — dữ liệu cá nhân (mục 9); không đồng bộ sang phần mềm quản lý cơ sở cai nghiện | RQ-104 · RQ-159 · quy trình mục 5 `N-02` · <span style="color:red">**<u>GD-0007</u>**</span> |
 | `dien_thoai_nguoi_lien_he` | varchar | | ✳ | Điện thoại người liên hệ — dữ liệu cá nhân (mục 9); không đồng bộ | RQ-104 · RQ-159 · quy trình mục 5 `N-02` · <span style="color:red">**<u>GD-0007</u>**</span> |
-| `trang_thai` | enum | `*` | ✳ | `ACTIVE` Đang hoạt động · `TERMINATED` Ngừng hợp tác — máy trạng thái chờ lớp 4 | QT-01 bước 1 · quy trình mục 1.1 Hồ sơ nhà cung cấp · RQ-16 |
+| `trang_thai` | enum | `*` | ✳ | `ACTIVE` Đang hoạt động · `TERMINATED` Ngừng hợp tác — máy trạng thái SM mục 2 | QT-01 bước 1 · quy trình mục 1.1 Hồ sơ nhà cung cấp · RQ-16 |
 
 #### `Mat_Hang_Nha_Cung_Cap` — Danh mục hàng hóa cung ứng · ✳
 
@@ -522,15 +523,17 @@ Mỗi dòng là một mặt hàng mà một nhà cung cấp cung ứng (một c�
 
 **Giá trị dẫn xuất Δ:** `ngung_hoat_dong` = `Nha_Cung_Cap.trang_thai` = `TERMINATED`, hoặc `Mat_Hang.trang_thai` = `INACTIVE`, hoặc `Mat_Hang.da_xoa`, hoặc dòng cặp `da_xoa` — quy trình mục 1.1 Ngừng hoạt động.
 
-#### `Ton_Toi_Thieu` — Hạn mức cảnh báo: tồn tối thiểu · ✳
+#### `Mat_Hang_Kho` — Mặt hàng tại kho: hạn mức cảnh báo tồn tối thiểu, cho phép bán, cho phép đặt hàng · ✳
 
-Mỗi dòng là tồn tối thiểu của một mặt hàng tại một kho — `CH-01`. Không có dòng là kho × mặt hàng chưa đặt tồn tối thiểu, không cảnh báo tồn (RQ-128). Người phụ trách căng tin thiết lập theo `PS:PM3CSCN.WEB.09.04.03`, không duyệt, có lịch sử (RQ-33, NFR-07 Lịch sử thay đổi). Phần số ngày N của hạn mức cảnh báo nằm ở `Kho.so_ngay_canh_bao_het_han` vì đặt theo kho, khác grain.
+Mỗi dòng là thiết lập của một mặt hàng tại một kho: tồn tối thiểu (`CH-01`) và hai công tắc Cho phép bán, Cho phép đặt hàng (RQ-170, RQ-171). Không có dòng thì dùng mặc định: chưa đặt tồn tối thiểu, không cảnh báo tồn (RQ-128); cả hai công tắc bật (RQ-172). Người phụ trách căng tin của kho thiết lập (tồn tối thiểu theo `PS:PM3CSCN.WEB.09.04.03`), không duyệt, ghi `Nhat_Ky_Thay_Doi` (RQ-33, RQ-172, NFR-07 Lịch sử thay đổi). `cho_phep_ban` thuộc dữ liệu cung cấp cho bán hàng (BRQ-24 Dữ liệu cho bán hàng); `Mat_Hang.trang_thai` Ngừng hoạt động vẫn là công tắc cấp danh mục (RQ-171). Gộp tồn tối thiểu và công tắc vì cùng grain kho × mặt hàng (E-14). Phần số ngày N của hạn mức cảnh báo nằm ở `Kho.so_ngay_canh_bao_het_han` vì đặt theo kho, khác grain.
 
 | Trường | Kiểu | Ràng buộc | Đổi | Mô tả | Nguồn |
 |---|---|---|---|---|---|
 | `kho_id` | FK → `Kho` | `*` · UK(`kho_id`, `mat_hang_id`) | ✳ | Kho | Quy trình mục 6 `CH-01` (phạm vi kho × mặt hàng) · RQ-28 |
 | `mat_hang_id` | FK → `Mat_Hang` | `*` · UK(`kho_id`, `mat_hang_id`) | ✳ | Mặt hàng | Quy trình mục 6 `CH-01` · RQ-28 |
-| `so_luong_toi_thieu` | int | `*` · ≥ 0 | ✳ | Tồn tối thiểu, theo đơn vị tính của mặt hàng; tồn dưới số này thì cảnh báo | Quy trình mục 6 `CH-01` (số không âm) · RQ-150 · BRQ-22 Cảnh báo tồn tối thiểu |
+| `so_luong_toi_thieu` | int | ≥ 0 | ✳ | Tồn tối thiểu, theo đơn vị tính của mặt hàng; tồn dưới số này thì cảnh báo; trống là chưa đặt, không cảnh báo tồn (RQ-128) | Quy trình mục 6 `CH-01` (số không âm) · RQ-150 · BRQ-22 Cảnh báo tồn tối thiểu |
+| `cho_phep_ban` | boolean | `*` · mặc định đúng | ✳ | Đúng: Hệ thống bán hàng căng tin được bán mặt hàng tại kho này; sai: không bán mặt hàng tại kho này | RQ-170 · RQ-171 · RQ-172 · BRQ-24 Dữ liệu cho bán hàng |
+| `cho_phep_dat_hang` | boolean | `*` · mặc định đúng | ✳ | Cho phép đặt hàng mặt hàng tại kho; định nghĩa trước cho nghiệp vụ đặt hàng, ngoài phạm vi lần này | RQ-170 · RQ-172 · <span style="color:red">**<u>GD-0004</u>**</span> |
 
 ### 4.2. Nhóm B — Giá nhập
 
@@ -581,7 +584,7 @@ Mỗi dòng là một tệp gắn vào một đợt giá nhập (tệp căn cứ
 
 #### `Phieu_Nhap_Kho` — Phiếu nhập kho · ✳
 
-Mỗi dòng là một phiếu nhập hàng hóa từ một nhà cung cấp vào một kho, kể cả phiếu nhập kho đầu kỳ — không xử lý riêng, không có cờ đầu kỳ (RQ-98, RQ-105). Người phụ trách căng tin của kho lập ở QT-02 bước 1, trình hoặc hủy ở bước 5; Trưởng cơ sở duyệt hoặc từ chối ở bước 7, hủy phê duyệt ở bước 16. Mỗi dòng hàng là một `Lo`.
+Mỗi dòng là một phiếu nhập hàng hóa từ một nhà cung cấp vào một kho, kể cả phiếu nhập kho đầu kỳ — không xử lý riêng, không có cờ đầu kỳ (RQ-98, RQ-105). Người phụ trách căng tin của kho lập ở QT-02 bước 1, trình hoặc hủy ở bước 5; Trưởng cơ sở duyệt hoặc từ chối ở bước 7, hủy phê duyệt ở bước 16. Mỗi dòng hàng là một `Lo`. Hủy phê duyệt bị chặn khi một lô của phiếu nằm trên `De_Xuat_Gia_Ban` chưa đóng — phải hủy hoặc từ chối đề xuất trước; xem business rule về hủy phê duyệt phiếu nhập kho (RQ-180).
 
 | Trường | Kiểu | Ràng buộc | Đổi | Mô tả | Nguồn |
 |---|---|---|---|---|---|
@@ -589,12 +592,14 @@ Mỗi dòng là một phiếu nhập hàng hóa từ một nhà cung cấp vào 
 | `kho_id` | FK → `Kho` | `*` | ✳ | Kho nhập; thuộc kho được phân công của người lập — xem business rule về phạm vi kho (quy trình mục 9 điểm 30) | QT-02 bước 1 · RQ-05 · RQ-142 |
 | `nha_cung_cap_id` | FK → `Nha_Cung_Cap` | `*` | ✳ | Nhà cung cấp giao hàng; mọi phiếu, kể cả phiếu nhập kho đầu kỳ | QT-02 bước 1 · RQ-105 · BRQ-10 Phiếu nhập truy về nhà cung cấp |
 | `ngay_nhap` | date | `*` | ✳ | Ngày nhập hàng ghi trên phiếu | MP-002 (bảng Phát sinh từ dòng: Ngày nhập) |
-| `trang_thai` | enum | `*` | ✳ | `DRAFT` Nháp · `PENDING_APPROVAL` Chờ duyệt · `REJECTED` Từ chối · `CANCELLED` Đã hủy · `APPROVED` Đã duyệt · `REVOKED` Đã hủy duyệt — máy trạng thái chờ lớp 4 | QT-02 bước 1, 5, 7, 18 · quy trình mục 1.1 d · `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 24]` (Nháp) |
+| `trang_thai` | enum | `*` | ✳ | `DRAFT` Nháp · `PENDING_APPROVAL` Chờ duyệt · `REJECTED` Từ chối · `CANCELLED` Đã hủy · `APPROVED` Đã duyệt · `REVOKED` Đã hủy duyệt — máy trạng thái SM mục 5 | QT-02 bước 1, 5, 7, 18 · quy trình mục 1.1 d · `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 24]` (Nháp) |
 | `nguoi_trinh_id` | uuid | `◐` khi `trang_thai` ∈ {`PENDING_APPROVAL`, `REJECTED`, `APPROVED`, `REVOKED`} | ✳ | Người trình lần gần nhất; tham chiếu logic `Nguoi_Dung` | QT-02 bước 5 · RQ-121 |
 | `thoi_diem_trinh` | timestamp | `◐` khi `trang_thai` ∈ {`PENDING_APPROVAL`, `REJECTED`, `APPROVED`, `REVOKED`} | ✳ | Thời điểm trình lần gần nhất | QT-02 bước 5 |
 | `nguoi_duyet_id` | uuid | `◐` khi `trang_thai` ∈ {`APPROVED`, `REVOKED`} | ✳ | Trưởng cơ sở duyệt phiếu | QT-02 bước 7 · BRQ-05 Duyệt hoặc từ chối chứng từ · NFR-01 Chỉ Trưởng cơ sở duyệt |
 | `thoi_diem_duyet` | timestamp | `◐` khi `trang_thai` ∈ {`APPROVED`, `REVOKED`} | ✳ | Thời điểm duyệt | QT-02 bước 7 · BRQ-05 Duyệt hoặc từ chối chứng từ |
 | `ly_do_tu_choi` | text | `◐` khi `trang_thai` = `REJECTED` | ✳ | Lý do từ chối lần gần nhất; người từ chối ghi ở `Nhat_Ky_Thay_Doi` | QT-02 bước 7 · RQ-34 · BRQ-26 Từ chối có lý do |
+| `ly_do_huy` | text | `◐` khi `trang_thai` = `CANCELLED` | ✳ | Lý do người lập hủy chứng từ | RQ-175 · quy trình mục 1.1 d Hủy |
+| `ly_do_huy_duyet` | text | `◐` khi `trang_thai` = `REVOKED` | ✳ | Lý do Trưởng cơ sở hủy phê duyệt | RQ-175 · RQ-40 |
 | `nguoi_huy_duyet_id` | uuid | `◐` khi `trang_thai` = `REVOKED` | ✳ | Trưởng cơ sở hủy phê duyệt | QT-02 bước 16 · RQ-40 |
 | `thoi_diem_huy_duyet` | timestamp | `◐` khi `trang_thai` = `REVOKED` | ✳ | Thời điểm hủy phê duyệt | QT-02 bước 16, 18 |
 
@@ -624,7 +629,7 @@ Mỗi dòng là số lượng hiện có của một lô tại một kho. Tổng
 | `lo_id` | FK → `Lo` | `*` · UK(`kho_id`, `lo_id`) | ✳ | Lô | Quy trình mục 3 dữ liệu trục · RQ-14 |
 | `so_luong` | int | `*` · ≥ 0 | ✳ | Số lượng của lô đang có tại kho | Quy trình mục 3 dữ liệu trục · RQ-124 (không vượt tồn) · RQ-153 (mọi bên ghi tuân tồn không âm) |
 
-**Giá trị dẫn xuất Δ:** `ton_mat_hang(K, M)` = Σ `so_luong` của các `Ton_Kho_Lo` có `kho_id` = K và `Lo.mat_hang_id` = M — so với `Ton_Toi_Thieu` ở QT-06 bước 2 · BRQ-22 Cảnh báo tồn tối thiểu.
+**Giá trị dẫn xuất Δ:** `ton_mat_hang(K, M)` = Σ `so_luong` của các `Ton_Kho_Lo` có `kho_id` = K và `Lo.mat_hang_id` = M — so với `Mat_Hang_Kho` ở QT-06 bước 2 · BRQ-22 Cảnh báo tồn tối thiểu.
 
 #### `Bien_Dong_Ton` — Biến động tồn kho theo lô · ✳
 
@@ -656,12 +661,14 @@ Mỗi dòng là một đề nghị giá bán cho một mặt hàng, áp cho các
 | `gia_ban_le_dia_phuong` | decimal | `◐` khi `trang_thai` ∉ {`DRAFT`, `CANCELLED`} · ≥ 0 | ✳ | Giá bán lẻ tại địa phương của hàng hóa cùng loại, số nguyên đồng — mức trần; chứng từ kèm ở `Tep_Dinh_Kem` | `TT79 Đ41.4` · QT-03 bước 2 · RQ-112 |
 | `chi_phi_hop_ly` | decimal | ≥ 0 | ✳ | Chi phí hợp lý, số nguyên đồng; không bắt buộc, tính ngoài hệ thống | QT-03 bước 2 · RQ-112 · <span style="color:red">**<u>GD-0001</u>**</span> |
 | `ngay_hieu_luc` | date | `◐` khi `trang_thai` ∉ {`DRAFT`, `CANCELLED`} | ✳ | Ngày giá bán bắt đầu áp cho các lô ghi trên đề xuất; đã qua lúc duyệt thì áp từ ngày duyệt | QT-03 bước 2, 7 · RQ-23 · RQ-112 · RQ-123 · RQ-166 |
-| `trang_thai` | enum | `*` | ✳ | `DRAFT` Nháp · `PENDING_APPROVAL` Chờ duyệt · `REJECTED` Từ chối · `CANCELLED` Đã hủy · `APPROVED` Đã duyệt · `EFFECTIVE` Có hiệu lực · `REVOKED` Đã hủy duyệt — máy trạng thái chờ lớp 4 | QT-01 bước 10 · QT-03 bước 2, 3, 5, 7, 8, 11 · MP-003 (Nháp) · RQ-123 |
+| `trang_thai` | enum | `*` | ✳ | `DRAFT` Nháp · `PENDING_APPROVAL` Chờ duyệt · `REJECTED` Từ chối · `CANCELLED` Đã hủy · `APPROVED` Đã duyệt · `EFFECTIVE` Có hiệu lực · `REVOKED` Đã hủy duyệt — máy trạng thái SM mục 6 | QT-01 bước 10 · QT-03 bước 2, 3, 5, 7, 8, 11 · MP-003 (Nháp) · RQ-123 |
 | `nguoi_trinh_id` | uuid | `◐` khi `trang_thai` ∈ {`PENDING_APPROVAL`, `REJECTED`, `APPROVED`, `EFFECTIVE`, `REVOKED`} | ✳ | Người trình lần gần nhất | QT-03 bước 3 · RQ-121 |
 | `thoi_diem_trinh` | timestamp | `◐` khi `trang_thai` ∈ {`PENDING_APPROVAL`, `REJECTED`, `APPROVED`, `EFFECTIVE`, `REVOKED`} | ✳ | Thời điểm trình lần gần nhất | QT-03 bước 3 |
 | `nguoi_duyet_id` | uuid | `◐` khi `trang_thai` ∈ {`APPROVED`, `EFFECTIVE`, `REVOKED`} | ✳ | Trưởng cơ sở duyệt giá | QT-03 bước 5, 7 · `TT79 Đ41.4` · quy trình mục 8.2 |
 | `thoi_diem_duyet` | timestamp | `◐` khi `trang_thai` ∈ {`APPROVED`, `EFFECTIVE`, `REVOKED`} | ✳ | Thời điểm duyệt; dùng chọn giá hiện hành khi trùng ngày hiệu lực | QT-03 bước 7 · quy trình mục 8.2 · RQ-160 |
 | `ly_do_tu_choi` | text | `◐` khi `trang_thai` = `REJECTED` | ✳ | Lý do từ chối lần gần nhất | QT-03 bước 5 · RQ-34 · BRQ-26 Từ chối có lý do |
+| `ly_do_huy` | text | `◐` khi `trang_thai` = `CANCELLED` | ✳ | Lý do người lập hủy chứng từ | RQ-175 · quy trình mục 1.1 d Hủy |
+| `ly_do_huy_duyet` | text | `◐` khi `trang_thai` = `REVOKED` | ✳ | Lý do Trưởng cơ sở hủy phê duyệt | RQ-175 · RQ-40 |
 | `nguoi_huy_duyet_id` | uuid | `◐` khi `trang_thai` = `REVOKED` | ✳ | Trưởng cơ sở hủy phê duyệt giá | QT-03 bước 9 · RQ-40 · ASM-004 (BA xác nhận — RQ-116) |
 | `thoi_diem_huy_duyet` | timestamp | `◐` khi `trang_thai` = `REVOKED` | ✳ | Thời điểm hủy phê duyệt | QT-03 bước 9, 11 |
 
@@ -701,12 +708,14 @@ Mỗi dòng là một phiếu chuyển hàng hóa theo lô từ một kho xuất
 | `so_phieu` | varchar | `*` · UK trong `co_so_id` | ✳ 🧪 | Số phiếu, hệ thống cấp (E-01) | E-01 · BRQ-15 Phiếu điều chuyển |
 | `kho_xuat_id` | FK → `Kho` | `*` | ✳ | Kho xuất; thuộc kho được phân công của người lập — xem business rule về phạm vi kho | QT-04 bước 1 · RQ-15 · RQ-142 |
 | `kho_nhan_id` | FK → `Kho` | `*` | ✳ | Kho nhận | QT-04 bước 1 · RQ-06 · BRQ-21 Danh sách kho |
-| `trang_thai` | enum | `*` | ✳ | `DRAFT` Nháp · `PENDING_APPROVAL` Chờ duyệt · `REJECTED` Từ chối · `CANCELLED` Đã hủy · `APPROVED` Đã duyệt · `RECEIVED` Đã xác nhận thực nhận (🧪 E-05) · `COMPLETED` Hoàn thành · `COMPLETED_WITH_VARIANCE` Hoàn thành có chênh lệch · `REVOKED` Đã hủy duyệt — máy trạng thái chờ lớp 4; `COMPLETED`, `RECEIVED` suy từ dòng lúc xác nhận — mục 5.3 | QT-04 bước 1, 3, 5, 7, 11, 13, 16 · quy trình mục 1.1 d · E-05 |
+| `trang_thai` | enum | `*` | ✳ | `DRAFT` Nháp · `PENDING_APPROVAL` Chờ duyệt · `REJECTED` Từ chối · `CANCELLED` Đã hủy · `APPROVED` Đã duyệt · `RECEIVED` Đã xác nhận thực nhận (🧪 E-05) · `COMPLETED` Hoàn thành · `COMPLETED_WITH_VARIANCE` Hoàn thành có chênh lệch · `REVOKED` Đã hủy duyệt — máy trạng thái SM mục 7; `COMPLETED`, `RECEIVED` suy từ dòng lúc xác nhận — mục 5.3 | QT-04 bước 1, 3, 5, 7, 11, 13, 16 · quy trình mục 1.1 d · E-05 |
 | `nguoi_trinh_id` | uuid | `◐` khi `trang_thai` ∉ {`DRAFT`, `CANCELLED`} | ✳ | Người trình lần gần nhất | QT-04 bước 3 · RQ-121 |
 | `thoi_diem_trinh` | timestamp | `◐` khi `trang_thai` ∉ {`DRAFT`, `CANCELLED`} | ✳ | Thời điểm trình lần gần nhất | QT-04 bước 3 |
 | `nguoi_duyet_id` | uuid | `◐` khi `trang_thai` ∈ {`APPROVED`, `RECEIVED`, `COMPLETED`, `COMPLETED_WITH_VARIANCE`, `REVOKED`} | ✳ | Trưởng cơ sở duyệt phiếu | QT-04 bước 5 · BRQ-05 Duyệt hoặc từ chối chứng từ · NFR-01 Chỉ Trưởng cơ sở duyệt |
 | `thoi_diem_duyet` | timestamp | `◐` khi `trang_thai` ∈ {`APPROVED`, `RECEIVED`, `COMPLETED`, `COMPLETED_WITH_VARIANCE`, `REVOKED`} | ✳ | Thời điểm duyệt | QT-04 bước 5, 7 · BRQ-05 Duyệt hoặc từ chối chứng từ |
 | `ly_do_tu_choi` | text | `◐` khi `trang_thai` = `REJECTED` | ✳ | Lý do từ chối lần gần nhất | QT-04 bước 5 · RQ-34 · BRQ-26 Từ chối có lý do |
+| `ly_do_huy` | text | `◐` khi `trang_thai` = `CANCELLED` | ✳ | Lý do người lập hủy chứng từ | RQ-175 · quy trình mục 1.1 d Hủy |
+| `ly_do_huy_duyet` | text | `◐` khi `trang_thai` = `REVOKED` | ✳ | Lý do Trưởng cơ sở hủy phê duyệt | RQ-175 · RQ-40 |
 | `nguoi_xac_nhan_thuc_nhan_id` | uuid | `◐` khi `trang_thai` ∈ {`RECEIVED`, `COMPLETED`, `COMPLETED_WITH_VARIANCE`} | ✳ | Người phụ trách căng tin kho nhận xác nhận số thực nhận | QT-04 bước 9 · RQ-121 · quy trình mục 8.3 |
 | `thoi_diem_xac_nhan_thuc_nhan` | timestamp | `◐` khi `trang_thai` ∈ {`RECEIVED`, `COMPLETED`, `COMPLETED_WITH_VARIANCE`} | ✳ | Thời điểm xác nhận thực nhận | QT-04 bước 9, 10 |
 | `nguoi_ghi_nhan_chenh_lech_id` | uuid | `◐` khi `trang_thai` = `COMPLETED_WITH_VARIANCE` | ✳ | Người phụ trách căng tin kho xuất ghi nhận chênh lệch | QT-04 bước 12 · RQ-29 · RQ-121 |
@@ -738,13 +747,14 @@ Mỗi dòng là một lần kiểm kê một kho: Trưởng cơ sở lập khi g
 | `so_bien_ban` | varchar | `*` · UK trong `co_so_id` | ✳ 🧪 | Số biên bản, hệ thống cấp (E-01) | E-01 · BRQ-19 Biên bản kiểm kê |
 | `kho_id` | FK → `Kho` | `*` | ✳ | Kho được kiểm kê | QT-05 bước 1 · RQ-145 · BRQ-18 Giao kiểm kê |
 | `thoi_diem_chot_so_sach` | timestamp | `*` | ✳ | Thời điểm hệ thống chốt số sách, bắt đầu khóa kho | QT-05 bước 3 · RQ-12 · BRQ-20 Chốt số sách |
-| `trang_thai` | enum | `*` | ✳ | `IN_PROGRESS` Đang kiểm kê · `PENDING_APPROVAL` Chờ duyệt · `APPROVED` Đã duyệt · `CANCELLED` Đã hủy · `REVOKED` Đã hủy duyệt — máy trạng thái chờ lớp 4 | Quy trình mục 1.1 c Biên bản kiểm kê · QT-05 bước 3, 6, 9, 12, 15 · RQ-145 |
+| `trang_thai` | enum | `*` | ✳ | `IN_PROGRESS` Đang kiểm kê · `PENDING_APPROVAL` Chờ duyệt · `APPROVED` Đã duyệt · `CANCELLED` Đã hủy · `REVOKED` Đã hủy duyệt — máy trạng thái SM mục 8 | Quy trình mục 1.1 c Biên bản kiểm kê · QT-05 bước 3, 6, 9, 12, 15 · RQ-145 |
 | `nguoi_trinh_id` | uuid | `◐` khi `trang_thai` ∈ {`PENDING_APPROVAL`, `APPROVED`, `REVOKED`} | ✳ | Thành viên tổ kiểm kê có tài khoản trình lần gần nhất (RQ-155) | QT-05 bước 6 · RQ-121 · RQ-155 |
 | `thoi_diem_trinh` | timestamp | `◐` khi `trang_thai` ∈ {`PENDING_APPROVAL`, `APPROVED`, `REVOKED`} | ✳ | Thời điểm trình lần gần nhất | QT-05 bước 6 |
 | `nguoi_duyet_id` | uuid | `◐` khi `trang_thai` ∈ {`APPROVED`, `REVOKED`} | ✳ | Trưởng cơ sở duyệt biên bản | QT-05 bước 8 · RQ-07 · BRQ-05 Duyệt hoặc từ chối chứng từ |
 | `thoi_diem_duyet` | timestamp | `◐` khi `trang_thai` ∈ {`APPROVED`, `REVOKED`} | ✳ | Thời điểm duyệt; mốc xét "giao dịch mới" khi hủy phê duyệt | QT-05 bước 8, 11 · RQ-35 · RQ-126 |
 | `ly_do_tu_choi` | text | | ✳ | Lý do của lần từ chối gần nhất; trống khi biên bản chưa từng bị từ chối | QT-05 bước 8 · RQ-34 · BRQ-26 Từ chối có lý do |
 | `ly_do_huy` | text | `◐` khi `trang_thai` = `CANCELLED` | ✳ | Lý do Trưởng cơ sở hủy biên bản chưa trình | QT-05 bước 13 · RQ-137 |
+| `ly_do_huy_duyet` | text | `◐` khi `trang_thai` = `REVOKED` | ✳ | Lý do Trưởng cơ sở hủy phê duyệt | RQ-175 · RQ-40 |
 | `nguoi_huy_duyet_id` | uuid | `◐` khi `trang_thai` = `REVOKED` | ✳ | Trưởng cơ sở hủy phê duyệt | QT-05 bước 10 · RQ-40 |
 | `thoi_diem_huy_duyet` | timestamp | `◐` khi `trang_thai` = `REVOKED` | ✳ | Thời điểm hủy phê duyệt | QT-05 bước 10, 12 |
 
@@ -776,7 +786,7 @@ Mỗi dòng là một người thuộc tổ kiểm kê của một biên bản. 
 
 #### `Canh_Bao` — Cảnh báo · ✳
 
-Mỗi dòng là một cảnh báo về một lô (sắp hết hạn, quá hạn, chờ giá, tồn lệch sổ biến động) hoặc một mặt hàng (tồn dưới mức tối thiểu) tại một kho. Cảnh báo tồn, hạn sử dụng, lô chờ giá gửi người phụ trách căng tin được phân công kho (RQ-95); cảnh báo lệch đối soát gửi Trưởng cơ sở và người phụ trách căng tin phụ trách kho (quy trình mục 5 `N-04`; RQ-154). Hệ thống tạo ở QT-02 bước 15, QT-06 bước 3 (`N-01` · <span style="color:red">**<u>GD-0003</u>**</span>) và `N-04`; người nhận xem ở QT-06 bước 4, xác nhận đóng ở bước 5; không tự đóng (`GS-06` Cảnh báo đang mở · RQ-146). Người nhận suy từ `Phan_Cong_Kho` và vai Trưởng cơ sở, không lưu.
+Mỗi dòng là một cảnh báo về một lô (sắp hết hạn, quá hạn, chờ giá, tồn lệch sổ biến động) hoặc một mặt hàng (tồn dưới mức tối thiểu) tại một kho. Cảnh báo tồn, hạn sử dụng, lô chờ giá gửi người phụ trách căng tin được phân công kho (RQ-95); cảnh báo lệch đối soát gửi Trưởng cơ sở và người phụ trách căng tin phụ trách kho (quy trình mục 5 `N-04`; RQ-154). Hệ thống tạo ở QT-02 bước 15, QT-06 bước 3 (`N-01` · <span style="color:red">**<u>GD-0003</u>**</span>) và `N-04`; người nhận xem ở QT-06 bước 4 (lần xem đầu của bất kỳ người nhận nào chuyển Đã xem — RQ-176), xác nhận đóng ở bước 5 (cảnh báo lệch đối soát chỉ Trưởng cơ sở đóng — RQ-169); không tự đóng (`GS-06` Cảnh báo đang mở · RQ-146). Người nhận suy từ `Phan_Cong_Kho` và vai Trưởng cơ sở, không lưu.
 
 | Trường | Kiểu | Ràng buộc | Đổi | Mô tả | Nguồn |
 |---|---|---|---|---|---|
@@ -786,20 +796,20 @@ Mỗi dòng là một cảnh báo về một lô (sắp hết hạn, quá hạn,
 | `mat_hang_id` | FK → `Mat_Hang` | `◐` khi `loai_canh_bao` = `LOW_STOCK` | ✳ | Mặt hàng có tồn dưới mức tối thiểu | QT-06 bước 2, 3 · `GS-06` Cảnh báo đang mở |
 | `ton_luc_canh_bao` | int | `◐` khi `loai_canh_bao` ∈ {`LOW_STOCK`, `STOCK_MISMATCH`} | ✳ | **Chụp** tồn lúc sinh cảnh báo: với `LOW_STOCK` là tồn của mặt hàng tại kho; với `STOCK_MISMATCH` là `Ton_Kho_Lo.so_luong` của lô tại kho | QT-06 trường hợp biên (ghi tồn hiện tại) · BRQ-22 Cảnh báo tồn tối thiểu · quy trình mục 5 `N-04` |
 | `tong_bien_dong_luc_doi_soat` | int | `◐` khi `loai_canh_bao` = `STOCK_MISMATCH` | ✳ | **Chụp** Σ `Bien_Dong_Ton.so_luong_thay_doi` của lô tại kho lúc đối soát | Quy trình mục 5 `N-04` · R-01 · RQ-154 |
-| `ngay_doi_soat` | date | `◐` khi `loai_canh_bao` = `STOCK_MISMATCH` | ✳ | Ngày `N-04` đối soát, giờ Việt Nam; một phần khóa chống lặp | Quy trình mục 5 `N-04` (khóa chống lặp kho + lô + ngày đối soát) |
-| `ton_toi_thieu_luc_canh_bao` | int | `◐` khi `loai_canh_bao` = `LOW_STOCK` | ✳ | **Chụp** `Ton_Toi_Thieu.so_luong_toi_thieu` lúc sinh cảnh báo | QT-06 trường hợp biên (ghi tồn tối thiểu) · quy trình mục 6 (chụp tham số lúc tạo) |
+| `ngay_doi_soat` | date | `◐` khi `loai_canh_bao` = `STOCK_MISMATCH` | ✳ | Ngày `N-04` đối soát sinh cảnh báo, giờ Việt Nam; lần đối soát sau thấy lệch mà cảnh báo còn mở thì không sinh thêm (R-07) | Quy trình mục 5 `N-04` (khóa chống lặp kho + lô + ngày đối soát) |
+| `ton_toi_thieu_luc_canh_bao` | int | `◐` khi `loai_canh_bao` = `LOW_STOCK` | ✳ | **Chụp** `Mat_Hang_Kho.so_luong_toi_thieu` lúc sinh cảnh báo | QT-06 trường hợp biên (ghi tồn tối thiểu) · quy trình mục 6 (chụp tham số lúc tạo) |
 | `so_ngay_canh_bao_luc_tao` | int | `◐` khi `loai_canh_bao` = `NEAR_EXPIRY` | ✳ | **Chụp** `Kho.so_ngay_canh_bao_het_han` lúc sinh cảnh báo | Quy trình mục 6 (chụp tham số lúc tạo) · `CH-02` |
-| `trang_thai` | enum | `*` | ✳ | `NEW` Chưa xem (🧪 E-06) · `VIEWED` Đã xem · `CLOSED` Đã đóng — máy trạng thái chờ lớp 4 | QT-06 bước 3, 4, 5 · RQ-146 · E-06 |
-| `nguoi_xac_nhan_id` | uuid | `◐` khi `trang_thai` = `CLOSED` | ✳ | Người phụ trách căng tin xác nhận đóng | QT-06 bước 5 · quy trình mục 8.3 Cảnh báo |
+| `trang_thai` | enum | `*` | ✳ | `NEW` Chưa xem (🧪 E-06) · `VIEWED` Đã xem · `CLOSED` Đã đóng — máy trạng thái SM mục 9 | QT-06 bước 3, 4, 5 · RQ-146 · E-06 |
+| `nguoi_xac_nhan_id` | uuid | `◐` khi `trang_thai` = `CLOSED` | ✳ | Người xác nhận đóng: người phụ trách căng tin của kho; Trưởng cơ sở với `STOCK_MISMATCH` | QT-06 bước 5 · quy trình mục 8.3 Cảnh báo · RQ-169 · RQ-176 |
 | `thoi_diem_xac_nhan` | timestamp | `◐` khi `trang_thai` = `CLOSED` | ✳ | Thời điểm xác nhận | QT-06 bước 5 · quy trình mục 8.3 Cảnh báo |
 
 #### `Nhat_Ky_Thay_Doi` — Lịch sử thay đổi · ✳
 
-Mỗi dòng là một thao tác trên một bản ghi: ai, lúc nào, làm gì, giá trị trước và sau, lý do. Chỉ thêm, không sửa, không xóa; không có `nguoi_cap_nhat`, `thoi_diem_cap_nhat` (khác quy ước chung). Ghi cho hồ sơ nhà cung cấp, danh mục hàng hóa cung ứng, giá nhập, kho, hạn mức cảnh báo, giá bán (NFR-07 Lịch sử thay đổi; quy trình mục 9 điểm 1) và mọi thao tác workflow trên chứng từ (RQ-121); phân công kho không ghi (RQ-168). Bản ghi bị xóa hẳn (đề xuất Nháp ở QT-01 bước 11) vẫn giữ dòng nhật ký, `noi_dung` chụp mã nghiệp vụ của bản ghi. Giá trị cũ của họ tên, điện thoại người liên hệ được lưu cả trước và sau; chỉ Trưởng cơ sở và người phụ trách căng tin xem (RQ-158).
+Mỗi dòng là một thao tác trên một bản ghi: ai, lúc nào, làm gì, giá trị trước và sau, lý do. Chỉ thêm, không sửa, không xóa; không có `nguoi_cap_nhat`, `thoi_diem_cap_nhat` (khác quy ước chung). Ghi cho hồ sơ nhà cung cấp, danh mục hàng hóa cung ứng, giá nhập, kho, hạn mức cảnh báo, giá bán (NFR-07 Lịch sử thay đổi; quy trình mục 9 điểm 1), công tắc mặt hàng tại kho (RQ-172), kích hoạt lại mặt hàng, nhà cung cấp (RQ-173) và mọi thao tác workflow trên chứng từ (RQ-121); phân công kho không ghi (RQ-168). Bản ghi bị xóa hẳn (đề xuất Nháp ở QT-01 bước 11) vẫn giữ dòng nhật ký, `noi_dung` chụp mã nghiệp vụ của bản ghi. Giá trị cũ của họ tên, điện thoại người liên hệ được lưu cả trước và sau; chỉ Trưởng cơ sở và người phụ trách căng tin xem (RQ-158).
 
 | Trường | Kiểu | Ràng buộc | Đổi | Mô tả | Nguồn |
 |---|---|---|---|---|---|
-| `loai_doi_tuong` | enum | `*` | ✳ | `SUPPLIER` Hồ sơ nhà cung cấp · `SUPPLIER_ITEM` Danh mục hàng hóa cung ứng · `PURCHASE_PRICE_BATCH` Đợt giá nhập · `PURCHASE_PRICE_LINE` Dòng giá nhập · `WAREHOUSE` Kho · `MIN_STOCK` Tồn tối thiểu · `PRICE_PROPOSAL` Đề xuất giá bán · `GOODS_RECEIPT` Phiếu nhập kho · `TRANSFER` Phiếu điều chuyển · `STOCKTAKE` Biên bản kiểm kê · `ALERT` Cảnh báo | NFR-07 Lịch sử thay đổi · quy trình mục 9 điểm 1 · RQ-121 |
+| `loai_doi_tuong` | enum | `*` | ✳ | `SUPPLIER` Hồ sơ nhà cung cấp · `SUPPLIER_ITEM` Danh mục hàng hóa cung ứng · `PURCHASE_PRICE_BATCH` Đợt giá nhập · `PURCHASE_PRICE_LINE` Dòng giá nhập · `WAREHOUSE` Kho · `ITEM` Mặt hàng · `ITEM_WAREHOUSE` Mặt hàng tại kho · `PRICE_PROPOSAL` Đề xuất giá bán · `GOODS_RECEIPT` Phiếu nhập kho · `TRANSFER` Phiếu điều chuyển · `STOCKTAKE` Biên bản kiểm kê · `ALERT` Cảnh báo | NFR-07 Lịch sử thay đổi · quy trình mục 9 điểm 1 · RQ-121 · RQ-172 · RQ-173 |
 | `doi_tuong_id` | uuid | `*` | ✳ | Bản ghi được ghi vết — mục 5.2 | NFR-07 Lịch sử thay đổi · MP-002 (bảng Lịch sử thay đổi) |
 | `thao_tac` | enum | `*` | ✳ | `CREATE` Thêm · `UPDATE` Sửa · `DELETE` Xóa · `REPLACE` Thay thế · `SUBMIT` Trình · `APPROVE` Duyệt · `REJECT` Từ chối · `CANCEL` Hủy · `REVOKE` Hủy phê duyệt · `CONFIRM_RECEIPT` Xác nhận thực nhận · `RECORD_VARIANCE` Ghi nhận chênh lệch · `CONFIRM_ALERT` Xác nhận cảnh báo | Quy trình mục 2 (mỗi thao tác workflow một quyền) · RQ-121 · `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 200–203]` |
 | `noi_dung` | text | `*` | ✳ | Nội dung thay đổi: trường, giá trị trước, giá trị sau | MP-002 (Lịch sử thay đổi: Nội dung) · NFR-07 Lịch sử thay đổi · RQ-158 |
@@ -871,7 +881,8 @@ Mỗi dòng là một thao tác trên một bản ghi: ai, lúc nào, làm gì, 
 | `loai_doi_tuong_nhat_ky` | `PURCHASE_PRICE_BATCH` | Đợt giá nhập | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
 | `loai_doi_tuong_nhat_ky` | `PURCHASE_PRICE_LINE` | Dòng giá nhập | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
 | `loai_doi_tuong_nhat_ky` | `WAREHOUSE` | Kho | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
-| `loai_doi_tuong_nhat_ky` | `MIN_STOCK` | Tồn tối thiểu | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
+| `loai_doi_tuong_nhat_ky` | `ITEM` | Mặt hàng | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
+| `loai_doi_tuong_nhat_ky` | `ITEM_WAREHOUSE` | Mặt hàng tại kho | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
 | `loai_doi_tuong_nhat_ky` | `PRICE_PROPOSAL` | Đề xuất giá bán | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
 | `loai_doi_tuong_nhat_ky` | `GOODS_RECEIPT` | Phiếu nhập kho | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
 | `loai_doi_tuong_nhat_ky` | `TRANSFER` | Phiếu điều chuyển | `Nhat_Ky_Thay_Doi.loai_doi_tuong` |
@@ -898,7 +909,7 @@ Mỗi dòng là một thao tác trên một bản ghi: ai, lúc nào, làm gì, 
 
 `N-04` Đối soát tồn kho theo lô với sổ biến động kiểm các dòng loại Đối soát hằng ngày; lệch thì cảnh báo, **không tự sửa**. Các dòng chặn khi ghi do thao tác ghi kiểm trong cùng giao dịch; bước kiểm ghi ở cột Nguồn.
 
-Mã đã bỏ, không dùng lại: R-06 (dòng ⊘ trong bảng).
+Mã đã bỏ, không dùng lại: R-06, R-24 (dòng ⊘ trong bảng).
 
 | Mã | Đẳng thức hoặc ràng buộc | Loại | Nguồn |
 |---|---|---|---|
@@ -908,7 +919,7 @@ Mã đã bỏ, không dùng lại: R-06 (dòng ⊘ trong bảng).
 | R-04 | Mỗi `Bien_Ban_Kiem_Ke_Dong` có `so_thuc_te` ≠ `so_sach` của biên bản ở `APPROVED` có đúng một `STOCKTAKE_ADJUST` = `so_thuc_te` − `so_sach` tại `kho_id` của biên bản; biên bản ở `REVOKED` có thêm đúng một `STOCKTAKE_REVERSE` bằng số đối của dòng đó | Khớp trạng thái | `GS-02` Chênh lệch kiểm kê · quy trình mục 9 điểm 25 · chặn khi ghi ở QT-05 bước 9, 12 |
 | R-05 | Mỗi `lo_id` có tối đa một `De_Xuat_Gia_Ban_Lo` thuộc `De_Xuat_Gia_Ban` ở `PENDING_APPROVAL` | Duy nhất | `GS-01` Giá bán theo lô · RQ-139 · quy trình mục 9 điểm 14 · chặn khi ghi ở QT-03 bước 4 |
 | R-06 | ⊘ Đã bỏ, không dùng lại — lô áp dụng của đề xuất phải là lô đang có trong tồn kho; chuyển sang business rule về lô áp dụng của đề xuất giá bán (review vòng 1) | n/a — mã đã bỏ | RQ-23 · RQ-112 |
-| R-07 | Mỗi bộ (`kho_id`, `lo_id`, `loai_canh_bao`) với `loai_canh_bao` ∈ {`NEAR_EXPIRY`, `EXPIRED_LOT`, `PENDING_PRICE_LOT`} có tối đa một `Canh_Bao` ở `trang_thai` ≠ `CLOSED` | Duy nhất | `GS-06` Cảnh báo đang mở · RQ-146 · chặn khi ghi ở QT-06 bước 3, QT-02 bước 15 |
+| R-07 | Mỗi bộ (`kho_id`, `lo_id`, `loai_canh_bao`) với `loai_canh_bao` ∈ {`NEAR_EXPIRY`, `EXPIRED_LOT`, `PENDING_PRICE_LOT`, `STOCK_MISMATCH`} có tối đa một `Canh_Bao` ở `trang_thai` ≠ `CLOSED` | Duy nhất | `GS-06` Cảnh báo đang mở · RQ-146 · quy trình mục 5 `N-04` · chặn khi ghi ở QT-06 bước 3, QT-02 bước 15, `N-04` |
 | R-08 | Mỗi bộ (`kho_id`, `mat_hang_id`) có tối đa một `Canh_Bao` loại `LOW_STOCK` ở `trang_thai` ≠ `CLOSED` | Duy nhất | `GS-06` Cảnh báo đang mở · RQ-146 · chặn khi ghi ở QT-06 bước 3 |
 | R-09 | `Phieu_Nhap_Kho.nguoi_duyet_id` ≠ `Phieu_Nhap_Kho.nguoi_tao` | Tách nhiệm | Quy trình mục 9 điểm 8 · RQ-121 · chặn khi ghi ở QT-02 bước 7 |
 | R-10 | `Phieu_Dieu_Chuyen.nguoi_duyet_id` ≠ `Phieu_Dieu_Chuyen.nguoi_tao` | Tách nhiệm | Quy trình mục 9 điểm 8 · RQ-121 · chặn khi ghi ở QT-04 bước 5 |
@@ -924,8 +935,8 @@ Mã đã bỏ, không dùng lại: R-06 (dòng ⊘ trong bảng).
 | R-20 | `De_Xuat_Gia_Ban` ở trạng thái ∉ {`DRAFT`, `CANCELLED`} có ít nhất một `Tep_Dinh_Kem` loại `PRICE_PROPOSAL` | Khớp trạng thái | RQ-112 (giá bán lẻ tại địa phương kèm chứng từ) · BRQ-02 Trình đề xuất giá đủ thông tin · chặn khi ghi ở QT-03 bước 4 |
 | R-21 | Không tồn tại `Dong_Gia_Nhap` mà `Mat_Hang_Nha_Cung_Cap.nha_cung_cap_id` của cặp khác `Dot_Gia_Nhap.nha_cung_cap_id` của đợt | Loại trừ | `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 3]` (một đợt một nhà cung cấp) · MP-004 · chặn khi ghi ở QT-01 bước 3, 6 |
 | R-22 | Không tồn tại `De_Xuat_Gia_Ban_Lo` mà `Lo.mat_hang_id` khác `De_Xuat_Gia_Ban.mat_hang_id` | Loại trừ | `GS-01` Giá bán theo lô · RQ-23 · RQ-112 · chặn khi ghi ở QT-02 bước 13, QT-03 bước 2 |
-| R-23 | Không tồn tại cặp bản ghi trỏ nhau khác `co_so_id`. Gồm mọi khóa ngoại: `Kho`, `Mat_Hang`, `Nha_Cung_Cap` → `Co_So`; `Phan_Cong_Kho` → `Kho`; `Mat_Hang_Nha_Cung_Cap` → `Nha_Cung_Cap`, `Mat_Hang`; `Ton_Toi_Thieu` → `Kho`, `Mat_Hang`; `Dot_Gia_Nhap` → `Nha_Cung_Cap`; `Dong_Gia_Nhap` → `Dot_Gia_Nhap`, `Mat_Hang_Nha_Cung_Cap`; `Phieu_Nhap_Kho` → `Kho`, `Nha_Cung_Cap`; `Lo` → `Phieu_Nhap_Kho`, `Mat_Hang`, `Dong_Gia_Nhap`; `Ton_Kho_Lo` → `Kho`, `Lo`; `Bien_Dong_Ton` → `Kho`, `Lo`; `De_Xuat_Gia_Ban` → `Mat_Hang`, `Dong_Gia_Nhap`; `De_Xuat_Gia_Ban_Lo` → `De_Xuat_Gia_Ban`, `Lo`; `Gia_Ban_Lo` → `Lo`, `De_Xuat_Gia_Ban`; `Phieu_Dieu_Chuyen` → `kho_xuat_id`, `kho_nhan_id`; `Phieu_Dieu_Chuyen_Dong` → `Phieu_Dieu_Chuyen`, `Lo`; `Bien_Ban_Kiem_Ke` → `Kho`; `Bien_Ban_Kiem_Ke_Dong` → `Bien_Ban_Kiem_Ke`, `Lo`; `Thanh_Vien_Kiem_Ke` → `Bien_Ban_Kiem_Ke`; `Canh_Bao` → `Kho`, `Lo`, `Mat_Hang`; mọi khóa ngoại đa hình ở mục 5.2. Mọi trường tài khoản (`nguoi_dung_id`, `nguoi_tao`, `nguoi_trinh_id`, `nguoi_duyet_id`…) trỏ tài khoản được dùng tại cùng cơ sở | Loại trừ | RQ-149 · RQ-151 · RQ-152 · NFR-10 Dữ liệu riêng từng cơ sở · chặn khi ghi ở mọi bước ghi của QT-01 → QT-06, ở các tác vụ nền của quy trình mục 5 và khi Hệ thống bán hàng căng tin ghi trừ tồn; cơ sở của tài khoản do thao tác ghi tra hệ thống xác thực dùng chung |
-| R-24 | Mỗi bộ (`kho_id`, `lo_id`, `ngay_doi_soat`) có tối đa một `Canh_Bao` loại `STOCK_MISMATCH` | Duy nhất | Quy trình mục 5 `N-04` (khóa chống lặp kho + lô + ngày đối soát) · RQ-154 · chặn khi ghi ở `N-04` |
+| R-23 | Không tồn tại cặp bản ghi trỏ nhau khác `co_so_id`. Gồm mọi khóa ngoại: `Kho`, `Mat_Hang`, `Nha_Cung_Cap` → `Co_So`; `Phan_Cong_Kho` → `Kho`; `Mat_Hang_Nha_Cung_Cap` → `Nha_Cung_Cap`, `Mat_Hang`; `Mat_Hang_Kho` → `Kho`, `Mat_Hang`; `Dot_Gia_Nhap` → `Nha_Cung_Cap`; `Dong_Gia_Nhap` → `Dot_Gia_Nhap`, `Mat_Hang_Nha_Cung_Cap`; `Phieu_Nhap_Kho` → `Kho`, `Nha_Cung_Cap`; `Lo` → `Phieu_Nhap_Kho`, `Mat_Hang`, `Dong_Gia_Nhap`; `Ton_Kho_Lo` → `Kho`, `Lo`; `Bien_Dong_Ton` → `Kho`, `Lo`; `De_Xuat_Gia_Ban` → `Mat_Hang`, `Dong_Gia_Nhap`; `De_Xuat_Gia_Ban_Lo` → `De_Xuat_Gia_Ban`, `Lo`; `Gia_Ban_Lo` → `Lo`, `De_Xuat_Gia_Ban`; `Phieu_Dieu_Chuyen` → `kho_xuat_id`, `kho_nhan_id`; `Phieu_Dieu_Chuyen_Dong` → `Phieu_Dieu_Chuyen`, `Lo`; `Bien_Ban_Kiem_Ke` → `Kho`; `Bien_Ban_Kiem_Ke_Dong` → `Bien_Ban_Kiem_Ke`, `Lo`; `Thanh_Vien_Kiem_Ke` → `Bien_Ban_Kiem_Ke`; `Canh_Bao` → `Kho`, `Lo`, `Mat_Hang`; mọi khóa ngoại đa hình ở mục 5.2. Mọi trường tài khoản (`nguoi_dung_id`, `nguoi_tao`, `nguoi_trinh_id`, `nguoi_duyet_id`…) trỏ tài khoản được dùng tại cùng cơ sở | Loại trừ | RQ-149 · RQ-151 · RQ-152 · NFR-10 Dữ liệu riêng từng cơ sở · chặn khi ghi ở mọi bước ghi của QT-01 → QT-06, ở các tác vụ nền của quy trình mục 5 và khi Hệ thống bán hàng căng tin ghi trừ tồn; cơ sở của tài khoản do thao tác ghi tra hệ thống xác thực dùng chung |
+| R-24 | ⊘ Đã bỏ, không dùng lại — gộp vào R-07: `N-04` đối soát hằng ngày nhưng chỉ sinh cảnh báo mới khi kho + lô không còn cảnh báo `STOCK_MISMATCH` đang mở (RQ-146) | n/a — mã đã bỏ | RQ-146 · GS-06 Cảnh báo đang mở |
 | R-25 | Không tồn tại `De_Xuat_Gia_Ban` có `dong_gia_nhap_id` mà `Mat_Hang_Nha_Cung_Cap.mat_hang_id` của cặp thuộc dòng đó khác `De_Xuat_Gia_Ban.mat_hang_id` | Loại trừ | QT-01 bước 10 (đề xuất cho mặt hàng của giá nhập mới) · chặn khi ghi ở QT-01 bước 10 |
 | R-26 | Không tồn tại `Lo` có `dong_gia_nhap_id` mà cặp của dòng giá nhập có `mat_hang_id` khác `Lo.mat_hang_id`, hoặc `nha_cung_cap_id` khác `Phieu_Nhap_Kho.nha_cung_cap_id` của phiếu | Loại trừ | RQ-16 (giá nhập mặc định từ bảng giá của nhà cung cấp) · BRQ-10 Phiếu nhập truy về nhà cung cấp · chặn khi ghi ở QT-02 bước 1, 2 |
 | R-27 | Không tồn tại `Bien_Ban_Kiem_Ke_Dong` mà không có `Ton_Kho_Lo` (`kho_id` của biên bản, `lo_id`) | Loại trừ | RQ-156 · BRQ-19 Biên bản kiểm kê · chặn khi ghi ở QT-05 bước 3 |
@@ -966,7 +977,8 @@ Mã đã bỏ, không dùng lại: R-06 (dòng ⊘ trong bảng).
 | `PURCHASE_PRICE_BATCH` | `Dot_Gia_Nhap` |
 | `PURCHASE_PRICE_LINE` | `Dong_Gia_Nhap` |
 | `WAREHOUSE` | `Kho` |
-| `MIN_STOCK` | `Ton_Toi_Thieu` |
+| `ITEM` | `Mat_Hang` |
+| `ITEM_WAREHOUSE` | `Mat_Hang_Kho` |
 | `PRICE_PROPOSAL` | `De_Xuat_Gia_Ban` |
 | `GOODS_RECEIPT` | `Phieu_Nhap_Kho` |
 | `TRANSFER` | `Phieu_Dieu_Chuyen` |
@@ -1009,6 +1021,7 @@ Mã đã bỏ, không dùng lại: R-06 (dòng ⊘ trong bảng).
 | E-11 | `Dot_Gia_Nhap` (chứng từ) được xóa mềm khi mọi dòng của đợt đã bị xóa — ngoại lệ của quy ước "chứng từ không xóa" | Xóa mềm cùng giao dịch xóa dòng cuối ở QT-01 bước 5 (RQ-163; `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 318]`); BA chốt 29/10/2026: RQ-163; QT v01 đã sửa theo (QT-01 bước 5) | Có — QT-01 bước 5 (hệ quả khi xóa dòng cuối của đợt) |
 | E-12 | `Co_So` và `co_so_id` sao chép ở mọi bảng; quy trình chưa có bước, UC khai báo cơ sở; cơ sở của tài khoản người dùng do hệ thống xác thực dùng chung giữ | Thêm `Co_So`, R-23; mã cơ sở duy nhất toàn hệ thống; người khai báo cơ sở chờ BA, lớp 5 thêm UC; BA chốt 29/10/2026: RQ-151, RQ-152; người khai báo cơ sở hoãn — BRD Q-B36 → TH-04 (RQ-164); QT v01 đã sửa theo (mục 1, 2, mục 9 điểm 30) | Có — phạm vi nhiều cơ sở chạm BRD, quy trình (RQ-151) |
 | E-13 | Đề xuất giá bán duyệt khi ngày hiệu lực đã tới chuyển thẳng `EFFECTIVE`; `N-03` xét mọi đề xuất `APPROVED` có ngày hiệu lực ≤ ngày chạy; giá bán hiện hành chỉ lấy `EFFECTIVE` | Như mục 4.4; BA chốt 29/10/2026: RQ-160, RQ-166 (ngày bắt đầu áp = ngày muộn hơn giữa ngày hiệu lực và ngày duyệt); QT v01 đã sửa theo (QT-03 bước 7, `N-03`) | Có — `N-03` (quy trình mục 5 ghi "ngày hiệu lực là ngày chạy") |
+| E-14 | `Ton_Toi_Thieu` đổi tên thành `Mat_Hang_Kho` và thêm `cho_phep_ban`, `cho_phep_dat_hang` (RQ-170 → RQ-172) vì cùng grain kho × mặt hàng; `so_luong_toi_thieu` thành không bắt buộc | Một bảng `Mat_Hang_Kho`; không có dòng thì dùng mặc định | Có — quy trình mục 1.1 dòng Hạn mức cảnh báo cột Thực thể ERD (đang ghi `Ton_Toi_Thieu`) |
 
 ---
 
@@ -1078,7 +1091,7 @@ Dự án chưa có thang phân loại thông tin; văn bản áp dụng chỉ TT
 | Danh mục màn presales `../../1-ba-init/0-dau-vao/man-presales.md` | MP-001 → MP-004: trường, bảng của màn giá nhập |
 | Thông tư 79/2026/TT-BCA — viết tắt `TT79`; `TT79 Đ41.4` = `PL:TT79-2026/Đ41.K4` — `../../1-ba-init/0-dau-vao/phap-ly.md` | Giá bán phải được Trưởng cơ sở duyệt, không cao hơn giá bán lẻ tại địa phương → `De_Xuat_Gia_Ban`; `TT79 Đ16.1`–`Đ16.8` đồ vật cấm không sinh thực thể (<span style="color:red">**<u>GD-0002</u>**</span>). Các điều khác đã rà ở BRD mục 1.3, không sinh thực thể |
 | Nghị định 163/2026/NĐ-CP — viết tắt `NĐ163` | Đã rà toàn văn ở BRD mục 1.3, không sinh thực thể — Đ120.3 cùng nghĩa `TT79 Đ41.4` (RQ-49) |
-| Câu trả lời của BA `../../0-inputs/answers-2026-10-28.md`, `../../0-inputs/answers-2026-10-29.md` | RQ-01 → RQ-168 (loại nguồn "BA xác nhận"); RQ-148 → RQ-163 chốt Q-E1 → Q-E14, nhiều cơ sở, xóa mềm đợt giá nhập; RQ-164 → RQ-168 sửa theo review vòng 2 |
+| Câu trả lời của BA `../../0-inputs/answers-2026-10-28.md`, `../../0-inputs/answers-2026-10-29.md` | RQ-01 → RQ-181 (loại nguồn "BA xác nhận"); RQ-148 → RQ-163 chốt Q-E1 → Q-E14, nhiều cơ sở, xóa mềm đợt giá nhập; RQ-164 → RQ-168 sửa theo review vòng 2; RQ-169 → RQ-181 bổ sung theo lớp 4 |
 | Sổ giả định `../assumption_log.md` | <span style="color:red">**<u>GD-0001</u>**</span>, <span style="color:red">**<u>GD-0002</u>**</span>, <span style="color:red">**<u>GD-0003</u>**</span>, <span style="color:red">**<u>GD-0004</u>**</span>, <span style="color:red">**<u>GD-0006</u>**</span>, <span style="color:red">**<u>GD-0007</u>**</span>, <span style="color:red">**<u>GD-0008</u>**</span> |
 | Sổ phát hiện `../../du-an/open-questions.md` mục 3 | PH-034 (phân công kho — `Phan_Cong_Kho`), PH-035 (mô hình giá bán của prototype — mục 7) |
 | ASM-004, ASM-008 — giả định bước 1, BA xác nhận (RQ-116) — `../../1-ba-init/open-questions.md` mục 2 | Hủy phê duyệt giá bán của Trưởng cơ sở; hướng xử lý cảnh báo không lưu |

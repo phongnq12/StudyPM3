@@ -49,3 +49,10 @@
 | 45 | /ba-overview | 3 | quality-reviewer | Review độc lập ERD (vòng 2): 2 Chặn, 10 Nặng, 8 Nhẹ | — (chỉ đọc) | 356.337 | 9 phút 48 giây | — |
 | 46 | /ba-overview | 3 | data-modeler | Sửa ERD theo review vòng 2 + RQ-164…RQ-168 | ERD_PM3CSCN_QuanLyKhoCangTin_v00.md | 572.729 (cộng dồn phiên) | — | 2 |
 | 47 | /ba-overview | 3 (bổ sung lớp 2) | business-analyst | QT v01 bổ sung theo ERD vòng 2 (RQ-165…RQ-169): ngày áp giá, cảnh báo lệch sổ, QT-06 9 bước | QT_PM3CSCN_QuanLyKhoCangTin_v01.md + sơ đồ | — | — | 0 |
+| 48 | /ba-overview | 4 | data-modeler | Lớp 4 Máy trạng thái (create-sm) | 2-ba-overview/4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v00.md; ô ERD mục 4 | — | — | 0 |
+| 49 | /ba-overview | 4 | quality-reviewer | Review độc lập SM (vòng 1): 0 Chặn, 4 Nặng, 12 Nhẹ | — (chỉ đọc) | 400.669 | 9 phút 1 giây | — |
+| 50 | /ba-overview | 4 (bổ sung lớp 1) | business-analyst | BRD v01 thêm công tắc Cho phép bán (BRQ-24), RQ-170…RQ-172 | BRD_PM3CSCN_QuanLyKhoCangTin_v01.md | — | 1 phút 29 giây | 0 |
+| 51 | /ba-overview | 4 (bổ sung lớp 2) | business-analyst | QT v01 bổ sung RQ-170…RQ-181, tên ERD v01 | QT_PM3CSCN_QuanLyKhoCangTin_v01.md | — | 2 phút 53 giây | 0 |
+| 52 | /ba-overview | 4 (bổ sung lớp 3) | data-modeler | ERD v01: Mat_Hang_Kho (công tắc), lý do hủy, R-07 gồm STOCK_MISMATCH | ERD_PM3CSCN_QuanLyKhoCangTin_v00.md (→ _v01) | — | 1 phút 42 giây | 0 |
+| 53 | /ba-overview | 4 | data-modeler | Sửa SM theo review vòng 1 + RQ-170…RQ-181 | SM_PM3CSCN_QuanLyKhoCangTin_v00.md | — | — | 1 |
+| 54 | /ba-overview | 4 | data-modeler | SM sửa các điểm Nhẹ review #5, #7–#15; đổi tên ERD _v01 (phiên chính) | SM_PM3CSCN_QuanLyKhoCangTin_v00.md | 461.224 (cộng dồn phiên) | 5 phút 22 giây | 2 |
