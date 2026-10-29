@@ -12,6 +12,10 @@
      "ten": "Người phụ trách căng tin"
     },
     {
+     "id": "TCS",
+     "ten": "Trưởng cơ sở"
+    },
+    {
      "id": "HT",
      "ten": "Hệ thống"
     }
@@ -209,6 +213,70 @@
    "lane": "CB",
    "cot": 5.1,
    "hang": 1
+  },
+  {
+   "id": "S4",
+   "loai": "start",
+   "ten": "Đến giờ đối soát hằng ngày (CH-03, N-04)",
+   "lane": "HT",
+   "cot": 6,
+   "hang": 2.3,
+   "su_kien": "timer"
+  },
+  {
+   "id": "QT06-B7",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B7",
+   "ten": "Đối soát tồn kho theo lô với sổ biến động",
+   "lane": "HT",
+   "cot": 7,
+   "hang": 2.3
+  },
+  {
+   "id": "G5",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Có lô lệch?",
+   "lane": "HT",
+   "cot": 8,
+   "hang": 2.3
+  },
+  {
+   "id": "E8",
+   "loai": "end",
+   "ten": "Không có lô lệch",
+   "lane": "HT",
+   "cot": 8,
+   "hang": 3.3
+  },
+  {
+   "id": "QT06-B8",
+   "loai": "task",
+   "kieu": "send",
+   "ma": "B8",
+   "ten": "Gửi cảnh báo tồn lệch cho Trưởng cơ sở và người phụ trách kho",
+   "lane": "HT",
+   "cot": 9,
+   "hang": 2.3
+  },
+  {
+   "id": "QT06-B9",
+   "loai": "task",
+   "kieu": "user",
+   "ma": "B9",
+   "ten": "Xác nhận cảnh báo tồn lệch",
+   "lane": "TCS",
+   "cot": 10,
+   "hang": 0
+  },
+  {
+   "id": "E9",
+   "loai": "end",
+   "ten": "Cảnh báo tồn lệch Đã đóng",
+   "lane": "TCS",
+   "cot": 11,
+   "hang": 0
   }
  ],
  "flows": [
@@ -348,6 +416,43 @@
    "loai": "message",
    "ra": "phai",
    "vao": "duoi"
+  },
+  {
+   "tu": "S4",
+   "den": "QT06-B7"
+  },
+  {
+   "tu": "QT06-B7",
+   "den": "G5"
+  },
+  {
+   "tu": "G5",
+   "den": "E8",
+   "nhan": "Không",
+   "ra": "duoi"
+  },
+  {
+   "tu": "G5",
+   "den": "QT06-B8",
+   "nhan": "Có"
+  },
+  {
+   "tu": "QT06-B8",
+   "den": "QT06-B9",
+   "nhan": "cảnh báo",
+   "ra": "tren",
+   "vao": "trai",
+   "qua": [
+    {
+     "lane": "TCS",
+     "cot": 9,
+     "hang": 0
+    }
+   ]
+  },
+  {
+   "tu": "QT06-B9",
+   "den": "E9"
   }
  ]
 }

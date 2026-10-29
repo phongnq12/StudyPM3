@@ -48,3 +48,4 @@
 | 44 | /ba-overview | 3 | quality-reviewer | Review độc lập ERD (vòng 2) | — (chỉ đọc) | — | — | — |
 | 45 | /ba-overview | 3 | quality-reviewer | Review độc lập ERD (vòng 2): 2 Chặn, 10 Nặng, 8 Nhẹ | — (chỉ đọc) | 356.337 | 9 phút 48 giây | — |
 | 46 | /ba-overview | 3 | data-modeler | Sửa ERD theo review vòng 2 + RQ-164…RQ-168 | ERD_PM3CSCN_QuanLyKhoCangTin_v00.md | 572.729 (cộng dồn phiên) | — | 2 |
+| 47 | /ba-overview | 3 (bổ sung lớp 2) | business-analyst | QT v01 bổ sung theo ERD vòng 2 (RQ-165…RQ-169): ngày áp giá, cảnh báo lệch sổ, QT-06 9 bước | QT_PM3CSCN_QuanLyKhoCangTin_v01.md + sơ đồ | — | — | 0 |
