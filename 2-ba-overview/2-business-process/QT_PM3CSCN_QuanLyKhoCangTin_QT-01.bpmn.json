@@ -1,7 +1,7 @@
 {
  "ten": "QT-01 Cập nhật nhà cung cấp và giá nhập",
  "cap": 2,
- "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v01.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v02.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
  "pools": [
   {
    "id": "P",

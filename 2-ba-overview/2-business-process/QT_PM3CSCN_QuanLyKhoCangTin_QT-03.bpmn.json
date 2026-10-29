@@ -1,7 +1,7 @@
 {
  "ten": "QT-03 Đề xuất và duyệt giá bán",
  "cap": 2,
- "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v01.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v02.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
  "pools": [
   {
    "id": "P",
@@ -58,7 +58,7 @@
   {
    "id": "S2",
    "loai": "start",
-   "ten": "Giá nhập mới có đề xuất giá bán Nháp",
+   "ten": "Giá nhập mới có dòng trên phiếu đề xuất Nháp",
    "lane": "CB",
    "cot": 0,
    "hang": 0,
@@ -94,7 +94,7 @@
   {
    "id": "S4",
    "loai": "start",
-   "ten": "Giá bán lẻ tại địa phương thay đổi, hoặc hủy phê duyệt giá bị chặn",
+   "ten": "Giá bán lẻ tại địa phương thay đổi, hoặc hủy phê duyệt phiếu bị chặn",
    "lane": "CB",
    "cot": 1.5,
    "hang": 2.8
@@ -113,7 +113,7 @@
    "loai": "task",
    "kieu": "user",
    "ma": "B2",
-   "ten": "Lập hoặc sửa đề xuất giá bán",
+   "ten": "Lập hoặc sửa phiếu đề xuất, dòng theo lô",
    "lane": "CB",
    "cot": 4,
    "hang": 1.5
@@ -123,7 +123,7 @@
    "loai": "task",
    "kieu": "user",
    "ma": "B3",
-   "ten": "Trình hoặc hủy đề xuất giá bán",
+   "ten": "Trình hoặc hủy phiếu đề xuất",
    "lane": "CB",
    "cot": 5,
    "hang": 1.5
@@ -140,7 +140,7 @@
   {
    "id": "E1",
    "loai": "end",
-   "ten": "Đề xuất giá bán Đã hủy",
+   "ten": "Phiếu đề xuất Đã hủy",
    "lane": "CB",
    "cot": 7,
    "hang": 1.5
@@ -150,7 +150,7 @@
    "loai": "task",
    "kieu": "service",
    "ma": "B4",
-   "ten": "Kiểm đề xuất trước khi sang Chờ duyệt",
+   "ten": "Kiểm mọi dòng trước khi sang Chờ duyệt",
    "lane": "HT",
    "cot": 6,
    "hang": 0
@@ -169,7 +169,7 @@
    "loai": "task",
    "kieu": "user",
    "ma": "B5",
-   "ten": "Duyệt hoặc từ chối đề xuất giá bán",
+   "ten": "Duyệt hoặc từ chối cả phiếu đề xuất",
    "lane": "TCS",
    "cot": 8,
    "hang": 0
@@ -188,7 +188,7 @@
    "loai": "task",
    "kieu": "businessRule",
    "ma": "B6",
-   "ten": "Kiểm giá bán đề xuất trong khoảng giá nhập – giá bán lẻ tại địa phương",
+   "ten": "Kiểm khoảng giá từng dòng: giá nhập – giá bán lẻ tại địa phương",
    "lane": "HT",
    "cot": 9,
    "hang": 0
@@ -197,7 +197,7 @@
    "id": "G4",
    "loai": "gateway",
    "kieu": "xor",
-   "ten": "Trong khoảng?",
+   "ten": "Mọi dòng trong khoảng?",
    "lane": "HT",
    "cot": 10,
    "hang": 0
@@ -207,7 +207,7 @@
    "loai": "task",
    "kieu": "service",
    "ma": "B7",
-   "ten": "Ghi giá bán Đã duyệt theo lô",
+   "ten": "Ghi phiếu Đã duyệt, ngày bắt đầu áp theo dòng",
    "lane": "HT",
    "cot": 11,
    "hang": 0
@@ -216,7 +216,7 @@
    "id": "TM",
    "loai": "intermediate",
    "su_kien": "timer",
-   "ten": "Đến ngày hiệu lực",
+   "ten": "Đến ngày bắt đầu áp của dòng",
    "lane": "HT",
    "cot": 12,
    "hang": 0
@@ -226,7 +226,7 @@
    "loai": "task",
    "kieu": "service",
    "ma": "B8",
-   "ten": "Áp giá bán cho lô, mở bán lô chờ giá",
+   "ten": "Áp giá cho lô của dòng, mở bán lô chờ giá",
    "lane": "HT",
    "cot": 13,
    "hang": 0
@@ -234,35 +234,35 @@
   {
    "id": "E3",
    "loai": "end",
-   "ten": "Giá bán Có hiệu lực",
+   "ten": "Phiếu đề xuất Có hiệu lực",
    "lane": "HT",
-   "cot": 14,
+   "cot": 17,
    "hang": 0
   },
   {
    "id": "S5",
    "loai": "start",
-   "ten": "Cần hủy giá bán đã duyệt",
+   "ten": "Cần hủy phê duyệt phiếu đề xuất",
    "lane": "TCS",
    "cot": 1,
    "hang": 1
   },
   {
-   "id": "QT03-B9",
+   "id": "QT03-B10",
    "loai": "task",
    "kieu": "user",
-   "ma": "B9",
-   "ten": "Hủy phê duyệt giá bán",
+   "ma": "B10",
+   "ten": "Hủy phê duyệt cả phiếu đề xuất",
    "lane": "TCS",
    "cot": 2,
    "hang": 1
   },
   {
-   "id": "QT03-B10",
+   "id": "QT03-B11",
    "loai": "task",
    "kieu": "service",
-   "ma": "B10",
-   "ten": "Kiểm giá chưa tới ngày hiệu lực",
+   "ma": "B11",
+   "ten": "Kiểm chưa dòng nào đến ngày bắt đầu áp",
    "lane": "HT",
    "cot": 2,
    "hang": 1
@@ -271,17 +271,17 @@
    "id": "G5",
    "loai": "gateway",
    "kieu": "xor",
-   "ten": "Chưa tới ngày hiệu lực?",
+   "ten": "Chưa dòng nào áp?",
    "lane": "HT",
    "cot": 3,
    "hang": 1
   },
   {
-   "id": "QT03-B11",
+   "id": "QT03-B12",
    "loai": "task",
    "kieu": "service",
-   "ma": "B11",
-   "ten": "Ghi giá bán Đã hủy duyệt, giữ lô chờ giá",
+   "ma": "B12",
+   "ten": "Ghi phiếu Đã hủy duyệt, giữ lô chờ giá",
    "lane": "HT",
    "cot": 4,
    "hang": 1
@@ -289,7 +289,7 @@
   {
    "id": "E4",
    "loai": "end",
-   "ten": "Giá bán Đã hủy duyệt",
+   "ten": "Phiếu đề xuất Đã hủy duyệt",
    "lane": "HT",
    "cot": 5,
    "hang": 1
@@ -297,17 +297,36 @@
   {
    "id": "E5",
    "loai": "end",
-   "ten": "Hủy phê duyệt bị chặn, lập đề xuất giá mới",
+   "ten": "Hủy phê duyệt bị chặn, lập phiếu đề xuất mới",
    "lane": "HT",
    "cot": 3,
    "hang": 2
+  },
+  {
+   "id": "G6",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Mọi dòng đã áp?",
+   "lane": "HT",
+   "cot": 14,
+   "hang": 0
+  },
+  {
+   "id": "QT03-B9",
+   "loai": "task",
+   "kieu": "service",
+   "ma": "B9",
+   "ten": "Phiếu đề xuất sang Có hiệu lực",
+   "lane": "HT",
+   "cot": 15.5,
+   "hang": 0
   }
  ],
  "flows": [
   {
    "tu": "Q01",
    "den": "S2",
-   "nhan": "Đề xuất giá bán Nháp (RQ-52)",
+   "nhan": "Phiếu đề xuất Nháp, dòng mới (RQ-52, RQ-190)",
    "loai": "message"
   },
   {
@@ -438,7 +457,7 @@
   {
    "tu": "G3",
    "den": "QT03-B2",
-   "nhan": "Từ chối, có lý do",
+   "nhan": "Từ chối cả phiếu, có lý do",
    "ra": "tren",
    "vao": "tren",
    "qua": [
@@ -468,7 +487,7 @@
   {
    "tu": "G4",
    "den": "QT03-B5",
-   "nhan": "Không: phải từ chối, ghi lý do",
+   "nhan": "Có dòng ngoài khoảng: từ chối cả phiếu",
    "ra": "duoi",
    "vao": "duoi",
    "qua": [
@@ -509,10 +528,6 @@
   },
   {
    "tu": "QT03-B8",
-   "den": "E3"
-  },
-  {
-   "tu": "QT03-B8",
    "den": "POS",
    "nhan": "Giá bán theo lô (tự đọc, RQ-54)",
    "loai": "message",
@@ -520,21 +535,21 @@
   },
   {
    "tu": "S5",
-   "den": "QT03-B9"
+   "den": "QT03-B10"
   },
   {
-   "tu": "QT03-B9",
-   "den": "QT03-B10",
+   "tu": "QT03-B10",
+   "den": "QT03-B11",
    "ra": "duoi",
    "vao": "tren"
   },
   {
-   "tu": "QT03-B10",
+   "tu": "QT03-B11",
    "den": "G5"
   },
   {
    "tu": "G5",
-   "den": "QT03-B11",
+   "den": "QT03-B12",
    "nhan": "Có"
   },
   {
@@ -544,8 +559,40 @@
    "ra": "duoi"
   },
   {
-   "tu": "QT03-B11",
+   "tu": "QT03-B12",
    "den": "E4"
+  },
+  {
+   "tu": "QT03-B8",
+   "den": "G6"
+  },
+  {
+   "tu": "G6",
+   "den": "QT03-B9",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G6",
+   "den": "TM",
+   "nhan": "Chưa, chờ dòng khác",
+   "ra": "duoi",
+   "vao": "duoi",
+   "qua": [
+    {
+     "lane": "HT",
+     "cot": 14,
+     "hang": 0.7
+    },
+    {
+     "lane": "HT",
+     "cot": 12,
+     "hang": 0.7
+    }
+   ]
+  },
+  {
+   "tu": "QT03-B9",
+   "den": "E3"
   }
  ]
 }
