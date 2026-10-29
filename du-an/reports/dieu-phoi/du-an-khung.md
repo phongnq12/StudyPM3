@@ -26,3 +26,8 @@
 | 22 | /ba-overview | 1 | business-analyst | Sửa BRD theo review vòng 1 (25 phát hiện) | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | — | — | 1 |
 | 23 | /ba-overview | 1 | business-analyst | Áp RQ-72…RQ-95 vào BRD | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 535.282 (cộng dồn phiên) | 5 phút 21 giây | 2 |
 | 24 | /ba-init --bo-sung | 2–4 | business-analyst | A2 thêm TT79 Đ5.K1.a, Đ5.K2, Đ52.K4; A4 ghép (mục 3, PH-032); A5 bổ sung bản đồ mục 4, cấp 1 | 1-ba-init/0-dau-vao/phap-ly.md, uc-phap-ly.md, ban-do-quy-trinh/ | 235.265 + 197.380 + 440.264 | 59 giây + 1 phút 17 giây + 1 phút 48 giây | 0 |
+| 25 | /ba-overview | 1 | quality-reviewer | Review độc lập BRD (vòng 2): 1 Chặn, 14 Nặng, 11 Nhẹ | — (chỉ đọc) | 301.718 | 7 phút 26 giây | — |
+| 26 | /ba-overview | 1 | business-analyst | Sửa BRD theo review vòng 2 (26 phát hiện) | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 636.755 (cộng dồn phiên) | 4 phút 21 giây | 2 |
+| 27 | /ba-overview | 1 | quality-reviewer | Review độc lập BRD (vòng 3): 2 Chặn, 12 Nặng, 14 Nhẹ | — (chỉ đọc) | 341.225 | 8 phút 58 giây | — |
+| 28 | /ba-overview | 1 | business-analyst | Sửa BRD theo review vòng 3 + RQ-102…RQ-112 | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 682.158 (cộng dồn phiên) | — | 3 |
+| 29 | /ba-overview | 1 | business-analyst | Áp RQ-113…RQ-115 | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md | 693.040 (cộng dồn phiên) | 1 phút 12 giây | 3 |
