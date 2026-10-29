@@ -1,12 +1,12 @@
 # QUY TRÌNH QUẢN LÝ KHO CĂNG TIN — Quản lý kho căng tin
 
-> **6 quy trình, 3 tác vụ nền và 4 tham số cấu hình** của quản lý kho căng tin (nhà cung cấp và giá nhập; nhập kho; giá bán; điều chuyển; kiểm kê; cảnh báo), dựng từ bản đồ quy trình bước 1 (QT-01 → QT-06, BA chốt — RQ-47, RQ-119), quy trình presales `QP-01` → `QP-07`, prototype presales (giá nhập), BRD, TT79 và câu trả lời của BA (RQ-01 → RQ-142).
+> **6 quy trình, 4 tác vụ nền và 4 tham số cấu hình** của quản lý kho căng tin (nhà cung cấp và giá nhập; nhập kho; giá bán; điều chuyển; kiểm kê; cảnh báo), dựng từ bản đồ quy trình bước 1 (QT-01 → QT-06, BA chốt — RQ-47, RQ-119), quy trình presales `QP-01` → `QP-07`, prototype presales (giá nhập), BRD, TT79 và câu trả lời của BA (RQ-01 → RQ-163).
 > Mỗi quy trình gồm **bảng các bước** kèm căn cứ và chứng từ, **một sơ đồ BPMN 2.0 (draw.io)**, **bảng trường hợp biên** và **điểm kiểm soát**.
 > Nút trong sơ đồ mang **đúng số bước của bảng** — `B1`, `B2`… — để đối chiếu hai chiều. Nút không mang số gồm: sự kiện bắt đầu; sự kiện trung gian hẹn giờ; sự kiện kết thúc, kể cả kết thúc chặn và kết thúc gửi thông điệp sang quy trình khác; cổng rẽ nhánh hoặc cổng gộp (cổng chỉ hỏi kết quả của bước ngay trước, theo skill ba-bpmn); pool thu gọn của quy trình khác hoặc hệ thống, đơn vị ngoài.
 > Cột **Căn cứ** dẫn **văn bản pháp luật** (`TT79 Đ41.4`) · **`D-xx`** ở mục 4 · **`CH-xx`** ở mục 6 · **`GS-xx`** ở mục 3.1 · giả định của sổ (bôi đỏ) · giả định bước 1 `ASM-00n` (BA xác nhận — RQ-116) · `BRQ-xx`, `NFR-xx`, `CON-xx` của BRD · câu trả lời của BA `RQ-nn` (loại nguồn "BA xác nhận") · bước presales `QP-xx.yy` · UC presales `PS:<mã>` · màn presales `MP-xxx` và mã nguồn prototype `[SRC]`; sau lượt điền ngược thêm mã BR. ❓ kèm `Q-Pnn` là chỗ còn chờ chốt (mục 11.3).
 > 🟡 **Ngoài phạm vi hệ thống** — bước tô vàng là nghĩa vụ có thật nhưng không xây chức năng; giữ lại để thấy đủ luồng.
-> Giá trị liệt kê viết **tên tiếng Việt**. Mã kỹ thuật ở ERD — `chờ lớp 3`.
-> Tài liệu **không** chứa màn hình, nút, API, tên bảng, mã trạng thái, vòng đời trạng thái, danh sách use case, nội dung từng business rule — xem ERD (`chờ lớp 3`), máy trạng thái (`chờ lớp 4`), tác nhân và use case (`chờ lớp 5`), business rule (`chờ lớp 6`).
+> Giá trị liệt kê viết **tên tiếng Việt**. Mã kỹ thuật ở ERD — [`ERD_PM3CSCN_QuanLyKhoCangTin_v00.md`](../3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v00.md).
+> Tài liệu **không** chứa màn hình, nút, API, tên bảng, mã trạng thái, vòng đời trạng thái, danh sách use case, nội dung từng business rule — xem ERD ([`ERD_PM3CSCN_QuanLyKhoCangTin_v00.md`](../3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v00.md)), máy trạng thái (`chờ lớp 4`), tác nhân và use case (`chờ lớp 5`), business rule (`chờ lớp 6`).
 
 ## Thông tin tài liệu
 
@@ -14,16 +14,17 @@
 |---|---|
 | Mã tài liệu | `QT_PM3CSCN_QuanLyKhoCangTin` |
 | Dự án · Phân hệ | Quản lý kho căng tin (mã dự án PM3CSCN, nền tảng WEB — RQ-69) · Ba phân hệ presales: QUẢN LÝ KHO CĂNG TIN; CẤU HÌNH NGHIỆP VỤ HỆ THỐNG (danh mục hàng hóa và giá bán căng tin); QUẢN LÝ NHÀ CUNG CẤP HÀNG HÓA CĂNG TIN — một bộ tài liệu cho cả ba (RQ-70) |
-| Phiên bản · Trạng thái | v00 · Chờ review |
+| Phiên bản · Trạng thái | v01 · Chờ review |
 | Người soạn · Người review · Người duyệt | phongnq12 — BA (AI hỗ trợ soạn) · chưa chốt (BA lead) · chưa chốt (BA) |
 | Mức mật | Nội bộ |
-| Tài liệu cấp trên | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| Tài liệu cấp trên | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v01.md` |
 
 ## Version control
 
 | Tên version | Ngày cập nhật | PIC | Mô tả |
 | :--- | :--- | :--- | :--- |
-| **<span style="color:green">v00<br>(hiện tại)</span>** | **<span style="color:green">2026-10-29</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Khởi tạo tài liệu (/ba-overview đợt 2, lớp quy trình): 6 quy trình QT-01 đến QT-06 giữ mã, trigger, kết quả, UC presales của bản đồ quy trình bước 1; thuật ngữ mục 1.1.<br>- Sửa theo review độc lập vòng 1: QT-01 sửa có điều kiện, xóa dòng giá nhập, xóa đề xuất Nháp, lý do bắt buộc; QT-02, QT-04 kiểm khóa kho khi duyệt; QT-03 nhánh giá ngoài khoảng quay về Trưởng cơ sở; QT-06 hạn mức cảnh báo là đầu vào; PH-033; thêm Q-P14 → Q-P17.<br>- BA chốt 29/10/2026: áp Q-P01 → Q-P12, Q-P14 → Q-P17 (RQ-120 → RQ-135); D-01 chốt (RQ-131); chuyển giao QT-06 → QT-03 (RQ-119).<br>- Sửa theo review độc lập vòng 2 và BA chốt 29/10/2026 (RQ-116, RQ-136 → RQ-142): khóa kho đang kiểm kê chặn lập, trình, duyệt, hủy phê duyệt và mở khi biên bản Đã duyệt, Đã hủy duyệt hoặc lần giao bị hủy; QT-05 thêm nhánh hủy lần giao kiểm kê; lô của mặt hàng chưa có giá bán được duyệt là lô chờ giá; giá bán hiện hành theo ngày hiệu lực đã tới, mỗi lô một đề xuất chờ duyệt; QT-02 thêm bước kiểm khi trình và bước lập đề xuất Nháp gắn lô; QT-04 thêm bước kiểm khi trình; QT-01 phủ quy tắc thay thế dòng, ngày bắt đầu, cặp ngừng hoạt động; thêm N-03, GS-06; chống lặp cảnh báo theo kho + lô + loại; phạm vi kho của người phụ trách căng tin. Tổng 76 bước (vòng 2); 3 tác vụ nền N-01 → N-03; 4 tham số CH-01 → CH-04; 6 quy tắc GS-01 → GS-06; 1 quyết định D-01; 30 điểm kiểm soát. Còn Q-P13 chờ lớp 3.<br>- BA chốt bảng bước 29/10/2026 (RQ-143 → RQ-146): QT-01 → QT-04 và chuyển giao chốt nguyên trạng; QT-05 gộp giao kiểm kê và biên bản kiểm kê thành một chứng từ "biên bản kiểm kê" (RQ-145), 15 bước; QT-06 cảnh báo không tự đóng, chỉ đóng khi người phụ trách căng tin xác nhận, thêm bước xác nhận (RQ-146), 6 bước; GS-06, N-01, N-03 sửa theo. Tổng 78 bước.<br>- Chờ lớp sau điền: đường dẫn ERD ở khối giới thiệu và cột Thực thể ERD mục 1.1 (chờ lớp 3); mục 10 (chờ lớp 5); mã BR ở cột Căn cứ và dòng Business rule mục 1 (lớp 6, lượt điền ngược).<br>- Sơ đồ vẽ BPMN 2.0 draw.io theo skill ba-bpmn thay khối Mermaid của template (quy ước của kit); bản đồ mục 3 nhúng sơ đồ cấp 1 của bước 1, không vẽ lại.</span> |
+| v00 | 2026-10-29 | phongnq12 | - Khởi tạo tài liệu (/ba-overview đợt 2, lớp quy trình): 6 quy trình QT-01 đến QT-06 giữ mã, trigger, kết quả, UC presales của bản đồ quy trình bước 1; thuật ngữ mục 1.1.<br>- Sửa theo review độc lập vòng 1: QT-01 sửa có điều kiện, xóa dòng giá nhập, xóa đề xuất Nháp, lý do bắt buộc; QT-02, QT-04 kiểm khóa kho khi duyệt; QT-03 nhánh giá ngoài khoảng quay về Trưởng cơ sở; QT-06 hạn mức cảnh báo là đầu vào; PH-033; thêm Q-P14 → Q-P17.<br>- BA chốt 29/10/2026: áp Q-P01 → Q-P12, Q-P14 → Q-P17 (RQ-120 → RQ-135); D-01 chốt (RQ-131); chuyển giao QT-06 → QT-03 (RQ-119).<br>- Sửa theo review độc lập vòng 2 và BA chốt 29/10/2026 (RQ-116, RQ-136 → RQ-142): khóa kho đang kiểm kê chặn lập, trình, duyệt, hủy phê duyệt và mở khi biên bản Đã duyệt, Đã hủy duyệt hoặc lần giao bị hủy; QT-05 thêm nhánh hủy lần giao kiểm kê; lô của mặt hàng chưa có giá bán được duyệt là lô chờ giá; giá bán hiện hành theo ngày hiệu lực đã tới, mỗi lô một đề xuất chờ duyệt; QT-02 thêm bước kiểm khi trình và bước lập đề xuất Nháp gắn lô; QT-04 thêm bước kiểm khi trình; QT-01 phủ quy tắc thay thế dòng, ngày bắt đầu, cặp ngừng hoạt động; thêm N-03, GS-06; chống lặp cảnh báo theo kho + lô + loại; phạm vi kho của người phụ trách căng tin. Tổng 76 bước (vòng 2); 3 tác vụ nền N-01 → N-03; 4 tham số CH-01 → CH-04; 6 quy tắc GS-01 → GS-06; 1 quyết định D-01; 30 điểm kiểm soát. Còn Q-P13 chờ lớp 3.<br>- BA chốt bảng bước 29/10/2026 (RQ-143 → RQ-146): QT-01 → QT-04 và chuyển giao chốt nguyên trạng; QT-05 gộp giao kiểm kê và biên bản kiểm kê thành một chứng từ "biên bản kiểm kê" (RQ-145), 15 bước; QT-06 cảnh báo không tự đóng, chỉ đóng khi người phụ trách căng tin xác nhận, thêm bước xác nhận (RQ-146), 6 bước; GS-06, N-01, N-03 sửa theo. Tổng 78 bước.<br>- Chờ lớp sau điền: đường dẫn ERD ở khối giới thiệu và cột Thực thể ERD mục 1.1 (chờ lớp 3); mục 10 (chờ lớp 5); mã BR ở cột Căn cứ và dòng Business rule mục 1 (lớp 6, lượt điền ngược).<br>- Sơ đồ vẽ BPMN 2.0 draw.io theo skill ba-bpmn thay khối Mermaid của template (quy ước của kit); bản đồ mục 3 nhúng sơ đồ cấp 1 của bước 1, không vẽ lại.<br>- Điền từ ERD_PM3CSCN_QuanLyKhoCangTin_v00, không đổi nghĩa: mục 1.1 cột Thực thể ERD; mục 3 tên thực thể dữ liệu trục, Q-P13 ✅ lớp 3 đặt tên; đường dẫn ERD ở khối giới thiệu và bảng nguồn mục 1. |
+| **<span style="color:green">v01<br>(hiện tại)</span>** | **<span style="color:green">2026-10-29</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Bổ sung theo lớp 3 (ERD E-05, E-06, E-08, E-11, E-12, E-13), thay đổi có nghĩa sau commit faf80196, về Chờ review (RQ-148 → RQ-163): phạm vi nhiều cơ sở, dữ liệu riêng từng cơ sở (RQ-151, RQ-152) ở mục 1, 2, mục 9 điểm 30; phân công kho do Trưởng cơ sở (RQ-148, PH-034); thêm N-04 đối soát tồn kho theo lô với sổ biến động (RQ-153, RQ-154); N-03 xét mọi giá Đã duyệt có ngày hiệu lực ≤ ngày chạy, QT-03 bước 7 duyệt khi ngày hiệu lực đã tới thì giá sang Có hiệu lực ngay (RQ-123, RQ-139, RQ-160); tên trạng thái Đã xác nhận thực nhận (QT-04 bước 11) và Chưa xem (QT-06 bước 3); QT-05 bước 2 mỗi kho một biên bản đang mở, biên bản gồm mọi lô có dòng tồn kể cả số sách 0, lý do chênh lệch bắt buộc khi có chênh lệch, thành viên tổ ghi họ tên, chỉ người có tài khoản điền và trình (RQ-155, RQ-156, RQ-162); QT-01 bước 5 xóa dòng cuối thì đợt giá nhập bị xóa mềm (RQ-163). 4 tác vụ nền N-01 → N-04. Số bước không đổi (78).</span> |
 
 ## Phê duyệt
 
@@ -37,7 +38,7 @@
 
 ## 1. Phạm vi và nguồn
 
-**Trong phạm vi:** Cập nhật nhà cung cấp và giá nhập (QT-01) · Nhập kho hàng hóa từ nhà cung cấp (QT-02) · Đề xuất và duyệt giá bán (QT-03) · Điều chuyển hàng hóa giữa các kho (QT-04) · Kiểm kê tồn kho (QT-05) · Cảnh báo tồn kho và hạn sử dụng (QT-06) · Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện — tác vụ nền `N-02`, không là quy trình (`D-01`).
+**Trong phạm vi:** Một bản cài đặt phục vụ nhiều cơ sở cai nghiện; kho, mặt hàng, nhà cung cấp, giá nhập, giá bán, chứng từ thuộc riêng một cơ sở, người dùng chỉ thấy dữ liệu cơ sở mình (RQ-151, RQ-152; BRD NFR-10). Mọi quy trình dưới đây chạy trong phạm vi một cơ sở. Ai khai báo cơ sở: chưa chốt (BA) — BRD Q-B36. Phân công người phụ trách căng tin theo kho do Trưởng cơ sở thực hiện, là danh mục, không là quy trình (RQ-148, PH-034). Quy trình: Cập nhật nhà cung cấp và giá nhập (QT-01) · Nhập kho hàng hóa từ nhà cung cấp (QT-02) · Đề xuất và duyệt giá bán (QT-03) · Điều chuyển hàng hóa giữa các kho (QT-04) · Kiểm kê tồn kho (QT-05) · Cảnh báo tồn kho và hạn sử dụng (QT-06) · Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện — tác vụ nền `N-02`, không là quy trình (`D-01`).
 
 Mã quy trình giữ `QT-nn` của bản đồ quy trình bước 1 (BA chốt — RQ-47), không đổi sang dạng `{XX}-nn` của template, để mọi bước sau dẫn cùng một mã.
 
@@ -53,8 +54,9 @@ Mã quy trình giữ `QT-nn` của bản đồ quy trình bước 1 (BA chốt �
 
 | Nguồn | Đường dẫn | Vai trò |
 |---|---|---|
-| BRD | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md` | Mục tiêu, phạm vi, BRQ, NFR, CON-05, tên vai người (mục 4) |
+| BRD | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v01.md` | Mục tiêu, phạm vi, BRQ, NFR, CON-05, tên vai người (mục 4) |
 | Business rule | chưa có (lớp 6 chạy sau) | Ràng buộc pháp lý — điền ở lượt điền ngược |
+| ERD | `../3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v00.md` | Tên bảng, tên trường, mã enum của thuật ngữ mục 1.1 và dữ liệu trục mục 3 |
 | Thông tư 79/2026/TT-BCA — viết tắt `TT79`; `TT79 Đ41.4` = `PL:TT79-2026/Đ41.K4` | 79/2026/TT-BCA — Điều 5, 16, 41 · `../../0-inputs/phap-ly/TT79/1. Thông tư số 79.docx`; danh mục `../../1-ba-init/0-dau-vao/phap-ly.md` | Đ41.4: duyệt giá bán, trần giá bán lẻ tại địa phương → QT-03; Đ16.1–Đ16.8: chất cấm, đồ vật cấm → QT-03 bước 5; Đ41.7: hệ thống bán hàng căng tin → mục 5.1; Đ5.1.a: bối cảnh kết nối của phần mềm quản lý cơ sở cai nghiện, nghĩa vụ đồng bộ của kho do BA xác nhận (RQ-91) và giả định tạm <span style="color:red">**<u>GD-0007</u>**</span> → `N-02`. Các điều khác đã rà ở BRD mục 1.3, không sinh quy trình |
 | Nghị định 163/2026/NĐ-CP — viết tắt `NĐ163` | `../../0-inputs/phap-ly/Nghị định 163/NGHỊ ĐỊNH 163.docx` | Đã rà toàn văn, không sinh quy trình — Đ120.3 cùng nghĩa `TT79 Đ41.4` (RQ-49) |
 | Bản đồ quy trình bước 1 (BA chốt — RQ-47, RQ-119) | `../../1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md`, `cap-2/QT-nn-*/QT-nn.md` | Danh sách QT, trigger, kết quả, UC presales, chuyển giao, hệ thống ngoài |
@@ -72,55 +74,55 @@ Các loại khóa định nghĩa ở mục 3, quy tắc `GS-xx` ở mục 3.1, t
 
 | Thuật ngữ | Định nghĩa | Thực thể ERD |
 |---|---|---|
-| **Kho** | Nơi giữ hàng hóa căng tin; các kho ngang hàng, mỗi kho có người phụ trách căng tin được phân công (RQ-01, RQ-95) | chờ lớp 3 |
-| **Kho được phân công** | Kho mà một người phụ trách căng tin được giao; một người có thể được giao nhiều kho (RQ-95, RQ-142) | chờ lớp 3 |
-| **Mặt hàng** | Một dòng của danh mục hàng hóa căng tin (RQ-17) | chờ lớp 3 |
-| **Danh mục hàng hóa cung ứng** | Danh sách mặt hàng mà một nhà cung cấp cung ứng; mỗi dòng là một cặp nhà cung cấp – mặt hàng (RQ-16) | chờ lớp 3 |
-| **Ngừng hoạt động** | Tình trạng của cặp nhà cung cấp – mặt hàng khi nhà cung cấp Ngừng hợp tác hoặc mặt hàng ngừng hoạt động hoặc bị xóa (`[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/LineEditForm.jsx, dòng 83]`) | |
-| **Hồ sơ nhà cung cấp** | Thông tin một nhà cung cấp, ở một trong hai trạng thái Đang hoạt động, Ngừng hợp tác, kèm họ tên, điện thoại người liên hệ (RQ-16, RQ-20, RQ-104) | chờ lớp 3 |
-| **Lô** | Phần hàng hóa của một mặt hàng nhập cùng một phiếu nhập kho, có số lô, hạn sử dụng (RQ-14) | chờ lớp 3 |
-| **Tồn kho theo lô** | Số lượng của một lô đang có tại một kho; biến động theo mục 3 | chờ lớp 3 |
-| **Hàng đang chuyển** | Số lượng của một lô đã trừ khỏi tồn kho xuất khi phiếu điều chuyển được duyệt, chưa được kho nhận xác nhận hoặc kho xuất ghi nhận chênh lệch (RQ-06) | chờ lớp 3 |
-| **Số sách** | Tồn kho theo lô của một kho do hệ thống ghi nhận, chốt tại thời điểm bắt đầu kiểm kê (RQ-12) | chờ lớp 3 |
-| **Số thực tế** | Số lượng của một lô do tổ kiểm kê đếm được, ghi trên biên bản kiểm kê (RQ-07) | chờ lớp 3 |
-| **Chênh lệch kiểm kê** | Hiệu số thực tế và số sách của một lô — `GS-02` | |
-| **Lô chờ giá** | Lô bị giữ, không được bán, vì giá nhập của lô lớn hơn giá bán hiện hành lúc phiếu nhập kho được duyệt, hoặc vì mặt hàng của lô chưa có giá bán được duyệt; chờ giá bán được duyệt (RQ-11, RQ-13, RQ-41, RQ-122); khóa ở mục 3 | |
-| **Lô sắp hết hạn** | Lô còn tồn mà số ngày còn lại tới hạn sử dụng tới ngưỡng `CH-02` của kho — `GS-03` | |
-| **Lô quá hạn** | Lô còn tồn đã qua hạn sử dụng (RQ-30) | |
-| **Phiếu dở dang** | Phiếu nhập kho, phiếu điều chuyển chờ duyệt của một kho, và phiếu điều chuyển đã duyệt chưa hoàn thành (hàng đang chuyển tới, đi khỏi kho đó) (QP-06.03, RQ-12, RQ-39, RQ-125) | |
-| **Hạn mức cảnh báo** | Tồn tối thiểu theo kho × mặt hàng (`CH-01`) và số ngày cảnh báo sắp hết hạn N theo kho (`CH-02`) (RQ-28, RQ-31, RQ-33) | chờ lớp 3 |
-| **Cảnh báo** | Thông báo hệ thống gửi người phụ trách căng tin phụ trách kho về tồn dưới mức tối thiểu, lô sắp hết hạn, lô quá hạn hoặc lô chờ giá; mở tới khi người phụ trách căng tin xác nhận — `GS-06` (RQ-146) (QP-07.04, RQ-95) | chờ lớp 3 |
-| **FEFO** | Cách Hệ thống bán hàng căng tin trừ tồn khi bán: lô có hạn sử dụng gần nhất trước (RQ-19) | |
+| **Kho** | Nơi giữ hàng hóa căng tin; các kho ngang hàng, mỗi kho có người phụ trách căng tin được phân công (RQ-01, RQ-95) | `Kho` |
+| **Kho được phân công** | Kho mà một người phụ trách căng tin được giao; một người có thể được giao nhiều kho (RQ-95, RQ-142) | `Phan_Cong_Kho` |
+| **Mặt hàng** | Một dòng của danh mục hàng hóa căng tin (RQ-17) | `Mat_Hang` |
+| **Danh mục hàng hóa cung ứng** | Danh sách mặt hàng mà một nhà cung cấp cung ứng; mỗi dòng là một cặp nhà cung cấp – mặt hàng (RQ-16) | `Mat_Hang_Nha_Cung_Cap` |
+| **Ngừng hoạt động** | Tình trạng của cặp nhà cung cấp – mặt hàng khi nhà cung cấp Ngừng hợp tác hoặc mặt hàng ngừng hoạt động hoặc bị xóa (`[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/LineEditForm.jsx, dòng 83]`) | Δ `ngung_hoat_dong` trên `Mat_Hang_Nha_Cung_Cap` |
+| **Hồ sơ nhà cung cấp** | Thông tin một nhà cung cấp, ở một trong hai trạng thái Đang hoạt động, Ngừng hợp tác, kèm họ tên, điện thoại người liên hệ (RQ-16, RQ-20, RQ-104) | `Nha_Cung_Cap` |
+| **Lô** | Phần hàng hóa của một mặt hàng nhập cùng một phiếu nhập kho, có số lô, hạn sử dụng (RQ-14) | `Lo` |
+| **Tồn kho theo lô** | Số lượng của một lô đang có tại một kho; biến động theo mục 3 | `Ton_Kho_Lo` · `Bien_Dong_Ton` |
+| **Hàng đang chuyển** | Số lượng của một lô đã trừ khỏi tồn kho xuất khi phiếu điều chuyển được duyệt, chưa được kho nhận xác nhận hoặc kho xuất ghi nhận chênh lệch (RQ-06) | Δ `hang_dang_chuyen` trên `Phieu_Dieu_Chuyen_Dong` |
+| **Số sách** | Tồn kho theo lô của một kho do hệ thống ghi nhận, chốt tại thời điểm bắt đầu kiểm kê (RQ-12) | `Bien_Ban_Kiem_Ke_Dong.so_sach` |
+| **Số thực tế** | Số lượng của một lô do tổ kiểm kê đếm được, ghi trên biên bản kiểm kê (RQ-07) | `Bien_Ban_Kiem_Ke_Dong.so_thuc_te` |
+| **Chênh lệch kiểm kê** | Hiệu số thực tế và số sách của một lô — `GS-02` | Δ `chenh_lech` trên `Bien_Ban_Kiem_Ke_Dong` |
+| **Lô chờ giá** | Lô bị giữ, không được bán, vì giá nhập của lô lớn hơn giá bán hiện hành lúc phiếu nhập kho được duyệt, hoặc vì mặt hàng của lô chưa có giá bán được duyệt; chờ giá bán được duyệt (RQ-11, RQ-13, RQ-41, RQ-122); khóa ở mục 3 | Δ `lo_cho_gia` trên `Lo` |
+| **Lô sắp hết hạn** | Lô còn tồn mà số ngày còn lại tới hạn sử dụng tới ngưỡng `CH-02` của kho — `GS-03` | Δ `lo_sap_het_han` trên `Lo` |
+| **Lô quá hạn** | Lô còn tồn đã qua hạn sử dụng (RQ-30) | Δ `lo_qua_han` trên `Lo` |
+| **Phiếu dở dang** | Phiếu nhập kho, phiếu điều chuyển chờ duyệt của một kho, và phiếu điều chuyển đã duyệt chưa hoàn thành (hàng đang chuyển tới, đi khỏi kho đó) (QP-06.03, RQ-12, RQ-39, RQ-125) | Δ `phieu_dang_do` trên `Kho` |
+| **Hạn mức cảnh báo** | Tồn tối thiểu theo kho × mặt hàng (`CH-01`) và số ngày cảnh báo sắp hết hạn N theo kho (`CH-02`) (RQ-28, RQ-31, RQ-33) | `Ton_Toi_Thieu` · `Kho.so_ngay_canh_bao_het_han` |
+| **Cảnh báo** | Thông báo hệ thống gửi người phụ trách căng tin phụ trách kho về tồn dưới mức tối thiểu, lô sắp hết hạn, lô quá hạn hoặc lô chờ giá; mở tới khi người phụ trách căng tin xác nhận — `GS-06` (RQ-146) (QP-07.04, RQ-95) | `Canh_Bao` |
+| **FEFO** | Cách Hệ thống bán hàng căng tin trừ tồn khi bán: lô có hạn sử dụng gần nhất trước (RQ-19) | — (không lưu, ERD mục 2 Không lưu) |
 
 #### b. Giá
 
 | Thuật ngữ | Định nghĩa | Thực thể ERD |
 |---|---|---|
-| **Giá nhập** | Giá nhà cung cấp bán hàng hóa cho cơ sở, theo nhà cung cấp, mặt hàng và đợt nhập (RQ-04) | chờ lớp 3 |
-| **Đợt giá nhập** | Nhóm dòng giá nhập khai cùng lúc cho một nhà cung cấp, có số hiệu căn cứ, tệp căn cứ, hiệu lực từ, đến (MP-004) | chờ lớp 3 |
-| **Dòng giá nhập** | Giá nhập của một cặp nhà cung cấp – mặt hàng trong một đợt, ở một trong bốn hiệu lực Khai trước, Hiện hành, Đã thay thế, Hết hiệu lực (`du-an/glossary.md`; MP-001, MP-002; `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 18]`) | chờ lớp 3 |
-| **Dòng giá nhập thay thế** | Dòng mới của cùng cặp bắt đầu trong hiệu lực của dòng cũ và thay thế dòng cũ từ ngày bắt đầu; dòng cũ sang Đã thay thế (`[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 4, 130–131]`) | chờ lớp 3 |
-| **Dòng giá nhập đã phát sinh** | Dòng giá nhập đã được dùng làm giá nhập của ít nhất một phiếu nhập kho (MP-002 bảng "Phát sinh từ dòng") | |
-| **Giá bán** | Giá bán tại căng tin do Trưởng cơ sở duyệt, gắn theo lô — `GS-01` (`TT79 Đ41.4`, RQ-21) | chờ lớp 3 |
-| **Giá bán hiện hành** | Giá bán đã duyệt của mặt hàng có ngày hiệu lực gần nhất đã tới — `GS-01` (RQ-87, RQ-139) | |
-| **Giá bán lẻ tại địa phương** | Mức trần của giá bán, so với hàng hóa cùng loại, ghi trên đề xuất giá bán kèm chứng từ (`TT79 Đ41.4`, RQ-112) | chờ lớp 3 |
-| **Chi phí hợp lý** | Khoản được tính khi duyệt giá bán, tính bên ngoài hệ thống (`TT79 Đ41.4`, RQ-112) | |
-| **Ngày hiệu lực** | Ngày giá bán đã duyệt bắt đầu áp cho các lô ghi trên đề xuất (RQ-23, RQ-25) | chờ lớp 3 |
+| **Giá nhập** | Giá nhà cung cấp bán hàng hóa cho cơ sở, theo nhà cung cấp, mặt hàng và đợt nhập (RQ-04) | `Dong_Gia_Nhap.gia_nhap` · `Lo.gia_nhap` |
+| **Đợt giá nhập** | Nhóm dòng giá nhập khai cùng lúc cho một nhà cung cấp, có số hiệu căn cứ, tệp căn cứ, hiệu lực từ, đến (MP-004) | `Dot_Gia_Nhap` |
+| **Dòng giá nhập** | Giá nhập của một cặp nhà cung cấp – mặt hàng trong một đợt, ở một trong bốn hiệu lực Khai trước, Hiện hành, Đã thay thế, Hết hiệu lực (`du-an/glossary.md`; MP-001, MP-002; `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 18]`) | `Dong_Gia_Nhap` |
+| **Dòng giá nhập thay thế** | Dòng mới của cùng cặp bắt đầu trong hiệu lực của dòng cũ và thay thế dòng cũ từ ngày bắt đầu; dòng cũ sang Đã thay thế (`[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 4, 130–131]`) | Δ `dong_bi_thay_the` trên `Dong_Gia_Nhap` |
+| **Dòng giá nhập đã phát sinh** | Dòng giá nhập đã được dùng làm giá nhập của ít nhất một phiếu nhập kho (MP-002 bảng "Phát sinh từ dòng") | Δ `da_phat_sinh` trên `Dong_Gia_Nhap` |
+| **Giá bán** | Giá bán tại căng tin do Trưởng cơ sở duyệt, gắn theo lô — `GS-01` (`TT79 Đ41.4`, RQ-21) | `De_Xuat_Gia_Ban` (đã duyệt) · `Gia_Ban_Lo` |
+| **Giá bán hiện hành** | Giá bán đã duyệt của mặt hàng có ngày hiệu lực gần nhất đã tới — `GS-01` (RQ-87, RQ-139) | Δ `gia_ban_hien_hanh` trên `De_Xuat_Gia_Ban` |
+| **Giá bán lẻ tại địa phương** | Mức trần của giá bán, so với hàng hóa cùng loại, ghi trên đề xuất giá bán kèm chứng từ (`TT79 Đ41.4`, RQ-112) | `De_Xuat_Gia_Ban.gia_ban_le_dia_phuong` |
+| **Chi phí hợp lý** | Khoản được tính khi duyệt giá bán, tính bên ngoài hệ thống (`TT79 Đ41.4`, RQ-112) | `De_Xuat_Gia_Ban.chi_phi_hop_ly` |
+| **Ngày hiệu lực** | Ngày giá bán đã duyệt bắt đầu áp cho các lô ghi trên đề xuất (RQ-23, RQ-25) | `De_Xuat_Gia_Ban.ngay_hieu_luc` |
 
 #### c. Chứng từ kho và giá
 
 | Thuật ngữ | Định nghĩa | Thực thể ERD |
 |---|---|---|
-| **Phiếu nhập kho** | Chứng từ ghi hàng hóa nhập từ một nhà cung cấp vào một kho, mỗi dòng một lô có số lô, hạn sử dụng, số lượng, giá nhập (RQ-05, RQ-14) | chờ lớp 3 |
-| **Phiếu nhập kho đầu kỳ** | Phiếu nhập kho lập cho hàng đang tồn khi bắt đầu vận hành; đi đúng QT-02 (RQ-98, RQ-105) | chờ lớp 3 |
-| **Bản in phiếu nhập kho** | Bản giấy của phiếu nhập kho theo mẫu dự án tự thiết kế, phục vụ lưu trữ kế toán (RQ-57, RQ-60) | |
-| **Phiếu điều chuyển** | Chứng từ chuyển hàng hóa theo lô từ kho xuất sang kho nhận (RQ-06, RQ-15) | chờ lớp 3 |
-| **Số thực nhận** | Số lượng của một lô kho nhận xác nhận đã nhận (RQ-26) | chờ lớp 3 |
-| **Chênh lệch điều chuyển** | Hiệu số xuất và số thực nhận của một lô — `GS-05` (RQ-29) | chờ lớp 3 |
-| **Giao kiểm kê** | Việc Trưởng cơ sở lập biên bản kiểm kê cho một kho, ghi kho và tổ kiểm kê; không là chứng từ riêng (QP-06.02, BRQ-18, RQ-145) | |
-| **Biên bản kiểm kê** | Chứng từ do Trưởng cơ sở lập khi giao kiểm kê (kho, tổ kiểm kê), ghi cho từng lô của kho số sách, số thực tế, chênh lệch và lý do chênh lệch; ở một trong các trạng thái Đang kiểm kê, Chờ duyệt, Đã duyệt, Đã hủy, Đã hủy duyệt (RQ-07, RQ-145, BRQ-19) | chờ lớp 3 |
-| **Đề xuất giá bán** | Đề nghị giá bán cho các lô của một mặt hàng, ghi mặt hàng, lô, giá bán đề xuất, giá bán lẻ tại địa phương kèm chứng từ, ngày hiệu lực, giá nhập của từng lô (RQ-08, RQ-23, RQ-112); trạng thái Nháp khi chưa trình (MP-003) | chờ lớp 3 |
-| **Đồ vật cấm, chất cấm** | Thứ cấm đưa vào cơ sở theo `TT79 Đ16.1`–`Đ16.8` (RQ-24) | |
+| **Phiếu nhập kho** | Chứng từ ghi hàng hóa nhập từ một nhà cung cấp vào một kho, mỗi dòng một lô có số lô, hạn sử dụng, số lượng, giá nhập (RQ-05, RQ-14) | `Phieu_Nhap_Kho` · `Lo` |
+| **Phiếu nhập kho đầu kỳ** | Phiếu nhập kho lập cho hàng đang tồn khi bắt đầu vận hành; đi đúng QT-02 (RQ-98, RQ-105) | `Phieu_Nhap_Kho` |
+| **Bản in phiếu nhập kho** | Bản giấy của phiếu nhập kho theo mẫu dự án tự thiết kế, phục vụ lưu trữ kế toán (RQ-57, RQ-60) | — (không lưu, ERD mục 2 Không lưu) |
+| **Phiếu điều chuyển** | Chứng từ chuyển hàng hóa theo lô từ kho xuất sang kho nhận (RQ-06, RQ-15) | `Phieu_Dieu_Chuyen` · `Phieu_Dieu_Chuyen_Dong` |
+| **Số thực nhận** | Số lượng của một lô kho nhận xác nhận đã nhận (RQ-26) | `Phieu_Dieu_Chuyen_Dong.so_thuc_nhan` |
+| **Chênh lệch điều chuyển** | Hiệu số xuất và số thực nhận của một lô — `GS-05` (RQ-29) | Δ `chenh_lech_dieu_chuyen` trên `Phieu_Dieu_Chuyen_Dong` |
+| **Giao kiểm kê** | Việc Trưởng cơ sở lập biên bản kiểm kê cho một kho, ghi kho và tổ kiểm kê; không là chứng từ riêng (QP-06.02, BRQ-18, RQ-145) | `Bien_Ban_Kiem_Ke` |
+| **Biên bản kiểm kê** | Chứng từ do Trưởng cơ sở lập khi giao kiểm kê (kho, tổ kiểm kê), ghi cho từng lô của kho số sách, số thực tế, chênh lệch và lý do chênh lệch; ở một trong các trạng thái Đang kiểm kê, Chờ duyệt, Đã duyệt, Đã hủy, Đã hủy duyệt (RQ-07, RQ-145, BRQ-19) | `Bien_Ban_Kiem_Ke` · `Bien_Ban_Kiem_Ke_Dong` · `Thanh_Vien_Kiem_Ke` |
+| **Đề xuất giá bán** | Đề nghị giá bán cho các lô của một mặt hàng, ghi mặt hàng, lô, giá bán đề xuất, giá bán lẻ tại địa phương kèm chứng từ, ngày hiệu lực, giá nhập của từng lô (RQ-08, RQ-23, RQ-112); trạng thái Nháp khi chưa trình (MP-003) | `De_Xuat_Gia_Ban` · `De_Xuat_Gia_Ban_Lo` |
+| **Đồ vật cấm, chất cấm** | Thứ cấm đưa vào cơ sở theo `TT79 Đ16.1`–`Đ16.8` (RQ-24) | — (không lưu, ERD mục 2 Không lưu) |
 
 #### d. Phê duyệt và chứng từ
 
@@ -140,10 +142,10 @@ Các loại khóa định nghĩa ở mục 3, quy tắc `GS-xx` ở mục 3.1, t
 
 | Tác nhân | Vai trò trong quản lý kho căng tin | Căn cứ |
 |---|---|---|
-| **Người phụ trách căng tin** | Cập nhật hồ sơ nhà cung cấp, danh mục hàng hóa cung ứng; khai đợt giá nhập, sửa, xóa dòng giá nhập; quyết định có lập đề xuất giá bán (QT-01) · lập, sửa, trình, hủy, in phiếu nhập kho; chọn có đề xuất giá bán mới cho lô (QT-02) · thêm mặt hàng; lập, sửa, trình, hủy đề xuất giá bán (QT-03) · kho xuất: lập, sửa, trình, hủy phiếu điều chuyển, ghi nhận chênh lệch; kho nhận: xác nhận số thực nhận (QT-04) · xem cảnh báo, chọn hướng xử lý (QT-06) · thiết lập hạn mức cảnh báo (đầu vào QT-06). Phân công theo từng kho, một người phụ trách được nhiều kho; chứng từ kho và cảnh báo chỉ của kho được phân công, danh mục chung (hàng hóa, nhà cung cấp, giá) dùng chung (RQ-142); QT-04 vẽ hai làn cùng vai trò cho kho xuất, kho nhận | BRD mục 4 SH-02 · Q-001 · RQ-05, RQ-06, RQ-08, RQ-15, RQ-17, RQ-20, RQ-25, RQ-33, RQ-95, RQ-142 · tên vai theo `TT79 Đ41.2`, `Đ41.3` (RQ-66) |
-| **Trưởng cơ sở** | Duyệt hoặc từ chối phiếu nhập kho, đề xuất giá bán, phiếu điều chuyển, biên bản kiểm kê · loại đồ vật cấm khi duyệt giá đầu của mặt hàng · hủy phê duyệt bốn loại chứng từ · giao kiểm kê (lập biên bản kiểm kê), hủy biên bản kiểm kê chưa trình | BRD mục 4 SH-01 · `TT79 Đ41.4` · RQ-05, RQ-07, RQ-15, RQ-24, RQ-40, RQ-137, RQ-145 · NFR-01 |
-| **Tổ kiểm kê** | Kiểm đếm thực tế theo lô (🟡) · điền số thực tế, trình biên bản kiểm kê · đếm lại, sửa, trình lại khi biên bản bị từ chối | BRD mục 4 SH-03 · RQ-07, RQ-34, RQ-145 |
-| **Hệ thống** | Hệ thống quản lý kho căng tin (tên làn trên sơ đồ: "Hệ thống"): kiểm điều kiện, ghi lịch sử, tăng, giảm, điều chỉnh tồn kho theo lô, so giá, giữ lô chờ giá, lập, xóa đề xuất giá bán Nháp, áp giá bán, chốt số sách, khóa và mở khóa kho, tính chênh lệch, quét và gửi cảnh báo, đồng bộ dữ liệu (`N-01` → `N-03`) | — |
+| **Người phụ trách căng tin** | Cập nhật hồ sơ nhà cung cấp, danh mục hàng hóa cung ứng; khai đợt giá nhập, sửa, xóa dòng giá nhập; quyết định có lập đề xuất giá bán (QT-01) · lập, sửa, trình, hủy, in phiếu nhập kho; chọn có đề xuất giá bán mới cho lô (QT-02) · thêm mặt hàng; lập, sửa, trình, hủy đề xuất giá bán (QT-03) · kho xuất: lập, sửa, trình, hủy phiếu điều chuyển, ghi nhận chênh lệch; kho nhận: xác nhận số thực nhận (QT-04) · xem cảnh báo, chọn hướng xử lý (QT-06) · thiết lập hạn mức cảnh báo (đầu vào QT-06). Thuộc một cơ sở (RQ-151, RQ-152); phân công theo từng kho do Trưởng cơ sở thực hiện (RQ-148, PH-034), một người phụ trách được nhiều kho; chứng từ kho và cảnh báo chỉ của kho được phân công, danh mục chung (hàng hóa, nhà cung cấp, giá) dùng chung (RQ-142); QT-04 vẽ hai làn cùng vai trò cho kho xuất, kho nhận | BRD mục 4 SH-02 · Q-001 · RQ-05, RQ-06, RQ-08, RQ-15, RQ-17, RQ-20, RQ-25, RQ-33, RQ-95, RQ-142 · tên vai theo `TT79 Đ41.2`, `Đ41.3` (RQ-66) |
+| **Trưởng cơ sở** | Duyệt hoặc từ chối phiếu nhập kho, đề xuất giá bán, phiếu điều chuyển, biên bản kiểm kê · loại đồ vật cấm khi duyệt giá đầu của mặt hàng · hủy phê duyệt bốn loại chứng từ · giao kiểm kê (lập biên bản kiểm kê), hủy biên bản kiểm kê chưa trình · phân công người phụ trách căng tin theo kho (danh mục, không là quy trình). Thuộc một cơ sở, chỉ quyết trên chứng từ, dữ liệu của cơ sở mình | BRD mục 4 SH-01 · `TT79 Đ41.4` · RQ-05, RQ-07, RQ-15, RQ-24, RQ-40, RQ-137, RQ-145, RQ-148, RQ-151, RQ-152 · NFR-01 |
+| **Tổ kiểm kê** | Kiểm đếm thực tế theo lô (🟡) · điền số thực tế, trình biên bản kiểm kê (chỉ thành viên có tài khoản — RQ-155) · đếm lại, sửa, trình lại khi biên bản bị từ chối. Thành viên ghi họ tên trên biên bản, tài khoản nếu có | BRD mục 4 SH-03 · RQ-07, RQ-34, RQ-145, RQ-155 |
+| **Hệ thống** | Hệ thống quản lý kho căng tin (tên làn trên sơ đồ: "Hệ thống"): kiểm điều kiện, ghi lịch sử, tăng, giảm, điều chỉnh tồn kho theo lô, so giá, giữ lô chờ giá, lập, xóa đề xuất giá bán Nháp, áp giá bán, chốt số sách, khóa và mở khóa kho, tính chênh lệch, quét và gửi cảnh báo, đồng bộ dữ liệu, đối soát tồn (`N-01` → `N-04`) | — |
 | **Hệ thống bán hàng căng tin** | Hệ thống ngoài: tự đọc giá bán theo lô, trạng thái lô, trạng thái kiểm kê của kho; ghi thẳng phần trừ tồn theo lô khi bán (mục 5.1) | `TT79 Đ41.7` · RQ-54, RQ-86 · BRD `ASM-02` Hệ thống bán hàng căng tin tự đọc dữ liệu kho |
 | **Phần mềm quản lý cơ sở cai nghiện** | Hệ thống ngoài: nhận dữ liệu kho đồng bộ (`N-02`); đầu mối kết nối cơ sở dữ liệu quốc gia | `TT79 Đ5.1.a` (bối cảnh) · RQ-91 · <span style="color:red">**<u>GD-0007</u>**</span> |
 | **Nhà cung cấp** | Đơn vị ngoài: giao hàng hóa để nhập kho (QT-02) | BRD mục 4 SH-08 · QP-01.04, QP-03.01 |
@@ -176,8 +178,8 @@ Chuyển giao giữa các quy trình (cạnh của bản đồ, nhãn là điề
 
 | Bảng | Trả lời | Ai ghi |
 |---|---|---|
-| Tồn kho theo lô — tên thực thể ❓ Q-P13 | Kho K đang có bao nhiêu của lô L? | QT-02 tăng (bước 9), giảm (bước 18) · QT-04 trừ kho xuất (bước 7), cộng kho nhận (bước 10), cộng trả kho xuất (bước 13, 16) · QT-05 điều chỉnh (bước 9), đảo (bước 12) · Hệ thống bán hàng căng tin trừ khi bán (mục 5.1) |
-| Hàng đang chuyển — tên thực thể ❓ Q-P13 | Phiếu điều chuyển P còn bao nhiêu của lô L chưa về kho nhận, chưa ghi nhận chênh lệch? | QT-04 tạo (bước 7), giảm (bước 10, 13, 16) |
+| Tồn kho theo lô — `Ton_Kho_Lo` (số dư), `Bien_Dong_Ton` (biến động) | Kho K đang có bao nhiêu của lô L? | QT-02 tăng (bước 9), giảm (bước 18) · QT-04 trừ kho xuất (bước 7), cộng kho nhận (bước 10), cộng trả kho xuất (bước 13, 16) · QT-05 điều chỉnh (bước 9), đảo (bước 12) · Hệ thống bán hàng căng tin trừ khi bán (mục 5.1) |
+| Hàng đang chuyển — Δ `hang_dang_chuyen` trên `Phieu_Dieu_Chuyen_Dong` (ERD mục 4.5, E-04) | Phiếu điều chuyển P còn bao nhiêu của lô L chưa về kho nhận, chưa ghi nhận chênh lệch? | QT-04 tạo (bước 7), giảm (bước 10, 13, 16) |
 
 **Loại biến động** — định nghĩa ở 1.1 (Tồn kho theo lô, Hàng đang chuyển):
 
@@ -251,7 +253,7 @@ UC presales của quy trình (bản đồ bước 1): `PS:PM3CSCN.WEB.15.01.01`,
 | 2 | Người phụ trách căng tin | Cập nhật danh mục hàng hóa cung ứng của nhà cung cấp; mặt hàng phải có trong danh mục hàng hóa căng tin | QP-02.04 · `PS:PM3CSCN.WEB.15.02.01` · RQ-16 · RQ-20 · BRQ-08 · BRQ-09 | Danh mục hàng hóa cung ứng — *không có mẫu* |
 | 3 | Người phụ trách căng tin | Khai đợt giá nhập: dòng giá nhập theo mặt hàng, hiệu lực từ, đến, số hiệu căn cứ, tệp căn cứ — dòng giá nhập Khai trước hoặc Hiện hành; dòng bắt đầu trong hiệu lực của dòng cũ cùng cặp thì thay thế dòng cũ từ ngày bắt đầu | QP-02.05 · `PS:PM3CSCN.WEB.15.03.01` · MP-004 · RQ-04 · RQ-20 · BRQ-11 · `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 4]` | Đợt giá nhập — *không có mẫu* |
 | 4 | Người phụ trách căng tin | Sửa dòng giá nhập (giá nhập, hiệu lực đến; hiệu lực từ chỉ khi dòng còn Khai trước) | QP-02.05 · MP-003 · `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/LineEditForm.jsx, dòng 1–2]` | Đợt giá nhập — *không có mẫu* |
-| 5 | Người phụ trách căng tin | Xóa dòng giá nhập, ghi lý do | `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/DeleteLineDialog.jsx, dòng 1–2]` · RQ-132 · MP-001 · MP-002 | Đợt giá nhập — *không có mẫu* |
+| 5 | Người phụ trách căng tin | Xóa dòng giá nhập, ghi lý do; xóa dòng cuối của đợt thì đợt giá nhập bị xóa mềm cùng lần | `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/DeleteLineDialog.jsx, dòng 1–2]` · `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 318]` · RQ-132 · RQ-163 · MP-001 · MP-002 | Đợt giá nhập — *không có mẫu* |
 | 6 | Hệ thống | **Kiểm điều kiện dòng giá nhập** của bước 3, 4, 5: hiệu lực từ sau ngày bắt đầu của mọi dòng khác cùng cặp; cặp nhà cung cấp – mặt hàng không đang có đề xuất giá bán mở của dòng khác; cặp không ngừng hoạt động; sửa chỉ khi dòng chưa phát sinh, chưa Hết hiệu lực, chưa Đã thay thế và có đề xuất giá bán Nháp gắn dòng; xóa chỉ khi dòng chưa phát sinh và không có đề xuất gắn dòng đã trình | `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 167–196]` · `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/LineEditForm.jsx, dòng 3, 54, 83]` · `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/DeleteLineDialog.jsx, dòng 39]` · `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/BatchForm.jsx, dòng 2]` · RQ-132 | — |
 | 7 | Hệ thống | Ghi lịch sử thay đổi của bước 1 → 5 | QP-02.07 · RQ-20 · NFR-07 | — |
 | 8 | Hệ thống | **So giá nhập mới** của từng dòng với giá bán hiện hành của mặt hàng | `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/BatchForm.jsx, dòng 3, 116]` (`vượt hoặc chưa có giá bán thì tự sinh đề xuất, không vượt thì hỏi`) · RQ-52 · `GS-01` | — |
@@ -283,6 +285,7 @@ Nguồn: QT_PM3CSCN_QuanLyKhoCangTin_QT-01.drawio.svg (đặc tả `QT_PM3CSCN_Q
 | Xóa dòng giá nhập mà không ghi lý do | **Chặn** — `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/DeleteLineDialog.jsx, dòng 2]` · RQ-132 |
 | Xóa dòng giá nhập có đề xuất giá bán Nháp gắn dòng | **Cho phép** — đề xuất Nháp bị xóa kèm (bước 11) — `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/DeleteLineDialog.jsx, dòng 2]` |
 | Xóa dòng giá nhập đang thay thế một dòng cũ còn trong hạn | **Cho phép** — dòng cũ được áp dụng lại (bước 12) — `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/DeleteLineDialog.jsx, dòng 3, 53–54]` |
+| Xóa dòng giá nhập cuối cùng của một đợt | **Cho phép** — đợt giá nhập bị xóa mềm cùng lần xóa dòng — RQ-163 · `[SRC: 0-inputs/presales/prototype/src/data/purchasePriceStore.js, dòng 318]` |
 | Giá nhập mới đúng bằng giá bán hiện hành | **Cho phép** — đi nhánh "không vượt", người phụ trách căng tin quyết định ở bước 9 — `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/BatchForm.jsx, dòng 116]` |
 | Giá nhập mới lớn hơn giá bán hiện hành 1 đ | **Cảnh báo** — hệ thống tự lập đề xuất giá bán Nháp (bước 10) — `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/BatchForm.jsx, dòng 116]` · RQ-11 |
 | Mặt hàng chưa có giá bán hiện hành khi lưu giá nhập | **Cảnh báo** — hệ thống tự lập đề xuất giá bán Nháp (bước 10) — `[SRC: 0-inputs/presales/prototype/src/pages/PurchasePriceShared/BatchForm.jsx, dòng 3, 116]` |
@@ -390,7 +393,7 @@ UC presales của quy trình (bản đồ bước 1): `PS:PM3CSCN.WEB.10.01.01`,
 | 4 | Hệ thống | **Kiểm đề xuất trước khi sang Chờ duyệt**: đủ năm thông tin bắt buộc (mặt hàng, lô, giá bán đề xuất, giá bán lẻ tại địa phương kèm chứng từ, ngày hiệu lực); không lô nào đã có đề xuất khác đang chờ duyệt | RQ-112 · RQ-139 · BRQ-02 · `GS-01` | — |
 | 5 | Trưởng cơ sở | **Duyệt hoặc từ chối** đề xuất giá bán; khi là giá đầu của mặt hàng, tự xét mặt hàng có thuộc `TT79 Đ16.1`–`Đ16.8` không (hệ thống không phân loại); từ chối phải ghi lý do, đề xuất trả về người lập. Gộp việc xét đồ vật cấm vào bước duyệt vì cùng một người, cùng một quyết định trên cùng đề xuất (RQ-24) | QP-04.05 · QP-04.06 · `PS:PM3CSCN.WEB.10.01.02` · `PS:PM3CSCN.WEB.10.01.03` · `TT79 Đ41.4` · `TT79 Đ16.1`–`Đ16.8` · RQ-24 · RQ-34 · RQ-49 · RQ-100 · RQ-121 · BRQ-05 · BRQ-07 · <span style="color:red">**<u>GD-0002</u>**</span> · BRQ-26 · NFR-01 | Đề xuất giá bán — *không có mẫu* |
 | 6 | Hệ thống | Khi Trưởng cơ sở duyệt: **kiểm giá bán đề xuất** nằm trong khoảng giá nhập của từng lô – giá bán lẻ tại địa phương ghi trên đề xuất; ngoài khoảng thì quyết định duyệt không được ghi, Trưởng cơ sở từ chối kèm lý do (bước 5) | `TT79 Đ41.4` ("không được cao hơn giá bán lẻ tại địa phương") · `GS-04` · BRQ-03 · BRQ-04 · <span style="color:red">**<u>GD-0001</u>**</span> · <span style="color:red">**<u>GD-0008</u>**</span> · RQ-90 | — |
-| 7 | Hệ thống | Ghi giá bán Đã duyệt theo lô, kèm người duyệt, thời điểm; ngày hiệu lực là ngày duyệt hoặc đã qua thì áp ngay | QP-04.07 · RQ-23 · RQ-25 · RQ-123 · BRQ-05 | — |
+| 7 | Hệ thống | Ghi giá bán Đã duyệt theo lô, kèm người duyệt, thời điểm; ngày hiệu lực đã tới (là ngày duyệt hoặc đã qua) thì giá sang Có hiệu lực ngay; hai giá trùng ngày hiệu lực thì giá duyệt muộn hơn là giá hiện hành | QP-04.07 · RQ-23 · RQ-25 · RQ-123 · RQ-139 · RQ-160 · BRQ-05 | — |
 | 8 | Hệ thống | Đến ngày hiệu lực (`N-03`): áp giá bán cho các lô của đề xuất, mở bán lô chờ giá — Giá bán Có hiệu lực, thành giá bán hiện hành | QP-04.08 · QP-04.09 · RQ-21 · RQ-25 · RQ-54 · RQ-139 · `GS-01` · BRQ-01 · BRQ-24 | — |
 | 9 | Trưởng cơ sở | Hủy phê duyệt giá bán đã duyệt | QP-04.15 · `PS:PM3CSCN.WEB.10.01.04` · RQ-35 · RQ-40 · BRQ-06 · ASM-004 (BA xác nhận — RQ-116) | — |
 | 10 | Hệ thống | **Kiểm giá chưa tới ngày hiệu lực** | QP-04.16 · QP-04.17 · RQ-35 | — |
@@ -420,6 +423,8 @@ Nguồn: QT_PM3CSCN_QuanLyKhoCangTin_QT-03.drawio.svg (đặc tả `QT_PM3CSCN_Q
 | Người lập hủy đề xuất của lô chờ giá | **Cảnh báo** — lô tiếp tục bị giữ, đưa vào cảnh báo lô chờ giá (QT-06) — RQ-41 · BRQ-31 |
 | Ngày hiệu lực ghi trên đề xuất là ngày duyệt hoặc ngày đã qua | **Cho phép** — giá áp ngay khi duyệt — RQ-123 |
 | Hai giá đã duyệt cho cùng mặt hàng, giá sau chưa tới ngày hiệu lực | **Cho phép** — giá bán hiện hành vẫn là giá có ngày hiệu lực gần nhất đã tới — `GS-01` · RQ-139 |
+| Hai giá đã duyệt có cùng ngày hiệu lực | **Cho phép** — giá có thời điểm duyệt muộn hơn là giá bán hiện hành — RQ-160 |
+| Trưởng cơ sở duyệt đề xuất có ngày hiệu lực đã qua, khi `N-03` chưa chạy | **Cho phép** — giá sang Có hiệu lực ngay khi duyệt (bước 7) — RQ-123 · ERD E-13 |
 | Hủy phê duyệt giá bán đúng vào ngày hiệu lực | **Chặn** — đã tới ngày hiệu lực; lập đề xuất giá mới — QP-04.19 · RQ-35 ("khi chưa tới ngày hiệu lực") |
 | Hủy phê duyệt giá bán một ngày trước ngày hiệu lực | **Cho phép** — Giá bán Đã hủy duyệt, lô chờ giá tiếp tục bị giữ — RQ-35 · RQ-41 |
 | Giá bán lẻ tại địa phương giảm xuống dưới giá bán đang có hiệu lực | **Chuyển quy trình** — hệ thống không theo dõi; người phụ trách căng tin chủ động lập đề xuất mới (bước 2) — RQ-89 |
@@ -457,7 +462,7 @@ UC presales của quy trình (bản đồ bước 1): `PS:PM3CSCN.WEB.09.02.01`,
 | 🟡 8 | <span style="color:#B8860B">Người phụ trách căng tin</span> | <span style="color:#B8860B">Kho nhận kiểm tra hàng thực nhận theo lô tại kho, ngoài hệ thống</span> | <span style="color:#B8860B">Nghĩa vụ: QP-05.07 · RQ-26 ("kho nhận kiểm tra"); BRQ-16 chỉ đòi hệ thống ghi số thực nhận · RQ-129 (làm ngoài hệ thống)</span> | <span style="color:#B8860B">—</span> |
 | 9 | Người phụ trách căng tin | Kho nhận (kho được phân công) **xác nhận số lượng thực nhận** theo lô, không lớn hơn số xuất | QP-05.07 · RQ-06 · RQ-26 · RQ-111 · RQ-121 · RQ-142 · BRQ-16 · PH-024 | Phiếu điều chuyển — *không có mẫu* |
 | 10 | Hệ thống | Cộng tồn kho nhận theo số thực nhận | QP-05.08 · RQ-06 · BRQ-16 | — |
-| 11 | Hệ thống | **So số thực nhận với số xuất** — phiếu điều chuyển Hoàn thành khi đủ | QP-05.09 · QP-05.10 · `GS-05` | — |
+| 11 | Hệ thống | **So số thực nhận với số xuất** — phiếu điều chuyển Hoàn thành khi đủ; thiếu thì Đã xác nhận thực nhận, chờ kho xuất ghi nhận chênh lệch | QP-05.09 · QP-05.10 · `GS-05` · ERD E-05 | — |
 | 12 | Người phụ trách căng tin | Kho xuất ghi nhận chênh lệch điều chuyển khi thực nhận thiếu | QP-05.11 · RQ-26 · RQ-29 · RQ-142 · BRQ-27 · PH-024 | Phiếu điều chuyển — *không có mẫu* |
 | 13 | Hệ thống | Cộng trả chênh lệch về tồn kho xuất theo lô — phiếu điều chuyển Hoàn thành có chênh lệch | QP-05.12 · QP-05.13 · RQ-29 · BRQ-27 · `GS-05` | — |
 | 14 | Trưởng cơ sở | Hủy phê duyệt phiếu điều chuyển đã duyệt | QP-05.16 · `PS:PM3CSCN.WEB.09.02.04` · RQ-35 · RQ-40 · BRQ-06 | — |
@@ -487,6 +492,7 @@ Nguồn: QT_PM3CSCN_QuanLyKhoCangTin_QT-04.drawio.svg (đặc tả `QT_PM3CSCN_Q
 | Số thực nhận đúng bằng số xuất | **Cho phép** — phiếu Hoàn thành — QP-05.09 · QP-05.10 |
 | Số thực nhận lớn hơn số xuất 1 | **Chặn** — không ghi được; phần thừa xử lý qua kiểm kê kế tiếp của kho nhận — RQ-111 |
 | Số thực nhận nhỏ hơn số xuất 2 | **Cho phép kèm điều kiện** — tồn kho nhận tăng bằng số thực nhận; kho xuất ghi nhận chênh lệch 2, cộng trả về tồn kho xuất; hao hụt thật lộ ra ở kiểm kê kế tiếp của kho xuất — RQ-26 · RQ-29 · `GS-05` |
+| Phiếu điều chuyển thực nhận thiếu, kho xuất chưa ghi nhận chênh lệch | **Cho phép** — phiếu ở trạng thái Đã xác nhận thực nhận tới khi kho xuất ghi nhận — ERD E-05 · RQ-134 |
 | Kho nhận không xác nhận thực nhận, hoặc kho xuất không ghi nhận chênh lệch | **Cho phép kèm điều kiện** — không đặt thời hạn; phiếu treo chặn giao kiểm kê kho xuất, kho nhận (QT-05 bước 2) tới khi xử lý; Trưởng cơ sở hủy phê duyệt (khi kho nhận chưa xác nhận) hoặc yêu cầu người phụ trách xử lý — RQ-134 |
 | Hủy phê duyệt khi kho nhận chưa xác nhận thực nhận | **Cho phép** — cộng trả kho xuất, Đã hủy duyệt — RQ-35 |
 | Hủy phê duyệt khi kho nhận đã xác nhận thực nhận | **Chặn** — hủy phê duyệt bị chặn — QP-05.21 · RQ-35 |
@@ -514,12 +520,12 @@ UC presales của quy trình (bản đồ bước 1): `PS:PM3CSCN.WEB.09.03.01`,
 
 | Bước | Tác nhân | Hành động | Căn cứ | Chứng từ |
 |---|---|---|---|---|
-| 1 | Trưởng cơ sở | Giao kiểm kê: lập biên bản kiểm kê cho một kho, ghi kho và tổ kiểm kê | QP-06.02 · RQ-07 · RQ-28 · RQ-145 · BRQ-18 · PH-026 | Biên bản kiểm kê — *không có mẫu* |
-| 2 | Hệ thống | **Kiểm kho còn phiếu dở dang**: phiếu nhập kho, phiếu điều chuyển chờ duyệt; phiếu điều chuyển đã duyệt chưa hoàn thành (hàng đang chuyển) | QP-06.03 · QP-06.04 · RQ-12 · RQ-39 · RQ-125 · BRQ-20 | — |
-| 3 | Hệ thống | Chốt số sách theo lô vào biên bản, khóa giao dịch kho — biên bản Đang kiểm kê | QP-06.05 · RQ-12 · RQ-110 · RQ-138 · RQ-145 · BRQ-20 · BRQ-24 · BRQ-29 | Biên bản kiểm kê — *không có mẫu* |
+| 1 | Trưởng cơ sở | Giao kiểm kê: lập biên bản kiểm kê cho một kho, ghi kho và tổ kiểm kê (họ tên từng thành viên, tài khoản nếu có) | QP-06.02 · RQ-07 · RQ-28 · RQ-145 · RQ-155 · BRQ-18 · PH-026 | Biên bản kiểm kê — *không có mẫu* |
+| 2 | Hệ thống | **Kiểm kho được giao kiểm kê**: kho chưa có biên bản kiểm kê đang mở; không còn phiếu dở dang (phiếu nhập kho, phiếu điều chuyển chờ duyệt; phiếu điều chuyển đã duyệt chưa hoàn thành) | QP-06.03 · QP-06.04 · RQ-12 · RQ-39 · RQ-125 · BRQ-20 · ERD E-08 | — |
+| 3 | Hệ thống | Chốt số sách vào biên bản cho mọi lô có dòng tồn tại kho, kể cả số sách 0; khóa giao dịch kho — biên bản Đang kiểm kê | QP-06.05 · RQ-12 · RQ-110 · RQ-138 · RQ-145 · RQ-156 · BRQ-20 · BRQ-24 · BRQ-29 | Biên bản kiểm kê — *không có mẫu* |
 | 🟡 4 | <span style="color:#B8860B">Tổ kiểm kê</span> | <span style="color:#B8860B">Kiểm đếm thực tế theo lô tại kho, ngoài hệ thống</span> | <span style="color:#B8860B">Nghĩa vụ: QP-06.06 · RQ-07 ("tổ kiểm kê đếm"); BRQ-19 chỉ đòi biên bản ghi số thực tế · RQ-129 (làm ngoài hệ thống)</span> | <span style="color:#B8860B">—</span> |
-| 5 | Tổ kiểm kê | Điền vào biên bản số thực tế theo lô, lý do chênh lệch (kể cả lô quá hạn, hư hỏng ghi giảm) | QP-06.07 · `PS:PM3CSCN.WEB.09.03.01` · RQ-02 · RQ-07 · RQ-14 · RQ-30 · RQ-145 · BRQ-19 | Biên bản kiểm kê — *không có mẫu* |
-| 6 | Tổ kiểm kê | Trình biên bản kiểm kê — Chờ duyệt | RQ-145 ("điền số thực tế rồi trình") · RQ-137 | Biên bản kiểm kê — *không có mẫu* |
+| 5 | Tổ kiểm kê | Thành viên có tài khoản điền vào biên bản số thực tế theo lô; lý do chênh lệch bắt buộc khi số thực tế khác số sách (kể cả lô quá hạn, hư hỏng ghi giảm) | QP-06.07 · `PS:PM3CSCN.WEB.09.03.01` · RQ-02 · RQ-07 · RQ-14 · RQ-30 · RQ-145 · RQ-155 · RQ-162 · BRQ-19 | Biên bản kiểm kê — *không có mẫu* |
+| 6 | Tổ kiểm kê | Thành viên có tài khoản trình biên bản kiểm kê — Chờ duyệt | RQ-145 ("điền số thực tế rồi trình") · RQ-137 · RQ-155 | Biên bản kiểm kê — *không có mẫu* |
 | 7 | Hệ thống | Tính chênh lệch so với số sách theo lô | QP-06.08 · RQ-07 · `GS-02` · BRQ-19 | — |
 | 8 | Trưởng cơ sở | **Duyệt hoặc từ chối** biên bản kiểm kê; từ chối phải ghi lý do, tổ kiểm kê đếm lại, sửa và trình lại trên cùng biên bản | QP-06.09 · QP-06.10 · `PS:PM3CSCN.WEB.09.03.02` · `PS:PM3CSCN.WEB.09.03.03` · RQ-07 · RQ-34 · RQ-121 · RQ-145 · BRQ-05 · BRQ-26 · BRQ-28 · NFR-01 | Biên bản kiểm kê — *không có mẫu* |
 | 9 | Hệ thống | Điều chỉnh tồn kho theo số thực tế, mở khóa kho — biên bản kiểm kê Đã duyệt | QP-06.11 · QP-06.12 · RQ-07 · RQ-12 · `GS-02` · BRQ-05 · BRQ-13 | — |
@@ -542,6 +548,10 @@ Nguồn: QT_PM3CSCN_QuanLyKhoCangTin_QT-05.drawio.svg (đặc tả `QT_PM3CSCN_Q
 |---|---|
 | Giao kiểm kê khi kho còn một phiếu nhập kho chờ duyệt | **Chặn** — biên bản không được tạo, liệt kê phiếu dở dang; xử lý xong thì giao lại — RQ-39 · RQ-125 |
 | Giao kiểm kê khi kho còn hàng đang chuyển tới hoặc đi, kể cả phiếu điều chuyển kho nhận chưa xác nhận | **Chặn** — RQ-12 · RQ-39 · RQ-125 · RQ-134 |
+| Giao kiểm kê cho kho đang có một biên bản kiểm kê đang mở | **Chặn** — mỗi kho chỉ một biên bản kiểm kê đang mở — ERD E-08 |
+| Kho có một lô tồn số sách 0 khi giao kiểm kê | **Cho phép** — lô vẫn có dòng trên biên bản; không thêm lô ngoài sổ — RQ-156 |
+| Số thực tế khác số sách mà không ghi lý do chênh lệch | **Chặn** — biên bản không trình được — RQ-162 |
+| Thành viên tổ kiểm kê không có tài khoản | **Cho phép kèm điều kiện** — ghi họ tên trên biên bản; chỉ thành viên có tài khoản điền số và trình — RQ-155 |
 | Giao kiểm kê khi kho có phiếu đã lập chưa trình, hoặc phiếu bị từ chối chưa trình lại | **Cho phép kèm điều kiện** — không tính là phiếu dở dang; phiếu không trình, duyệt được tới khi kho mở khóa — RQ-125 · RQ-138 |
 | Lô quá hạn còn trong kho khi kiểm đếm | **Cho phép kèm điều kiện** — tổ kiểm kê ghi giảm lô trên biên bản, lý do quá hạn — RQ-02 · RQ-30 |
 | Số thực tế của một lô đúng bằng số sách | **Cho phép** — chênh lệch 0, tồn không đổi — `GS-02` |
@@ -581,7 +591,7 @@ UC presales của quy trình (bản đồ bước 1): `PS:PM3CSCN.WEB.09.04.03` 
 |---|---|---|---|---|
 | 1 | Hệ thống | **Quét** lô sắp hết hạn, lô quá hạn, lô chờ giá của mọi kho; quét bù tồn tối thiểu theo kho × mặt hàng | QP-07.01 · QP-07.02 · RQ-14 · RQ-27 · RQ-30 · RQ-41 · RQ-42 · RQ-135 · `GS-03` · `CH-02` · `CH-03` · BRQ-23 · <span style="color:red">**<u>GD-0003</u>**</span> · BRQ-31 | — |
 | 2 | Hệ thống | **Kiểm tồn** của mặt hàng tại kho so với tồn tối thiểu, ngay sau giao dịch làm giảm tồn | QP-07.02 · QP-07.08 · RQ-28 · RQ-42 · RQ-135 · `CH-01` · BRQ-22 | — |
-| 3 | Hệ thống | Gửi cảnh báo cho người phụ trách căng tin phụ trách kho, trừ khi đã có cảnh báo cùng kho + lô hoặc mặt hàng + loại đang mở | QP-07.03 · QP-07.04 · RQ-95 · RQ-146 · `GS-06` · BRQ-22 · BRQ-23 · <span style="color:red">**<u>GD-0003</u>**</span> · BRQ-31 | Cảnh báo — *không có mẫu* |
+| 3 | Hệ thống | Gửi cảnh báo cho người phụ trách căng tin phụ trách kho — cảnh báo Chưa xem; trừ khi đã có cảnh báo cùng kho + lô hoặc mặt hàng + loại đang mở (Chưa xem hoặc Đã xem) | QP-07.03 · QP-07.04 · RQ-95 · RQ-146 · ERD E-06 · `GS-06` · BRQ-22 · BRQ-23 · <span style="color:red">**<u>GD-0003</u>**</span> · BRQ-31 | Cảnh báo — *không có mẫu* |
 | 4 | Người phụ trách căng tin | Xem cảnh báo của kho được phân công, **chọn hướng xử lý**: nhập kho, điều chuyển, đề nghị kiểm kê, lập đề xuất giá bán cho lô chờ giá — Cảnh báo Đã xem | QP-07.05 · QP-07.06 · ASM-008 (BA xác nhận — RQ-116) · BRQ-31 · RQ-41 · RQ-119 · RQ-142 · PH-027 · PH-033 | — |
 | 5 | Người phụ trách căng tin | Xác nhận cảnh báo — Cảnh báo Đã đóng | RQ-146 ("xác nhận cảnh báo thì cảnh báo đóng") · `GS-06` | Cảnh báo — *không có mẫu* |
 | 🟡 6 | <span style="color:#B8860B">Người phụ trách căng tin</span> | <span style="color:#B8860B">Đề nghị Trưởng cơ sở kiểm kê, ngoài hệ thống</span> | <span style="color:#B8860B">Nghĩa vụ: QP-07.05 ("đề nghị kiểm kê") · RQ-30 · ASM-008 (BA xác nhận — RQ-116: "đề nghị Trưởng cơ sở kiểm kê ngoài hệ thống") · RQ-129</span> | <span style="color:#B8860B">—</span> |
@@ -610,6 +620,7 @@ Nguồn: QT_PM3CSCN_QuanLyKhoCangTin_QT-06.drawio.svg (đặc tả `QT_PM3CSCN_Q
 | Một người phụ trách căng tin phụ trách hai kho, cả hai có mục cần cảnh báo | **Cảnh báo** — người đó nhận cảnh báo của cả hai kho — RQ-95 |
 | Người phụ trách căng tin xem, xác nhận cảnh báo của kho không được phân công | **Chặn** — RQ-142 |
 | Quét chạy lại trong cùng ngày khi cảnh báo của lô còn mở | **Cho phép** — không tạo cảnh báo trùng — `GS-06` · RQ-146 |
+| Đối soát `N-04` thấy tồn của một lô lệch tổng biến động | **Cảnh báo** — không tự sửa; xử lý qua kiểm kê (QT-05) — RQ-154 |
 
 **Điểm kiểm soát bắt buộc:** Hệ thống phải cảnh báo người phụ trách căng tin phụ trách kho khi tồn xuống dưới tồn tối thiểu, có lô sắp hết hạn, lô quá hạn hoặc lô chờ giá; mỗi kho + lô (hoặc mặt hàng) + loại chỉ một cảnh báo đang mở (B3) · Cảnh báo chỉ đóng khi người phụ trách căng tin xác nhận; hệ thống không tự đóng (B5) · Người phụ trách căng tin chỉ xem, xác nhận cảnh báo của kho được phân công (B4, B5).
 
@@ -623,7 +634,8 @@ Giờ chạy theo giờ Việt Nam (UTC+7). Mỗi cảnh báo có **khóa chốn
 |---|---|---|---|---|---|---|---|
 | **N-01** | Quét cảnh báo hạn sử dụng, lô chờ giá và quét bù tồn tối thiểu (chạy QT-06 bước 1, 3) | Lô còn tồn ở mọi kho: hạn sử dụng; lô chờ giá; tồn theo kho × mặt hàng | `CH-01` · `CH-02` · `CH-03` · `GS-03` · `GS-06` | Hằng ngày vào giờ `CH-03` (RQ-61, RQ-130 · <span style="color:red">**<u>GD-0003</u>**</span>) | Người phụ trách căng tin phụ trách kho chứa lô (RQ-95) | Kho + lô + loại cảnh báo (sắp hết hạn, quá hạn, chờ giá); tồn tối thiểu: kho + mặt hàng — chỉ một cảnh báo đang mở; cảnh báo đã xác nhận đóng thì lần quét sau được sinh lại (RQ-146) | Cảnh báo, không tự sửa dữ liệu, không đổi trạng thái lô (RQ-30); không tự đóng — `GS-06` |
 | **N-02** | Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện | Danh mục kho, mặt hàng, hồ sơ nhà cung cấp (trừ họ tên, điện thoại người liên hệ — RQ-104), tồn kho theo lô, giá bán | `CH-04` | Theo `CH-04` — chưa chốt (PM + khách) — RQ-101 | Phần mềm quản lý cơ sở cai nghiện | chưa chốt (PM + khách) — SRS chi tiết hóa cách kết nối (RQ-101) | Sao dữ liệu sang phần mềm quản lý cơ sở cai nghiện, không đổi dữ liệu kho; không gửi dữ liệu cá nhân — `TT79 Đ5.1.a` (bối cảnh) · RQ-91 · <span style="color:red">**<u>GD-0007</u>**</span> · `D-01` |
-| **N-03** | Áp giá bán tới ngày hiệu lực (chạy QT-03 bước 8) | Giá bán Đã duyệt có ngày hiệu lực là ngày chạy | `CH-03` | Hằng ngày vào giờ `CH-03`, đầu ngày hiệu lực — giá mới áp từ ngày hiệu lực (RQ-25) | Hệ thống (tự chuyển trạng thái); Hệ thống bán hàng căng tin tự đọc giá (RQ-54) | Đề xuất giá bán + lô | Giá bán Đã duyệt sang Có hiệu lực, thành giá bán hiện hành (`GS-01`); lô chờ giá của đề xuất mở bán; lần quét sau không còn điều kiện nên không sinh cảnh báo lô chờ giá mới (`GS-06`). Không làm gì với giá đã hủy phê duyệt |
+| **N-03** | Áp giá bán tới ngày hiệu lực (chạy QT-03 bước 8) | Mọi giá bán Đã duyệt có ngày hiệu lực ≤ ngày chạy (ERD E-13) | `CH-03` | Hằng ngày vào giờ `CH-03`, đầu ngày hiệu lực — giá mới áp từ ngày hiệu lực (RQ-25) | Hệ thống (tự chuyển trạng thái); Hệ thống bán hàng căng tin tự đọc giá (RQ-54) | Đề xuất giá bán + lô | Giá bán Đã duyệt sang Có hiệu lực, thành giá bán hiện hành (`GS-01`; trùng ngày hiệu lực thì giá duyệt muộn hơn — RQ-160); lô chờ giá của đề xuất mở bán; lần quét sau không còn điều kiện nên không sinh cảnh báo lô chờ giá mới (`GS-06`). Không làm gì với giá đã hủy phê duyệt |
+| **N-04** | Đối soát tồn kho theo lô với sổ biến động | Tồn kho theo lô của mọi kho; sổ biến động tồn (mọi lần thay đổi tồn, kể cả trừ tồn do bán mà Hệ thống bán hàng căng tin ghi cùng giao dịch — RQ-153) | `CH-03` | Hằng ngày vào giờ `CH-03` (RQ-154) | Trưởng cơ sở, người phụ trách căng tin phụ trách kho (RQ-142) | Kho + lô + ngày đối soát | Tồn của lô lệch tổng biến động thì cảnh báo, **không tự sửa** dữ liệu (RQ-154); kiểm đẳng thức nguyên tắc bảo toàn mục 3 (ERD R-01) |
 
 ### 5.1. Sự kiện nhận từ hệ thống ngoài
 
@@ -721,7 +733,7 @@ Nghiệp vụ nội bộ, không văn bản nào yêu cầu lập (RQ-55, RQ-56)
 | 27 | Hệ thống phải cảnh báo người phụ trách căng tin phụ trách kho khi tồn xuống dưới tồn tối thiểu, có lô sắp hết hạn, lô quá hạn hoặc lô chờ giá; mỗi kho + lô (hoặc mặt hàng) + loại chỉ một cảnh báo đang mở; cảnh báo chỉ đóng khi người phụ trách căng tin xác nhận | Phát hiện | QT-06 bước 3, 5 | RQ-28 · RQ-42 · RQ-95 · RQ-146 · `GS-06` · BRQ-22 Cảnh báo tồn tối thiểu · BRQ-23 Cảnh báo hạn sử dụng · <span style="color:red">**<u>GD-0003</u>**</span> · BRQ-31 Cảnh báo lô chờ giá |
 | 28 | Chứng từ Đã hủy, Đã hủy duyệt đóng hẳn, không dùng lại | Ngăn chặn | QT-02 bước 5, 18 · QT-03 bước 3, 11 · QT-04 bước 3, 16 · QT-05 bước 12, 15 | RQ-38 · NFR-08 · <span style="color:red">**<u>GD-0006</u>**</span> |
 | 29 | Trưởng cơ sở chỉ được hủy biên bản kiểm kê khi chưa trình, và phải ghi lý do | Ngăn chặn | QT-05 bước 13, 14 | RQ-137 · RQ-145 |
-| 30 | Người phụ trách căng tin chỉ được lập, trình, xác nhận chứng từ và xem, xác nhận cảnh báo của kho được phân công; danh mục chung (hàng hóa, nhà cung cấp, giá) dùng chung | Ngăn chặn | QT-02 bước 1, 5 · QT-04 bước 1, 3, 9, 12 · QT-06 bước 4, 5 | RQ-95 · RQ-142 |
+| 30 | Người dùng chỉ thấy, thao tác dữ liệu của cơ sở mình; Trưởng cơ sở chỉ quyết trên chứng từ của cơ sở mình; người phụ trách căng tin chỉ được lập, trình, xác nhận chứng từ và xem, xác nhận cảnh báo của kho được phân công; danh mục của cơ sở (hàng hóa, nhà cung cấp, giá) dùng chung trong cơ sở | Ngăn chặn | QT-01 → QT-06 (mọi bước người) · QT-02 bước 1, 5 · QT-04 bước 1, 3, 9, 12 · QT-06 bước 4, 5 | RQ-95 · RQ-142 · RQ-148 · RQ-151 · RQ-152 · BRD NFR-10 |
 
 ---
 
@@ -770,7 +782,7 @@ Không có điểm tạm hoãn riêng của tài liệu này; tạm hoãn của 
 | Q-P10 | Các việc vật lý — kho nhận kiểm tra hàng thực nhận (QT-04 bước 7), tổ kiểm kê kiểm đếm (QT-05 bước 4), người phụ trách căng tin đề nghị Trưởng cơ sở kiểm kê (QT-06 bước 5, ASM-008) — có làm ngoài hệ thống (🟡) không? | BRD không liệt kê các việc này ở phạm vi trong hay ngoài | Có: ngoài hệ thống; hệ thống chỉ ghi kết quả ở bước kế tiếp (QT-04 bước 8, QT-05 bước 5) hoặc Trưởng cơ sở giao kiểm kê (QT-05 bước 1) | BA (phongnq12) | ✅ 29/10/2026: RQ-129: có |
 | Q-P11 | Giờ quét (`CH-03`) là tham số cấu hình hay cố định, ai cấu hình? Cảnh báo sắp hết hạn, quá hạn, tồn tối thiểu tự đóng khi nào; khóa chống lặp của cảnh báo tồn tối thiểu? | Lô quá hạn đã ghi giảm về 0 qua kiểm kê, cảnh báo cũ còn hiện; tồn đã dưới mức tối thiểu, bán tiếp thêm 1 | Cố định theo `CH-03`, không có người cấu hình; cảnh báo hạn sử dụng tự đóng khi tồn của lô về 0; cảnh báo tồn tối thiểu: một cảnh báo mở cho mỗi kho + mặt hàng, tự đóng khi tồn ≥ `CH-01` | BA (phongnq12) | ✅ 29/10/2026: RQ-130: giờ quét cố định 00:00; tự đóng khi tồn lô về 0 hoặc tồn trở lại ≥ mức tối thiểu; mỗi kho × mặt hàng một cảnh báo tồn tối thiểu đang mở; phần tự đóng thay bởi RQ-146: cảnh báo chỉ đóng khi người phụ trách căng tin xác nhận |
 | Q-P12 | Chốt `D-01`: đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện là tác vụ nền `N-02`, không là quy trình riêng? | BRD mục 6.2 có nhóm "Kết nối, đồng bộ dữ liệu" | Đồng ý `D-01`; BRD mục 6.2 ghi `N-02` | BA (phongnq12) | ✅ 29/10/2026: RQ-131: đồng ý D-01 |
-| Q-P13 | Tên thực thể của dữ liệu trục (Tồn kho theo lô, Hàng đang chuyển) — lớp 3 đặt | Mục 3 bảng dữ liệu trục đang ghi tên nghiệp vụ | Lớp 3 đặt tên bảng, điền lại mục 3 và 1.1 | BA / data-modeler (lớp 3) | Đang mở |
+| Q-P13 | Tên thực thể của dữ liệu trục (Tồn kho theo lô, Hàng đang chuyển) — lớp 3 đặt | Mục 3 bảng dữ liệu trục đang ghi tên nghiệp vụ | Lớp 3 đặt tên bảng, điền lại mục 3 và 1.1 | BA / data-modeler (lớp 3) | ✅ 29/10/2026: lớp 3 đặt tên — `Ton_Kho_Lo`, `Bien_Dong_Ton`; hàng đang chuyển là Δ trên `Phieu_Dieu_Chuyen_Dong` (ERD_PM3CSCN_QuanLyKhoCangTin E-04) |
 | Q-P14 | Điều kiện xóa dòng giá nhập: prototype ghi "lúc xác nhận kiểm lại điều kiện trên dữ liệu mới nhất" (`DeleteLineDialog.jsx` dòng 2) mà phần mô tả không nêu điều kiện; mã kiểm ở dòng 39 chặn khi dòng đã phát sinh hoặc có đề xuất đã gửi duyệt | Dòng giá nhập đã dùng trên một phiếu nhập kho, người phụ trách căng tin muốn xóa | Giống điều kiện sửa: chỉ xóa khi đề xuất giá bán gắn dòng còn Nháp và dòng chưa phát sinh | BA (phongnq12) | ✅ 29/10/2026: RQ-132: giống điều kiện sửa; bắt buộc lý do |
 | Q-P15 | Trưởng cơ sở có được hủy phê duyệt phiếu nhập kho, phiếu điều chuyển của kho đang kiểm kê không? (RQ-12 "khóa giao dịch"; RQ-110 chỉ nêu lập, duyệt) | Kho A đang kiểm kê, Trưởng cơ sở phát hiện sai sót ở phiếu nhập kho đã duyệt của kho A | Không: chặn tới khi biên bản kiểm kê được duyệt | BA (phongnq12) | ✅ 29/10/2026: RQ-133: không, chặn tới khi biên bản kiểm kê được duyệt |
 | Q-P16 | Kho nhận không xác nhận thực nhận, hoặc kho xuất không ghi nhận chênh lệch: hàng đang chuyển treo bao lâu, ai xử lý? (hàng đang chuyển chặn giao kiểm kê — RQ-12, RQ-39) | Phiếu điều chuyển duyệt ngày 01/08, tới 30/08 kho nhận chưa xác nhận; Trưởng cơ sở muốn kiểm kê kho xuất | Không đặt thời hạn; phiếu treo chặn giao kiểm kê cả hai kho tới khi xử lý; Trưởng cơ sở hủy phê duyệt khi kho nhận chưa xác nhận (RQ-35), hoặc yêu cầu người phụ trách xác nhận, ghi nhận | BA (phongnq12) | ✅ 29/10/2026: RQ-134: không đặt thời hạn; phiếu treo chặn giao kiểm kê hai kho; Trưởng cơ sở hủy phê duyệt hoặc yêu cầu người phụ trách xử lý |
@@ -785,7 +797,7 @@ Không có điểm tạm hoãn riêng của tài liệu này; tạm hoãn của 
 | Danh sách QT, trigger, kết quả, UC presales, chuyển giao (mục 1, 3, bảng thông tin từng QT) | `../../1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md`; `../../1-ba-init/0-dau-vao/ban-do-quy-trinh/cap-2/` |
 | Bảng bước, cổng, kết thúc QT-01 → QT-06 | `../../1-ba-init/0-dau-vao/quy-trinh-presales.md` |
 | Sửa, xóa dòng giá nhập, quyết định giá bán (QT-01) | `../../0-inputs/presales/prototype/src/pages/PurchasePriceShared/`; `../../1-ba-init/0-dau-vao/man-presales.md` (MP-001 → MP-004) |
-| BRQ, NFR, CON, tên vai người (mục 2, căn cứ) | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md` |
+| BRQ, NFR, CON, tên vai người (mục 2, căn cứ) | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v01.md` |
 | `TT79 Đ41.4`, `Đ16`, `Đ41.7`, `Đ5.1.a` (QT-03, mục 5, 8.2) | `../../0-inputs/phap-ly/TT79/1. Thông tư số 79.docx`; `../../1-ba-init/0-dau-vao/phap-ly.md` |
 | Câu trả lời của BA (mọi `RQ-nn`) | `../../0-inputs/answers-2026-10-28.md`; `../../0-inputs/answers-2026-10-29.md` |
 | Giả định của sổ | `../assumption_log.md` |

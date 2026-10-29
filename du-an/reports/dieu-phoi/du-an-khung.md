@@ -39,3 +39,9 @@
 | 35 | /ba-overview | 2 | quality-reviewer | Review độc lập lớp 2 (vòng 2): 2 Chặn, 11 Nặng, 15 Nhẹ | — (chỉ đọc) | 423.856 | 10 phút 22 giây | — |
 | 36 | /ba-overview | 2 | business-analyst | Sửa lớp 2 theo review vòng 2 + RQ-136…RQ-142 (có lần dừng do giới hạn API) | QT_PM3CSCN_QuanLyKhoCangTin_v00.md + sơ đồ; BRD 6.2 | 824.091 (cộng dồn phiên) | — | 3 |
 | 37 | /ba-overview | 2 | business-analyst | Áp RQ-143…RQ-146 (gộp biên bản kiểm kê, đóng cảnh báo) | QT_PM3CSCN_QuanLyKhoCangTin_v00.md + sơ đồ QT-05, QT-06 | 861.223 (cộng dồn phiên) | 3 phút 55 giây | 3 |
+| 38 | /ba-overview | 3 | data-modeler | Lớp 3 ERD (create-erd) | 2-ba-overview/3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v00.md; ô QT, BRD mục 10 | — | — | 0 |
+| 39 | /ba-overview | 3 | quality-reviewer | Review độc lập ERD (vòng 1): 0 Chặn, 12 Nặng, 12 Nhẹ | — (chỉ đọc) | 399.159 | 8 phút 31 giây | — |
+| 40 | /ba-overview | 3 (bổ sung lớp 1) | business-analyst | BRD v01 bổ sung theo lớp 3: nhiều cơ sở, NFR-02, NFR-10 | 2-ba-overview/1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v00.md (→ _v01) | 718.546 (cộng dồn phiên) | 2 phút 35 giây | 0 |
+| 41 | /ba-overview | 3 (bổ sung lớp 1) | — (phiên chính) | Đổi tên BRD _v00 → _v01, sửa đường dẫn ở bản đồ bước 1, QT, ERD, sổ dự án | — | — | — | — |
+| 42 | /ba-overview | 3 | data-modeler | Sửa ERD theo review vòng 1 + RQ-148…RQ-163 (nhiều cơ sở) | ERD_PM3CSCN_QuanLyKhoCangTin_v00.md; QT mục 1.1 cột Thực thể ERD | — | — | 1 |
+| 43 | /ba-overview | 3 (bổ sung lớp 2) | business-analyst | QT v01 bổ sung theo lớp 3: N-04, N-03, tên trạng thái, QT-05, nhiều cơ sở; đổi tên _v01 | QT_PM3CSCN_QuanLyKhoCangTin_v01.md + sơ đồ QT-05 | — | — | 0 |

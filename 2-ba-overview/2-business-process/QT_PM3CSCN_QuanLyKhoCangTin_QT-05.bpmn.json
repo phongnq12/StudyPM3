@@ -1,7 +1,7 @@
 {
  "ten": "QT-05 Kiểm kê tồn kho",
  "cap": 2,
- "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v00.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v01.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
  "pools": [
   {
    "id": "P",
@@ -71,7 +71,7 @@
    "loai": "task",
    "kieu": "service",
    "ma": "B2",
-   "ten": "Kiểm kho còn phiếu dở dang",
+   "ten": "Kiểm kho được giao kiểm kê",
    "lane": "HT",
    "cot": 3,
    "hang": 0
@@ -80,7 +80,7 @@
    "id": "G1",
    "loai": "gateway",
    "kieu": "xor",
-   "ten": "Còn phiếu dở dang?",
+   "ten": "Còn phiếu dở dang hoặc biên bản đang mở?",
    "lane": "HT",
    "cot": 4,
    "hang": 0
@@ -88,7 +88,7 @@
   {
    "id": "E0",
    "loai": "end",
-   "ten": "Chưa kiểm kê được, còn phiếu dở dang",
+   "ten": "Chưa kiểm kê được",
    "lane": "HT",
    "cot": 4,
    "hang": 1
@@ -123,7 +123,8 @@
    "ten": "Điền số thực tế, lý do chênh lệch",
    "lane": "TKK",
    "cot": 7,
-   "hang": 0
+   "hang": 0,
+   "ghi_chu": "thành viên có tài khoản"
   },
   {
    "id": "QT05-B6",
