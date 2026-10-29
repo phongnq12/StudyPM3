@@ -28,7 +28,7 @@ mô tả luồng. Không có mã trùng, không có dòng thiếu mã. Theo phâ
 20 UC, `PM3CSCN.WEB.10` M09 – CẤU HÌNH NGHIỆP VỤ HỆ THỐNG có 5 UC, `PM3CSCN.WEB.15` M17 – QUẢN LÝ NHÀ CUNG CẤP HÀNG HÓA
 CĂNG TIN có 6 UC. Phân loại có sẵn trong file chào giá: chỉ có phân cấp theo mã WBS (cột "Group", "Nền tảng" trống ở
 mọi dòng). Tác nhân: cột "Actor" trống ở mọi dòng và tệp không có danh sách tác nhân [PH-001]. Q-001 đã quyết ở
-`1-ba-init/open-questions.md`: tác nhân theo vai trò cán bộ căng tin, Trưởng cơ sở, tổ kiểm kê
+`1-ba-init/open-questions.md`: tác nhân theo vai trò người phụ trách căng tin (thuật ngữ theo [SRC: 0-inputs/answers-2026-10-29.md, RQ-66]), Trưởng cơ sở, tổ kiểm kê
 [SRC: 0-inputs/answers-2026-10-28.md, RQ-05, RQ-07, RQ-08, RQ-15, RQ-32, RQ-33, RQ-40]. Cột "Actor" ở mục 1 vẫn chép
 đúng nguồn (ô trống). Dòng nhóm `PM3CSCN.WEB.09.04` Quản lý kho có chữ "Bổ sung thêm" ở cột "Tính năng" [PH-002];
 Q-002 đã quyết: nhóm này và 4 UC thuộc báo giá [SRC: 0-inputs/answers-2026-10-29.md, RQ-50]. Tên dòng nhóm cấp 1

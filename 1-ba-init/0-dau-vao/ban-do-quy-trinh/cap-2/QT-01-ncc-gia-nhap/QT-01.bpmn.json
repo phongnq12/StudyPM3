@@ -9,7 +9,8 @@
    "lanes": [
     {
      "id": "CB",
-     "ten": "Cán bộ căng tin"
+     "ten": "Người phụ trách căng tin",
+     "cao": 220
     }
    ]
   },

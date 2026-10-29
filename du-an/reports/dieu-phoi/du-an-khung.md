@@ -16,3 +16,8 @@
 | 12 | /ba-init | áp trả lời BA | business-analyst | A2 áp RQ-55, 56, 59, 60 | 1-ba-init/0-dau-vao/phap-ly.md | 217.337 | 31 giây | 0 |
 | 13 | /ba-init | áp trả lời BA | business-analyst | A4 áp RQ-55, 56, 59 | 1-ba-init/0-dau-vao/uc-phap-ly.md | 176.207 | 44 giây | 0 |
 | 14 | /ba-init | áp trả lời BA | business-analyst | A5 áp RQ-57, 59, 61 | 1-ba-init/0-dau-vao/ban-do-quy-trinh/ | 407.968 | 2 phút 9 giây | 0 |
+| 15 | /ba-init | áp trả lời BA | business-analyst | A1 áp RQ-66 | 1-ba-init/0-dau-vao/uc-presales.md | 99.620 | 16 giây | 0 |
+| 16 | /ba-init | áp trả lời BA | ux-spec-designer | Áp RQ-66, RQ-68 | 1-ba-init/0-dau-vao/man-presales.md | 136.644 | 20 giây | 0 |
+| 17 | /ba-init | áp trả lời BA | business-analyst | A4 áp RQ-62 … RQ-66 | 1-ba-init/0-dau-vao/uc-phap-ly.md | 183.413 | 35 giây | 0 |
+| 18 | /ba-init | áp trả lời BA | business-analyst | A2 áp RQ-62 … RQ-66 | 1-ba-init/0-dau-vao/phap-ly.md | 224.945 | 37 giây | 0 |
+| 19 | /ba-init | áp trả lời BA | business-analyst | A5 áp RQ-64, 66, 67 | 1-ba-init/0-dau-vao/ban-do-quy-trinh/ | 421.390 | 2 phút | 0 |

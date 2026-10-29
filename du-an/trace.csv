@@ -64,8 +64,8 @@ QT-06,QT,Cảnh báo tồn kho và hạn sử dụng,1-ba-init/0-dau-vao/ban-do-
 Q-021,Q,In phiếu nhập kho: ai in và in ở trạng thái nào,1-ba-init/open-questions.md,,PH-020;PH-021;QT-02,,draft,2026-10-29
 Q-022,Q,Việc trong quy trình presales không UC presales nào làm,1-ba-init/open-questions.md,,PH-022;PH-023;PH-024;PH-025;PH-026;PH-027;Q-014;Q-017,,draft,2026-10-29
 ASM-007,ASM,Phiếu nhập kho hủy phê duyệt bị chặn chuyển sang kiểm kê thủ công,1-ba-init/open-questions.md,,QT-02;QT-05,,draft,2026-10-29
-ASM-008,ASM,Sau cảnh báo cán bộ căng tin tự bắt đầu nhập kho hoặc điều chuyển,1-ba-init/open-questions.md,,QT-06,,draft,2026-10-29
-ASM-009,ASM,In phiếu nhập kho do cán bộ căng tin làm khi phiếu Đã duyệt,1-ba-init/open-questions.md,PS:PM3CSCN.WEB.09.01.05,Q-021,,draft,2026-10-29
+ASM-008,ASM,Sau cảnh báo người phụ trách căng tin tự bắt đầu nhập kho hoặc điều chuyển,1-ba-init/open-questions.md,,QT-06,,draft,2026-10-29
+ASM-009,ASM,In phiếu nhập kho do người phụ trách căng tin làm khi phiếu Đã duyệt,1-ba-init/open-questions.md,PS:PM3CSCN.WEB.09.01.05,Q-021,,draft,2026-10-29
 PH-020,PH,QT-02; PM3CSCN.WEB.09.01.02 → PM3CSCN.WEB.09.01.05,1-ba-init/open-questions.md,,Q-021,,draft,2026-10-29
 PH-021,PH,QT-02; PM3CSCN.WEB.09.01.05 → kế toán,1-ba-init/open-questions.md,,Q-021,,draft,2026-10-29
 PH-022,PH,QT-02 → QT-03,1-ba-init/open-questions.md,,Q-022,,draft,2026-10-29

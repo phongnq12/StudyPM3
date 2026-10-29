@@ -9,7 +9,8 @@
    "lanes": [
     {
      "id": "CB",
-     "ten": "Cán bộ căng tin"
+     "ten": "Người phụ trách căng tin",
+     "cao": 220
     },
     {
      "id": "HT",
@@ -48,7 +49,7 @@
   {
    "id": "N1",
    "loai": "note",
-   "ten": "PH-027: quét tồn dưới mức tối thiểu, lô sắp hết hạn, quá hạn, chờ giá (QP-07.02), gửi cảnh báo (QP-07.04), cán bộ căng tin xem cảnh báo (QP-07.05): không UC presales",
+   "ten": "PH-027: quét tồn dưới mức tối thiểu, lô sắp hết hạn, quá hạn, chờ giá (QP-07.02), gửi cảnh báo (QP-07.04), người phụ trách căng tin xem cảnh báo (QP-07.05): không UC presales",
    "lane": "HT",
    "cot": 2,
    "hang": 0,

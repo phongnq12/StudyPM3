@@ -9,7 +9,8 @@
    "lanes": [
     {
      "id": "CBX",
-     "ten": "Cán bộ căng tin (kho xuất)"
+     "ten": "Người phụ trách căng tin (kho xuất)",
+     "cao": 300
     },
     {
      "id": "TCS",
@@ -17,7 +18,8 @@
     },
     {
      "id": "CBN",
-     "ten": "Cán bộ căng tin (kho nhận)"
+     "ten": "Người phụ trách căng tin (kho nhận)",
+     "cao": 300
     }
    ]
   }
