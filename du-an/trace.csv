@@ -82,6 +82,8 @@ PH-032,PH,TT79-2026/Đ5.K1.a chưa có UC (kết nối; đồng bộ CSDL quốc
 PH-033,PH,Bản đồ bước 1 thiếu chuyển giao QT-06 → QT-03,du-an/open-questions.md,,QT-06;QT-03,,draft,2026-10-29
 PH-034,PH,Phân công kho chưa có UC presales,du-an/open-questions.md,,,,draft,2026-10-29
 PH-035,PH,Mô hình giá bán prototype theo cặp khác giá theo lô,du-an/open-questions.md,,,,draft,2026-10-29
+PH-036,PH,Kit mâu thuẫn về nơi lập ma trận truy vết,du-an/open-questions.md,,,,draft,2026-10-30
+PH-037,PH,Script kiểm lớp không đọc TRACE,du-an/open-questions.md,,,,draft,2026-10-30
 ACT-01,ACT,Người phụ trách căng tin,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
 ACT-02,ACT,Trưởng cơ sở,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
 ACT-03,ACT,Tổ kiểm kê,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
@@ -89,3 +91,95 @@ ACT-04,ACT,Hệ thống — tác vụ nền,2-ba-overview/5-actor-usecase/UCD_PM
 ACT-05,ACT,Hệ thống bán hàng căng tin,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 5.1,,,draft,2026-10-29
 ACT-06,ACT,Phần mềm quản lý cơ sở cai nghiện,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,QT_PM3CSCN_QuanLyKhoCangTin_v02 mục 2,,,draft,2026-10-29
 ACT-07,ACT,Hệ thống xác thực dùng chung,2-ba-overview/5-actor-usecase/UCD_PM3CSCN_QuanLyKhoCangTin_v00.md,0-inputs/answers-2026-10-29.md RQ-149,,,draft,2026-10-29
+PM3CSCN.WEB.09.01.01,UC,Lập phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.02,UC,Phê duyệt phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.02,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.03,UC,Từ chối phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.03,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.04,UC,Hủy phê duyệt phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.04,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.05,UC,In phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.05,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.06,UC,Tìm kiếm phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.06,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.07,UC,Sửa phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.08,UC,Xem chi tiết phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.06,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.09,UC,Kết xuất danh sách phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.01.06,,,draft,2026-10-30
+PM3CSCN.WEB.09.01.10,UC,Trình phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (10),,,draft,2026-10-30
+PM3CSCN.WEB.09.01.11,UC,Hủy phiếu nhập kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (10),,,draft,2026-10-30
+PM3CSCN.WEB.09.02.01,UC,Lập phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.02.01,,,draft,2026-10-30
+PM3CSCN.WEB.09.02.02,UC,Phê duyệt phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.02.02,,,draft,2026-10-30
+PM3CSCN.WEB.09.02.03,UC,Từ chối phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.02.03,,,draft,2026-10-30
+PM3CSCN.WEB.09.02.04,UC,Hủy phê duyệt phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.02.04,,,draft,2026-10-30
+PM3CSCN.WEB.09.02.05,UC,Tìm kiếm phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.02.05,,,draft,2026-10-30
+PM3CSCN.WEB.09.02.06,UC,Xem chi tiết phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.02.05,,,draft,2026-10-30
+PM3CSCN.WEB.09.02.07,UC,Kết xuất danh sách phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.02.05,,,draft,2026-10-30
+PM3CSCN.WEB.09.02.08,UC,Sửa phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (4),,,draft,2026-10-30
+PM3CSCN.WEB.09.02.09,UC,Trình phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (11),,,draft,2026-10-30
+PM3CSCN.WEB.09.02.10,UC,Hủy phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (4),,,draft,2026-10-30
+PM3CSCN.WEB.09.02.11,UC,Xác nhận thực nhận phiếu điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (3),,,draft,2026-10-30
+PM3CSCN.WEB.09.02.12,UC,Ghi nhận chênh lệch điều chuyển,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (3),,,draft,2026-10-30
+PM3CSCN.WEB.09.03.01,UC,Ghi số thực tế vào biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.01,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.02,UC,Phê duyệt biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.02,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.03,UC,Từ chối biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.03,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.04,UC,Hủy phê duyệt biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.04,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.05,UC,Tìm kiếm biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.05,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.06,UC,Xem chi tiết biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.05,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.07,UC,Kết xuất biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.05,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.08,UC,Giao kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.03.01,,,draft,2026-10-30
+PM3CSCN.WEB.09.03.09,UC,Trình biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (12),,,draft,2026-10-30
+PM3CSCN.WEB.09.03.10,UC,Hủy biên bản kiểm kê,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (12),,,draft,2026-10-30
+PM3CSCN.WEB.09.04.01,UC,Tìm kiếm danh sách kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.04.01,,,draft,2026-10-30
+PM3CSCN.WEB.09.04.02,UC,Thêm kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.04.02,,,draft,2026-10-30
+PM3CSCN.WEB.09.04.03,UC,Đặt tồn tối thiểu của mặt hàng tại kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.04.03,,,draft,2026-10-30
+PM3CSCN.WEB.09.04.04,UC,"Xem lịch sử nhập, điều chuyển của kho",2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.04.04,,,draft,2026-10-30
+PM3CSCN.WEB.09.04.05,UC,Sửa kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.04.02,,,draft,2026-10-30
+PM3CSCN.WEB.09.04.06,UC,Xóa kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.04.02,,,draft,2026-10-30
+PM3CSCN.WEB.09.04.07,UC,Đặt số ngày cảnh báo sắp hết hạn của kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.09.04.03,,,draft,2026-10-30
+PM3CSCN.WEB.09.04.08,UC,Xem tồn kho hiện tại,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (7),,,draft,2026-10-30
+PM3CSCN.WEB.09.04.09,UC,Đặt công tắc Cho phép bán của mặt hàng tại kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (9),,,draft,2026-10-30
+PM3CSCN.WEB.09.05.01,UC,Phân công kho cho người phụ trách căng tin,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (18),,,draft,2026-10-30
+PM3CSCN.WEB.09.05.02,UC,Bỏ phân công kho,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (18),,,draft,2026-10-30
+PM3CSCN.WEB.09.06.01,UC,Tìm kiếm cảnh báo,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (6),,,draft,2026-10-30
+PM3CSCN.WEB.09.06.02,UC,Xem cảnh báo,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (6),,,draft,2026-10-30
+PM3CSCN.WEB.09.06.03,UC,Xác nhận cảnh báo,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (13),,,draft,2026-10-30
+PM3CSCN.WEB.09.06.04,UC,Xác nhận cảnh báo tồn lệch sổ biến động,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (14),,,draft,2026-10-30
+PM3CSCN.WEB.10.01.01,UC,Thêm mặt hàng,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.02,UC,Phê duyệt phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.02,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.03,UC,Từ chối phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.03,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.04,UC,Hủy phê duyệt phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.04,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.05,UC,Tìm kiếm danh mục hàng hóa,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.05,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.06,UC,Sửa mặt hàng,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.07,UC,Ngừng hoạt động mặt hàng,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.08,UC,Kích hoạt lại mặt hàng,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.09,UC,Xóa mặt hàng,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.10,UC,Quyết định đề xuất giá bán theo giá nhập mới,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.01;0-inputs/answers-2026-10-29.md RQ-190,,,deprecated,2026-10-30
+PM3CSCN.WEB.10.01.11,UC,Xem chi tiết mặt hàng,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.05,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.12,UC,Kết xuất danh mục hàng hóa,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.05,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.13,UC,Tìm kiếm phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.05,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.14,UC,Xem chi tiết phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.05,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.15,UC,Kết xuất danh sách phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.10.01.05,,,draft,2026-10-30
+PM3CSCN.WEB.10.01.16,UC,Lập phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (1) và (2),,,draft,2026-10-30
+PM3CSCN.WEB.10.01.17,UC,Sửa phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (1),,,draft,2026-10-30
+PM3CSCN.WEB.10.01.18,UC,Trình phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (1),,,draft,2026-10-30
+PM3CSCN.WEB.10.01.19,UC,Hủy phiếu đề xuất giá bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (1),,,draft,2026-10-30
+PM3CSCN.WEB.10.01.20,UC,Chọn đề xuất giá bán mới cho lô,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (2);0-inputs/answers-2026-10-29.md RQ-193,,,deprecated,2026-10-30
+PM3CSCN.WEB.10.01.21,UC,Xem lịch sử giá bán theo lô,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (19),,,draft,2026-10-30
+PM3CSCN.WEB.10.01.22,UC,Kết xuất lịch sử giá bán theo lô,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (19),,,draft,2026-10-30
+PM3CSCN.WEB.15.01.01,UC,Thêm nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.01.02,UC,Tìm kiếm danh sách nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.01.02,,,draft,2026-10-30
+PM3CSCN.WEB.15.01.03,UC,Sửa hồ sơ nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.01.04,UC,Ngừng hợp tác nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.01.05,UC,Cho nhà cung cấp hợp tác lại,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.01.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.01.06,UC,Xem chi tiết nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.01.02,,,draft,2026-10-30
+PM3CSCN.WEB.15.01.07,UC,Kết xuất danh sách nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.01.02,,,draft,2026-10-30
+PM3CSCN.WEB.15.02.01,UC,Thêm mặt hàng vào danh mục cung ứng của nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.02.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.02.02,UC,Tìm kiếm danh mục hàng hóa theo nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.02.02,,,draft,2026-10-30
+PM3CSCN.WEB.15.02.03,UC,Bỏ mặt hàng khỏi danh mục cung ứng của nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.02.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.02.04,UC,Kết xuất danh mục hàng hóa theo nhà cung cấp,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.02.02,,,draft,2026-10-30
+PM3CSCN.WEB.15.03.01,UC,Khai đợt giá nhập,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.03.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.03.02,UC,Tìm kiếm lịch sử giá nhập,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.03.02,,,draft,2026-10-30
+PM3CSCN.WEB.15.03.03,UC,Sửa dòng giá nhập,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.03.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.03.04,UC,Xóa dòng giá nhập,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.03.01,,,draft,2026-10-30
+PM3CSCN.WEB.15.03.05,UC,Xem chi tiết dòng giá nhập,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.03.02,,,draft,2026-10-30
+PM3CSCN.WEB.15.03.06,UC,Kết xuất lịch sử giá nhập,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,PS:PM3CSCN.WEB.15.03.02,,,draft,2026-10-30
+PM3CSCN.JOB.09.07.01,UC,"Quét cảnh báo hạn sử dụng, lô chờ giá và tồn tối thiểu",2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (6),,,draft,2026-10-30
+PM3CSCN.JOB.09.07.02,UC,Kiểm tồn tối thiểu sau trừ tồn do bán,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (15),,,draft,2026-10-30
+PM3CSCN.JOB.09.07.03,UC,Đối soát tồn kho theo lô với sổ biến động,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (16),,,draft,2026-10-30
+PM3CSCN.JOB.09.08.01,UC,Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (8),,,draft,2026-10-30
+PM3CSCN.JOB.10.02.01,UC,Áp giá bán tới ngày hiệu lực,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (17),,,draft,2026-10-30

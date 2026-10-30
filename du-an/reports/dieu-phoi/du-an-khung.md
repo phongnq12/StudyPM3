@@ -62,3 +62,8 @@
 | 58 | /ba-overview | 5 (bổ sung lớp 1, 3, 4) | business-analyst, data-modeler ×2 | BRD v02, ERD v02, SM v01: phiếu đề xuất giá bán nhiều dòng, lịch sử giá theo lô (RQ-183…RQ-198) | BRD _v01, ERD _v01, SM _v00 (chờ đổi tên) | 762.584 / 668.235 / 502.273 (cộng dồn) | — | 0 |
 | 59 | /ba-overview | 5 (bổ sung lớp 2) | business-analyst | QT v02: QT-03 phiếu đề xuất nhiều dòng (12 bước, tổng 82), tác nhân xác thực, RQ-183…RQ-198 | QT _v01 (chờ đổi tên) | — | 5 phút 47 giây | 0 |
 | 60 | /ba-overview | 5 (bổ sung) | — (phiên chính) | Đổi tên BRD _v02, QT _v02, ERD _v02, SM _v01; sửa đường dẫn; glossary Phiếu đề xuất giá bán | — | — | — | — |
+| 61 | /ba-overview | 5 | usecase-analyst (SendMessage) | Sửa UCD, UCL, TRACE theo review vòng 1 và RQ-183…RQ-201: bỏ ⊘ 10.01.10, 10.01.20; thêm 10.01.21, 10.01.22; phiếu đề xuất nhiều dòng; quyền, phạm vi; BRD mục 12, mục 3 việc (19) | UCD, UCL, TRACE _v00; BRD _v02 | 671.075 | 7 phút 18 giây | 1 |
+| 62 | /ba-overview | 5 | — (phiên chính) | Sửa không đổi nghĩa: SM mục 6, ma trận dẫn QT-03 bước 10–12; QT mục 9 điểm 7 dẫn QT-03 bước 10 | SM _v01, QT _v02 | — | — | — |
+| 63 | /ba-overview | 5 | quality-reviewer | Review độc lập lớp 5 vòng 2 | UCD, UCL, TRACE _v00 | — | — | — |
+| 64 | /ba-overview | 5 | usecase-analyst (SendMessage) | Sửa theo review vòng 2 và RQ-202…RQ-204; BRD Q-B37, BRQ-25, tên 09.02.11 | UCD, UCL, TRACE _v00; BRD _v02 | 721.936 | 4 phút 29 giây | 2 |
+| 65 | /ba-overview | 5 | — (phiên chính) | trace.csv: 90 dòng UC draft, 2 dòng UC deprecated (RQ-203); PH-036, PH-037; QT mục 1 bỏ số đếm UC tra cứu | du-an/trace.csv, du-an/open-questions.md, QT _v02 | — | — | — |
