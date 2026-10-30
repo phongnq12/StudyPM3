@@ -67,3 +67,5 @@
 | 63 | /ba-overview | 5 | quality-reviewer | Review độc lập lớp 5 vòng 2 | UCD, UCL, TRACE _v00 | — | — | — |
 | 64 | /ba-overview | 5 | usecase-analyst (SendMessage) | Sửa theo review vòng 2 và RQ-202…RQ-204; BRD Q-B37, BRQ-25, tên 09.02.11 | UCD, UCL, TRACE _v00; BRD _v02 | 721.936 | 4 phút 29 giây | 2 |
 | 65 | /ba-overview | 5 | — (phiên chính) | trace.csv: 90 dòng UC draft, 2 dòng UC deprecated (RQ-203); PH-036, PH-037; QT mục 1 bỏ số đếm UC tra cứu | du-an/trace.csv, du-an/open-questions.md, QT _v02 | — | — | — |
+| 66 | /ba-overview | 5b | usecase-analyst | Cắt chức năng: danh mục CN theo module 09, 10, 15 (RQ-187) | danh-muc-chuc-nang.md | — | — | — |
+| 67 | /ba-overview | 5b | usecase-analyst (SendMessage) | Áp BA chốt RQ-205…RQ-210 vào danh mục; Ghi chú UCL dòng 10.01 | danh-muc-chuc-nang.md, UCL _v00 | 117.903 | 4 phút 20 giây | 1 |

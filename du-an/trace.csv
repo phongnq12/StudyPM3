@@ -183,3 +183,6 @@ PM3CSCN.JOB.09.07.02,UC,Kiểm tồn tối thiểu sau trừ tồn do bán,2-ba-
 PM3CSCN.JOB.09.07.03,UC,Đối soát tồn kho theo lô với sổ biến động,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (16),,,draft,2026-10-30
 PM3CSCN.JOB.09.08.01,UC,Đồng bộ dữ liệu kho với phần mềm quản lý cơ sở cai nghiện,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (8),,,draft,2026-10-30
 PM3CSCN.JOB.10.02.01,UC,Áp giá bán tới ngày hiệu lực,2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md,BRD_PM3CSCN_QuanLyKhoCangTin_v02 mục 3 việc (17),,,draft,2026-10-30
+CN-01,CN,Cấu hình danh mục hàng hóa và giá bán căng tin,2-ba-overview/5-actor-usecase/danh-muc-chuc-nang.md,UCL_PM3CSCN_QuanLyKhoCangTin_v00 mục 3;0-inputs/answers-2026-10-30.md RQ-205,QT-02;QT-03,,draft,2026-10-30
+CN-02,CN,Quản lý nhà cung cấp hàng hóa căng tin,2-ba-overview/5-actor-usecase/danh-muc-chuc-nang.md,UCL_PM3CSCN_QuanLyKhoCangTin_v00 mục 3;0-inputs/answers-2026-10-30.md RQ-205,QT-01;CN-01,,draft,2026-10-30
+CN-03,CN,Quản lý kho căng tin,2-ba-overview/5-actor-usecase/danh-muc-chuc-nang.md,UCL_PM3CSCN_QuanLyKhoCangTin_v00 mục 3;0-inputs/answers-2026-10-29.md RQ-187;0-inputs/answers-2026-10-30.md RQ-205,QT-02;QT-04;QT-05;QT-06;CN-01;CN-02,,draft,2026-10-30
