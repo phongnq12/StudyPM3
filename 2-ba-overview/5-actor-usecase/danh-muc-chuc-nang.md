@@ -1,6 +1,6 @@
 # DANH MỤC CHỨC NĂNG — Quản lý kho căng tin (PM3CSCN) QuanLyKhoCangTin
 
-> **3 chức năng** cắt từ **3 module WBS** của [danh sách use case](UCL_PM3CSCN_QuanLyKhoCangTin_v00.md), phủ **90 use case** và **6 quy trình** của bản đồ quy trình đã chốt.
+> **3 chức năng** cắt từ **3 module WBS** của [danh sách use case](UCL_PM3CSCN_QuanLyKhoCangTin_v01.md), phủ **90 use case** và **6 quy trình** của bản đồ quy trình đã chốt.
 > Mỗi chức năng là **đúng một module WBS** (`PM3CSCN.<NỀN TẢNG>.<MODULE>`); mỗi use case thuộc đúng một chức năng.
 > Tài liệu **không** chứa nội dung use case, luồng, màn hình — việc của `/ba-detail CN-xx`.
 
@@ -22,9 +22,9 @@
 
 **Cảnh báo CN-03 quá lớn.** CN-03 có 52 UC, trên ngưỡng 30 UC của một chức năng `/ba-detail` (mục 3 quy tắc 3). BA chọn giữ module `09` theo cây presales, không tách module, không tách CN [SRC: 0-inputs/answers-2026-10-29.md, RQ-187]. `/ba-detail CN-03` chia việc theo chức năng WBS cấp 4 trong CN: `PM3CSCN.WEB.09.01` (11 UC), `PM3CSCN.WEB.09.02` (12), `PM3CSCN.WEB.09.03` (10), `PM3CSCN.WEB.09.04` (9), `PM3CSCN.WEB.09.05` (2), `PM3CSCN.WEB.09.06` (4), `PM3CSCN.JOB.09.07` (3), `PM3CSCN.JOB.09.08` (1). Thứ tự làm các phần theo phụ thuộc dữ liệu: `PM3CSCN.WEB.09.04` → `PM3CSCN.WEB.09.05` → `PM3CSCN.WEB.09.01` → `PM3CSCN.WEB.09.02` → `PM3CSCN.WEB.09.03` → `PM3CSCN.WEB.09.06` cùng `PM3CSCN.JOB.09.07` → `PM3CSCN.JOB.09.08` [SRC: 0-inputs/answers-2026-10-30.md, RQ-208]. Dải ID giữ `201–250`, hết dải thì xin thêm từ phần dự phòng [SRC: 0-inputs/answers-2026-10-30.md, RQ-209]. Rủi ro tiến độ dồn vào một nhánh: UCL mục 8 RK-03.
 
-**Đếm UC.** Số UC đếm theo cột `No` của UCL mục 3, bỏ dòng ⊘: module 09 có 52, module 10 có 21, module 15 có 17, tổng 90 — khớp UCL mục 2 [SRC: 2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md, mục 2, mục 3].
+**Đếm UC.** Số UC đếm theo cột `No` của UCL mục 3, bỏ dòng ⊘: module 09 có 52, module 10 có 21, module 15 có 17, tổng 90 — khớp UCL mục 2 [SRC: 2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v01.md, mục 2, mục 3].
 
-**Cách suy phụ thuộc.** CN phụ thuộc là CN tạo thực thể mà UC của CN sau phải đọc khi ghi (khóa ngoại bắt buộc ở ERD v02 mục 3.1, 4) hoặc CN tạo kết quả là trigger của bước trong CN sau. Ba khóa ngoại đi ngược thứ tự làm — `De_Xuat_Gia_Ban_Dong.lo_id` → `Lo`, `Gia_Ban_Lo.lo_id` → `Lo`, `De_Xuat_Gia_Ban_Dong.dong_gia_nhap_id` → `Dong_Gia_Nhap` [SRC: 2-ba-overview/3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v02.md, mục 4.4] — là chuyển giao: CN-01 dẫn ID thực thể ở ERD tầng dự án, không định nghĩa lại, không tính phụ thuộc CN [SRC: 0-inputs/answers-2026-10-30.md, RQ-207]; tính là phụ thuộc thì sẽ có vòng CN-01 → CN-03 → CN-01 và CN-01 → CN-02 → CN-01. Thứ tự làm CN-01 → CN-02 → CN-03 [SRC: 0-inputs/answers-2026-10-30.md, RQ-206].
+**Cách suy phụ thuộc.** CN phụ thuộc là CN tạo thực thể mà UC của CN sau phải đọc khi ghi (khóa ngoại bắt buộc ở ERD v02 mục 3.1, 4) hoặc CN tạo kết quả là trigger của bước trong CN sau. Ba khóa ngoại đi ngược thứ tự làm — `De_Xuat_Gia_Ban_Dong.lo_id` → `Lo`, `Gia_Ban_Lo.lo_id` → `Lo`, `De_Xuat_Gia_Ban_Dong.dong_gia_nhap_id` → `Dong_Gia_Nhap` [SRC: 2-ba-overview/3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v03.md, mục 4.4] — là chuyển giao: CN-01 dẫn ID thực thể ở ERD tầng dự án, không định nghĩa lại, không tính phụ thuộc CN [SRC: 0-inputs/answers-2026-10-30.md, RQ-207]; tính là phụ thuộc thì sẽ có vòng CN-01 → CN-03 → CN-01 và CN-01 → CN-02 → CN-01. Thứ tự làm CN-01 → CN-02 → CN-03 [SRC: 0-inputs/answers-2026-10-30.md, RQ-206].
 
 ---
 
@@ -33,13 +33,13 @@
 | QT | Tên | CN chạm tới | Ghi chú |
 |---|---|---|---|
 | QT-01 | Cập nhật nhà cung cấp và giá nhập | CN-02 | Bước người 1–5, 9 do UC `PM3CSCN.WEB.15.01`–`.03` phủ; bước hệ thống 10–11 lập, xóa `De_Xuat_Gia_Ban` Nháp (thực thể của CN-01) chạy trong UC `PM3CSCN.WEB.15.03.01` Khai đợt giá nhập, `PM3CSCN.WEB.15.03.03` Sửa dòng giá nhập — chuyển giao sang QT-03 (RQ-190; TRACE mục 6). QT-01 chỉ chạm CN-02; lập phiếu đề xuất giá bán là chuyển giao sang CN-01 [SRC: 0-inputs/answers-2026-10-30.md, RQ-210] |
-| QT-02 | Nhập kho hàng hóa từ nhà cung cấp | CN-03, CN-01 | Bước 1, 3, 5, 7, 16 do UC `PM3CSCN.WEB.09.01` phủ (CN-03); bước 12 do `PM3CSCN.WEB.10.01.16` Lập phiếu đề xuất giá bán phủ (CN-01, điểm vào khác — RQ-193) [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v00.md, mục 6] |
-| QT-03 | Đề xuất và duyệt giá bán | CN-01 | Bước 1, 2, 3, 5, 10 do UC `PM3CSCN.WEB.10.01` phủ; bước 8 áp giá tới ngày hiệu lực do `PM3CSCN.JOB.10.02.01` (N-03) [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v00.md, mục 6] |
-| QT-04 | Điều chuyển hàng hóa giữa các kho | CN-03 | Bước 1, 3, 5, 9, 12, 14 do UC `PM3CSCN.WEB.09.02` phủ [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v00.md, mục 6] |
-| QT-05 | Kiểm kê tồn kho | CN-03 | Bước 1, 5, 6, 8, 10, 13 do UC `PM3CSCN.WEB.09.03` phủ [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v00.md, mục 6] |
+| QT-02 | Nhập kho hàng hóa từ nhà cung cấp | CN-03, CN-01 | Bước 1, 3, 5, 7, 16 do UC `PM3CSCN.WEB.09.01` phủ (CN-03); bước 12 do `PM3CSCN.WEB.10.01.16` Lập phiếu đề xuất giá bán phủ (CN-01, điểm vào khác — RQ-193) [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v01.md, mục 6] |
+| QT-03 | Đề xuất và duyệt giá bán | CN-01 | Bước 1, 2, 3, 5, 10 do UC `PM3CSCN.WEB.10.01` phủ; bước 8 áp giá tới ngày hiệu lực do `PM3CSCN.JOB.10.02.01` (N-03) [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v01.md, mục 6] |
+| QT-04 | Điều chuyển hàng hóa giữa các kho | CN-03 | Bước 1, 3, 5, 9, 12, 14 do UC `PM3CSCN.WEB.09.02` phủ [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v01.md, mục 6] |
+| QT-05 | Kiểm kê tồn kho | CN-03 | Bước 1, 5, 6, 8, 10, 13 do UC `PM3CSCN.WEB.09.03` phủ [SRC: 2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v01.md, mục 6] |
 | QT-06 | Cảnh báo tồn kho và hạn sử dụng | CN-03 | Bước 4, 5, 9 do UC `PM3CSCN.WEB.09.06` phủ; quét cảnh báo do `PM3CSCN.JOB.09.07` (N-01, GD-0003); hạn mức cảnh báo đặt ở `PM3CSCN.WEB.09.04.03` (bản đồ quy trình bước 1, mục 1 dòng QT-06), `PM3CSCN.WEB.09.04.07` (UCL mục 3) |
 
-UC không gắn QT (danh mục, tra cứu, tác vụ nền ngoài bản đồ): `PM3CSCN.WEB.09.04` Quản lý kho, `PM3CSCN.WEB.09.05` Quản lý phân công kho, `PM3CSCN.JOB.09.08` Đồng bộ dữ liệu kho (N-02, GD-0007) thuộc CN-03; tìm kiếm, xem, kết xuất mặt hàng của `PM3CSCN.WEB.10.01` thuộc CN-01 — quy trình mục 1 Ngoài phạm vi [SRC: 2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md, mục 3 cột Ghi chú].
+UC không gắn QT (danh mục, tra cứu, tác vụ nền ngoài bản đồ): `PM3CSCN.WEB.09.04` Quản lý kho, `PM3CSCN.WEB.09.05` Quản lý phân công kho, `PM3CSCN.JOB.09.08` Đồng bộ dữ liệu kho (N-02, GD-0007) thuộc CN-03; tìm kiếm, xem, kết xuất mặt hàng của `PM3CSCN.WEB.10.01` thuộc CN-01 — quy trình mục 1 Ngoài phạm vi [SRC: 2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v01.md, mục 3 cột Ghi chú].
 
 ---
 
@@ -75,10 +75,10 @@ UC không gắn QT (danh mục, tra cứu, tác vụ nền ngoài bản đồ): 
 
 | Tài liệu | Dùng cho |
 |---|---|
-| `2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v00.md` mục 3 | Module, UC; mục 2 số UC theo module; mục 7 Q-U02, mục 8 RK-03 |
+| `2-ba-overview/5-actor-usecase/UCL_PM3CSCN_QuanLyKhoCangTin_v01.md` mục 3 | Module, UC; mục 2 số UC theo module; mục 7 Q-U02, mục 8 RK-03 |
 | `1-ba-init/0-dau-vao/ban-do-quy-trinh/ban-do-quy-trinh.md` mục 1 | Danh sách QT đã chốt (QT-01 → QT-06) |
-| `2-ba-overview/2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v02.md` | Bước, chuyển giao giữa QT (QT-01 mục Đầu ra kích hoạt, bước 2, 10–11; QT-02 bước 11–13) |
-| `2-ba-overview/3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v02.md` | Thực thể chính (mục 2), khóa ngoại giữa nhóm (mục 3.1, 4.4) |
-| `2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v00.md` mục 6 | Bước quy trình → UC, dùng cho mục 2 |
-| `2-ba-overview/4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v01.md` | Máy trạng thái theo thực thể (đối chiếu thực thể CN đổi trạng thái) |
+| `2-ba-overview/2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v03.md` | Bước, chuyển giao giữa QT (QT-01 mục Đầu ra kích hoạt, bước 2, 10–11; QT-02 bước 11–13) |
+| `2-ba-overview/3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v03.md` | Thực thể chính (mục 2), khóa ngoại giữa nhóm (mục 3.1, 4.4) |
+| `2-ba-overview/5-actor-usecase/TRACE_PM3CSCN_QuanLyKhoCangTin_v01.md` mục 6 | Bước quy trình → UC, dùng cho mục 2 |
+| `2-ba-overview/4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v02.md` | Máy trạng thái theo thực thể (đối chiếu thực thể CN đổi trạng thái) |
 | `0-inputs/answers-2026-10-29.md` RQ-187 · `0-inputs/answers-2026-10-30.md` RQ-205 → RQ-210 | Giữ module 09, chia việc theo chức năng cấp 4; BA chốt danh mục (BA xác nhận) |

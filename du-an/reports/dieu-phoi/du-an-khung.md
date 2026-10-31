@@ -69,3 +69,12 @@
 | 65 | /ba-overview | 5 | — (phiên chính) | trace.csv: 90 dòng UC draft, 2 dòng UC deprecated (RQ-203); PH-036, PH-037; QT mục 1 bỏ số đếm UC tra cứu | du-an/trace.csv, du-an/open-questions.md, QT _v02 | — | — | — |
 | 66 | /ba-overview | 5b | usecase-analyst | Cắt chức năng: danh mục CN theo module 09, 10, 15 (RQ-187) | danh-muc-chuc-nang.md | — | — | — |
 | 67 | /ba-overview | 5b | usecase-analyst (SendMessage) | Áp BA chốt RQ-205…RQ-210 vào danh mục; Ghi chú UCL dòng 10.01 | danh-muc-chuc-nang.md, UCL _v00 | 117.903 | 4 phút 20 giây | 1 |
+| 68 | /ba-overview | 6 | usecase-analyst | Business rule lớp 6: gom ứng viên lớp 1–5, cấp BR | BR_PM3CSCN_QuanLyKhoCangTin_v00.md | — | — | — |
+| 69 | /ba-overview | 6 | quality-reviewer | Review độc lập lớp 6 vòng 1: 1 Chặn (BR-A06), 10 Nặng, 9 Nhẹ | BR _v00 | 523.000 | 12 phút 39 giây | — |
+| 70 | /ba-overview | 6 | usecase-analyst (SendMessage) | Sửa BR theo review vòng 1 và RQ-211…RQ-218; liệt kê sửa lớp 2–5 | BR _v00 | — | — | 1 |
+| 71 | /ba-overview | 6 | usecase-analyst (SendMessage) | BR sửa xong: 79 BR, 0 ❓, Chờ review; BR-C03 ⊘; danh sách sửa lớp 2–5 | BR _v00 | 716.699 | 12 phút 13 giây | 1 |
+| 72 | /ba-overview | 6 (bổ sung lớp 2) | business-analyst | QT v03 theo RQ-211…RQ-219 | QT _v02 (chờ đổi tên) | — | — | — |
+| 73 | /ba-overview | 6 (bổ sung lớp 3) | data-modeler | ERD v03 theo RQ-211…RQ-219 | ERD _v02 (chờ đổi tên) | — | — | — |
+| 74 | /ba-overview | 6 (bổ sung lớp 2, 3) | business-analyst, data-modeler (SendMessage) | QT v03 áp RQ-221, GS-01 phá hòa RQ-201; ERD v03 áp RQ-220; data-modeler làm tiếp SM v02 | QT _v02, ERD _v02, SM _v01 (chờ đổi tên) | 209.323 / 146.338 | — | 1 |
+| 75 | /ba-overview | 6 (bổ sung lớp 5) | usecase-analyst (SendMessage) | UCD, UCL v01 theo RQ-211…RQ-221 | UCD, UCL _v00 (chờ đổi tên) | — | — | — |
+| 76 | /ba-overview | 6 | — (phiên chính) | trace.csv: 79 dòng BR draft, BR-C03 deprecated | du-an/trace.csv | — | — | — |

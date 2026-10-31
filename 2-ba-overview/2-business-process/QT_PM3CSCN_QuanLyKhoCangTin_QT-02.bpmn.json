@@ -1,7 +1,7 @@
 {
  "ten": "QT-02 Nhập kho hàng hóa từ nhà cung cấp",
  "cap": 2,
- "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v02.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v03.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
  "pools": [
   {
    "id": "P",
@@ -320,9 +320,18 @@
    "loai": "task",
    "kieu": "service",
    "ma": "B13",
-   "ten": "Lập đề xuất giá bán Nháp gắn lô",
+   "ten": "Kiểm lô, lập đề xuất giá bán Nháp gắn lô",
    "lane": "HT",
    "cot": 15.6,
+   "hang": 0
+  },
+  {
+   "id": "G9",
+   "loai": "gateway",
+   "kieu": "xor",
+   "ten": "Lập được dòng cho lô?",
+   "lane": "HT",
+   "cot": 16.6,
    "hang": 0
   },
   {
@@ -330,9 +339,17 @@
    "loai": "end",
    "ten": "Phiếu nhập kho Đã duyệt, lô cần giá bán mới",
    "lane": "HT",
-   "cot": 16.6,
+   "cot": 17.6,
    "hang": 0,
    "su_kien": "message"
+  },
+  {
+   "id": "E11",
+   "loai": "end",
+   "ten": "Chặn — lô đang chờ duyệt ở phiếu khác hoặc hết tồn, không lập dòng",
+   "lane": "HT",
+   "cot": 16.6,
+   "hang": 1.3
   },
   {
    "id": "QT02-B14",
@@ -430,7 +447,7 @@
   {
    "id": "E9",
    "loai": "end",
-   "ten": "Chặn — kho đang kiểm kê",
+   "ten": "Chặn — kho đang kiểm kê hoặc lô trên đề xuất chưa đóng",
    "lane": "HT",
    "cot": 1.4,
    "hang": 3
@@ -629,7 +646,18 @@
   },
   {
    "tu": "QT02-B13",
-   "den": "E4"
+   "den": "G9"
+  },
+  {
+   "tu": "G9",
+   "den": "E4",
+   "nhan": "Có"
+  },
+  {
+   "tu": "G9",
+   "den": "E11",
+   "nhan": "Không",
+   "ra": "duoi"
   },
   {
    "tu": "QT02-B14",
@@ -700,7 +728,7 @@
   {
    "tu": "G6",
    "den": "E9",
-   "nhan": "Kho đang kiểm kê",
+   "nhan": "Kiểm kê, đề xuất mở",
    "ra": [
     0.25,
     0.75

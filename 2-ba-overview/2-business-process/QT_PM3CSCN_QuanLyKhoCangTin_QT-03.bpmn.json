@@ -1,7 +1,7 @@
 {
  "ten": "QT-03 Đề xuất và duyệt giá bán",
  "cap": 2,
- "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v02.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
+ "chu_giai_them": "Ô task: mã bước B{n} trùng cột Bước của bảng các bước (QT_PM3CSCN_QuanLyKhoCangTin_v03.md); ô nền vàng, dòng chữ nhỏ '🟡' là bước ngoài phạm vi hệ thống. Gateway, sự kiện, pool thu gọn không mang số bước.",
  "pools": [
   {
    "id": "P",
@@ -169,7 +169,7 @@
    "loai": "task",
    "kieu": "user",
    "ma": "B5",
-   "ten": "Duyệt hoặc từ chối cả phiếu đề xuất",
+   "ten": "Duyệt hoặc từ chối cả phiếu; xác nhận đã xét TT79 Đ16 cho dòng giá đầu",
    "lane": "TCS",
    "cot": 8,
    "hang": 0
@@ -188,7 +188,7 @@
    "loai": "task",
    "kieu": "businessRule",
    "ma": "B6",
-   "ten": "Kiểm khoảng giá từng dòng: giá nhập – giá bán lẻ tại địa phương",
+   "ten": "Kiểm khoảng giá từng dòng và xác nhận dòng giá đầu",
    "lane": "HT",
    "cot": 9,
    "hang": 0
@@ -197,7 +197,7 @@
    "id": "G4",
    "loai": "gateway",
    "kieu": "xor",
-   "ten": "Mọi dòng trong khoảng?",
+   "ten": "Mọi dòng trong khoảng, giá đầu đã xác nhận?",
    "lane": "HT",
    "cot": 10,
    "hang": 0
@@ -207,7 +207,7 @@
    "loai": "task",
    "kieu": "service",
    "ma": "B7",
-   "ten": "Ghi phiếu Đã duyệt, ngày bắt đầu áp theo dòng",
+   "ten": "Ghi phiếu Đã duyệt, xác nhận giá đầu, ngày bắt đầu áp theo dòng",
    "lane": "HT",
    "cot": 11,
    "hang": 0
@@ -487,7 +487,7 @@
   {
    "tu": "G4",
    "den": "QT03-B5",
-   "nhan": "Có dòng ngoài khoảng: từ chối cả phiếu",
+   "nhan": "Không: xác nhận giá đầu hoặc từ chối cả phiếu",
    "ra": "duoi",
    "vao": "duoi",
    "qua": [
