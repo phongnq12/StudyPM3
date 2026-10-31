@@ -2,21 +2,22 @@
 
 > Phân loại **toàn bộ 90 use case** theo mức căn cứ, để truy vết hai chiều:
 > **UC → căn cứ** khi cần chứng minh tuân thủ · **căn cứ → UC** khi cần kiểm tra đã phủ hết nghĩa vụ (điều khoản, bước quy trình, chuyển 👤 của máy trạng thái).
-> Tham chiếu chéo: Business rule (lớp 6, chưa có — cột Business rule ghi `chờ lớp 6`, điền ở lượt điền ngược) · [Quy trình](../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v02.md) · [Danh sách use case](UCL_PM3CSCN_QuanLyKhoCangTin_v00.md) · [Sơ đồ use case](UCD_PM3CSCN_QuanLyKhoCangTin_v00.md).
+> Tham chiếu chéo: Business rule (lớp 6, chưa có — cột Business rule ghi `chờ lớp 6`, điền ở lượt điền ngược) · [Quy trình](../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v03.md) · [Danh sách use case](UCL_PM3CSCN_QuanLyKhoCangTin_v01.md) · [Sơ đồ use case](UCD_PM3CSCN_QuanLyKhoCangTin_v01.md).
 
 ## Thông tin tài liệu
 
 | Mục | Nội dung |
 |---|---|
 | Mã tài liệu | `TRACE_PM3CSCN_QuanLyKhoCangTin` |
-| Phiên bản · Trạng thái | v00 · Chờ review |
-| Phiên bản nguồn đối chiếu | QT v02 · BR chưa có (lớp 6 chạy sau) · UCL v00 · SM v01 · BRD v02 · dự toán: `0-inputs/presales/uc/StudyQuanLyKho.xlsx` (danh sách UC báo giá) |
+| Phiên bản · Trạng thái | v01 · Chờ review |
+| Phiên bản nguồn đối chiếu | QT v03 · BR v00 (cột Business rule điền ở đợt 7) · UCL v01 · SM v02 · BRD v02 · dự toán: `0-inputs/presales/uc/StudyQuanLyKho.xlsx` (danh sách UC báo giá) |
 
 ## Version control
 
 | Tên version | Ngày cập nhật | PIC | Mô tả |
 | :--- | :--- | :--- | :--- |
-| **<span style="color:green">v00<br>(hiện tại)</span>** | **<span style="color:green">2026-10-30</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Khởi tạo tài liệu (/ba-overview đợt 5, lớp 5): tầng của 90 use case; truy vết xuôi nhóm chức năng → căn cứ, BRQ, quy trình, máy trạng thái; truy vết ngược điều khoản, bước quy trình người làm, chuyển 👤 → use case.<br>- Đặt ở `2-ba-overview/5-actor-usecase/` theo bảng đợt của `ba-overview` (đợt 5); `00_quy_uoc_chung.md` mục 11 ghi ma trận ở bước `/ba-init` tại thư mục gốc — chỗ lệch ghi ở mục 7.<br>- Sửa theo review độc lập vòng 1 và BA chốt 29/10/2026 (RQ-183 → RQ-201): theo UCL v00 sửa (lá ⊘ PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01.20; lá mới PM3CSCN.WEB.10.01.21, PM3CSCN.WEB.10.01.22); tầng T2 chỉ giữ lá có điều khoản; độ phủ đếm theo bảng bước; thêm khối cuối ở mục 7. Chuyển Chờ review.<br>- Sửa theo review độc lập vòng 2 và BA chốt 30/10/2026 (RQ-202 → RQ-204): mục 7 bỏ dòng QT mục 2 Tác nhân (đã hết sai lệch — QT v02 mục 2 có ACT-07); mã UC có dòng trong trace.csv (RQ-203); câu về vị trí ma trận chuyển ra ngoài bảng; dẫn GD-0005 ở mục 6; nhóm JOB.10.02 sửa căn cứ TT79 Đ41.4. Giữ Chờ review.</span> |
+| v00 | 2026-10-30 | phongnq12 | - Khởi tạo tài liệu (/ba-overview đợt 5, lớp 5): tầng của 90 use case; truy vết xuôi nhóm chức năng → căn cứ, BRQ, quy trình, máy trạng thái; truy vết ngược điều khoản, bước quy trình người làm, chuyển 👤 → use case.<br>- Đặt ở `2-ba-overview/5-actor-usecase/` theo bảng đợt của `ba-overview` (đợt 5); `00_quy_uoc_chung.md` mục 11 ghi ma trận ở bước `/ba-init` tại thư mục gốc — chỗ lệch ghi ở mục 7.<br>- Sửa theo review độc lập vòng 1 và BA chốt 29/10/2026 (RQ-183 → RQ-201): theo UCL v00 sửa (lá ⊘ PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01.20; lá mới PM3CSCN.WEB.10.01.21, PM3CSCN.WEB.10.01.22); tầng T2 chỉ giữ lá có điều khoản; độ phủ đếm theo bảng bước; thêm khối cuối ở mục 7. Chuyển Chờ review.<br>- Sửa theo review độc lập vòng 2 và BA chốt 30/10/2026 (RQ-202 → RQ-204): mục 7 bỏ dòng QT mục 2 Tác nhân (đã hết sai lệch — QT v02 mục 2 có ACT-07); mã UC có dòng trong trace.csv (RQ-203); câu về vị trí ma trận chuyển ra ngoài bảng; dẫn GD-0005 ở mục 6; nhóm JOB.10.02 sửa căn cứ TT79 Đ41.4. Giữ Chờ review. |
+| **<span style="color:green">v01<br>(hiện tại)</span>** | **<span style="color:green">2026-10-31</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Bổ sung theo lớp 6, thay đổi có nghĩa, về Chờ review (RQ-211 → RQ-221): theo UCL v01, UCD v01; nguồn đối chiếu QT v03, SM v02, BR v00; dòng nhóm PM3CSCN.WEB.10.01 ghi chuyển giao từ QT-01 bước 10–11 (RQ-210). Cột Business rule điền ở đợt 7.</span> |
 
 ---
 
@@ -67,7 +68,7 @@ Số nhóm chức năng theo tầng đếm nhóm có ít nhất một UC ở t�
 | `PM3CSCN.WEB.09.06` | Quản lý cảnh báo | PM3CSCN.WEB.09 | 4 | 4 | 🔴 T3 (4) | Nội bộ — RQ-146, RQ-169 | BRQ-13 · BRQ-22 · BRQ-23 · BRQ-31 | QT-06 Cảnh báo tồn kho và hạn sử dụng | chờ lớp 6 | SM mục 9 — Cảnh báo |
 | `PM3CSCN.JOB.09.07` | Cảnh báo và đối soát tự động | PM3CSCN.JOB.09 | 3 | 3 | 🔴 T3 (3) | Nội bộ — RQ-42, RQ-135, RQ-154 · <span style="color:red">**<u>GD-0003</u>**</span> | BRQ-13 · BRQ-22 · BRQ-23 · BRQ-31 | QT-06 Cảnh báo tồn kho và hạn sử dụng · N-01 · <span style="color:red">**<u>GD-0003</u>**</span> · N-04 | chờ lớp 6 | SM mục 9 — Cảnh báo; SM mục 10 |
 | `PM3CSCN.JOB.09.08` | Đồng bộ dữ liệu kho | PM3CSCN.JOB.09 | 1 | 1 | 🟡 T2 (1) | TT79 Đ5.1.a · CON-05 · <span style="color:red">**<u>GD-0007</u>**</span> | n/a — CON-05 | N-02 · <span style="color:red">**<u>GD-0007</u>**</span> · D-01 | chờ lớp 6 | n/a — không đổi trạng thái (SM mục 10) |
-| `PM3CSCN.WEB.10.01` | Cấu hình danh mục hàng hóa và giá bán căng tin | PM3CSCN.WEB.10 | 20 | 20 | 🟢 T1 (2) · 🟡 T2 (5) · 🔴 T3 (13) | TT79 Đ41.4 · TT79 Đ16.1–Đ16.8 · <span style="color:red">**<u>GD-0001</u>**</span> · <span style="color:red">**<u>GD-0002</u>**</span> · <span style="color:red">**<u>GD-0008</u>**</span> · ASM-004 · ASM-006 | BRQ-02 · BRQ-03 · BRQ-05 · BRQ-06 · BRQ-07 · BRQ-08 · BRQ-17 · BRQ-25 · BRQ-26 · <span style="color:red">**<u>GD-0008</u>**</span> | QT-03 Đề xuất và duyệt giá bán · QT-01 bước 8–11 · QT-02 bước 12–13 | chờ lớp 6 | SM mục 3 — Mặt hàng; SM mục 6 — Đề xuất giá bán |
+| `PM3CSCN.WEB.10.01` | Cấu hình danh mục hàng hóa và giá bán căng tin | PM3CSCN.WEB.10 | 20 | 20 | 🟢 T1 (2) · 🟡 T2 (5) · 🔴 T3 (13) | TT79 Đ41.4 · TT79 Đ16.1–Đ16.8 · <span style="color:red">**<u>GD-0001</u>**</span> · <span style="color:red">**<u>GD-0002</u>**</span> · <span style="color:red">**<u>GD-0008</u>**</span> · ASM-004 · ASM-006 | BRQ-02 · BRQ-03 · BRQ-05 · BRQ-06 · BRQ-07 · BRQ-08 · BRQ-17 · BRQ-25 · BRQ-26 · <span style="color:red">**<u>GD-0008</u>**</span> | QT-03 Đề xuất và duyệt giá bán · QT-02 bước 12–13 · phiếu đề xuất giá bán Nháp nhận chuyển giao từ QT-01 bước 10–11 (bước hệ thống trong PM3CSCN.WEB.15.03.01, PM3CSCN.WEB.15.03.03 — RQ-190; QT-01 chỉ chạm chức năng của module 15 — RQ-210) | chờ lớp 6 | SM mục 3 — Mặt hàng; SM mục 6 — Đề xuất giá bán |
 | `PM3CSCN.JOB.10.02` | Áp giá bán tự động | PM3CSCN.JOB.10 | 1 | 1 | 🟡 T2 (1) | TT79 Đ41.4 (giá có hiệu lực chỉ sau duyệt) · RQ-25 | BRQ-01 · BRQ-24 | QT-03 bước 8 · N-03 | chờ lớp 6 | SM mục 6 — Đề xuất giá bán |
 | `PM3CSCN.WEB.15.01` | Quản lý nhà cung cấp hàng hóa căng tin | PM3CSCN.WEB.15 | 7 | 7 | 🔴 T3 (7) | Nội bộ — RQ-20, RQ-56 | BRQ-09 · BRQ-25 | QT-01 Cập nhật nhà cung cấp và giá nhập (bước 1) | chờ lớp 6 | SM mục 2 — Nhà cung cấp |
 | `PM3CSCN.WEB.15.02` | Quản lý danh mục hàng hóa theo nhà cung cấp | PM3CSCN.WEB.15 | 4 | 4 | 🔴 T3 (4) | Nội bộ — RQ-16, RQ-56 | BRQ-08 · BRQ-09 · BRQ-25 | QT-01 Cập nhật nhà cung cấp và giá nhập (bước 2) | chờ lớp 6 | n/a — không có máy trạng thái |
@@ -207,9 +208,9 @@ Bước hệ thống chạy cùng request với bước người nằm trong use
 
 | Tài liệu | Dùng cho |
 |---|---|
-| `UCL_PM3CSCN_QuanLyKhoCangTin_v00.md`, `UCD_PM3CSCN_QuanLyKhoCangTin_v00.md` | Danh sách UC, tác nhân, tầng |
-| `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v02.md` bảng bước, mục 5, 9 | Truy vết bước → UC |
-| `../4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v01.md` mục 2 → 10 | Truy vết chuyển 👤 → UC |
+| `UCL_PM3CSCN_QuanLyKhoCangTin_v01.md`, `UCD_PM3CSCN_QuanLyKhoCangTin_v01.md` | Danh sách UC, tác nhân, tầng |
+| `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v03.md` bảng bước, mục 5, 9 | Truy vết bước → UC |
+| `../4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v02.md` mục 2 → 10 | Truy vết chuyển 👤 → UC |
 | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v02.md` mục 1.3, 3, 12 | Văn bản, BRQ, việc ngoài presales |
 | `../../1-ba-init/0-dau-vao/uc-phap-ly.md`, `phap-ly.md` | Quan hệ điều khoản ↔ UC presales |
 
@@ -361,7 +362,7 @@ Vị trí ma trận truy vết: `00_quy_uoc_chung.md` mục 11 ghi lập ở `/b
 
 **Module:** PM3CSCN.WEB.10 · **Tầng:** 🟢 T1 (2) · 🟡 T2 (5) · 🔴 T3 (13)
 
-**Căn cứ:** TT79 Đ41.4 · TT79 Đ16.1–Đ16.8 · <span style="color:red">**<u>GD-0001</u>**</span> · <span style="color:red">**<u>GD-0002</u>**</span> · <span style="color:red">**<u>GD-0008</u>**</span> · ASM-004 · ASM-006 · **Quy trình:** QT-03 Đề xuất và duyệt giá bán · QT-01 bước 8–11 · QT-02 bước 12–13 · **Business rule:** chờ lớp 6
+**Căn cứ:** TT79 Đ41.4 · TT79 Đ16.1–Đ16.8 · <span style="color:red">**<u>GD-0001</u>**</span> · <span style="color:red">**<u>GD-0002</u>**</span> · <span style="color:red">**<u>GD-0008</u>**</span> · ASM-004 · ASM-006 · **Quy trình:** QT-03 Đề xuất và duyệt giá bán · QT-02 bước 12–13 · phiếu đề xuất giá bán Nháp nhận chuyển giao từ QT-01 bước 10–11 (bước hệ thống trong PM3CSCN.WEB.15.03.01, PM3CSCN.WEB.15.03.03 — RQ-190; QT-01 chỉ chạm chức năng của module 15 — RQ-210) · **Business rule:** chờ lớp 6
 
 > Duyệt và từ chối phiếu đề xuất giá bán là việc TT79 Đ41.4 quy định thẳng (🟢 T1); thêm mặt hàng (đối tượng TT79 Đ41.4, Đ16), lập, sửa, trình phiếu đề xuất và hủy phê duyệt hiện thực hóa nghĩa vụ duyệt giá (🟡 T2); sửa, ngừng, kích hoạt, xóa mặt hàng, hủy phiếu, tra cứu không có điều khoản riêng (🔴 T3). Lá ⊘ PM3CSCN.WEB.10.01.10 (RQ-190), PM3CSCN.WEB.10.01.20 (RQ-193) không liệt kê.
 

@@ -1,7 +1,7 @@
 # TÁC NHÂN VÀ SƠ ĐỒ USE CASE — Quản lý kho căng tin (PM3CSCN) QuanLyKhoCangTin
 
 > **7 tác nhân** — 3 người, 3 hệ thống ngoài, 1 tác nhân tác vụ nền — và **11 sơ đồ use case** (1 sơ đồ tổng quan theo module, 10 sơ đồ theo module hoặc chức năng).
-> Tác nhân lấy từ mục 2 của [quy trình](../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v02.md), đối chiếu BRD mục 4 và cột "Ai — sự kiện" của [máy trạng thái](../4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v01.md); mã chức năng theo [danh sách use case](UCL_PM3CSCN_QuanLyKhoCangTin_v00.md).
+> Tác nhân lấy từ mục 2 của [quy trình](../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v03.md), đối chiếu BRD mục 4 và cột "Ai — sự kiện" của [máy trạng thái](../4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v02.md); mã chức năng theo [danh sách use case](UCL_PM3CSCN_QuanLyKhoCangTin_v01.md).
 > Sơ đồ chỉ vẽ **use case mức mục tiêu người dùng** 🌊. Chức năng con 🐟 — tìm kiếm, xem chi tiết, kết xuất — chỉ liệt kê ở danh sách, trừ khi 🐟 là đầu mút của «include» hoặc «extend»; ma trận mục 4 liệt kê đủ 90 use case.
 > Tài liệu **không** chứa luồng chi tiết của từng use case (đặc tả UC ở `/ba-detail`), danh sách use case (xem `UCL`) và ma trận quyền chi tiết (SRS).
 
@@ -11,16 +11,17 @@
 |---|---|
 | Mã tài liệu | `UCD_PM3CSCN_QuanLyKhoCangTin` |
 | Dự án · Phân hệ | Quản lý kho căng tin (mã dự án PM3CSCN, nền tảng WEB — RQ-69) · Ba phân hệ presales `PM3CSCN.WEB.09`, `PM3CSCN.WEB.10`, `PM3CSCN.WEB.15` (RQ-70) |
-| Phiên bản · Trạng thái | v00 · Chờ review |
+| Phiên bản · Trạng thái | v01 · Chờ review |
 | Người soạn · Người review · Người duyệt | phongnq12 — BA (AI hỗ trợ soạn) · reviewer độc lập vòng 1 (AI), chưa chốt (BA lead) · chưa chốt (BA) |
 | Mức mật | Nội bộ |
-| Quy trình nguồn · Dự toán nguồn | v02 · `0-inputs/presales/uc/StudyQuanLyKho.xlsx` (danh sách UC báo giá, không có sheet tác nhân — PH-001) |
+| Quy trình nguồn · Dự toán nguồn | v03 · `0-inputs/presales/uc/StudyQuanLyKho.xlsx` (danh sách UC báo giá, không có sheet tác nhân — PH-001) |
 
 ## Version control
 
 | Tên version | Ngày cập nhật | PIC | Mô tả |
 | :--- | :--- | :--- | :--- |
-| **<span style="color:green">v00<br>(hiện tại)</span>** | **<span style="color:green">2026-10-30</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Khởi tạo tài liệu (/ba-overview đợt 5, lớp 5): 7 tác nhân ACT-01 → ACT-07, tách nhiệm, TAW, 11 sơ đồ, ma trận tác nhân × 90 use case.<br>- Câu hỏi mở Q-A01 → Q-A03 (phạm vi xem, kết xuất; phạm vi sửa kho).<br>- Sửa theo review độc lập vòng 1 và BA chốt 29/10/2026: Q-A01 (RQ-183), Q-A02 (RQ-184), Q-A03 (RQ-185) — ô chờ câu hỏi thành ký hiệu kèm phạm vi; ACT-01 xem, kết xuất biên bản kiểm kê của cơ sở, ACT-02 kết xuất danh sách phiếu, giá (RQ-196); ACT-07 có ở QT v02 mục 2, BRD v02 mục 3.2 (RQ-196); tách nhiệm biên bản kiểm kê theo RQ-195; bỏ «include» và lá PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01.20 (⊘ — RQ-190, RQ-193); phiếu đề xuất giá bán nhiều dòng (RQ-191); thêm PM3CSCN.WEB.10.01.21, PM3CSCN.WEB.10.01.22 (RQ-192). Không còn ô chờ BA chốt, chuyển Chờ review.<br>- Sửa theo review độc lập vòng 2 và BA chốt 30/10/2026 (RQ-202 → RQ-204): ô ACT-05, ACT-06 phạm vi "cơ sở của hệ thống"; dẫn GD-0007 ở ACT-04, ACT-06 và sơ đồ tổng quan; ACT-07 dẫn RQ-149 cho tài khoản; câu về ACT-05 là tác nhân phụ; ma trận theo thứ tự UCL; đổi tên PM3CSCN.WEB.09.02.11; nguồn RQ-01 → RQ-204. Giữ Chờ review.</span> |
+| v00 | 2026-10-30 | phongnq12 | - Khởi tạo tài liệu (/ba-overview đợt 5, lớp 5): 7 tác nhân ACT-01 → ACT-07, tách nhiệm, TAW, 11 sơ đồ, ma trận tác nhân × 90 use case.<br>- Câu hỏi mở Q-A01 → Q-A03 (phạm vi xem, kết xuất; phạm vi sửa kho).<br>- Sửa theo review độc lập vòng 1 và BA chốt 29/10/2026: Q-A01 (RQ-183), Q-A02 (RQ-184), Q-A03 (RQ-185) — ô chờ câu hỏi thành ký hiệu kèm phạm vi; ACT-01 xem, kết xuất biên bản kiểm kê của cơ sở, ACT-02 kết xuất danh sách phiếu, giá (RQ-196); ACT-07 có ở QT v02 mục 2, BRD v02 mục 3.2 (RQ-196); tách nhiệm biên bản kiểm kê theo RQ-195; bỏ «include» và lá PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01.20 (⊘ — RQ-190, RQ-193); phiếu đề xuất giá bán nhiều dòng (RQ-191); thêm PM3CSCN.WEB.10.01.21, PM3CSCN.WEB.10.01.22 (RQ-192). Không còn ô chờ BA chốt, chuyển Chờ review.<br>- Sửa theo review độc lập vòng 2 và BA chốt 30/10/2026 (RQ-202 → RQ-204): ô ACT-05, ACT-06 phạm vi "cơ sở của hệ thống"; dẫn GD-0007 ở ACT-04, ACT-06 và sơ đồ tổng quan; ACT-07 dẫn RQ-149 cho tài khoản; câu về ACT-05 là tác nhân phụ; ma trận theo thứ tự UCL; đổi tên PM3CSCN.WEB.09.02.11; nguồn RQ-01 → RQ-204. Giữ Chờ review. |
+| **<span style="color:green">v01<br>(hiện tại)</span>** | **<span style="color:green">2026-10-31</span>** | <span style="color:green">phongnq12</span> | <span style="color:green">- Bổ sung theo lớp 6, thay đổi có nghĩa, về Chờ review (RQ-211 → RQ-221): mục 4 phạm vi ACT-01 ở PM3CSCN.WEB.09.01.05, .06, .08, .09 là kho nhập được phân công; phiếu điều chuyển theo kho xuất hoặc kho nhận được phân công; danh sách kho là mọi kho của cơ sở (BR-I02 Phạm vi kho được phân công, RQ-218); chú giải thêm "kho nhập được phân công". Đường dẫn QT v03, ERD v03, SM v02.</span> |
 
 ## Phê duyệt
 
@@ -456,7 +457,7 @@ flowchart LR
 
 ## 4. Ma trận tác nhân × use case
 
-Ma trận không liệt kê hai lá ⊘ (PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01.20). Ký hiệu: C tạo · R xem · U sửa · D xóa · A duyệt · X thao tác khác (từ chối, trình, hủy, hủy phê duyệt, in, kết xuất, xác nhận, chạy tự động) · `—` chắc chắn không được. Phạm vi sau dấu `·`: **kho được phân công** (kho của người phụ trách căng tin theo `Phan_Cong_Kho` — RQ-142); **kho xuất / kho nhận được phân công** (phiếu điều chuyển); **cơ sở mình** (mọi dữ liệu của cơ sở người dùng thuộc về — RQ-152, quy trình mục 9 điểm 30); **biên bản mình là thành viên** (tổ kiểm kê, RQ-155); **toàn hệ thống** (ACT-04, ACT-07: chạy hoặc phục vụ mọi cơ sở); **cơ sở của hệ thống** (ACT-05, ACT-06: hệ thống ngoài của từng cơ sở, chỉ trao đổi dữ liệu của cơ sở đó — RQ-80, RQ-102, RQ-152, NFR-10, <span style="color:red">**<u>GD-0007</u>**</span>). Ô `—` của ACT-01, ACT-03 ở dòng duyệt, từ chối, hủy phê duyệt theo tách nhiệm mục 1.2; ô `—` khác: QT mục 2 không giao thao tác đó cho vai. Tác nhân phụ chỉ nhận kết quả (ví dụ ACT-01 nhận phiếu bị từ chối trả về) không có quyền thao tác trên use case đó nên ghi `—`. Thứ tự dòng theo `UCL` mục 3.
+Ma trận không liệt kê hai lá ⊘ (PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01.20). Ký hiệu: C tạo · R xem · U sửa · D xóa · A duyệt · X thao tác khác (từ chối, trình, hủy, hủy phê duyệt, in, kết xuất, xác nhận, chạy tự động) · `—` chắc chắn không được. Phạm vi sau dấu `·`: **kho được phân công** (kho của người phụ trách căng tin theo `Phan_Cong_Kho` — RQ-142); **kho nhập được phân công** (phiếu nhập kho theo kho nhập — BR-I02 Phạm vi kho được phân công, RQ-218); **kho xuất / kho nhận được phân công** (phiếu điều chuyển — RQ-218); **cơ sở mình** (mọi dữ liệu của cơ sở người dùng thuộc về — RQ-152, quy trình mục 9 điểm 30); **biên bản mình là thành viên** (tổ kiểm kê, RQ-155); **toàn hệ thống** (ACT-04, ACT-07: chạy hoặc phục vụ mọi cơ sở); **cơ sở của hệ thống** (ACT-05, ACT-06: hệ thống ngoài của từng cơ sở, chỉ trao đổi dữ liệu của cơ sở đó — RQ-80, RQ-102, RQ-152, NFR-10, <span style="color:red">**<u>GD-0007</u>**</span>). Ô `—` của ACT-01, ACT-03 ở dòng duyệt, từ chối, hủy phê duyệt theo tách nhiệm mục 1.2; ô `—` khác: QT mục 2 không giao thao tác đó cho vai. Tác nhân phụ chỉ nhận kết quả (ví dụ ACT-01 nhận phiếu bị từ chối trả về) không có quyền thao tác trên use case đó nên ghi `—`. Thứ tự dòng theo `UCL` mục 3.
 
 | Use case | ACT-01 | ACT-02 | ACT-03 | ACT-04 | ACT-05 | ACT-06 | ACT-07 |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -464,11 +465,11 @@ Ma trận không liệt kê hai lá ⊘ (PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01
 | PM3CSCN.WEB.09.01.02 Phê duyệt phiếu nhập kho | — | A · cơ sở mình | — | — | — | — | — |
 | PM3CSCN.WEB.09.01.03 Từ chối phiếu nhập kho | — | X · cơ sở mình | — | — | — | — | — |
 | PM3CSCN.WEB.09.01.04 Hủy phê duyệt phiếu nhập kho | — | X · cơ sở mình | — | — | — | — | — |
-| PM3CSCN.WEB.09.01.05 In phiếu nhập kho | X · kho được phân công | — | — | — | — | — | — |
-| PM3CSCN.WEB.09.01.06 Tìm kiếm phiếu nhập kho | R · kho được phân công | R · cơ sở mình | — | — | — | — | — |
+| PM3CSCN.WEB.09.01.05 In phiếu nhập kho | X · kho nhập được phân công | — | — | — | — | — | — |
+| PM3CSCN.WEB.09.01.06 Tìm kiếm phiếu nhập kho | R · kho nhập được phân công | R · cơ sở mình | — | — | — | — | — |
 | PM3CSCN.WEB.09.01.07 Sửa phiếu nhập kho | U · kho được phân công | — | — | — | — | — | — |
-| PM3CSCN.WEB.09.01.08 Xem chi tiết phiếu nhập kho | R · kho được phân công | R · cơ sở mình | — | — | — | — | — |
-| PM3CSCN.WEB.09.01.09 Kết xuất danh sách phiếu nhập kho | X · kho được phân công | X · cơ sở mình | — | — | — | — | — |
+| PM3CSCN.WEB.09.01.08 Xem chi tiết phiếu nhập kho | R · kho nhập được phân công | R · cơ sở mình | — | — | — | — | — |
+| PM3CSCN.WEB.09.01.09 Kết xuất danh sách phiếu nhập kho | X · kho nhập được phân công | X · cơ sở mình | — | — | — | — | — |
 | PM3CSCN.WEB.09.01.10 Trình phiếu nhập kho | X · kho được phân công | — | — | — | — | — | — |
 | PM3CSCN.WEB.09.01.11 Hủy phiếu nhập kho | X · kho được phân công | — | — | — | — | — | — |
 | PM3CSCN.WEB.09.02.01 Lập phiếu điều chuyển | C · kho xuất được phân công | — | — | — | — | — | — |
@@ -589,10 +590,10 @@ Ma trận không liệt kê hai lá ⊘ (PM3CSCN.WEB.10.01.10, PM3CSCN.WEB.10.01
 
 | Tài liệu | Dùng cho |
 |---|---|
-| `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v02.md` mục 2, 5, 5.1, 9 | Tác nhân, tách nhiệm, tác vụ nền, sự kiện từ hệ thống ngoài |
+| `../2-business-process/QT_PM3CSCN_QuanLyKhoCangTin_v03.md` mục 2, 5, 5.1, 9 | Tác nhân, tách nhiệm, tác vụ nền, sự kiện từ hệ thống ngoài |
 | `../1-brd/BRD_PM3CSCN_QuanLyKhoCangTin_v02.md` mục 3.1, 3.2, 4 | Tên vai người, bên liên quan, hệ thống liên quan |
-| `../4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v01.md` mục 1.1 (SM-07, SM-09), 2 → 10 | Chuyển 👤 → vai thao tác; tách nhiệm ở cột Điều kiện (R-09 → R-12); phạm vi theo cơ sở, kho |
-| `../3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v02.md` mục 2 (thực thể tham chiếu ngoài `Nguoi_Dung`), `Phan_Cong_Kho`, `Mat_Hang_Kho` | ACT-07, phạm vi kho được phân công |
-| `UCL_PM3CSCN_QuanLyKhoCangTin_v00.md` | Danh sách use case, cột `Actor` — chính, phụ |
+| `../4-state-machine/SM_PM3CSCN_QuanLyKhoCangTin_v02.md` mục 1.1 (SM-07, SM-09), 2 → 10 | Chuyển 👤 → vai thao tác; tách nhiệm ở cột Điều kiện (R-09 → R-12); phạm vi theo cơ sở, kho |
+| `../3-erd/ERD_PM3CSCN_QuanLyKhoCangTin_v03.md` mục 2 (thực thể tham chiếu ngoài `Nguoi_Dung`), `Phan_Cong_Kho`, `Mat_Hang_Kho` | ACT-07, phạm vi kho được phân công |
+| `UCL_PM3CSCN_QuanLyKhoCangTin_v01.md` | Danh sách use case, cột `Actor` — chính, phụ |
 | `0-inputs/presales/uc/StudyQuanLyKho.xlsx` (danh mục `1-ba-init/0-dau-vao/uc-presales.md`) | Cột Actor trống ở 31 dòng, không có sheet tác nhân (PH-001) — tác nhân theo Q-001; không có phân loại tác nhân QĐ 671 để đối chiếu |
 | `../../0-inputs/answers-2026-10-28.md`; `../../0-inputs/answers-2026-10-29.md`; `../../0-inputs/answers-2026-10-30.md` | RQ-01 → RQ-204, gồm RQ-07, RQ-40, RQ-54, RQ-66, RQ-79, RQ-80, RQ-95, RQ-121, RQ-142, RQ-148, RQ-149, RQ-155, RQ-169, RQ-181 |
