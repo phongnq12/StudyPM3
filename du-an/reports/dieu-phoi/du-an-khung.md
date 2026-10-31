@@ -83,3 +83,5 @@
 | 79 | /ba-overview | 6 | quality-reviewer | Review độc lập lớp 6 vòng 2 | BR _v00 | — | — | — |
 | 80 | /ba-overview | 6 | usecase-analyst (SendMessage) | Sửa BR theo review vòng 2 (1 Chặn, 4 Nặng) và RQ-220…RQ-225; phiên chính sửa SM mục 13 dòng Xem (RQ-196) | BR _v00, SM _v02 | — | — | 2 |
 | 81 | /ba-overview | 6 | — (phiên chính) | trace.csv: 80 BR draft, BR-C03 deprecated (thêm BR-E15); commit lớp 6 | du-an/trace.csv | 780.494 (cộng dồn agent BR) | — | 2 |
+| 82 | /ba-overview | 7 | usecase-analyst (SendMessage) | Lượt điền ngược mã BR vào lớp 1–5 (RQ-222) | BRD v02, QT v03, ERD v03, SM v02, UCD/UCL/TRACE v01, BR v00 | — | — | — |
+| 83 | /ba-overview | 7 | — (phiên chính) | Điền ngược xong: 708 chỗ gắn (QT 328, ERD 112, SM 98, UCL 88, BRD 49 + ô chờ lớp 6, TRACE 26 ô, UCD 7); Áp tại bỏ 165 chỗ nhầm, thêm 187; cổng máy ĐẠT, 0 Chặn, 315 cảnh báo GD | 7 file lớp 1–5, BR | 890.910 (cộng dồn) | 18 phút 27 giây | 0 |
