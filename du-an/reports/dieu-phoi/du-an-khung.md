@@ -78,3 +78,8 @@
 | 74 | /ba-overview | 6 (bổ sung lớp 2, 3) | business-analyst, data-modeler (SendMessage) | QT v03 áp RQ-221, GS-01 phá hòa RQ-201; ERD v03 áp RQ-220; data-modeler làm tiếp SM v02 | QT _v02, ERD _v02, SM _v01 (chờ đổi tên) | 209.323 / 146.338 | — | 1 |
 | 75 | /ba-overview | 6 (bổ sung lớp 5) | usecase-analyst (SendMessage) | UCD, UCL v01 theo RQ-211…RQ-221 | UCD, UCL _v00 (chờ đổi tên) | — | — | — |
 | 76 | /ba-overview | 6 | — (phiên chính) | trace.csv: 79 dòng BR draft, BR-C03 deprecated | du-an/trace.csv | — | — | — |
+| 77 | /ba-overview | 6 (bổ sung) | data-modeler, usecase-analyst (SendMessage) | SM v02; UCD, UCL, TRACE v01 | SM, UCD, UCL, TRACE | 230.546 / 747.659 (cộng dồn) | — | 1 |
+| 78 | /ba-overview | 6 (bổ sung) | — (phiên chính) | Đổi tên QT _v03, ERD _v03, SM _v02, UCD/UCL/TRACE _v01; sửa đường dẫn; commit 4 lớp | — | — | — | — |
+| 79 | /ba-overview | 6 | quality-reviewer | Review độc lập lớp 6 vòng 2 | BR _v00 | — | — | — |
+| 80 | /ba-overview | 6 | usecase-analyst (SendMessage) | Sửa BR theo review vòng 2 (1 Chặn, 4 Nặng) và RQ-220…RQ-225; phiên chính sửa SM mục 13 dòng Xem (RQ-196) | BR _v00, SM _v02 | — | — | 2 |
+| 81 | /ba-overview | 6 | — (phiên chính) | trace.csv: 80 BR draft, BR-C03 deprecated (thêm BR-E15); commit lớp 6 | du-an/trace.csv | 780.494 (cộng dồn agent BR) | — | 2 |
